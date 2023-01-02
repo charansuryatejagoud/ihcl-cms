@@ -1,0 +1,93 @@
+{
+  "root": true,
+  "api": {
+    "projectId": "ocl5w36p",
+    "dataset": "production"
+  },
+  "project": {
+    "name": "Tata Neu"
+  },
+  "plugins": [
+    "@sanity/base",
+    "@sanity/default-layout",
+    "@sanity/default-login",
+    "@sanity/desk-tool",
+    "@sanity/dashboard",
+    "@sanity/production-preview",
+    "@sanity/vision",
+    "media",
+    "@sanity/color-input",
+    "@sanity/scheduled-publishing",
+    "table",
+    "bulk-upload"
+  ],
+  "env": {
+    "development": {
+      "plugins": [
+        "migration"
+      ],
+      "__experimental_spaces": [
+        {
+          "name": "develop",
+          "title": "Develop",
+          "default": true,
+          "api": {
+            "projectId": "ocl5w36p",
+            "dataset": "production"
+          }
+        },
+        {
+          "name": "staging",
+          "title": "Staging",
+          "api": {
+            "projectId": "ocl5w36p",
+            "dataset": "production"
+          }
+        },
+        {
+          "name": "production",
+          "title": "Production",
+          "api": {
+            "projectId": "ocl5w36p",
+            "dataset": "production"
+          }
+        }
+      ]
+      
+    }
+  },
+  "parts": [
+    {
+      "name": "part:@sanity/base/schema",
+      "path": "./schemas/schema"
+    },
+    {
+      "implements": "part:@sanity/base/document-actions/resolver",
+      "path": "./branding/resolveDocumentActions.ts"
+    },
+    {
+      "implements": "part:@sanity/base/document-badges/resolver",
+      "path": "./branding/resolveDocumentBadges.ts"
+    },
+    {
+      "implements": "part:@sanity/production-preview/resolve-production-url",
+      "path": "./branding/resolveProductionUrl.ts"
+    },
+    {
+      "implements": "part:@sanity/base/brand-logo",
+      "path": "./branding/components/Logo.tsx"
+    },
+    {
+      "implements": "part:@sanity/base/theme/variables/override-style",
+      "path": "./branding/variableOverrides.css"
+    },
+    {
+      "name": "part:@sanity/desk-tool/structure",
+      "path": "./branding/deskStructure.tsx"
+    },
+    {
+      "name": "part:@sanity/base/initial-value-templates",
+      "path": "./branding/initialValueTemplates.ts"
+    }
+  ]
+}

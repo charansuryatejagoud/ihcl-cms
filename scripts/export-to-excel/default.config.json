@@ -1,0 +1,5 @@
+{
+  "dataset": "production",
+  "paths": ["/homepage"],
+  "outputPath": "./urls.xlsx"
+}

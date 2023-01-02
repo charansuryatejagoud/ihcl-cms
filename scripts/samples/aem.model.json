@@ -1,0 +1,1937 @@
+{
+  "title": "Homepage",
+  "lastModifiedDate": 1626062486818,
+  "templateName": "spa-sso-template",
+  "designPath": "/libs/settings/wcm/designs/default",
+  "cssClassNames": "page basicpage",
+  "tcpPublishInstance": true,
+  "language": "en",
+  ":type": "tcp-pwa/components/page",
+  ":items": {
+    "root": {
+      "columnClassNames": {
+        "responsivegrid": "aem-GridColumn aem-GridColumn--default--12"
+      },
+      "gridClassNames": "aem-Grid aem-Grid--12 aem-Grid--default--12",
+      "columnCount": 12,
+      "allowedComponents": {
+        "applicable": false,
+        "components": [
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/my-account/add-address",
+            "title": "Add Address Component"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/my-account/add-new-address",
+            "title": "Address"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/bundle-components/addressdetails",
+            "title": "Address Details"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/my-account/address-edit",
+            "title": "Address Edit"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/addresses",
+            "title": "Addresses Component"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/my-account/addresses-list",
+            "title": "Addresses List Component"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/common/analytics-page-data",
+            "title": "Analytics - Page Data"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/api-component",
+            "title": "API Component"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/homepage/app-guide",
+            "title": "App Guide"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/apps",
+            "title": "Apps Component"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/nav-header",
+            "title": "Back Nav Header"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/common/sub-categories-widget",
+            "title": "Banner Carousel"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/common/banner-large2",
+            "title": "Banner Large 2"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/common/banner-component",
+            "title": "Banner Large1"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/common/bb-star",
+            "title": "Big Basket"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/common/booking-benefits",
+            "title": "Booking benefits"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/templates/bottom-navigation",
+            "title": "Bottom Navigation"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/order-history/brands",
+            "title": "Brands"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/bundle-components/bundlecarousel",
+            "title": "Bundle Carousel"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/bundle-components/bundlecart",
+            "title": "Bundle Cart Component"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/bundle-components/bundledetailsbanner",
+            "title": "Bundle Details Banner Component"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/bundle-components/bundledetails",
+            "title": "Bundle Details Component"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/bundle-components/bundleselectaddress",
+            "title": "Bundle Select Address"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/bundle-components/bundleshipping",
+            "title": "Bundle Shipping"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/bundle-components/bundleherobanner",
+            "title": "BundleHeroBanner"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/common/card-with-carousel",
+            "title": "Card With Carousel"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/common/westside-store",
+            "title": "Cards Component"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/templates/carousel-component",
+            "title": "Carousel component"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/common/categories",
+            "title": "Categories Component"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/content-zone/category-launcher",
+            "title": "Category Launcher"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/change-password",
+            "title": "Change Password Component"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/channels",
+            "title": "Channels"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/common/high-level-categories",
+            "title": "Circular Carousel"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/common/common-header",
+            "title": "Common Header"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/templates/component13",
+            "title": "Component 13"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/templates/component14",
+            "title": "Component 14"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/templates/top-brands",
+            "title": "Component 15"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/common/categories-cards",
+            "title": "Component 16"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/templates/component3",
+            "title": "Component 3"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/templates/component4",
+            "title": "Component 4"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/templates/component10",
+            "title": "Component10"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/templates/component11",
+            "title": "Component11"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/templates/component12",
+            "title": "Component12"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/templates/component16",
+            "title": "Component16"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/templates/component19",
+            "title": "Component19"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/templates/component2",
+            "title": "Component2"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/templates/component7",
+            "title": "Component7"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/templates/component8",
+            "title": "Component8 Component"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/templates/component6",
+            "title": "Content & Offer widget"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/content-zone/cz-comp6",
+            "title": "Content-list-with-filters"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/content-zone/cz-comp1",
+            "title": "Content-zone-Header"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/content-zone/cz-comp2",
+            "title": "Content-zone-Tabs"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/common/deals-you-might-like",
+            "title": "Deals You Might Like"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/deleteaccount",
+            "title": "DeleteAccount Component"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/discovery",
+            "title": "Discovery"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/dropdown",
+            "title": "Drop Down Component"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/bundle-components/emptycartcomponent",
+            "title": "Empty Cart"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/sso/enter-password",
+            "title": "Enter Password"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/sso/enter-phone-number",
+            "title": "Enter Phone Number"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/templates/explore-component",
+            "title": "Explore Component"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/content-zone/filters",
+            "title": "Filters"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/food-and-beverage/qmin-or-starbucks",
+            "title": "Food And Beverage: Qmin or Starbucks Component"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/common/footer",
+            "title": "Footer"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/homepage/foryou",
+            "title": "For You"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/sso/forgot-password",
+            "title": "Forgot Password"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/form-container",
+            "title": "Form Container"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/common/get-back-to-homepage",
+            "title": "getBackToHomePage"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/common/guide-electronic-offers",
+            "title": "GuideElectronicOffers Component"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/homepage/hcl1",
+            "title": "hcl1"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/header",
+            "title": "Header Component"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/common/hero-banner",
+            "title": "Hero Banner Carousel"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/common/horizontal-large",
+            "title": "Horizontal Large Carousel"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/content-zone/cz-comp4",
+            "title": "Horizontal-list"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/common/interstitial-wrapper",
+            "title": "Interstitial Wrapper"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/common/just-out-component",
+            "title": "Just Out Component"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/common/legal",
+            "title": "Legal"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/reward-benefits/loyalty-card",
+            "title": "List of Cards"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/common/location",
+            "title": "Location"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/sso/login-callback",
+            "title": "Login Callback"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/sso/login-header",
+            "title": "Login Header"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/common/mcl",
+            "title": "MCL- Multi Carousel List"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/menucomponent",
+            "title": "Menucomponent Component"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/homepage/misc-horizontal-list",
+            "title": "Miscellaneous horizontal list"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/msdcomponent",
+            "title": "MsdComponent"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/common/bundles-you-may-like",
+            "title": "Multi Icon Card"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/common/multi-card",
+            "title": "Multi Image Cards"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/multitender",
+            "title": "Multitender Component"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/order-history/my-order-details",
+            "title": "My Order Details"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/order-history/my-orders",
+            "title": "My Orders"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/sso/my-profile",
+            "title": "My Profile"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/myvault",
+            "title": "MyVault"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/navigation-logo-title",
+            "title": "Navigation - Logo & Title"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/common/search-result",
+            "title": "Navigation with Search Result"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/offer-zone/nearYou-card",
+            "title": "Near You Card Component"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/nearmeoffers",
+            "title": "Nearmeoffers Component"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/nudge",
+            "title": "Nudge"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/common/que-magazine",
+            "title": "Nudge With Image"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/homepage/nudge",
+            "title": "NUDGE1"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/homepage/nudge-component",
+            "title": "NUDGE2"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/homepage/nudge3",
+            "title": "NUDGE3"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/homepage/nudge4",
+            "title": "NUDGE4"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/homepage/nudge5",
+            "title": "NUDGE5"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/offercard",
+            "title": "Offer Card"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/offer-details",
+            "title": "Offer Details"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/offerlist",
+            "title": "Offer List"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/common/special-preview",
+            "title": "Offer Preview"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/offer-zone/oz-banner",
+            "title": "Offer Zone Banner Component"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/offer-zone/offer-search",
+            "title": "Offers-search Component"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/offer-zone/oz-comp7",
+            "title": "OfferZone-Component7"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/offer-zone/oz-comp8",
+            "title": "OfferZone-Component8"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/order-components/orderdetails",
+            "title": "Order Details"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/order-history/my-orders-terms-and-conditions",
+            "title": "Order Terms and Conditions Component"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/offer-zone/oz-comp5",
+            "title": "OZ - Comp5"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/offer-zone/oz-comp6",
+            "title": "OZ - Comp6"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/offer-zone/oz-msd",
+            "title": "OZ - MSD Component"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/offer-zone/oz-saved-offers-and-bundles",
+            "title": "OZ: Saved Offers And Bundles"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/paymentcard",
+            "title": "Payment Card"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/paymentmethods",
+            "title": "Payment Methods"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/payments",
+            "title": "Payments"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/sso/pilot-enrollment",
+            "title": "Pilot Enrollment"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/popularoffer",
+            "title": "PopularOffer Component"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/common/privacy-policy",
+            "title": "Privacy Policy"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/sso/private-route",
+            "title": "Private Route"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/common/recent-deals",
+            "title": "Product Rating and Price"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/profile",
+            "title": "Profile Component"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/my-account/refer-a-friend",
+            "title": "Refer a Friend"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/my-account/refer-redirect",
+            "title": "Refer Redirect"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/common/register",
+            "title": "Register"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/hotels/booking-component",
+            "title": "Reservation component"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/rnb/rnb-experience",
+            "title": "Rnb Experience"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/sample",
+            "title": "Sample Component"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/sangrila",
+            "title": "Sangrila Component"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/templates/scl",
+            "title": "scl-temp"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/common/scratch-card",
+            "title": "Scratch Card"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/hotels/component6",
+            "title": "Search Dining Options"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/sso/set-password",
+            "title": "Set Password"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/common/simple-cards",
+            "title": "Simple Cards"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/common/redeem-brand-offers",
+            "title": "Single Image Card"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/reward-benefits/single-url-routing",
+            "title": "Single URL Routing"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/single-verification-source-brand-and-tic-number",
+            "title": "Single Verification Source - Brand & TIC Number"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/singleverificationsource-ticnumber",
+            "title": "singleverificationsource-ticnumber Component"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/common/slp-redirection",
+            "title": "SLP Redirection"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/common/slp-payment",
+            "title": "SLP-Payment"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/templates/smartbasket",
+            "title": "Smart Basket"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/content-zone/cz-comp5",
+            "title": "Social-media-nudge"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/common/special-privileges",
+            "title": "Special Card"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/content-zone/cz-comp8",
+            "title": "Square-list-widget"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/common/exclusive-carousel",
+            "title": "Stories Carousel List"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/common/story-landing-page",
+            "title": "Story Landing Carousel"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/common/tabs-title",
+            "title": "Tabs Title Component"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/tabsaccordian",
+            "title": "tabsaccordian Component"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/tabsrichtext",
+            "title": "tabsrichtext Component"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/common/tata-pay-ribbon",
+            "title": "TATA Pay Ribbon"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/template1",
+            "title": "Template1"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/template2",
+            "title": "Template2"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/template3",
+            "title": "Template3"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/template4",
+            "title": "Template4"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/template5",
+            "title": "Template5"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/template6",
+            "title": "Template6"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/template7",
+            "title": "Template7"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/common/terms-and-conditions",
+            "title": "Terms and Conditions"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/textField",
+            "title": "Text Field Input Component"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/common/theme-store",
+            "title": "Theme Store"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/recentandtrendingoffer",
+            "title": "TrendingOffer Component"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/common/upgrade",
+            "title": "Upgrade"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/userinterests",
+            "title": "User Interests"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/common/user-not-logged-in",
+            "title": "User Not Logged In"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/reward-benefits/elite-member",
+            "title": "User Points"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/sso/validate-otp",
+            "title": "Validate OTP"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/verification-or-link-success",
+            "title": "Verification Or Link Success"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/content-zone/cz-comp3",
+            "title": "Vertical-colored-tiles"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/common/expert-reviews",
+            "title": "Video Carousel"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/common/video",
+            "title": "Video widget"
+          },
+          {
+            "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/tcp-pwa/components/tcp-pwa/welcomeuser",
+            "title": "Welcome User"
+          }
+        ]
+      },
+      ":items": {
+        "responsivegrid": {
+          "columnClassNames": {
+            "mcl_copy": "aem-GridColumn aem-GridColumn--default--12",
+            "just_out_component": "aem-GridColumn aem-GridColumn--default--12",
+            "component11": "aem-GridColumn aem-GridColumn--default--12",
+            "component11_copy": "aem-GridColumn aem-GridColumn--default--12",
+            "nudge4": "aem-GridColumn aem-GridColumn--default--12",
+            "nudge_component": "aem-GridColumn aem-GridColumn--default--12",
+            "exclusive_carousel": "aem-GridColumn aem-GridColumn--default--12",
+            "just_out_component_c": "aem-GridColumn aem-GridColumn--default--12",
+            "mcl": "aem-GridColumn aem-GridColumn--default--12",
+            "just_out_component_c_965925030": "aem-GridColumn aem-GridColumn--default--12",
+            "banner_component": "aem-GridColumn aem-GridColumn--default--12",
+            "tata_pay_ribbon": "aem-GridColumn aem-GridColumn--default--12",
+            "nudge": "aem-GridColumn aem-GridColumn--default--12"
+          },
+          "gridClassNames": "aem-Grid aem-Grid--12 aem-Grid--default--12",
+          "columnCount": 12,
+          "allowedComponents": {
+            "applicable": false,
+            "components": [
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/my-account/add-address",
+                "title": "Add Address Component"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/my-account/add-new-address",
+                "title": "Address"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/bundle-components/addressdetails",
+                "title": "Address Details"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/my-account/address-edit",
+                "title": "Address Edit"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/addresses",
+                "title": "Addresses Component"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/my-account/addresses-list",
+                "title": "Addresses List Component"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/common/analytics-page-data",
+                "title": "Analytics - Page Data"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/api-component",
+                "title": "API Component"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/homepage/app-guide",
+                "title": "App Guide"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/apps",
+                "title": "Apps Component"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/nav-header",
+                "title": "Back Nav Header"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/common/sub-categories-widget",
+                "title": "Banner Carousel"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/common/banner-large2",
+                "title": "Banner Large 2"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/common/banner-component",
+                "title": "Banner Large1"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/common/bb-star",
+                "title": "Big Basket"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/common/booking-benefits",
+                "title": "Booking benefits"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/templates/bottom-navigation",
+                "title": "Bottom Navigation"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/order-history/brands",
+                "title": "Brands"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/bundle-components/bundlecarousel",
+                "title": "Bundle Carousel"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/bundle-components/bundlecart",
+                "title": "Bundle Cart Component"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/bundle-components/bundledetailsbanner",
+                "title": "Bundle Details Banner Component"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/bundle-components/bundledetails",
+                "title": "Bundle Details Component"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/bundle-components/bundleselectaddress",
+                "title": "Bundle Select Address"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/bundle-components/bundleshipping",
+                "title": "Bundle Shipping"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/bundle-components/bundleherobanner",
+                "title": "BundleHeroBanner"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/common/card-with-carousel",
+                "title": "Card With Carousel"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/common/westside-store",
+                "title": "Cards Component"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/templates/carousel-component",
+                "title": "Carousel component"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/common/categories",
+                "title": "Categories Component"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/content-zone/category-launcher",
+                "title": "Category Launcher"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/change-password",
+                "title": "Change Password Component"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/channels",
+                "title": "Channels"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/common/high-level-categories",
+                "title": "Circular Carousel"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/common/common-header",
+                "title": "Common Header"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/templates/component13",
+                "title": "Component 13"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/templates/component14",
+                "title": "Component 14"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/templates/top-brands",
+                "title": "Component 15"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/common/categories-cards",
+                "title": "Component 16"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/templates/component3",
+                "title": "Component 3"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/templates/component4",
+                "title": "Component 4"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/templates/component10",
+                "title": "Component10"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/templates/component11",
+                "title": "Component11"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/templates/component12",
+                "title": "Component12"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/templates/component16",
+                "title": "Component16"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/templates/component19",
+                "title": "Component19"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/templates/component2",
+                "title": "Component2"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/templates/component7",
+                "title": "Component7"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/templates/component8",
+                "title": "Component8 Component"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/templates/component6",
+                "title": "Content & Offer widget"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/content-zone/cz-comp6",
+                "title": "Content-list-with-filters"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/content-zone/cz-comp1",
+                "title": "Content-zone-Header"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/content-zone/cz-comp2",
+                "title": "Content-zone-Tabs"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/common/deals-you-might-like",
+                "title": "Deals You Might Like"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/deleteaccount",
+                "title": "DeleteAccount Component"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/discovery",
+                "title": "Discovery"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/dropdown",
+                "title": "Drop Down Component"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/bundle-components/emptycartcomponent",
+                "title": "Empty Cart"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/sso/enter-password",
+                "title": "Enter Password"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/sso/enter-phone-number",
+                "title": "Enter Phone Number"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/templates/explore-component",
+                "title": "Explore Component"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/content-zone/filters",
+                "title": "Filters"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/food-and-beverage/qmin-or-starbucks",
+                "title": "Food And Beverage: Qmin or Starbucks Component"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/common/footer",
+                "title": "Footer"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/homepage/foryou",
+                "title": "For You"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/sso/forgot-password",
+                "title": "Forgot Password"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/form-container",
+                "title": "Form Container"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/common/get-back-to-homepage",
+                "title": "getBackToHomePage"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/common/guide-electronic-offers",
+                "title": "GuideElectronicOffers Component"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/homepage/hcl1",
+                "title": "hcl1"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/header",
+                "title": "Header Component"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/common/hero-banner",
+                "title": "Hero Banner Carousel"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/common/horizontal-large",
+                "title": "Horizontal Large Carousel"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/content-zone/cz-comp4",
+                "title": "Horizontal-list"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/common/interstitial-wrapper",
+                "title": "Interstitial Wrapper"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/common/just-out-component",
+                "title": "Just Out Component"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/common/legal",
+                "title": "Legal"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/reward-benefits/loyalty-card",
+                "title": "List of Cards"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/common/location",
+                "title": "Location"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/sso/login-callback",
+                "title": "Login Callback"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/sso/login-header",
+                "title": "Login Header"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/common/mcl",
+                "title": "MCL- Multi Carousel List"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/menucomponent",
+                "title": "Menucomponent Component"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/homepage/misc-horizontal-list",
+                "title": "Miscellaneous horizontal list"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/msdcomponent",
+                "title": "MsdComponent"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/common/bundles-you-may-like",
+                "title": "Multi Icon Card"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/common/multi-card",
+                "title": "Multi Image Cards"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/multitender",
+                "title": "Multitender Component"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/order-history/my-order-details",
+                "title": "My Order Details"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/order-history/my-orders",
+                "title": "My Orders"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/sso/my-profile",
+                "title": "My Profile"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/myvault",
+                "title": "MyVault"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/navigation-logo-title",
+                "title": "Navigation - Logo & Title"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/common/search-result",
+                "title": "Navigation with Search Result"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/offer-zone/nearYou-card",
+                "title": "Near You Card Component"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/nearmeoffers",
+                "title": "Nearmeoffers Component"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/nudge",
+                "title": "Nudge"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/common/que-magazine",
+                "title": "Nudge With Image"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/homepage/nudge",
+                "title": "NUDGE1"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/homepage/nudge-component",
+                "title": "NUDGE2"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/homepage/nudge3",
+                "title": "NUDGE3"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/homepage/nudge4",
+                "title": "NUDGE4"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/homepage/nudge5",
+                "title": "NUDGE5"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/offercard",
+                "title": "Offer Card"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/offer-details",
+                "title": "Offer Details"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/offerlist",
+                "title": "Offer List"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/common/special-preview",
+                "title": "Offer Preview"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/offer-zone/oz-banner",
+                "title": "Offer Zone Banner Component"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/offer-zone/offer-search",
+                "title": "Offers-search Component"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/offer-zone/oz-comp7",
+                "title": "OfferZone-Component7"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/offer-zone/oz-comp8",
+                "title": "OfferZone-Component8"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/order-components/orderdetails",
+                "title": "Order Details"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/order-history/my-orders-terms-and-conditions",
+                "title": "Order Terms and Conditions Component"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/offer-zone/oz-comp5",
+                "title": "OZ - Comp5"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/offer-zone/oz-comp6",
+                "title": "OZ - Comp6"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/offer-zone/oz-msd",
+                "title": "OZ - MSD Component"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/offer-zone/oz-saved-offers-and-bundles",
+                "title": "OZ: Saved Offers And Bundles"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/paymentcard",
+                "title": "Payment Card"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/paymentmethods",
+                "title": "Payment Methods"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/payments",
+                "title": "Payments"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/sso/pilot-enrollment",
+                "title": "Pilot Enrollment"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/popularoffer",
+                "title": "PopularOffer Component"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/common/privacy-policy",
+                "title": "Privacy Policy"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/sso/private-route",
+                "title": "Private Route"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/common/recent-deals",
+                "title": "Product Rating and Price"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/profile",
+                "title": "Profile Component"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/my-account/refer-a-friend",
+                "title": "Refer a Friend"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/my-account/refer-redirect",
+                "title": "Refer Redirect"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/common/register",
+                "title": "Register"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/hotels/booking-component",
+                "title": "Reservation component"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/rnb/rnb-experience",
+                "title": "Rnb Experience"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/sample",
+                "title": "Sample Component"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/sangrila",
+                "title": "Sangrila Component"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/templates/scl",
+                "title": "scl-temp"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/common/scratch-card",
+                "title": "Scratch Card"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/hotels/component6",
+                "title": "Search Dining Options"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/sso/set-password",
+                "title": "Set Password"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/common/simple-cards",
+                "title": "Simple Cards"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/common/redeem-brand-offers",
+                "title": "Single Image Card"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/reward-benefits/single-url-routing",
+                "title": "Single URL Routing"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/single-verification-source-brand-and-tic-number",
+                "title": "Single Verification Source - Brand & TIC Number"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/singleverificationsource-ticnumber",
+                "title": "singleverificationsource-ticnumber Component"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/common/slp-redirection",
+                "title": "SLP Redirection"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/common/slp-payment",
+                "title": "SLP-Payment"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/templates/smartbasket",
+                "title": "Smart Basket"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/content-zone/cz-comp5",
+                "title": "Social-media-nudge"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/common/special-privileges",
+                "title": "Special Card"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/content-zone/cz-comp8",
+                "title": "Square-list-widget"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/common/exclusive-carousel",
+                "title": "Stories Carousel List"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/common/story-landing-page",
+                "title": "Story Landing Carousel"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/common/tabs-title",
+                "title": "Tabs Title Component"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/tabsaccordian",
+                "title": "tabsaccordian Component"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/tabsrichtext",
+                "title": "tabsrichtext Component"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/common/tata-pay-ribbon",
+                "title": "TATA Pay Ribbon"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/template1",
+                "title": "Template1"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/template2",
+                "title": "Template2"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/template3",
+                "title": "Template3"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/template4",
+                "title": "Template4"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/template5",
+                "title": "Template5"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/template6",
+                "title": "Template6"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/template7",
+                "title": "Template7"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/common/terms-and-conditions",
+                "title": "Terms and Conditions"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/textField",
+                "title": "Text Field Input Component"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/common/theme-store",
+                "title": "Theme Store"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/recentandtrendingoffer",
+                "title": "TrendingOffer Component"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/common/upgrade",
+                "title": "Upgrade"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/userinterests",
+                "title": "User Interests"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/common/user-not-logged-in",
+                "title": "User Not Logged In"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/reward-benefits/elite-member",
+                "title": "User Points"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/sso/validate-otp",
+                "title": "Validate OTP"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/verification-or-link-success",
+                "title": "Verification Or Link Success"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/content-zone/cz-comp3",
+                "title": "Vertical-colored-tiles"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/common/expert-reviews",
+                "title": "Video Carousel"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/common/video",
+                "title": "Video widget"
+              },
+              {
+                "path": "/content/tcp-pwa/pwa/en/homepage/homepage/jcr:content/root/responsivegrid/tcp-pwa/components/tcp-pwa/welcomeuser",
+                "title": "Welcome User"
+              }
+            ]
+          },
+          ":items": {
+            "exclusive_carousel": {
+              "pageName": "homepage",
+              "category": "Home",
+              "listItems": [
+                {
+                  "backgroundAltText": "HP Starbucks",
+                  "brandLogo": "/content/dam/tcp-pwa/starbucks.png",
+                  "brandLogoAltText": "Starbucks",
+                  "storyName": "StoryName Text",
+                  "title": "Claim your Bonus Stars!",
+                  "ctaType": "internal",
+                  "description": "Description",
+                  "backgroundImageURL": "/content/dam/tcp/channels/assets/homepage/HP Starbucks Story.jpg",
+                  "ctaURL": "/homepage/homepage/story-landing"
+                },
+                {
+                  "backgroundAltText": "Background Image Alt Text",
+                  "brandLogo": "/content/dam/tcp-pwa/starbucks.png",
+                  "brandLogoAltText": "Brand Logo Alt Text",
+                  "storyName": "Members only",
+                  "title": "Members only",
+                  "ctaType": "internal",
+                  "description": "Description",
+                  "backgroundImageURL": "/content/dam/tcp-pwa/2 (2).jpeg",
+                  "ctaURL": "/homepage/homepage/story-landing"
+                },
+                {
+                  "backgroundAltText": "Background Image Alt Text",
+                  "brandLogo": "/content/dam/tcp-pwa/starbucks.png",
+                  "brandLogoAltText": "Brand Logo Alt Text",
+                  "storyName": "Members only",
+                  "title": "Members only",
+                  "ctaType": "internal",
+                  "description": "Description",
+                  "backgroundImageURL": "/content/dam/tcp-pwa/2 (2).jpeg",
+                  "ctaURL": "/homepage/homepage/story-landing"
+                }
+              ],
+              "source": "aem",
+              "link": "https://dapi.tatadigital.com/api/v1/tataSkyToGetOffers/getOffers",
+              "imageOnly": false,
+              "offers": [],
+              "componentTitle": "Stories Carousel List",
+              "widgetName": "Stories Carousel List",
+              "widgetId": "SCL",
+              "componentPosition": 1,
+              ":type": "tcp-pwa/components/tcp-pwa/common/exclusive-carousel"
+            },
+            "tata_pay_ribbon": {
+              "pageName": "homepage",
+              "category": "Home",
+              "listItems": [
+                {
+                  "ctaType": "external",
+                  "label": "Scan & Pay",
+                  "imageURL": "/content/dam/tcp-pwa/scan.png",
+                  "ctaURL": "/homepage2"
+                },
+                {
+                  "ctaType": "external",
+                  "label": "Request",
+                  "imageURL": "/content/dam/tcp-pwa/request-money.png",
+                  "ctaURL": "/homepage2"
+                },
+                {
+                  "ctaType": "external",
+                  "label": "Pay Bills",
+                  "imageURL": "/content/dam/tcp-pwa/utilities.png",
+                  "ctaURL": "/homepage2"
+                },
+                {
+                  "ctaType": "external",
+                  "label": "DTH Services",
+                  "imageURL": "/content/dam/tcp-pwa/utilities.png",
+                  "ctaURL": "/homepage2"
+                }
+              ],
+              "source": "payments",
+              "link": "https://dapi.tatadigital.com/api/v1/tataSkyToGetOffers/getOffers",
+              "componentTitle": "TATA Pay Ribbon",
+              "widgetName": "TATA Pay Ribbon",
+              "widgetId": "TataPayRibbon",
+              "componentPosition": 2,
+              ":type": "tcp-pwa/components/tcp-pwa/common/tata-pay-ribbon"
+            },
+            "component11": {
+              "pageName": "homepage",
+              "category": "Home",
+              "listItems": [
+                {
+                  "backgroundImageAltText": "Essentials",
+                  "title": "Essentials",
+                  "ctaType": "external",
+                  "backgroundImageURL": "/content/dam/tcp/channels/assets/homepage/homepage-icons/FINAL HOME PAGE ICONS-01.svg",
+                  "ctaURL": "/slp/essentials"
+                },
+                {
+                  "backgroundImageAltText": "Electronics",
+                  "title": "Electronics",
+                  "ctaType": "external",
+                  "backgroundImageURL": "/content/dam/tcp/channels/assets/homepage/homepage-icons/FINAL HOME PAGE ICONS-20.svg",
+                  "ctaURL": "/slp/electronics"
+                },
+                {
+                  "backgroundImageAltText": "Fashion",
+                  "title": "Fashion",
+                  "ctaType": "external",
+                  "backgroundImageURL": "/content/dam/tcp/channels/assets/homepage/homepage-icons/FINAL HOME PAGE ICONS-02.svg",
+                  "ctaURL": "/slp/fashion"
+                },
+                {
+                  "backgroundImageAltText": "Luxury",
+                  "title": "Luxury",
+                  "ctaType": "internal",
+                  "backgroundImageURL": "/content/dam/tcp/channels/assets/homepage/homepage-icons/FINAL HOME PAGE ICONS-19.svg",
+                  "ctaURL": "/content/tcp-pwa/pwa/homepage"
+                },
+                {
+                  "backgroundImageAltText": "Beauty",
+                  "title": "Beauty",
+                  "ctaType": "external",
+                  "backgroundImageURL": "/content/dam/tcp/channels/assets/homepage/homepage-icons/FINAL HOME PAGE ICONS-04.svg",
+                  "ctaURL": "/slp/beauty"
+                },
+                {
+                  "backgroundImageAltText": "Active Life",
+                  "title": "Active Life",
+                  "ctaType": "external",
+                  "backgroundImageURL": "/content/dam/tcp/channels/assets/homepage/homepage-icons/FINAL HOME PAGE ICONS-15.svg",
+                  "ctaURL": "/slp/sports"
+                }
+              ],
+              "source": "aem",
+              "headerText": "Shop now",
+              "link": "https://dapi.tatadigital.com/api/v1/tataSkyToGetOffers/getOffers",
+              "offers": [],
+              "cssData": {
+                "margin": null,
+                "width": null,
+                "itemsWidth": null
+              },
+              "forHomePage": false,
+              "componentTitle": "COMPONENT 11",
+              "widgetName": "COMPONENT 11",
+              "widgetId": "GRD_1",
+              "componentPosition": 3,
+              ":type": "tcp-pwa/components/tcp-pwa/templates/component11"
+            },
+            "component11_copy": {
+              "pageName": "homepage",
+              "category": "Home",
+              "listItems": [
+                {
+                  "backgroundImageAltText": "Flights",
+                  "title": "Flights",
+                  "ctaType": "internal",
+                  "backgroundImageURL": "/content/dam/tcp/channels/assets/homepage/homepage-icons/FINAL HOME PAGE ICONS-16.svg",
+                  "ctaURL": "https://aem-sit-r2.tatadigital.com/swt?offerId=12313&programId=aa98cfab-0bfd-5c0e-7a7d-7bee045eea21&swtUrl=https://airasia.co.in"
+                },
+                {
+                  "backgroundImageAltText": "Hotels",
+                  "title": "Hotels",
+                  "ctaType": "external",
+                  "backgroundImageURL": "/content/dam/tcp/channels/assets/homepage/homepage-icons/FINAL HOME PAGE ICONS-05.svg",
+                  "ctaURL": "/slp/hotel"
+                },
+                {
+                  "backgroundImageAltText": "Finance",
+                  "title": "Finance",
+                  "type": "content",
+                  "ctaType": "internal",
+                  "backgroundImageURL": "/content/dam/tcp/channels/assets/homepage/homepage-icons/FINAL HOME PAGE ICONS-06.svg",
+                  "ctaURL": "https://aem-sit-r2.tatadigital.com/money?tab=loan"
+                },
+                {
+                  "backgroundImageAltText": "Food",
+                  "title": "Food",
+                  "ctaType": "internal",
+                  "backgroundImageURL": "/content/dam/tcp/channels/assets/homepage/homepage-icons/FINAL HOME PAGE ICONS-13.svg",
+                  "ctaURL": "/slp/food---beverage"
+                }
+              ],
+              "source": "aem",
+              "headerText": "Select Services",
+              "link": "Offers",
+              "offers": [],
+              "cssData": {
+                "margin": null,
+                "width": null,
+                "itemsWidth": null
+              },
+              "forHomePage": false,
+              "componentTitle": "COMPONENT 11",
+              "widgetName": "COMPONENT 11",
+              "widgetId": "GRD_1",
+              "componentPosition": 4,
+              ":type": "tcp-pwa/components/tcp-pwa/templates/component11"
+            },
+            "nudge_component": {
+              "pageName": "homepage",
+              "category": "Home",
+              "source": "uc",
+              "mBox": "Homepage",
+              "link": "https://dapi.tatadigital.com/api/v1/tataSkyToGetOffers/getOffers",
+              "title": "There are \u003CcartCount\u003E items in your cart",
+              "backgroundImageURL": "/content/dam/tcp-pwa/icons/Base.png",
+              "ctaType": "internal",
+              "ctaURL": "/bundles/cart",
+              "ctaText": "Checkout",
+              "componentTitle": "NUDGE2",
+              "widgetName": "NUDGE2",
+              "widgetId": "NB_2",
+              "componentPosition": 5,
+              ":type": "tcp-pwa/components/tcp-pwa/homepage/nudge-component"
+            },
+            "mcl_copy": {
+              "pageName": "homepage",
+              "category": "Home",
+              "listItems": [],
+              "source": "msd",
+              "widgetBannerId": "",
+              "widgetHCLId": "",
+              "headerText": "Handpicked shorts",
+              "headerDescriptionText": "Trends, reviews, hacks & more",
+              "widgetCTAType": "internal",
+              "widgetCTAText": "See All",
+              "widgetCTAURL": "/content-zone/discover",
+              "videoUrl": "",
+              "ctaURL": "",
+              "thumbnailImageURL": "",
+              "offers": [],
+              "cssData": {
+                "backgroundColor": null,
+                "titleFontSize": null,
+                "width": null,
+                "detailsBackgroundColor": null,
+                "height": null
+              },
+              "link": "",
+              "componentTitle": "MCL-Multi Carousel List",
+              "widgetName": "MCL-Multi Carousel List",
+              "widgetId": "MCL_1",
+              "componentPosition": 6,
+              ":type": "tcp-pwa/components/tcp-pwa/common/mcl"
+            },
+            "just_out_component": {
+              "pageName": "homepage",
+              "category": "Home",
+              "listItems": [
+                {
+                  "backgroundImageAltText": "Background Image Alt Text",
+                  "title": "Sony Bravia 4k UHD 40\"",
+                  "ctaType": "external",
+                  "description": "Description ",
+                  "sku": "Sku ",
+                  "backgroundImageURL": "/content/dam/tcp-pwa/2 (2).jpeg",
+                  "ctaURL": "https://www.croma.com/sony-164cm-65-inch-ultra-hd-4k-oled-android-smart-tv-2-2-channel-speaker-kd-65a8h-black-/p/230772"
+                }
+              ],
+              "source": "aem",
+              "link": "https://dapi.tatadigital.com/api/v1/tataSkyToGetOffers/getOffers",
+              "headerText": "Just out",
+              "widgetCTAType": "",
+              "widgetCTAURL": "",
+              "widgetCTAText": "",
+              "headerDescriptionText": "Bringing the latest to you",
+              "imageOnly": false,
+              "offers": [],
+              "componentTitle": "Just Out Component",
+              "widgetName": "Just Out Component",
+              "widgetId": "HCL_1",
+              "componentPosition": 7,
+              ":type": "tcp-pwa/components/tcp-pwa/common/just-out-component"
+            },
+            "nudge": {
+              "pageName": "homepage",
+              "category": "Home",
+              "source": "target",
+              "mBox": "Homepage",
+              "backgroundImageURL": "",
+              "ctaType": "internal",
+              "ctaURL": "/content/tcp-pwa/pwa/homepage",
+              "vasCtaURL": "",
+              "recName": "nudge1",
+              "link": "",
+              "componentTitle": "NUDGE1",
+              "widgetName": "NUDGE1",
+              "widgetId": "NB_1",
+              "componentPosition": 8,
+              ":type": "tcp-pwa/components/tcp-pwa/homepage/nudge"
+            },
+            "just_out_component_c": {
+              "pageName": "homepage",
+              "category": "Home",
+              "listItems": [],
+              "source": "msd",
+              "link": "https://dapi.tatadigital.com/api/v1/tataSkyToGetOffers/getOffers",
+              "headerText": "Deals you might like",
+              "widgetCTAURL": "",
+              "headerDescriptionText": "Offers & bundles you shouldn't miss",
+              "recName": "some rec name",
+              "imageOnly": false,
+              "offers": [],
+              "componentTitle": "Just Out Component",
+              "widgetName": "Just Out Component",
+              "widgetId": "HCL_1",
+              "componentPosition": 9,
+              ":type": "tcp-pwa/components/tcp-pwa/common/just-out-component"
+            },
+            "mcl": {
+              "pageName": "homepage",
+              "category": "Home",
+              "listItems": [
+                {
+                  "title": "Into the Wild",
+                  "ctaType": "external",
+                  "backgroundImageURL": "/content/dam/tcp/channels/assets/sit_images/hit-the-road/Header 3.jpg",
+                  "ctaURL": "https://www.youtube.com/embed/ENQ-O5xAKuk",
+                  "contentSource": "AEM",
+                  "contentType": "video"
+                },
+                {
+                  "title": "South East Asia meets Hyderabad ",
+                  "ctaType": "external",
+                  "backgroundImageURL": "/content/dam/tcp/channels/assets/sit_images/charminar hyderabad.jpg",
+                  "ctaURL": "https://www.youtube.com/embed/PDm5pjpIQqE",
+                  "contentSource": "AEM",
+                  "contentType": "video"
+                },
+                {
+                  "title": "Say Goodbye To Your DSLR!",
+                  "ctaType": "internal",
+                  "backgroundImageURL": "/content/dam/tcp/channels/assets/sit_images/Homepage - SLP - Smartphone Into Action Cameras.jpg",
+                  "ctaURL": "/cdp/get_set_shoot",
+                  "contentSource": "AEM",
+                  "contentType": "article"
+                }
+              ],
+              "source": "aem",
+              "widgetBannerId": "BL_2",
+              "widgetHCLId": "HCL_3",
+              "headerText": "Trending Now",
+              "headerDescriptionText": "Curated from U Mag",
+              "widgetCTAType": "internal",
+              "widgetCTAText": "See All",
+              "widgetCTAURL": "/content-zone/discover",
+              "videoUrl": "/content/dam/tcp-pwa/sample-video.mp4",
+              "ctaType": "internal",
+              "ctaURL": "/homepage3",
+              "title": "Watch Sarah Todd's Favourite Breakfast Recipe",
+              "thumbnailImageURL": "/content/dam/tcp-pwa/4 (2).jpeg",
+              "offers": [],
+              "cssData": {
+                "backgroundColor": null,
+                "titleFontSize": null,
+                "width": null,
+                "detailsBackgroundColor": null,
+                "height": null
+              },
+              "componentTitle": "MCL-Multi Carousel List",
+              "widgetName": "MCL-Multi Carousel List",
+              "widgetId": "MCL_1",
+              "componentPosition": 10,
+              ":type": "tcp-pwa/components/tcp-pwa/common/mcl"
+            },
+            "just_out_component_c_965925030": {
+              "pageName": "homepage",
+              "category": "Home",
+              "listItems": [
+                {
+                  "backgroundImageAltText": "Background Image Alt Text",
+                  "title": "Up to 90% off on these special grocery",
+                  "ctaType": "internal",
+                  "description": "Description1",
+                  "sku": "sku",
+                  "backgroundImageURL": "/content/dam/tcp-pwa/4 (2).jpeg",
+                  "ctaURL": "/homepage3"
+                },
+                {
+                  "backgroundImageAltText": "Background Image Alt Text",
+                  "title": "Up to 90% off on these special grocery",
+                  "ctaType": "internal",
+                  "description": "Description",
+                  "sku": "sku",
+                  "backgroundImageURL": "/content/dam/tcp-pwa/4 (2).jpeg",
+                  "ctaURL": "/homepage3"
+                },
+                {
+                  "backgroundImageAltText": "Background Image Alt Text",
+                  "title": "Up to 90% off on these special grocery",
+                  "ctaType": "internal",
+                  "description": "Description",
+                  "sku": "sku",
+                  "backgroundImageURL": "/content/dam/tcp-pwa/4 (2).jpeg",
+                  "ctaURL": "/homepage3"
+                }
+              ],
+              "source": "aem",
+              "link": "Offers",
+              "headerText": "Bundle bonanza",
+              "widgetCTAURL": "/offer-zone/bundles-offers",
+              "widgetCTAText": "See All",
+              "headerDescriptionText": "Get the best bundles",
+              "recName": "rec name",
+              "imageOnly": false,
+              "offers": [
+                {
+                  "ctaUrl": "http://www.bigbasket.com/pd/10000425",
+                  "ctaType": "External",
+                  "offerImage": "https://www.bigbasket.com/media/uploads/p/xxl/10000425_15-bb-royal-toor-dalarhar-dal-desi.jpg",
+                  "description": "TEST22-3 20% OFF on bb Royal toor-dalarhar-dal-desi 1 kg Pouch",
+                  "offerId": "bbgrsfab-0bfd-5c0e-7a7d-7bee045ee970:110000432",
+                  "title": "TEST22-3 20% OFF on bb Royal toor-dalarhar-dal-desi 1 kg Pouch",
+                  "ctaLabel": "Shop now",
+                  "offerType": "Discount",
+                  "brandTitle": "BigBasket",
+                  "programId": "bbgrsfab-0bfd-5c0e-7a7d-7bee045ee970",
+                  "brandLogo": "",
+                  "isBundle": false,
+                  "couponId": "",
+                  "couponType": "",
+                  "backgroundImage": "https://www.bigbasket.com/media/uploads/p/xxl/10000425_15-bb-royal-toor-dalarhar-dal-desi.jpg",
+                  "offerGenre": ""
+                }
+              ],
+              "componentTitle": "Just Out Component",
+              "widgetName": "Just Out Component",
+              "widgetId": "HCL_1",
+              "componentPosition": 11,
+              ":type": "tcp-pwa/components/tcp-pwa/common/just-out-component"
+            },
+            "banner_component": {
+              "pageName": "homepage",
+              "category": "Home",
+              "source": "aem",
+              "backgroundImageURL": "/content/dam/tcp-pwa/4 (2).jpeg",
+              "backgroundAltText": "Background Image Alt Text",
+              "title": "Hit the track",
+              "description": "Shoes that look good, perform better",
+              "ctaType": "internal",
+              "link": "LinkTest",
+              "ctaURL": "/homepage2.html",
+              "recName": "banner_large1",
+              "rec_name": "",
+              "offerData": {},
+              "componentTitle": "Banner Large1",
+              "widgetName": "Banner Large1",
+              "widgetId": "BL_1",
+              "componentPosition": 12,
+              ":type": "tcp-pwa/components/tcp-pwa/common/banner-component"
+            },
+            "nudge4": {
+              "pageName": "homepage",
+              "category": "Home",
+              "source": "target",
+              "mBox": "UAT_C360_090721_Usecase_4 | NB4",
+              "link": "Trending Content by category",
+              "backgroundImageURL": "",
+              "ctaURL": "",
+              "desktopBackgroundImageURL": "",
+              "recName": "nudge4",
+              "offerData": {},
+              "componentTitle": "NUDGE4",
+              "widgetName": "NUDGE4",
+              "widgetId": "NB_4",
+              "componentPosition": 13,
+              ":type": "tcp-pwa/components/tcp-pwa/homepage/nudge4"
+            }
+          },
+          ":itemsOrder": [
+            "exclusive_carousel",
+            "tata_pay_ribbon",
+            "component11",
+            "component11_copy",
+            "nudge_component",
+            "mcl_copy",
+            "just_out_component",
+            "nudge",
+            "just_out_component_c",
+            "mcl",
+            "just_out_component_c_965925030",
+            "banner_component",
+            "nudge4"
+          ],
+          ":type": "wcm/foundation/components/responsivegrid"
+        }
+      },
+      ":itemsOrder": [
+        "responsivegrid"
+      ],
+      ":type": "wcm/foundation/components/responsivegrid"
+    }
+  },
+  ":itemsOrder": [
+    "root"
+  ],
+  ":path": "/homepage/homepage",
+  ":hierarchyType": "page"
+}

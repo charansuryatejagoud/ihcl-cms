@@ -1,0 +1,450 @@
+{
+  "title": "Homepage",
+  "path": "/homepage/homepage",
+  "items": [
+    {
+      "pageName": "homepage",
+      "category": "Home",
+      "listItems": [
+        {
+          "backgroundAltText": "HP Starbucks",
+          "brandLogo": "/content/dam/tcp-pwa/starbucks.png",
+          "brandLogoAltText": "Starbucks",
+          "storyName": "StoryName Text",
+          "title": "Claim your Bonus Stars!",
+          "ctaType": "internal",
+          "description": "Description",
+          "backgroundImageURL": "/content/dam/tcp/channels/assets/homepage/HP Starbucks Story.jpg",
+          "ctaURL": "/homepage/homepage/story-landing"
+        },
+        {
+          "backgroundAltText": "Background Image Alt Text",
+          "brandLogo": "/content/dam/tcp-pwa/starbucks.png",
+          "brandLogoAltText": "Brand Logo Alt Text",
+          "storyName": "Members only",
+          "title": "Members only",
+          "ctaType": "internal",
+          "description": "Description",
+          "backgroundImageURL": "/content/dam/tcp-pwa/2 (2).jpeg",
+          "ctaURL": "/homepage/homepage/story-landing"
+        },
+        {
+          "backgroundAltText": "Background Image Alt Text",
+          "brandLogo": "/content/dam/tcp-pwa/starbucks.png",
+          "brandLogoAltText": "Brand Logo Alt Text",
+          "storyName": "Members only",
+          "title": "Members only",
+          "ctaType": "internal",
+          "description": "Description",
+          "backgroundImageURL": "/content/dam/tcp-pwa/2 (2).jpeg",
+          "ctaURL": "/homepage/homepage/story-landing"
+        }
+      ],
+      "source": "aem",
+      "link": "https://dapi.tatadigital.com/api/v1/tataSkyToGetOffers/getOffers",
+      "imageOnly": false,
+      "offers": [],
+      "componentTitle": "Stories Carousel List",
+      "widgetName": "Stories Carousel List",
+      "widgetId": "SCL",
+      "componentPosition": 1,
+      ":type": "tcp-pwa/components/tcp-pwa/common/exclusive-carousel"
+    },
+    {
+      "pageName": "homepage",
+      "category": "Home",
+      "listItems": [
+        {
+          "ctaType": "external",
+          "label": "Scan & Pay",
+          "imageURL": "/content/dam/tcp-pwa/scan.png",
+          "ctaURL": "/homepage2"
+        },
+        {
+          "ctaType": "external",
+          "label": "Request",
+          "imageURL": "/content/dam/tcp-pwa/request-money.png",
+          "ctaURL": "/homepage2"
+        },
+        {
+          "ctaType": "external",
+          "label": "Pay Bills",
+          "imageURL": "/content/dam/tcp-pwa/utilities.png",
+          "ctaURL": "/homepage2"
+        },
+        {
+          "ctaType": "external",
+          "label": "DTH Services",
+          "imageURL": "/content/dam/tcp-pwa/utilities.png",
+          "ctaURL": "/homepage2"
+        }
+      ],
+      "source": "payments",
+      "link": "https://dapi.tatadigital.com/api/v1/tataSkyToGetOffers/getOffers",
+      "componentTitle": "TATA Pay Ribbon",
+      "widgetName": "TATA Pay Ribbon",
+      "widgetId": "TataPayRibbon",
+      "componentPosition": 2,
+      ":type": "tcp-pwa/components/tcp-pwa/common/tata-pay-ribbon"
+    },
+    {
+      "pageName": "homepage",
+      "category": "Home",
+      "listItems": [
+        {
+          "backgroundImageAltText": "Essentials",
+          "title": "Essentials",
+          "ctaType": "external",
+          "backgroundImageURL": "/content/dam/tcp/channels/assets/homepage/homepage-icons/FINAL HOME PAGE ICONS-01.svg",
+          "ctaURL": "/slp/essentials"
+        },
+        {
+          "backgroundImageAltText": "Electronics",
+          "title": "Electronics",
+          "ctaType": "external",
+          "backgroundImageURL": "/content/dam/tcp/channels/assets/homepage/homepage-icons/FINAL HOME PAGE ICONS-20.svg",
+          "ctaURL": "/slp/electronics"
+        },
+        {
+          "backgroundImageAltText": "Fashion",
+          "title": "Fashion",
+          "ctaType": "external",
+          "backgroundImageURL": "/content/dam/tcp/channels/assets/homepage/homepage-icons/FINAL HOME PAGE ICONS-02.svg",
+          "ctaURL": "/slp/fashion"
+        },
+        {
+          "backgroundImageAltText": "Luxury",
+          "title": "Luxury",
+          "ctaType": "internal",
+          "backgroundImageURL": "/content/dam/tcp/channels/assets/homepage/homepage-icons/FINAL HOME PAGE ICONS-19.svg",
+          "ctaURL": "/content/tcp-pwa/pwa/homepage"
+        },
+        {
+          "backgroundImageAltText": "Beauty",
+          "title": "Beauty",
+          "ctaType": "external",
+          "backgroundImageURL": "/content/dam/tcp/channels/assets/homepage/homepage-icons/FINAL HOME PAGE ICONS-04.svg",
+          "ctaURL": "/slp/beauty"
+        },
+        {
+          "backgroundImageAltText": "Active Life",
+          "title": "Active Life",
+          "ctaType": "external",
+          "backgroundImageURL": "/content/dam/tcp/channels/assets/homepage/homepage-icons/FINAL HOME PAGE ICONS-15.svg",
+          "ctaURL": "/slp/sports"
+        }
+      ],
+      "source": "aem",
+      "headerText": "Shop now",
+      "link": "https://dapi.tatadigital.com/api/v1/tataSkyToGetOffers/getOffers",
+      "offers": [],
+      "forHomePage": false,
+      "componentTitle": "COMPONENT 11",
+      "widgetName": "COMPONENT 11",
+      "widgetId": "GRD_1",
+      "componentPosition": 3,
+      ":type": "tcp-pwa/components/tcp-pwa/templates/component11"
+    },
+    {
+      "pageName": "homepage",
+      "category": "Home",
+      "listItems": [
+        {
+          "backgroundImageAltText": "Flights",
+          "title": "Flights",
+          "ctaType": "internal",
+          "backgroundImageURL": "/content/dam/tcp/channels/assets/homepage/homepage-icons/FINAL HOME PAGE ICONS-16.svg",
+          "ctaURL": "https://aem-sit-r2.tatadigital.com/swt?offerId=12313&programId=aa98cfab-0bfd-5c0e-7a7d-7bee045eea21&swtUrl=https://airasia.co.in"
+        },
+        {
+          "backgroundImageAltText": "Hotels",
+          "title": "Hotels",
+          "ctaType": "external",
+          "backgroundImageURL": "/content/dam/tcp/channels/assets/homepage/homepage-icons/FINAL HOME PAGE ICONS-05.svg",
+          "ctaURL": "/slp/hotel"
+        },
+        {
+          "backgroundImageAltText": "Finance",
+          "title": "Finance",
+          "type": "content",
+          "ctaType": "internal",
+          "backgroundImageURL": "/content/dam/tcp/channels/assets/homepage/homepage-icons/FINAL HOME PAGE ICONS-06.svg",
+          "ctaURL": "https://aem-sit-r2.tatadigital.com/money?tab=loan"
+        },
+        {
+          "backgroundImageAltText": "Food",
+          "title": "Food",
+          "ctaType": "internal",
+          "backgroundImageURL": "/content/dam/tcp/channels/assets/homepage/homepage-icons/FINAL HOME PAGE ICONS-13.svg",
+          "ctaURL": "/slp/food---beverage"
+        }
+      ],
+      "source": "aem",
+      "headerText": "Select Services",
+      "link": "Offers",
+      "offers": [],
+      "forHomePage": false,
+      "componentTitle": "COMPONENT 11",
+      "widgetName": "COMPONENT 11",
+      "widgetId": "GRD_1",
+      "componentPosition": 4,
+      ":type": "tcp-pwa/components/tcp-pwa/templates/component11"
+    },
+    {
+      "pageName": "homepage",
+      "category": "Home",
+      "source": "uc",
+      "mBox": "Homepage",
+      "link": "https://dapi.tatadigital.com/api/v1/tataSkyToGetOffers/getOffers",
+      "title": "There are <cartCount> items in your cart",
+      "backgroundImageURL": "/content/dam/tcp-pwa/icons/Base.png",
+      "ctaType": "internal",
+      "ctaURL": "/bundles/cart",
+      "ctaText": "Checkout",
+      "componentTitle": "NUDGE2",
+      "widgetName": "NUDGE2",
+      "widgetId": "NB_2",
+      "componentPosition": 5,
+      ":type": "tcp-pwa/components/tcp-pwa/homepage/nudge-component"
+    },
+    {
+      "pageName": "homepage",
+      "category": "Home",
+      "listItems": [],
+      "source": "msd",
+      "widgetBannerId": "",
+      "widgetHCLId": "",
+      "headerText": "Handpicked shorts",
+      "headerDescriptionText": "Trends, reviews, hacks & more",
+      "widgetCTAType": "internal",
+      "widgetCTAText": "See All",
+      "widgetCTAURL": "/content-zone/discover",
+      "videoUrl": "",
+      "ctaURL": "",
+      "thumbnailImageURL": "",
+      "offers": [],
+      "link": "",
+      "componentTitle": "MCL-Multi Carousel List",
+      "widgetName": "MCL-Multi Carousel List",
+      "widgetId": "MCL_1",
+      "componentPosition": 6,
+      ":type": "tcp-pwa/components/tcp-pwa/common/mcl"
+    },
+    {
+      "pageName": "homepage",
+      "category": "Home",
+      "listItems": [
+        {
+          "backgroundImageAltText": "Background Image Alt Text",
+          "title": "Sony Bravia 4k UHD 40\"",
+          "ctaType": "external",
+          "description": "Description ",
+          "sku": "Sku ",
+          "backgroundImageURL": "/content/dam/tcp-pwa/2 (2).jpeg",
+          "ctaURL": "https://www.croma.com/sony-164cm-65-inch-ultra-hd-4k-oled-android-smart-tv-2-2-channel-speaker-kd-65a8h-black-/p/230772"
+        }
+      ],
+      "source": "aem",
+      "link": "https://dapi.tatadigital.com/api/v1/tataSkyToGetOffers/getOffers",
+      "headerText": "Just out",
+      "widgetCTAType": "",
+      "widgetCTAURL": "",
+      "widgetCTAText": "",
+      "headerDescriptionText": "Bringing the latest to you",
+      "imageOnly": false,
+      "offers": [],
+      "componentTitle": "Just Out Component",
+      "widgetName": "Just Out Component",
+      "widgetId": "HCL_1",
+      "componentPosition": 7,
+      ":type": "tcp-pwa/components/tcp-pwa/common/just-out-component"
+    },
+    {
+      "pageName": "homepage",
+      "category": "Home",
+      "source": "target",
+      "mBox": "Homepage",
+      "backgroundImageURL": "",
+      "ctaType": "internal",
+      "ctaURL": "/content/tcp-pwa/pwa/homepage",
+      "vasCtaURL": "",
+      "recName": "nudge1",
+      "link": "",
+      "componentTitle": "NUDGE1",
+      "widgetName": "NUDGE1",
+      "widgetId": "NB_1",
+      "componentPosition": 8,
+      ":type": "tcp-pwa/components/tcp-pwa/homepage/nudge"
+    },
+    {
+      "pageName": "homepage",
+      "category": "Home",
+      "listItems": [],
+      "source": "msd",
+      "link": "https://dapi.tatadigital.com/api/v1/tataSkyToGetOffers/getOffers",
+      "headerText": "Deals you might like",
+      "widgetCTAURL": "",
+      "headerDescriptionText": "Offers & bundles you shouldn't miss",
+      "recName": "some rec name",
+      "imageOnly": false,
+      "offers": [],
+      "componentTitle": "Just Out Component",
+      "widgetName": "Just Out Component",
+      "widgetId": "HCL_1",
+      "componentPosition": 9,
+      ":type": "tcp-pwa/components/tcp-pwa/common/just-out-component"
+    },
+    {
+      "pageName": "homepage",
+      "category": "Home",
+      "listItems": [
+        {
+          "title": "Into the Wild",
+          "ctaType": "external",
+          "backgroundImageURL": "/content/dam/tcp/channels/assets/sit_images/hit-the-road/Header 3.jpg",
+          "ctaURL": "https://www.youtube.com/embed/ENQ-O5xAKuk",
+          "contentSource": "AEM",
+          "contentType": "video"
+        },
+        {
+          "title": "South East Asia meets Hyderabad ",
+          "ctaType": "external",
+          "backgroundImageURL": "/content/dam/tcp/channels/assets/sit_images/charminar hyderabad.jpg",
+          "ctaURL": "https://www.youtube.com/embed/PDm5pjpIQqE",
+          "contentSource": "AEM",
+          "contentType": "video"
+        },
+        {
+          "title": "Say Goodbye To Your DSLR!",
+          "ctaType": "internal",
+          "backgroundImageURL": "/content/dam/tcp/channels/assets/sit_images/Homepage - SLP - Smartphone Into Action Cameras.jpg",
+          "ctaURL": "/cdp/get_set_shoot",
+          "contentSource": "AEM",
+          "contentType": "article"
+        }
+      ],
+      "source": "aem",
+      "widgetBannerId": "BL_2",
+      "widgetHCLId": "HCL_3",
+      "headerText": "Trending Now",
+      "headerDescriptionText": "Curated from U Mag",
+      "widgetCTAType": "internal",
+      "widgetCTAText": "See All",
+      "widgetCTAURL": "/content-zone/discover",
+      "videoUrl": "/content/dam/tcp-pwa/sample-video.mp4",
+      "ctaType": "internal",
+      "ctaURL": "/homepage3",
+      "title": "Watch Sarah Todd's Favourite Breakfast Recipe",
+      "thumbnailImageURL": "/content/dam/tcp-pwa/4 (2).jpeg",
+      "offers": [],
+      "componentTitle": "MCL-Multi Carousel List",
+      "widgetName": "MCL-Multi Carousel List",
+      "widgetId": "MCL_1",
+      "componentPosition": 10,
+      ":type": "tcp-pwa/components/tcp-pwa/common/mcl"
+    },
+    {
+      "pageName": "homepage",
+      "category": "Home",
+      "listItems": [
+        {
+          "backgroundImageAltText": "Background Image Alt Text",
+          "title": "Up to 90% off on these special grocery",
+          "ctaType": "internal",
+          "description": "Description1",
+          "sku": "sku",
+          "backgroundImageURL": "/content/dam/tcp-pwa/4 (2).jpeg",
+          "ctaURL": "/homepage3"
+        },
+        {
+          "backgroundImageAltText": "Background Image Alt Text",
+          "title": "Up to 90% off on these special grocery",
+          "ctaType": "internal",
+          "description": "Description",
+          "sku": "sku",
+          "backgroundImageURL": "/content/dam/tcp-pwa/4 (2).jpeg",
+          "ctaURL": "/homepage3"
+        },
+        {
+          "backgroundImageAltText": "Background Image Alt Text",
+          "title": "Up to 90% off on these special grocery",
+          "ctaType": "internal",
+          "description": "Description",
+          "sku": "sku",
+          "backgroundImageURL": "/content/dam/tcp-pwa/4 (2).jpeg",
+          "ctaURL": "/homepage3"
+        }
+      ],
+      "source": "aem",
+      "link": "Offers",
+      "headerText": "Bundle bonanza",
+      "widgetCTAURL": "/offer-zone/bundles-offers",
+      "widgetCTAText": "See All",
+      "headerDescriptionText": "Get the best bundles",
+      "recName": "rec name",
+      "imageOnly": false,
+      "offers": [
+        {
+          "ctaUrl": "http://www.bigbasket.com/pd/10000425",
+          "ctaType": "External",
+          "offerImage": "https://www.bigbasket.com/media/uploads/p/xxl/10000425_15-bb-royal-toor-dalarhar-dal-desi.jpg",
+          "description": "TEST22-3 20% OFF on bb Royal toor-dalarhar-dal-desi 1 kg Pouch",
+          "offerId": "bbgrsfab-0bfd-5c0e-7a7d-7bee045ee970:110000432",
+          "title": "TEST22-3 20% OFF on bb Royal toor-dalarhar-dal-desi 1 kg Pouch",
+          "ctaLabel": "Shop now",
+          "offerType": "Discount",
+          "brandTitle": "BigBasket",
+          "programId": "bbgrsfab-0bfd-5c0e-7a7d-7bee045ee970",
+          "brandLogo": "",
+          "isBundle": false,
+          "couponId": "",
+          "couponType": "",
+          "backgroundImage": "https://www.bigbasket.com/media/uploads/p/xxl/10000425_15-bb-royal-toor-dalarhar-dal-desi.jpg",
+          "offerGenre": ""
+        }
+      ],
+      "componentTitle": "Just Out Component",
+      "widgetName": "Just Out Component",
+      "widgetId": "HCL_1",
+      "componentPosition": 11,
+      ":type": "tcp-pwa/components/tcp-pwa/common/just-out-component"
+    },
+    {
+      "pageName": "homepage",
+      "category": "Home",
+      "source": "aem",
+      "backgroundImageURL": "/content/dam/tcp-pwa/4 (2).jpeg",
+      "backgroundAltText": "Background Image Alt Text",
+      "title": "Hit the track",
+      "description": "Shoes that look good, perform better",
+      "ctaType": "internal",
+      "link": "LinkTest",
+      "ctaURL": "/homepage2.html",
+      "recName": "banner_large1",
+      "rec_name": "",
+      "offerData": {},
+      "componentTitle": "Banner Large1",
+      "widgetName": "Banner Large1",
+      "widgetId": "BL_1",
+      "componentPosition": 12,
+      ":type": "tcp-pwa/components/tcp-pwa/common/banner-component"
+    },
+    {
+      "pageName": "homepage",
+      "category": "Home",
+      "source": "target",
+      "mBox": "UAT_C360_090721_Usecase_4 | NB4",
+      "link": "Trending Content by category",
+      "backgroundImageURL": "",
+      "ctaURL": "",
+      "desktopBackgroundImageURL": "",
+      "recName": "nudge4",
+      "offerData": {},
+      "componentTitle": "NUDGE4",
+      "widgetName": "NUDGE4",
+      "widgetId": "NB_4",
+      "componentPosition": 13,
+      ":type": "tcp-pwa/components/tcp-pwa/homepage/nudge4"
+    }
+  ]
+}

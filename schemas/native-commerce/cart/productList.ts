@@ -1,0 +1,160 @@
+import { IoList as Icon } from "react-icons/io5";
+
+export default {
+  name: "flashCommerce.cartProductList",
+  title: "[Flash Commerce] Cart Product List",
+  type: "object",
+  icon: Icon,
+  initialValue: {
+    title: "[Flash Commerce] Cart Product List",
+    outOfStockLabel: "Out Of Stock",
+    outOfStockLabelForPinCode: "Uh-oh! This item is currently unavailable at ",
+    priceIncreasedLabel: "Hi! Price increased",
+    priceDecreasedLabel: "Yay! Price dropped",
+    limitReachedLabel: "Limit reached",
+    onlyFewLeftLabel: "Only few left",
+    cartUpdatedLabel: "Hey! Your cart's been updated",
+    itemDeletedLabel: "Hey! Item deleted from cart",
+    itemAddedLabel: "Product added to cart",
+    customQuantityLabel: "Custom quantity",
+    enterQuantityLabel: "Enter quantity",
+    enterLabel: "Enter",
+    quantityExceededLabel: "Quantity ordered greater than Maximum Quantity",
+    quantityUnavailableLabel: "Selected quantity unavailable",
+    offerExpiredLabel: "Offer Expired",
+    popupPrimaryCtaLabel: "Okay",
+    undoLabel: "Undo",
+    nonNeuPassMemberLeadingLabel: "Get NeuPass now to unlock up to ",
+    nonNeuPassMemberTrailingLabel: "NeuCoins",
+    customQuantitySelectorLimit: 10,
+    showCustomQuantitySelector: true,
+    quantityDropdownLimit: 3,
+  },
+  fields: [
+    {
+      name: "title",
+      title: "Title",
+      type: "string",
+    },
+    {
+      name: "outOfStockLabel",
+      title: "Out Of Stock Label",
+      type: "string",
+    },
+    {
+      name: "outOfStockLabelForPinCode",
+      title: "Out Of Stock Label for PIN Code",
+      type: "string",
+    },
+    {
+      name: "priceIncreasedLabel",
+      title: "Price Increased Label",
+      type: "string",
+    },
+    {
+      name: "priceDecreasedLabel",
+      title: "Price Decreased Label",
+      type: "string",
+    },
+    {
+      name: "limitReachedLabel",
+      title: "Limit Reached Label",
+      type: "string",
+    },
+    {
+      name: "onlyFewLeftLabel",
+      title: "Only Few Left Label",
+      type: "string",
+    },
+    {
+      name: "neuCoinsLimit",
+      title: "Neu Coins Limit",
+      type: "number",
+    },
+    {
+      name: "cartUpdatedLabel",
+      title: "Cart Updated Label",
+      type: "string",
+    },
+    {
+      name: "itemDeletedLabel",
+      title: "Item Deleted Label",
+      type: "string",
+    },
+    {
+      name: "itemAddedLabel",
+      title: "Item Added Label",
+      type: "string",
+    },
+    {
+      name: "customQuantityLabel",
+      title: "Custom Quantity Label",
+      type: "string",
+    },
+    {
+      name: "enterQuantityLabel",
+      title: "Enter Quantity Label",
+      type: "string",
+    },
+    {
+      name: "enterLabel",
+      title: "Enter Label",
+      type: "string",
+    },
+    {
+      name: "quantityExceededLabel",
+      title: "Quantity Exceeded Label",
+      type: "string",
+    },
+    {
+      name: "quantityUnavailableLabel",
+      title: "Quantity Unavailable Label",
+      type: "string",
+    },
+    {
+      name: "nonNeuPassMemberLeadingLabel",
+      title: "NonNeuPass Member LeadingLabel",
+      type: "string",
+    },
+    {
+      name: "nonNeuPassMemberTrailingLabel",
+      title: "NonNeuPass Member Trailing Label",
+      type: "string",
+    },
+    {
+      name: "offerExpiredLabel",
+      title: "Offer Expired Label",
+      type: "string",
+    },
+    {
+      name: "popupPrimaryCtaLabel",
+      title: "Primary CTA Label for Popup",
+      type: "string",
+    },
+    {
+      name: "undoLabel",
+      title: "Undo delete label for Nudge",
+      type: "string",
+    },
+    {
+      name: "customQuantitySelectorLimit",
+      title: "Limit for custom quantity Input",
+      type: "number",
+    },
+    {
+      name: "quantityDropdownLimit",
+      title: "Limit for dropdown Input",
+      type: "number",
+    },
+    {
+      name: "showCustomQuantitySelector",
+      title: "Show icon to enter custom quantity",
+      type: "boolean",
+    },
+    {
+      name: "metadata",
+      type: "metadata",
+      title: "Metadata",
+    },
+  ],
+};

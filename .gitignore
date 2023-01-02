@@ -1,0 +1,11 @@
+build
+dist
+.idea
+node_modules
+.DS_Store
+yarn.lock
+.history
+*.iml
+.vscode
+/config/
+*.xlsx
