@@ -77,7 +77,7 @@ export default function card(props: Props) {
         },
         group: "main",
       },
-      
+
       {
         name: "ctaLabel",
         title: "CTA Label",
@@ -112,48 +112,46 @@ export default function card(props: Props) {
         type: "image",
         group: "main",
       },
-      
-        {
-          name: "backgroundImage",
-          title: "Background Image",
-          type: "image",
-          group: "main",
-        },
-      
+
+      {
+        name: "backgroundImage",
+        title: "Background Image",
+        type: "image",
+        group: "main",
+      },
       {
         name: 'mediaType',
         title: 'Media Type',
         type: 'string',
         options: {
-            list: [
-                { title: 'Video', value: 'video' },
-                { title: 'Image', value: 'image' },
-                { title: 'Component', value: 'component' }
-            ]
+          list: [
+            { title: 'Video', value: 'video' },
+            { title: 'Image', value: 'image' },
+          ]
         }
-    },
-  //   {
-  //     name: "imageAsset",
-  //     title: "Image",
-  //     type: imageAsset,
-  //     hidden: ({ parent }) => parent?.mediaType !== "image" && parent?.largeVariant !== "image",
-  // },
-  // {
-  //     name: "videoAsset",
-  //     title: "Video",
-  //     type: videoAsset,
-  //     hidden: ({ parent }) => parent?.mediaType !== "video" && parent?.largeVariant !== "video",
-  // },
+      },
       {
-        name:"primaryAction",
-        title:"Primary Action",
-        type:"navigationItem"
-    },
-    {
-        name:"secondaryAction",
-        title:"Secondary Action",
-        type:"navigationItem"
-    },
+        name: "imageAsset",
+        title: "Image",
+        type: "imageAsset",
+        hidden: ({ parent }) => parent?.mediaType !== "image" && parent?.largeVariant !== "image",
+      },
+      {
+        name: "videoAsset",
+        title: "Video",
+        type: "videoAsset",
+        hidden: ({ parent }) => parent?.mediaType !== "video" && parent?.largeVariant !== "video",
+      },
+      {
+        name: "primaryAction",
+        title: "Primary Action",
+        type: "navigationItem"
+      },
+      {
+        name: "secondaryAction",
+        title: "Secondary Action",
+        type: "navigationItem"
+      },
       {
         name: "brand",
         title: "Brand",

@@ -74,50 +74,8 @@ export default {
     },
 };
 
-export const imageAsset = {
-    name: "imageAsset",
-    title: "Image Asset",
-    type: "object",
-    fields: [
-        {
-            name: "image",
-            title: "Image",
-            type: "array",
-            of: [
-                {
-                    type: "image"
-                }
-            ]
-        },
-        {
-            name: "largeImage",
-            title: "Large Image",
-            type: "array",
-            of: [{ type: "image" }]
-        }
-    ]
-};
-export const videoAsset = {
-    name: "videoAsset",
-    title: "Video Asset",
-    type: "object",
-    fields: [
-        {
-            name: "fallback",
-            title: "Fallback format",
-            type: "file",
-            options: {
-                accept: "video/mp4"
-            }
-        },
-        {
-            name: "videoUrl",
-            title: "Video Url",
-            type: "url"
-        }
 
-    ]
-};
+
 export const bannerComponents = (props) => {
     return {
         name: "component",

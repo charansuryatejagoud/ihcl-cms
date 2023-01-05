@@ -31,9 +31,11 @@ import accelerator from "./documents/accelerator";
 import faqCategory from "./documents/faqCategory";
 import faqQuestion from "./documents/faqQuestion";
 import { acceleratorCardVariant } from "./objects/card";
-import banner, { bannerComponents, imageAsset, videoAsset } from "./objects/banner";
+import banner, { bannerComponents } from "./objects/banner";
 import footer from "./documents/footer";
 import header from "./documents/header";
+import { imageAsset } from "./objects/imageAsset";
+import { videoAsset } from "./objects/videoAsset";
 
 export const core: FeatureSchemaDefinition = {
   schemas: [
