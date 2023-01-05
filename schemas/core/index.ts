@@ -30,7 +30,10 @@ import hamburgerProfile from "./hamburgerProfileHeader";
 import accelerator from "./documents/accelerator";
 import faqCategory from "./documents/faqCategory";
 import faqQuestion from "./documents/faqQuestion";
-import {acceleratorCardVariant} from "./objects/card";
+import { acceleratorCardVariant } from "./objects/card";
+import banner, { bannerComponents, imageAsset, videoAsset } from "./objects/banner";
+import footer from "./documents/footer";
+import header from "./documents/header";
 
 export const core: FeatureSchemaDefinition = {
   schemas: [
@@ -63,7 +66,11 @@ export const core: FeatureSchemaDefinition = {
     accelerator,
     faqCategory,
     faqQuestion,
-   
+    banner,
+    header,
+    footer,
+    imageAsset,
+    videoAsset,
   ],
   transformers: [reorderTransformer],
   headers: [
@@ -74,7 +81,7 @@ export const core: FeatureSchemaDefinition = {
   footers: [
     {
       type: "blockSection",
-    },
+    }
   ],
   pageItems: [
     { type: "group" },
@@ -86,6 +93,7 @@ export const core: FeatureSchemaDefinition = {
     {
       type: "link",
     },
+    { type: "banner" },
     {
       type: "blockSection",
     },
@@ -168,53 +176,35 @@ export const core: FeatureSchemaDefinition = {
   ],
   variants: {
     group: [
-      { title: "Carousel", value: "carousel" },
-      { title: "Large Carousel", value: "carousel-large" },
-      { title: "Horizontal List", value: "list" },
-      { title: "Vertical List", value: "list.vertical" },
-      {
-        title: "Vertical List Zero Padding",
-        value: "list.vertical.zero-padding",
-      },
-      {
-        title: "Vertical List Zero Padding (Item Padding 4)",
-        value: "list.vertical.zero-padding.widget-padding-4",
-      },
-      { title: "Items Only List", value: "list.items-only" },
-      { title: "Single Item", value: "list.single-item" },
-      { title: "2-Column Grid", value: "grid-cols2" },
-      { title: "3-Column Grid", value: "grid-cols3" },
-      { title: "6-Column Grid", value: "grid-cols6" },
-      { title: "Column Grid with black Background", value: "grid-cols-black" },
-      { title: "Auto Carousel", value: "carousel-auto" },
-      { title: "Placeholder", value: "placeholder" },
-      { title: "3-Column Carousel", value: "carousel-cols3" },
-      { title: "4-Column Carousel", value: "carousel-cols4" },
-      { title: "6-Column Carousel", value: "carousel-cols6" },
-      {
-        title: "Auto Carousel With Circular White Dots Indicator",
-        value: "carousel-auto-white-circular-indicator",
-      },
-      {
-        title: "Grid 2-Col Aspect Ratio 3:1",
-        value: "grid.column-2.aspect-3:1",
-      },
-      {
-        title: "3-Column Smooth Scroll Carousel",
-        value: "smooth-scroll-carousel-cols3",
-      },
-      {
-        title: "Expansion View",
-        value: "expansion",
-      },
-      {
-        title: "Nav Options",
-        value: "list.nav.options",
-      },
-      {
-        title: "Center Aligned",
-        value: "center-align",
-      },
+      { title: '4-row-grid', value: '4-row-grid' },
+      { title: 'single-card-carousel-with-bg-image', value: 'single-card-carousel-with-bg-image' },
+      { title: 'carousel-with-award-cards', value: 'carousel-with-award-cards' },
+      { title: 'multi-cards-carousel-with-bg-image', value: 'multi-cards-carousel-with-bg-image' },
+      { title: 'media-card', value: 'media-card' },
+      { title: 'carousel-with-focused-title', value: 'carousel-with-focused-title' },
+      { title: 'group-with-information', value: 'group-with-information' },
+      { title: 'group-with-links', value: 'group-with-links' },
+      { title: 'group-with-maps', value: 'group-with-maps' },
+      { title: 'card-with-right-aligned-content', value: 'card-with-right-aligned-content' },
+      { title: 'card-with-focused-title', value: 'card-with-focused-title' },
+      { title: 'highlighted-2-cards-carousel', value: 'highlighted-2-cards-carousel' },
+      { title: 'carousel-with-tabs', value: 'carousel-with-tabs' },
+      { title: 'carousel-with-3-column-grid', value: 'carousel-with-3-column-grid' },
+      { title: 'transparent-4-cards', value: 'transparent-4-cards' },
+      { title: 'group-with-simple-media', value: 'group-with-simple-media' },
+      { title: '4-column-rectangle-grid', value: '4-column-rectangle-grid' },
+      { title: '2-row-grid', value: '2-row-grid' },
+      { title: 'group-with-facilities', value: 'group-with-facilities' },
+      { title: 'group-with-2-column-cards-grid', value: 'group-with-2-column-cards-grid' },
+      { title: 'group-with-3-column-cards-grid', value: 'group-with-3-column-cards-grid' },
+      { title: '3-cards-carousel', value: '3-cards-carousel' },
+      { title: 'highlighted-2-cards-carousel', value: 'highlighted-2-cards-carousel' },
+      { title: 'group-with-media', value: 'group-with-media' },
+      { title: 'group-with-videoplayer', value: 'group-with-videoplayer' },
+      { title: 'information-data', value: 'information-data' },
+      { title: 'multiple-data', value: 'multiple-data' },
+      { title: 'carousel-with-side-text-card', value: 'carousel-with-side-text-card' },
+      { title: 'navigation-tabs', value: 'navigation-tabs' }
     ],
     navigation: [
       { title: "Default Navigation", value: "default" },
@@ -223,73 +213,30 @@ export const core: FeatureSchemaDefinition = {
       { title: "Appbar with chatbot", value: "chatbot.appbar" },
     ],
     card: [
-      { title: "Default Card", value: "card-default" },
-      { title: "Card With Content", value: "card-content" },
-      { title: "Card with Rich Text content", value: "card-rich-text" },
-      {
-        title: "Landscape, 100% Width (3:1 aspect)",
-        value: "card-landscape-w100-aspect-3:1",
-      },
-      {
-        title: "Landscape, 100% Width (4:3 aspect)",
-        value: "card-landscape-w100-aspect-4:3",
-      },
-      {
-        title: "Landscape, 100% Width (16:9 aspect)",
-        value: "card-landscape-w100-aspect-16:9",
-      },
-      {
-        title: "Landscape, No Padding 100% Width (16:9 aspect)",
-        value: "card-landscape-w100-aspect-16:9-no-padding",
-      },
-      {
-        title: "Landscape, No Padding 100% Width (4:3 aspect)",
-        value: "card-landscape-w100-aspect-4:3-no-padding",
-      },
-      {
-        title: "Landscape, 100% Width (2:1 aspect)",
-        value: "card-landscape-w100-aspect-2:1",
-      },
-      {
-        title: "Landscape, 100% Width (4:1 aspect)",
-        value: "card-landscape-w100-aspect-4:1",
-      },
-      { title: "Portrait Card", value: "card-portrait" },
-      { title: "Square Card", value: "card-square" },
-      { title: "Circular Card", value: "card-circular" },
-      { title: "Placeholder Card", value: "card-placeholder" },
-      { title: "Banner Card", value: "card-banner" },
-      { title: "Subscription Card", value: "subscription" },
-      { title: "Faq Card", value: "card-faq" },
-      { title: "Card With Only Image", value: "card.onlyImageWrapper" },
-      { title: "Card With Label", value: "card-label" },
-      { title: "App Version", value: "card-label.app-version" },
-      {
-        title: "Card With Image Overlay Text",
-        value: "card.ImagewithOverlayText",
-      },
-      {
-        title: "Rounded Small card",
-        value: "card-rounded-with-title",
-      },
-      {
-        title: "Rounded Black bottom card Title & Description",
-        value: "card-rounded-with-title-desc",
-      },
-      {
-        title: "Rounded white bottom card Title ",
-        value: "card-rounded-with-title-bottom-white-bg",
-      },
-      {
-        title: "Rounded white bottom card Title & Description",
-        value: "card-rounded-with-title-descri-bottom-white-bg",
-      },
-      {
-        title: "Full Width Card With Logo",
-        value: "card.fullWidthLogo",
-      },
-      acceleratorCardVariant,
+      { title: "Simple Media", value: "simple-media" },
+      { title: "card-with-carousel", value: "card-with-carousel" },
+      { title: "award-card", value: "award-card" },
+      { title: "carousel-with-bg-image", value: "carousel-with-bg-image" },
+      { title: "card-with-focused-title", value: "card-with-focused-title" },
+      { title: "3-actions-with-right-aligned-content-card", value: "3-actions-with-right-aligned-content-card" },
+      { title: "card-with-tabs", value: "card-with-tabs" },
+      { title: "single-item", value: "single-item" },
+      { title: "card-with-information", value: "card-with-information" },
+      { title: "card-with-links", value: "card-with-links" },
+      { title: "card-with-location", value: "card-with-location" },
+      { title: "title-with-hoverable-card", value: "title-with-hoverable-card" },
+      { title: "card-with-simple-media", value: "card-with-simple-media" },
+      { title: "rectangle-card", value: "rectangle-card" },
+      { title: "card-with-right-aligned-title-link", value: "card-with-right-aligned-title-link" },
+      { title: "3-column-grid", value: "3-column-grid" },
+      { title: "card-with-title-and-sub-titles", value: "card-with-title-and-sub-titles" },
+      { title: "card-with-2-buttons-and-link", value: "card-with-2-buttons-and-link" },
+      { title: 'card-with-right-aligned-content', value: 'card-with-right-aligned-content' },
+      { title: 'card-with-right-aligned-content-with-link', value: 'card-with-right-aligned-content-with-link' },
+      { title: 'card-with-side-text', value: 'card-with-side-text' },
+      { title: 'tabs', value: 'tabs' }
     ],
+
     nudge: [
       { title: "Default Nudge", value: "default" },
       { title: "Nudge With Action", value: "nudge-action" },

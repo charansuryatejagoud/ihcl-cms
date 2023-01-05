@@ -15,6 +15,7 @@ import ifElseBlock from "./core/objects/ifElseBlock";
 import { switchCaseBlock } from "./core/objects/switchCaseBlock";
 import section from "./core/objects/section";
 import dataGrid from "./core/objects/dataGrid";
+import { bannerComponents } from "./core/objects/banner";
 
 export default createSchema({
   name: "default",
@@ -66,6 +67,8 @@ export default createSchema({
     dataGrid({
       variants: featureDefinition.variants.dataGrid,
     }),
+    
+    bannerComponents(featureDefinition.pageItems),
     ...featureDefinition.schemas,
   ]),
 });

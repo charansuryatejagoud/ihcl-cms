@@ -19,10 +19,23 @@ export default {
       validation: pathUrlRule,
     },
     {
-      name: "identifier",
-      title: "Identifier",
-      type: "string",
+      name:"mediaIcon",
+      title:"Media Icon",
+      type:"image"
     },
+    {
+      title: 'Check Box',
+      name: 'checkBox',
+       type: 'string',
+      options: {
+          list: [
+              { title: 'Internal',value: 'internal' },
+              { title: 'External',value: 'external' }
+          ],
+          layout:'radio',
+          isHighlighted:true
+      }
+  },
   ],
   preview: {
     select: {

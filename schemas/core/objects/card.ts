@@ -1,4 +1,6 @@
 import { IoApps, IoCard as Icon, IoSettings } from "react-icons/io5";
+// import { imageAsset } from "./banner";
+// import { videoAsset } from "./banner";
 import {
   hiddenField,
   linkType,
@@ -7,9 +9,6 @@ import {
 } from "../../shared-utils";
 import { VariantDefinition } from "../../types";
 import { PageLink } from "../../../branding/components/page-link/PageLink";
-import {featureFlagVariant} from "./switchCaseBlock";
-
-
 export const acceleratorCardVariant: VariantDefinition = {
   title: "Accelerator Card",
   value: "accelerator.card",
@@ -51,7 +50,7 @@ export default function card(props: Props) {
         name: "description",
         title: "Description",
         type: "text",
-        rows: 4,
+        rows: 6,
         group: "main",
       },
       {
@@ -78,18 +77,7 @@ export default function card(props: Props) {
         },
         group: "main",
       },
-      {
-        name: "accelerator",
-        title: "Accelerator",
-        type: "reference",
-        to: [
-          {
-            type: "accelerator",
-          },
-        ],
-        group: "main",
-        hidden: ({ parent }) => parent?.variant !== acceleratorCardVariant.value && parent?.largeVariant !== acceleratorCardVariant.value,
-      },
+      
       {
         name: "ctaLabel",
         title: "CTA Label",
@@ -124,6 +112,48 @@ export default function card(props: Props) {
         type: "image",
         group: "main",
       },
+      
+        {
+          name: "backgroundImage",
+          title: "Background Image",
+          type: "image",
+          group: "main",
+        },
+      
+      {
+        name: 'mediaType',
+        title: 'Media Type',
+        type: 'string',
+        options: {
+            list: [
+                { title: 'Video', value: 'video' },
+                { title: 'Image', value: 'image' },
+                { title: 'Component', value: 'component' }
+            ]
+        }
+    },
+  //   {
+  //     name: "imageAsset",
+  //     title: "Image",
+  //     type: imageAsset,
+  //     hidden: ({ parent }) => parent?.mediaType !== "image" && parent?.largeVariant !== "image",
+  // },
+  // {
+  //     name: "videoAsset",
+  //     title: "Video",
+  //     type: videoAsset,
+  //     hidden: ({ parent }) => parent?.mediaType !== "video" && parent?.largeVariant !== "video",
+  // },
+      {
+        name:"primaryAction",
+        title:"Primary Action",
+        type:"navigationItem"
+    },
+    {
+        name:"secondaryAction",
+        title:"Secondary Action",
+        type:"navigationItem"
+    },
       {
         name: "brand",
         title: "Brand",

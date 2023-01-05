@@ -79,6 +79,16 @@ export default function group({
         group: "main",
       },
       {
+        name:"primaryAction",
+        title:"Primary Action",
+        type:"navigationItem"
+    },
+    {
+        name:"secondaryAction",
+        title:"Secondary Action",
+        type:"navigationItem"
+    },
+      {
         name: "hasAllLink",
         title: "Allow More link",
         type: "boolean",
