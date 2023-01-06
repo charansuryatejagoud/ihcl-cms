@@ -126,16 +126,16 @@ export default function card(props: Props) {
         options: {
           list: [
             { title: 'Video', value: 'video' },
-            { title: 'Image', value: 'image' },
+            // { title: 'Image', value: 'image' },
           ]
         }
       },
-      {
-        name: "imageAsset",
-        title: "Image",
-        type: "imageAsset",
-        hidden: ({ parent }) => parent?.mediaType !== "image" && parent?.largeVariant !== "image",
-      },
+      // {
+      //   name: "imageAsset",
+      //   title: "Image",
+      //   type: "imageAsset",
+      //   hidden: ({ parent }) => parent?.mediaType !== "image" && parent?.largeVariant !== "image",
+      // },
       {
         name: "videoAsset",
         title: "Video",

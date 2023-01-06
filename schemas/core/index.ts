@@ -1,5 +1,5 @@
 import { FeatureSchemaDefinition } from "../types";
-import imageSet from "./objects/imageSet";
+// import imageSet from "./objects/imageSet";
 import link from "./objects/link";
 import navigationItem from "./objects/navigationItem";
 import blockImage from "./objects/blockImage";
@@ -30,7 +30,7 @@ import hamburgerProfile from "./hamburgerProfileHeader";
 import accelerator from "./documents/accelerator";
 import faqCategory from "./documents/faqCategory";
 import faqQuestion from "./documents/faqQuestion";
-import { acceleratorCardVariant } from "./objects/card";
+// import { acceleratorCardVariant } from "./objects/card";
 import banner, { bannerComponents } from "./objects/banner";
 import footer from "./documents/footer";
 import header from "./documents/header";
@@ -43,7 +43,7 @@ export const core: FeatureSchemaDefinition = {
     experiment,
     category,
     settings,
-    imageSet,
+    // imageSet,
     link,
     navigationItem,
     blockImage,
