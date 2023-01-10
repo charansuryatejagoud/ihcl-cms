@@ -70,6 +70,7 @@ export default {
               icon: IoColorPaletteOutline,
             },
           },
+          
           {
             name: "placeholderText",
             title: "Placeholder Text",
@@ -97,5 +98,8 @@ export default {
     {
       type: "group",
     },
+    {
+      type:"navigationItem"
+    }
   ],
 };

@@ -11,7 +11,7 @@ export default {
   type: "document",
   icon: Icon,
   // Disallow creation and deletion
-  __experimental_actions: [/*'create',*/ "update", /*'delete',*/ "publish"],
+  // __experimental_actions: [/*'create',*/ "update", /*'delete',*/ "publish"],
   groups: [
     { name: "common", title: "Common", icon: IoApps },
     { name: "web", title: "Web", icon: IoBrowsers },

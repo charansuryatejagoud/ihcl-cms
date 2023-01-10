@@ -187,7 +187,6 @@ export const core: FeatureSchemaDefinition = {
       { title: 'group-with-information', value: 'group-with-information' },
       { title: 'group-with-links', value: 'group-with-links' },
       { title: 'group-with-maps', value: 'group-with-maps' },
-      { title: 'card-with-right-aligned-content', value: 'card-with-right-aligned-content' },
       { title: 'card-with-focused-title', value: 'card-with-focused-title' },
       { title: 'highlighted-2-cards-carousel', value: 'highlighted-2-cards-carousel' },
       { title: 'carousel-with-tabs', value: 'carousel-with-tabs' },
@@ -203,10 +202,14 @@ export const core: FeatureSchemaDefinition = {
       { title: 'highlighted-2-cards-carousel', value: 'highlighted-2-cards-carousel' },
       { title: 'group-with-media', value: 'group-with-media' },
       { title: 'group-with-videoplayer', value: 'group-with-videoplayer' },
-      { title: 'information-data', value: 'information-data' },
+      { title: 'hotel-address-data', value: 'hotel-address-data' },
       { title: 'multiple-data', value: 'multiple-data' },
       { title: 'carousel-with-side-text-card', value: 'carousel-with-side-text-card' },
-      { title: 'navigation-tabs', value: 'navigation-tabs' }
+      { title: 'navigation-tabs', value: 'navigation-tabs' },
+      { title: 'group-with-description', value: 'group-with-description' },
+      {title:"group-with-side-aligned-content-link",value:"group-with-side-aligned-content-link"},
+      {title:"Center-aligned-content",value:"center-aligned-content"},
+      {title:"Contact-Details",value:"contact-details"}
     ],
     navigation: [
       { title: "Default Navigation", value: "default" },
@@ -236,7 +239,12 @@ export const core: FeatureSchemaDefinition = {
       { title: 'card-with-right-aligned-content', value: 'card-with-right-aligned-content' },
       { title: 'card-with-right-aligned-content-with-link', value: 'card-with-right-aligned-content-with-link' },
       { title: 'card-with-side-text', value: 'card-with-side-text' },
-      { title: 'tabs', value: 'tabs' }
+      { title: "media-image", value: "media-image" },
+      { title: "media-with-description", value: "media-with-description" },
+      { title: "media-video", value: "media-video" },
+      {title:"Center-Aligned-Content",value:"center-aligned-content"}
+
+
     ],
 
     nudge: [
@@ -267,6 +275,9 @@ export const core: FeatureSchemaDefinition = {
       { title: "Bottom Sheet", value: "bottomSheet" },
       { title: "Nested Bottom Sheet", value: "nestedBottomSheet" },
       { title: "Alert Without Close Cta", value: "alert.without.close.cta" },
+    ],
+    placeholder:[
+         {title:"Toll-Free-Numbers",value:"toll-freeonumbers"}
     ],
     switchCaseBlock: [
       featureFlagVariant,

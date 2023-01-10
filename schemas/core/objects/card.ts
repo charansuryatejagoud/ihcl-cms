@@ -35,6 +35,12 @@ export default function card(props: Props) {
         group: "configuration",
       },
       {
+        title: "Show Divider For Title",
+        name: "showDividerForTitle",
+        type: "boolean",
+        initialValue:false
+      },
+      {
         name: "title",
         title: "Title",
         type: "string",

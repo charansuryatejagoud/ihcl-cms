@@ -1,5 +1,5 @@
 import { IoNavigate as Icon } from "react-icons/io5";
-import { pathUrlRule } from "../../shared-utils";
+// import { pathUrlRule } from "../../shared-utils";
 
 export default {
   name: "navigationItem",
@@ -15,8 +15,8 @@ export default {
     {
       name: "url",
       title: "Url",
-      type: "url",
-      validation: pathUrlRule,
+      type: "string",
+      // validation: pathUrlRule,
     },
     {
       name:"mediaIcon",

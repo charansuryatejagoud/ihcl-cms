@@ -1,6 +1,6 @@
-import {IoApps, IoLayers as Icon, IoSettings} from "react-icons/io5";
-import {SchemaItem, VariantDefinition} from "../../types";
-import {hiddenField} from "../../shared-utils";
+import { IoApps, IoLayers as Icon, IoSettings } from "react-icons/io5";
+import { SchemaItem, VariantDefinition } from "../../types";
+import { hiddenField } from "../../shared-utils";
 
 export const groupPreview = {
   select: {
@@ -31,7 +31,10 @@ export default function group({
     name: "group",
     title: "Group",
     type: "object",
-    initialValue: { hasAllLink: false },
+    initialValue: { hasAllLink: false, 
+    },
+    
+    
     icon: Icon,
     groups: [
       { name: "main", title: "Main", icon: IoApps },
@@ -53,6 +56,20 @@ export default function group({
         title: "Subtitle",
         type: "string",
         group: "main",
+      },
+      {
+        name: "titleAlignment",
+        title: "Title Alignment",
+        type: "string",
+        initialValue: "regular",
+        options: {
+          list: [
+            { title: "regular", value: "regular" },
+            { title: "center", value: "center" }
+          ]
+        },
+        group: "main",
+
       },
       {
         name: "variant",
@@ -79,15 +96,15 @@ export default function group({
         group: "main",
       },
       {
-        name:"primaryAction",
-        title:"Primary Action",
-        type:"navigationItem"
-    },
-    {
-        name:"secondaryAction",
-        title:"Secondary Action",
-        type:"navigationItem"
-    },
+        name: "primaryAction",
+        title: "Primary Action",
+        type: "navigationItem"
+      },
+      {
+        name: "secondaryAction",
+        title: "Secondary Action",
+        type: "navigationItem"
+      },
       {
         name: "hasAllLink",
         title: "Allow More link",

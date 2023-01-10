@@ -12,6 +12,11 @@ export default {
       type: "string",
     },
     {
+      name:"largeVariant",
+      title:"Large Variant",
+      type:"string"
+    },
+    {
       name: "items",
       type: "array",
       of: [
