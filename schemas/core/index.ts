@@ -209,7 +209,8 @@ export const core: FeatureSchemaDefinition = {
       { title: 'group-with-description', value: 'group-with-description' },
       {title:"group-with-side-aligned-content-link",value:"group-with-side-aligned-content-link"},
       {title:"Center-aligned-content",value:"center-aligned-content"},
-      {title:"Contact-Details",value:"contact-details"}
+      {title:"Contact-Details",value:"contact-details"},
+      {title:"Faqs-List",value:"faqs-list"}
     ],
     navigation: [
       { title: "Default Navigation", value: "default" },
@@ -242,9 +243,9 @@ export const core: FeatureSchemaDefinition = {
       { title: "media-image", value: "media-image" },
       { title: "media-with-description", value: "media-with-description" },
       { title: "media-video", value: "media-video" },
-      {title:"Center-Aligned-Content",value:"center-aligned-content"}
-
-
+      {title:"Center-Aligned-Content",value:"center-aligned-content"},
+      {title:"Rich-Text",value:"rich-Text"},
+      {title:"Quetion-And-Answers",value:"quetion-and-answers"}
     ],
 
     nudge: [
