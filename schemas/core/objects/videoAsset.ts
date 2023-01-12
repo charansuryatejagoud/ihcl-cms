@@ -4,13 +4,18 @@ export const videoAsset = {
     type: "object",
     fields: [
         {
-            name: "fallback",
-            title: "Fallback format",
-            type: "file",
+            title: 'Video Play',
+            name: 'videoPlay',
+            type: 'file',
             options: {
-                accept: "video/mp4"
+                accept: 'video/mp4'
             }
-        },
+          },
+          {
+            title: 'Video Play Icon',
+            name: 'videoPlayIcon',
+            type: 'image'
+          },
         {
             name: "videoUrl",
             title: "Video Url",
