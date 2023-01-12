@@ -245,7 +245,7 @@ export const core: FeatureSchemaDefinition = {
       { title: "media-video", value: "media-video" },
       {title:"Center-Aligned-Content",value:"center-aligned-content"},
       {title:"Rich-Text",value:"rich-Text"},
-      {title:"Quetion-And-Answers",value:"quetion-and-answers"}
+      {title:"Country-Title-Tabs",value:"country-title-tabs"}
     ],
 
     nudge: [
