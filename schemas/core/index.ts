@@ -210,7 +210,7 @@ export const core: FeatureSchemaDefinition = {
       {title:"group-with-side-aligned-content-link",value:"group-with-side-aligned-content-link"},
       {title:"Center-aligned-content",value:"center-aligned-content"},
       {title:"Contact-Details",value:"contact-details"},
-      {title:"Faqs-List",value:"faqs-list"}
+      
     ],
     navigation: [
       { title: "Default Navigation", value: "default" },
@@ -245,7 +245,7 @@ export const core: FeatureSchemaDefinition = {
       { title: "media-video", value: "media-video" },
       {title:"Center-Aligned-Content",value:"center-aligned-content"},
       {title:"Rich-Text",value:"rich-Text"},
-      {title:"Country-Title-Tabs",value:"country-title-tabs"}
+      {title:"Center-Aligned-Title-Tabs",value:"center-aligned-title-tabs"}
     ],
 
     nudge: [
