@@ -52,8 +52,8 @@ export default function group({
         group: "main",
       },
       {
-        name: "subtitle",
-        title: "Subtitle",
+        name: "subTitle",
+        title: "Sub Title",
         type: "string",
         group: "main",
       },

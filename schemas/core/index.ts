@@ -207,9 +207,11 @@ export const core: FeatureSchemaDefinition = {
       { title: 'carousel-with-side-text-card', value: 'carousel-with-side-text-card' },
       { title: 'navigation-tabs', value: 'navigation-tabs' },
       { title: 'group-with-description', value: 'group-with-description' },
-      {title:"group-with-side-aligned-content-link",value:"group-with-side-aligned-content-link"},
-      {title:"Center-aligned-content",value:"center-aligned-content"},
-      {title:"Contact-Details",value:"contact-details"}
+      { title: "group-with-side-aligned-content-link",value:"group-with-side-aligned-content-link"},
+      { title: "Center-aligned-content",value:"center-aligned-content" },
+      { title: "Contact-Details",value:"contact-details" },
+      { title: "group-with-fliter-buttons", value: "group-with-fliter-buttons" },
+      { title: "group-with-mutliple-buttons", value:"group-with-mutliple-buttons" }
     ],
     navigation: [
       { title: "Default Navigation", value: "default" },
@@ -242,9 +244,8 @@ export const core: FeatureSchemaDefinition = {
       { title: "media-image", value: "media-image" },
       { title: "media-with-description", value: "media-with-description" },
       { title: "media-video", value: "media-video" },
-      {title:"Center-Aligned-Content",value:"center-aligned-content"}
-
-
+      { title: "Center-Aligned-Content",value:"center-aligned-content" },
+      { title: "carousel-tabs",  value: "carousel-tabs"}
     ],
 
     nudge: [
