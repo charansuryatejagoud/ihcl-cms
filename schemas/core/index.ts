@@ -244,11 +244,12 @@ export const core: FeatureSchemaDefinition = {
       { title: "media-image", value: "media-image" },
       { title: "media-with-description", value: "media-with-description" },
       { title: "media-video", value: "media-video" },
-      { title: "Center-Aligned-Content",value:"center-aligned-content" }  
+      { title: "Center-Aligned-Content",value:"center-aligned-content" },
+      { title: "Center-Aligned-Title-Tabs", value:"center-aligned-title-tabs" }  
     ],
     nudge: [
       { title: "Default Nudge", value: "default" },
-      { title: "Nudge With Action", value: "nudge-action" },
+      { title: "Nudge With Action", value: "nudge-with-action" },
       { title: "Nudge Dual Action", value: "nudge.dual-action" },
       { title: "Banner Nudge", value: "nudge.banner" },
       { title: "Open Url Nudge", value: "nudge.open-url" },
