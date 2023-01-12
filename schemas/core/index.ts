@@ -201,7 +201,7 @@ export const core: FeatureSchemaDefinition = {
       { title: '3-cards-carousel', value: '3-cards-carousel' },
       { title: 'highlighted-2-cards-carousel', value: 'highlighted-2-cards-carousel' },
       { title: 'group-with-media', value: 'group-with-media' },
-      { title: 'group-with-videoplayer', value: 'group-with-videoplayer' },
+      { title: 'group-with-videoPlayer', value: 'group-with-videoPlayer' },
       { title: 'hotel-address-data', value: 'hotel-address-data' },
       { title: 'multiple-data', value: 'multiple-data' },
       { title: 'carousel-with-side-text-card', value: 'carousel-with-side-text-card' },
@@ -210,8 +210,8 @@ export const core: FeatureSchemaDefinition = {
       { title: "group-with-side-aligned-content-link",value:"group-with-side-aligned-content-link"},
       { title: "Center-aligned-content",value:"center-aligned-content" },
       { title: "Contact-Details",value:"contact-details" },
-      { title: "group-with-fliter-buttons", value: "group-with-fliter-buttons" },
-      { title: "group-with-mutliple-buttons", value:"group-with-mutliple-buttons" }
+      { title: "group-with-filter-buttons", value: "group-with-filter-buttons" },
+      { title: "group-with-multiple-buttons", value:"group-with-multiple-buttons" }
     ],
     navigation: [
       { title: "Default Navigation", value: "default" },
@@ -244,10 +244,8 @@ export const core: FeatureSchemaDefinition = {
       { title: "media-image", value: "media-image" },
       { title: "media-with-description", value: "media-with-description" },
       { title: "media-video", value: "media-video" },
-      { title: "Center-Aligned-Content",value:"center-aligned-content" },
-      { title: "carousel-tabs",  value: "carousel-tabs"}
+      { title: "Center-Aligned-Content",value:"center-aligned-content" }  
     ],
-
     nudge: [
       { title: "Default Nudge", value: "default" },
       { title: "Nudge With Action", value: "nudge-action" },
