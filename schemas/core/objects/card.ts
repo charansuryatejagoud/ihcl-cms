@@ -41,6 +41,12 @@ export default function card(props: Props) {
         initialValue:false
       },
       {
+        name:"isComponentFullWidth",
+        title:"Is Component Full Width",
+        type:"boolean",
+        initialValue:false,
+      },
+      {
         name: "title",
         title: "Title",
         type: "string",
