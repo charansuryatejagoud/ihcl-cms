@@ -47,6 +47,15 @@ export default function nudge({ variants }: { variants: VariantDefinition[] }) {
         group: "main",
       },
       {
+        name: "largeVariant",
+        title: "Large Variant",
+        type: "string",
+        options: {
+          list: variants,
+        },
+        group: "main"
+      },
+      {
         name: "parameterMap",
         title: "Parameter Map",
         description: "Parameters as a set of key-value pairs",

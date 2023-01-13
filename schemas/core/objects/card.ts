@@ -72,6 +72,28 @@ export default function card(props: Props) {
         group: "main",
       },
       {
+        title: "Rich Text",
+        name: "richText",
+        type: "array",
+        of: [
+          {
+        type: "object",
+        fields: [
+            {
+                title: "Rich Text Key",
+                name: "richTextKey",
+                type: "string"
+            },
+            {
+                title: "Rich Text Value",
+                name: "richTextValue",
+                type: "string"
+            }
+          ]
+         },
+        ],
+      },
+      {
         name: "variant",
         title: "Variant",
         type: "string",
