@@ -31,10 +31,11 @@ export default function group({
     name: "group",
     title: "Group",
     type: "object",
-    initialValue: { hasAllLink: false, 
+    initialValue: {
+      hasAllLink: false,
     },
-    
-    
+
+
     icon: Icon,
     groups: [
       { name: "main", title: "Main", icon: IoApps },
@@ -46,10 +47,28 @@ export default function group({
         group: "configuration",
       },
       {
-        name:"isComponentFullWidth",
-        title:"Is Component Full Width",
-        type:"boolean",
-        initialValue:false,
+        name: "isComponentFullWidth",
+        title: "Is Component Full Width",
+        type: "boolean",
+        initialValue: false,
+      },
+      {
+        name: "componentTopPadding",
+        title: "Component Top Padding",
+        type: "string",
+        group: "main",
+      },
+      {
+        name: "componentBottomPadding",
+        title: "Component Bottom Padding",
+        type: "string",
+        group: "main",
+      },
+      {
+        name: "titleColor",
+        title: "Title Color",
+        type: "string",
+        group: "main",
       },
       {
         name: "title",

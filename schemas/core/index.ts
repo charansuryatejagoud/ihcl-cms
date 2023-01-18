@@ -179,6 +179,7 @@ export const core: FeatureSchemaDefinition = {
   variants: {
     group: [
       { title: '4-row-grid', value: '4-row-grid' },
+      { title: 'multi-cards-carousel', value: 'multi-cards-carousel' },
       { title: 'single-card-carousel-with-bg-image', value: 'single-card-carousel-with-bg-image' },
       { title: 'carousel-with-award-cards', value: 'carousel-with-award-cards' },
       { title: 'multi-cards-carousel-with-bg-image', value: 'multi-cards-carousel-with-bg-image' },
@@ -211,7 +212,12 @@ export const core: FeatureSchemaDefinition = {
       { title: "Center-aligned-content",value:"center-aligned-content" },
       { title: "Contact-Details",value:"contact-details" },
       { title: "group-with-filter-buttons", value: "group-with-filter-buttons" },
-      { title: "group-with-multiple-buttons", value:"group-with-multiple-buttons" }
+      { title: "group-with-multiple-buttons", value:"group-with-multiple-buttons" },
+      {title: "carousal-with-single-card", value: "carousal-with-single-card"},
+      { title: 'highlighted-1-card-carousel', value: 'highlighted-1-card-carousel' },
+      {title: "single-column-grid", value: "single-column-grid"},
+      {title: "carousal-with-single-card-media", value: "carousal-with-single-card-media"},
+     {title: "single-colum-grid-with-6-rows", value: "single-colum-grid-with-6-rows"}
     ],
     navigation: [
       { title: "Default Navigation", value: "default" },

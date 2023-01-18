@@ -46,6 +46,12 @@ export default function card(props: Props) {
         type:"boolean",
         initialValue:false,
       },
+       {
+        name: "componentPadding",
+        title: "Component Padding",
+        type: "string",
+        group: "main",
+      },
       {
         name: "title",
         title: "Title",
