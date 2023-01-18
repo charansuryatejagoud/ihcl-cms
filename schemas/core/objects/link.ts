@@ -61,6 +61,7 @@ export default {
           { title: "Chip", value: "chip" },
           { title: "Full Width Button", value: "fullWidthButton" },
           { title: "Text Underline", value: "linkUnderline" },
+          {title:"Share",value:"share"}
         ],
       },
       group: "main",
