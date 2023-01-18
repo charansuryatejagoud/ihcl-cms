@@ -211,7 +211,10 @@ export const core: FeatureSchemaDefinition = {
       { title: "Center-aligned-content",value:"center-aligned-content" },
       { title: "Contact-Details",value:"contact-details" },
       { title: "group-with-filter-buttons", value: "group-with-filter-buttons" },
-      { title: "group-with-multiple-buttons", value:"group-with-multiple-buttons" }
+      { title: "group-with-multiple-buttons", value:"group-with-multiple-buttons" },
+      { title: "transparent-3-cards", value: "transparent-3-cards" },
+      { title: "4-column-vertical-grid", value: "4-column-vertical-grid" },
+      { title: "multi-cards-carousel-with-image", value: "multi-cards-carousel-with-image" }
     ],
     navigation: [
       { title: "Default Navigation", value: "default" },
@@ -245,7 +248,9 @@ export const core: FeatureSchemaDefinition = {
       { title: "media-with-description", value: "media-with-description" },
       { title: "media-video", value: "media-video" },
       { title: "Center-Aligned-Content",value:"center-aligned-content" },
-      { title: "Center-Aligned-Title-Tabs", value:"center-aligned-title-tabs" }  
+      { title: "Center-Aligned-Title-Tabs", value:"center-aligned-title-tabs" },
+      { title: "vertical-card", value: "vertical-card" },
+      { title: "carousel-with-image", value: "carousel-with-image" }
     ],
     nudge: [
       { title: "Default Nudge", value: "default" },
@@ -277,7 +282,7 @@ export const core: FeatureSchemaDefinition = {
       { title: "Alert Without Close Cta", value: "alert.without.close.cta" },
     ],
     placeholder:[
-         {title:"Toll-Free-Numbers",value:"toll-freeonumbers"}
+         {title:"Toll-Free-Numbers",value:"toll-free-numbers"}
     ],
     switchCaseBlock: [
       featureFlagVariant,
