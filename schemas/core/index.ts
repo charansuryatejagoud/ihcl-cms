@@ -179,6 +179,7 @@ export const core: FeatureSchemaDefinition = {
   variants: {
     group: [
       { title: '4-row-grid', value: '4-row-grid' },
+      { title: 'multi-cards-carousel', value: 'multi-cards-carousel' },
       { title: 'single-card-carousel-with-bg-image', value: 'single-card-carousel-with-bg-image' },
       { title: 'carousel-with-award-cards', value: 'carousel-with-award-cards' },
       { title: 'multi-cards-carousel-with-bg-image', value: 'multi-cards-carousel-with-bg-image' },
@@ -211,10 +212,7 @@ export const core: FeatureSchemaDefinition = {
       { title: "Center-aligned-content",value:"center-aligned-content" },
       { title: "Contact-Details",value:"contact-details" },
       { title: "group-with-filter-buttons", value: "group-with-filter-buttons" },
-      { title: "group-with-multiple-buttons", value:"group-with-multiple-buttons" },
-      { title: "transparent-3-cards", value: "transparent-3-cards" },
-      { title: "4-column-vertical-grid", value: "4-column-vertical-grid" },
-      { title: "multi-cards-carousel-with-image", value: "multi-cards-carousel-with-image" }
+      { title: "group-with-multiple-buttons", value:"group-with-multiple-buttons" }
     ],
     navigation: [
       { title: "Default Navigation", value: "default" },
@@ -260,7 +258,7 @@ export const core: FeatureSchemaDefinition = {
       { title: "Open Url Nudge", value: "nudge.open-url" },
       { title: "Pincode Nudge", value: "pincode" },
       {
-        title: "Nudge With background Image and Column alligned dual actions",
+        title: "Nudge With background Image and Column aligned dual actions",
         value: "nudge.background-image.horizontal-dual-actions",
       },
       { title: "Nudge Banner Gradient", value: "nudge.banner-gradient" },

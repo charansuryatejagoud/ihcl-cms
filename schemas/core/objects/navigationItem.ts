@@ -19,8 +19,8 @@ export default {
       // validation: pathUrlRule,
     },
     {
-      name:"mediaIcon",
-      title:"Media Icon",
+      name:"image",
+      title:"Image",
       type:"image"
     },
     {
