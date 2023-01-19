@@ -69,12 +69,7 @@ export default function group({
         title: "Title Color",
         type: "string",
         group: "main",
-        description: "Ït is required for website"
-      },
-      {
-        name:"bgColor",
-        title:"Bg Color",
-        type:"string"
+        description:"It is required for website"
       },
       {
         name: "title",
