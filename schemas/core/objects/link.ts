@@ -35,6 +35,16 @@ export default {
       group: "main",
     },
     {
+      name: "mediaIcons",
+      title: "Media Icons",
+      type: "array",
+       of: [{
+        type: "navigationItem"
+       }, 
+       ],
+      group: "main",
+    },
+    {
       name: "image",
       title: "Image",
       type: "image",

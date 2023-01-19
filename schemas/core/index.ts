@@ -179,6 +179,7 @@ export const core: FeatureSchemaDefinition = {
   variants: {
     group: [
       { title: '4-row-grid', value: '4-row-grid' },
+      { title: 'multi-cards-carousel', value: 'multi-cards-carousel' },
       { title: 'single-card-carousel-with-bg-image', value: 'single-card-carousel-with-bg-image' },
       { title: 'carousel-with-award-cards', value: 'carousel-with-award-cards' },
       { title: 'multi-cards-carousel-with-bg-image', value: 'multi-cards-carousel-with-bg-image' },
@@ -211,8 +212,7 @@ export const core: FeatureSchemaDefinition = {
       { title: "Center-aligned-content",value:"center-aligned-content" },
       { title: "Contact-Details",value:"contact-details" },
       { title: "group-with-filter-buttons", value: "group-with-filter-buttons" },
-      { title: "group-with-multiple-buttons", value:"group-with-multiple-buttons" },
-      {title:"Group-With-Rich-Text",value:"group-with-rich-text"}
+      { title: "group-with-multiple-buttons", value:"group-with-multiple-buttons" }
     ],
     navigation: [
       { title: "Default Navigation", value: "default" },
