@@ -39,11 +39,9 @@ export default {
       title: "Media Icons",
       type: "array",
        of: [{
-        title: "Media Assets",
         type: "navigationItem"
-       },{
-        type: "url"
-       }],
+       }, 
+       ],
       group: "main",
     },
     {

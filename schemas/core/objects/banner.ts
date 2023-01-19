@@ -24,6 +24,11 @@ export default {
             type: 'string'
         },
         {
+            name:"chatBotImage",
+            title:"Chat Bot Image",
+            type:"image"
+        },
+        {
             name: 'mediaType',
             title: 'Media Type',
             type: 'string',

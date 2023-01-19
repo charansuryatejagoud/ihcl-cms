@@ -69,7 +69,16 @@ export default function group({
         title: "Title Color",
         type: "string",
         group: "main",
+<<<<<<< HEAD
         description: "Ït is required for website"
+=======
+        description:"It is required for website"
+      },
+      {
+        name:"backgroundColor",
+        title:"Back Ground Color",
+        type:"string"
+>>>>>>> 6308ffa13d111a8fd556d6fe00a71d56936539a0
       },
       {
         name: "title",
