@@ -26,7 +26,7 @@ export default {
         { title: "H4", value: "h4" },
         { title: "Quote", value: "blockquote" },
         { title: "Section", value: "section" },
-        {title:"divider",value:"hr"}
+        {title:"font-family",value:"family"}
       ],
       lists: [
         { title: "Bullet", value: "bullet" },

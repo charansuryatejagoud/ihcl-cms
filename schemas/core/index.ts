@@ -214,7 +214,8 @@ export const core: FeatureSchemaDefinition = {
       { title: "Contact-Details",value:"contact-details" },
       { title: "group-with-filter-buttons", value: "group-with-filter-buttons" },
       { title: "group-with-multiple-buttons", value:"group-with-multiple-buttons" },
-      {title:"Transparent-3-Cards",value:"transparent-3-cards"}
+      {title:"Transparent-3-Cards",value:"transparent-3-cards"},
+      {title:"Toll-Free-No",value:"toll-free-no"}
     ],
     navigation: [
       { title: "Default Navigation", value: "default" },
@@ -250,7 +251,8 @@ export const core: FeatureSchemaDefinition = {
       { title: "Center-Aligned-Content",value:"center-aligned-content" },
       { title: "Center-Aligned-Title-Tabs", value:"center-aligned-title-tabs" },
       { title: "vertical-card", value: "vertical-card" },
-      { title: "carousel-with-image", value: "carousel-with-image" }
+      { title: "carousel-with-image", value: "carousel-with-image" },
+      {title:"Card-Ends-Aligned-Content",value:"card-ends-aligned-content"}
     ],
     nudge: [
       { title: "Default Nudge", value: "default" },
