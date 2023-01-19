@@ -26,10 +26,12 @@ export default {
         { title: "H4", value: "h4" },
         { title: "Quote", value: "blockquote" },
         { title: "Section", value: "section" },
+        {title:"font-family",value:"family"}
       ],
       lists: [
         { title: "Bullet", value: "bullet" },
         { title: "Number", value: "number" },
+        
       ],
       // Marks let you mark up inline text in the block editor.
       marks: {

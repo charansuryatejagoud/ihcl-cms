@@ -36,7 +36,6 @@ import footer from "./documents/footer";
 import header from "./documents/header";
 import { imageAsset } from "./objects/imageAsset";
 import { videoAsset } from "./objects/videoAsset";
-
 export const core: FeatureSchemaDefinition = {
   schemas: [
     offer,
@@ -73,6 +72,7 @@ export const core: FeatureSchemaDefinition = {
     footer,
     imageAsset,
     videoAsset,
+    
   ],
   transformers: [reorderTransformer],
   headers: [
@@ -121,6 +121,7 @@ export const core: FeatureSchemaDefinition = {
     {
       type: "switchCaseBlock",
     },
+    
     {
       type: "reference",
       title: "Attached Content",
@@ -200,7 +201,7 @@ export const core: FeatureSchemaDefinition = {
       { title: 'group-with-2-column-cards-grid', value: 'group-with-2-column-cards-grid' },
       { title: 'group-with-3-column-cards-grid', value: 'group-with-3-column-cards-grid' },
       { title: '3-cards-carousel', value: '3-cards-carousel' },
-      { title: 'highlighted-2-cards-carousel', value: 'highlighted-2-cards-carousel' },
+      { title: 'highlighted-1-cards-carousel', value: 'highlighted-1-cards-carousel' },
       { title: 'group-with-media', value: 'group-with-media' },
       { title: 'group-with-videoPlayer', value: 'group-with-videoPlayer' },
       { title: 'hotel-address-data', value: 'hotel-address-data' },
@@ -212,7 +213,9 @@ export const core: FeatureSchemaDefinition = {
       { title: "Center-aligned-content",value:"center-aligned-content" },
       { title: "Contact-Details",value:"contact-details" },
       { title: "group-with-filter-buttons", value: "group-with-filter-buttons" },
-      { title: "group-with-multiple-buttons", value:"group-with-multiple-buttons" }
+      { title: "group-with-multiple-buttons", value:"group-with-multiple-buttons" },
+      {title:"Transparent-3-Cards",value:"transparent-3-cards"},
+      {title:"Toll-Free-No",value:"toll-free-no"}
     ],
     navigation: [
       { title: "Default Navigation", value: "default" },
@@ -248,7 +251,8 @@ export const core: FeatureSchemaDefinition = {
       { title: "Center-Aligned-Content",value:"center-aligned-content" },
       { title: "Center-Aligned-Title-Tabs", value:"center-aligned-title-tabs" },
       { title: "vertical-card", value: "vertical-card" },
-      { title: "carousel-with-image", value: "carousel-with-image" }
+      { title: "carousel-with-image", value: "carousel-with-image" },
+      {title:"Card-Ends-Aligned-Content",value:"card-ends-aligned-content"}
     ],
     nudge: [
       { title: "Default Nudge", value: "default" },
