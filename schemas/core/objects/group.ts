@@ -35,7 +35,6 @@ export default function group({
       hasAllLink: false,
     },
 
-
     icon: Icon,
     groups: [
       { name: "main", title: "Main", icon: IoApps },
@@ -51,6 +50,13 @@ export default function group({
         title: "Is Component Full Width",
         type: "boolean",
         initialValue: false,
+      },
+      {
+        name:"isSearchEnabled",
+        title:"Is Search Enabled",
+        type:"boolean",
+        initialValue:false,
+        group:"main"
       },
       {
         name: "componentTopPadding",
@@ -69,7 +75,32 @@ export default function group({
         title: "Title Color",
         type: "string",
         group: "main",
-        description:"It is required for website"
+        description: "It is required for website",
+      },
+      {
+        name: "bgColor",
+        title: "Bg Color",
+        type: "string",
+        group: "main",
+      },
+      {
+        name: "titleRow",
+        title: "Title Row",
+        type: "string",
+        initialValue:"1-Row-Title",
+        options: {
+          list: [
+            {
+              title: "1-Row-Title",
+              value: "1-row-title",
+            },
+            {
+              title: "2-Row-Title",
+              value: "2-row-title",
+            },
+          ],
+        },
+        group:"main"
       },
       {
         name: "title",
@@ -84,6 +115,11 @@ export default function group({
         group: "main",
       },
       {
+        name: "heading",
+        title: "Heading",
+        type: "string",
+      },
+      {
         name: "titleAlignment",
         title: "Title Alignment",
         type: "string",
@@ -91,11 +127,10 @@ export default function group({
         options: {
           list: [
             { title: "regular", value: "regular" },
-            { title: "center", value: "center" }
-          ]
+            { title: "center", value: "center" },
+          ],
         },
         group: "main",
-
       },
       {
         name: "variant",
@@ -124,12 +159,12 @@ export default function group({
       {
         name: "primaryAction",
         title: "Primary Action",
-        type: "navigationItem"
+        type: "navigationItem",
       },
       {
         name: "secondaryAction",
         title: "Secondary Action",
-        type: "navigationItem"
+        type: "navigationItem",
       },
       {
         name: "hasAllLink",
