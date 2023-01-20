@@ -9,6 +9,12 @@ export default {
     },
     fields: [
         {
+            title: "Is Guest Search",
+            name: "isGuestSearch",
+            type: "boolean",
+            initialValue:true
+        },
+        {
             title: 'Variant',
             name: 'variant',
             type: 'string'
