@@ -46,6 +46,12 @@ export default function card(props: Props) {
         type:"boolean",
         initialValue:false,
       },
+      { 
+        name:"bgColor",
+        title:"Bg Color",
+        type:"string",
+        group: "main"
+      },
       {
         name: "titleRow",
         title: "Title Row",
