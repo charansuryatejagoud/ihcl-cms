@@ -21,7 +21,7 @@ export const homepage: FeatureSchemaDefinition = {
       { title: "Card Squared Aspect 16:9", value: "card.squared.aspect16-9" },
       { title: "Card with Video Thumbnail", value: "card.video.thumbnail" },
       { title: "Card with Profile", value: "card.profile" },
-      { title: "Card with Pay option ", value: "card.option.pay" },
+      { title: "Card with Pay option ", value: "card.option.pay" }, { title: "media-with-description", value: "media-with-description" },
     ],
     nudge: [
       {

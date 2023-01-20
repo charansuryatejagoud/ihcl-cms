@@ -211,7 +211,7 @@ export const core: FeatureSchemaDefinition = {
       { title: 'group-with-description', value: 'group-with-description' },
       { title: "group-with-side-aligned-content-link",value:"group-with-side-aligned-content-link"},
       { title: "Center-aligned-content",value:"center-aligned-content" },
-      { title: "Contact-Details",value:"contact-details" },
+      { title: "Feedback-Form",value:"feedback-form" },
       { title: "group-with-filter-buttons", value: "group-with-filter-buttons" },
       { title: "group-with-multiple-buttons", value:"group-with-multiple-buttons" },
       {title:"Transparent-3-Cards",value:"transparent-3-cards"},
@@ -246,7 +246,7 @@ export const core: FeatureSchemaDefinition = {
       { title: 'card-with-right-aligned-content-with-link', value: 'card-with-right-aligned-content-with-link' },
       { title: 'card-with-side-text', value: 'card-with-side-text' },
       { title: "media-image", value: "media-image" },
-      { title: "media-with-description", value: "media-with-description" },
+     
       { title: "media-video", value: "media-video" },
       { title: "Center-Aligned-Content",value:"center-aligned-content" },
       { title: "Center-Aligned-Title-Tabs", value:"center-aligned-title-tabs" },

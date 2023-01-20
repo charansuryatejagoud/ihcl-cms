@@ -35,7 +35,6 @@ export default function group({
       hasAllLink: false,
     },
 
-
     icon: Icon,
     groups: [
       { name: "main", title: "Main", icon: IoApps },
@@ -68,7 +67,15 @@ export default function group({
         title: "Show Divider For Title",
         name: "showDividerForTitle",
         type: "boolean",
-        initialValue:true
+        initialValue:true,
+        group:"main"
+      },
+      {
+        name:"isSearchEnabled",
+        title:"Is Search Enabled",
+        type:"boolean",
+        initialValue:false,
+        group:"main"
       },
       {
         name: "componentTopPadding",
@@ -108,6 +115,11 @@ export default function group({
         group: "main",
       },
       {
+        name: "heading",
+        title: "Heading",
+        type: "string",
+      },
+      {
         name: "titleAlignment",
         title: "Title Alignment",
         type: "string",
@@ -115,8 +127,8 @@ export default function group({
         options: {
           list: [
             { title: "regular", value: "regular" },
-            { title: "center", value: "center" }
-          ]
+            { title: "center", value: "center" },
+          ],
         },
         group: "main",
       },
@@ -147,12 +159,12 @@ export default function group({
       {
         name: "primaryAction",
         title: "Primary Action",
-        type: "navigationItem"
+        type: "navigationItem",
       },
       {
         name: "secondaryAction",
         title: "Secondary Action",
-        type: "navigationItem"
+        type: "navigationItem",
       },
       {
         name: "hasAllLink",

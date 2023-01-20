@@ -53,6 +53,24 @@ export default function card(props: Props) {
         group: "main"
       },
       {
+        name: "titleRow",
+        title: "Title Row",
+        type: "string",
+        initialValue:"1-Row-Title",
+        options: {
+          list: [
+            {
+              title: "1-Row-Title",
+              value: "1-row-title",
+            },
+            {
+              title: "2-Row-Title",
+              value: "2-row-title",
+            },
+          ],
+        },
+      },
+      {
         name: "title",
         title: "Title",
         type: "string",

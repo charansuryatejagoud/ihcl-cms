@@ -1,4 +1,5 @@
 import { GiVerticalBanner } from "react-icons/gi";
+import { IoApps, IoSettings } from "react-icons/io5";
 export default {
     title: 'Banner',
     name: 'banner',
@@ -7,6 +8,10 @@ export default {
     initialValue: {
         mediaType: 'image'
     },
+    groups: [
+        { name: "main", title: "Main", icon: IoApps },
+        { name: "configuration", title: "Configuration", icon: IoSettings },
+      ],
     fields: [
         {
             title: "Is Guest Search",
@@ -17,27 +22,51 @@ export default {
         {
             title: 'Variant',
             name: 'variant',
-            type: 'string'
+            type: 'string',
+            group:"main"
         },
         {
             title: 'Large Variant',
             name: 'largeVariant',
-            type: 'string'
+            type: 'string',
+            group:"main"
         },
+        {
+            name: "titleRow",
+            title: "Title Row",
+            type: "string",
+            initialValue:"1-Row-Title",
+            options: {
+              list: [
+                {
+                  title: "1-Row-Title",
+                  value: "1-row-title",
+                },
+                {
+                  title: "2-Row-Title",
+                  value: "2-row-title",
+                },
+              ],
+            },
+            group:"main"
+          },
         {
             title: 'Title',
             name: 'title',
-            type: 'string'
+            type: 'string',
+            group:"main"
         },
         {
             name:"chatBotImage",
             title:"Chat Bot Image",
-            type:"image"
+            type:"image",
+            group:"main"
         },
         {
             name: 'mediaType',
             title: 'Media Type',
             type: 'string',
+            group:"main",
             options: {
                 list: [
                     { title: 'Video', value: 'video' },
