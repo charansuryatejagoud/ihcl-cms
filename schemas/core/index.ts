@@ -215,7 +215,7 @@ export const core: FeatureSchemaDefinition = {
       { title: "group-with-filter-buttons", value: "group-with-filter-buttons" },
       { title: "group-with-multiple-buttons", value:"group-with-multiple-buttons" },
       {title:"Transparent-3-Cards",value:"transparent-3-cards"},
-      {title:"Toll-Free-No",value:"toll-free-no"}
+      {title:"Toll-Free-No",value:"toll-free-no"},
       {title: "multi-cards-carousel-with-image", value: "multi-cards-carousel-with-image"},
       {title: "images-with-single-column-grid", value: "images-with-single-column-grid"},
       {title: "media-with-single-image",value: "media-with-single-image"},
