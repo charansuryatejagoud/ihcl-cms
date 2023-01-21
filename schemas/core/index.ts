@@ -36,13 +36,14 @@ import footer from "./documents/footer";
 import header from "./documents/header";
 import { imageAsset } from "./objects/imageAsset";
 import { videoAsset } from "./objects/videoAsset";
+import richText from "./objects/richText";
 export const core: FeatureSchemaDefinition = {
   schemas: [
     offer,
     experiment,
     category,
     settings,
-    // imageSet,
+    richText,
     link,
     navigationItem,
     blockImage,
@@ -121,7 +122,9 @@ export const core: FeatureSchemaDefinition = {
     {
       type: "switchCaseBlock",
     },
-    
+    {
+      type:"richText"
+    },
     {
       type: "reference",
       title: "Attached Content",
@@ -176,6 +179,7 @@ export const core: FeatureSchemaDefinition = {
     { type: "table" },
     { type: "toggle" },
     { type: "dataGrid" },
+    {type:"richText"}
   ],
   variants: {
     group: [
