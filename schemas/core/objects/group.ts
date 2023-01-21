@@ -46,10 +46,29 @@ export default function group({
         group: "configuration",
       },
       {
+        name: "isSearchField",
+        title: "Is Search Field",
+        type: "boolean",
+        initialValue: false,
+      },
+      {
+        name: "isDropDown",
+        title: "Is Drop Down",
+        type: "boolean",
+        initialValue: false,
+      },
+      {
         name: "isComponentFullWidth",
         title: "Is Component Full Width",
         type: "boolean",
         initialValue: false,
+      },
+      {
+        title: "Show Divider For Title",
+        name: "showDividerForTitle",
+        type: "boolean",
+        initialValue:true,
+        group:"main"
       },
       {
         name:"isSearchEnabled",
@@ -75,32 +94,13 @@ export default function group({
         title: "Title Color",
         type: "string",
         group: "main",
-        description: "It is required for website",
+        description: "Ït is required for website"
       },
-      {
-        name: "bgColor",
-        title: "Bg Color",
-        type: "string",
-        group: "main",
-      },
-      {
-        name: "titleRow",
-        title: "Title Row",
-        type: "string",
-        initialValue:"1-Row-Title",
-        options: {
-          list: [
-            {
-              title: "1-Row-Title",
-              value: "1-row-title",
-            },
-            {
-              title: "2-Row-Title",
-              value: "2-row-title",
-            },
-          ],
-        },
-        group:"main"
+      { 
+        name:"bgColor",
+        title:"Bg Color",
+        type:"string",
+        group: "main"
       },
       {
         name: "title",

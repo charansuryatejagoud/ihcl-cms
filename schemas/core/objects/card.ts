@@ -38,13 +38,21 @@ export default function card(props: Props) {
         title: "Show Divider For Title",
         name: "showDividerForTitle",
         type: "boolean",
-        initialValue:false
+        initialValue:false,
+        group: "main"
       },
       {
         name:"isComponentFullWidth",
         title:"Is Component Full Width",
         type:"boolean",
         initialValue:false,
+        group: "main"
+      },
+      { 
+        name:"bgColor",
+        title:"Bg Color",
+        type:"string",
+        group: "main"
       },
       {
         name: "titleRow",
