@@ -220,6 +220,10 @@ export const core: FeatureSchemaDefinition = {
       { title: "group-with-multiple-buttons", value:"group-with-multiple-buttons" },
       {title:"Transparent-3-Cards",value:"transparent-3-cards"},
       {title:"Toll-Free-No",value:"toll-free-no"}
+      {title: "multi-cards-carousel-with-image", value: "multi-cards-carousel-with-image"},
+      {title: "images-with-single-column-grid", value: "images-with-single-column-grid"},
+      {title: "media-with-single-image",value: "media-with-single-image"},
+      {title: "carousal-with-single-media", value: "carousal-with-single-media"}
     ],
     navigation: [
       { title: "Default Navigation", value: "default" },
