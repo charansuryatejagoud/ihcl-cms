@@ -46,8 +46,8 @@ export default function group({
         group: "configuration",
       },
       {
-        name: "isSearchField",
-        title: "Is Search Field",
+        name: "isSearchFieldForFilter",
+        title: "Is Search Field For Filter",
         type: "boolean",
         initialValue: false,
       },
@@ -77,6 +77,7 @@ export default function group({
         initialValue:false,
         group:"main"
       },
+     
       {
         name: "componentTopPadding",
         title: "Component Top Padding",
@@ -101,6 +102,11 @@ export default function group({
         title:"Bg Color",
         type:"string",
         group: "main"
+      },
+      {
+        name: "row",
+        title: "Row",
+        type: "number",
       },
       {
         name: "title",
