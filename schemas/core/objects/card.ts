@@ -120,19 +120,6 @@ export default function card(props: Props) {
         group: "main",
       },
       {
-        name: "carouselVariants",
-        title: "Carousel Variants",
-        type: "string",
-        options: {
-          list: [
-            {
-              title: "Card Carousel",
-              value: "cardCarousel",
-            },
-          ],
-        },
-      },
-      {
         name: "ctaLabel",
         title: "CTA Label",
         type: "string",
@@ -172,7 +159,41 @@ export default function card(props: Props) {
         type: "array",
         of: [
           {
-            type: "image",
+            type: "object",
+            fields:[
+              {
+                name: 'mediaType',
+                title: 'Media Type',
+                type: 'string',
+                options: {
+                    list: [
+                        { title: 'Video', value: 'video' },
+                        { title: 'Image', value: 'image' },
+                        { title: 'Component', value: 'component' }
+                    ]
+                }
+            },
+            {
+              name: "imageAsset",
+              title: "Image",
+              type: "imageAsset",
+
+              hidden: ({ parent }) => parent?.mediaType !== "image" && parent?.largeVariant !== "image",
+          },
+          {
+              name: "videoAsset",
+              title: "Video",
+              type: "videoAsset",
+              hidden: ({ parent }) => parent?.mediaType !== "video" && parent?.largeVariant !== "video",
+          },
+          {
+              title: "Components",
+              name: "components",
+              type: "component",
+              hidden: ({ parent }) => parent?.mediaType !== "component" && parent?.largeVariant !== "component",
+          },
+            ]
+
           },
         ],
       },
