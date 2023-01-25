@@ -6,7 +6,8 @@ export const imageAsset = {
         {
             name: "image",
             title: "Image",
-            type: "image"
+            type: "array",
+            of: [{ type: "image" }]
         },
         {
             name: "largeImage",
