@@ -33,6 +33,13 @@ export default {
         initialValue:true,
         group:"main",
       },
+      {
+        title: "Is Hotel Info",
+        name: "isHotelInfo",
+        type: "boolean",
+        initialValue:false,
+        group:"main",
+      },
     {
       name: "menuItems",
       title:"Menu Items",

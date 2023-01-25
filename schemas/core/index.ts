@@ -292,7 +292,8 @@ export const core: FeatureSchemaDefinition = {
       {title:"Image-Gallery",value:"image-gallery"},
       {title:"Venue-Enquiry",value:"venue-enquiry"},
       {title:"Event-Enquiry",value:"event-enquiry"},
-      {title:"Venue-Details",value:"venue-details"}
+      {title:"Venue-Details",value:"venue-details"},
+      {title:"Video-Pop-Up",value:"video-pop-up"}
     ],
     placeholder:[
          {title:"Toll-Free-Numbers",value:"toll-free-numbers"}

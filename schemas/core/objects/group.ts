@@ -109,6 +109,11 @@ export default function group({
         type: "number",
       },
       {
+        name: "column",
+        title: "Column",
+        type: "number",
+      },
+      {
         name: "title",
         title: "Title",
         type: "string",
