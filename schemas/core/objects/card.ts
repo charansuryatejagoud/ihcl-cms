@@ -38,21 +38,21 @@ export default function card(props: Props) {
         title: "Show Divider For Title",
         name: "showDividerForTitle",
         type: "boolean",
-        initialValue:false,
-        group: "main"
+        initialValue: false,
+        group: "main",
       },
       {
-        name:"isComponentFullWidth",
-        title:"Is Component Full Width",
-        type:"boolean",
-        initialValue:false,
-        group: "main"
+        name: "isComponentFullWidth",
+        title: "Is Component Full Width",
+        type: "boolean",
+        initialValue: false,
+        group: "main",
       },
-      { 
-        name:"bgColor",
-        title:"Bg Color",
-        type:"string",
-        group: "main"
+      {
+        name: "bgColor",
+        title: "Bg Color",
+        type: "string",
+        group: "main",
       },
       {
         name: "title",
@@ -85,20 +85,20 @@ export default function card(props: Props) {
         type: "array",
         of: [
           {
-        type: "object",
-        fields: [
-            {
+            type: "object",
+            fields: [
+              {
                 title: "Rich Text Key",
                 name: "richTextKey",
-                type: "string"
-            },
-            {
+                type: "string",
+              },
+              {
                 title: "Rich Text Value",
                 name: "richTextValue",
-                type: "string"
-            }
-          ]
-         },
+                type: "string",
+              },
+            ],
+          },
         ],
       },
       {
@@ -119,7 +119,19 @@ export default function card(props: Props) {
         },
         group: "main",
       },
-
+      {
+        name: "carouselVariants",
+        title: "Carousel Variants",
+        type: "string",
+        options: {
+          list: [
+            {
+              title: "Card Carousel",
+              value: "cardCarousel",
+            },
+          ],
+        },
+      },
       {
         name: "ctaLabel",
         title: "CTA Label",
@@ -154,6 +166,16 @@ export default function card(props: Props) {
         type: "image",
         group: "main",
       },
+      {
+        name: "carouselImages",
+        title: "Carousel Images",
+        type: "array",
+        of: [
+          {
+            type: "image",
+          },
+        ],
+      },
 
       {
         name: "backgroundImage",
@@ -162,15 +184,15 @@ export default function card(props: Props) {
         group: "main",
       },
       {
-        name: 'mediaType',
-        title: 'Media Type',
-        type: 'string',
+        name: "mediaType",
+        title: "Media Type",
+        type: "string",
         options: {
           list: [
-            { title: 'Video', value: 'video' },
+            { title: "Video", value: "video" },
             // { title: 'Image', value: 'image' },
-          ]
-        }
+          ],
+        },
       },
       // {
       //   name: "imageAsset",
@@ -182,17 +204,18 @@ export default function card(props: Props) {
         name: "videoAsset",
         title: "Video",
         type: "videoAsset",
-        hidden: ({ parent }) => parent?.mediaType !== "video" && parent?.largeVariant !== "video",
+        hidden: ({ parent }) =>
+          parent?.mediaType !== "video" && parent?.largeVariant !== "video",
       },
       {
         name: "primaryAction",
         title: "Primary Action",
-        type: "navigationItem"
+        type: "navigationItem",
       },
       {
         name: "secondaryAction",
         title: "Secondary Action",
-        type: "navigationItem"
+        type: "navigationItem",
       },
       {
         name: "brand",
