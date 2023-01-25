@@ -253,13 +253,13 @@ export const core: FeatureSchemaDefinition = {
       { title: 'card-with-right-aligned-content-with-link', value: 'card-with-right-aligned-content-with-link' },
       { title: 'card-with-side-text', value: 'card-with-side-text' },
       { title: "media-image", value: "media-image" },
-     
       { title: "media-video", value: "media-video" },
-      { title: "Center-Aligned-Content",value:"center-aligned-content" },
-      { title: "Center-Aligned-Title-Tabs", value:"center-aligned-title-tabs" },
+      { title: "Center-Aligned-Content",value: "center-aligned-content" },
+      { title: "Center-Aligned-Title-Tabs", value: "center-aligned-title-tabs" },
       { title: "vertical-card", value: "vertical-card" },
       { title: "carousel-with-image", value: "carousel-with-image" },
-      {title:"Card-Ends-Aligned-Content",value:"card-ends-aligned-content"}
+      { title: "Card-Ends-Aligned-Content",value: "card-ends-aligned-content" },
+      { title: "Card-Carousel", value: "card-carousel" }
     ],
     nudge: [
       { title: "Default Nudge", value: "default" },

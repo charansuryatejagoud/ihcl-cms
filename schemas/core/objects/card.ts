@@ -120,19 +120,6 @@ export default function card(props: Props) {
         group: "main",
       },
       {
-        name: "carouselVariants",
-        title: "Carousel Variants",
-        type: "string",
-        options: {
-          list: [
-            {
-              title: "Card Carousel",
-              value: "cardCarousel",
-            },
-          ],
-        },
-      },
-      {
         name: "ctaLabel",
         title: "CTA Label",
         type: "string",
@@ -170,13 +157,8 @@ export default function card(props: Props) {
         name: "carouselImages",
         title: "Carousel Images",
         type: "array",
-        of: [
-          {
-            type: "image",
-          },
-        ],
+        of: [{ type: "image" }],
       },
-
       {
         name: "backgroundImage",
         title: "Background Image",
@@ -216,6 +198,11 @@ export default function card(props: Props) {
         name: "secondaryAction",
         title: "Secondary Action",
         type: "navigationItem",
+      },
+      {
+        name: "ctaLabel_1",
+        title: "CTA Label_1",
+        type: "navigationItem"
       },
       {
         name: "brand",
