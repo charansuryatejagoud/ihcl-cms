@@ -190,7 +190,7 @@ export const core: FeatureSchemaDefinition = {
       { title: 'multi-cards-carousel-with-bg-image', value: 'multi-cards-carousel-with-bg-image' },
       { title: 'media-card', value: 'media-card' },
       { title: 'carousel-with-focused-title', value: 'carousel-with-focused-title' },
-      { title: 'group-with-information', value: 'group-with-information' },
+       {title:"Group-With-Rich-Text-columns",value:"group-with-rich-text-columns"},
       { title: 'group-with-links', value: 'group-with-links' },
       { title: 'group-with-maps', value: 'group-with-maps' },
       { title: 'card-with-focused-title', value: 'card-with-focused-title' },
@@ -201,7 +201,6 @@ export const core: FeatureSchemaDefinition = {
       { title: 'group-with-simple-media', value: 'group-with-simple-media' },
       { title: '4-column-rectangle-grid', value: '4-column-rectangle-grid' },
       { title: '2-row-grid', value: '2-row-grid' },
-      { title: 'group-with-facilities', value: 'group-with-facilities' },
       { title: 'group-with-2-column-cards-grid', value: 'group-with-2-column-cards-grid' },
       { title: 'group-with-3-column-cards-grid', value: 'group-with-3-column-cards-grid' },
       { title: '3-cards-carousel', value: '3-cards-carousel' },
@@ -290,6 +289,11 @@ export const core: FeatureSchemaDefinition = {
       { title: "Bottom Sheet", value: "bottomSheet" },
       { title: "Nested Bottom Sheet", value: "nestedBottomSheet" },
       { title: "Alert Without Close Cta", value: "alert.without.close.cta" },
+      {title:"Image-Gallery",value:"image-gallery"},
+      {title:"Venue-Enquiry",value:"venue-enquiry"},
+      {title:"Event-Enquiry",value:"event-enquiry"},
+      {title:"Venue-Details",value:"venue-details"},
+      {title:"Video-Pop-Up",value:"video-pop-up"}
     ],
     placeholder:[
          {title:"Toll-Free-Numbers",value:"toll-free-numbers"}

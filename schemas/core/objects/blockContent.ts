@@ -26,7 +26,7 @@ export default {
         { title: "H4", value: "h4" },
         { title: "Quote", value: "blockquote" },
         { title: "Section", value: "section" },
-        {title:"font-family",value:"trajan pro"}
+        {title:"Span",value:"span"}
       ],
       lists: [
         { title: "Bullet", value: "bullet" },

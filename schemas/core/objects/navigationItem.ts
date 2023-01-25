@@ -30,7 +30,8 @@ export default {
       options: {
           list: [
               { title: 'Internal',value: 'internal' },
-              { title: 'External',value: 'external' }
+              { title: 'External',value: 'external' },
+              {title:"Dialog",value:"dialog"}
           ],
           layout:'radio',
           isHighlighted:true
