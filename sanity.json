@@ -35,22 +35,6 @@
             "projectId": "ocl5w36p",
             "dataset": "production"
           }
-        },
-        {
-          "name": "staging",
-          "title": "Staging",
-          "api": {
-            "projectId": "ocl5w36p",
-            "dataset": "production"
-          }
-        },
-        {
-          "name": "production",
-          "title": "Production",
-          "api": {
-            "projectId": "ocl5w36p",
-            "dataset": "production"
-          }
         }
       ]
     }

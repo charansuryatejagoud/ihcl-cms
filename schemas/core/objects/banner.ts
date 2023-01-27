@@ -93,8 +93,12 @@ export default {
             type: "component",
             hidden: ({ parent }) => parent?.mediaType !== "component" && parent?.largeVariant !== "component",
         },
+        {
+            name: "primaryAction",
+            title: "Primary Action",
+            type: "navigationItem"
+        },
     ],
-
     preview: {
         select: {
             title: "title",
