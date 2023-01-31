@@ -67,6 +67,18 @@ export default function card(props: Props) {
         group: "main",
       },
       {
+        name: "highLights",
+        title: "High Lights",
+        type: "string",
+        group: "main"
+      },
+      {
+        name: "chipText",
+        title: "Chip Text",
+        type: "array",
+        of: [{ type: "string" }]
+      },
+      {
         name: "description",
         title: "Description",
         type: "text",
@@ -77,6 +89,12 @@ export default function card(props: Props) {
         title: "Content",
         name: "content",
         type: "blockContent",
+        group: "main",
+      },
+      {
+        title: "map",
+        name: "Map",
+        type: "geopoint",
         group: "main",
       },
       {
