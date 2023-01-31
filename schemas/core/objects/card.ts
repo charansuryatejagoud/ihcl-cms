@@ -177,47 +177,8 @@ export default function card(props: Props) {
         name: "carouselImages",
         title: "Carousel Images",
         type: "array",
-        of: [
-          {
-            type: "object",
-            fields:[
-              {
-                name: 'mediaType',
-                title: 'Media Type',
-                type: 'string',
-                options: {
-                    list: [
-                        { title: 'Video', value: 'video' },
-                        { title: 'Image', value: 'image' },
-                        { title: 'Component', value: 'component' }
-                    ]
-                }
-            },
-            {
-              name: "imageAsset",
-              title: "Image",
-              type: "imageAsset",
-
-              hidden: ({ parent }) => parent?.mediaType !== "image" && parent?.largeVariant !== "image",
-          },
-          {
-              name: "videoAsset",
-              title: "Video",
-              type: "videoAsset",
-              hidden: ({ parent }) => parent?.mediaType !== "video" && parent?.largeVariant !== "video",
-          },
-          {
-              title: "Components",
-              name: "components",
-              type: "component",
-              hidden: ({ parent }) => parent?.mediaType !== "component" && parent?.largeVariant !== "component",
-          },
-            ]
-
-          },
-        ],
+        of: [{ type: "image" }],
       },
-
       {
         name: "backgroundImage",
         title: "Background Image",
@@ -257,6 +218,11 @@ export default function card(props: Props) {
         name: "secondaryAction",
         title: "Secondary Action",
         type: "navigationItem",
+      },
+      {
+        name: "ctaLabel_1",
+        title: "CTA Label_1",
+        type: "navigationItem"
       },
       {
         name: "brand",

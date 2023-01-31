@@ -222,7 +222,8 @@ export const core: FeatureSchemaDefinition = {
       {title: "multi-cards-carousel-with-image", value: "multi-cards-carousel-with-image"},
       {title: "images-with-single-column-grid", value: "images-with-single-column-grid"},
       {title: "media-with-single-image",value: "media-with-single-image"},
-      {title: "carousal-with-single-media", value: "carousal-with-single-media"}
+      {title: "carousal-with-single-media", value: "carousal-with-single-media"},
+      {title: "group-with-vertical-card", value:"group-with-vertical-card"}
     ],
     navigation: [
       { title: "Default Navigation", value: "default" },
@@ -253,10 +254,9 @@ export const core: FeatureSchemaDefinition = {
       { title: 'card-with-right-aligned-content-with-link', value: 'card-with-right-aligned-content-with-link' },
       { title: 'card-with-side-text', value: 'card-with-side-text' },
       { title: "media-image", value: "media-image" },
-     
       { title: "media-video", value: "media-video" },
-      { title: "Center-Aligned-Content",value:"center-aligned-content" },
-      { title: "Center-Aligned-Title-Tabs", value:"center-aligned-title-tabs" },
+      { title: "Center-Aligned-Content",value: "center-aligned-content" },
+      { title: "Center-Aligned-Title-Tabs", value: "center-aligned-title-tabs" },
       { title: "vertical-card", value: "vertical-card" },
       { title: "carousel-with-image", value: "carousel-with-image" },
       {title:"Card-Ends-Aligned-Content",value:"card-ends-aligned-content"},
@@ -294,7 +294,8 @@ export const core: FeatureSchemaDefinition = {
       {title:"Venue-Enquiry",value:"venue-enquiry"},
       {title:"Event-Enquiry",value:"event-enquiry"},
       {title:"Venue-Details",value:"venue-details"},
-      {title:"Video-Pop-Up",value:"video-pop-up"}
+      {title:"Video-Pop-Up",value:"video-pop-up"},
+      { title: "gallery-with-carousel", value:"gallery-with-carousel" }
     ],
     placeholder:[
          {title:"Toll-Free-Numbers",value:"toll-free-numbers"}
