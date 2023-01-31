@@ -61,6 +61,13 @@ export default function card(props: Props) {
         group: "main",
       },
       {
+        title: "Show Bullet For Title",
+        name: "showBulletForTitle",
+        type: "boolean",
+        initialValue: true,
+        group: "main",
+      },
+      {
         name: "subTitle",
         title: "Sub Title",
         type: "string",
@@ -73,6 +80,19 @@ export default function card(props: Props) {
         rows: 6,
         group: "main",
       },
+      // {
+      //   name: "demo",
+      //   title: "Demo",
+      //   type: "text",
+      //   options:{
+      //     modal:{
+      //       type:"popOver"
+      //     }
+      //   },
+       
+      //   group: "main",
+      // },
+
       {
         title: "Content",
         name: "content",
