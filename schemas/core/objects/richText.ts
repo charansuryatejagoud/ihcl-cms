@@ -54,16 +54,11 @@ export default {
                     type:"blockContent",
                     
                 },
-                {
-                    name:"latitude",
-                    title:"Latitude",
-                    type:"string"
-                },
-                {
-                    name:"longitude",
-                    title:"Longitude",
-                    type:"string"
-                }
+               {
+                name:"map",
+                title:"Map",
+                type:"geopoint"
+              }
             ]
         }
       ]
