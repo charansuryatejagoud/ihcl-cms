@@ -223,7 +223,7 @@ export const core: FeatureSchemaDefinition = {
       {title: "images-with-single-column-grid", value: "images-with-single-column-grid"},
       {title: "media-with-single-image",value: "media-with-single-image"},
       {title: "carousal-with-single-media", value: "carousal-with-single-media"},
-      {title: "group-with-vertical-card", value:"group-with-vertical-card"}
+      {title: "group-with-vertical-card", value:"group-with-vertical-card"},
     ],
     navigation: [
       { title: "Default Navigation", value: "default" },
@@ -260,7 +260,8 @@ export const core: FeatureSchemaDefinition = {
       { title: "vertical-card", value: "vertical-card" },
       { title: "carousel-with-image", value: "carousel-with-image" },
       {title:"Card-Ends-Aligned-Content",value:"card-ends-aligned-content"},
-    {title:"Card-Carousel",value:"card-carousel"}
+    {title:"Card-Carousel",value:"card-carousel"},
+    {title:"Media-With-Description",value:"media-with-description"}
     ],
     nudge: [
       { title: "Default Nudge", value: "default" },
