@@ -222,7 +222,8 @@ export const core: FeatureSchemaDefinition = {
       {title: "multi-cards-carousel-with-image", value: "multi-cards-carousel-with-image"},
       {title: "images-with-single-column-grid", value: "images-with-single-column-grid"},
       {title: "media-with-single-image",value: "media-with-single-image"},
-      {title: "carousal-with-single-media", value: "carousal-with-single-media"}
+      {title: "carousal-with-single-media", value: "carousal-with-single-media"},
+      {title: "group-with-vertical-card", value:"group-with-vertical-card"}
     ],
     navigation: [
       { title: "Default Navigation", value: "default" },
@@ -258,13 +259,8 @@ export const core: FeatureSchemaDefinition = {
       { title: "Center-Aligned-Title-Tabs", value: "center-aligned-title-tabs" },
       { title: "vertical-card", value: "vertical-card" },
       { title: "carousel-with-image", value: "carousel-with-image" },
-<<<<<<< HEAD
-      { title: "Card-Ends-Aligned-Content",value: "card-ends-aligned-content" },
-      { title: "Card-Carousel", value: "card-carousel" }
-=======
       {title:"Card-Ends-Aligned-Content",value:"card-ends-aligned-content"},
     {title:"Card-Carousel",value:"card-carousel"}
->>>>>>> 381c2094304d4fa712fc0809325304a8ad5f91a0
     ],
     nudge: [
       { title: "Default Nudge", value: "default" },
