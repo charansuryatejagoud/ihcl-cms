@@ -61,8 +61,8 @@ export default function card(props: Props) {
         group: "main",
       },
       {
-        title: "Show Bullet For Title",
-        name: "showBulletForTitle",
+        title: "Show Bullet For Sub Title",
+        name: "showBulletForSubTitle",
         type: "boolean",
         initialValue: true,
         group: "main",
@@ -72,6 +72,18 @@ export default function card(props: Props) {
         title: "Sub Title",
         type: "string",
         group: "main",
+      },
+      {
+        name: "highLights",
+        title: "High Lights",
+        type: "string",
+        group: "main"
+      },
+      {
+        name: "chipText",
+        title: "Chip Text",
+        type: "array",
+        of: [{ type: "string" }]
       },
       {
         name: "description",
@@ -97,6 +109,12 @@ export default function card(props: Props) {
         title: "Content",
         name: "content",
         type: "blockContent",
+        group: "main",
+      },
+      {
+        title: "map",
+        name: "Map",
+        type: "geopoint",
         group: "main",
       },
       {
@@ -192,6 +210,7 @@ export default function card(props: Props) {
         options: {
           list: [
             { title: "Video", value: "video" },
+            {title:"Component",value:"component"}
             // { title: 'Image', value: 'image' },
           ],
         },
@@ -209,6 +228,12 @@ export default function card(props: Props) {
         hidden: ({ parent }) =>
           parent?.mediaType !== "video" && parent?.largeVariant !== "video",
       },
+      {
+        title: "Components",
+        name: "components",
+        type: "component",
+        hidden: ({ parent }) => parent?.mediaType !== "component" && parent?.largeVariant !== "component",
+    },
       {
         name: "primaryAction",
         title: "Primary Action",
