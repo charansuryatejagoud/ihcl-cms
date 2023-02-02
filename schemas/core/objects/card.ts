@@ -61,8 +61,8 @@ export default function card(props: Props) {
         group: "main",
       },
       {
-        title: "Show Bullet For Title",
-        name: "showBulletForTitle",
+        title: "Show Bullet For Sub Title",
+        name: "showBulletForSubTitle",
         type: "boolean",
         initialValue: true,
         group: "main",
@@ -221,6 +221,7 @@ export default function card(props: Props) {
         options: {
           list: [
             { title: "Video", value: "video" },
+            {title:"Component",value:"component"}
             // { title: 'Image', value: 'image' },
           ],
         },
@@ -238,6 +239,12 @@ export default function card(props: Props) {
         hidden: ({ parent }) =>
           parent?.mediaType !== "video" && parent?.largeVariant !== "video",
       },
+      {
+        title: "Components",
+        name: "components",
+        type: "component",
+        hidden: ({ parent }) => parent?.mediaType !== "component" && parent?.largeVariant !== "component",
+    },
       {
         name: "primaryAction",
         title: "Primary Action",
