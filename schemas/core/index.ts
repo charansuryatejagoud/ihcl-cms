@@ -37,6 +37,7 @@ import header from "./documents/header";
 import { imageAsset } from "./objects/imageAsset";
 import { videoAsset } from "./objects/videoAsset";
 import richText from "./objects/richText";
+import stepperComponent from "./objects/stepperComponent";
 export const core: FeatureSchemaDefinition = {
   schemas: [
     offer,
@@ -73,6 +74,7 @@ export const core: FeatureSchemaDefinition = {
     footer,
     imageAsset,
     videoAsset,
+    stepperComponent
     
   ],
   transformers: [reorderTransformer],
@@ -179,7 +181,10 @@ export const core: FeatureSchemaDefinition = {
     { type: "table" },
     { type: "toggle" },
     { type: "dataGrid" },
-    {type:"richText"}
+    {type:"richText"},
+    {
+      type:"stepper"
+      },
   ],
   variants: {
     group: [
@@ -224,7 +229,9 @@ export const core: FeatureSchemaDefinition = {
       { title: "media-with-single-image",value: "media-with-single-image"},
       { title: "carousal-with-single-media", value: "carousal-with-single-media" },
       { title: "group-with-carousel", value: "group-with-carousel" },
-      {title:"Group-With-Sectional-Tabs",value:"group-with-sectional-tabs"}
+      {title:"Group-With-Sectional-Tabs",value:"group-with-sectional-tabs"},
+      {title:"Group-With-Stepper-And-Tabs",value:"group-with-stepper-and-tabs"},
+      {title:"Stepper-Items",value:"stepper-items"}
     ],
     navigation: [
       { title: "Default Navigation", value: "default" },
@@ -265,7 +272,8 @@ export const core: FeatureSchemaDefinition = {
       { title: "card-with-carousel", value: "card-with-carousel" },
       { title: "media-with-description", value: "media-with-description" },
       {title:"Image-Title-Tabs",value:"image-title-tabs"},
-      {title:"Card-With-Description-actions",value:"card-with-description-actions"}
+      {title:"Card-With-Description-actions",value:"card-with-description-actions"},
+      {title:"Card-with-Combined-Image-Button",value:"image-aligned-button"}
     ],
     nudge: [
       { title: "Default Nudge", value: "default" },
