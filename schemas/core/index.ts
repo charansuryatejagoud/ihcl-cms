@@ -189,7 +189,7 @@ export const core: FeatureSchemaDefinition = {
   variants: {
     group: [
       { title: '4-row-grid', value: '4-row-grid' },
-      { title: 'multi-cards-carousel', value: 'multi-cards-carousel' },
+      { title: 'center-card-carousel', value: 'center-card-carousel' },
       { title: 'single-card-carousel-with-bg-image', value: 'single-card-carousel-with-bg-image' },
       { title: 'carousel-with-award-cards', value: 'carousel-with-award-cards' },
       { title: 'multi-cards-carousel-with-bg-image', value: 'multi-cards-carousel-with-bg-image' },
@@ -225,7 +225,7 @@ export const core: FeatureSchemaDefinition = {
       { title: "Transparent-3-Cards",value:"transparent-3-cards"},
       { title: "Toll-Free-No",value:"toll-free-no"},
       { title: "multi-cards-carousel-with-image", value: "multi-cards-carousel-with-image"},
-      { title: "images-with-single-column-grid", value: "images-with-single-column-grid"},
+      { title: "cards-with-single-column-grid", value: "cards-with-single-column-grid"},
       { title: "media-with-single-image",value: "media-with-single-image"},
       { title: "carousal-with-single-media", value: "carousal-with-single-media" },
       { title: "group-with-carousel", value: "group-with-carousel" },
@@ -253,7 +253,7 @@ export const core: FeatureSchemaDefinition = {
       { title: "card-with-location", value: "card-with-location" },
       { title: "title-with-hoverable-card", value: "title-with-hoverable-card" },
       { title: "card-with-simple-media", value: "card-with-simple-media" },
-      { title: "rectangle-card", value: "rectangle-card" },
+      { title: "card-with-right-aligned-title", value: "card-with-right-aligned-title" },
       { title: "card-with-right-aligned-title-link", value: "card-with-right-aligned-title-link" },
       { title: "3-column-grid", value: "3-column-grid" },
       { title: "card-with-title-and-sub-titles", value: "card-with-title-and-sub-titles" },
@@ -265,7 +265,7 @@ export const core: FeatureSchemaDefinition = {
       { title: "media-video", value: "media-video" },
       { title: "Center-Aligned-Content",value: "center-aligned-content" },
       { title: "Center-Aligned-Title-Tabs", value: "center-aligned-title-tabs" },
-      { title: "vertical-card", value: "vertical-card" },
+      { title: "vertical-card", value: "vertical-card" }, // x--
       { title: "carousel-with-image", value: "carousel-with-image" },
       { title: "Card-Ends-Aligned-Content",value: "card-ends-aligned-content" },
       { title: "Card-Carousel", value: "card-carousel" },
@@ -273,7 +273,9 @@ export const core: FeatureSchemaDefinition = {
       { title: "media-with-description", value: "media-with-description" },
       {title:"Image-Title-Tabs",value:"image-title-tabs"},
       {title:"Card-With-Description-actions",value:"card-with-description-actions"},
-      {title:"Card-with-Combined-Image-Button",value:"image-aligned-button"}
+      {title:"Card-with-Combined-Image-Button",value:"image-aligned-button"},
+      { title: "card-with-left-align-content", value: "card-with-left-align-content"},
+      // {title: "card-with-center-title", value: ""}
     ],
     nudge: [
       { title: "Default Nudge", value: "default" },
