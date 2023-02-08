@@ -24,6 +24,7 @@ import { hstuDefinition } from "./pdf-hstu";
 import { creditcard } from "./finance/creditcard";
 import { tataNeuCredit } from "./finance/tataneu-credit";
 import { sachet } from "./finance/sachet";
+import { details } from "./details";
 
 const features: FeatureSchemaDefinition[] = [
   core,
@@ -47,6 +48,7 @@ const features: FeatureSchemaDefinition[] = [
   // hamburger_menu,
   // tataNeuCredit,
   // sachet,
+  details
 ];
 
 export const featureDefinition: FeatureSchemaDefinition =

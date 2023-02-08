@@ -67,17 +67,16 @@ export default function group({
         title: "Show Divider For Title",
         name: "showDividerForTitle",
         type: "boolean",
-        initialValue:true,
-        group:"main"
+        initialValue: true,
+        group: "main",
       },
       {
-        name:"isSearchEnabled",
-        title:"Is Search Enabled",
-        type:"boolean",
-        initialValue:false,
-        group:"main"
+        name: "isSearchEnabled",
+        title: "Is Search Enabled",
+        type: "boolean",
+        initialValue: false,
+        group: "main",
       },
-     
       {
         name: "componentTopPadding",
         title: "Component Top Padding",
@@ -95,13 +94,13 @@ export default function group({
         title: "Title Color",
         type: "string",
         group: "main",
-        description: "Ït is required for website"
+        description: "Ït is required for website",
       },
-      { 
-        name:"bgColor",
-        title:"Bg Color",
-        type:"string",
-        group: "main"
+      {
+        name: "bgColor",
+        title: "Bg Color",
+        type: "string",
+        group: "main",
       },
       {
         name: "row",
@@ -112,6 +111,20 @@ export default function group({
         name: "column",
         title: "Column",
         type: "number",
+      },
+      {
+        name: "characterLimitForGroupDescription",
+        title: "Character Limit For Group Description",
+        type: "number",
+        description:
+          "The character limit for subTitle in group for displaying more button",
+      },
+      {
+        name: "characterLimitForItemDescription",
+        title: "Character Limit For Item Description ",
+        type: "number",
+        description:
+          "The character limit for description in group for displaying more button",
       },
       {
         name: "title",
