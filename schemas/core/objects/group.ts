@@ -67,17 +67,17 @@ export default function group({
         title: "Show Divider For Title",
         name: "showDividerForTitle",
         type: "boolean",
-        initialValue:true,
-        group:"main"
+        initialValue: true,
+        group: "main",
       },
       {
-        name:"isSearchEnabled",
-        title:"Is Search Enabled",
-        type:"boolean",
-        initialValue:false,
-        group:"main"
+        name: "isSearchEnabled",
+        title: "Is Search Enabled",
+        type: "boolean",
+        initialValue: false,
+        group: "main",
       },
-     
+
       {
         name: "componentTopPadding",
         title: "Component Top Padding",
@@ -95,13 +95,13 @@ export default function group({
         title: "Title Color",
         type: "string",
         group: "main",
-        description: "Ït is required for website"
+        description: "Ït is required for website",
       },
-      { 
-        name:"bgColor",
-        title:"Bg Color",
-        type:"string",
-        group: "main"
+      {
+        name: "bgColor",
+        title: "Bg Color",
+        type: "string",
+        group: "main",
       },
       {
         name: "row",
