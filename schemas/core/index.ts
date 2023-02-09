@@ -411,7 +411,7 @@ export const core: FeatureSchemaDefinition = {
       {
         title: "cards-with-single-column-grid",
         value: "cards-with-single-column-grid",
-      },
+      }
     ],
     navigation: [
       { title: "Default Navigation", value: "default" },
@@ -501,7 +501,12 @@ export const core: FeatureSchemaDefinition = {
       },
       { title: "card-preview", value: "card-preview" },
       { title: "card-with-left-align-content", value: "card-with-left-align-content" },
-      { title: "text-on-card-with-cta", value: "text-on-card-with-cta" }
+      { title: "text-on-card-with-cta", value: "text-on-card-with-cta" },
+      {
+        title: "card-with-right-aligned-title", 
+        value: "card-with-right-aligned-title"
+      },
+      { title: "card-with-image-title", value: "card-with-image-title" }
     ],
     nudge: [
       { title: "Default Nudge", value: "default" },
