@@ -14,7 +14,11 @@ export default {
       title: "Title",
       type: "string",
     },
-
+    {
+      name: "subtitle",
+      title: "Subtitle",
+      type: "string",
+    },
     {
       name: "comparatives",
       title: "Comparatives",
