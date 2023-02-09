@@ -169,6 +169,12 @@ export default function card(props: Props) {
         group: "main",
       },
       {
+        name: "ctaLabel",
+        title: "CTA Label",
+        type: "string",
+        group: "main",
+      },
+      {
         name: "url",
         title: "Url",
         type: "url",
@@ -267,12 +273,12 @@ export default function card(props: Props) {
         type: "navigationItem",
         group: "main"
       },
-      {
-        name: "ctaLabel",
-        title: "CTA Label",
-        type: "navigationItem",
-        group: "main"
-      },
+      // {
+      //   name: "ctaLabel",
+      //   title: "CTA Label",
+      //   type: "navigationItem",
+      //   group: "main"
+      // },
       {
         name: "brand",
         title: "Brand",
