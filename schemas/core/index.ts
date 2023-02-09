@@ -38,6 +38,9 @@ import { imageAsset } from "./objects/imageAsset";
 import { videoAsset } from "./objects/videoAsset";
 import richText from "./objects/richText";
 import stepperComponent from "./objects/stepperComponent";
+import comparator from "./objects/comparator";
+import comparativeItems from "./objects/comparativeItems";
+import specificationItems from "./objects/specificationItems";
 import inputObject from "./objects/inputObject";
 import mapObject from "./objects/map-object";
 import formGroup from "./objects/form-group";
@@ -78,6 +81,9 @@ export const core: FeatureSchemaDefinition = {
     imageAsset,
     videoAsset,
     stepperComponent,
+    comparator,
+    comparativeItems,
+    specificationItems,
     inputObject,
     formGroup,
     mapObject,
@@ -94,6 +100,7 @@ export const core: FeatureSchemaDefinition = {
     },
   ],
   pageItems: [
+    { type: "comparator" },
     { type: "group" },
     { type: "section" },
     {
@@ -151,6 +158,7 @@ export const core: FeatureSchemaDefinition = {
     { type: "dataGrid" },
   ],
   groupItems: [
+    { type: "comparator" },
     {
       type: "card",
     },
@@ -195,6 +203,7 @@ export const core: FeatureSchemaDefinition = {
   variants: {
     group: [
       { title: "4-row-grid", value: "4-row-grid" },
+      { title: "center-card-carousel", value: "center-card-carousel" },
       { title: "multi-cards-carousel", value: "multi-cards-carousel" },
       {
         title: "single-card-carousel-with-bg-image",
@@ -277,8 +286,8 @@ export const core: FeatureSchemaDefinition = {
         value: "multi-cards-carousel-with-image",
       },
       {
-        title: "images-with-single-column-grid",
-        value: "images-with-single-column-grid",
+        title: "cards-with-single-column-grid",
+        value: "cards-with-single-column-grid",
       },
       { title: "media-with-single-image", value: "media-with-single-image" },
       {
@@ -392,6 +401,7 @@ export const core: FeatureSchemaDefinition = {
         value: "group-with-stepper-and-tabs",
       },
       { title: "Stepper-Items", value: "stepper-items" },
+      { title: "2-card-carousal", value: "2-card-carousal" },
       {
         title: "carousal-with-single-card-media",
         value: "carousal-with-single-card-media",
@@ -429,6 +439,10 @@ export const core: FeatureSchemaDefinition = {
         value: "title-with-hoverable-card",
       },
       { title: "card-with-simple-media", value: "card-with-simple-media" },
+      {
+        title: "card-with-right-aligned-title",
+        value: "card-with-right-aligned-title",
+      },
       { title: "rectangle-card", value: "rectangle-card" },
       {
         title: "card-with-right-aligned-title-link",
@@ -480,6 +494,10 @@ export const core: FeatureSchemaDefinition = {
       {
         title: "Card-with-Combined-Image-Button",
         value: "image-aligned-button",
+      },
+      {
+        title: "card-with-left-align-content",
+        value: "card-with-left-align-content",
       },
       { title: "card-preview", value: "card-preview" },
       { title: "card-with-left-align-content", value: "card-with-left-align-content" },

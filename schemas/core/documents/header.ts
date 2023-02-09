@@ -19,9 +19,19 @@ export default {
       type: 'string',
       options: {
         list: [
-          { title: 'default', value: 'default', },
+          { title: 'mobile-default', value: 'mobile-default', },
+          {title: 'default', value: 'default'}
         ],
       },
+    },
+    {
+      name: "largeVariant",
+      title: "Large Variant",
+      type: "string",
+      options: {
+        list: [{title: 'default-1', value: 'default-1',}],
+      },
+    
     },
     {
       title: 'Path',
@@ -68,6 +78,25 @@ export default {
         }
     ]
     }]
+},
+{  
+  title: 'Profile Icon',
+  name: 'profileIcon',
+  type: 'array',
+  of: [{ type: 'object',
+fields:[
+  {
+      title: 'Primary Profile Icon',
+      name: 'primaryProfileIcon',
+      type: 'image'   
+  },
+  {
+      title: 'Secondary Profile Icon',
+      name: 'secondaryProfileIcon',
+      type: 'image'
+  }
+]
+}]
 },
 {
     name:"primaryAction",
