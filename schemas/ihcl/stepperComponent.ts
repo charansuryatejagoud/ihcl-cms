@@ -2,11 +2,11 @@ import { BiBarChartAlt } from "react-icons/bi";
 const stepperVariants = [
   {
     title: "Default Stepper",
-    value: "default.stepper",
+    value: "default-stepper",
   },
   {
     title: "Custom Stepper",
-    value: "custom.stepper",
+    value: "custom-stepper",
   },
 ];
 export default {
@@ -26,14 +26,10 @@ export default {
       type: "string",
     },
     {
-      name: "numberOfSteps",
-      title: "Number of Steps",
-      type: "number",
-    },
-    {
-      name: "currentStep",
-      title: "Current Step",
-      type: "number",
+      name: "activeStep",
+      title: "Active Step",
+      type: "boolean",
+      initialValue: false,
     },
     {
       name: "variant",
@@ -44,4 +40,22 @@ export default {
       },
     },
   ],
+  preview: {
+    select: {
+        title: "title",
+        subtitle: "description",
+        media: "image",
+        hidden: "isHidden",
+    },
+    prepare({ title, subtitle, hidden, media }) {
+        const hiddenIndicator = hidden ? "🚫 " : "";
+
+        return {
+            title: `${hiddenIndicator}${title ?? "<stepper>"}`,
+            subtitle,
+            media,
+        };
+    },
+},
 };
+

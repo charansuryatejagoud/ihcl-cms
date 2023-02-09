@@ -15,7 +15,7 @@ import ifElseBlock from "./core/objects/ifElseBlock";
 import { switchCaseBlock } from "./core/objects/switchCaseBlock";
 import section from "./core/objects/section";
 import dataGrid from "./core/objects/dataGrid";
-import { bannerComponents } from "./core/objects/banner";
+import { bannerComponents } from "./ihcl/banner";
 
 export default createSchema({
   name: "default",

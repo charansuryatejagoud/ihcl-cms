@@ -1,12 +1,22 @@
 import { BiDockBottom } from "react-icons/bi";
+const footerVariants = [
+    {
+      title: "Default Footer",
+      value: "default-footer",
+    },
+    {
+      title: "Custom Footer",
+      value: "custom-footer",
+    },
+  ]
 export default {
     title: 'Footer',
     name: 'footer',
     type: 'document',
     icon: BiDockBottom,
-    // initialValue: {
-    //     variant: 'default',
-    // },
+    initialValue: {
+        variant: 'default',
+    },
     fields: [
         {
             title: 'Title',
@@ -14,15 +24,13 @@ export default {
             type: 'string',
         },
         {
-            title: 'Variant',
-            name: 'variant',
-            type: 'string',
+            name: "variant",
+            title: "Variant",
+            type: "string",
             options: {
-                list: [
-                    { title: 'default', value: 'default', },
-                ],
+              list: [...footerVariants],
             },
-        },
+          },
         {
             title: 'Path',
             name: 'path',

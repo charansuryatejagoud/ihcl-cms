@@ -53,8 +53,9 @@ export default function group({
       },
       {
         name: "isDropDown",
-        title: "Is Drop Down",
+        title: "City Drop Down List",
         type: "boolean",
+        description:"hotel city lists for boolean",
         initialValue: false,
       },
       {
@@ -77,7 +78,11 @@ export default function group({
         initialValue:false,
         group:"main"
       },
-     
+      {
+        title:"Initial Slide",
+        name:"initialSlide",
+        type:"number"
+       },
       {
         name: "componentTopPadding",
         title: "Component Top Padding",
@@ -124,6 +129,18 @@ export default function group({
         title: "Sub Title",
         type: "string",
         group: "main",
+      },
+      {
+        name:"characterLimitForGroupDescription",
+        title:"Character Limit For Group Description",
+        type:"number",
+        description:"The character limit for subTitle in group for displaying more button"
+      },
+      {
+        name:"characterLimitForItemDescription",
+        title:"Character Limit For Item Description ",
+        type:"number",
+        description:"The character limit for description in group for displaying more button"
       },
       {
         name: "heading",

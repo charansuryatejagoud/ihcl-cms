@@ -1,4 +1,14 @@
 import { MdViewHeadline } from "react-icons/md";
+const headerVariants = [
+  {
+    title: "Default Header",
+    value: "default-header",
+  },
+  {
+    title: "Custom Header",
+    value: "custom-header",
+  },
+]
 export default {
   title: 'Header',
   name: 'header',
@@ -7,6 +17,7 @@ export default {
   initialValue: {
     variant: 'default',
   },
+  
   fields: [
     {
       title: 'Title',
@@ -14,13 +25,11 @@ export default {
       type: 'string',
     },
     {
-      title: 'Variant',
-      name: 'variant',
-      type: 'string',
+      name: "variant",
+      title: "Variant",
+      type: "string",
       options: {
-        list: [
-          { title: 'default', value: 'default', },
-        ],
+        list: [...headerVariants],
       },
     },
     {
@@ -39,8 +48,8 @@ export default {
       type: 'image',
     },
     {
-      title: 'Detail List',
-      name: 'detailList',
+      title: 'Nav Items',
+      name: 'navItems',
       type: 'array',
   of: [{ type: 'navigationItem' }],
     },
@@ -69,6 +78,28 @@ export default {
     ]
     }]
 },
+{
+  title:"Profile Icon",
+  name:"profileIcon",
+  type:"array",
+  of:[
+    {
+      type:"object",
+      fields:[{
+        name:"primaryProfileIcon",
+        title:"Primary Profile Icon",
+        type:"image"
+      },
+      {
+        name:"secondaryProfileIcon",
+        title:"Secondary Profile Icon",
+        type:"image"
+      }
+    ]
+    }
+  ]
+},
+
 {
     name:"primaryAction",
     title:"Primary Action",

@@ -57,11 +57,18 @@ export default {
             group:"main"
         },
         {
+            name: "subTitle",
+            title: "Sub Title",
+            type: "string",
+            group: "main",
+          },
+        {
             name:"chatBotImage",
             title:"Chat Bot Image",
             type:"image",
             group:"main"
         },
+        
         {
             name: 'mediaType',
             title: 'Media Type',

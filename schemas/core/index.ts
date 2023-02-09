@@ -1,7 +1,7 @@
 import { FeatureSchemaDefinition } from "../types";
 // import imageSet from "./objects/imageSet";
 import link from "./objects/link";
-import navigationItem from "./objects/navigationItem";
+import navigationItem from "../ihcl/navigationItem";
 import blockImage from "./objects/blockImage";
 import seo from "./objects/seo";
 import blockContent from "./objects/blockContent";
@@ -31,13 +31,13 @@ import accelerator from "./documents/accelerator";
 import faqCategory from "./documents/faqCategory";
 import faqQuestion from "./documents/faqQuestion";
 // import { acceleratorCardVariant } from "./objects/card";
-import banner, { bannerComponents } from "./objects/banner";
-import footer from "./documents/footer";
-import header from "./documents/header";
-import { imageAsset } from "./objects/imageAsset";
-import { videoAsset } from "./objects/videoAsset";
-import richText from "./objects/richText";
-import stepperComponent from "./objects/stepperComponent";
+import banner, { bannerComponents } from "../ihcl/banner";
+import footer from "../ihcl/footer";
+import header from "../ihcl/header";
+import { imageAsset } from "../ihcl/imageAsset";
+import { videoAsset } from "../ihcl/videoAsset";
+import richText from "../ihcl/richText";
+import stepperComponent from "../ihcl/stepperComponent";
 export const core: FeatureSchemaDefinition = {
   schemas: [
     offer,
@@ -188,7 +188,7 @@ export const core: FeatureSchemaDefinition = {
   ],
   variants: {
     group: [
-      { title: '4-row-grid', value: '4-row-grid' },
+      { title: '4-row-grid', value: '4-row-grid' },//done
       { title: 'multi-cards-carousel', value: 'multi-cards-carousel' },
       { title: 'single-card-carousel-with-bg-image', value: 'single-card-carousel-with-bg-image' },
       { title: 'carousel-with-award-cards', value: 'carousel-with-award-cards' },
@@ -207,7 +207,7 @@ export const core: FeatureSchemaDefinition = {
       { title: '4-column-rectangle-grid', value: '4-column-rectangle-grid' },
       { title: '2-row-grid', value: '2-row-grid' },
       { title: 'group-with-2-column-cards-grid', value: 'group-with-2-column-cards-grid' },
-      { title: 'group-with-3-column-cards-grid', value: 'group-with-3-column-cards-grid' },
+      { title: 'group-with-3-column-cards-grid', value: 'group-with-3-column-cards-grid' },//done
       { title: '3-cards-carousel', value: '3-cards-carousel' },
       { title: 'highlighted-1-cards-carousel', value: 'highlighted-1-cards-carousel' },
       { title: 'group-with-media', value: 'group-with-media' },
@@ -231,7 +231,12 @@ export const core: FeatureSchemaDefinition = {
       { title: "group-with-carousel", value: "group-with-carousel" },
       {title:"Group-With-Sectional-Tabs",value:"group-with-sectional-tabs"},
       {title:"Group-With-Stepper-And-Tabs",value:"group-with-stepper-and-tabs"},
-      {title:"Stepper-Items",value:"stepper-items"}
+      {title:"Stepper-Items",value:"stepper-items"},
+      {title:"Group With tiers",value:"group-with-tiers"},
+      {title:"Group Preview Carousel",value:"group-preview-carousel"},
+      {title:"Tier Card with Right Aligned Content",value:"tier-card-with-right-aligned-content"},
+      {title:"Details Form",value:"details-form"},
+      {title:"Payment Form",value:"payment-form"}
     ],
     navigation: [
       { title: "Default Navigation", value: "default" },
@@ -253,8 +258,8 @@ export const core: FeatureSchemaDefinition = {
       { title: "card-with-location", value: "card-with-location" },
       { title: "title-with-hoverable-card", value: "title-with-hoverable-card" },
       { title: "card-with-simple-media", value: "card-with-simple-media" },
-      { title: "rectangle-card", value: "rectangle-card" },
       { title: "card-with-right-aligned-title-link", value: "card-with-right-aligned-title-link" },
+      { title: "card-with-right-aligned-title", value: "card-with-right-aligned-title" },
       { title: "3-column-grid", value: "3-column-grid" },
       { title: "card-with-title-and-sub-titles", value: "card-with-title-and-sub-titles" },
       { title: "card-with-2-buttons-and-link", value: "card-with-2-buttons-and-link" },
@@ -273,7 +278,8 @@ export const core: FeatureSchemaDefinition = {
       { title: "media-with-description", value: "media-with-description" },
       {title:"Image-Title-Tabs",value:"image-title-tabs"},
       {title:"Card-With-Description-actions",value:"card-with-description-actions"},
-      {title:"Card-with-Combined-Image-Button",value:"image-aligned-button"}
+      {title:"Card-with-Combined-Image-Button",value:"image-aligned-button"},
+      {title:"Image On Text",value:"image-on-text"}
     ],
     nudge: [
       { title: "Default Nudge", value: "default" },
@@ -311,7 +317,8 @@ export const core: FeatureSchemaDefinition = {
       { title: "gallery-with-carousel", value:"gallery-with-carousel" }
     ],
     placeholder:[
-         {title:"Toll-Free-Numbers",value:"toll-free-numbers"}
+         {title:"Toll-Free-Numbers",value:"toll-free-numbers"},
+         {title:"Login Form",value:"login-form"}
     ],
     switchCaseBlock: [
       featureFlagVariant,
