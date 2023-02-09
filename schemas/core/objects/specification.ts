@@ -1,8 +1,8 @@
 import { IoApps, IoLayers as Icon, IoSettings } from "react-icons/io5";
 
 export default {
-  name: "specificationItems",
-  title: "Specification Items",
+  name: "specification",
+  title: "Specification",
   type: "object",
   groups: [
     { name: "main", title: "Main", icon: IoApps },
@@ -15,8 +15,8 @@ export default {
       type: "string",
     },
     {
-      name: "comparativeSpeficationItems",
-      title: "Comparative Spefication Items",
+      name: "comparativeSpefications",
+      title: "Comparative Spefications",
       type: "array",
       group: "main",
       of: [

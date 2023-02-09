@@ -1,8 +1,8 @@
 import { IoApps, IoLayers as Icon, IoSettings } from "react-icons/io5";
 
 export default {
-  name: "comparativeItems",
-  title: "Comparative Items",
+  name: "comparative",
+  title: "Comparative",
   type: "object",
   groups: [
     { name: "main", title: "Main", icon: IoApps },

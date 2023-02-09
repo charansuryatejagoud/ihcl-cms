@@ -14,18 +14,22 @@ export default {
       title: "Title",
       type: "string",
     },
-
     {
-      name: "comparativeItems",
-      title: "Comparative Items",
-      type: "array",
-      of: [{ type: "comparativeItems" }],
+      name: "subtitle",
+      title: "Subtitle",
+      type: "string",
     },
     {
-      name: "specificationItems",
-      title: "specification Items",
+      name: "comparatives",
+      title: "Comparatives",
       type: "array",
-      of: [{ type: "specificationItems" }],
+      of: [{ type: "comparative" }],
+    },
+    {
+      name: "specifications",
+      title: "Specifications",
+      type: "array",
+      of: [{ type: "specification" }],
     },
   ],
 };
