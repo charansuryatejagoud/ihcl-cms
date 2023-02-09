@@ -114,6 +114,20 @@ export default function group({
         type: "number",
       },
       {
+        name: "characterLimitForGroupDescription",
+        title: "Character Limit For Group Description",
+        type: "number",
+        description:
+          "The character limit for subTitle in group for displaying more button",
+      },
+      {
+        name: "characterLimitForItemDescription",
+        title: "Character Limit For Item Description ",
+        type: "number",
+        description:
+          "The character limit for description in group for displaying more button",
+      },
+      {
         name: "title",
         title: "Title",
         type: "string",

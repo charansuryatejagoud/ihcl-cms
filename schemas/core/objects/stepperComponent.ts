@@ -26,14 +26,10 @@ export default {
       type: "string",
     },
     {
-      name: "numberOfSteps",
-      title: "Number of Steps",
-      type: "number",
-    },
-    {
-      name: "currentStep",
-      title: "Current Step",
-      type: "number",
+      name: "activeStep",
+      title: "Active Step",
+      type: "boolean",
+      initialValue: false,
     },
     {
       name: "variant",

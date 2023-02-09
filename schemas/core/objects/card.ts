@@ -80,10 +80,21 @@ export default function card(props: Props) {
         group: "main"
       },
       {
-        name: "chipText",
         title: "Chip Text",
+        name: "chipText",
         type: "array",
-        of: [{ type: "string" }]
+        of: [
+          {
+            type: "object",
+            fields: [
+              {
+                title: "Chip Text Value",
+                name: "chipTextValue",
+                type: "string",
+              },
+            ],
+          },
+        ],
       },
       {
         name: "description",

@@ -38,11 +38,12 @@ import { imageAsset } from "./objects/imageAsset";
 import { videoAsset } from "./objects/videoAsset";
 import richText from "./objects/richText";
 import stepperComponent from "./objects/stepperComponent";
-import comparisons from "./objects/comparisons";
-import cardSpecifications from "./objects/specificationItems";
 import comparator from "./objects/comparator";
 import comparativeItems from "./objects/comparativeItems";
 import specificationItems from "./objects/specificationItems";
+import inputObject from "./objects/inputObject";
+import mapObject from "./objects/map-object";
+import formGroup from "./objects/form-group";
 export const core: FeatureSchemaDefinition = {
   schemas: [
     offer,
@@ -83,6 +84,9 @@ export const core: FeatureSchemaDefinition = {
     comparator,
     comparativeItems,
     specificationItems,
+    inputObject,
+    formGroup,
+    mapObject,
   ],
   transformers: [reorderTransformer],
   headers: [
@@ -194,11 +198,13 @@ export const core: FeatureSchemaDefinition = {
     {
       type: "stepper",
     },
+    { type: "formGroup" },
   ],
   variants: {
     group: [
       { title: "4-row-grid", value: "4-row-grid" },
       { title: "center-card-carousel", value: "center-card-carousel" },
+      { title: "multi-cards-carousel", value: "multi-cards-carousel" },
       {
         title: "single-card-carousel-with-bg-image",
         value: "single-card-carousel-with-bg-image",
@@ -289,6 +295,103 @@ export const core: FeatureSchemaDefinition = {
         value: "carousal-with-single-media",
       },
       { title: "group-with-carousel", value: "group-with-carousel" },
+      { title: "Location Manifest", value: "group.location-manifest" },
+      {
+        title: "Location Manifest Item",
+        value: "group.location-manifest-item",
+      },
+      { title: "4-row-grid", value: "4-row-grid" },
+      { title: "multi-cards-carousel", value: "multi-cards-carousel" },
+      {
+        title: "single-card-carousel-with-bg-image",
+        value: "single-card-carousel-with-bg-image",
+      },
+      {
+        title: "carousel-with-award-cards",
+        value: "carousel-with-award-cards",
+      },
+      {
+        title: "multi-cards-carousel-with-bg-image",
+        value: "multi-cards-carousel-with-bg-image",
+      },
+      { title: "media-card", value: "media-card" },
+      {
+        title: "carousel-with-focused-title",
+        value: "carousel-with-focused-title",
+      },
+      {
+        title: "Group-With-Rich-Text-columns",
+        value: "group-with-rich-text-columns",
+      },
+      { title: "group-with-links", value: "group-with-links" },
+      { title: "group-with-maps", value: "group-with-maps" },
+      { title: "card-with-focused-title", value: "card-with-focused-title" },
+      {
+        title: "highlighted-2-cards-carousel",
+        value: "highlighted-2-cards-carousel",
+      },
+      { title: "carousel-with-tabs", value: "carousel-with-tabs" },
+      {
+        title: "carousel-with-3-column-grid",
+        value: "carousel-with-3-column-grid",
+      },
+      { title: "transparent-4-cards", value: "transparent-4-cards" },
+      { title: "group-with-simple-media", value: "group-with-simple-media" },
+      { title: "4-column-rectangle-grid", value: "4-column-rectangle-grid" },
+      { title: "2-row-grid", value: "2-row-grid" },
+      {
+        title: "group-with-2-column-cards-grid",
+        value: "group-with-2-column-cards-grid",
+      },
+      {
+        title: "group-with-3-column-cards-grid",
+        value: "group-with-3-column-cards-grid",
+      },
+      { title: "3-cards-carousel", value: "3-cards-carousel" },
+      {
+        title: "highlighted-1-cards-carousel",
+        value: "highlighted-1-cards-carousel",
+      },
+      { title: "group-with-media", value: "group-with-media" },
+      { title: "group-with-videoPlayer", value: "group-with-videoPlayer" },
+      { title: "hotel-address-data", value: "hotel-address-data" },
+      { title: "multiple-data", value: "multiple-data" },
+      {
+        title: "carousel-with-side-text-card",
+        value: "carousel-with-side-text-card",
+      },
+      { title: "navigation-tabs", value: "navigation-tabs" },
+      { title: "group-with-description", value: "group-with-description" },
+      {
+        title: "group-with-side-aligned-content-link",
+        value: "group-with-side-aligned-content-link",
+      },
+      { title: "Center-aligned-content", value: "center-aligned-content" },
+      { title: "Feedback-Form", value: "feedback-form" },
+      {
+        title: "group-with-filter-buttons",
+        value: "group-with-filter-buttons",
+      },
+      {
+        title: "group-with-multiple-buttons",
+        value: "group-with-multiple-buttons",
+      },
+      { title: "Transparent-3-Cards", value: "transparent-3-cards" },
+      { title: "Toll-Free-No", value: "toll-free-no" },
+      {
+        title: "multi-cards-carousel-with-image",
+        value: "multi-cards-carousel-with-image",
+      },
+      {
+        title: "images-with-single-column-grid",
+        value: "images-with-single-column-grid",
+      },
+      { title: "media-with-single-image", value: "media-with-single-image" },
+      {
+        title: "carousal-with-single-media",
+        value: "carousal-with-single-media",
+      },
+      { title: "group-with-carousel", value: "group-with-carousel" },
       {
         title: "Group-With-Sectional-Tabs",
         value: "group-with-sectional-tabs",
@@ -299,6 +402,16 @@ export const core: FeatureSchemaDefinition = {
       },
       { title: "Stepper-Items", value: "stepper-items" },
       { title: "2-card-carousal", value: "2-card-carousal" },
+      {
+        title: "carousal-with-single-card-media",
+        value: "carousal-with-single-card-media",
+      },
+      { title: "gift-card-form", value: "gift-card-form" },
+      { title: "center-card-carousel", value: "center-card-carousel" },
+      {
+        title: "cards-with-single-column-grid",
+        value: "cards-with-single-column-grid",
+      },
     ],
     navigation: [
       { title: "Default Navigation", value: "default" },
@@ -330,6 +443,7 @@ export const core: FeatureSchemaDefinition = {
         title: "card-with-right-aligned-title",
         value: "card-with-right-aligned-title",
       },
+      { title: "rectangle-card", value: "rectangle-card" },
       {
         title: "card-with-right-aligned-title-link",
         value: "card-with-right-aligned-title-link",
@@ -359,11 +473,15 @@ export const core: FeatureSchemaDefinition = {
         title: "Center-Aligned-Title-Tabs",
         value: "center-aligned-title-tabs",
       },
-      { title: "vertical-card", value: "vertical-card" }, // x--
+      { title: "vertical-card", value: "vertical-card" },
       { title: "carousel-with-image", value: "carousel-with-image" },
       {
         title: "Card-Ends-Aligned-Content",
         value: "card-ends-aligned-content",
+      },
+      {
+        title: "2-actions-with-right-aligned-content-card",
+        value: "2-actions-with-right-aligned-content-card",
       },
       { title: "Card-Carousel", value: "card-carousel" },
       { title: "card-with-carousel", value: "card-with-carousel" },
@@ -381,7 +499,9 @@ export const core: FeatureSchemaDefinition = {
         title: "card-with-left-align-content",
         value: "card-with-left-align-content",
       },
-      // {title: "card-with-center-title", value: ""}
+      { title: "card-preview", value: "card-preview" },
+      { title: "card-with-left-align-content", value: "card-with-left-align-content" },
+      { title: "text-on-card-with-cta", value: "text-on-card-with-cta" }
     ],
     nudge: [
       { title: "Default Nudge", value: "default" },
@@ -418,7 +538,17 @@ export const core: FeatureSchemaDefinition = {
       { title: "Video-Pop-Up", value: "video-pop-up" },
       { title: "gallery-with-carousel", value: "gallery-with-carousel" },
     ],
-    placeholder: [{ title: "Toll-Free-Numbers", value: "toll-free-numbers" }],
+    placeholder: [
+      { title: "Toll-Free-Numbers", value: "toll-free-numbers" },
+      {
+        title: "Amount TextField",
+        value: "core.placeholder.amount-textfield",
+      },
+      {
+        title: "Quantity Dropdown",
+        value: "core.placeholder.quantity-dropdown",
+      },
+    ],
     switchCaseBlock: [
       featureFlagVariant,
       {
