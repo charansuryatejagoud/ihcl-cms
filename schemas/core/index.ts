@@ -39,11 +39,11 @@ import { videoAsset } from "./objects/videoAsset";
 import richText from "./objects/richText";
 import stepperComponent from "./objects/stepperComponent";
 import comparator from "./objects/comparator";
-import comparativeItems from "./objects/comparativeItems";
-import specificationItems from "./objects/specificationItems";
 import inputObject from "./objects/inputObject";
 import mapObject from "./objects/map-object";
 import formGroup from "./objects/form-group";
+import comparative from "./objects/comparative";
+import specification from "./objects/specification";
 export const core: FeatureSchemaDefinition = {
   schemas: [
     offer,
@@ -82,8 +82,8 @@ export const core: FeatureSchemaDefinition = {
     videoAsset,
     stepperComponent,
     comparator,
-    comparativeItems,
-    specificationItems,
+    comparative,
+    specification,
     inputObject,
     formGroup,
     mapObject,
@@ -210,8 +210,8 @@ export const core: FeatureSchemaDefinition = {
         value: "single-card-carousel-with-bg-image",
       },
       {
-        title: "carousel-with-award-cards",
-        value: "carousel-with-award-cards",
+        title: "carousel-with-single-card",
+        value: "carousel-with-single-card",
       },
       {
         title: "multi-cards-carousel-with-bg-image",

@@ -16,16 +16,16 @@ export default {
     },
 
     {
-      name: "comparativeItems",
-      title: "Comparative Items",
+      name: "comparatives",
+      title: "Comparatives",
       type: "array",
-      of: [{ type: "comparativeItems" }],
+      of: [{ type: "comparative" }],
     },
     {
-      name: "specificationItems",
-      title: "specification Items",
+      name: "specifications",
+      title: "Specifications",
       type: "array",
-      of: [{ type: "specificationItems" }],
+      of: [{ type: "specification" }],
     },
   ],
 };
