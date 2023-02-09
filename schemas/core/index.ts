@@ -307,10 +307,6 @@ export const core: FeatureSchemaDefinition = {
         value: "single-card-carousel-with-bg-image",
       },
       {
-        title: "carousel-with-single-card",
-        value: "carousel-with-single-card",
-      },
-      {
         title: "multi-cards-carousel-with-bg-image",
         value: "multi-cards-carousel-with-bg-image",
       },
@@ -420,10 +416,6 @@ export const core: FeatureSchemaDefinition = {
       { title: "Appbar with chatbot", value: "chatbot.appbar" },
     ],
     card: [
-      {
-        title: "carousel-with-single-card",
-        value: "carousel-with-single-card",
-      },
       { title: "Simple Media", value: "simple-media" },
       { title: "card-with-carousel", value: "card-with-carousel" },
       { title: "award-card", value: "award-card" },
