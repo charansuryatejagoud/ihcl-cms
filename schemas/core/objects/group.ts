@@ -77,6 +77,7 @@ export default function group({
         initialValue: false,
         group: "main",
       },
+
       {
         name: "componentTopPadding",
         title: "Component Top Padding",

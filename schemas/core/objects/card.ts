@@ -172,7 +172,7 @@ export default function card(props: Props) {
         name: "ctaLabel",
         title: "CTA Label",
         type: "string",
-        group: "main",
+        group: "main"
       },
       {
         name: "url",
@@ -206,7 +206,23 @@ export default function card(props: Props) {
         name: "carouselImages",
         title: "Carousel Images",
         type: "array",
-        of: [{ type: "image" }],
+        of: [
+          {
+            type: "object",
+            fields: [
+              {
+                title: "Title",
+                name: "title",
+                type: "string",
+              },
+              {
+                title: "Image",
+                name: "image",
+                type: "image",
+              },
+            ],
+          },
+        ],
       },
       {
         name: "backgroundImage",
@@ -249,17 +265,20 @@ export default function card(props: Props) {
         name: "primaryAction",
         title: "Primary Action",
         type: "navigationItem",
+        group: "main"
       },
       {
         name: "secondaryAction",
         title: "Secondary Action",
         type: "navigationItem",
+        group: "main"
       },
-      {
-        name: "ctaLabel_1",
-        title: "CTA Label_1",
-        type: "navigationItem"
-      },
+      // {
+      //   name: "ctaLabel",
+      //   title: "CTA Label",
+      //   type: "navigationItem",
+      //   group: "main"
+      // },
       {
         name: "brand",
         title: "Brand",
