@@ -8,6 +8,18 @@ export default {
     { name: "main", title: "Main", icon: IoApps },
     { name: "configuration", title: "Configuration", icon: IoSettings },
   ],
+  preview: {
+    select: {
+      title: "title",
+      subtitle: "comparativeSpefications",
+    },
+    prepare({ title, subtitle }) {
+      return {
+        title: `${title ?? "<Specification>"}`,
+        subtitle: `items: ${subtitle.length}`,
+      };
+    },
+},
   fields: [
     {
       name: "title",
