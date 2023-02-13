@@ -172,7 +172,7 @@ export default function card(props: Props) {
         name: "ctaLabel",
         title: "CTA Label",
         type: "string",
-        group: "main",
+        group: "main"
       },
       {
         name: "url",

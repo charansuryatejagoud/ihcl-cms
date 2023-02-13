@@ -269,8 +269,6 @@ export const core: FeatureSchemaDefinition = {
         title: "group-with-side-aligned-content-link",
         value: "group-with-side-aligned-content-link",
       },
-      { title: "Center-aligned-content", value: "center-aligned-content" },
-      { title: "Feedback-Form", value: "feedback-form" },
       {
         title: "group-with-filter-buttons",
         value: "group-with-filter-buttons",
@@ -279,8 +277,7 @@ export const core: FeatureSchemaDefinition = {
         title: "group-with-multiple-buttons",
         value: "group-with-multiple-buttons",
       },
-      { title: "Transparent-3-Cards", value: "transparent-3-cards" },
-      { title: "Toll-Free-No", value: "toll-free-no" },
+
       {
         title: "multi-cards-carousel-with-image",
         value: "multi-cards-carousel-with-image",
@@ -365,32 +362,18 @@ export const core: FeatureSchemaDefinition = {
         title: "group-with-side-aligned-content-link",
         value: "group-with-side-aligned-content-link",
       },
+
       { title: "Center-aligned-content", value: "center-aligned-content" },
       { title: "Feedback-Form", value: "feedback-form" },
-      {
-        title: "group-with-filter-buttons",
-        value: "group-with-filter-buttons",
-      },
-      {
-        title: "group-with-multiple-buttons",
-        value: "group-with-multiple-buttons",
-      },
+
       { title: "Transparent-3-Cards", value: "transparent-3-cards" },
       { title: "Toll-Free-No", value: "toll-free-no" },
-      {
-        title: "multi-cards-carousel-with-image",
-        value: "multi-cards-carousel-with-image",
-      },
+
       {
         title: "images-with-single-column-grid",
         value: "images-with-single-column-grid",
       },
-      { title: "media-with-single-image", value: "media-with-single-image" },
-      {
-        title: "carousal-with-single-media",
-        value: "carousal-with-single-media",
-      },
-      { title: "group-with-carousel", value: "group-with-carousel" },
+
       {
         title: "Group-With-Sectional-Tabs",
         value: "group-with-sectional-tabs",
@@ -411,6 +394,13 @@ export const core: FeatureSchemaDefinition = {
         title: "cards-with-single-column-grid",
         value: "cards-with-single-column-grid",
       },
+      {title:"Group With tiers",value:"group-with-tiers"},
+      {title:"Group Preview Carousel",value:"group-preview-carousel"},
+      {title:"Tier Card with Right Aligned Content",value:"tier-card-with-right-aligned-content"},
+      {title:"Details Form",value:"details-form"},
+      {title:"Payment Form",value:"payment-form"},
+      {title:"2 Card Carousel With Right Aligned Content",value:"2-card-carousel-with-right-aligned-content"},
+      { title: "4-cards-carousel", value: "4-cards-carousel" },
       { title: "3-row-grid", value: "3-row-grid" }
     ],
     navigation: [
@@ -484,7 +474,7 @@ export const core: FeatureSchemaDefinition = {
         value: "2-actions-with-right-aligned-content-card",
       },
       { title: "Card-Carousel", value: "card-carousel" },
-      { title: "card-with-carousel", value: "card-with-carousel" },
+
       { title: "media-with-description", value: "media-with-description" },
       { title: "Image-Title-Tabs", value: "image-title-tabs" },
       {
@@ -495,18 +485,20 @@ export const core: FeatureSchemaDefinition = {
         title: "Card-with-Combined-Image-Button",
         value: "image-aligned-button",
       },
+
+      { title: "card-preview", value: "card-preview" },
       {
         title: "card-with-left-align-content",
         value: "card-with-left-align-content",
       },
-      { title: "card-preview", value: "card-preview" },
-      { title: "card-with-left-align-content", value: "card-with-left-align-content" },
       { title: "text-on-card-with-cta", value: "text-on-card-with-cta" },
       {
         title: "card-with-right-aligned-title", 
         value: "card-with-right-aligned-title"
       },
       { title: "card-with-image-title", value: "card-with-image-title" },
+      {title:"Card-with-Combined-Image-Button",value:"image-aligned-button"},
+      {title:"Image On Text",value:"image-on-text"},
       { title: "card-with-right-aligned-carousel", value: "card-with-right-aligned-carousel" }
     ],
     nudge: [
@@ -554,6 +546,7 @@ export const core: FeatureSchemaDefinition = {
         title: "Quantity Dropdown",
         value: "core.placeholder.quantity-dropdown",
       },
+      {title:"Login Form",value:"login-form"}
     ],
     switchCaseBlock: [
       featureFlagVariant,
