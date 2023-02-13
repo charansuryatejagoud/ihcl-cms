@@ -300,7 +300,6 @@ export const core: FeatureSchemaDefinition = {
         title: "Location Manifest Item",
         value: "group.location-manifest-item",
       },
-      { title: "4-row-grid", value: "4-row-grid" },
       { title: "multi-cards-carousel", value: "multi-cards-carousel" },
       {
         title: "single-card-carousel-with-bg-image",
@@ -411,7 +410,8 @@ export const core: FeatureSchemaDefinition = {
       {
         title: "cards-with-single-column-grid",
         value: "cards-with-single-column-grid",
-      }
+      },
+      { title: "3-row-grid", value: "3-row-grid" }
     ],
     navigation: [
       { title: "Default Navigation", value: "default" },
@@ -506,7 +506,8 @@ export const core: FeatureSchemaDefinition = {
         title: "card-with-right-aligned-title", 
         value: "card-with-right-aligned-title"
       },
-      { title: "card-with-image-title", value: "card-with-image-title" }
+      { title: "card-with-image-title", value: "card-with-image-title" },
+      { title: "card-with-right-aligned-carousel", value: "card-with-right-aligned-carousel" }
     ],
     nudge: [
       { title: "Default Nudge", value: "default" },
