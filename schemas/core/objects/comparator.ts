@@ -52,6 +52,11 @@ export default {
       type: "string",
     },
     {
+      name: "identifier",
+      title: "Identifier",
+      type: "string",
+    },
+    {
       name: "comparatives",
       title: "Comparatives",
       type: "array",

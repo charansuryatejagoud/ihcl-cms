@@ -324,6 +324,24 @@ export const core: FeatureSchemaDefinition = {
         value: "carousal-with-single-card-media",
       },
       { title: "gift-card-form", value: "gift-card-form" },
+      {
+        title: "group-with-comperative-specifications",
+        value: "group-with-comperative-specifications",
+      },
+
+      { title: "Group With tiers", value: "group-with-tiers" },
+      { title: "Group Preview Carousel", value: "group-preview-carousel" },
+      {
+        title: "Tier Card with Right Aligned Content",
+        value: "tier-card-with-right-aligned-content",
+      },
+      { title: "Details Form", value: "details-form" },
+      { title: "Payment Form", value: "payment-form" },
+      {
+        title: "2 Card Carousel With Right Aligned Content",
+        value: "2-card-carousel-with-right-aligned-content",
+      },
+      { title: "card-with-right-aligned-carousel", value: "card-with-right-aligned-carousel" }
       // { title: "center-card-carousel", value: "center-card-carousel" },
     ],
     navigation: [
