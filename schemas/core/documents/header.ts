@@ -49,8 +49,8 @@ export default {
       type: 'image',
     },
     {
-      title: 'Detail List',
-      name: 'detailList',
+      title: 'Nav Items',
+      name: 'navItems',
       type: 'array',
   of: [{ type: 'navigationItem' }],
     },
