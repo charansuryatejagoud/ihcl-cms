@@ -334,7 +334,8 @@ export const core: FeatureSchemaDefinition = {
       {title:"Tier Card with Right Aligned Content",value:"tier-card-with-right-aligned-content"},
       {title:"Details Form",value:"details-form"},
       {title:"Payment Form",value:"payment-form"},
-      {title:"2 Card Carousel With Right Aligned Content",value:"2-card-carousel-with-right-aligned-content"}
+      {title:"2 Card Carousel With Right Aligned Content",value:"2-card-carousel-with-right-aligned-content"},
+      {title:"[rectangle] 4 Card Carousel",value:"4-card-carousel"}
     ],
     navigation: [
       { title: "Default Navigation", value: "default" },
