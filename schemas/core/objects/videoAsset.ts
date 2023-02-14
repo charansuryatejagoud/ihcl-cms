@@ -16,6 +16,11 @@ export const videoAsset = {
             name: 'videoThumbnail',
             type: 'image'
           },
+          {
+            title: 'Mobile Video Thumbnail',
+            name: 'mobileVideoThumbnail',
+            type: 'image'
+          },
         {
             name: "videoUrl",
             title: "Video Url",

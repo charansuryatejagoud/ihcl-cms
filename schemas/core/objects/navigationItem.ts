@@ -34,7 +34,6 @@ export default {
                  { title: "Light-Outlined", value: "light-outlined" },
                  { title: "Dark-Outlined", value: "dark-outlined" },
                  { title: "Link", value: "link-m" },
-                 
               ]
          }
     },

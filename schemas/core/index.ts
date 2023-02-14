@@ -44,6 +44,7 @@ import mapObject from "./objects/map-object";
 import formGroup from "./objects/form-group";
 import comparative from "./objects/comparative";
 import specification from "./objects/specification";
+import { imageArrayAssets } from "./objects/imageArrayAssets";
 export const core: FeatureSchemaDefinition = {
   schemas: [
     offer,
@@ -87,6 +88,7 @@ export const core: FeatureSchemaDefinition = {
     inputObject,
     formGroup,
     mapObject,
+    imageArrayAssets,
   ],
   transformers: [reorderTransformer],
   headers: [
@@ -100,6 +102,7 @@ export const core: FeatureSchemaDefinition = {
     },
   ],
   pageItems: [
+    {type: "imageAssets"},
     { type: "comparator" },
     { type: "group" },
     { type: "section" },
@@ -158,6 +161,7 @@ export const core: FeatureSchemaDefinition = {
     { type: "dataGrid" },
   ],
   groupItems: [
+    {type: "imageAssets"},
     { type: "comparator" },
     {
       type: "card",
@@ -401,7 +405,8 @@ export const core: FeatureSchemaDefinition = {
       {title:"Payment Form",value:"payment-form"},
       {title:"2 Card Carousel With Right Aligned Content",value:"2-card-carousel-with-right-aligned-content"},
       {title:"[rectangle] 4 Card Carousel",value:"4-card-carousel"},
-      { title: "3-row-grid", value: "3-row-grid" }
+      { title: "3-row-grid", value: "3-row-grid" },
+      {title:"privacy-policy-accordian-description", value: "privacy-policy-accordian-with-description"}
     ],
     navigation: [
       { title: "Default Navigation", value: "default" },

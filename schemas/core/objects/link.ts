@@ -38,10 +38,11 @@ export default {
       name: "mediaIcons",
       title: "Media Icons",
       type: "array",
-       of: [{
-        type: "navigationItem"
-       }, 
-       ],
+      of: [
+        {
+          type: "navigationItem",
+        },
+      ],
       group: "main",
     },
     {
@@ -71,10 +72,29 @@ export default {
           { title: "Chip", value: "chip" },
           { title: "Full Width Button", value: "fullWidthButton" },
           { title: "Text Underline", value: "linkUnderline" },
-          {title:"Share",value:"share"}
+          { title: "Share", value: "share" },
+          { title: "Light-Contained", value: "light-contained" },
+          { title: "Dark-Contained", value: "dark-contained" },
+          { title: "Light-Outlined", value: "light-outlined" },
+          { title: "Dark-Outlined", value: "dark-outlined" },
+          { title: "Link", value: "link-m" },
         ],
       },
       group: "main",
+    },
+    {
+      title: "Check Box",
+      name: "checkBox",
+      type: "string",
+      options: {
+        list: [
+          { title: "Internal", value: "internal" },
+          { title: "External", value: "external" },
+          { title: "Dialog", value: "dialog" },
+        ],
+        layout: "radio",
+        isHighlighted: true,
+      },
     },
     {
       name: "metadata",
