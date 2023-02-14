@@ -401,7 +401,8 @@ export const core: FeatureSchemaDefinition = {
       {title:"Payment Form",value:"payment-form"},
       {title:"2 Card Carousel With Right Aligned Content",value:"2-card-carousel-with-right-aligned-content"},
       { title: "4-cards-carousel", value: "4-cards-carousel" },
-      { title: "3-row-grid", value: "3-row-grid" }
+      { title: "3-row-grid", value: "3-row-grid" },
+      { title: "Nudge With Mail Action", value: "nudge.rounded.mail-action" }
     ],
     navigation: [
       { title: "Default Navigation", value: "default" },
