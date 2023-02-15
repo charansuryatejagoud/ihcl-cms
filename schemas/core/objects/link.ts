@@ -26,6 +26,7 @@ export default {
       group: "main",
     },
     linkTypeField({ name: "type", title: "Type", group: "main" }),
+    { name: "ctaLabel", title: "Cta Label", type: "string" },
     {
       name: "url",
       title: "Url",
@@ -38,10 +39,11 @@ export default {
       name: "mediaIcons",
       title: "Media Icons",
       type: "array",
-       of: [{
-        type: "navigationItem"
-       }, 
-       ],
+      of: [
+        {
+          type: "navigationItem",
+        },
+      ],
       group: "main",
     },
     {
@@ -71,7 +73,7 @@ export default {
           { title: "Chip", value: "chip" },
           { title: "Full Width Button", value: "fullWidthButton" },
           { title: "Text Underline", value: "linkUnderline" },
-          {title:"Share",value:"share"}
+          { title: "Share", value: "share" },
         ],
       },
       group: "main",

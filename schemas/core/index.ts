@@ -524,6 +524,7 @@ export const core: FeatureSchemaDefinition = {
       { title: "Nudge Rounded Logo", value: "nudge.rounded.logo-wrapper" },
       { title: "Nudge with icons", value: "nudge.card.icons" },
       { title: "[Homepage] Chat Nudge", value: "homepage.nudge.chat" },
+      {title:"Nudge With Key Value", value:"nudge-with-key-value"}
     ],
     dialog: [
       { title: "Alert", value: "alert" },
