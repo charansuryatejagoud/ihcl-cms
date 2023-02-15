@@ -44,7 +44,7 @@ import mapObject from "./objects/map-object";
 import formGroup from "./objects/form-group";
 import comparative from "./objects/comparative";
 import specification from "./objects/specification";
-import { imageArrayAssets } from "./objects/imageArrayAssets";
+
 export const core: FeatureSchemaDefinition = {
   schemas: [
     offer,
@@ -88,7 +88,6 @@ export const core: FeatureSchemaDefinition = {
     inputObject,
     formGroup,
     mapObject,
-    imageArrayAssets,
   ],
   transformers: [reorderTransformer],
   headers: [
@@ -102,7 +101,6 @@ export const core: FeatureSchemaDefinition = {
     },
   ],
   pageItems: [
-    {type: "imageAssets"},
     { type: "comparator" },
     { type: "group" },
     { type: "section" },
@@ -161,7 +159,6 @@ export const core: FeatureSchemaDefinition = {
     { type: "dataGrid" },
   ],
   groupItems: [
-    {type: "imageAssets"},
     { type: "comparator" },
     {
       type: "card",
@@ -398,15 +395,24 @@ export const core: FeatureSchemaDefinition = {
         title: "cards-with-single-column-grid",
         value: "cards-with-single-column-grid",
       },
-      {title:"Group With tiers",value:"group-with-tiers"},
-      {title:"Group Preview Carousel",value:"group-preview-carousel"},
-      {title:"Tier Card with Right Aligned Content",value:"tier-card-with-right-aligned-content"},
-      {title:"Details Form",value:"details-form"},
-      {title:"Payment Form",value:"payment-form"},
-      {title:"2 Card Carousel With Right Aligned Content",value:"2-card-carousel-with-right-aligned-content"},
-      {title:"[rectangle] 4 Card Carousel",value:"4-card-carousel"},
+      { title: "Group With tiers", value: "group-with-tiers" },
+      { title: "Group Preview Carousel", value: "group-preview-carousel" },
+      {
+        title: "Tier Card with Right Aligned Content",
+        value: "tier-card-with-right-aligned-content",
+      },
+      { title: "Details Form", value: "details-form" },
+      { title: "Payment Form", value: "payment-form" },
+      {
+        title: "2 Card Carousel With Right Aligned Content",
+        value: "2-card-carousel-with-right-aligned-content",
+      },
+      { title: "[rectangle] 4 Card Carousel", value: "4-card-carousel" },
       { title: "3-row-grid", value: "3-row-grid" },
-      {title:"privacy-policy-accordian-description", value: "privacy-policy-accordian-with-description"}
+      {
+        title: "privacy-policy-accordian-description",
+        value: "privacy-policy-accordian-with-description",
+      },
     ],
     navigation: [
       { title: "Default Navigation", value: "default" },
@@ -498,13 +504,19 @@ export const core: FeatureSchemaDefinition = {
       },
       { title: "text-on-card-with-cta", value: "text-on-card-with-cta" },
       {
-        title: "card-with-right-aligned-title", 
-        value: "card-with-right-aligned-title"
+        title: "card-with-right-aligned-title",
+        value: "card-with-right-aligned-title",
       },
       { title: "card-with-image-title", value: "card-with-image-title" },
-      {title:"Card-with-Combined-Image-Button",value:"image-aligned-button"},
-      {title:"Image On Text",value:"image-on-text"},
-      { title: "card-with-right-aligned-carousel", value: "card-with-right-aligned-carousel" }
+      {
+        title: "Card-with-Combined-Image-Button",
+        value: "image-aligned-button",
+      },
+      { title: "Image On Text", value: "image-on-text" },
+      {
+        title: "card-with-right-aligned-carousel",
+        value: "card-with-right-aligned-carousel",
+      },
     ],
     nudge: [
       { title: "Default Nudge", value: "default" },
@@ -551,7 +563,7 @@ export const core: FeatureSchemaDefinition = {
         title: "Quantity Dropdown",
         value: "core.placeholder.quantity-dropdown",
       },
-      {title:"Login Form",value:"login-form"}
+      { title: "Login Form", value: "login-form" },
     ],
     switchCaseBlock: [
       featureFlagVariant,
