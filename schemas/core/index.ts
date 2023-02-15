@@ -401,7 +401,8 @@ export const core: FeatureSchemaDefinition = {
       {title:"Payment Form",value:"payment-form"},
       {title:"2 Card Carousel With Right Aligned Content",value:"2-card-carousel-with-right-aligned-content"},
       { title: "4-cards-carousel", value: "4-cards-carousel" },
-      { title: "3-row-grid", value: "3-row-grid" }
+      { title: "3-row-grid", value: "3-row-grid" },
+      { title: "2-card-carousel", value: "2-card-carousel" }
     ],
     navigation: [
       { title: "Default Navigation", value: "default" },
@@ -523,6 +524,7 @@ export const core: FeatureSchemaDefinition = {
       { title: "Nudge Rounded Logo", value: "nudge.rounded.logo-wrapper" },
       { title: "Nudge with icons", value: "nudge.card.icons" },
       { title: "[Homepage] Chat Nudge", value: "homepage.nudge.chat" },
+      { title: "Nudge With Mail Action", value: "nudge.rounded.mail-action" }
     ],
     dialog: [
       { title: "Alert", value: "alert" },
