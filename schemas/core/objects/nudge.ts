@@ -114,21 +114,22 @@ export default function nudge({ variants }: { variants: VariantDefinition[] }) {
         group: "main",
       },
       {
-        name: "action",
+        name: "PrimaryAction",
         title: "Primary Action",
-        type: "link",
+        type: "navigationItem",
         group: "main",
       },
       {
         name: "secondaryAction",
         title: "Secondary Action",
-        type: "link",
+        type: "navigationItem",
         group: "main",
       },
       {
         name: "icon",
         title: "Icon",
-        type: "image",
+        type: "array",
+        of:[{type:"navigationItem"}],
         group: "main",
       },
       {

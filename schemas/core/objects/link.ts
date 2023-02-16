@@ -26,6 +26,7 @@ export default {
       group: "main",
     },
     linkTypeField({ name: "type", title: "Type", group: "main" }),
+    { name: "ctaLabel", title: "Cta Label", type: "string" },
     {
       name: "url",
       title: "Url",

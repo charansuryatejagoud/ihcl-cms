@@ -53,11 +53,13 @@ export default {
       type: "array",
       of: [{ type: "navigationItem" }, { type: "card" }],
     },
+
     {
-      title: "Login List",
-      name: "loginList",
-      type: "array",
-      of: [{ type: "navigationItem" }],
+      title: 'Login List',
+      name: 'loginList',
+      type: 'array',
+      of: [{ type: 'navigationItem'},
+      ],
     },
     {
       title: "Cart Icon",

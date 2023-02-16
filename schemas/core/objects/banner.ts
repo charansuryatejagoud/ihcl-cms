@@ -63,6 +63,12 @@ export default {
             group: "main",
         },
         {
+            name:"logo",
+            title:"Logo",
+            type:"image",
+            group:"main"
+        },
+        {
             name:"chatBotImage",
             title:"Chat Bot Image",
             type:"image",

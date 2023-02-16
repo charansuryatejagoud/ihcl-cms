@@ -413,6 +413,10 @@ export const core: FeatureSchemaDefinition = {
         title: "privacy-policy-accordian-description",
         value: "privacy-policy-accordian-with-description",
       },
+      {
+        title: "Hamburger Menu",
+        value: "hamburger-menu"
+      }
     ],
     navigation: [
       { title: "Default Navigation", value: "default" },
@@ -540,6 +544,7 @@ export const core: FeatureSchemaDefinition = {
       { title: "Nudge Rounded Logo", value: "nudge.rounded.logo-wrapper" },
       { title: "Nudge with icons", value: "nudge.card.icons" },
       { title: "[Homepage] Chat Nudge", value: "homepage.nudge.chat" },
+      {title:"Nudge With Key Value", value:"nudge-with-key-value"}
     ],
     dialog: [
       { title: "Alert", value: "alert" },
