@@ -80,5 +80,16 @@ export const details: FeatureSchemaDefinition = {
       },
     ],
     banner: [],
+    dialog:[
+      { title: "Image Gallery", value: "details.image-gallery" },
+      { title: "Venue Enquiry", value: "details.venue-enquiry" },
+      { title: "Event Enquiry", value: "details.event-enquiry" },
+      { title: "Venue Details", value: "details.venue-details" },
+      { title: "Video Pop Up", value: "details.video-pop-up" },
+      {
+        title: "Gallery With Carousel",
+        value: "details.gallery-with-carousel",
+      },
+    ]
   },
 };

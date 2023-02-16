@@ -23,7 +23,6 @@ export const ihclcore: FeatureSchemaDefinition = {
     },
   ],
   groupItems: [
-   
     { type: "richText" },
     {
       type: "stepper",
@@ -54,8 +53,6 @@ export const ihclcore: FeatureSchemaDefinition = {
         value: "ihcl.core.group.hotel-address-data",
       },
       { title: "Multiple Data", value: "ihcl.core.group.multiple-data" },
-
-      { title: "Feedback Form", value: "ihcl.core.group.feedback-form" },
       {
         title: "Group With Filter Buttons",
         value: "ihcl.core.group.group-with-filter-buttons",
@@ -157,20 +154,13 @@ export const ihclcore: FeatureSchemaDefinition = {
     ],
     placeholder: [
       { title: "Toll-Free-Numbers", value: "ihcl.core.toll-free-numbers" },
-      { title: "Login Form", value: "ihcl.core.login-form" },
     ],
-    nudge: [],
     dialog: [
       { title: "Alert", value: "ihcl.core.alert" },
       { title: "Bottom Sheet", value: "ihcl.core.bottomSheet" },
       { title: "Nested Bottom Sheet", value: "ihcl.core.nestedBottomSheet" },
       { title: "Alert Without Close Cta", value: "alert.without.close.cta" },
-      { title: "Image Gallery", value: "ihcl.core.image-gallery" },
-      { title: "Venue Enquiry", value: "ihcl.core.venue-enquiry" },
-      { title: "Event Enquiry", value: "ihcl.core.event-enquiry" },
-      { title: "Venue Details", value: "ihcl.core.venue-details" },
-      { title: "Video Pop Up", value: "ihcl.core.video-pop-up" },
-      { title: "Gallery With Carousel", value: "ihcl.core.gallery-with-carousel" },
+      
     ],
   },
 };
