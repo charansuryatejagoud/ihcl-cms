@@ -45,7 +45,7 @@ export default {
     {
       name: "cta",
       title: "Cta",
-      type: "link",
+      type: "navigationItem",
     },
   ],
 };
