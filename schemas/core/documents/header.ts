@@ -52,10 +52,19 @@ export default {
       title: 'Nav Items',
       name: 'navItems',
       type: 'array',
-  of: [{ type: 'navigationItem' },{type:"link"}],
+  of: [{ type: 'navigationItem' },],
 
     },
-
+    {
+      name:"dropDownList",
+      title:'Drop Down List',
+      type:'array',
+      of:[
+        {
+          type:"formGroup"
+        }
+      ]
+    },
     {
       title: 'Login List',
       name: 'loginList',
