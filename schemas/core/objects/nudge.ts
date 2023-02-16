@@ -114,6 +114,32 @@ export default function nudge({ variants }: { variants: VariantDefinition[] }) {
         group: "main",
       },
       {
+        name: "imageAssets",
+        title: "Image Assets",
+        type: "array",
+        group: "main",
+        of: [
+          {
+            type: "object",
+            groups: [{ name: "main", title: "Main", icon: IoApps }],
+            fields: [
+              {
+                name: "primaryImage",
+                title: "Primary Image",
+                type: "image",
+                group: "main",
+              },
+              {
+                name: "secondaryImage",
+                title: "Secondary Image",
+                type: "image",
+                group: "main",
+              },
+            ],
+          },
+        ],
+      },
+      {
         name: "PrimaryAction",
         title: "Primary Action",
         type: "navigationItem",

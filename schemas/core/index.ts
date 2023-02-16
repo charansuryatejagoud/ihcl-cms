@@ -44,7 +44,6 @@ import mapObject from "./objects/map-object";
 import formGroup from "./objects/form-group";
 import comparative from "./objects/comparative";
 import specification from "./objects/specification";
-import cardAssets from "./objects/cardAssets";
 export const core: FeatureSchemaDefinition = {
   schemas: [
     offer,
@@ -88,7 +87,7 @@ export const core: FeatureSchemaDefinition = {
     inputObject,
     formGroup,
     mapObject,
-    cardAssets
+   
   ],
   transformers: [reorderTransformer],
   headers: [
@@ -158,7 +157,7 @@ export const core: FeatureSchemaDefinition = {
     { type: "table" },
     { type: "toggle" },
     { type: "dataGrid" },
-    {type:"cardAssets"}
+    
   ],
   groupItems: [
     { type: "comparator" },
@@ -202,7 +201,6 @@ export const core: FeatureSchemaDefinition = {
       type: "stepper",
     },
     { type: "formGroup" },
-    {type:"cardAssets"}
   ],
   variants: {
     group: [
@@ -527,7 +525,8 @@ export const core: FeatureSchemaDefinition = {
       { title: "Nudge Rounded Logo", value: "nudge.rounded.logo-wrapper" },
       { title: "Nudge with icons", value: "nudge.card.icons" },
       { title: "[Homepage] Chat Nudge", value: "homepage.nudge.chat" },
-      {title:"Nudge With Key Value", value:"nudge-with-key-value"}
+      {title:"Nudge With Key Value", value:"nudge-with-key-value"},
+      {title:"Image Preview Nudge",value:"imagePreviewNudge"}
     ],
     dialog: [
       { title: "Alert", value: "alert" },
@@ -551,7 +550,8 @@ export const core: FeatureSchemaDefinition = {
         title: "Quantity Dropdown",
         value: "core.placeholder.quantity-dropdown",
       },
-      {title:"Login Form",value:"login-form"}
+      {title:"Login Form",value:"login-form"},
+      {title:'Pdf Files',value:"pdf-form"}
     ],
     switchCaseBlock: [
       featureFlagVariant,

@@ -11,6 +11,11 @@ export default {
       type: "string",
     },
     {
+      name: "logo",
+      title: "Logo",
+      type: "image",
+    },
+    {
       name: "fileName",
       title: "Name of file",
       type: "string",
