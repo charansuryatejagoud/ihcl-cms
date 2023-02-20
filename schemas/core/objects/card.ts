@@ -34,26 +34,7 @@ export default function card(props: Props) {
         ...hiddenField,
         group: "configuration",
       },
-      {
-        title: "Show Divider For Title",
-        name: "showDividerForTitle",
-        type: "boolean",
-        initialValue: false,
-        group: "main",
-      },
-      {
-        name: "isComponentFullWidth",
-        title: "Is Component Full Width",
-        type: "boolean",
-        initialValue: false,
-        group: "main",
-      },
-      {
-        name: "bgColor",
-        title: "Bg Color",
-        type: "string",
-        group: "main",
-      },
+      
       {
         name: "title",
         title: "Title",
@@ -79,12 +60,12 @@ export default function card(props: Props) {
         type: "string",
         group: "main"
       },
-      {
-        name: "chipText",
-        title: "Chip Text",
-        type: "array",
-        of: [{ type: "string" }]
-      },
+      // {
+      //   name: "chipText",
+      //   title: "Chip Text",
+      //   type: "array",
+      //   of: [{ type: "string" }]
+      // },
       {
         name: "description",
         title: "Description",
@@ -111,12 +92,12 @@ export default function card(props: Props) {
         type: "blockContent",
         group: "main",
       },
-      {
-        title: "map",
-        name: "Map",
-        type: "geopoint",
-        group: "main",
-      },
+      // {
+      //   title: "map",
+      //   name: "Map",
+      //   type: "geopoint",
+      //   group: "main",
+      // },
       {
         title: "Rich Text",
         name: "richText",
@@ -244,24 +225,20 @@ export default function card(props: Props) {
         title: "Secondary Action",
         type: "navigationItem",
       },
-      {
-        name: "ctaLabel_1",
-        title: "CTA Label_1",
-        type: "navigationItem"
-      },
-      {
-        name: "brand",
-        title: "Brand",
-        type: "reference",
-        to: [{ type: "brand" }],
-        group: "main",
-      },
-      {
-        name: "metadata",
-        type: "metadata",
-        title: "Metadata",
-        group: "configuration",
-      },
+    
+      // {
+      //   name: "brand",
+      //   title: "Brand",
+      //   type: "reference",
+      //   to: [{ type: "brand" }],
+      //   group: "main",
+      // },
+      // {
+      //   name: "metadata",
+      //   type: "metadata",
+      //   title: "Metadata",
+      //   group: "configuration",
+      // },
     ],
     preview: {
       select: {

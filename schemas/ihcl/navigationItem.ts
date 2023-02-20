@@ -1,11 +1,11 @@
 import { IoNavigate as Icon } from "react-icons/io5";
 // import { pathUrlRule } from "../../shared-utils";
 const buttonVariants = [
-  { title: "Light Contained", value: "light-contained" },
-  { title: "Dark Contained", value: "dark-contained" },
-  { title: "Light Outlined", value: "light-outlined" },
-  { title: "Dark Outlined", value: "dark-outlined" },
-  { title: "Link", value: "link" },
+  { title: "Light Contained", value: "buttonVariants.light-contained" },
+  { title: "Dark Contained", value: "buttonVariants.dark-contained" },
+  { title: "Light Outlined", value: "buttonVariants.light-outlined" },
+  { title: "Dark Outlined", value: "buttonVariants.dark-outlined" },
+  { title: "Link", value: "buttonVariants.link" },
 ]
 export default {
   name: "navigationItem",

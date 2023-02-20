@@ -46,78 +46,25 @@ export default function group({
         group: "configuration",
       },
       {
-        name: "isSearchFieldForFilter",
-        title: "Is Search Field For Filter",
-        type: "boolean",
-        initialValue: false,
-      },
-      {
-        name: "isDropDown",
-        title: "City Drop Down List",
-        type: "boolean",
-        description:"hotel city lists for boolean",
-        initialValue: false,
-      },
-      {
         name: "isComponentFullWidth",
         title: "Is Component Full Width",
         type: "boolean",
         initialValue: false,
       },
-      {
-        title: "Show Divider For Title",
-        name: "showDividerForTitle",
-        type: "boolean",
-        initialValue:true,
-        group:"main"
-      },
-      {
-        name:"isSearchEnabled",
-        title:"Is Search Enabled",
-        type:"boolean",
-        initialValue:false,
-        group:"main"
-      },
-      {
-        title:"Initial Slide",
-        name:"initialSlide",
-        type:"number"
-       },
-      {
-        name: "componentTopPadding",
-        title: "Component Top Padding",
-        type: "string",
-        group: "main",
-      },
-      {
-        name: "componentBottomPadding",
-        title: "Component Bottom Padding",
-        type: "string",
-        group: "main",
-      },
-      {
-        name: "titleColor",
-        title: "Title Color",
-        type: "string",
-        group: "main",
-        description: "Ït is required for website"
-      },
-      { 
-        name:"bgColor",
-        title:"Bg Color",
-        type:"string",
-        group: "main"
-      },
-      {
-        name: "row",
-        title: "Row",
-        type: "number",
-      },
-      {
-        name: "column",
-        title: "Column",
-        type: "number",
-      },
+      // {
+      //   name: "characterLimitForGroupDescription",
+      //   title: "Character Limit For Group Description",
+      //   type: "number",
+      //   description:
+      //     "The character limit for subTitle in group for displaying more button",
+      // },
+      // {
+      //   name: "characterLimitForItemDescription",
+      //   title: "Character Limit For Item Description ",
+      //   type: "number",
+      //   description:
+      //     "The character limit for description in group for displaying more button",
+      // },
       {
         name: "title",
         title: "Title",
@@ -131,34 +78,9 @@ export default function group({
         group: "main",
       },
       {
-        name:"characterLimitForGroupDescription",
-        title:"Character Limit For Group Description",
-        type:"number",
-        description:"The character limit for subTitle in group for displaying more button"
-      },
-      {
-        name:"characterLimitForItemDescription",
-        title:"Character Limit For Item Description ",
-        type:"number",
-        description:"The character limit for description in group for displaying more button"
-      },
-      {
         name: "heading",
         title: "Heading",
         type: "string",
-      },
-      {
-        name: "titleAlignment",
-        title: "Title Alignment",
-        type: "string",
-        initialValue: "regular",
-        options: {
-          list: [
-            { title: "regular", value: "regular" },
-            { title: "center", value: "center" },
-          ],
-        },
-        group: "main",
       },
       {
         name: "variant",
@@ -194,36 +116,36 @@ export default function group({
         title: "Secondary Action",
         type: "navigationItem",
       },
-      {
-        name: "hasAllLink",
-        title: "Allow More link",
-        type: "boolean",
-        group: "main",
-      },
-      {
-        name: "allLink",
-        title: "See all",
-        type: "link",
-        hidden: ({ parent }) => !parent?.hasAllLink,
-        group: "main",
-      },
-      {
-        name: "hasAlternateAllLink",
-        title: "Allow alternate More link",
-        type: "boolean",
-        group: "main",
-      },
-      {
-        name: "alternateAllLink",
-        title: "Alternate See all",
-        type: "link",
-        hidden: ({ parent }) => !parent?.hasAlternateAllLink,
-        group: "main",
-        options: {
-          collapsible: true,
-          collapsed: true,
-        },
-      },
+      // {
+      //   name: "hasAllLink",
+      //   title: "Allow More link",
+      //   type: "boolean",
+      //   group: "main",
+      // },
+      // {
+      //   name: "allLink",
+      //   title: "See all",
+      //   type: "link",
+      //   hidden: ({ parent }) => !parent?.hasAllLink,
+      //   group: "main",
+      // },
+      // {
+      //   name: "hasAlternateAllLink",
+      //   title: "Allow alternate More link",
+      //   type: "boolean",
+      //   group: "main",
+      // },
+      // {
+      //   name: "alternateAllLink",
+      //   title: "Alternate See all",
+      //   type: "link",
+      //   hidden: ({ parent }) => !parent?.hasAlternateAllLink,
+      //   group: "main",
+      //   options: {
+      //     collapsible: true,
+      //     collapsed: true,
+      //   },
+      // },
       {
         name: "items",
         title: "Items",
@@ -231,12 +153,12 @@ export default function group({
         of: items,
         group: "main",
       },
-      {
-        name: "metadata",
-        type: "metadata",
-        title: "Metadata",
-        group: "configuration",
-      },
+      // {
+      //   name: "metadata",
+      //   type: "metadata",
+      //   title: "Metadata",
+      //   group: "configuration",
+      // },
     ],
     preview: groupPreview,
   };

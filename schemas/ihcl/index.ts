@@ -157,9 +157,9 @@ export const ihclcore: FeatureSchemaDefinition = {
     ],
     dialog: [
       { title: "Alert", value: "ihcl.core.alert" },
-      { title: "Bottom Sheet", value: "ihcl.core.bottomSheet" },
-      { title: "Nested Bottom Sheet", value: "ihcl.core.nestedBottomSheet" },
-      { title: "Alert Without Close Cta", value: "alert.without.close.cta" },
+      { title: "Bottom Sheet", value: "ihcl.core.bottom-Sheet" },
+      { title: "Nested Bottom Sheet", value: "ihcl.core.nested-bottom-sheet" },
+      { title: "Alert Without Close Cta", value: "ihcl.core.alert-without-close-cta" },
       
     ],
   },

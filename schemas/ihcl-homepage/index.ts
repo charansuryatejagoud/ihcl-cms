@@ -4,54 +4,52 @@ export const ihclhomepage: FeatureSchemaDefinition = {
   variants: {
     group: [
       {
-        title: "Transparent 4 Cards",
-        value: "ihcl.homepage.group.transparent-4-cards",
+        title: "[Ihcl Homepage] Group With Split Cards ",
+        value: "ihcl.homepage.group.group-with-split-cards", //d
       },
       {
-        title: "Multi Card Carousel With Bg Image",
-        value: "ihcl.homepage.group.multi-card-carousel-with-bg-image",
+        title: "[Ihcl Homepage] Carousel With Back Ground Image",
+        value: "ihcl.homepage.group.carousel-with-back-ground-image",//d
       },
       {
-        title: "Carousel With 3 Column Grid",
-        value: "ihcl.homepage.group.carousel-with-3-column-grid",
+        title: "[Ihcl Homepage] Carousel With 3 Column Grid",
+        value: "ihcl.homepage.group.carousel-with-three-column-grid",//d
+      },
+      
+      {
+        title: "[Ihcl Homepage] 4 Column Rectangle Grid",
+        value: "ihcl.homepage.group.four-column-rectangle-grid",//d
       },
       {
-        title: "2 Row Grid",
-        value: "ihcl.homepage.group.2-row-grid",
-      },
-      {
-        title: "4 Column Rectangle Grid",
-        value: "ihcl.homepage.group.4-column-rectangle-grid",
-      },
-      {
-        title: " Big Image[Video]",
-        value: "ihcl.homepage.group.big-image",
+        title: "[Ihcl Homepage] Multiple Row 4 Column Grid",
+        value: "ihcl.homepage.group.multiple-row-four-column-grid",//d
       },
     ],
     card: [
       {
-        title: "Title With Hoverable Card",
-        value: "ihcl.homepage.card.title-with-hoverable-card",
+        title: "[Ihcl Homepage] Card With Aspect Ratio (1:2) ",
+        value: "ihcl.homepage.card.card-with-aspect-ratio-of-1-2",
       },
       {
-        title: "Carousel With Bg Image",
-        value: "ihcl.homepage.card.carousel-with-bg-image",
+        title: "[Ihcl Homepage]  Carousel Card With Aspect Ratio (4:3)",
+        value: "ihcl.homepage.card.carousel-card-with-aspect-ratio-4-3",//d
       },
       {
-        title: "Card With Right Aligned Title Link",
-        value: "ihcl.homepage.card.card-with-right-aligned-title-link",
+        title: "[Ihcl Homepage] Card With Right Aligned Title And Link",
+        value: "ihcl.homepage.card.card-with-right-aligned-title-and-link",//d
+      },
+     
+      {
+        title: "[Ihcl Homepage]  Rectangle Card With Aspect Ratio (2:4)",
+        value: "ihcl.homepage.card.rectangle-card-with-right-aligned-title",//d
       },
       {
-        title: "Single Item",
-        value: "ihcl.homepage.card.single-item",
+        title: " [Ihcl Homepage] Image Or Video With Full Width",
+        value: "ihcl.homepage.card.image-or-video-with-full-width",//d
       },
       {
-        title: "Card With Right Aligned Title",
-        value: "ihcl.homepage.card-with-right-aligned-title",
-      },
-      {
-        title: "Simple Media",
-        value: "ihcl.homepage.card.simple-media",
+        title: "[Ihcl Homepage] Social Media Square Card",
+        value: "ihcl.homepage.card.social-media-square-card",//d
       },
     ],
   },
