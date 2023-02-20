@@ -40,8 +40,8 @@ import richText from "../ihcl/richText";
 import stepperComponent from "../ihcl/stepperComponent";
 export const core: FeatureSchemaDefinition = {
   schemas: [
-    offer,
-    experiment,
+    // offer,
+    // experiment,
     category,
     settings,
     richText,
@@ -54,7 +54,7 @@ export const core: FeatureSchemaDefinition = {
     unknown,
     typography,
     avatar,
-    brand,
+     brand,
     faqs,
     metadata,
     empty,
@@ -64,11 +64,11 @@ export const core: FeatureSchemaDefinition = {
     fileDocument,
     cellSchema,
     rowSchema,
-    marketingAssets,
+    // marketingAssets,
     hamburgerProfile,
-    accelerator,
-    faqCategory,
-    faqQuestion,
+    // accelerator,
+    // faqCategory,
+    // faqQuestion,
     banner,
     header,
     footer,
@@ -127,16 +127,16 @@ export const core: FeatureSchemaDefinition = {
     {
       type:"richText"
     },
-    {
-      type: "reference",
-      title: "Attached Content",
-      weak: true,
-      to: [
-        {
-          type: "attachedContent",
-        },
-      ],
-    },
+    // {
+    //   type: "reference",
+    //   title: "Attached Content",
+    //   weak: true,
+    //   to: [
+    //     {
+    //       type: "attachedContent",
+    //     },
+    //   ],
+    // },
     {
       type: "empty",
     },

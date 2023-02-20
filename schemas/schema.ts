@@ -28,9 +28,9 @@ export default createSchema({
       navigationVariants: featureDefinition.variants.navigation,
       transformers: featureDefinition.transformers,
     }),
-    attachedContent({
-      items: featureDefinition.pageItems,
-    }),
+    // attachedContent({
+    //   items: featureDefinition.pageItems,
+    // }),
     dialog({
       connectedStores: featureDefinition.connectedStores,
       headers: featureDefinition.headers,

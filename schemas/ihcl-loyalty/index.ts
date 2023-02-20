@@ -8,7 +8,7 @@ export const loyalty: FeatureSchemaDefinition = {
       {title:"Tier Card with Right Aligned Content",value:".loyalty.tier-card-with-right-aligned-content"},
       {title:"[rectangle] 4 Card Carousel",value:"loyalty.4-card-carousel"},
       { title: "3-row-grid", value: "loyalty.3-row-grid" },
-{ title: "2-card-carousal", value: "loyalty.2-card-carousal" },
+{ title: "2-card-carousel", value: "loyalty.2-card-carousel" },
 
     ],
     card:[

@@ -32,20 +32,20 @@ const uncategorizedPages = S.listItem()
       .filter('_type == "page" && !defined(category)'),
   );
 
-const articles = S.listItem({
-  id: "article",
-  title: "Article",
-  icon: ArticleIcon,
-  child: () => {
-    return S.documentList()
-      .title("Articles")
-      .filter('_type == "page" && variant == "article"')
-      .initialValueTemplates([
-        // @ts-ignore
-        S.initialValueTemplateItem("article-template"),
-      ]);
-  },
-});
+// const articles = S.listItem({
+//   id: "article",
+//   title: "Article",
+//   icon: ArticleIcon,
+//   child: () => {
+//     return S.documentList()
+//       .title("Articles")
+//       .filter('_type == "page" && variant == "article"')
+//       .initialValueTemplates([
+//         // @ts-ignore
+//         S.initialValueTemplateItem("article-template"),
+//       ]);
+//   },
+// });
 
 // prettier-ignore
 const settingsItem = S.listItem()
@@ -86,17 +86,17 @@ const pagesByCategory = S.listItem()
     .title("Pages by Category")
     .child(categoryList);
 
-const bulkEditItem = S.listItem()
-  .title("Bulk Edit")
-  .icon(BulkEditIcon)
-  .child(
-    S.list()
-      .title("Bulk Edit")
-      .items([
-        S.listItem().title("Brand").child(createSuperPane("brand")),
-        S.listItem().title("Page").child(createSuperPane("page")),
-      ]),
-  );
+// const bulkEditItem = S.listItem()
+//   .title("Bulk Edit")
+//   .icon(BulkEditIcon)
+//   .child(
+//     S.list()
+//       .title("Bulk Edit")
+//       .items([
+//         // S.listItem().title("Brand").child(createSuperPane("brand")),
+//         S.listItem().title("Page").child(createSuperPane("page")),
+//       ]),
+//   );
 
 const standardListItems = [
   settingsItem,
@@ -113,16 +113,16 @@ const standardListItems = [
     (listItem) =>
       !["settings", "media.tag", "appConfig"].includes(listItem.getId()),
   ),
-  articles,
+  // articles,
 
-  S.divider(),
+  // S.divider(),
 ];
 
 export default async () => {
   const user = await userStore.getCurrentUser();
 
   const finalItems = isAdminUser(user)
-    ? [...standardListItems, bulkEditItem]
+    ? [...standardListItems, ]//bulkEditItem
     : standardListItems;
 
   return S.list().title("Base").items(finalItems);

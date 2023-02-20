@@ -24,6 +24,11 @@ import { hstuDefinition } from "./pdf-hstu";
 import { creditcard } from "./finance/creditcard";
 import { tataNeuCredit } from "./finance/tataneu-credit";
 import { sachet } from "./finance/sachet";
+import { ihclForms } from "./ihcl-forms";
+import { ihclhomepage } from "./ihcl-homepage";
+import { loyalty } from "./ihcl-loyalty";
+import { details } from "./hotel-details";
+import { ihclcore } from "./ihcl";
 
 const features: FeatureSchemaDefinition[] = [
   core,
@@ -47,6 +52,13 @@ const features: FeatureSchemaDefinition[] = [
   // hamburger_menu,
   // tataNeuCredit,
   // sachet,
+  ihclForms,
+  ihclhomepage,
+  details,
+  loyalty,
+  ihclcore
+
+  
 ];
 
 export const featureDefinition: FeatureSchemaDefinition =
