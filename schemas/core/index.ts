@@ -44,7 +44,7 @@ import mapObject from "./objects/map-object";
 import formGroup from "./objects/form-group";
 import comparative from "./objects/comparative";
 import specification from "./objects/specification";
-
+import cardAssets from "./objects/cardAssets";
 export const core: FeatureSchemaDefinition = {
   schemas: [
     offer,
@@ -88,6 +88,7 @@ export const core: FeatureSchemaDefinition = {
     inputObject,
     formGroup,
     mapObject,
+    cardAssets
   ],
   transformers: [reorderTransformer],
   headers: [
@@ -157,6 +158,7 @@ export const core: FeatureSchemaDefinition = {
     { type: "table" },
     { type: "toggle" },
     { type: "dataGrid" },
+    {type:"cardAssets"}
   ],
   groupItems: [
     { type: "comparator" },
@@ -200,6 +202,7 @@ export const core: FeatureSchemaDefinition = {
       type: "stepper",
     },
     { type: "formGroup" },
+    {type:"cardAssets"}
   ],
   variants: {
     group: [
@@ -416,7 +419,12 @@ export const core: FeatureSchemaDefinition = {
       {
         title: "Hamburger Menu",
         value: "hamburger-menu"
-      }
+      },
+      { title: "[Msite] Grid with 2 columns", value: "ichl.core.group.grid-with-2-columns"},
+      {
+        title: "sliders-with-single-card-media",
+        value: "sliders-with-single-card-media",
+      },
     ],
     navigation: [
       { title: "Default Navigation", value: "default" },
@@ -521,6 +529,11 @@ export const core: FeatureSchemaDefinition = {
         title: "card-with-right-aligned-carousel",
         value: "card-with-right-aligned-carousel",
       },
+      {
+        title: "card-with-tagline",
+        value: "card-with-tagline",
+      },
+    
     ],
     nudge: [
       { title: "Default Nudge", value: "default" },
@@ -569,6 +582,7 @@ export const core: FeatureSchemaDefinition = {
         value: "core.placeholder.quantity-dropdown",
       },
       { title: "Login Form", value: "login-form" },
+      {title: "Customer Details Form", value: "core.placeholder.customer-details-form" },
     ],
     switchCaseBlock: [
       featureFlagVariant,

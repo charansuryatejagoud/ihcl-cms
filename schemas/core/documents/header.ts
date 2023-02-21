@@ -53,7 +53,16 @@ export default {
       type: "array",
       of: [{ type: "navigationItem" }, { type: "card" }],
     },
-
+    {
+      name:"dropDownList",
+      title:'Drop Down List',
+      type:'array',
+      of:[
+        {
+          type:"formGroup"
+        }
+      ]
+    },
     {
       title: 'Login List',
       name: 'loginList',

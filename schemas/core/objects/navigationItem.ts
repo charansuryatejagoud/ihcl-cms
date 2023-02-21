@@ -23,6 +23,11 @@ export default {
       title:"Image",
       type:"image"
     },
+    // {
+    //   name:"smallImage",
+    //   title:"Small Image",
+    //   type:"image",
+    // },
     {
       name: "variant",
       title: "Variant",
