@@ -1,3 +1,4 @@
+import customText from "@components/custom-text";
 import { FeatureSchemaDefinition } from "schemas/types";
 import banner from "./banner";
 import footer from "./footer";
@@ -5,6 +6,7 @@ import header from "./header";
 import { imageAsset } from "./imageAsset";
 import richText from "./richText";
 import stepperComponent from "./stepperComponent";
+import textContainer from "./textContainer";
 import { videoAsset } from "./videoAsset";
 export const ihclcore: FeatureSchemaDefinition = {
   schemas: [
@@ -15,12 +17,14 @@ export const ihclcore: FeatureSchemaDefinition = {
     header,
     footer,
     banner,
+    textContainer,
   ],
   pageItems: [
     { type: "banner" },
     {
       type: "richText",
     },
+    { type: "motor.insurance.customText" },
   ],
   groupItems: [
     { type: "richText" },
@@ -31,6 +35,14 @@ export const ihclcore: FeatureSchemaDefinition = {
 
   variants: {
     group: [
+      {
+        title: " Group With Split Cards ",
+        value: "ihcl.core.group.group-with-split-cards",
+      },
+      {
+        title: " Carousel With Back Ground Image",
+        value: "ihcl.core.group.carousel-with-back-ground-image",
+      },
       {
         title: "4 Row Grid",
         value: "ihcl.core.group.4-row-grid",
@@ -112,6 +124,19 @@ export const ihclcore: FeatureSchemaDefinition = {
         title: "Center Aligned Content",
         value: "ihcl.core.group.center-aligned-content",
       },
+      {
+        title: "Carousel With 3 Column Grid",
+        value: "ihcl.homepage.group.carousel-with-three-column-grid",
+      },
+
+      {
+        title: "4 Column Rectangle Grid",
+        value: "ihcl.homepage.group.four-column-rectangle-grid",
+      },
+      {
+        title: "Multiple Row 4 Column Grid",
+        value: "ihcl.homepage.group.multiple-row-four-column-grid",
+      },
     ],
     card: [
       {
@@ -141,6 +166,31 @@ export const ihclcore: FeatureSchemaDefinition = {
         title: "Card With Combined Image Button",
         value: "ihcl.core.card.image-aligned-button",
       },
+      {
+        title: "Card With Aspect Ratio (1:2) ",
+        value: "ihcl.homepage.card.card-with-aspect-ratio-of-1-2",
+      },
+      {
+        title: "Carousel Card With Aspect Ratio (4:3)",
+        value: "ihcl.homepage.card.carousel-card-with-aspect-ratio-4-3",
+      },
+      {
+        title: "Card With Right Aligned Title And Link",
+        value: "ihcl.homepage.card.card-with-right-aligned-title-and-link",
+      },
+
+      {
+        title: "Rectangle Card With Aspect Ratio (2:4)",
+        value: "ihcl.homepage.card.rectangle-card-with-right-aligned-title",
+      },
+      {
+        title: "Image Or Video With Full Width",
+        value: "ihcl.homepage.card.image-or-video-with-full-width",
+      },
+      {
+        title: "Social Media Square Card",
+        value: "ihcl.homepage.card.social-media-square-card",
+      },
     ],
     banner: [
       {
@@ -159,8 +209,10 @@ export const ihclcore: FeatureSchemaDefinition = {
       { title: "Alert", value: "ihcl.core.alert" },
       { title: "Bottom Sheet", value: "ihcl.core.bottom-Sheet" },
       { title: "Nested Bottom Sheet", value: "ihcl.core.nested-bottom-sheet" },
-      { title: "Alert Without Close Cta", value: "ihcl.core.alert-without-close-cta" },
-      
+      {
+        title: "Alert Without Close Cta",
+        value: "ihcl.core.alert-without-close-cta",
+      },
     ],
   },
 };

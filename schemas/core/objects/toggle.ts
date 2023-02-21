@@ -1,5 +1,4 @@
 import { IoApps, IoToggleSharp as Icon, IoSettings } from "react-icons/io5";
-import toggle_preferences from "../../../scripts/toggle_preferences";
 import { hiddenField } from "../../shared-utils";
 
 export default {
@@ -21,14 +20,6 @@ export default {
       title: "Title",
       type: "string",
       validation: (Rule) => Rule.required(),
-    },
-    {
-      title: "Preferences Key",
-      name: "prefKey",
-      type: "string",
-      options: {
-        list: [...toggle_preferences],
-      },
     },
     {
       title: "Preferences Default Value",

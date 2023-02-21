@@ -1,16 +1,18 @@
-import {IoApps, IoDocumentText as Icon, IoSearch, IoSettings,} from "react-icons/io5";
-import {Schema, SchemaItem, VariantDefinition} from "../../types";
-import {LockFieldEditor} from "../../../branding/components/LockFieldEditor";
-import {client, isAdminUser} from "../../shared-utils";
+import {
+  IoApps,
+  IoDocumentText as Icon,
+  IoSearch,
+  IoSettings,
+} from "react-icons/io5";
+import { Schema, SchemaItem, VariantDefinition } from "../../types";
+import { LockFieldEditor } from "../../../branding/components/LockFieldEditor";
+import { client, isAdminUser } from "../../shared-utils";
 import connectedStore from "../objects/connectedStore";
 
 interface PageProps {
   items: SchemaItem[];
   connectedStores: VariantDefinition[];
-  headers: SchemaItem[];
-  footers: SchemaItem[];
   navigationVariants: VariantDefinition[];
-  transformers: Schema[];
 }
 
 export default function page(props: PageProps) {
@@ -31,7 +33,7 @@ export default function page(props: PageProps) {
       showBottomNavigation: true,
       showAppRatingPopup: false,
       isLocked: false,
-      tabItemSize: "dynamic"
+      tabItemSize: "dynamic",
     },
     fields: [
       {
@@ -153,26 +155,6 @@ export default function page(props: PageProps) {
         ],
       },
       {
-        title: "Page Headers",
-        name: "headers",
-        type: "array",
-        group: "configuration",
-        of: props.headers,
-      },
-      {
-        name: "transformers",
-        type: "array",
-        of: props.transformers,
-        group: "main",
-      },
-      {
-        title: "Page Footers",
-        name: "footers",
-        type: "array",
-        group: "configuration",
-        of: props.footers,
-      },
-      {
         title: "Show Bottom Navigation",
         name: "showBottomNavigation",
         type: "boolean",
@@ -191,12 +173,12 @@ export default function page(props: PageProps) {
         group: "main",
         of: props.items,
       },
-      {
-        title: "Seo",
-        name: "seo",
-        type: "seo",
-        group: "seo",
-      },
+      // {
+      //   title: "Seo",
+      //   name: "seo",
+      //   type: "seo",
+      //   group: "seo",
+      // },
       {
         title: "Is Live",
         name: "isLive",

@@ -10,7 +10,6 @@ import card from "./core/objects/card";
 import dialog from "./core/documents/dialog";
 import nudge from "./core/objects/nudge";
 import lockableItem from "./core/objects/lockableItem";
-import attachedContent from "./core/documents/attachedContent";
 import ifElseBlock from "./core/objects/ifElseBlock";
 import { switchCaseBlock } from "./core/objects/switchCaseBlock";
 import section from "./core/objects/section";
@@ -23,10 +22,7 @@ export default createSchema({
     page({
       items: featureDefinition.pageItems,
       connectedStores: featureDefinition.connectedStores,
-      headers: featureDefinition.headers,
-      footers: featureDefinition.footers,
       navigationVariants: featureDefinition.variants.navigation,
-      transformers: featureDefinition.transformers,
     }),
     // attachedContent({
     //   items: featureDefinition.pageItems,
@@ -67,7 +63,7 @@ export default createSchema({
     dataGrid({
       variants: featureDefinition.variants.dataGrid,
     }),
-    
+
     bannerComponents(featureDefinition.pageItems),
     ...featureDefinition.schemas,
   ]),
