@@ -115,7 +115,24 @@ export default function card(props: Props) {
        
       //   group: "main",
       // },
-
+      {
+        name: "variant",
+        title: "Variant",
+        type: "string",
+        options: {
+          list: props.variants,
+        },
+        group: "main",
+      },
+      {
+        name: "largeVariant",
+        title: "Large Variant",
+        type: "string",
+        options: {
+          list: props.variants,
+        },
+        group: "main",
+      },
       {
         title: "Content",
         name: "content",
@@ -126,6 +143,7 @@ export default function card(props: Props) {
         title: "map",
         name: "Map",
         type: "geopoint",
+        hidden: ({ parent }) => parent?.variant !== "simple-media" && parent?.largeVariant !== "simple-media",
         group: "main",
       },
       {
@@ -150,24 +168,7 @@ export default function card(props: Props) {
           },
         ],
       },
-      {
-        name: "variant",
-        title: "Variant",
-        type: "string",
-        options: {
-          list: props.variants,
-        },
-        group: "main",
-      },
-      {
-        name: "largeVariant",
-        title: "Large Variant",
-        type: "string",
-        options: {
-          list: props.variants,
-        },
-        group: "main",
-      },
+     
       {
         name: "ctaLabel",
         title: "CTA Label",

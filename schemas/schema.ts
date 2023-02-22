@@ -16,6 +16,7 @@ import { switchCaseBlock } from "./core/objects/switchCaseBlock";
 import section from "./core/objects/section";
 import dataGrid from "./core/objects/dataGrid";
 import { bannerComponents } from "./core/objects/banner";
+import { tabLinks, tabs } from "./core/objects/tabLinks";
 
 export default createSchema({
   name: "default",
@@ -67,8 +68,10 @@ export default createSchema({
     dataGrid({
       variants: featureDefinition.variants.dataGrid,
     }),
-    
+
     bannerComponents(featureDefinition.pageItems),
+    tabLinks({ items: featureDefinition.groupItems }),
+    tabs({ items: featureDefinition.groupItems }),
     ...featureDefinition.schemas,
   ]),
 });

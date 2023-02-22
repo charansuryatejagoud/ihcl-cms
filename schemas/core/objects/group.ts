@@ -24,7 +24,7 @@ export default function group({
   variants,
   items,
 }: {
-  variants: VariantDefinition[];
+  variants: SchemaItem[];
   items: SchemaItem[];
 }) {
   return {
@@ -68,6 +68,8 @@ export default function group({
         name: "showDividerForTitle",
         type: "boolean",
         initialValue: true,
+        document:
+          "It shows the title divider if set true it returns no divider ",
         group: "main",
       },
       {
