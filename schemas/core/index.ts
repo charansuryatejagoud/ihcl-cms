@@ -557,6 +557,7 @@ export const core: FeatureSchemaDefinition = {
       { title: "Venue-Details", value: "venue-details" },
       { title: "Video-Pop-Up", value: "video-pop-up" },
       { title: "gallery-with-carousel", value: "gallery-with-carousel" },
+      {title:"Manage Card",value:"manage-card"}
     ],
     placeholder: [
       { title: "Toll-Free-Numbers", value: "toll-free-numbers" },

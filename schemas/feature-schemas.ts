@@ -1,12 +1,4 @@
-import { nativeCommerce } from "./native-commerce";
-import { neuPass } from "./neupass";
-import { auth } from "./auth";
-import { iplSlp } from "./ipl-slp";
-import { serp } from "./serp";
-import { slp } from "./slp";
-import { hamburger_menu } from "./hamburger_menu";
-import { finance } from "./finance";
-import { search } from "./search";
+
 import {
   FeatureSchemaDefinition,
   FeatureSchemaProperties,
@@ -14,16 +6,6 @@ import {
 } from "./types";
 import { chain } from "lodash";
 import { core } from "./core";
-import { homepage } from "./homepage";
-import { superTopupHealth } from "./super-topup-health";
-import { financeLending } from "./finance/lending";
-import { financePersonalLoan } from "./finance/personal-loan";
-import { financeLoanVault } from "./finance/loan-vault";
-import { financePayLater } from "./finance/pay-later";
-import { hstuDefinition } from "./pdf-hstu";
-import { creditcard } from "./finance/creditcard";
-import { tataNeuCredit } from "./finance/tataneu-credit";
-import { sachet } from "./finance/sachet";
 import { details } from "./details";
 
 const features: FeatureSchemaDefinition[] = [
