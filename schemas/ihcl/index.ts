@@ -126,16 +126,16 @@ export const ihclcore: FeatureSchemaDefinition = {
       },
       {
         title: "Carousel With 3 Column Grid",
-        value: "ihcl.homepage.group.carousel-with-three-column-grid",
+        value: "ihcl.core.group.carousel-with-three-column-grid",
       },
 
       {
         title: "4 Column Rectangle Grid",
-        value: "ihcl.homepage.group.four-column-rectangle-grid",
+        value: "ihcl.core.group.four-column-rectangle-grid",
       },
       {
         title: "Multiple Row 4 Column Grid",
-        value: "ihcl.homepage.group.multiple-row-four-column-grid",
+        value: "ihcl.core.group.multiple-row-four-column-grid",
       },
     ],
     card: [
@@ -168,28 +168,28 @@ export const ihclcore: FeatureSchemaDefinition = {
       },
       {
         title: "Card With Aspect Ratio (1:2) ",
-        value: "ihcl.homepage.card.card-with-aspect-ratio-of-1-2",
+        value: "ihcl.core.card.card-with-aspect-ratio-of-1:2",
       },
       {
         title: "Carousel Card With Aspect Ratio (4:3)",
-        value: "ihcl.homepage.card.carousel-card-with-aspect-ratio-4-3",
+        value: "ihcl.core.card.carousel-card-with-aspect-ratio-4:3",
       },
       {
         title: "Card With Right Aligned Title And Link",
-        value: "ihcl.homepage.card.card-with-right-aligned-title-and-link",
+        value: "ihcl.core.card.card-with-right-aligned-title-and-link",
       },
 
       {
         title: "Rectangle Card With Aspect Ratio (2:4)",
-        value: "ihcl.homepage.card.rectangle-card-with-right-aligned-title",
+        value: "ihcl.core.card.rectangle-card-with-right-aligned-title-aspect-ratio-2:4",
       },
       {
         title: "Image Or Video With Full Width",
-        value: "ihcl.homepage.card.image-or-video-with-full-width",
+        value: "ihcl.core.card.image-or-video-with-full-width",
       },
       {
         title: "Social Media Square Card",
-        value: "ihcl.homepage.card.social-media-square-card",
+        value: "ihcl.core.card.social-media-square-card",
       },
     ],
     banner: [
