@@ -37,20 +37,28 @@ export const details: FeatureSchemaDefinition = {
         value: "details.group.group-with-3-column-cards-grid",
       },
       {
-        title: "Group With Side Aligned Content Link",
-        value: "details.group.group-with-side-aligned-content-link",
+        title: "Group With Carousel-Card Left Media Right Content",
+        value: "details.group.group-with-carousel-card-left-media-right-content-aspect-ratio-2:4",
       },
       {
-        title: "Group with Media",
-        value: "details.group.group-with-media",
+        title: "Group With Card Left Media Right Content",
+        value: "details.group.group-with-card-left-media-right-content-aspect-ratio-2:4",
       },
+      {
+        title: "Group With Carousel- Card right Media Left Content",
+        value: "details.group.group-with-carousel-card-right-media-left-content-aspect-ratio-2:4",
+      },
+      {
+        title: "Group With Card right Media Left Content",
+        value: "details.group.group-with-card-right-media-left-content-aspect-ratio-2:4",
+      },
+      // {
+      //   title: "Group with Media",
+      //   value: "details.group.group-with-media",
+      // },
       {title:"Navigation Tabs",value:"details-navigation-tabs"}
     ],
     card: [
-      {
-        title: "Media With Description",
-        value: "details.card.media-with-description",
-      },
       {
         title: "Card With Focused Title",
         value: "details.card.card-with-focused-title",
@@ -72,12 +80,12 @@ export const details: FeatureSchemaDefinition = {
         value: "details.card.card-with-right-aligned-content",
       },
       {
-        title: "Media Image",
-        value: "details.card.media-image",
+        title: "Card With  Left Media Right Content",
+        value: "details.card.card-with-left-media-right-content-aspect-ratio-2:4",
       },
       {
-        title: "Media With Description",
-        value: "details.card.media-with-description",
+        title: "Card With  Right Media Left Content",
+        value: "details.card.card-with-right-media-left-content-aspect-ratio-2:4",
       },
     ],
     banner: [],
