@@ -2,6 +2,7 @@ import customText from "@components/custom-text";
 import { FeatureSchemaDefinition } from "schemas/types";
 import banner from "./banner";
 import footer from "./footer";
+import formGroup from "./formFroup";
 import header from "./header";
 import { imageAsset } from "./imageAsset";
 import richText from "./richText";
@@ -18,6 +19,7 @@ export const ihclcore: FeatureSchemaDefinition = {
     footer,
     banner,
     textContainer,
+    formGroup,
   ],
   pageItems: [
     { type: "banner" },
@@ -137,6 +139,10 @@ export const ihclcore: FeatureSchemaDefinition = {
         title: "Multiple Row 4 Column Grid",
         value: "ihcl.core.group.multiple-row-four-column-grid",
       },
+      {
+        title: "Carousel With Tabs",
+        value: "ihcl.core.group-carousel-with-tabs",
+      },
     ],
     card: [
       {
@@ -181,7 +187,8 @@ export const ihclcore: FeatureSchemaDefinition = {
 
       {
         title: "Rectangle Card With Aspect Ratio (2:4)",
-        value: "ihcl.core.card.rectangle-card-with-right-aligned-title-aspect-ratio-2:4",
+        value:
+          "ihcl.core.card.rectangle-card-with-right-aligned-title-aspect-ratio-2:4",
       },
       {
         title: "Image Or Video With Full Width",
@@ -190,6 +197,10 @@ export const ihclcore: FeatureSchemaDefinition = {
       {
         title: "Social Media Square Card",
         value: "ihcl.core.card.social-media-square-card",
+      },
+      {
+        title: "Center Aligned Title Tabs",
+        value: "ihcl.core.card-center-aligned-title-tabs",
       },
     ],
     banner: [

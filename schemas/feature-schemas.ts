@@ -5,7 +5,6 @@ import {
 } from "./types";
 import { chain } from "lodash";
 import { core } from "./core";
-import { homepage } from "./homepage";
 import { ihclForms } from "./ihcl-forms";
 import { loyalty } from "./ihcl-loyalty";
 import { details } from "./hotel-details";
