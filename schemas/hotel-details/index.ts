@@ -44,6 +44,7 @@ export const details: FeatureSchemaDefinition = {
         title: "Group with Media",
         value: "details.group.group-with-media",
       },
+      {title:"Navigation Tabs",value:"details-navigation-tabs"}
     ],
     card: [
       {
