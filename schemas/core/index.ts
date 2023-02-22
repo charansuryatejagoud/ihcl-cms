@@ -88,7 +88,7 @@ export const core: FeatureSchemaDefinition = {
     inputObject,
     formGroup,
     mapObject,
-    cardAssets
+    cardAssets,
   ],
   transformers: [reorderTransformer],
   headers: [
@@ -104,6 +104,7 @@ export const core: FeatureSchemaDefinition = {
   pageItems: [
     { type: "comparator" },
     { type: "group" },
+    { type: "tabLinks" },
     { type: "section" },
     {
       type: "nudge",
@@ -520,20 +521,9 @@ export const core: FeatureSchemaDefinition = {
         value: "card-with-right-aligned-title",
       },
       { title: "card-with-image-title", value: "card-with-image-title" },
-      {
-        title: "Card-with-Combined-Image-Button",
-        value: "image-aligned-button",
-      },
-      { title: "Image On Text", value: "image-on-text" },
-      {
-        title: "card-with-right-aligned-carousel",
-        value: "card-with-right-aligned-carousel",
-      },
-      {
-        title: "card-with-tagline",
-        value: "card-with-tagline",
-      },
-    
+      {title:"Card-with-Combined-Image-Button",value:"image-aligned-button"},
+      {title:"Image On Text",value:"image-on-text"},
+      { title: "card-with-right-aligned-carousel", value: "card-with-right-aligned-carousel" }
     ],
     nudge: [
       { title: "Default Nudge", value: "default" },
@@ -557,7 +547,6 @@ export const core: FeatureSchemaDefinition = {
       { title: "Nudge Rounded Logo", value: "nudge.rounded.logo-wrapper" },
       { title: "Nudge with icons", value: "nudge.card.icons" },
       { title: "[Homepage] Chat Nudge", value: "homepage.nudge.chat" },
-      {title:"Nudge With Key Value", value:"nudge-with-key-value"}
     ],
     dialog: [
       { title: "Alert", value: "alert" },
@@ -581,8 +570,7 @@ export const core: FeatureSchemaDefinition = {
         title: "Quantity Dropdown",
         value: "core.placeholder.quantity-dropdown",
       },
-      { title: "Login Form", value: "login-form" },
-      {title: "Customer Details Form", value: "core.placeholder.customer-details-form" },
+      {title:"Login Form",value:"login-form"}
     ],
     switchCaseBlock: [
       featureFlagVariant,
