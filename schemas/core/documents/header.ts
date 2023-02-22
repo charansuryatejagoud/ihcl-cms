@@ -52,13 +52,25 @@ export default {
       title: 'Nav Items',
       name: 'navItems',
       type: 'array',
-  of: [{ type: 'navigationItem' }],
+  of: [{ type: 'navigationItem' },],
+
+    },
+    {
+      name:"dropDownList",
+      title:'Drop Down List',
+      type:'array',
+      of:[
+        {
+          type:"formGroup"
+        }
+      ]
     },
     {
       title: 'Login List',
       name: 'loginList',
       type: 'array',
-      of: [{ type: 'navigationItem', }],
+      of: [{ type: 'navigationItem'},
+      ],
     },
     {  
         title: 'Cart Icon',
