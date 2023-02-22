@@ -1,3 +1,4 @@
+import dialog from "schemas/core/documents/dialog";
 import { FeatureSchemaDefinition } from "schemas/types";
 
 export const ihclForms: FeatureSchemaDefinition = {
@@ -10,6 +11,9 @@ export const ihclForms: FeatureSchemaDefinition = {
     ],
     placeholder:[
         {title:"Login Form",value:"ihclforms.login-form"},
+    ],
+    dialog:[
+        {title:"Login Form With Multiple Tabs",value:"login-form-with-multiple-tabs"}
     ]
 }
 }
