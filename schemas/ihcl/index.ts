@@ -179,7 +179,7 @@ export const ihclcore: FeatureSchemaDefinition = {
         value: "ihcl.core.card.image-aligned-button",
       },
       {
-        title: "Card With Aspect Ratio (1:2) ",
+        title: "[split cards] Card With Aspect Ratio (1:2) ",
         value: "ihcl.core.card.card-with-aspect-ratio-of-1:2",
       },
       {
@@ -200,7 +200,7 @@ export const ihclcore: FeatureSchemaDefinition = {
         title: "Image Or Video With Full Width",
         value: "ihcl.core.card.image-or-video-with-full-width",
       },
-      {
+      { 
         title: "Social Media Square Card",
         value: "ihcl.core.card.social-media-square-card",
       },
