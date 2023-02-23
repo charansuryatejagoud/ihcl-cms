@@ -1,6 +1,4 @@
 import { IoApps, IoCard as Icon, IoSettings } from "react-icons/io5";
-// import { imageAsset } from "./banner";
-// import { videoAsset } from "./banner";
 import {
   hiddenField,
   linkType,
@@ -34,39 +32,14 @@ export default function card(props: Props) {
         ...hiddenField,
         group: "configuration",
       },
-      {
-        title: "Show Divider For Title",
-        name: "showDividerForTitle",
-        type: "boolean",
-        initialValue: false,
-        group: "main",
-      },
-      {
-        name: "isComponentFullWidth",
-        title: "Is Component Full Width",
-        type: "boolean",
-        initialValue: false,
-        group: "main",
-      },
-      {
-        name: "bgColor",
-        title: "Bg Color",
-        type: "string",
-        group: "main",
-      },
+
       {
         name: "title",
         title: "Title",
         type: "string",
         group: "main",
       },
-      {
-        title: "Show Bullet For Sub Title",
-        name: "showBulletForSubTitle",
-        type: "boolean",
-        initialValue: true,
-        group: "main",
-      },
+
       {
         name: "subTitle",
         title: "Sub Title",
@@ -77,24 +50,7 @@ export default function card(props: Props) {
         name: "highLights",
         title: "High Lights",
         type: "string",
-        group: "main"
-      },
-      {
-        title: "Chip Text",
-        name: "chipText",
-        type: "array",
-        of: [
-          {
-            type: "object",
-            fields: [
-              {
-                title: "Chip Text Value",
-                name: "chipTextValue",
-                type: "string",
-              },
-            ],
-          },
-        ],
+        group: "main",
       },
       {
         name: "description",
@@ -103,18 +59,6 @@ export default function card(props: Props) {
         rows: 6,
         group: "main",
       },
-      // {
-      //   name: "demo",
-      //   title: "Demo",
-      //   type: "text",
-      //   options:{
-      //     modal:{
-      //       type:"popOver"
-      //     }
-      //   },
-       
-      //   group: "main",
-      // },
       {
         name: "variant",
         title: "Variant",
@@ -140,40 +84,10 @@ export default function card(props: Props) {
         group: "main",
       },
       {
-        title: "map",
-        name: "Map",
-        type: "geopoint",
-        hidden: ({ parent }) => parent?.variant !== "simple-media" && parent?.largeVariant !== "simple-media",
-        group: "main",
-      },
-      {
-        title: "Rich Text",
-        name: "richText",
-        type: "array",
-        of: [
-          {
-            type: "object",
-            fields: [
-              {
-                title: "Rich Text Key",
-                name: "richTextKey",
-                type: "string",
-              },
-              {
-                title: "Rich Text Value",
-                name: "richTextValue",
-                type: "string",
-              },
-            ],
-          },
-        ],
-      },
-     
-      {
         name: "ctaLabel",
         title: "CTA Label",
         type: "string",
-        group: "main"
+        group: "main",
       },
       {
         name: "url",
@@ -203,28 +117,7 @@ export default function card(props: Props) {
         type: "image",
         group: "main",
       },
-      {
-        name: "carouselImages",
-        title: "Carousel Images",
-        type: "array",
-        of: [
-          {
-            type: "object",
-            fields: [
-              {
-                title: "Title",
-                name: "title",
-                type: "string",
-              },
-              {
-                title: "Image",
-                name: "image",
-                type: "image",
-              },
-            ],
-          },
-        ],
-      },
+
       {
         name: "backgroundImage",
         title: "Background Image",
@@ -238,17 +131,10 @@ export default function card(props: Props) {
         options: {
           list: [
             { title: "Video", value: "video" },
-            {title:"Component",value:"component"}
-            // { title: 'Image', value: 'image' },
+            { title: "Component", value: "component" },
           ],
         },
       },
-      // {
-      //   name: "imageAsset",
-      //   title: "Image",
-      //   type: "imageAsset",
-      //   hidden: ({ parent }) => parent?.mediaType !== "image" && parent?.largeVariant !== "image",
-      // },
       {
         name: "videoAsset",
         title: "Video",
@@ -260,38 +146,21 @@ export default function card(props: Props) {
         title: "Components",
         name: "components",
         type: "component",
-        hidden: ({ parent }) => parent?.mediaType !== "component" && parent?.largeVariant !== "component",
-    },
+        hidden: ({ parent }) =>
+          parent?.mediaType !== "component" &&
+          parent?.largeVariant !== "component",
+      },
       {
         name: "primaryAction",
         title: "Primary Action",
         type: "navigationItem",
-        group: "main"
+        group: "main",
       },
       {
         name: "secondaryAction",
         title: "Secondary Action",
         type: "navigationItem",
-        group: "main"
-      },
-      // {
-      //   name: "ctaLabel",
-      //   title: "CTA Label",
-      //   type: "navigationItem",
-      //   group: "main"
-      // },
-      {
-        name: "brand",
-        title: "Brand",
-        type: "reference",
-        to: [{ type: "brand" }],
         group: "main",
-      },
-      {
-        name: "metadata",
-        type: "metadata",
-        title: "Metadata",
-        group: "configuration",
       },
     ],
     preview: {

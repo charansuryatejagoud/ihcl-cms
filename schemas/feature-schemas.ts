@@ -1,4 +1,3 @@
-
 import {
   FeatureSchemaDefinition,
   FeatureSchemaProperties,
@@ -6,31 +5,19 @@ import {
 } from "./types";
 import { chain } from "lodash";
 import { core } from "./core";
-import { details } from "./details";
+import { ihclForms } from "./ihcl-forms";
+import { loyalty } from "./ihcl-loyalty";
+import { details } from "./hotel-details";
+import { ihclcore } from "./ihcl";
+import { destinations } from "./destinations";
 
 const features: FeatureSchemaDefinition[] = [
   core,
-  // nativeCommerce,
-  // neuPass,
-  // auth,
-  // homepage,
-  // iplSlp,
-  // slp,
-  // superTopupHealth,
-  // serp,
-  // slp,
-  // finance,
-  // financePayLater,
-  // financeLending,
-  // financePersonalLoan,
-  // financeLoanVault,
-  // creditcard,
-  // search,
-  // hstuDefinition,
-  // hamburger_menu,
-  // tataNeuCredit,
-  // sachet,
-  details
+  ihclForms,
+  details,
+  loyalty,
+  ihclcore,
+  destinations,
 ];
 
 export const featureDefinition: FeatureSchemaDefinition =

@@ -78,7 +78,7 @@ export default function placeholder({
                 name: "value",
                 title: "Value",
                 type: "string",
-              },
+              }, 
             ],
             preview: {
               select: {
@@ -89,6 +89,16 @@ export default function placeholder({
           },
         ],
         group: "main",
+      },
+      {
+        name: "primaryAction",
+        title: "Primary Action",
+        type: "navigationItem",
+      },
+      {
+        name: "secondaryAction",
+        title: "Secondary Action",
+        type: "navigationItem",
       },
       {
         name: "metadata",

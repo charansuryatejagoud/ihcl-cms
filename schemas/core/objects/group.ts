@@ -1,6 +1,7 @@
 import { IoApps, IoLayers as Icon, IoSettings } from "react-icons/io5";
 import { SchemaItem, VariantDefinition } from "../../types";
 import { hiddenField } from "../../shared-utils";
+import CustomText from "../../../components/custom-text/index";
 
 export const groupPreview = {
   select: {
@@ -19,7 +20,6 @@ export const groupPreview = {
     };
   },
 };
-
 export default function group({
   variants,
   items,
@@ -31,10 +31,7 @@ export default function group({
     name: "group",
     title: "Group",
     type: "object",
-    initialValue: {
-      hasAllLink: false,
-    },
-
+    initialValue: { hasAllLink: false },
     icon: Icon,
     groups: [
       { name: "main", title: "Main", icon: IoApps },
@@ -46,93 +43,10 @@ export default function group({
         group: "configuration",
       },
       {
-        name: "isSearchFieldForFilter",
-        title: "Is Search Field For Filter",
-        type: "boolean",
-        initialValue: false,
-      },
-      {
-        name: "isDropDown",
-        title: "Is Drop Down",
-        type: "boolean",
-        initialValue: false,
-      },
-      {
-        name: "isComponentFullWidth",
-        title: "Is Component Full Width",
-        type: "boolean",
-        initialValue: false,
-      },
-      {
-        title: "Show Divider For Title",
-        name: "showDividerForTitle",
-        type: "boolean",
-        initialValue: true,
-        document:
-          "It shows the title divider if set true it returns no divider ",
-        group: "main",
-      },
-      {
-        name: "isSearchEnabled",
-        title: "Is Search Enabled",
-        type: "boolean",
-        initialValue: false,
-        group: "main",
-      },
-
-      {
-        name: "componentTopPadding",
-        title: "Component Top Padding",
-        type: "string",
-        group: "main",
-      },
-      {
-        name: "componentBottomPadding",
-        title: "Component Bottom Padding",
-        type: "string",
-        group: "main",
-      },
-      {
-        name: "titleColor",
-        title: "Title Color",
-        type: "string",
-        group: "main",
-        description: "Ït is required for website",
-      },
-      {
-        name: "bgColor",
-        title: "Bg Color",
-        type: "string",
-        group: "main",
-      },
-      {
-        name: "row",
-        title: "Row",
-        type: "number",
-      },
-      {
-        name: "column",
-        title: "Column",
-        type: "number",
-      },
-      {
-        name: "characterLimitForGroupDescription",
-        title: "Character Limit For Group Description",
-        type: "number",
-        description:
-          "The character limit for subTitle in group for displaying more button",
-      },
-      {
-        name: "characterLimitForItemDescription",
-        title: "Character Limit For Item Description ",
-        type: "number",
-        description:
-          "The character limit for description in group for displaying more button",
-      },
-      {
         name: "title",
         title: "Title",
         type: "string",
+        inputComponent: CustomText,
         group: "main",
       },
       {
@@ -145,19 +59,6 @@ export default function group({
         name: "heading",
         title: "Heading",
         type: "string",
-      },
-      {
-        name: "titleAlignment",
-        title: "Title Alignment",
-        type: "string",
-        initialValue: "regular",
-        options: {
-          list: [
-            { title: "regular", value: "regular" },
-            { title: "center", value: "center" },
-          ],
-        },
-        group: "main",
       },
       {
         name: "variant",
@@ -194,19 +95,6 @@ export default function group({
         type: "navigationItem",
       },
       {
-        name: "hasAllLink",
-        title: "Allow More link",
-        type: "boolean",
-        group: "main",
-      },
-      {
-        name: "allLink",
-        title: "See all",
-        type: "link",
-        hidden: ({ parent }) => !parent?.hasAllLink,
-        group: "main",
-      },
-      {
         name: "hasAlternateAllLink",
         title: "Allow alternate More link",
         type: "boolean",
@@ -223,6 +111,32 @@ export default function group({
           collapsed: true,
         },
       },
+      // uiConfiguration([
+      //   {
+      //     name: "childAspectRatio",
+      //     title: "Child Aspect Ratio",
+      //     type: "number",
+      //     initialValue: 1.0,
+      //   },
+      //   {
+      //     name: "widthFactor",
+      //     title: "Width Factor",
+      //     description:
+      //       "Width factor wrt device screen width (widthFactor = ScreenWidth / itemWidth)",
+      //     type: "number",
+      //     initialValue: 1.0,
+      //   },
+      //   verticalPadding,
+      //   {
+      //     name: "separatorSpacing",
+      //     title: "Separator Spacing",
+      //     type: "number",
+      //     initialValue: 8.0,
+      //     options: {
+      //       list: [0, 4, 8, 12, 16, 24, 32, 40, 48],
+      //     },
+      //   },
+      // ]),
       {
         name: "items",
         title: "Items",
@@ -230,12 +144,12 @@ export default function group({
         of: items,
         group: "main",
       },
-      {
-        name: "metadata",
-        type: "metadata",
-        title: "Metadata",
-        group: "configuration",
-      },
+      // {
+      //   name: "metadata",
+      //   type: "metadata",
+      //   title: "Metadata",
+      //   group: "configuration",
+      // },
     ],
     preview: groupPreview,
   };

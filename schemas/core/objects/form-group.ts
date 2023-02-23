@@ -26,18 +26,6 @@ export default {
       type: "string",
     },
     {
-      name: "inputList",
-      title: "InputList",
-      type: "array",
-      of: [
-        {
-          name: "input",
-          title: "Input Field",
-          type: "formGroup.inputObject",
-        },
-      ],
-    },
-    {
       name: "footer",
       title: "Footer text",
       type: "string",
