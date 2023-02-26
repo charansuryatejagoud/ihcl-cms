@@ -14,6 +14,7 @@ export const ihclForms: FeatureSchemaDefinition = {
     ],
     dialog:[
         {title:"[ihclForms] Login Form With Multiple Tabs",value:"login-form-with-multiple-tabs"}
-    ]
+    ],
+
 }
 }
