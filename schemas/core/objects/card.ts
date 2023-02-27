@@ -80,8 +80,12 @@ export default function card(props: Props) {
       {
         title: "Content",
         name: "content",
-        type: "blockContent",
-        group: "main",
+        type: "array",
+        of:[
+          {
+            type:"blockSection"
+          }
+        ]
       },
       {
         name: "ctaLabel",

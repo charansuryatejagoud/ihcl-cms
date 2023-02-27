@@ -20,16 +20,6 @@ export default {
       type: "string",
     },
     {
-      name: "key",
-      title: "Key",
-      type: "string",
-    },
-    {
-      name: "value",
-      title: "Value",
-      type: "string",
-    },
-    {
       name:"bgColor",
       title:"Bg Color",
       type:"string"
