@@ -95,11 +95,11 @@ export const ihclcore: FeatureSchemaDefinition = {
       },
       {
         title: "Location Manifest",
-        value: "ihcl.core.group.group.location-manifest",
+        value: "ihcl.core.group.group-location-manifest",
       },
       {
         title: "Location Manifest Item",
-        value: "ihcl.core.group.group.location-manifest-item",
+        value: "ihcl.core.group.group-location-manifest-item",
       },
       {
         title: "Group With Sectional Tabs",
@@ -147,7 +147,7 @@ export const ihclcore: FeatureSchemaDefinition = {
       },
       {
         title: "Carousel With Tabs",
-        value: "ihcl.core.group-carousel-with-tabs",
+        value: "ihcl.core.group.carousel-with-tabs",
       },
     ],
     card: [
@@ -200,7 +200,7 @@ export const ihclcore: FeatureSchemaDefinition = {
         title: "Image Or Video With Full Width",
         value: "ihcl.core.card.image-or-video-with-full-width",
       },
-      { 
+      {
         title: "Social Media Square Card",
         value: "ihcl.core.card.social-media-square-card",
       },
@@ -224,11 +224,7 @@ export const ihclcore: FeatureSchemaDefinition = {
     ],
     nudge: [
       { title: "Default Nudge", value: "ihcl.core.nudge.default" },
-      {
-        title: "Nudge With Action",
-        value: "ihcl.core.nudge.nudge-with-action",
-      },
-      { title: "Nudge Dual Action", value: "ihcl.core.nudge.dual-action" },
+
       { title: "Banner Nudge", value: "ihcl.core.nudge.banner" },
       { title: "Open Url Nudge", value: "ihcl.core.nudge.open-url" },
       { title: "Pincode Nudge", value: "ihcl.core.nudge.pincode" },
