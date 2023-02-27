@@ -17,10 +17,6 @@ export const details: FeatureSchemaDefinition = {
         value: "details.group.group-with-maps",
       },
       {
-        title: "[details] 3 Card Carousel",
-        value: "details.group.3-card-carousel",
-      },
-      {
         title: "[details] Carousel With side Text Card",
         value: "details.group.carousel-with-side-text-card",
       },  
@@ -44,10 +40,10 @@ export const details: FeatureSchemaDefinition = {
         title: "[details] Group With Card right Media Left Content",
         value: "details.group.group-with-card-right-media-left-content-aspect-ratio-2:4",
       },
-      // {
-      //   title: "Group with Media",
-      //   value: "details.group.group-with-media",
-      // },
+      {
+        title: "[details] Group with Full Width Media",
+        value: "details.group.group-with-full-width-media",
+      },
       {title:"[details] Navigation Tabs",value:"details.group.navigation-tabs"}
     ],
     card: [
