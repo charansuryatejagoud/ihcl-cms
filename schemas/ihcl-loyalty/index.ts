@@ -42,6 +42,11 @@ export const loyalty: FeatureSchemaDefinition = {
         title: "[loyalty] Card With Right Aligned Carousel",
         value: "loyalty.card-with-right-aligned-carousel",
       },
+      {
+        title: "[loyalty] Card With Group Of Gift Items",
+        value: "loyalty.card-with-group-of-gift-items",
+      },
+
 
     ],
     nudge: [
