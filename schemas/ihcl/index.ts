@@ -149,12 +149,12 @@ export const ihclcore: FeatureSchemaDefinition = {
         title: "Carousel With Tabs",
         value: "ihcl.core.group.carousel-with-tabs",
       },
+      {
+        title: "Carousel Transparent 3 cards",
+        value: "ihcl.core.group.carousel-transparent-3-cards",
+      },
     ],
     card: [
-      {
-        title: "Single Item",
-        value: "ihcl.core.card.single-item",
-      },
       {
         title: "Card With Focused Title",
         value: "ihcl.core.card.card-with-focused-title",
@@ -174,10 +174,7 @@ export const ihclcore: FeatureSchemaDefinition = {
         title: "Card With Description Actions",
         value: "ihcl.core.card.card-with-description-actions",
       },
-      {
-        title: "Card With Combined Image Button",
-        value: "ihcl.core.card.image-aligned-button",
-      },
+
       {
         title: "[split cards] Card With Aspect Ratio (1:2) ",
         value: "ihcl.core.card.card-with-aspect-ratio-of-1:2",
