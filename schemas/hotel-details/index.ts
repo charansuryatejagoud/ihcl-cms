@@ -1,4 +1,3 @@
-
 import { FeatureSchemaDefinition } from "schemas/types";
 
 export const details: FeatureSchemaDefinition = {
@@ -19,32 +18,43 @@ export const details: FeatureSchemaDefinition = {
       {
         title: "[details] Carousel With side Text Card",
         value: "details.group.carousel-with-side-text-card",
-      },  
+      },
       {
         title: "[details] Group With 2 Column Cards Grid",
         value: "details.group.group-with-2-column-cards-grid",
       },
       {
         title: "[details] Group With Carousel-Card Left Media Right Content",
-        value: "details.group.group-with-carousel-card-left-media-right-content-aspect-ratio-2:4",
+        value:
+          "details.group.group-with-carousel-card-left-media-right-content-aspect-ratio-2:4",
       },
       {
         title: "[details] Group With Card Left Media Right Content",
-        value: "details.group.group-with-card-left-media-right-content-aspect-ratio-2:4",
+        value:
+          "details.group.group-with-card-left-media-right-content-aspect-ratio-2:4",
       },
       {
         title: "[details] Group With Carousel- Card right Media Left Content",
-        value: "details.group.group-with-carousel-card-right-media-left-content-aspect-ratio-2:4",
+        value:
+          "details.group.group-with-carousel-card-right-media-left-content-aspect-ratio-2:4",
       },
       {
         title: "[details] Group With Card right Media Left Content",
-        value: "details.group.group-with-card-right-media-left-content-aspect-ratio-2:4",
+        value:
+          "details.group.group-with-card-right-media-left-content-aspect-ratio-2:4",
       },
       {
         title: "[details] Group with Full Width Media",
         value: "details.group.group-with-full-width-media",
       },
-      {title:"[details] Navigation Tabs",value:"details.group.navigation-tabs"}
+      {
+        title: "[details] Navigation Tabs",
+        value: "details.group.navigation-tabs",
+      },
+      {
+        title: "[details] Tab Dropdown Selector",
+        value: "details.group.tab-dropdown-selector",
+      },
     ],
     card: [
       {
@@ -65,15 +75,17 @@ export const details: FeatureSchemaDefinition = {
       },
       {
         title: "[details] Card With  Left Media Right Content",
-        value: "details.card.card-with-left-media-right-content-aspect-ratio-2:4",
+        value:
+          "details.card.card-with-left-media-right-content-aspect-ratio-2:4",
       },
       {
         title: "[details] Card With  Right Media Left Content",
-        value: "details.card.card-with-right-media-left-content-aspect-ratio-2:4",
+        value:
+          "details.card.card-with-right-media-left-content-aspect-ratio-2:4",
       },
     ],
     banner: [],
-    dialog:[
+    dialog: [
       { title: "[details] Image Gallery", value: "details.image-gallery" },
       { title: "[details] Venue Enquiry", value: "details.venue-enquiry" },
       { title: "[details] Event Enquiry", value: "details.event-enquiry" },
@@ -83,6 +95,6 @@ export const details: FeatureSchemaDefinition = {
         title: "[details] Gallery With Carousel",
         value: "details.gallery-with-carousel",
       },
-    ]
+    ],
   },
 };
