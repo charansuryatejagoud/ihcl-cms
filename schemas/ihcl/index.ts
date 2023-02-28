@@ -152,10 +152,6 @@ export const ihclcore: FeatureSchemaDefinition = {
     ],
     card: [
       {
-        title: "Single Item",
-        value: "ihcl.core.card.single-item",
-      },
-      {
         title: "Card With Focused Title",
         value: "ihcl.core.card.card-with-focused-title",
       },
