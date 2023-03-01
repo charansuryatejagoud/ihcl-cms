@@ -14,8 +14,8 @@ export const ihclForms: FeatureSchemaDefinition = {
     ],
     card: [
       {
-        title: "[ihclForms] Image with Tile",
-        value: "ihclforms.card.image-with-tile",
+        title: "[ihclForms] Image with Title",
+        value: "ihclforms.card.image-with-title",
       },
     ],
     placeholder: [
