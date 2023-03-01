@@ -56,8 +56,8 @@ export const details: FeatureSchemaDefinition = {
         value: "details.group.tab-dropdown-selector",
       },
       {
-        title: "[details] Group-With-Image-Filter-Buttons",
-        value: "details.group.award-card",
+        title: "[details] Center Card Carousel",
+        value: "details.group.center-card-carousel",
       },
     ],
     card: [
@@ -87,7 +87,10 @@ export const details: FeatureSchemaDefinition = {
         value:
           "details.card.card-with-right-media-left-content-aspect-ratio-2:4",
       },
-      
+      {
+        title: "[details] Card with Left Align Content",
+        value: "details.card.left-align-content",
+      },
     ],
     banner: [],
     dialog: [
