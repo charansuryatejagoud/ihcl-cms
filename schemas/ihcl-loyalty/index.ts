@@ -23,6 +23,10 @@ export const loyalty: FeatureSchemaDefinition = {
       { title: "[loyalty] 3 Row Grid", value: "loyalty.3-row-grid" },
       { title: "[loyalty] 2 Card Carousel", value: "loyalty.2-card-carousel" },
       {title: "[loyalty] Comperative Specifications", value: "loyalty.group-with-comperative-specifications"},
+      {
+        title: "[loyalty] Group With Group Of Gift Items Right Content",
+        value: "loyalty.group.group-of-gift-items-right-content",
+      },
     ],
     card: [
       { title: "[loyalty] Text on Image", value: "loyalty.text-on-image" },
@@ -45,6 +49,14 @@ export const loyalty: FeatureSchemaDefinition = {
       {
         title: "[loyalty] Card With Group Of Gift Items",
         value: "loyalty.card-with-group-of-gift-items",
+      },
+      {
+        title: "[loyalty] Card With Group Of Gift Items Right Content",
+        value: "loyalty.card.card-with-group-of-gift-items-right-content",
+      },
+      {
+        title: "[loyalty] Card With Hotel Details ",
+        value: "loyalty.card.card-with-hotel-details",
       },
 
 

@@ -55,6 +55,10 @@ export const details: FeatureSchemaDefinition = {
         title: "[details] Tab Dropdown Selector",
         value: "details.group.tab-dropdown-selector",
       },
+      {
+        title: "[details] Group-With-Image-Filter-Buttons",
+        value: "details.group.award-card",
+      },
     ],
     card: [
       {
@@ -83,6 +87,7 @@ export const details: FeatureSchemaDefinition = {
         value:
           "details.card.card-with-right-media-left-content-aspect-ratio-2:4",
       },
+      
     ],
     banner: [],
     dialog: [
