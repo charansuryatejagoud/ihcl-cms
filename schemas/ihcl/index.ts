@@ -82,14 +82,6 @@ export const ihclcore: FeatureSchemaDefinition = {
         value: "ihcl.core.group.images-with-single-column-grid",
       },
       {
-        title: "Media With Single Image",
-        value: "ihcl.core.group.media-with-single-image",
-      },
-      {
-        title: "Carousal With Single Media",
-        value: "ihcl.core.group.carousal-with-single-media",
-      },
-      {
         title: "Group With Carousel",
         value: "ihcl.core.group.group-with-carousel",
       },
