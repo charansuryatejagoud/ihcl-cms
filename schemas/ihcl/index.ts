@@ -89,16 +89,8 @@ export const ihclcore: FeatureSchemaDefinition = {
         value: "ihcl.core.group.group-with-filter-buttons",
       },
       {
-        title: "Images WithS Single Column Grid",
+        title: "Images With Single Column Grid",
         value: "ihcl.core.group.images-with-single-column-grid",
-      },
-      {
-        title: "Media With Single Image",
-        value: "ihcl.core.group.media-with-single-image",
-      },
-      {
-        title: "Carousal With Single Media",
-        value: "ihcl.core.group.carousal-with-single-media",
       },
       {
         title: "Group With Carousel",
@@ -164,12 +156,12 @@ export const ihclcore: FeatureSchemaDefinition = {
         title: "8:4 Ratio Grid With only two items",
         value: "ihcl.core.group.8-4-ratio-grid-with-only-two-items",
       },
+      {
+        title: "Carousel Transparent 3 cards",
+        value: "ihcl.core.group.carousel-transparent-3-cards",
+      },
     ],
     card: [
-      {
-        title: "Single Item",
-        value: "ihcl.core.card.single-item",
-      },
       {
         title: "Card With Focused Title",
         value: "ihcl.core.card.card-with-focused-title",
@@ -189,10 +181,7 @@ export const ihclcore: FeatureSchemaDefinition = {
         title: "Card With Description Actions",
         value: "ihcl.core.card.card-with-description-actions",
       },
-      {
-        title: "Card With Combined Image Button",
-        value: "ihcl.core.card.image-aligned-button",
-      },
+
       {
         title: "[split cards] Card With Aspect Ratio (1:2) ",
         value: "ihcl.core.card.card-with-aspect-ratio-of-1:2",
@@ -236,6 +225,7 @@ export const ihclcore: FeatureSchemaDefinition = {
     ],
     placeholder: [
       { title: "Toll-Free-Numbers", value: "ihcl.core.toll-free-numbers" },
+      { title: "Search-Result-Component", value: "ihcl.core.search-result-component" }
     ],
     nudge: [
       { title: "Default Nudge", value: "ihcl.core.nudge.default" },

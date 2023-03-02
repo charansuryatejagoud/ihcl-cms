@@ -19,7 +19,6 @@ export default {
       name: "variant",
       title: "Variant",
       type: "string",
-
       group: "main",
       options: {
         list: [...cardAssets],
@@ -32,12 +31,11 @@ export default {
       options: {
         list: [...cardAssets],
       },
-
       group: "main",
     },
     {
       name: "image",
-      title: " Image",
+      title: "Image",
       type: "image",
       group: "main",
     },

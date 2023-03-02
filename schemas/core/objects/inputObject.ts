@@ -29,11 +29,6 @@ export default {
         type:"boolean",
         initialValue:false,
       },
-    //   {
-    //     name: "",
-    //     title: "",
-    //     type: ""
-    //   },
       {
         name: "errorList",
         title: "Errors List",

@@ -26,6 +26,14 @@ export const loyalty: FeatureSchemaDefinition = {
         title: "[loyalty] Comperative Specifications",
         value: "loyalty.group-with-comperative-specifications",
       },
+      {
+        title: "[loyalty] Group With Group Of Gift Items Right Content",
+        value: "loyalty.group.group-of-gift-items-right-content",
+      },
+      {
+        title: "[loyalty] Group with Card Media Content Positions",
+        value: "loyalty.group.card-media-content-positions",
+      },
     ],
     card: [
       { title: "[loyalty] Text on Image", value: "loyalty.text-on-image" },
@@ -44,6 +52,14 @@ export const loyalty: FeatureSchemaDefinition = {
       {
         title: "[loyalty] Card With Right Aligned Carousel",
         value: "loyalty.card-with-right-aligned-carousel",
+      },
+      {
+        title: "[loyalty] Card With Group Of Gift Items Right Content",
+        value: "loyalty.card.card-with-group-of-gift-items-right-content",
+      },
+      {
+        title: "[loyalty] Card With Hotel Details ",
+        value: "loyalty.card.card-with-hotel-details",
       },
     ],
     nudge: [
@@ -68,7 +84,13 @@ export const loyalty: FeatureSchemaDefinition = {
         value: "loyalty.nudge.rounded.mail-action",
       },
     ],
-    dialog: [{ title: "[loyalty] Manage Card", value: "manage-card" }],
+    dialog: [
+      { title: "[loyalty] Manage Card", value: "manage-card" },
+      {
+        title: "[loyalty] Enquire Bulk Gift Card",
+        value: "enquire-bulk-gift-card",
+      },
+    ],
     stepper: [
       {
         title: "[loyalty] E-Gift Card Flow",

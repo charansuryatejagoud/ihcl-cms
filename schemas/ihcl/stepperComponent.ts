@@ -10,12 +10,17 @@ const stepperItem = {
   name: "stepperItem",
   title: "Stepper Item",
   type: "object",
-  icon:MdConfirmationNumber,
+  icon: MdConfirmationNumber,
   fields: [
     {
       name: "title",
       title: "Title",
       type: "string",
+    },
+    {
+      name: "stepNo",
+      title: "Step No",
+      type: "number",
     },
     {
       name: "id",

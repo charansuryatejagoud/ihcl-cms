@@ -107,6 +107,11 @@ export default function group({
         group: "main",
       },
       {
+        name:"isComponentFullWidth",
+        title:"Is Component Full Width",
+        type:"boolean"
+      },
+      {
         name: "largeVariant",
         title: "Large Variant",
         type: "string",
