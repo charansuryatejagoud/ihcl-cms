@@ -84,7 +84,18 @@ export const loyalty: FeatureSchemaDefinition = {
         value: "loyalty.nudge.rounded.mail-action",
       },
     ],
-    dialog: [{ title: "[loyalty] Manage Card", value: "manage-card" },
-  {title:"[loyalty] Enquire Bulk Gift Card",value:"enquire-bulk-gift-card"}],
+    dialog: [
+      { title: "[loyalty] Manage Card", value: "manage-card" },
+      {
+        title: "[loyalty] Enquire Bulk Gift Card",
+        value: "enquire-bulk-gift-card",
+      },
+    ],
+    stepper: [
+      {
+        title: "[loyalty] E-Gift Card Flow",
+        value: "loyalty.stepper.e-gift-card-flow",
+      },
+    ],
   },
 };
