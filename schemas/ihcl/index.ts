@@ -210,6 +210,7 @@ export const ihclcore: FeatureSchemaDefinition = {
     ],
     placeholder: [
       { title: "Toll-Free-Numbers", value: "ihcl.core.toll-free-numbers" },
+      { title: "Search-Result-Component", value: "ihcl.core.search-result-component" }
     ],
     nudge: [
       { title: "Default Nudge", value: "ihcl.core.nudge.default" },
