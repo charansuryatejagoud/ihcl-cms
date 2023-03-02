@@ -59,7 +59,6 @@ export const loyalty: FeatureSchemaDefinition = {
         value: "loyalty.card.card-with-hotel-details",
       },
 
-
     ],
     nudge: [
       {
@@ -84,6 +83,7 @@ export const loyalty: FeatureSchemaDefinition = {
       },
     
     ],
-    dialog: [{ title: "[loyalty] Manage Card", value: "manage-card" }],
+    dialog: [{ title: "[loyalty] Manage Card", value: "manage-card" },
+  {title:"[loyalty] Enquire Bulk Gift Card",value:"enquire-bulk-gift-card"}],
   },
 };

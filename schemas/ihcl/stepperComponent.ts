@@ -26,6 +26,11 @@ export default {
       type: "string",
     },
     {
+      name:"stepNo",
+      title:"Step No",
+      type:"number"
+    },
+    {
       name: "activeStep",
       title: "Active Step",
       type: "boolean",
