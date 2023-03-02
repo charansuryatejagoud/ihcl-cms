@@ -3,6 +3,33 @@ import { SchemaItem, VariantDefinition } from "../../types";
 import { hiddenField } from "../../shared-utils";
 import CustomText from "../../../components/custom-text/index";
 
+const AlignmentVariant = [
+  {
+    title: "Regular",
+    value: "",
+  },
+  {
+    title: "Center",
+    value: "",
+  },
+  {
+    title: "Regular with two row title",
+    value: "",
+  },
+  {
+    title: "Regular with one row title",
+    value: "",
+  },
+  {
+    title: "Center with two row title",
+    value: "",
+  },
+  {
+    title: "Center with multi line title",
+    value: "",
+  },
+];
+
 export const groupPreview = {
   select: {
     title: "title",
@@ -59,6 +86,16 @@ export default function group({
         name: "heading",
         title: "Heading",
         type: "string",
+      },
+      {
+        name: "alignmentVariant",
+        title: "Alignment Variant",
+        type: "string",
+        description: "This variant is for Title and Subtitle alignment",
+        options: {
+          list: AlignmentVariant,
+        },
+        group: "main",
       },
       {
         name: "variant",

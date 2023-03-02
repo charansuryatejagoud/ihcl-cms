@@ -22,7 +22,10 @@ export const loyalty: FeatureSchemaDefinition = {
       },
       { title: "[loyalty] 3 Row Grid", value: "loyalty.3-row-grid" },
       { title: "[loyalty] 2 Card Carousel", value: "loyalty.2-card-carousel" },
-      {title: "[loyalty] Comperative Specifications", value: "loyalty.group-with-comperative-specifications"},
+      {
+        title: "[loyalty] Comperative Specifications",
+        value: "loyalty.group-with-comperative-specifications",
+      },
     ],
     card: [
       { title: "[loyalty] Text on Image", value: "loyalty.text-on-image" },
@@ -42,7 +45,6 @@ export const loyalty: FeatureSchemaDefinition = {
         title: "[loyalty] Card With Right Aligned Carousel",
         value: "loyalty.card-with-right-aligned-carousel",
       },
-
     ],
     nudge: [
       {
@@ -65,8 +67,13 @@ export const loyalty: FeatureSchemaDefinition = {
         title: "[loyalty] Nudge With Mail Action",
         value: "loyalty.nudge.rounded.mail-action",
       },
-    
     ],
     dialog: [{ title: "[loyalty] Manage Card", value: "manage-card" }],
+    stepper: [
+      {
+        title: "[loyalty] E-Gift Card Flow",
+        value: "loyalty.stepper.e-gift-card-flow",
+      },
+    ],
   },
 };

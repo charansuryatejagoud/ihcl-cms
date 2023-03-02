@@ -10,14 +10,16 @@ import { loyalty } from "./ihcl-loyalty";
 import { details } from "./hotel-details";
 import { ihclcore } from "./ihcl";
 import { destinations } from "./destinations";
+import { bookings } from "./bookings";
 
 const features: FeatureSchemaDefinition[] = [
   core,
+  ihclcore,
   ihclForms,
   details,
   loyalty,
-  ihclcore,
   destinations,
+  bookings,
 ];
 
 export const featureDefinition: FeatureSchemaDefinition =

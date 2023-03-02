@@ -7,15 +7,14 @@ import header from "./header";
 import { imageAsset } from "./imageAsset";
 import richText from "./richText";
 import specification from "./specification";
-import stepperComponent from "./stepperComponent";
 import textContainer from "./textContainer";
 import { videoAsset } from "./videoAsset";
+import cfReference from "./cfReference";
 export const ihclcore: FeatureSchemaDefinition = {
   schemas: [
     videoAsset,
     imageAsset,
     richText,
-    stepperComponent,
     header,
     footer,
     banner,
@@ -23,6 +22,7 @@ export const ihclcore: FeatureSchemaDefinition = {
     comparator,
     specification,
     comparative,
+    cfReference,
   ],
   pageItems: [
     { type: "banner" },
@@ -32,6 +32,9 @@ export const ihclcore: FeatureSchemaDefinition = {
     { type: "motor.insurance.customText" },
     { type: "comparator" },
     { type: "tabLinks" },
+    {
+      type: "stepper",
+    },
   ],
   groupItems: [
     { type: "richText" },
@@ -39,12 +42,20 @@ export const ihclcore: FeatureSchemaDefinition = {
       type: "stepper",
     },
     { type: "comparator" },
+    {
+      type: "cfReference",
+    },
+    { type: "tabLinks" },
   ],
 
   variants: {
     group: [
       {
-        title: "Group With Split Cards ",
+        title: "Default",
+        value: "ihcl.core.group.default",
+      },
+      {
+        title: "Group With Split Cards",
         value: "ihcl.core.group.group-with-split-cards",
       },
       {
@@ -148,6 +159,10 @@ export const ihclcore: FeatureSchemaDefinition = {
       {
         title: "Carousel With Tabs",
         value: "ihcl.core.group.carousel-with-tabs",
+      },
+      {
+        title: "8:4 Ratio Grid With only two items",
+        value: "ihcl.core.group.8-4-ratio-grid-with-only-two-items",
       },
     ],
     card: [
