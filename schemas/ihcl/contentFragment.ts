@@ -157,7 +157,7 @@ export const contentFragment = (props: FragmentProps) => {
         name: "items",
         type: "array",
         of: props.items,
-        hidden: ({ parent }) => !parent?.isNestedFragement,
+        hidden: ({ parent }) => !parent?.isNestedFragment,
       },
       {
         name: "documents",
@@ -208,8 +208,8 @@ export const contentFragment = (props: FragmentProps) => {
         type: "navigationItem",
       },
       {
-        title: "Secoundary Action",
-        name: "secoundaryAction",
+        title: "Secondary Action",
+        name: "secondaryAction",
         type: "navigationItem",
       },
     ],

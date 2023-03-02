@@ -20,6 +20,11 @@ export function tabLinks(props: TabLinksProps) {
         type: "string",
       },
       {
+        name: "image",
+        title: "Image",
+        type: "image",
+      },
+      {
         name: "variant",
         title: "Variant",
         type: "string",

@@ -6,27 +6,27 @@ import CustomText from "../../../components/custom-text/index";
 const AlignmentVariant = [
   {
     title: "Regular",
-    value: "",
+    value: "regular",
   },
   {
     title: "Center",
-    value: "",
+    value: "center",
   },
   {
-    title: "Regular with two row title",
-    value: "",
+    title: "Regular With Two Row Title",
+    value: "regular-with-two-row-title",
   },
   {
-    title: "Regular with one row title",
-    value: "",
+    title: "Regular With One Row Title",
+    value: "regular-with-one-row-title",
   },
   {
-    title: "Center with two row title",
-    value: "",
+    title: "Center With Two Row Title",
+    value: "center-with-two-row-title",
   },
   {
-    title: "Center with multi line title",
-    value: "",
+    title: "Center With Multi Line Title",
+    value: "center-with-multi-line-title",
   },
 ];
 
@@ -107,9 +107,9 @@ export default function group({
         group: "main",
       },
       {
-        name:"isComponentFullWidth",
-        title:"Is Component Full Width",
-        type:"boolean"
+        name: "isComponentFullWidth",
+        title: "Is Component Full Width",
+        type: "boolean",
       },
       {
         name: "largeVariant",
