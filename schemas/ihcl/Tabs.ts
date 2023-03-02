@@ -1,16 +1,16 @@
 import { SchemaItem, VariantDefinition } from "../types";
 import { IoTabletLandscape, IoSquare } from "react-icons/io5";
-interface TabLinksProps {
+interface TabsProps {
   items: SchemaItem[];
   variants: VariantDefinition[];
 }
-interface TabsProps {
+interface TabProps {
   items: SchemaItem[];
 }
-export function tabLinks(props: TabLinksProps) {
+export function tabs(props: TabsProps) {
   return {
-    name: "tabLinks",
-    title: "Tab Links",
+    name: "tabsComponent",
+    title: "Tabs",
     type: "object",
     icon: IoTabletLandscape,
     fields: [
@@ -33,17 +33,17 @@ export function tabLinks(props: TabLinksProps) {
         },
       },
       {
-        name: "items",
-        title: "Items",
+        name: "tabs",
+        title: "Tabs",
         type: "array",
-        of: [{ type: "tabs" }],
+        of: [{ type: "tab" }],
       },
     ],
     preview: {
       select: {
         title: "title",
         variant: "variant",
-        items: "items",
+        items: "tabs",
       },
       prepare({ title, variant, items }) {
         const count = items?.length || 0;
@@ -57,10 +57,10 @@ export function tabLinks(props: TabLinksProps) {
   };
 }
 
-export function tabs(props: TabsProps) {
+export function tab(props: TabProps) {
   return {
-    name: "tabs",
-    title: "Tabs",
+    name: "tab",
+    title: "Tab",
     type: "object",
     icon: IoSquare,
     fields: [
@@ -70,8 +70,8 @@ export function tabs(props: TabsProps) {
         type: "string",
       },
       {
-        name: "tabLinks",
-        title: "TabLinks",
+        name: "tabItems",
+        title: "Tab Items",
         type: "array",
         of: props.items,
       },
@@ -79,7 +79,7 @@ export function tabs(props: TabsProps) {
     preview: {
       select: {
         title: "title",
-        items: "tabLinks",
+        items: "tabItems",
       },
       prepare({ title, items }) {
         const count = items?.length || 0;
