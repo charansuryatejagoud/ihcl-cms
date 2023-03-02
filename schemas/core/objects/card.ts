@@ -155,6 +155,38 @@ export default function card(props: Props) {
           parent?.largeVariant !== "component",
       },
       {
+        name: "parameterMap",
+        title: "Parameter Map",
+        description: "Parameters as a set of key-value pairs",
+        type: "array",
+        of: [
+          {
+            type: "object",
+            title: "Parameter",
+            options: { columns: 2 },
+            fields: [
+              {
+                name: "key",
+                title: "Key",
+                type: "string",
+              },
+              {
+                name: "value",
+                title: "Value",
+                type: "string",
+              }, 
+            ],
+            preview: {
+              select: {
+                title: "key",
+                subtitle: "value",
+              },
+            },
+          },
+        ],
+        group: "main",
+      },
+      {
         name: "primaryAction",
         title: "Primary Action",
         type: "navigationItem",

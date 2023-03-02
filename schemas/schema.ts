@@ -16,6 +16,8 @@ import section from "./core/objects/section";
 import dataGrid from "./core/objects/dataGrid";
 import { bannerComponents } from "./ihcl/banner";
 import { tabLinks, tabs } from "./ihcl/tabLinks";
+import { contentFragment } from "./ihcl/contentFragment";
+import { stepperComponent } from "./ihcl/stepperComponent";
 
 export default createSchema({
   name: "default",
@@ -62,8 +64,13 @@ export default createSchema({
       variants: featureDefinition.variants.dataGrid,
     }),
     bannerComponents(featureDefinition.pageItems),
-    tabLinks({ items: featureDefinition.groupItems }),
+    tabLinks({ items: featureDefinition.groupItems,variants: featureDefinition.variants.tabs }),
     tabs({ items: featureDefinition.groupItems }),
+    contentFragment({
+      items: featureDefinition.groupItems,
+      variants: featureDefinition.variants.contentFragment,
+    }),
+    stepperComponent({ variants: featureDefinition.variants.stepper }),
     ...featureDefinition.schemas,
   ]),
 });
