@@ -152,10 +152,6 @@ export const ihclcore: FeatureSchemaDefinition = {
         value: "ihcl.core.card.card-with-focused-title",
       },
       {
-        title: "3 Actions With Right Aligned Content Card",
-        value: "ihcl.core.card.3-actions-with-right-aligned-content-card",
-      },
-      {
         title: "Card Ends Aligned Content",
         value: "ihcl.core.card.card-ends-aligned-content",
       },

@@ -1,6 +1,11 @@
-import {IoApps, IoCodeWorking as ParameterMapIcon, IoSend as Icon, IoSettings} from "react-icons/io5";
-import {VariantDefinition} from "../../types";
-import {hiddenField} from "../../shared-utils";
+import {
+  IoApps,
+  IoCodeWorking as ParameterMapIcon,
+  IoSend as Icon,
+  IoSettings,
+} from "react-icons/io5";
+import { VariantDefinition } from "../../types";
+import { hiddenField } from "../../shared-utils";
 
 export default function nudge({ variants }: { variants: VariantDefinition[] }) {
   return {
@@ -53,7 +58,7 @@ export default function nudge({ variants }: { variants: VariantDefinition[] }) {
         options: {
           list: variants,
         },
-        group: "main"
+        group: "main",
       },
       {
         name: "parameterMap",
@@ -129,8 +134,30 @@ export default function nudge({ variants }: { variants: VariantDefinition[] }) {
         name: "icon",
         title: "Icon",
         type: "array",
-        of:[{type:"navigationItem"}],
+        of: [{ type: "navigationItem" }],
         group: "main",
+      },
+      {
+        name: "imageAssets",
+        title: "Image Assets",
+        type: "array",
+        of: [
+          {
+            type: "object",
+            fields: [
+              {
+                name: "primaryImage",
+                title: "Primary Image",
+                type: "image",
+              },
+              {
+                name: "secondaryImage",
+                title: "Secondary Image",
+                type: "image",
+              },
+            ],
+          },
+        ],
       },
       {
         name: "metadata",
