@@ -78,7 +78,7 @@ export const ihclcore: FeatureSchemaDefinition = {
         value: "ihcl.core.group.group-with-filter-buttons",
       },
       {
-        title: "Images WithS Single Column Grid",
+        title: "Images With Single Column Grid",
         value: "ihcl.core.group.images-with-single-column-grid",
       },
       {
