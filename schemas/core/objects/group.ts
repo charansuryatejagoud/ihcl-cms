@@ -21,8 +21,8 @@ const AlignmentVariant = [
     value: "regular-with-one-row-title",
   },
   {
-    title: "Center With Two Row Title",
-    value: "center-with-two-row-title",
+    title: "Center With One Row Title",
+    value: "center-with-ono-row-title",
   },
   {
     title: "Center With Multi Line Title",
