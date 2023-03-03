@@ -12,6 +12,21 @@ export function tabLinks({ items }: { items: SchemaItem[] }) {
         type: "string",
       },
       {
+        name: "subtitle",
+        title: "Subtitle",
+        type: "string",
+      },
+      {
+        name: "logo",
+        title: "Logo",
+        type: "image"
+      },
+      {
+        name: "backgroundImage",
+        title: "Background Image",
+        type: "image",
+      },
+      {
         name: "items",
         title: "Items",
         type: "array",

@@ -61,6 +61,11 @@ export default function group({
         type: "string",
       },
       {
+        name: "logo",
+        title: "Logo",
+        type: "image",
+      },
+      {
         name: "variant",
         title: "Variant",
         type: "string",

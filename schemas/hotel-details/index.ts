@@ -59,6 +59,10 @@ export const details: FeatureSchemaDefinition = {
         title: "[details] Center Card Carousel",
         value: "details.group.center-card-carousel",
       },
+      {
+        title: "[details] Carousel with Single Card",
+        value: "details.group.carousel-with-single-card",
+      },
     ],
     card: [
       {
@@ -90,6 +94,10 @@ export const details: FeatureSchemaDefinition = {
       {
         title: "[details] Card with Left Align Content",
         value: "details.card.left-align-content",
+      },
+      {
+        title: "[details] Icons with Title",
+        value: "details.group.icons-with-title",
       },
     ],
     banner: [],
