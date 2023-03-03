@@ -5,14 +5,6 @@ import CustomText from "../../../components/custom-text/index";
 
 const AlignmentVariant = [
   {
-    title: "Regular",
-    value: "regular",
-  },
-  {
-    title: "Center",
-    value: "center",
-  },
-  {
     title: "Regular With Two Row Title",
     value: "regular-with-two-row-title",
   },
