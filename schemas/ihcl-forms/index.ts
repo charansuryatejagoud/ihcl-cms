@@ -4,27 +4,37 @@ import { FeatureSchemaDefinition } from "schemas/types";
 export const ihclForms: FeatureSchemaDefinition = {
   variants: {
     group: [
-      { title: "[ihclForms] Details Form", value: "ihclforms.details-form" },
-      { title: "[ihclForms] Payment Form", value: "ihclforms.payment-form" },
+      { title: "[IHCL Forms] Details Form", value: "ihclforms.details-form" },
+      { title: "[IHCL Forms] Payment Form", value: "ihclforms.payment-form" },
       {
-        title: "[ihclForms] Feedback Form",
+        title: "[IHCL Forms] Feedback Form",
         value: "ihclforms.group.feedback-form",
       },
-      { title: "[ihclForms] Personalize Form", value: "ihclforms.gift-form" },
+      { title: "[IHCL Forms] Personalize Form", value: "ihclforms.gift-form" },
     ],
     card: [
       {
-        title: "[ihclForms] Image with Title",
+        title: "[IHCL Forms] Image with Title",
         value: "ihclforms.card.image-with-title",
+      },
+      {
+        title: "[IHCL Forms] Card Membership Login Form",
+        value: "ihclforms.card.membership-login-form",
       },
     ],
     placeholder: [
-      { title: "[ihclForms] Login Form", value: "ihclforms.login-form" },
+      { title: "[IHCL Forms] Login Form", value: "ihclforms.login-form" },
     ],
     dialog: [
       {
-        title: "[ihclForms] Login Form With Multiple Tabs",
+        title: "[IHCL Forms] Login Form With Multiple Tabs",
         value: "login-form-with-multiple-tabs",
+      },
+    ],
+    tabs: [
+      {
+        title: "[IHCL Forms] SSO Multiple Tabs",
+        value: "ihclforms.sso-multiple-tabs",
       },
     ],
   },
