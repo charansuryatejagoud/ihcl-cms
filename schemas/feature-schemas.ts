@@ -13,11 +13,13 @@ import { destinations } from "./destinations";
 import { bookings } from "./bookings";
 import solarDetails from "./search/searchBodyParams";
 import { search } from "./search";
+import { Authentication } from "./Authentication";
 
 const features: FeatureSchemaDefinition[] = [
   core,
   ihclcore,
   ihclForms,
+  Authentication,
   details,
   loyalty,
   destinations,
