@@ -58,7 +58,7 @@ export const loyalty: FeatureSchemaDefinition = {
         value: "loyalty.card.card-with-group-of-gift-items-right-content",
       },
       {
-        title: "[loyalty] Card With Hotel Details ",
+        title: "[loyalty] Card With Hotel Details",
         value: "loyalty.card.card-with-hotel-details",
       },
     ],
@@ -72,7 +72,7 @@ export const loyalty: FeatureSchemaDefinition = {
         value: "loyalty.imagePreviewNudge",
       },
       {
-        title: "[loyalty] Nudge With Action",
+        title: "[Loyalty] Nudge With Action",
         value: "loyalty.nudge-with-action",
       },
       {

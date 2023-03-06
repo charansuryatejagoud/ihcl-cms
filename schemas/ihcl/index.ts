@@ -59,7 +59,7 @@ export const ihclcore: FeatureSchemaDefinition = {
         value: "ihcl.core.group.group-with-split-cards",
       },
       {
-        title: " Carousel With Back Ground Image",
+        title: "Carousel With Back Ground Image",
         value: "ihcl.core.group.carousel-with-back-ground-image",
       },
       {
@@ -179,7 +179,7 @@ export const ihclcore: FeatureSchemaDefinition = {
       },
 
       {
-        title: "[split cards] Card With Aspect Ratio (1:2) ",
+        title: "[split cards] Card With Aspect Ratio (1:2)",
         value: "ihcl.core.card.card-with-aspect-ratio-of-1:2",
       },
       {

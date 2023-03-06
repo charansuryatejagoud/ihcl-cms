@@ -12,16 +12,7 @@ export const ihclForms: FeatureSchemaDefinition = {
       },
       { title: "[IHCL Forms] Personalize Form", value: "ihclforms.gift-form" },
     ],
-    card: [
-      {
-        title: "[IHCL Forms] Image with Title",
-        value: "ihclforms.card.image-with-title",
-      },
-      {
-        title: "[IHCL Forms] Card Membership Login Form",
-        value: "ihclforms.card.membership-login-form",
-      },
-    ],
+    card: [],
     placeholder: [
       { title: "[IHCL Forms] Login Form", value: "ihclforms.login-form" },
     ],
@@ -31,11 +22,6 @@ export const ihclForms: FeatureSchemaDefinition = {
         value: "login-form-with-multiple-tabs",
       },
     ],
-    tabs: [
-      {
-        title: "[IHCL Forms] SSO Multiple Tabs",
-        value: "ihclforms.sso-multiple-tabs",
-      },
-    ],
+ 
   },
 };

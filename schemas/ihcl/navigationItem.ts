@@ -6,7 +6,7 @@ const buttonVariants = [
   { title: "Light Outlined", value: "light-outlined" },
   { title: "Dark Outlined", value: "dark-outlined" },
   { title: "Link", value: "link" },
-]
+];
 export default {
   name: "navigationItem",
   title: "Navigation Item",
@@ -34,9 +34,7 @@ export default {
       title: "Variant",
       type: "string",
       options: {
-        list: [
-          ...buttonVariants
-        ],
+        list: [...buttonVariants],
       },
     },
     {

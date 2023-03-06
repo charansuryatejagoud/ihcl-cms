@@ -1,10 +1,15 @@
 import { FeatureSchemaDefinition } from "schemas/types";
-
 export const bookings: FeatureSchemaDefinition = {
+  connectedStores:[
+    {
+      title: "[Bookings] Booking Store",
+      value: "bookings.store",
+    },
+  ],
   variants: {
     stepper: [
       {
-        title: "Booking Stepper",
+        title: "[Bookings] Booking Stepper",
         value: "bookings.stepper.default",
       },
     ],
