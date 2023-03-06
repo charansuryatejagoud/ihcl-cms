@@ -179,7 +179,7 @@ export const ihclcore: FeatureSchemaDefinition = {
       },
 
       {
-        title: "[split cards] Card With Aspect Ratio (1:2)",
+        title: "[Split Cards] Card With Aspect Ratio (1:2)",
         value: "ihcl.core.card.card-with-aspect-ratio-of-1:2",
       },
       {
