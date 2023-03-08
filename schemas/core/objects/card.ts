@@ -22,7 +22,7 @@ export default function card(props: Props) {
     title: "Card",
     type: "object",
     icon: Icon,
-    initialValue: { urlType: linkType.internal },
+    initialValue: { urlType: linkType.internal, isMultiBlockContent: false },
     groups: [
       { name: "main", title: "Main", icon: IoApps },
       { name: "configuration", title: "Configuration", icon: IoSettings },
@@ -78,14 +78,26 @@ export default function card(props: Props) {
         group: "main",
       },
       {
+        title: "Is Multi Block Content?",
+        name: "isMultiBlockContent",
+        type: "boolean",
+      },
+      {
         title: "Content",
+        name: "singleContent",
+        type: "blockContent",
+        hidden: ({ parent }) => parent?.isMultiBlockContent,
+      },
+      {
+        title: "Multi Block Contents",
         name: "content",
         type: "array",
-        of:[
+        of: [
           {
-            type:"blockSection"
-          }
-        ]
+            type: "blockSection",
+          },
+        ],
+        hidden: ({ parent }) => !parent?.isMultiBlockContent,
       },
       {
         name: "ctaLabel",
@@ -174,7 +186,7 @@ export default function card(props: Props) {
                 name: "value",
                 title: "Value",
                 type: "string",
-              }, 
+              },
             ],
             preview: {
               select: {

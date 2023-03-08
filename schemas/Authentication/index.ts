@@ -10,8 +10,16 @@ export const Authentication: FeatureSchemaDefinition = {
     ],
     card: [
       {
-        title: "[Authentication] Card Membership Login Form",
+        title: "[Authentication] Membership Login Form",
         value: "authentication.card.membership-login-form",
+      },
+      {
+        title: "[Authentication] Mobile Number Login Form",
+        value: "authentication.card.mobile-number-login-form",
+      },
+      {
+        title: "[Authentication] Email Address Login Form",
+        value: "authentication.card.email-address-login-form",
       },
       {
         title: "[Authentication] Image with Title",
