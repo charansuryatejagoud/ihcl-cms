@@ -160,6 +160,10 @@ export const ihclcore: FeatureSchemaDefinition = {
         title: "Carousel Transparent 3 cards",
         value: "ihcl.core.group.carousel-transparent-3-cards",
       },
+      {
+        title:"Multiple Square Card Carousel",
+        value:"ihcl.core.group.multiple-square-card-carousel"
+      }
     ],
     card: [
       {

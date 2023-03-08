@@ -97,5 +97,11 @@ export const loyalty: FeatureSchemaDefinition = {
         value: "loyalty.stepper.e-gift-card-flow",
       },
     ],
+    placeholder: [
+      {
+        title: " Mobile Number Verification",
+        value: "mobile-number-verification",
+      },
+    ],
   },
 };

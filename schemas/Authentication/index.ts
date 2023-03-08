@@ -1,6 +1,12 @@
 import { FeatureSchemaDefinition } from "schemas/types";
 
 export const Authentication: FeatureSchemaDefinition = {
+  connectedStores: [
+    {
+      title: "[Authentication] Login Store",
+      value: "authentication.login-store",
+    },
+  ],
   variants: {
     group: [
       {
