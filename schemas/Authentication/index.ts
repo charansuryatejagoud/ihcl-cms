@@ -61,5 +61,11 @@ export const Authentication: FeatureSchemaDefinition = {
         value: "authentication.sso-multiple-tabs",
       },
     ],
+    placeholder: [
+      {
+        title: "[Authentication] Mobile Number Verification",
+        value: "authentication.mobile-number-verification",
+      },
+    ],
   },
 };
