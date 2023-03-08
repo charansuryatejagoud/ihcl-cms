@@ -59,6 +59,10 @@ export const details: FeatureSchemaDefinition = {
         title: "[Details] Center Card Carousel",
         value: "details.group.center-card-carousel",
       },
+      {
+        title: "[details] Group With Two Row Box Tabs",
+        value: "details.group.group-with-two-row-box-tabs",
+      },
     ],
     card: [
       {

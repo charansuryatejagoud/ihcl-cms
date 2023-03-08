@@ -132,5 +132,9 @@ export const core: FeatureSchemaDefinition = {
       title: "[Gift Card] GiftCard FormDetails Store",
       value: "core.giftCard-formDetails-store",
     },
+    {
+      title:"[Gift Card] Manage Gift Card",
+      value:"giftCard.manage-gift-card"
+    }
   ],
 };

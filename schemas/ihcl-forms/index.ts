@@ -15,6 +15,7 @@ export const ihclForms: FeatureSchemaDefinition = {
     card: [],
     placeholder: [
       { title: "[IHCL Forms] Login Form", value: "ihclforms.login-form" },
+      
     ],
     dialog: [
       {
