@@ -39,6 +39,10 @@ export const Authentication: FeatureSchemaDefinition = {
         title: "[Authentication] Action Labels",
         value: "authentication.card.action-labels",
       },
+      {
+        title: "[Authentication] Center Aligned content",
+        value: "authentication.card.center-aligned-content",
+      },
     ],
     nudge: [
       {
@@ -59,6 +63,10 @@ export const Authentication: FeatureSchemaDefinition = {
       {
         title: "[Authentication] SSO Multiple Tabs",
         value: "authentication.sso-multiple-tabs",
+      },
+      {
+        title: "[Authentication] Address Tabs",
+        value: "authentication.tabs.address-tabs",
       },
     ],
     placeholder: [

@@ -11,5 +11,19 @@ export const giftCards: FeatureSchemaDefinition = {
       value: "giftCards.manage-gift-card",
     },
   ],
-  variants: {},
+  variants: {
+    tabs: [
+      {
+        title: "[Gift Card] Manage Card Multiple Tabs",
+        value: "giftCards.tabs.manage-card-multiple-tabs",
+      },
+    ],
+    card: [
+      {
+        title: "[Gift Card] Content with Action",
+        value: "giftCards.card.content-with-action",
+      },
+    ],
+    group: [],
+  },
 };
