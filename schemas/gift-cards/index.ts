@@ -20,8 +20,12 @@ export const giftCards: FeatureSchemaDefinition = {
     ],
     card: [
       {
-        title: "[Gift Card] Content with Action",
-        value: "giftCards.card.content-with-action",
+        title: "[Gift Card] Check Balance Form",
+        value: "giftCards.card.check-balance-form",
+      },
+      {
+        title: "[Gift Card] Reload Card Form",
+        value: "giftCards.card.reload-card-form",
       },
     ],
     group: [],

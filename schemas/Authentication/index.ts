@@ -39,10 +39,6 @@ export const Authentication: FeatureSchemaDefinition = {
         title: "[Authentication] Action Labels",
         value: "authentication.card.action-labels",
       },
-      {
-        title: "[Authentication] Center Aligned content",
-        value: "authentication.card.center-aligned-content",
-      },
     ],
     nudge: [
       {
