@@ -60,6 +60,10 @@ export const Authentication: FeatureSchemaDefinition = {
         title: "[Authentication] SSO Multiple Tabs",
         value: "authentication.sso-multiple-tabs",
       },
+      {
+        title: "[Authentication] Address Tabs",
+        value: "authentication.tabs.address-tabs",
+      },
     ],
     placeholder: [
       {

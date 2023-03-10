@@ -1,6 +1,5 @@
 import { FeatureSchemaDefinition } from "../types";
 import link from "./objects/link";
-//import navigationItem from "../ihcl/navigationItem";
 import navigationItem from "./objects/navigationItem";
 import blockImage from "./objects/blockImage";
 import seo from "./objects/seo";
