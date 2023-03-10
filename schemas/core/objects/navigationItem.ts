@@ -20,24 +20,23 @@ export default {
       // validation: pathUrlRule,
     },
     {
-      name:"image",
-      title:"Image",
-      type:"image"
+      name: "image",
+      title: "Image",
+      type: "image",
     },
     {
       name: "variant",
       title: "Variant",
       type: "string",
       options: {
-        list: [ 
-                 { title: "Light-Contained", value: "light-contained" },
-                 { title: "Dark-Contained", value: "dark-contained" },
-                 { title: "Light-Outlined", value: "light-outlined" },
-                 { title: "Dark-Outlined", value: "dark-outlined" },
-                 { title: "Link", value: "link-m" },
-                 
-              ]
-         }
+        list: [
+          { title: "Light-Contained", value: "light-contained" },
+          { title: "Dark-Contained", value: "dark-contained" },
+          { title: "Light-Outlined", value: "light-outlined" },
+          { title: "Dark-Outlined", value: "dark-outlined" },
+          { title: "Link", value: "link-m" },
+        ],
+      },
     },
     {
       ...linkTypeField({ name: "urlType", title: "Url Type"}),
