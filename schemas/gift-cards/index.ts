@@ -11,5 +11,20 @@ export const giftCards: FeatureSchemaDefinition = {
       value: "giftCards.manage-gift-card",
     },
   ],
-  variants: {},
+  variants: {
+    card: [
+      {
+        title: "[Gift Card] Check Balance Form",
+        value: "giftCards.card.check-balance-form",
+      },
+      {
+        title: "[Gift Card] Reload Balance Form",
+        value: "giftCards.card.reload-balance-form",
+      },
+      {
+        title: "[Gift Card] Card Order Status Form",
+        value: "giftCards.card.order-status-form",
+      },
+    ],
+  },
 };
