@@ -34,6 +34,7 @@ export default function page(props: PageProps) {
       showAppRatingPopup: false,
       isLocked: false,
       tabItemSize: "dynamic",
+      pageHeaderVariant:"defaultHeader"
     },
     fields: [
       {
@@ -105,6 +106,17 @@ export default function page(props: PageProps) {
           ],
         },
         group: "main",
+      },
+      {
+        name: "pageHeaderVariant",
+        title: "Page Header Variant",
+        type: "string",
+        options: {
+          list: [
+            { title: "Default Header", value: "defaultHeader" },
+            { title: "Booking Mask Header", value: "bookingMaskHeader" },
+          ],
+        },
       },
       {
         name: "variant",

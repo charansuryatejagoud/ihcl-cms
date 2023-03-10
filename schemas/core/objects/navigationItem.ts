@@ -1,5 +1,6 @@
 import { IoNavigate as Icon } from "react-icons/io5";
 // import { pathUrlRule } from "../../shared-utils";
+import { linkTypeField } from "../../shared-utils"
 
 export default {
   name: "navigationItem",
@@ -38,19 +39,9 @@ export default {
       },
     },
     {
-      title: "Check Box",
-      name: "checkBox",
-      type: "string",
-      options: {
-        list: [
-          { title: "Internal", value: "internal" },
-          { title: "External", value: "external" },
-          { title: "Dialog", value: "dialog" },
-        ],
-        layout: "radio",
-        isHighlighted: true,
-      },
-    },
+      ...linkTypeField({ name: "urlType", title: "Url Type"}),
+    }
+    
   ],
   preview: {
     select: {
