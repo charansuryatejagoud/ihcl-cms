@@ -50,11 +50,20 @@ export const Authentication: FeatureSchemaDefinition = {
         value: "authentication.nudge.address-form",
       },
       {
-        title: "[Authentication] Fields with Actions",
-        value: "authentication.nudge.fields-with-actions",
+        title: "[Authentication] Membership Login Options",
+        value: "authentication.nudge.membership-login-options",
       },
     ],
-    dialog: [],
+    dialog: [
+      {
+        title: "[Authentication] Global Register User Details",
+        value: "authentication.dialog.global-register-user-details",
+      },
+      {
+        title: "[Authentication] On Successfull Global registration",
+        value: "authentication.dialog.on-successfull-global-registration",
+      },
+    ],
     tabs: [
       {
         title: "[Authentication] SSO Multiple Tabs",
