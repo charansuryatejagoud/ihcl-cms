@@ -97,7 +97,7 @@ export const details: FeatureSchemaDefinition = {
       },
       {
         title: "[Details] Room Specification",
-        value: "details room-specification",
+        value: "details.card.room-specification",
       },
     ],
     banner: [],
@@ -111,7 +111,6 @@ export const details: FeatureSchemaDefinition = {
         title: "[Details] Gallery With Carousel",
         value: "details.gallery-with-carousel",
       },
-      
     ],
   },
 };

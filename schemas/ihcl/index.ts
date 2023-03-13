@@ -10,7 +10,6 @@ import specification from "./specification";
 import textContainer from "./textContainer";
 import { videoAsset } from "./videoAsset";
 import cfReference from "./cfReference";
-import { giftCards } from "schemas/gift-cards";
 export const ihclcore: FeatureSchemaDefinition = {
   schemas: [
     videoAsset,

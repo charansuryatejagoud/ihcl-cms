@@ -6,6 +6,10 @@ export const Authentication: FeatureSchemaDefinition = {
       title: "[Authentication] Login Store",
       value: "authentication.login-store",
     },
+    {
+      title: "[Authentication] Neupass Global User Registration Details",
+      value: "authentication.neupass-global-user-registration-details",
+    },
   ],
   variants: {
     group: [
@@ -60,8 +64,8 @@ export const Authentication: FeatureSchemaDefinition = {
         value: "authentication.dialog.global-register-user-details",
       },
       {
-        title: "[Authentication] On Successfull Global registration",
-        value: "authentication.dialog.on-successfull-global-registration",
+        title: "[Authentication] On Successful Global registration",
+        value: "authentication.dialog.on-successful-global-registration",
       },
     ],
     tabs: [

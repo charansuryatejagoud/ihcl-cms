@@ -6,7 +6,7 @@ export const partners: FeatureSchemaDefinition = {
         card:[
             {
                 title:"[partners] Image Carousel",
-                value:"partners.image-carousel"
+                value:"partners.card.image-carousel"
             }
         ]
     }
