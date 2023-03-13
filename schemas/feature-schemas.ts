@@ -15,6 +15,7 @@ import solarDetails from "./search/searchBodyParams";
 import { search } from "./search";
 import { Authentication } from "./Authentication";
 import { giftCards } from "./gift-cards";
+import { partners } from "./partners";
 
 const features: FeatureSchemaDefinition[] = [
   core,
@@ -26,7 +27,8 @@ const features: FeatureSchemaDefinition[] = [
   destinations,
   bookings,
   search,
-  giftCards
+  giftCards,
+  partners
 ];
 
 export const featureDefinition: FeatureSchemaDefinition =
