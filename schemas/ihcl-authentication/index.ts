@@ -67,6 +67,10 @@ export const Authentication: FeatureSchemaDefinition = {
         title: "[Authentication] On Successful Global registration",
         value: "authentication.dialog.on-successful-global-registration",
       },
+      {
+        title: "[Authentication] Mobile Number Registration",
+        value: "authentication.dialog.mobile-number-registration",
+      },
     ],
     tabs: [
       {
