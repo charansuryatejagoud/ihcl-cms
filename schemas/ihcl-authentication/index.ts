@@ -6,6 +6,10 @@ export const Authentication: FeatureSchemaDefinition = {
       title: "[Authentication] Login Store",
       value: "authentication.login-store",
     },
+    {
+      title: "[Authentication] Neupass Global User Registration Details",
+      value: "authentication.neupass-global-user-registration-details",
+    },
   ],
   variants: {
     group: [
@@ -50,15 +54,28 @@ export const Authentication: FeatureSchemaDefinition = {
         value: "authentication.nudge.address-form",
       },
       {
-        title: "[Authentication] Fields with Actions",
-        value: "authentication.nudge.fields-with-actions",
+        title: "[Authentication] Membership Login Options",
+        value: "authentication.nudge.membership-login-options",
       },
     ],
-    dialog: [],
+    dialog: [
+      {
+        title: "[Authentication] Global Register User Details",
+        value: "authentication.dialog.global-register-user-details",
+      },
+      {
+        title: "[Authentication] On Successful Global registration",
+        value: "authentication.dialog.on-successful-global-registration",
+      },
+    ],
     tabs: [
       {
         title: "[Authentication] SSO Multiple Tabs",
         value: "authentication.sso-multiple-tabs",
+      },
+      {
+        title: "[Authentication] Address Tabs",
+        value: "authentication.tabs.address-tabs",
       },
     ],
     placeholder: [

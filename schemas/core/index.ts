@@ -1,7 +1,5 @@
 import { FeatureSchemaDefinition } from "../types";
 import link from "./objects/link";
-//import navigationItem from "../ihcl/navigationItem";
-import navigationItem from "./objects/navigationItem";
 import blockImage from "./objects/blockImage";
 import seo from "./objects/seo";
 import blockContent from "./objects/blockContent";
@@ -22,6 +20,7 @@ import fileDocument from "./objects/fileDocument";
 import reorderTransformer from "./transformers/reorder.transformer";
 import { cellSchema, rowSchema } from "./objects/dataGrid";
 import formGroup from "./objects/form-group";
+import navigationItem from "./objects/navigationItem";
 export const core: FeatureSchemaDefinition = {
   schemas: [
     category,

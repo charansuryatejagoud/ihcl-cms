@@ -3,12 +3,16 @@ import { FeatureSchemaDefinition } from "schemas/types";
 export const giftCards: FeatureSchemaDefinition = {
   connectedStores: [
     {
-      title: "[Gift Card] FormDetails Store",
-      value: "giftCards.formDetails-store",
+      title: "[Gift Card] Confirmation Page Store",
+      value: "giftCards.confirmationPage-store",
     },
     {
       title: "[Gift Card] Manage Gift Card",
       value: "giftCards.manage-gift-card",
+    },
+    {
+      title: "[Gift Card] FormDetails Store",
+      value: "giftCards.formDetails-store",
     },
   ],
   variants: {
@@ -24,6 +28,13 @@ export const giftCards: FeatureSchemaDefinition = {
       {
         title: "[Gift Card] Card Order Status Form",
         value: "giftCards.card.order-status-form",
+      },
+    ],
+  
+    tabs: [
+      {
+        title: "[Gift Card] Manage Card Multiple Tabs",
+        value: "giftCards.tabs.manage-card-multiple-tabs",
       },
     ],
   },

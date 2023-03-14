@@ -19,7 +19,6 @@ export default {
       type: "boolean",
       initialValue: true,
     },
-
     {
       title: "Title",
       name: "title",

@@ -95,6 +95,10 @@ export const details: FeatureSchemaDefinition = {
         title: "[Details] Card with Left Align Content",
         value: "details.card.left-align-content",
       },
+      {
+        title: "[Details] Room Specification",
+        value: "details.card.room-specification",
+      },
     ],
     banner: [],
     dialog: [

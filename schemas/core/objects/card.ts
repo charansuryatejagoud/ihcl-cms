@@ -16,6 +16,11 @@ interface Props {
   variants: VariantDefinition[];
 }
 
+const AlignmentVariant = [
+  { title: "Preceding Hyphen Title", value: "preceding-hyphen-title" },
+  { title: "Normal Title", value: "normal-title" },
+];
+
 export default function card(props: Props) {
   return {
     name: "card",
@@ -57,6 +62,16 @@ export default function card(props: Props) {
         title: "Description",
         type: "text",
         rows: 6,
+        group: "main",
+      },
+      {
+        name: "alignmentVariant",
+        title: "Alignment Variant",
+        type: "string",
+        description: "This variant is for Title and Subtitle alignment",
+        options: {
+          list: AlignmentVariant,
+        },
         group: "main",
       },
       {
@@ -148,6 +163,7 @@ export default function card(props: Props) {
           list: [
             { title: "Video", value: "video" },
             { title: "Component", value: "component" },
+            {title:"Image",value:"image"}
           ],
         },
       },
@@ -157,6 +173,13 @@ export default function card(props: Props) {
         type: "videoAsset",
         hidden: ({ parent }) =>
           parent?.mediaType !== "video" && parent?.largeVariant !== "video",
+      },
+      {
+        name: "imageAsset",
+        title: "Image",
+        type: "imageAsset",
+        hidden: ({ parent }) =>
+          parent?.mediaType !== "image" && parent?.largeVariant !== "image",
       },
       {
         title: "Components",

@@ -13,8 +13,9 @@ import { destinations } from "./destinations";
 import { bookings } from "./bookings";
 import solarDetails from "./search/searchBodyParams";
 import { search } from "./search";
-import { Authentication } from "./Authentication";
-import { giftCards } from "./gift-cards";
+import { Authentication } from "./ihcl-authentication";
+import { giftCards } from "./ihcl-gift-cards";
+import { partners } from "./ihcl-partners";
 
 const features: FeatureSchemaDefinition[] = [
   core,
@@ -26,7 +27,8 @@ const features: FeatureSchemaDefinition[] = [
   destinations,
   bookings,
   search,
-  giftCards
+  giftCards,
+  partners
 ];
 
 export const featureDefinition: FeatureSchemaDefinition =

@@ -10,7 +10,7 @@ import specification from "./specification";
 import textContainer from "./textContainer";
 import { videoAsset } from "./videoAsset";
 import cfReference from "./cfReference";
-import { giftCards } from "schemas/gift-cards";
+import uiConfiguration from "./uiConfiguration";
 export const ihclcore: FeatureSchemaDefinition = {
   schemas: [
     videoAsset,
@@ -24,7 +24,7 @@ export const ihclcore: FeatureSchemaDefinition = {
     specification,
     comparative,
     cfReference,
-    
+    uiConfiguration
   ],
   pageItems: [
     { type: "banner" },
