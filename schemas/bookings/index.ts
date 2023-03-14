@@ -1,6 +1,6 @@
 import { FeatureSchemaDefinition } from "schemas/types";
 export const bookings: FeatureSchemaDefinition = {
-  connectedStores:[
+  connectedStores: [
     {
       title: "[Bookings] Booking Store",
       value: "bookings.store",
@@ -43,6 +43,18 @@ export const bookings: FeatureSchemaDefinition = {
       {
         title: "[Bookings] Payment details",
         value: "bookings.placeholders.payment-details",
+      },
+    ],
+    nudge: [
+      {
+        title: "[Bookings] Checking Hotel Room Rates",
+        value: "bookings.nudge.checking-hotel-room-rates",
+      },
+    ],
+    group: [
+      {
+        title: "[Bookings] Grid Wrapper",
+        value: "bookings.group.grid-wrapper",
       },
     ],
     tabs: [
