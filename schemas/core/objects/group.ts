@@ -80,6 +80,12 @@ export default function group({
         type: "string",
       },
       {
+        name:"aesthetic",
+        title:"Aesthetic",
+        type: "reference",
+        to: [{ type: "uiConfiguration" }],
+      },
+      {
         name: "alignmentVariant",
         title: "Alignment Variant",
         type: "string",

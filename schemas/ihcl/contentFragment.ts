@@ -20,7 +20,7 @@ export const contentFragment = (props: FragmentProps) => {
     title: "Content Fragment",
     type: "document",
     icon: IoCubeSharp,
-    initialValue: { isNestedFragement: false },
+    initialValue: { isNestedFragment: false },
     groups: [
       { name: "main", title: "Main", icon: IoApps },
       { name: "configuration", title: "Configuration", icon: IoSettings },
@@ -149,7 +149,7 @@ export const contentFragment = (props: FragmentProps) => {
       },
       {
         title: "Is Nested Fragment?",
-        name: "isNestedFragement",
+        name: "isNestedFragment",
         type: "boolean",
       },
       {

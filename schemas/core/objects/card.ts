@@ -16,6 +16,11 @@ interface Props {
   variants: VariantDefinition[];
 }
 
+const AlignmentVariant = [
+  { title: "Preceding Hyphen Title", value: "preceding-hyphen-title" },
+  { title: "Normal Title", value: "normal-title" },
+];
+
 export default function card(props: Props) {
   return {
     name: "card",
@@ -57,6 +62,16 @@ export default function card(props: Props) {
         title: "Description",
         type: "text",
         rows: 6,
+        group: "main",
+      },
+      {
+        name: "alignmentVariant",
+        title: "Alignment Variant",
+        type: "string",
+        description: "This variant is for Title and Subtitle alignment",
+        options: {
+          list: AlignmentVariant,
+        },
         group: "main",
       },
       {
