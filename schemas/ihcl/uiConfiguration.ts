@@ -3,8 +3,20 @@ export default {
   name: "uiConfiguration",
   type: "document",
   fields: [
-    { title: "Title", name: "title", type: "string" },
-    { title: "Background Color", name: "backgroundColor", type: "color" },
-    { title: "Padding", name: "padding", type: "string" },
+    { 
+       name: "title",
+       title: "Title", 
+       type: "string" 
+    },
+    { 
+       name: "backgroundColor",
+       title: "Background Color",
+       type: "color" 
+    },
+    { 
+       name: "padding",
+       title: "Padding",  
+       type: "string" 
+    },
   ],
 };
