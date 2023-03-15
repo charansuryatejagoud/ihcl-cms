@@ -82,12 +82,12 @@ export const details: FeatureSchemaDefinition = {
         value: "details.card.card-with-right-aligned-content",
       },
       {
-        title: "[Details] Card With  Left Media Right Content",
+        title: "[Details] Card With Left Media Right Content",
         value:
           "details.card.card-with-left-media-right-content-aspect-ratio-2:4",
       },
       {
-        title: "[Details] Card With  Right Media Left Content",
+        title: "[Details] Card With Right Media Left Content",
         value:
           "details.card.card-with-right-media-left-content-aspect-ratio-2:4",
       },
