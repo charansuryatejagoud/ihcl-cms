@@ -1,0 +1,457 @@
+{
+  "title": "",
+  "subTitle": "",
+  "description": "",
+  "images": [],
+  "addressLink1": "",
+  "addressLink2": "",
+  "landMark": "",
+  "street": "",
+  "city": "",
+  "country": "",
+  "locality": "",
+  "pincode": "",
+  "lattitude": "",
+  "longitude": "",
+  "checkinTime": "",
+  "checkoutTime": "",
+  "roomsAvalibility": "",
+  "diningAvalibility": "",
+  "wellnessInfo": "",
+  "contactInfo": "",
+  "email": "",
+  "hotelEssentials": "",
+  "acitivites": "",
+  "addFeature": "",
+  "diningDetails": "",
+  "wellnessDetails": "",
+  "roomDetails": "",
+  "locationDetails": "",
+  "overViewTitle": "",
+  "overViewDescription": "",
+  "overViewImages": "",
+  "highLightsTitle": "",
+  "highLightsDescription": "",
+  "highLightsItems": [],
+  "awards": [
+    {
+      "titel": "Rambagh Palace Voted Number 1 In Best Hotels In India",
+      "icon": "",
+      "description": "Rambagh Palace Voted Number 1 In Best Hotels In India In The Globe Conde Nast Travellers Readers' Choice Awards 2020."
+    },
+    {
+      "titel": "Rambagh Palace Voted Number 1 In Best Hotels In India",
+      "icon": "",
+      "description": "Rambagh Palace Voted Number 1 In Best Hotels In India In The Globe Conde Nast Travellers Readers' Choice Awards 2020."
+    }
+  ],
+  "socialMediaRefferences": {
+    "title": "#RambaghPalace",
+    "description": "We invite you to experience, the finest traditions of Rajput hospitality. Come, hear the stories of ‘The Jewel of Jaipur’",
+    "ctaLable": "Follow us",
+    "actionLogo": "",
+    "ctaURL": "",
+    "data": [
+      {
+        "image": "",
+        "soci": ""
+      },
+      {
+        "image": "",
+        "logo": ""
+      },
+      {
+        "image": "",
+        "logo": ""
+      }
+    ]
+  },
+  "businessFeatures": {
+    "data": [
+      {
+        "image": "",
+        "title": "DISCOVER NEUPASS",
+        "description": "Reward yourself to memorable vacations, rejuvenating spa treatments and gourmet delights and more with NeuCoins.",
+        "primaryAction": "Explore"
+      },
+      {
+        "image": "",
+        "title": "DISCOVER NEUPASS",
+        "description": "Reward yourself to memorable vacations, rejuvenating spa treatments and gourmet delights and more with NeuCoins.",
+        "primaryAction": "Explore"
+      }
+    ]
+  },
+  "offersList": [],
+  "holidays": [],
+  "categories": [
+    {
+      "title": "Rooms & Suites",
+      "data": []
+    },
+    {
+      "title": "OVERVIEW",
+      "data": {
+        "title": "",
+        "description": "",
+        "overviewImage": "",
+        "hotelHighlights": {
+          "title": "",
+          "description": "",
+          "highlights": [
+            {
+              "title": "47 Acres of Lush Greenery",
+              "contentURL": "",
+              "cotentType": "",
+              "ctaURL": ""
+            },
+            {
+              "title": "",
+              "contentURL": "",
+              "cotentType": "",
+              "ctaURL": ""
+            }
+          ]
+        },
+        "hotelInfomation": {
+          "title": "Hotel Information",
+          "data": [
+            {
+              "title": "Check in - Check out",
+              "icons": "",
+              "content": "Check-in from 2:00 PM Check-out till 12:00 PM"
+            },
+            {
+              "title": "Check in - Check out",
+              "icons": "",
+              "content": ""
+            }
+          ],
+          "primaryAction": "DOWNLOAD FACTSHEET",
+          "secoundaryAction": "Hotel Classification"
+        },
+        "hotelFacilities": {
+          "title": "Facilities",
+          "data": [
+            {
+              "title": "Activities",
+              "icon": "",
+              "featues": [
+                "Heritage walks and City tours",
+                "Polo matches can be viewed at the adjacent Rambagh Polo Grounds",
+                "Kite flying",
+                "Vintage car rides around the hotel",
+                "Heritage walks and City tours",
+                "Polo matches can be viewed at the adjacent Rambagh Polo Grounds",
+                "Kite flying",
+                "Vintage car rides around the hotel"
+              ],
+              "previewFeatueCount": 4
+            },
+            {
+              "title": "Hotel",
+              "icon": "",
+              "featues": [
+                "Complimentary Wi-Fi for resident guests",
+                "Options of smoking & non-smoking accommodation",
+                "45 rooms & 33 suites",
+                "Travel desk, car rental services, currency exchange, safe deposit lockers & 24-hour laundry",
+                "Options of smoking & non-smoking accommodation",
+                "45 rooms & 33 suites",
+                "Travel desk, car rental services, currency exchange, safe deposit lockers & 24-hour laundry"
+              ],
+              "previewFeatueCount": 4
+            }
+          ]
+        },
+        "locationDetails": {
+          "title": "Location & Directions",
+          "coordinates": {
+            "latitude": "",
+            "longitude": ""
+          },
+          "multiDirections": [
+            {
+              "title": "Getting here",
+              "address": "Bhawani Singh Road, Jaipur, Rajasthan, Rajasthan - 302005, India",
+              "naviagtionCTA": "Open Google Maps",
+              "naviagtionURL": ""
+            },
+            {
+              "title": "Airport",
+              "address": "Bhawani Singh Road, Jaipur, Rajasthan, Rajasthan - 302005, India",
+              "naviagtionCTA": "Open Google Maps",
+              "naviagtionURL": ""
+            },
+            {
+              "title": "LOCAL TRANSPORTATION",
+              "address": "Bhawani Singh Road, Jaipur, Rajasthan, Rajasthan - 302005, India",
+              "naviagtionCTA": "Open Google Maps",
+              "naviagtionURL": ""
+            }
+          ]
+        }
+      }
+    },
+    {
+      "title": "Offers",
+      "data": {
+        "offers": {
+          "title": "offers",
+          "subTitle": "Whether you are looking for a room only rate or intending to explore our dining options or looking to discover our unique experiences.",
+          "previewCount": 4,
+          "primaryAction": "Load more",
+          "data": [
+            {
+              "image": "",
+              "title": "Royal Romantic Experiences",
+              "description": "The extravagance, style, and grandeur of the palatial abode of the Maharaja and Maharani of Jaipur forms the most elegant backdrop to your tale of love.",
+              "highlights": ["15% off on Jiva Spa treatments"],
+              "tags": ["STAYS", "SPA"],
+              "specifications": [
+                { "key": "Validity", "value": "1 Oct 2022 - 31 Mar 2023" }
+              ],
+              "primaryAction": "BOOK NOW",
+              "primaryActionURL": "",
+              "secondaryAction": "more",
+              "secondaryActionURL": ""
+            },
+            {
+              "image": "",
+              "title": "Best Available Rate",
+              "description": "For travellers who simply wish the best available rate for their luxurious guest room and a hassle-free reservation. Standard cancellation rules apply.",
+              "highlights": ["Up to 20% off only for membership"],
+              "tags": ["STAYS"],
+              "specifications": [
+                { "key": "Validity", "value": "All year round" }
+              ],
+              "primaryAction": "ENROL NOW",
+              "primaryActionURL": "",
+              "secondaryAction": "MORE",
+              "secondaryActionURL": ""
+            }
+          ]
+        },
+        "holidays": {
+          "title": "Holidays",
+          "subTitle": "Traverse the royal history of Rajasthan at Rambagh Palace, once the residence of the Maharaja of Jaipur.",
+          "data": [
+            {
+              "image": "",
+              "title": "Royal Experiences",
+              "subTitle": "Taj Rambagh Palace, Jaipur",
+              "description": "Be spirited off into a world of exquisite pomp and grandeur at the erstwhile home of Jaipur’s royalty,... more",
+              "primaryAction": "BOOK NOW",
+              "primaryActionURL": "",
+              "secondaryAction": "more",
+              "secondaryActionURL": ""
+            },
+            {
+              "image": "",
+              "title": "Royal Spa Experiences",
+              "subTitle": "Taj Rambagh Palace, Jaipur",
+              "description": "Experience .the epitome of extravagance and pampering at the Rambagh Palace.... more",
+              "primaryAction": "BOOK NOW",
+              "primaryActionURL": "",
+              "secondaryAction": "more",
+              "secondaryActionURL": ""
+            }
+          ]
+        }
+      }
+    },
+    {
+      "title": "Dining",
+      "data": []
+    },
+    {
+      "title": "Venues",
+      "data": {
+        "eventVenues": {
+          "title": "Event Venues",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim ve niam, quis nostrud exercitations... more",
+          "data": [
+            {
+              "image": "",
+              "title": "Maharani Mahal",
+              "highlights": [
+                "Ceiling reflecting glass and crystal chandeliers",
+                "Ceiling reflecting glass and crystal chandeliers"
+              ],
+              "description": "Carved metal doors lead into hall lined with traditional arches; with its ceiling reflecting glass and crystal chandeliers.",
+              "primaryAction": "ENQUIRE now",
+              "primaryActionURL": "",
+              "secondaryAction": "more",
+              "secondaryActionURL": ""
+            },
+            {
+              "image": "",
+              "title": "Chandra Mahal",
+              "highlights": [
+                "Twinkling decorative mirror work and large dome",
+                "Twinkling decorative mirror work and large dome"
+              ],
+              "description": "Hall for smaller public gatherings consisting large dome and twinkling decorative mirror work.",
+              "primaryAction": "ENQUIRE now",
+              "primaryActionURL": "",
+              "secondaryAction": "more",
+              "secondaryActionURL": ""
+            }
+          ],
+          "previewCount": 6,
+          "ctaLabel": "Load more",
+          "ctaURL": ""
+        },
+        "perfectEvents": {
+          "title": "The Perfect Event",
+          "description": "Begin your forever fairy-tale in the midst of magnificent palaces, upon magic of sand and waves or with the backdrop of snow capped peaks and gently flowing rivers.",
+          "data": [
+            {
+              "image": "",
+              "title": "MEETINGS",
+              "description": "Choose from our unparalleled collection of meeting spaces across city hotels, beaches, hill resorts and royal palaces.Our team of experts will assist you at every step to ensure the most perfect and memorable event.",
+              "primaryAction": "EVENT ENQUIRY",
+              "secondaryAction": "Gallery",
+              "otherAction": "BROCHURE"
+            },
+            {
+              "image": "",
+              "title": "TIMELESS WEDDINGS",
+              "description": "Celebrate with the palace in the backdrop and vast sky as the roof, this lawn makes an ideal with Palace backdrop. Extension of Oriental Terrace this is ideal for Soiree dinners and family celebrations.",
+              "primaryAction": "EVENT ENQUIRY",
+              "secondaryAction": "Gallery",
+              "otherAction": "BROCHURE"
+            }
+          ]
+        },
+        "weddings": {
+          "title": "Timeless Weddings",
+          "description": "As you step into the threshold of everlasting love and togetherness, we are here to make sure your celebration is engraved in the history of Timeless Weddings.",
+          "primaryAction": "Learn more about weddings",
+          "data": [
+            {
+              "image": "",
+              "title": "BRIDAL SHOWER",
+              "description": "Create a mark in history with a breathtaking wedding, situated in the magnificent palace where Maharajas once reigned.",
+              "ctaURL": ""
+            },
+            {
+              "image": "",
+              "title": "A ROYAL WEDDING",
+              "description": "Create a mark in history with a breathtaking wedding, situated in the magnificent palace where Maharajas once reigned.",
+              "ctaURL": ""
+            }
+          ]
+        }
+      }
+    },
+    {
+      "title": "Wellness",
+      "data": {
+        "spaDetails": {
+          "title": "Jiva Spa",
+          "description": "Take a step back in time when palaces and indulgent experiences were the mark of a true royal. At Rambagh palace, Jaipur",
+          "data": {
+            "image": "",
+            "title": "The Journey to Achieving Harmony",
+            "description": "Take a step back in time when palaces and indulgent experiences were the mark of a true royal. At Rambagh palace, Jaipur, discover wellness in the sprawling vastness of this beautiful relic from an era gone by.",
+            "primaryAction": "ENQUIRE NOW",
+            "secondaryAction": "BROCHURE"
+          }
+        },
+        "spaTreatments": {
+          "title": "Signature Treatments",
+          "description": "Discover wellness in the sprawling vastness of this beautiful relic from an era gone by.",
+          "data": [
+            {
+              "image": "",
+              "title": "Vishrama",
+              "description": "A deep muscular massage for profound relaxation. An applicat... more",
+              "RichText": [
+                {
+                  "Key": "Recommended for",
+                  "Value": "Stressed body and back pain"
+                },
+                {
+                  "Key": "Duration",
+                  "Value": "120mins"
+                }
+              ]
+            },
+            {
+              "image": "",
+              "title": "Pehlwan Malish",
+              "description": "Experience the traditional dynamic massage which, for centuries",
+              "RichText": [
+                {
+                  "Key": "Recommended for",
+                  "Value": "Stressed body and back pain"
+                },
+                {
+                  "Key": "Duration",
+                  "Value": "90mins"
+                }
+              ]
+            }
+          ],
+          "previewCount": "3"
+        },
+        "offers": {
+          "title": "Exclusive Offers",
+          "description": "Whether you are looking for a room only rate or intending to explore our dining options or looking to discover our unique experiences.",
+          "data": [
+            {
+              "image": "",
+              "title": "Royal Romantic Experience",
+              "highlights": [
+                "15% off on Jiva Spa treatments",
+                "15% off on Jiva Spa treatments"
+              ],
+              "description": "Be spirited off into a world of exquisite pomp and grandeur at the erstwhile home of Jaipur’s royalty.",
+              "primaryAction": "Book now",
+              "primaryActionURL": "",
+              "secondaryAction": "more",
+              "secondaryActionURL": ""
+            },
+            {
+              "image": "",
+              "title": "Royal Romantic Experience",
+              "highlights": [
+                "15% off on Jiva Spa treatments",
+                "15% off on Jiva Spa treatments"
+              ],
+              "description": "Be spirited off into a world of exquisite pomp and grandeur at the erstwhile home of Jaipur’s royalty.",
+              "primaryAction": "Book now",
+              "primaryActionURL": "",
+              "secondaryAction": "more",
+              "secondaryActionURL": ""
+            }
+          ]
+        },
+        "fullWidthImage": "",
+        "wellness": {
+          "title": "Wellness",
+          "description": "A holistic inter-mingling of mind, body and soul, based on principles of Ayurveda, yoga and wellness.",
+          "primaryAction": "",
+          "data": {
+            "image": "",
+            "title": "Outdoor pool & Fitness centre",
+            "description": "The 24/7 fitness hub of the hotel. Enjoy the outdoor pool or the state of the art training facilities.Outdoor Swimming Pool operating Hours: The Swimming Pool is available at the following timings for the resident guests from 06:00 to 22:00 hours daily."
+          }
+        }
+      }
+    },
+    {
+      "title": "Experiences",
+      "data": []
+    },
+    {
+      "title": "Gallery",
+      "data": []
+    },
+    {
+      "title": "ATTRACTIONS",
+      "data": []
+    }
+  ]
+}

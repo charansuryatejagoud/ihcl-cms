@@ -1,0 +1,101 @@
+{
+  "title": "",
+  "description": "",
+  "overviewImage": "",
+  "hotelHighlights": {
+    "title": "",
+    "description": "",
+    "highlights": [
+      {
+        "title": "47 Acres of Lush Greenery",
+        "contentURL": "",
+        "cotentType": "",
+        "ctaURL": ""
+      },
+      {
+        "title": "",
+        "contentURL": "",
+        "cotentType": "",
+        "ctaURL": ""
+      }
+    ]
+  },
+  "hotelInfomation": {
+    "title": "Hotel Information",
+    "data": [
+      {
+        "title": "Check in - Check out",
+        "icons": "",
+        "content": "Check-in from 2:00 PM Check-out till 12:00 PM"
+      },
+      {
+        "title": "Check in - Check out",
+        "icons": "",
+        "content": ""
+      }
+    ],
+    "primaryAction": "DOWNLOAD FACTSHEET",
+    "secoundaryAction": "Hotel Classification"
+  },
+  "hotelFacilities": {
+    "title": "Facilities",
+    "data": [
+      {
+        "title": "Activities",
+        "icon": "",
+        "featues": [
+          "Heritage walks and City tours",
+          "Polo matches can be viewed at the adjacent Rambagh Polo Grounds",
+          "Kite flying",
+          "Vintage car rides around the hotel",
+          "Heritage walks and City tours",
+          "Polo matches can be viewed at the adjacent Rambagh Polo Grounds",
+          "Kite flying",
+          "Vintage car rides around the hotel"
+        ],
+        "previewFeatueCount": 4
+      },
+      {
+        "title": "Hotel",
+        "icon": "",
+        "featues": [
+          "Complimentary Wi-Fi for resident guests",
+          "Options of smoking & non-smoking accommodation",
+          "45 rooms & 33 suites",
+          "Travel desk, car rental services, currency exchange, safe deposit lockers & 24-hour laundry",
+          "Options of smoking & non-smoking accommodation",
+          "45 rooms & 33 suites",
+          "Travel desk, car rental services, currency exchange, safe deposit lockers & 24-hour laundry"
+        ],
+        "previewFeatueCount": 4
+      }
+    ]
+  },
+  "locationDetails": {
+    "title": "Location & Directions",
+    "coordinates": {
+      "latitude": "",
+      "longitude": ""
+    },
+    "multiDirections": [
+      {
+        "title": "Getting here",
+        "address": "Bhawani Singh Road, Jaipur, Rajasthan, Rajasthan - 302005, India",
+        "naviagtionCTA": "Open Google Maps",
+        "naviagtionURL": ""
+      },
+      {
+        "title": "Airport",
+        "address": "Bhawani Singh Road, Jaipur, Rajasthan, Rajasthan - 302005, India",
+        "naviagtionCTA": "Open Google Maps",
+        "naviagtionURL": ""
+      },
+      {
+        "title": "LOCAL TRANSPORTATION",
+        "address": "Bhawani Singh Road, Jaipur, Rajasthan, Rajasthan - 302005, India",
+        "naviagtionCTA": "Open Google Maps",
+        "naviagtionURL": ""
+      }
+    ]
+  }
+}

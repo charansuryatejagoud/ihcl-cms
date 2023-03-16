@@ -6,7 +6,6 @@ import {
 } from "react-icons/io5";
 import { VariantDefinition } from "../../types";
 import { hiddenField } from "../../shared-utils";
-
 export default function nudge({ variants }: { variants: VariantDefinition[] }) {
   return {
     name: "nudge",
@@ -18,16 +17,8 @@ export default function nudge({ variants }: { variants: VariantDefinition[] }) {
       { name: "configuration", title: "Configuration", icon: IoSettings },
     ],
     fields: [
-      {
-        ...hiddenField,
-        group: "configuration",
-      },
-      {
-        name: "title",
-        title: "Title",
-        type: "string",
-        group: "main",
-      },
+      { ...hiddenField, group: "configuration" },
+      { name: "title", title: "Title", type: "string", group: "main" },
       {
         name: "subtitle",
         title: "Subtitle",
@@ -46,18 +37,14 @@ export default function nudge({ variants }: { variants: VariantDefinition[] }) {
         name: "variant",
         title: "Variant",
         type: "string",
-        options: {
-          list: variants,
-        },
+        options: { list: variants },
         group: "main",
       },
       {
         name: "largeVariant",
         title: "Large Variant",
         type: "string",
-        options: {
-          list: variants,
-        },
+        options: { list: variants },
         group: "main",
       },
       {
@@ -72,33 +59,15 @@ export default function nudge({ variants }: { variants: VariantDefinition[] }) {
             icon: ParameterMapIcon,
             options: { columns: 2 },
             fields: [
-              {
-                name: "key",
-                title: "Key",
-                type: "string",
-              },
-              {
-                name: "value",
-                title: "Value",
-                type: "string",
-              },
+              { name: "key", title: "Key", type: "string" },
+              { name: "value", title: "Value", type: "string" },
             ],
-            preview: {
-              select: {
-                title: "key",
-                subtitle: "value",
-              },
-            },
+            preview: { select: { title: "key", subtitle: "value" } },
           },
         ],
         group: "main",
       },
-      {
-        name: "image",
-        title: "Image",
-        type: "image",
-        group: "main",
-      },
+      { name: "image", title: "Image", type: "image", group: "main" },
       {
         name: "largeImage",
         title: "Large Image",
@@ -111,11 +80,7 @@ export default function nudge({ variants }: { variants: VariantDefinition[] }) {
         title: "Documents",
         description: "Documents supported are PDF and DOCX.",
         type: "array",
-        of: [
-          {
-            type: "fileDocument",
-          },
-        ],
+        of: [{ type: "fileDocument" }],
         group: "main",
       },
       {
@@ -145,17 +110,20 @@ export default function nudge({ variants }: { variants: VariantDefinition[] }) {
           {
             type: "object",
             fields: [
-              {
-                name: "primaryImage",
-                title: "Primary Image",
-                type: "image",
-              },
+              { name: "id", title: "ID", type: "string" },
+              { name: "primaryImage", title: "Primary Image", type: "image" },
               {
                 name: "secondaryImage",
                 title: "Secondary Image",
                 type: "image",
               },
             ],
+            preview: {
+              select: { id: "id", image: "image" },
+              prepare({ id }) {
+                return { title: `${id}` };
+              },
+            },
           },
         ],
       },
@@ -175,7 +143,6 @@ export default function nudge({ variants }: { variants: VariantDefinition[] }) {
       },
       prepare({ title, subtitle, hidden, media }) {
         const hiddenIndicator = hidden ? "🚫 " : "";
-
         return {
           title: `${hiddenIndicator}${title ?? "<Nudge>"}`,
           subtitle,

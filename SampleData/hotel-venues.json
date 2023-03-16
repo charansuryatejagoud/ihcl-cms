@@ -1,0 +1,115 @@
+{
+  "eventVenues": {
+    "title": "Event Venues",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim ve niam, quis nostrud exercitations... more",
+    "data": [
+      {
+        "image": "",
+        "title": "Maharani Mahal",
+        "highlights": [
+          "Ceiling reflecting glass and crystal chandeliers",
+          "Ceiling reflecting glass and crystal chandeliers"
+        ],
+        "description": "Carved metal doors lead into hall lined with traditional arches; with its ceiling reflecting glass and crystal chandeliers.",
+        "primaryAction": "ENQUIRE now",
+        "primaryActionURL": "",
+        "secondaryAction": "more",
+        "secondaryActionURL": ""
+      },
+      {
+        "image": "",
+        "title": "Chandra Mahal",
+        "highlights": [
+          "Twinkling decorative mirror work and large dome",
+          "Twinkling decorative mirror work and large dome"
+        ],
+        "description": "Hall for smaller public gatherings consisting large dome and twinkling decorative mirror work.",
+        "primaryAction": "ENQUIRE now",
+        "primaryActionURL": "",
+        "secondaryAction": "more",
+        "secondaryActionURL": ""
+      }
+    ],
+    "previewCount": 6,
+    "ctaLabel": "Load more",
+    "ctaURL": ""
+  },
+  "perfectEvents": {
+    "title": "The Perfect Event",
+    "description": "Begin your forever fairy-tale in the midst of magnificent palaces, upon magic of sand and waves or with the backdrop of snow capped peaks and gently flowing rivers.",
+    "data": [
+      {
+        "image": "",
+        "title": "MEETINGS",
+        "description": "Choose from our unparalleled collection of meeting spaces across city hotels, beaches, hill resorts and royal palaces.Our team of experts will assist you at every step to ensure the most perfect and memorable event.",
+        "primaryAction": "EVENT ENQUIRY",
+        "secondaryAction": "Gallery",
+        "otherAction": "BROCHURE"
+      },
+      {
+        "image": "",
+        "title": "TIMELESS WEDDINGS",
+        "description": "Celebrate with the palace in the backdrop and vast sky as the roof, this lawn makes an ideal with Palace backdrop. Extension of Oriental Terrace this is ideal for Soiree dinners and family celebrations.",
+        "primaryAction": "EVENT ENQUIRY",
+        "secondaryAction": "Gallery",
+        "otherAction": "BROCHURE"
+      }
+    ]
+  },
+  "weddings": {
+    "title": "Timeless Weddings",
+    "description": "As you step into the threshold of everlasting love and togetherness, we are here to make sure your celebration is engraved in the history of Timeless Weddings.",
+    "primaryAction": "Learn more about weddings",
+    "data": [
+      {
+        "image": "",
+        "title": "BRIDAL SHOWER",
+        "description": "Create a mark in history with a breathtaking wedding, situated in the magnificent palace where Maharajas once reigned.",
+        "ctaURL": ""
+      },
+      {
+        "image": "",
+        "title": "A ROYAL WEDDING",
+        "description": "Create a mark in history with a breathtaking wedding, situated in the magnificent palace where Maharajas once reigned.",
+        "ctaURL": ""
+      }
+    ]
+  },
+  "socialMediaRefferences": {
+    "title": "#RambaghPalace",
+    "description": "We invite you to experience, the finest traditions of Rajput hospitality. Come, hear the stories of ‘The Jewel of Jaipur’",
+    "ctaLable": "Follow us",
+    "actionLogo": "",
+    "ctaURL": "",
+    "data": [
+      {
+        "image": "",
+        "soci": ""
+      },
+      {
+        "image": "",
+        "logo": ""
+      },
+      {
+        "image": "",
+        "logo": ""
+      }
+    ]
+  },
+  "businessFeatures": {
+    "data": [
+      {
+        "image": "",
+        "title": "DISCOVER NEUPASS",
+        "description": "Reward yourself to memorable vacations, rejuvenating spa treatments and gourmet delights and more with NeuCoins.",
+        "primaryAction": "Explore"
+      },
+      {
+        "image": "",
+        "title": "DISCOVER NEUPASS",
+        "description": "Reward yourself to memorable vacations, rejuvenating spa treatments and gourmet delights and more with NeuCoins.",
+        "primaryAction": "Explore"
+      }
+    ]
+  }
+}

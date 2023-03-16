@@ -1,0 +1,93 @@
+{
+  "spaDetails": {
+    "title": "Jiva Spa",
+    "description": "Take a step back in time when palaces and indulgent experiences were the mark of a true royal. At Rambagh palace, Jaipur",
+    "data": {
+      "image": "",
+      "title": "The Journey to Achieving Harmony",
+      "description": "Take a step back in time when palaces and indulgent experiences were the mark of a true royal. At Rambagh palace, Jaipur, discover wellness in the sprawling vastness of this beautiful relic from an era gone by.",
+      "primaryAction": "ENQUIRE NOW",
+      "secondaryAction": "BROCHURE"
+    }
+  },
+  "spaTreatments": {
+    "title": "Signature Treatments",
+    "description": "Discover wellness in the sprawling vastness of this beautiful relic from an era gone by.",
+    "data": [
+      {
+        "image": "",
+        "title": "Vishrama",
+        "description": "A deep muscular massage for profound relaxation. An applicat... more",
+        "RichText": [
+          {
+            "Key": "Recommended for",
+            "Value": "Stressed body and back pain"
+          },
+          {
+            "Key": "Duration",
+            "Value": "120mins"
+          }
+        ]
+      },
+      {
+        "image": "",
+        "title": "Pehlwan Malish",
+        "description": "Experience the traditional dynamic massage which, for centuries",
+        "RichText": [
+          {
+            "Key": "Recommended for",
+            "Value": "Stressed body and back pain"
+          },
+          {
+            "Key": "Duration",
+            "Value": "90mins"
+          }
+        ]
+      }
+    ],
+    "previewCount": "3"
+  },
+  "offers": {
+    "title": "Exclusive Offers",
+    "description": "Whether you are looking for a room only rate or intending to explore our dining options or looking to discover our unique experiences.",
+    "data": [
+      {
+        "image": "",
+        "title": "Royal Romantic Experience",
+        "highlights": [
+          "15% off on Jiva Spa treatments",
+          "15% off on Jiva Spa treatments"
+        ],
+        "description": "Be spirited off into a world of exquisite pomp and grandeur at the erstwhile home of Jaipur’s royalty.",
+        "primaryAction": "Book now",
+        "primaryActionURL": "",
+        "secondaryAction": "more",
+        "secondaryActionURL": ""
+      },
+      {
+        "image": "",
+        "title": "Royal Romantic Experience",
+        "highlights": [
+          "15% off on Jiva Spa treatments",
+          "15% off on Jiva Spa treatments"
+        ],
+        "description": "Be spirited off into a world of exquisite pomp and grandeur at the erstwhile home of Jaipur’s royalty.",
+        "primaryAction": "Book now",
+        "primaryActionURL": "",
+        "secondaryAction": "more",
+        "secondaryActionURL": ""
+      }
+    ]
+  },
+  "fullWidthImage": "",
+  "wellness": {
+    "title": "Wellness",
+    "description": "A holistic inter-mingling of mind, body and soul, based on principles of Ayurveda, yoga and wellness.",
+    "primaryAction": "",
+    "data": {
+      "image": "",
+      "title": "Outdoor pool & Fitness centre",
+      "description": "The 24/7 fitness hub of the hotel. Enjoy the outdoor pool or the state of the art training facilities.Outdoor Swimming Pool operating Hours: The Swimming Pool is available at the following timings for the resident guests from 06:00 to 22:00 hours daily."
+    }
+  }
+}
