@@ -99,6 +99,34 @@ export const details: FeatureSchemaDefinition = {
         title: "[Details] Room Specification",
         value: "details.card.room-specification",
       },
+      {
+        title: "[Details] Semi Image with overlapped content",
+        value: "details.card.semi-image-with-overlapped-content",
+      },
+      {
+        title: "[Details] Full Image with overlapped content",
+        value: "details.card.full-image-with-overlapped-content",
+      },
+      {
+        title: "[Details] Left Media Image carousal with right Content",
+        value: "details.card.left-media-image-carousel-with-right-content",
+      },
+      {
+        title: "[Details] Venue Enquiry Model Form",
+        value: "details.card.venue-enquiry-model-form",
+      },
+      {
+        title: "[Details] Venue Quote Model Form",
+        value: "details.card.venue-quote-model-form",
+      },
+      {
+        title: "[Details] Wellness Enquiry Model Form",
+        value: "details.card.wellness-enquiry-model-form",
+      },
+      {
+        title: "[Details] Experience Enquiry Model Form",
+        value: "details.card.experience-enquiry-model-form",
+      },
     ],
     banner: [],
     dialog: [
@@ -110,6 +138,10 @@ export const details: FeatureSchemaDefinition = {
       {
         title: "[Details] Gallery With Carousel",
         value: "details.gallery-with-carousel",
+      },
+      {
+        title: "[Details] Hotel Accommodation and its General Information",
+        value: "details.dialog.hotel-accommodation-and-general-information",
       },
     ],
   },
