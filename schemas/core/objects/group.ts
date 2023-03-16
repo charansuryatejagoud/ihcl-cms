@@ -65,7 +65,6 @@ export default function group({
         name: "title",
         title: "Title",
         type: "string",
-        inputComponent: CustomText,
         group: "main",
       },
       {
