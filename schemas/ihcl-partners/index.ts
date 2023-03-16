@@ -5,8 +5,8 @@ export const partners: FeatureSchemaDefinition = {
         group:[],
         card:[
             {
-                title:"[partners] Image Carousel",
-                value:"partners.card.image-carousel"
+                title:"[partners] Right Media Image Carousel with Left Content",
+                value:"partners.card.right-media-image-carousel-with-left-content"
             }
         ]
     }
