@@ -100,14 +100,12 @@ export const details: FeatureSchemaDefinition = {
         value: "details.card.room-specification",
       },
       {
-        title:
-          "[Details] Right Media Aspect Ratio[2:4] with Top Left Layover content",
-        value: "details.card.right-media-aspect-ratio-2:4-with-top-left-layover-content",
+        title: "[Details] Semi Image with overlapped content",
+        value: "details.card.semi-image-with-overlapped-content",
       },
       {
-        title:
-          "[Details] Media Aspect Ratio[1:4] with Bottom Right Layover Content",
-        value: "details.card.media-aspect-ratio-1:4-bottom-right-layover-content",
+        title: "[Details] Full Image with overlapped content",
+        value: "details.card.full-image-with-overlapped-content",
       },
       {
         title: "[Details] Left Media Image carousal with right Content",
