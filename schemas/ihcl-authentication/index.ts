@@ -71,6 +71,10 @@ export const Authentication: FeatureSchemaDefinition = {
         title: "[Authentication] Mobile Number Registration",
         value: "authentication.dialog.mobile-number-registration",
       },
+      {
+        title: "[Authentication] OTP Login Model",
+        value: "authentication.dialog.otp-login-model",
+      },
     ],
     tabs: [
       {

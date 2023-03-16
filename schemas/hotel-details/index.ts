@@ -102,12 +102,12 @@ export const details: FeatureSchemaDefinition = {
       {
         title:
           "[Details] Right Media Aspect Ratio[2:4] with Top Left Layover content",
-        value: "details.card.right-media-ar-2:4-with-top-left-layover-content",
+        value: "details.card.right-media-aspect-ratio-2:4-with-top-left-layover-content",
       },
       {
         title:
           "[Details] Media Aspect Ratio[1:4] with Bottom Right Layover Content",
-        value: "details.card.media-ar-1:4-bottom-right-layover-content",
+        value: "details.card.media-aspect-ratio-1:4-bottom-right-layover-content",
       },
       {
         title: "[Details] Left Media Image carousal with right Content",
