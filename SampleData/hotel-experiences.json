@@ -1,0 +1,39 @@
+{
+    "Experiences": {
+      "title": "Signature Experiences",
+      "subTitle": "Descend into a world that was once the sole preserve of royalty, step onto the soft, white sand beaches at a secluded island or discover the hidden secrets of mist-draped hills with Taj.",
+      "data":  {
+          "image": "",
+          "title": "Gazebo Experience",
+          "description": "With the beautiful floral and light set-up our one of the finest exclusive dining location Gazebo gives you a sense of personal preference yet an unobtrusive service.",
+          "primaryAction": "BOOK NOW",
+          "primaryActionURL": "",
+          "CTA Label": "more",
+           "CTA URL": ""
+        }
+    },
+    "data": [
+    {
+      "image": "",
+      "title": "Unique Dining",
+      "description": "Dine privately anywhere you wish, with the majestic palace as a... more",
+      "primaryAction": "ENQUIRE NOW",
+      "primaryActionURL": "",
+      "CTA Label": "more",
+      "CTA URL": ""
+    },
+    {
+        "image": "",
+        "title": "Heritage Walk",
+        "description": "We take you on a palace walk through two and a half centuries of... more",
+        "primaryAction": "ENQUIRE NOW",
+        "primaryActionURL": "",
+        "CTA Label": "more",
+        "CTA URL": ""
+    }
+   ]
+  }
+
+
+
+
