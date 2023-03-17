@@ -76,8 +76,8 @@
       },
       {
         "image": "",
-        "title": "DISCOVER NEUPASS",
-        "description": "Reward yourself to memorable vacations, rejuvenating spa treatments and gourmet delights and more with NeuCoins.",
+        "title": "INDULGE WITH EPICURE",
+        "description": "Best Available Rate for Room/Suite Stay at Taj Palaces. On direct bookings, for stays lasting upto five consecutive nights, twice a year.",
         "primaryAction": "Explore"
       }
     ]
@@ -87,7 +87,60 @@
   "categories": [
     {
       "title": "Rooms & Suites",
-      "data": []
+      "data": {
+        "rooms": {
+          "title": "Rooms & Suites",
+          "description": "Immerse yourself in the splendour and tradition of kings at Rambagh Palace. The masterfully restored heritage Taj hotel offers you 33 grand suites and 45 hotel rooms in Jaipur... more",
+          "data": [
+            {
+              "roomTitle": "Royal Suite 1 Bedroom Garden View or Courtyard View",
+              "description": "Some of the Royal Suites were the personal chambers of the Maharaja of Jaipur. The décor with transports to the bygone era of the royalty. These are 1 room suites divided into a living area and a bedroom.",
+              "packages": [
+                {
+                  "packageCode": "",
+                  "packageDetails": {}
+                }
+              ]
+            },
+            {
+              "roomTitle": "Grand Presidential Suite 1 Bedroom Garden View",
+              "description": "It offers a large lounge overlooking the gardens, extending to the terrace, a royal dining room and a master bedroom with dressing area. Many international dignitaries, celebrities have had a memorable.",
+              "packages": [
+                {
+                  "packageCode": "",
+                  "packageDetails": {}
+                }
+              ]
+            }
+          ]
+        },
+        "exclusiveOffers": {
+          "title": "Exclusive Offers",
+          "subTitle": "Whether you are looking for a room only rate or intending to explore our dining options or looking to discover our unique experiences... more",
+          "data": [
+            {
+              "image": "",
+              "title": "Suite Surprises",
+              "description": "Great value on Suite bookings",
+              "highlights": ["15% off on Food & soft beverages."],
+              "primaryAction": "BOOK NOW",
+              "primaryActionURL": "",
+              "secondaryAction": "more",
+              "secondaryActionURL": ""
+            },
+            {
+              "image": "",
+              "title": "Best Available Rate",
+              "description": "For travellers who simply wish the best available rate for their luxurious guest room and a hassle-free reservation.",
+              "highlights": ["15% off on Jiva Spa treatments"],
+              "primaryAction": "BOOK NOW",
+              "primaryActionURL": "",
+              "secondaryAction": "more",
+              "secondaryActionURL": ""
+            }
+          ]
+        }
+      }
     },
     {
       "title": "OVERVIEW",
@@ -262,7 +315,70 @@
     },
     {
       "title": "Dining",
-      "data": []
+      "data": {
+        "dining": {
+          "title": "Signature Dining",
+          "description": "Always prepared with a local touch, the home-style cooking ensures that you maintain good health throughout your stay. And at the same time it gives you the opportunity to dabble in the local... more",
+          "data": [
+            {
+              "image": "",
+              "title": "Rajput room",
+              "description": "An all-day-dining restaurant ideal for breakfast, light bites, French press coffees and fresh teas.",
+              "specifications": [
+                { "key": "Cuisine", "value": "Multi-cuisine" },
+                { "key": "Opening hours", "value": "06.00 am - 11.45 pm" }
+              ],
+              "primaryAction": "RESERVE A TABLE",
+              "primaryActionURL": "",
+              "secondaryAction": "Gallery",
+              "secondaryActionURL": "",
+              "CTA Label": "more",
+              "CTA URL": ""
+            },
+            {
+              "image": "",
+              "title": "Suvarna Mahal",
+              "description": "The original palace dining room has a Renaissance style with a royal Indian menu.",
+              "specifications": [
+                { "key": "Cuisine", "value": "Indian" },
+                { "key": "Opening hours", "value": "10.00 am - 10.00 pm" }
+              ],
+              "primaryAction": "RESERVE A TABLE",
+              "primaryActionURL": "",
+              "secondaryAction": "Gallery",
+              "secondaryActionURL": "",
+              "CTA Label": "more",
+              "CTA URL": ""
+            }
+          ]
+        },
+        "exclusiveOffers": {
+          "title": "Exclusive Offers",
+          "subTitle": "Whether you are looking for a room only rate or intending to explore our dining options or looking to discover our unique experiences... more",
+          "data": [
+            {
+              "image": "",
+              "title": "Festive Offer",
+              "description": "Join us to rediscover India’s rich culture and heritage through the kaleidoscopic lens of our country’s vibrant festivals.",
+              "highlights": ["15% off on Food & soft beverages."],
+              "primaryAction": "BOOK NOW",
+              "primaryActionURL": "",
+              "secondaryAction": "more",
+              "secondaryActionURL": ""
+            },
+            {
+              "image": "",
+              "title": "Queen’s Woyage",
+              "description": "Experience the grandeur of authentic royalty at our living palaces as we make you feel like a queen.",
+              "highlights": ["15% off on Jiva Spa treatments"],
+              "primaryAction": "BOOK NOW",
+              "primaryActionURL": "",
+              "secondaryAction": "more",
+              "secondaryActionURL": ""
+            }
+          ]
+        }
+      }
     },
     {
       "title": "Venues",
@@ -443,15 +559,151 @@
     },
     {
       "title": "Experiences",
-      "data": []
+      "data": {
+        "experiences": {
+          "title": "Signature Experiences",
+          "subTitle": "Descend into a world that was once the sole preserve of royalty, step onto the soft, white sand beaches at a secluded island or discover the hidden secrets of mist-draped hills with Taj.",
+          "data": [
+            {
+              "image": "",
+              "title": "Gazebo Experience",
+              "description": "With the beautiful floral and light set-up our one of the finest exclusive dining location Gazebo gives you a sense of personal preference yet an unobtrusive service.",
+              "primaryAction": "ENQUIRE",
+              "primaryActionURL": "",
+              "CTA Label": "more",
+              "CTA URL": ""
+            },
+            {
+              "image": "",
+              "title": "Unique Dining",
+              "description": "Dine privately anywhere you wish, with the majestic palace as a... more",
+              "primaryAction": "ENQUIRE NOW",
+              "primaryActionURL": "",
+              "CTA Label": "more",
+              "CTA URL": ""
+            },
+            {
+              "image": "",
+              "title": "Heritage Walk",
+              "description": "We take you on a palace walk through two and a half centuries of... more",
+              "primaryAction": "ENQUIRE NOW",
+              "primaryActionURL": "",
+              "CTA Label": "more",
+              "CTA URL": ""
+            }
+          ]
+        }
+      }
     },
     {
       "title": "Gallery",
-      "data": []
+      "data": {
+        "gallery": {
+          "title": "Gallery",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip... more",
+          "categories": {
+            "Exterior": [
+              {
+                "image": "",
+                "type": ""
+              }
+            ],
+            "Common areas": [
+              {
+                "image": "",
+                "type": ""
+              }
+            ],
+            "Rooms & Suites": [
+              {
+                "image": "",
+                "type": ""
+              }
+            ],
+            "Dining & Bar": [
+              {
+                "image": "",
+                "type": ""
+              }
+            ],
+            "Venues": [
+              {
+                "image": "",
+                "type": ""
+              }
+            ],
+            "Spa & Wellness": [
+              {
+                "image": "",
+                "type": ""
+              }
+            ],
+            "Services & Amenities": [
+              {
+                "image": "",
+                "type": ""
+              }
+            ],
+            "Experiences": [
+              {
+                "image": "",
+                "type": ""
+              }
+            ],
+            "Swimming Pool": [
+              {
+                "image": "",
+                "type": ""
+              }
+            ],
+            "Video": [
+              {
+                "image": "",
+                "type": ""
+              }
+            ],
+            "Others": [
+              {
+                "image": "",
+                "type": ""
+              }
+            ]
+          }
+        }
+      }
     },
     {
       "title": "ATTRACTIONS",
-      "data": []
+      "data": {
+        "attractionData": {
+          "titel": "Local Attractions",
+          "description": "India's famed pink city, with a unique character that is quintessentially Rajput, is more than a gateway to Rajasthan. Jaipur has a bit of everything, from the wonders of its many historic forts... more",
+          "data": [
+            {
+              "image": "",
+              "title": "Hawa mahal",
+              "description": "The Hawa Mahal is a palace in the city of Jaipur, India. Built from red and pink sandstone, it is on the edge of the City Palace, Jaipur, and extends to the Zenana, or women's chambers.",
+              "specifications": [
+                {
+                  "key": "Distance",
+                  "value": "2 km"
+                }
+              ]
+            },
+            {
+              "image": "",
+              "title": "TAKE A REGAL RIDE",
+              "description": "Lumber up to the imposing ramparts of Amber Fort on elephant back, as royalty once did. A spectacular edifice of pale yellow and pink sandstone, Amber Fort is one of Jaipur's star attractions.",
+              "specifications": [
+                {
+                  "key": "Distance",
+                  "value": "2 km"
+                }
+              ]
+            }
+          ]
+        }
+      }
     }
   ]
 }
