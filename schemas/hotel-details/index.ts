@@ -143,6 +143,14 @@ export const details: FeatureSchemaDefinition = {
         title: "[Details] Hotel Accommodation and its General Information",
         value: "details.dialog.hotel-accommodation-and-general-information",
       },
+      {
+        title: "[Details] Enquiry Form Models",
+        value: "details.dialog.enquiries-form-models",
+      },
+      {
+        title: "[Details] Image Carousal Model",
+        value: "details.dialog.image-carousel-model",
+      },
     ],
   },
 };

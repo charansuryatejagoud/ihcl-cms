@@ -17,6 +17,10 @@ export const Authentication: FeatureSchemaDefinition = {
         title: "[Authentication] Maps with Aspect Ratio (6:6)",
         value: "authentication.group.maps-with-aspect-ratio-6:6",
       },
+      {
+        title: "[Authentication] Grey Grid",
+        value: "authentication.group.grey-grid",
+      }
     ],
     card: [
       {
