@@ -2,6 +2,12 @@ import dialog from "schemas/core/documents/dialog";
 import { FeatureSchemaDefinition } from "schemas/types";
 
 export const loyalty: FeatureSchemaDefinition = {
+  connectedStores: [
+    {
+      title: "[Loyalty] Epicure Cards Store",
+      value: "loyalty.stores.loyalty-epicure-cards-store",
+    },
+  ],
   variants: {
     group: [
       {
