@@ -97,5 +97,11 @@ export const loyalty: FeatureSchemaDefinition = {
         value: "loyalty.stepper.e-gift-card-flow",
       },
     ],
+    placeholder: [
+      {
+        title: "[Loyalty] Customer Information Form",
+        value: "loyalty.placeholders.customer-information-form",
+      },
+    ],
   },
 };
