@@ -24,5 +24,11 @@ export const businessServices: FeatureSchemaDefinition = {
         value: "businessServices.card.highlighted-text-with-description",
       },
     ],
+    placeholder: [
+      {
+        title: "[Business Services] Title with Single Action",
+        value: "businessServices.placeholders.title-with-single-action",
+      },
+    ],
   },
 };
