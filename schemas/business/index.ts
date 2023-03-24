@@ -19,6 +19,10 @@ export const businessServices: FeatureSchemaDefinition = {
           "[Business Services] center Aligned Title Description with Actions",
         value: "businessServices.card.center-aligned-title-desc-actions",
       },
+      {
+        title: "[Business Services] Highlighted Text with Description",
+        value: "businessServices.card.highlighted-text-with-description",
+      },
     ],
   },
 };
