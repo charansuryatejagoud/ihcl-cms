@@ -33,6 +33,10 @@ export const loyalty: FeatureSchemaDefinition = {
         value: "loyalty.group-with-comperative-specifications",
       },
       {
+        title: "[Loyalty] 4 Cards With Comperative Specifications",
+        value: "loyalty.group-4-cards-with-comperative-specifications",
+      },
+      {
         title: "[Loyalty] Group With Group Of Gift Items Right Content",
         value: "loyalty.group.group-of-gift-items-right-content",
       },
@@ -66,6 +70,10 @@ export const loyalty: FeatureSchemaDefinition = {
       {
         title: "[Loyalty] Card With Hotel Details",
         value: "loyalty.card.card-with-hotel-details",
+      },
+      {
+        title: "[Loyalty] Card With background Image and Column aligned dual actions",
+        value: "loyalty.card.card-with-background-image.horizontal-dual-actions",
       },
     ],
     nudge: [
