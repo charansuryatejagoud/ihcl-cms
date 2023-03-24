@@ -44,6 +44,14 @@ export const bookings: FeatureSchemaDefinition = {
         title: "[Bookings] Payment details",
         value: "bookings.placeholders.payment-details",
       },
+      {
+        title: "[Bookings] Booking Confirmed Guest Details",
+        value: "bookings.placeholders.confirmed-guest-details",
+      },
+      {
+        title: "[Bookings] Booking Confirmed Room Details",
+        value: "bookings.placeholders.confirmed-room-details",
+      },
     ],
     nudge: [
       {
@@ -55,6 +63,10 @@ export const bookings: FeatureSchemaDefinition = {
       {
         title: "[Bookings] Grid Wrapper",
         value: "bookings.group.grid-wrapper",
+      },
+      {
+        title: "[Bookings] Booking Payment Return",
+        value: "bookings.group.booking-payment-return",
       },
     ],
     tabs: [
