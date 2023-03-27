@@ -17,6 +17,8 @@ import { Authentication } from "./ihcl-authentication";
 import { giftCards } from "./ihcl-gift-cards";
 import { partners } from "./ihcl-partners";
 import { businessServices } from "./business";
+import hotel from "./content-fragments/hotels/hotel";
+import { hotels } from "./content-fragments/hotels";
 
 const features: FeatureSchemaDefinition[] = [
   core,
@@ -30,7 +32,8 @@ const features: FeatureSchemaDefinition[] = [
   search,
   giftCards,
   partners,
-  businessServices
+  businessServices,
+  hotels,
 ];
 
 export const featureDefinition: FeatureSchemaDefinition =
