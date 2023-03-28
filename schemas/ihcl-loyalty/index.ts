@@ -2,6 +2,12 @@ import dialog from "schemas/core/documents/dialog";
 import { FeatureSchemaDefinition } from "schemas/types";
 
 export const loyalty: FeatureSchemaDefinition = {
+  connectedStores: [
+    {
+      title: "[Loyalty] Epicure Cards Store",
+      value: "loyalty.stores.loyalty-epicure-cards-store",
+    },
+  ],
   variants: {
     group: [
       {
@@ -111,6 +117,12 @@ export const loyalty: FeatureSchemaDefinition = {
       {
         title: "[Loyalty] E-Gift Card Flow",
         value: "loyalty.stepper.e-gift-card-flow",
+      },
+    ],
+    placeholder: [
+      {
+        title: "[Loyalty] Customer Information Form",
+        value: "loyalty.placeholders.customer-information-form",
       },
     ],
   },

@@ -63,6 +63,14 @@ export const details: FeatureSchemaDefinition = {
         title: "[details] Group With Two Row Box Tabs",
         value: "details.group.group-with-two-row-box-tabs",
       },
+      {
+        title: "[Details] Hotel Facilities",
+        value: "details.group.hotel-facilities",
+      },
+      {
+        title: "[Details] Hotel Dine In Details",
+        value: "details.group.hotel-dine-in-details",
+      },
     ],
     card: [
       {
