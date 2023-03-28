@@ -18,6 +18,10 @@ export const bookings: FeatureSchemaDefinition = {
         title: "Bookings",
         value: "bookings.switchCaseBlock.default",
       },
+      {
+        title: "[loyalty] loyalty confirmation",
+        value: "loyalty-loyalty-confirmation"
+      }
     ],
     placeholder: [
       {
