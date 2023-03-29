@@ -48,6 +48,12 @@ const appConfigItem = S.listItem()
           .documentId("appConfig")
   );
 
+const contentFragments = S.listItem().title("CFs").child(
+  S.list().title("CFs Types").items([
+    S.listItem().title("Address").child(S.documentTypeList("address"))
+  ])
+)  
+
 const categoryList = S.documentTypeList("category")
   .title("Category")
   .child((categoryId) => {
@@ -70,7 +76,7 @@ const pagesByCategory = S.listItem()
 const standardListItems = [
   settingsItem,
   appConfigItem,
-
+  contentFragments,
   S.divider(),
 
   pagesByCategory,
