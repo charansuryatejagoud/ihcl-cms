@@ -26,17 +26,21 @@ export default {
     {
       name: "propertyAddress",
       title: "Property Address",
-      type: "string",
+      type: 'array',
+      of: [{
+        type: 'reference',
+        to: { type: "address" }
+      }]
     },
     {
       name: "propertyContact",
       title: "Property Contact",
-      type: "string",
+      type: "contact",
     },
     {
       name: "propertyAvailability",
       title: "Property Availability",
-      type: "string",
+      type: "availability",
     },
     {
       name: "propertyFacilities",
@@ -56,7 +60,67 @@ export default {
     {
       name: "hotelRooms",
       title: "Hotel Rooms",
-      type: "string",
+      type: "rooms",
     },
+    {
+      name: "propertyHighlights",
+      title: "Property Highlights",
+      type: "highlights",
+    },
+    {
+      name: "propertyExclusiveOffers",
+      title: "Property Exclusive Offers",
+      type: "exclusiveOffers",
+    },
+    {
+      name: "propertyOffers",
+      title: "Property Offers",
+      type: "offers",
+    },
+    {
+      name: "propertyHolidays",
+      title: "Property Holidays",
+      type: "holidays",
+    },
+    {
+      name: "propertySignatureDining",
+      title: "Property Signature Dining",
+      type: "signatureDining",
+    },
+    {
+      name: "propertyEventVenues",
+      title: "Property Event Venues",
+      type: "eventVenues",
+    },
+    {
+      name: "propertyPerfectEvent",
+      title: "Property Perfect Event",
+      type: "perfectEvent",
+    },
+    {
+      name: "propertySpaDetails",
+      title: "Property Spa Details",
+      type: "spaDetails",
+    },
+    {
+      name: "propertySignatureTreatments",
+      title: "Property Signature Treatments",
+      type: "signatureTreatments",
+    },
+    {
+      name: "propertyWellness",
+      title: "Property Wellness",
+      type: "wellness",
+    },
+    {
+      name: "propertyExperiences",
+      title: "Property Experiences",
+      type: "experiences",
+    },
+    {
+      name: "propertyGallery",
+      title: "Property Gallery",
+      type: "gallery",
+    }
   ],
 };

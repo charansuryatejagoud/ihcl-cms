@@ -1,4 +1,5 @@
 export default {
+  Title:"Hotel Details",
   name: "hotelDetails",
   type: "object",
   fields: [
