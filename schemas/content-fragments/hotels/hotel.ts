@@ -35,7 +35,11 @@ export default {
     {
       name: "propertyContact",
       title: "Property Contact",
-      type: "contact",
+      type: 'array',
+      of: [{
+        type: 'reference',
+        to: { type: "contact" }
+      }]
     },
     {
       name: "propertyAvailability",

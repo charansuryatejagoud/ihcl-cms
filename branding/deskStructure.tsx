@@ -50,7 +50,8 @@ const appConfigItem = S.listItem()
 
 const contentFragments = S.listItem().title("CFs").child(
   S.list().title("CFs Types").items([
-    S.listItem().title("Address").child(S.documentTypeList("address"))
+    S.listItem().title("Address").child(S.documentTypeList("address")),
+    S.listItem().title("Contact").child(S.documentTypeList("contact"))
   ])
 )  
 

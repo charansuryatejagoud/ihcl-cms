@@ -1,7 +1,7 @@
 export default {
     title: "Contact",
     name: 'contact',
-    type: "object",
+    type: "document",
     fields: [
         {
             name: "phone",
