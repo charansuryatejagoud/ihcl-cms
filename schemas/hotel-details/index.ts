@@ -71,6 +71,11 @@ export const details: FeatureSchemaDefinition = {
         title: "[Details] Hotel Dine In Details",
         value: "details.group.hotel-dine-in-details",
       },
+      {
+        title: "[Details] Carousel With Single Card",
+        value: "details.group.carousel-with-single-card"
+      }
+
     ],
     card: [
       {
