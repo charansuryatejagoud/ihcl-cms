@@ -30,11 +30,17 @@ export const giftCards: FeatureSchemaDefinition = {
         value: "giftCards.card.order-status-form",
       },
     ],
-  
+
     tabs: [
       {
         title: "[Gift Card] Manage Card Multiple Tabs",
         value: "giftCards.tabs.manage-card-multiple-tabs",
+      },
+    ],
+    stepper: [
+      {
+        title: "[Gift Card] Gift Card Form Stepper",
+        value: "giftCards.stepper.gift-card-form-stepper",
       },
     ],
   },
