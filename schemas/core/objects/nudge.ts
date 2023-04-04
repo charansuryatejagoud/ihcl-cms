@@ -76,6 +76,12 @@ export default function nudge({ variants }: { variants: VariantDefinition[] }) {
         group: "main",
       },
       {
+        name: "aesthetic",
+        title: "Aesthetic",
+        type: "reference",
+        to: [{ type: "uiConfiguration" }],
+      },
+      {
         name: "documents",
         title: "Documents",
         description: "Documents supported are PDF and DOCX.",
