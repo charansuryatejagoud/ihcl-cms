@@ -21,7 +21,11 @@ export const bookings: FeatureSchemaDefinition = {
       {
         title: "[loyalty] loyalty confirmation",
         value: "loyalty-loyalty-confirmation"
-      }
+      },
+      {
+        title: "[Bookings] Hotel Booking Confirmation",
+        value: "bookings.switchCaseBlock.booking-confirmation",
+      },
     ],
     placeholder: [
       {
@@ -71,6 +75,10 @@ export const bookings: FeatureSchemaDefinition = {
       {
         title: "[Bookings] Booking Payment Return",
         value: "bookings.group.booking-payment-return",
+      },
+      {
+        title: "[Bookings] Booking Hotel Failure Confirmation",
+        value: "bookings.group.booking-hotel-failure",
       },
     ],
     tabs: [
