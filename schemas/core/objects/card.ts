@@ -65,6 +65,13 @@ export default function card(props: Props) {
         group: "main",
       },
       {
+        name:"charactersLimit",
+        title: "Characters Limit",
+        type: "number",
+        description:"Number of characters limit for card description",
+        group: "main",
+      },
+      {
         name:"aesthetic",
         title:"Aesthetic",
         type: "reference",

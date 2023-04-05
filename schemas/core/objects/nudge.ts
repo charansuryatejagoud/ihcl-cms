@@ -34,6 +34,13 @@ export default function nudge({ variants }: { variants: VariantDefinition[] }) {
         group: "main",
       },
       {
+        name:"charactersLimit",
+        title: "Characters Limit",
+        type: "number",
+        description:"Number of characters limit for nudge description",
+        group: "main",
+      },
+      {
         name: "variant",
         title: "Variant",
         type: "string",

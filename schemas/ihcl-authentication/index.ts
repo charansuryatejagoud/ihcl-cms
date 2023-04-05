@@ -10,6 +10,10 @@ export const Authentication: FeatureSchemaDefinition = {
       title: "[Authentication] Neupass Global User Registration Details",
       value: "authentication.neupass-global-user-registration-details",
     },
+    {
+      title: "[Loyalty] Loyalty Confirmation ",
+      value: "loyalty.loyalty-confirmation"
+    }
   ],
   variants: {
     group: [

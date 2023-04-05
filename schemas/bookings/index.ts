@@ -19,7 +19,11 @@ export const bookings: FeatureSchemaDefinition = {
         value: "bookings.switchCaseBlock.default",
       },
       {
-        title: "Hotel Booking Confirmation",
+        title: "[loyalty] loyalty confirmation",
+        value: "loyalty-loyalty-confirmation"
+      },
+      {
+        title: "[Bookings] Hotel Booking Confirmation",
         value: "bookings.switchCaseBlock.booking-confirmation",
       },
     ],

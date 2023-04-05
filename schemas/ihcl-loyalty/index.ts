@@ -44,6 +44,14 @@ export const loyalty: FeatureSchemaDefinition = {
         title: "[Loyalty] Group with Card Media Content Positions",
         value: "loyalty.group.card-media-content-positions",
       },
+      {
+        title: "[Loyalty] Group with Confirmation",
+        value: "loyalty.group-with-confirmation"
+      },
+      {
+        title: "[Loyalty] Group With Failure Case",
+        value: "loyalty.group-with-failure-case"
+      }
     ],
     card: [
       { title: "[Loyalty] Text on Image", value: "loyalty.text-on-image" },
