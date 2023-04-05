@@ -65,8 +65,15 @@ export default function card(props: Props) {
         group: "main",
       },
       {
-        name:"aesthetic",
-        title:"Aesthetic",
+        name: "charactersLimit",
+        title: "Characters Limit",
+        type: "number",
+        group: "main",
+        Description: "Number of characters limit for card description.",
+      },
+      {
+        name: "aesthetic",
+        title: "Aesthetic",
         type: "reference",
         to: [{ type: "uiConfiguration" }],
       },
@@ -169,7 +176,7 @@ export default function card(props: Props) {
           list: [
             { title: "Video", value: "video" },
             { title: "Component", value: "component" },
-            {title:"Image",value:"image"}
+            { title: "Image", value: "image" },
           ],
         },
       },
