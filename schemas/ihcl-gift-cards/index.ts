@@ -37,5 +37,11 @@ export const giftCards: FeatureSchemaDefinition = {
         value: "giftCards.tabs.manage-card-multiple-tabs",
       },
     ],
+    stepper: [
+      {
+        title: "[Gift Card] Gift Card Form Stepper",
+        value: "giftCards.stepper.gift-card-form-stepper",
+      },
+    ],
   },
 };
