@@ -34,6 +34,13 @@ export default function nudge({ variants }: { variants: VariantDefinition[] }) {
         group: "main",
       },
       {
+        name: "charactersLimit",
+        title: "Characters Limit",
+        type: "number",
+        group: "main",
+        Description: "Number of characters limit for nudge description.",
+      },
+      {
         name: "variant",
         title: "Variant",
         type: "string",
@@ -74,6 +81,12 @@ export default function nudge({ variants }: { variants: VariantDefinition[] }) {
         description: "Image that will be used for larger screens like Desktop",
         type: "image",
         group: "main",
+      },
+      {
+        name: "aesthetic",
+        title: "Aesthetic",
+        type: "reference",
+        to: [{ type: "uiConfiguration" }],
       },
       {
         name: "documents",

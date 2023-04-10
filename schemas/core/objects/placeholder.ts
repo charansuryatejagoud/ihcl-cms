@@ -37,6 +37,13 @@ export default function placeholder({
         group: "main",
       },
       {
+        name: "charactersLimit",
+        title: "Characters Limit",
+        type: "number",
+        group: "main",
+        Description: "Number of characters limit for placeholder description.",
+      },
+      {
         name: "variant",
         title: "Variant",
         type: "string",

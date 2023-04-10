@@ -74,6 +74,13 @@ export default function group({
         group: "main",
       },
       {
+        name: "charactersLimit",
+        title: "Characters Limit",
+        type: "number",
+        group: "main",
+        Description: "Number of characters limit for group subtitle.",
+      },
+      {
         name: "heading",
         title: "Heading",
         type: "string",
