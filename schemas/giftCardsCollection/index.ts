@@ -25,7 +25,7 @@ export default {
     },
     {
       title: "URL",
-      type: "url",
+      type: "string",
       name: "url",
     },
     {
