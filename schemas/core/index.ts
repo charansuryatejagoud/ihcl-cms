@@ -21,6 +21,7 @@ import reorderTransformer from "./transformers/reorder.transformer";
 import { cellSchema, rowSchema } from "./objects/dataGrid";
 import formGroup from "./objects/form-group";
 import navigationItem from "./objects/navigationItem";
+
 export const core: FeatureSchemaDefinition = {
   schemas: [
     category,
@@ -127,5 +128,4 @@ export const core: FeatureSchemaDefinition = {
     { type: "dataGrid" },
   ],
   variants: {},
-  
 };
