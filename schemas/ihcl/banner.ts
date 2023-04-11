@@ -1,5 +1,17 @@
 import { GiVerticalBanner } from "react-icons/gi";
 import { IoApps, IoSettings } from "react-icons/io5";
+
+const AlignmentVariant = [
+  {
+    title: "Regular Title with Preceding Hyphen",
+    value: "regular-title-with-preceding-hyphen-title",
+  },
+  {
+    title: "Regular Title with Two Rows",
+    value: "regular-title-with-two-rows",
+  },
+];
+
 export default {
   title: "Banner",
   name: "banner",
@@ -32,6 +44,16 @@ export default {
       group: "main",
     },
     {
+      name: "alignmentVariant",
+      title: "Alignment Variant",
+      type: "string",
+      description: "This variant is for Title alignment",
+      options: {
+        list: AlignmentVariant,
+      },
+      group: "main",
+    },
+    {
       name: "chatBotImage",
       title: "Chat Bot Image",
       type: "image",
@@ -47,6 +69,28 @@ export default {
       title: "Large Variant",
       name: "largeVariant",
       type: "string",
+      group: "main",
+    },
+    {
+      title: "Search Field Variant",
+      name: "searchFieldVariant",
+      type: "string",
+      options: {
+        list: [
+          {
+            title: "Global Search Field",
+            value: "ihcl.banner.global-search-field",
+          },
+          {
+            title: "Global Booking Mask",
+            value: "ihcl.banner.global-booking-mask",
+          },
+          {
+            title: "Global Search Field is not Allowed",
+            value: "ihcl.banner.global-search-field-is-not-allowed",
+          },
+        ],
+      },
       group: "main",
     },
     {

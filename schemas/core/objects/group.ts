@@ -125,6 +125,26 @@ export default function group({
         group: "main",
       },
       {
+        name: "logo",
+        title: "Logo",
+        type: "image",
+        group: "main",
+      },
+      {
+        name: "image",
+        title: "Image",
+        description: "Image that will be used for smaller screens like Mobile",
+        type: "image",
+        group: "main",
+      },
+      {
+        name: "largeImage",
+        title: "Large Image",
+        description: "Image that will be used for larger screens like Desktop",
+        type: "image",
+        group: "main",
+      },
+      {
         name: "backgroundImage",
         title: "Background Image",
         type: "image",

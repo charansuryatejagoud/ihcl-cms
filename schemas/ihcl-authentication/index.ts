@@ -20,7 +20,7 @@ export const Authentication: FeatureSchemaDefinition = {
       {
         title: "[Authentication] Grey Grid",
         value: "authentication.group.grey-grid",
-      }
+      },
     ],
     card: [
       {
@@ -46,6 +46,10 @@ export const Authentication: FeatureSchemaDefinition = {
       {
         title: "[Authentication] Action Labels",
         value: "authentication.card.action-labels",
+      },
+      {
+        title: "[Authentication] Membership Global Login options",
+        value: "authentication.card.membership-global-login-options",
       },
     ],
     nudge: [
@@ -79,6 +83,10 @@ export const Authentication: FeatureSchemaDefinition = {
         title: "[Authentication] OTP Login Model",
         value: "authentication.dialog.otp-login-model",
       },
+      {
+        title: "[Authentication] Global Membership Login",
+        value: "authentication.dialog.global-membership-login",
+      }
     ],
     tabs: [
       {
