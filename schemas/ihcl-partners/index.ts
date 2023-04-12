@@ -14,6 +14,10 @@ export const partners: FeatureSchemaDefinition = {
         title: "[Partners] Left Image Right Content With Border",
         value: "partners.nudge.left-image-right-content-with-border",
       },
+    {
+        title:"[Partners] Nudge With Two Links",
+        value:"partners.nudge.nudge-with-two-links"
+    }
     ],
   },
 };
