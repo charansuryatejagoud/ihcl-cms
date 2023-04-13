@@ -73,13 +73,12 @@ export const details: FeatureSchemaDefinition = {
       },
       {
         title: "[Details] Carousel With Single Card",
-        value: "details.group.carousel-with-single-card"
+        value: "details.group.carousel-with-single-card",
       },
       {
-        title: "[Details] Group  With Room specifications And Bullet Points [Dialog]",
-        value: "details.group.group-with-room-specifications-and-bullet-points",
+        title: "[Details] Group With Room Details",
+        value: "details.group.group-with-room-details",
       },
-
     ],
     card: [
       {
@@ -145,19 +144,23 @@ export const details: FeatureSchemaDefinition = {
         value: "details.card.experience-enquiry-model-form",
       },
       {
-        title:"[Details] Title With Bullet Points",
-        value:"details.card.title-with-bullet-points"
+        title: "[Details] Title With Bullet Points",
+        value: "details.card.title-with-bullet-points",
       },
       {
-        title:"[Details]  Card With Bullet Points",
-        value:"details.card.card-with-bullet-points"
+        title: "[Details] Card With Bullet Points",
+        value: "details.card.card-with-bullet-points",
       },
       {
-        title:"[Details]  Card With Room Properties",
-        value:"details.card.card-with-room-properties"
-      }
+        title: "[Details] Card With Room Properties",
+        value: "details.card.card-with-room-properties",
+      },
+      {
+        title: "Card With Carousel",
+        value: "card-with-carousel",
+      },
     ],
-    
+
     banner: [],
     dialog: [
       { title: "[Details] Image Gallery", value: "details.image-gallery" },
@@ -169,7 +172,7 @@ export const details: FeatureSchemaDefinition = {
         title: "[Details] Gallery With Carousel",
         value: "details.gallery-with-carousel",
       },
-      
+
       {
         title: "[Details] Enquiry Form Models",
         value: "details.dialog.enquiries-form-models",
@@ -179,9 +182,13 @@ export const details: FeatureSchemaDefinition = {
         value: "details.dialog.image-carousel-model",
       },
       {
-        title:"[Details]  Hotel Room Types",
-        value:"details.dialog.hotel-room-types"
-      }
+        title: "[Details] Hotel Room Types",
+        value: "details.dialog.hotel-room-types",
+      },
+      {
+        title: "Gallery With Carousel",
+        value: "gallery-with-carousel",
+      },
     ],
   },
 };
