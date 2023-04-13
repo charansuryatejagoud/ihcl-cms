@@ -10,6 +10,10 @@ export const Authentication: FeatureSchemaDefinition = {
       title: "[Authentication] Neupass Global User Registration Details",
       value: "authentication.neupass-global-user-registration-details",
     },
+    {
+      title: "[Authentication] Register Store",
+      value: "authentication.stores.register-store",
+    },
   ],
   variants: {
     group: [
@@ -86,7 +90,7 @@ export const Authentication: FeatureSchemaDefinition = {
       {
         title: "[Authentication] Global Membership Login",
         value: "authentication.dialog.global-membership-login",
-      }
+      },
     ],
     tabs: [
       {
@@ -102,6 +106,10 @@ export const Authentication: FeatureSchemaDefinition = {
       {
         title: "[Authentication] Mobile Number Verification",
         value: "authentication.mobile-number-verification",
+      },
+      {
+        title: "[Authentication] PopUp Message Status",
+        value: "authentication.placeholders.popup-message-status",
       },
     ],
   },

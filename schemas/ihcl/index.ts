@@ -11,7 +11,9 @@ import textContainer from "./textContainer";
 import { videoAsset } from "./videoAsset";
 import cfReference from "./cfReference";
 import uiConfiguration from "./uiConfiguration";
-// import product from "schemas/product";
+import dialogHeader from "./dialogHeader";
+
+
 
 export const ihclcore: FeatureSchemaDefinition = {
   schemas: [
@@ -27,7 +29,7 @@ export const ihclcore: FeatureSchemaDefinition = {
     comparative,
     cfReference,
     uiConfiguration,
-    // product
+    dialogHeader
   ],
   pageItems: [
     { type: "banner" },

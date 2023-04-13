@@ -1,5 +1,5 @@
-import {IoApps, IoLayersOutline as Icon, IoSettings,} from "react-icons/io5";
-import {hiddenField} from "../../shared-utils";
+import { IoApps, IoLayersOutline as Icon, IoSettings } from "react-icons/io5";
+import { hiddenField } from "../../shared-utils";
 
 export const sectionPreview = {
   select: {
