@@ -1,6 +1,11 @@
 import { FeatureSchemaDefinition } from "schemas/types";
 
 export const Authentication: FeatureSchemaDefinition = {
+  headers: [
+    {
+      type: "dialogHeader",
+    },
+  ],
   connectedStores: [
     {
       title: "[Authentication] Login Store",
@@ -11,6 +16,7 @@ export const Authentication: FeatureSchemaDefinition = {
       value: "authentication.neupass-global-user-registration-details",
     },
   ],
+
   variants: {
     group: [
       {
