@@ -245,6 +245,8 @@ export const ihclcore: FeatureSchemaDefinition = {
       { title: "Banner Nudge", value: "ihcl.core.nudge.banner" },
       { title: "Open Url Nudge", value: "ihcl.core.nudge.open-url" },
       { title: "Pincode Nudge", value: "ihcl.core.nudge.pincode" },
+      {title:"Navigation",value:"ihcl.core.nudge.navigation",
+    }
     ],
     dialog: [
       { title: "Alert", value: "ihcl.core.alert" },
