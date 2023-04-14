@@ -158,8 +158,8 @@ export const details: FeatureSchemaDefinition = {
         value: "details.card.card-with-room-properties",
       },
       {
-        title: "[Details] Card With Image On Title",
-        value: "details.card.card-with-Image-on-title",
+        title: "[Details] Card With Image On Title ",
+        value: "details.card.card-with-image-on-title",
       },
     ],
 
