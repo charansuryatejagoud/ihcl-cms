@@ -11,7 +11,6 @@ export default {
     { name: "main", title: "Main", icon: IoApps },
     { name: "configuration", title: "Configuration", icon: IoSettings },
   ],
-
   fields: [
     {
       name: "thickness",
@@ -24,13 +23,11 @@ export default {
         ],
       },
     },
-
     {
       name: "isFullWidth",
       title: "Is full width?",
       type: "boolean",
     },
-
     {
       name: "variant",
       title: "Variant",
@@ -38,14 +35,11 @@ export default {
       options: {
         list: [
           { title: "Default", value: "default" },
-
           { title: "Gradient", value: "gradient" },
         ],
       },
-
       initialValue: "default",
     },
-
     {
       name: "metadata",
       type: "metadata",
