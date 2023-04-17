@@ -11,6 +11,7 @@ import textContainer from "./textContainer";
 import { videoAsset } from "./videoAsset";
 import cfReference from "./cfReference";
 import uiConfiguration from "./uiConfiguration";
+import divider from "./divider";
 
 export const ihclcore: FeatureSchemaDefinition = {
   schemas: [
@@ -26,6 +27,7 @@ export const ihclcore: FeatureSchemaDefinition = {
     comparative,
     cfReference,
     uiConfiguration,
+    divider,
   ],
   pageItems: [
     { type: "banner" },
@@ -38,6 +40,9 @@ export const ihclcore: FeatureSchemaDefinition = {
     {
       type: "stepper",
     },
+    {
+      type: "divider",
+    },
   ],
   groupItems: [
     { type: "richText" },
@@ -49,6 +54,7 @@ export const ihclcore: FeatureSchemaDefinition = {
       type: "cfReference",
     },
     { type: "tabsComponent" },
+    { type: "divider" },
   ],
 
   variants: {
@@ -247,8 +253,7 @@ export const ihclcore: FeatureSchemaDefinition = {
       { title: "Banner Nudge", value: "ihcl.core.nudge.banner" },
       { title: "Open Url Nudge", value: "ihcl.core.nudge.open-url" },
       { title: "Pincode Nudge", value: "ihcl.core.nudge.pincode" },
-      {title:"Navigation",value:"ihcl.core.nudge.navigation",
-    }
+      { title: "Navigation", value: "ihcl.core.nudge.navigation" },
     ],
     dialog: [
       { title: "Alert", value: "ihcl.core.alert" },
