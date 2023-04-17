@@ -79,8 +79,10 @@ export const details: FeatureSchemaDefinition = {
         title: "[Details] Group With Room Details",
         value: "details.group.group-with-room-details",
       },
-      {title:"[Details] Single Image Carousel",
-       value:"details.group.single-image-carousel"}
+      {
+        title: "[Details] Single Image Carousel",
+        value: "details.group.single-image-carousel",
+      },
     ],
     card: [
       {
@@ -187,7 +189,6 @@ export const details: FeatureSchemaDefinition = {
         title: "[Details] Hotel Room Types",
         value: "details.dialog.hotel-room-types",
       },
-     
     ],
   },
 };
