@@ -50,7 +50,7 @@ export default function group({
     name: "group",
     title: "Group",
     type: "object",
-    initialValue: { hasAllLink: false },
+    initialValue: { hasAllLink: false, allowAdditionalParameters: false },
     icon: Icon,
     groups: [
       { name: "main", title: "Main", icon: IoApps },
@@ -86,8 +86,8 @@ export default function group({
         type: "string",
       },
       {
-        name:"aesthetic",
-        title:"Aesthetic",
+        name: "aesthetic",
+        title: "Aesthetic",
         type: "reference",
         to: [{ type: "uiConfiguration" }],
       },
@@ -208,6 +208,45 @@ export default function group({
         title: "Items",
         type: "array",
         of: items,
+        group: "main",
+      },
+      {
+        name: "allowAdditionalParameters",
+        type: "boolean",
+        title: "Allow Additional Parameters",
+        group: "main",
+      },
+      {
+        name: "parameterMap",
+        title: "Parameter Map",
+        description: "Parameters as a set of key-value pairs",
+        hidden: ({ parent }) => !parent.allowAdditionalParameters,
+        type: "array",
+        of: [
+          {
+            type: "object",
+            title: "Parameter",
+            options: { columns: 2 },
+            fields: [
+              {
+                name: "key",
+                title: "Key",
+                type: "string",
+              },
+              {
+                name: "value",
+                title: "Value",
+                type: "string",
+              },
+            ],
+            preview: {
+              select: {
+                title: "key",
+                subtitle: "value",
+              },
+            },
+          },
+        ],
         group: "main",
       },
       // {

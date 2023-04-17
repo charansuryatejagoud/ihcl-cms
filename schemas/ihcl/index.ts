@@ -158,6 +158,10 @@ export const ihclcore: FeatureSchemaDefinition = {
         value: "ihcl.core.group.carousel-with-tabs",
       },
       {
+        title: "Multi Static With Tabs",
+        value: "ihcl.core.group.multi-static-with-tabs",
+      },
+      {
         title: "8:4 Ratio Grid With only two items",
         value: "ihcl.core.group.8-4-ratio-grid-with-only-two-items",
       },
