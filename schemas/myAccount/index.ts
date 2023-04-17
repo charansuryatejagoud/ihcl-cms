@@ -13,6 +13,10 @@ export const myAccount: FeatureSchemaDefinition = {
         title: "[My Account] Section Specific Details",
         value: "myAccount.group.section-specific-details",
       },
+      {
+        title: "[My Account] Account Tabs List",
+        value: "myAccount.group.account-tabs-list",
+      },
     ],
     card: [
       {
