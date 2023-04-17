@@ -123,7 +123,7 @@ export default function dialog({
         of: items,
       },
       {
-        title: "Page Headers",
+        title: "Dialog Headers",
         name: "headers",
         type: "array",
         of: headers,
@@ -139,7 +139,7 @@ export default function dialog({
         ],
       },
       {
-        title: "Page Footers",
+        title: "Dialog Footers",
         name: "footers",
         type: "array",
         of: footers,
