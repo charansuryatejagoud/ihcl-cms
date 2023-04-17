@@ -80,8 +80,8 @@ export const details: FeatureSchemaDefinition = {
         value: "details.group.group-with-room-details",
       },
       {
-        title: "[Details] Single Image Carousel",
-        value: "details.group.single-image-carousel",
+        title: "[Details] Gallery Image Carousel",
+        value: "details.group.gallery-image-carousel",
       },
     ],
     card: [
