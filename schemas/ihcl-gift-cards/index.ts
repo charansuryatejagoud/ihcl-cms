@@ -30,6 +30,12 @@ export const giftCards: FeatureSchemaDefinition = {
         value: "giftCards.card.order-status-form",
       },
     ],
+    group: [
+      {
+        title: "[Gift Card] Failure Status",
+        value: "giftCards.group.failure-status",
+      },
+    ],
 
     tabs: [
       {
