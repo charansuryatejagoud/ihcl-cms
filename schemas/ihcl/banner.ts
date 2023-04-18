@@ -11,6 +11,16 @@ const AlignmentVariant = [
     value: "regular-title-with-two-rows",
   },
 ];
+ const variants = [
+  {
+    title: "Hero Banner",
+    value: "hero-banner",
+  },
+  {
+    title: "Banner With Action",
+    value: "banner-with-action",
+  },
+ ];
 
 export default {
   title: "Banner",
@@ -44,6 +54,12 @@ export default {
       group: "main",
     },
     {
+      title: "Content",
+      name: "singleContent",
+      type: "blockContent",
+      group: "main"
+    },
+    {
       name: "alignmentVariant",
       title: "Alignment Variant",
       type: "string",
@@ -63,12 +79,18 @@ export default {
       title: "Variant",
       name: "variant",
       type: "string",
+      options: {
+        list: variants,
+      },
       group: "main",
     },
     {
       title: "Large Variant",
       name: "largeVariant",
       type: "string",
+      options: {
+        list: variants,
+      },
       group: "main",
     },
     {
