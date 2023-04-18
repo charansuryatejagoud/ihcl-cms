@@ -17,6 +17,10 @@ export const myAccount: FeatureSchemaDefinition = {
         title: "[My Account] Account Tabs List",
         value: "myAccount.group.account-tabs-list",
       },
+      {
+        title: "[My Account] Overview Viewer",
+        value: "myAccount.group.overview-viewer",
+      },
     ],
     card: [
       {
@@ -48,6 +52,14 @@ export const myAccount: FeatureSchemaDefinition = {
       {
         title: "[My Account] Email Communication Details",
         value: "myAccount.placeholders.email-communication-details",
+      },
+      {
+        title: "[My Account] Membership Cards Viewer",
+        value: "myAccount.placeholders.membership-cards-viewer",
+      },
+      {
+        title: "[My Account] Bookings Viewer",
+        value: "myAccount.placeholders.bookings-viewer",
       },
     ],
     tabs: [

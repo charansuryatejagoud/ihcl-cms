@@ -22,7 +22,8 @@ export function tabs(props: TabsProps) {
       {
         name: "image",
         title: "Image",
-        type: "image",
+        type: "array",
+        of: [{ type: "image" }],
       },
       {
         name: "variant",
