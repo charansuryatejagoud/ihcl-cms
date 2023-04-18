@@ -11,7 +11,7 @@ import textContainer from "./textContainer";
 import { videoAsset } from "./videoAsset";
 import cfReference from "./cfReference";
 import uiConfiguration from "./uiConfiguration";
-// import product from "schemas/product";
+import divider from "./divider";
 
 export const ihclcore: FeatureSchemaDefinition = {
   schemas: [
@@ -27,7 +27,7 @@ export const ihclcore: FeatureSchemaDefinition = {
     comparative,
     cfReference,
     uiConfiguration,
-    // product
+    divider,
   ],
   pageItems: [
     { type: "banner" },
@@ -40,6 +40,9 @@ export const ihclcore: FeatureSchemaDefinition = {
     {
       type: "stepper",
     },
+    {
+      type: "divider",
+    },
   ],
   groupItems: [
     { type: "richText" },
@@ -51,6 +54,7 @@ export const ihclcore: FeatureSchemaDefinition = {
       type: "cfReference",
     },
     { type: "tabsComponent" },
+    { type: "divider" },
   ],
 
   variants: {
@@ -158,6 +162,10 @@ export const ihclcore: FeatureSchemaDefinition = {
         value: "ihcl.core.group.carousel-with-tabs",
       },
       {
+        title: "Multi Static With Tabs",
+        value: "ihcl.core.group.multi-static-with-tabs",
+      },
+      {
         title: "8:4 Ratio Grid With only two items",
         value: "ihcl.core.group.8-4-ratio-grid-with-only-two-items",
       },
@@ -166,9 +174,9 @@ export const ihclcore: FeatureSchemaDefinition = {
         value: "ihcl.core.group.carousel-transparent-3-cards",
       },
       {
-        title:"Multiple Square Card Carousel",
-        value:"ihcl.core.group.multiple-square-card-carousel"
-      }
+        title: "Multiple Square Card Carousel",
+        value: "ihcl.core.group.multiple-square-card-carousel",
+      },
     ],
     card: [
       {
@@ -219,8 +227,8 @@ export const ihclcore: FeatureSchemaDefinition = {
       },
       {
         title: "Social Media Card Image",
-        value: "ihcl.core.card.social-media-card-image"
-      }
+        value: "ihcl.core.card.social-media-card-image",
+      },
     ],
     banner: [
       {
@@ -245,6 +253,7 @@ export const ihclcore: FeatureSchemaDefinition = {
       { title: "Banner Nudge", value: "ihcl.core.nudge.banner" },
       { title: "Open Url Nudge", value: "ihcl.core.nudge.open-url" },
       { title: "Pincode Nudge", value: "ihcl.core.nudge.pincode" },
+      { title: "Navigation", value: "ihcl.core.nudge.navigation" },
     ],
     dialog: [
       { title: "Alert", value: "ihcl.core.alert" },

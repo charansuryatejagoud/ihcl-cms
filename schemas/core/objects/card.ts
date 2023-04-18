@@ -161,7 +161,6 @@ export default function card(props: Props) {
         type: "image",
         group: "main",
       },
-
       {
         name: "backgroundImage",
         title: "Background Image",

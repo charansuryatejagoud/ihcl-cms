@@ -19,6 +19,7 @@ import { tabs, tab } from "./ihcl/Tabs";
 import { contentFragment } from "./ihcl/contentFragment";
 import { stepperComponent } from "./ihcl/stepperComponent";
 import giftCardsCollection from "./giftCardsCollection";
+import { dialogHeader } from "./ihcl/dialogHeader";
 
 export default createSchema({
   name: "default",
@@ -77,5 +78,8 @@ export default createSchema({
     stepperComponent({ variants: featureDefinition.variants.stepper }),
     ...featureDefinition.schemas,
     giftCardsCollection,
+    dialogHeader({
+      items: featureDefinition.groupItems,
+    })
   ]),
 });

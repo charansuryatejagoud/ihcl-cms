@@ -22,8 +22,10 @@ export default {
     { name: "legal_entity", title: "Legal Entity", type: "string" },
     { name: "pms_name", title: "Pms Name", type: "string" },
     { name: "location", title: "Location", type: "string" },
-    { name: "rating", title: "Rating", type: "number" },
+     { name: "rating", title: "Rating", type: "number" },
+    // { name: "rating", title: "Rating", type: "string" },
     { name: "aminities", title: "Aminities", type: "string" },
+    { name: "categoryType", title: "Category Type", type: "string" },
     {
       name: "images",
       title: "Images",
