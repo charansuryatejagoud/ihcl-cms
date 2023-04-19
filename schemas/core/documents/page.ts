@@ -30,11 +30,10 @@ export default function page(props: PageProps) {
       variant: "page",
       itemsRepresentation: "list",
       navigationVariant: "default",
-      showBottomNavigation: true,
-      showAppRatingPopup: false,
+      showBottomNavigation: false,
       isLocked: false,
       tabItemSize: "dynamic",
-      pageHeaderVariant:"defaultHeader"
+      pageHeaderVariant: "defaultHeader",
     },
     fields: [
       {
@@ -169,12 +168,6 @@ export default function page(props: PageProps) {
       {
         title: "Show Bottom Navigation",
         name: "showBottomNavigation",
-        type: "boolean",
-        group: "configuration",
-      },
-      {
-        title: "Show App Rating Popup",
-        name: "showAppRatingPopup",
         type: "boolean",
         group: "configuration",
       },
