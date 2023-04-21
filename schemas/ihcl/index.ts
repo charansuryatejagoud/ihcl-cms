@@ -28,6 +28,7 @@ export const ihclcore: FeatureSchemaDefinition = {
     cfReference,
     uiConfiguration,
     divider,
+
   ],
   pageItems: [
     { type: "banner" },
