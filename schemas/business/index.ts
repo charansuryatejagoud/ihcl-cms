@@ -12,6 +12,10 @@ export const businessServices: FeatureSchemaDefinition = {
         title: "[Business Services] Terms with Bullet Points",
         value: "businessServices.group.terms-with-bullet-points",
       },
+      {
+         title: "[Business Services] Group With 1:2 outer padding",
+          value: "businessServices.group.group-with-1:2-outer-padding",
+      },
     ],
     card: [
       {
@@ -22,6 +26,10 @@ export const businessServices: FeatureSchemaDefinition = {
       {
         title: "[Business Services] Highlighted Text with Description",
         value: "businessServices.card.highlighted-text-with-description",
+      },
+      {
+        title:"[Business Services] Hotel Booking Steps",
+        value:"businessServices.card.hotel-booking-steps"
       },
     ],
     placeholder: [
