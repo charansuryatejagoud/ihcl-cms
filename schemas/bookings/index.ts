@@ -56,6 +56,10 @@ export const bookings: FeatureSchemaDefinition = {
         title: "[Bookings] Booking Confirmed Room Details",
         value: "bookings.placeholders.confirmed-room-details",
       },
+      {
+         title: "[Bookings] Other Guest Details",
+         value: "bookings.placeholders.primary-guest-details",
+      },
     ],
     nudge: [
       {
