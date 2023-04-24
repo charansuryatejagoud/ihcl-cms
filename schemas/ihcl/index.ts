@@ -177,6 +177,10 @@ export const ihclcore: FeatureSchemaDefinition = {
         title: "Multiple Square Card Carousel",
         value: "ihcl.core.group.multiple-square-card-carousel",
       },
+      {
+        title: "3 Column Grid With Border ",
+        value: "ihcl.core.group.3-column-grid-with-border",
+      },
     ],
     card: [
       {
@@ -228,6 +232,14 @@ export const ihclcore: FeatureSchemaDefinition = {
       {
         title: "Social Media Card Image",
         value: "ihcl.core.card.social-media-card-image",
+      },
+      {
+        title: "Card With Center Aligned Content",
+        value: "ihcl.core.card.card-with-center-aligned-content",
+      },
+      {
+        title: "Card With Center Aligned Content",
+        value: "ihcl.core.card.card-with-center-aligned-content",
       },
     ],
     banner: [

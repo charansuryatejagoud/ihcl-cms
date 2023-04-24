@@ -163,6 +163,10 @@ export const details: FeatureSchemaDefinition = {
         title: "[Details] Card With Image On Title ",
         value: "details.card.card-with-image-on-title",
       },
+      {
+         title:"[Details] Book A Stay With Aspect ratio 1:2",
+         value:"details.card-book-a-stay-with-aspect-ratio-1:2"
+      }
     ],
 
     banner: [],
