@@ -20,6 +20,14 @@ const AlignmentVariant = [
     title: "Center With Multi Line Title",
     value: "center-with-multi-line-title",
   },
+  {
+    title: "Center Aligned Regular Title",
+    value: "center-aligned-regular-title",
+  },
+  {
+    title: "Center Aligned Regular Title with No Hyphens",
+    value: "center-aligned-regular-title-with-no-hyphens",
+  },
 ];
 
 export const groupPreview = {
@@ -169,7 +177,8 @@ export default function group({
       {
         name: "alternateAllLink",
         title: "Alternate See all",
-        type: "link",
+        type: "array",
+        of: [{ type: "navigationItem" }],
         hidden: ({ parent }) => !parent?.hasAlternateAllLink,
         group: "main",
         options: {
@@ -177,6 +186,27 @@ export default function group({
           collapsed: true,
         },
       },
+      {
+        name: "isDynamicComponent",
+        title: "is Dynamic Component",
+        type: "boolean",
+        description:
+          "This field is for Load More Option for dynamically managing the items",
+        group: "main",
+      },
+      {
+        name: "preRenderItemsCount",
+        title: "Pre Render Items Count",
+        type: "number",
+        hidden: ({ parent }) => !parent?.isDynamicComponent,
+      },
+      {
+        name: "postRenderItemsCount",
+        title: "Post Render Items Count",
+        type: "number",
+        hidden: ({ parent }) => !parent?.isDynamicComponent,
+      },
+
       // uiConfiguration([
       //   {
       //     name: "childAspectRatio",
