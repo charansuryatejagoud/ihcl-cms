@@ -25,23 +25,19 @@ export const details: FeatureSchemaDefinition = {
       },
       {
         title: "[Details] Group With Carousel-Card Left Media Right Content",
-        value:
-          "details.group.group-with-carousel-card-left-media-right-content-aspect-ratio-2:4",
+        value: "details.group.group-with-carousel-card-left-media-right-content-aspect-ratio-2:4",
       },
       {
         title: "[Details] Group With Card Left Media Right Content",
-        value:
-          "details.group.group-with-card-left-media-right-content-aspect-ratio-2:4",
+        value: "details.group.group-with-card-left-media-right-content-aspect-ratio-2:4",
       },
       {
         title: "[Details] Group With Carousel- Card right Media Left Content",
-        value:
-          "details.group.group-with-carousel-card-right-media-left-content-aspect-ratio-2:4",
+        value: "details.group.group-with-carousel-card-right-media-left-content-aspect-ratio-2:4",
       },
       {
         title: "[Details] Group With Card right Media Left Content",
-        value:
-          "details.group.group-with-card-right-media-left-content-aspect-ratio-2:4",
+        value: "details.group.group-with-card-right-media-left-content-aspect-ratio-2:4",
       },
       {
         title: "[Details] Group with Full Width Media",
@@ -103,13 +99,11 @@ export const details: FeatureSchemaDefinition = {
       },
       {
         title: "[Details] Card With Left Media Right Content",
-        value:
-          "details.card.card-with-left-media-right-content-aspect-ratio-2:4",
+        value: "details.card.card-with-left-media-right-content-aspect-ratio-2:4",
       },
       {
         title: "[Details] Card With Right Media Left Content",
-        value:
-          "details.card.card-with-right-media-left-content-aspect-ratio-2:4",
+        value: "details.card.card-with-right-media-left-content-aspect-ratio-2:4",
       },
       {
         title: "[Details] Card with Left Align Content",
