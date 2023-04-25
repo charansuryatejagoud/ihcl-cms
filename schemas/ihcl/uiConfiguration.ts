@@ -14,6 +14,11 @@ export default {
       type: "color",
     },
     {
+      name: "titleColor",
+      title: "Title Color",
+      type: "color",
+    },
+    {
       name: "padding",
       title: "Padding",
       type: "object",
