@@ -237,10 +237,6 @@ export const ihclcore: FeatureSchemaDefinition = {
         title: "Card With Center Aligned Content",
         value: "ihcl.core.card.card-with-center-aligned-content",
       },
-      {
-        title: "Card With Center Aligned Content",
-        value: "ihcl.core.card.card-with-center-aligned-content",
-      },
     ],
     banner: [
       {
