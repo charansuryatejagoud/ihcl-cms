@@ -175,7 +175,7 @@ export default function group({
         group: "main",
       },
       {
-        name: "alternateAllLink",
+        name: "alternateAllLinks",
         title: "Alternate See all",
         type: "array",
         of: [{ type: "navigationItem" }],
