@@ -12,6 +12,7 @@ import { videoAsset } from "./videoAsset";
 import cfReference from "./cfReference";
 import uiConfiguration from "./uiConfiguration";
 import divider from "./divider";
+import linkOnHover from "./linkOnHover";
 
 export const ihclcore: FeatureSchemaDefinition = {
   schemas: [
@@ -28,6 +29,7 @@ export const ihclcore: FeatureSchemaDefinition = {
     cfReference,
     uiConfiguration,
     divider,
+    linkOnHover
   ],
   pageItems: [
     { type: "banner" },
