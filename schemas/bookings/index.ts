@@ -37,6 +37,10 @@ export const bookings: FeatureSchemaDefinition = {
         value: "bookings.placeholders.primary-guest-details",
       },
       {
+        title: "[Bookings] Other Guest Details",
+        value: "bookings.placeholders.primary-guest-details",
+      },
+      {
         title: "[Bookings] Addons",
         value: "bookings.placeholders.addons",
       },

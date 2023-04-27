@@ -21,10 +21,6 @@ export const myAccount: FeatureSchemaDefinition = {
         title: "[My Account] Overview Viewer",
         value: "myAccount.group.overview-viewer",
       },
-      {
-         title: "[My Account] Email Communication",
-         value: "myAccount.group.email-communication",
-      },
     ],
     card: [
       {

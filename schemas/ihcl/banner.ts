@@ -3,12 +3,20 @@ import { IoApps, IoSettings } from "react-icons/io5";
 
 const AlignmentVariant = [
   {
-    title: "Regular Title with Preceding Hyphen",
-    value: "regular-title-with-preceding-hyphen-title",
+    title: "Title With Two Rows",
+    value: "title-with-two-rows",
   },
   {
-    title: "Regular Title with Two Rows",
-    value: "regular-title-with-two-rows",
+    title: " Short Hero Title With Two Rows",
+    value: "short-hero-title-with-two-rows",
+  },
+  {
+    title: " Short Hero Title With One Row",
+    value: "short-hero-title-with-one-row",
+  },
+  {
+    title: "Title With One Row",
+    value: "title-with-one-row",
   },
 ];
  const variants = [

@@ -235,10 +235,6 @@ export const ihclcore: FeatureSchemaDefinition = {
         title: "Social Media Card Image",
         value: "ihcl.core.card.social-media-card-image",
       },
-      {
-        title: "Card With Center Aligned Content",
-        value: "ihcl.core.card.card-with-center-aligned-content",
-      },
     ],
     banner: [
       {

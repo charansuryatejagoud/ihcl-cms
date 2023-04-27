@@ -47,7 +47,8 @@ export default {
           title: "cpg",
           type: "array",
           name: "cpg",
-          of: [{ title: "cpgID", type: "string", name: "cpgId" }],
+          of:
+           [{ title: "cpgID", type: "string", name: "cpgId" }],
         },
       ],
     },
