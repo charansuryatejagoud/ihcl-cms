@@ -3,15 +3,23 @@ import { IoApps, IoSettings } from "react-icons/io5";
 
 const AlignmentVariant = [
   {
-    title: "Regular Title with Preceding Hyphen",
-    value: "regular-title-with-preceding-hyphen-title",
-  },
-  {
     title: "Regular Title with Two Rows",
     value: "regular-title-with-two-rows",
   },
+  {
+    title: " Short Hero Title With Two Rows",
+    value: "short-hero-title-with-two-rows",
+  },
+  {
+    title: " Short Hero Title With One Row",
+    value: "short-hero-title-with-one-row",
+  },
+  {
+    title: "Title With One Row",
+    value: "title-with-one-row",
+  },
 ];
- const variants = [
+const variants = [
   {
     title: "Hero Banner",
     value: "hero-banner",
@@ -20,7 +28,7 @@ const AlignmentVariant = [
     title: "Banner With Action",
     value: "banner-with-action",
   },
- ];
+];
 
 export default {
   title: "Banner",
@@ -57,7 +65,7 @@ export default {
       title: "Content",
       name: "singleContent",
       type: "blockContent",
-      group: "main"
+      group: "main",
     },
     {
       name: "alignmentVariant",
