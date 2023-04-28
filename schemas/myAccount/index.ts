@@ -22,8 +22,16 @@ export const myAccount: FeatureSchemaDefinition = {
         value: "myAccount.group.overview-viewer",
       },
       {
-         title: "[My Account] Email Communication",
-         value: "myAccount.group.email-communication",
+        title: "[My Account] Email Communication",
+        value: "myAccount.group.email-communication",
+      },
+      {
+        title: "[My Account] Modify Booking Details",
+        value: "myAccount.group.modify-booking-details",
+      },
+      {
+        title: "[My Account] Title with SubHeader",
+        value: "myAccount.group.title-with-subHeader",
       },
     ],
     card: [
@@ -64,6 +72,14 @@ export const myAccount: FeatureSchemaDefinition = {
       {
         title: "[My Account] Bookings Viewer",
         value: "myAccount.placeholders.bookings-viewer",
+      },
+      {
+        title: "[My Account] Booking Change Dates",
+        value: "myAccount.placeholders.booking-change-dates",
+      },
+      {
+        title: "[My Account] Claim Missing Points",
+        value: "myAccount.placeholders.claim-missing-points",
       },
     ],
     tabs: [
