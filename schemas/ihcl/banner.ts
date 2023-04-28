@@ -84,6 +84,17 @@ export default {
       group: "main",
     },
     {
+      name: "doesBannerContainsFeaturedLogo",
+      title: "Does Banner Contains Featured Logo",
+      type: "boolean",
+    },
+    {
+      name: "image",
+      title: "Image",
+      type: "image",
+      hidden: ({ parent }) => !parent?.doesBannerContainsFeaturedLogo,
+    },
+    {
       title: "Variant",
       name: "variant",
       type: "string",
