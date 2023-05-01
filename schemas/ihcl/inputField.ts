@@ -4,6 +4,7 @@ import {
   IoSend as Icon,
   IoSettings,
 } from "react-icons/io5";
+import { inputFieldTypes } from "../../schemas/constants";
 import { VariantDefinition } from "schemas/types";
 
 export default function inputField({
@@ -33,6 +34,14 @@ export default function inputField({
         type: "string",
         group: "main",
       },
+      {
+        title: "Input Field Type",
+        name: "inputFieldType",
+        type: "string",
+        options: {
+          list: [...inputFieldTypes],
+        },
+      },
       { title: "Hint Text", name: "hintText", type: "string" },
       { title: "Helper Text", name: "helperText", type: "string" },
       { title: "Error Text", name: "errorText", type: "string" },
@@ -61,53 +70,27 @@ export default function inputField({
         group: "main",
       },
       {
-        name: "parameterMap",
-        title: "Parameter Map",
-        description: "Parameters as a set of key-value pairs",
-        type: "array",
-        of: [
-          {
-            type: "object",
-            title: "Parameter",
-            icon: ParameterMapIcon,
-            options: { columns: 2 },
-            fields: [
-              { name: "key", title: "Key", type: "string" },
-              { name: "value", title: "Value", type: "string" },
-            ],
-            preview: { select: { title: "key", subtitle: "value" } },
-          },
-        ],
-        group: "main",
-      },
-      {
         name: "clusterItems",
         title: "Cluster Items",
         type: "array",
         of: [
           {
             type: "object",
-            title: "Parameter",
-            icon: ParameterMapIcon,
-            options: { columns: 2 },
+            title: "Cluster Item",
             fields: [
-              {
-                title: "Label Text",
-                name: "labelText",
-                type: "string",
-                // validation: (Rule) => Rule.required(),
-              },
               { name: "key", title: "Key", type: "string" },
-              { name: "value", title: "Value", type: "string" },
+              { name: "isForm", title: "Is Form", type: "boolean" },
+              {
+                name: "items",
+                title: "Items",
+                type: "array",
+                of: [{ type: "formComponent" }],
+                hidden: ({ parent }) => !parent?.isForm,
+              },
             ],
-            preview: { select: { title: "key", subtitle: "value" } },
-          },
-          {
-            name: "url",
-            title: "URL",
-            type: "link",
           },
         ],
+        hidden: ({ parent }) => parent?.inputFieldType !== "dropDown",
       },
     ],
     preview: {
@@ -122,7 +105,7 @@ export default function inputField({
         const variantText = variant ? `(${variant})` : "";
 
         return {
-          title: `${hiddenIndicator}${title ?? "<Form>"}`,
+          title: `${hiddenIndicator}${title ?? "<Input Field>"}`,
           subtitle: `${subtitle ?? ""}${variantText}`,
         };
       },

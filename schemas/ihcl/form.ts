@@ -87,7 +87,7 @@ export default function form({
         const variantText = variant ? `(${variant})` : "";
 
         return {
-          title: `${hiddenIndicator}${title ?? "<inputField>"}`,
+          title: `${hiddenIndicator}${title ?? "<Form>"}`,
           subtitle: `${subtitle ?? ""}${variantText}`,
         };
       },
