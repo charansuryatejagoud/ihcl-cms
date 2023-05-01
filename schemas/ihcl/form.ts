@@ -4,10 +4,15 @@ import {
   IoSend as Icon,
   IoSettings,
 } from "react-icons/io5";
-import { VariantDefinition } from "schemas/types";
+import { SchemaItem, VariantDefinition } from "schemas/types";
 
-
-export default function form({ variants }: { variants: VariantDefinition[] }) {
+export default function form({
+  variants,
+  items,
+}: {
+  variants: SchemaItem[];
+  items: SchemaItem[];
+}) {
   return {
     title: "[IHCL] Form",
     name: "formComponent",
@@ -30,19 +35,11 @@ export default function form({ variants }: { variants: VariantDefinition[] }) {
         type: "string",
         group: "main",
       },
-      { title: "Hint Text", name: "hintText", type: "string" },
-      { title: "Helper Text", name: "helperText", type: "string" },
-      { title: "Error Text", name: "errorText", type: "string" },
-      { title: "Is Input Field Read Only?", name: "readOnly", type: "boolean" },
-      { title: "Max Width", name: "fieldMaxWidth", type: "number" },
       {
-        title: "Max Length",
-        name: "maxLength",
-        type: "string",
-        description: "Number of characters allow for the input component",
+        name: "logo",
+        title: "logo",
+        type: "image",
       },
-      { title: "Prefix Icon", name: "prefixIcon", type: "image" },
-      { title: "Suffix Icon", name: "suffixIcon", type: "image" },
       {
         name: "variant",
         title: "Variant",
@@ -58,53 +55,11 @@ export default function form({ variants }: { variants: VariantDefinition[] }) {
         group: "main",
       },
       {
-        name: "parameterMap",
-        title: "Parameter Map",
-        description: "Parameters as a set of key-value pairs",
+        name: "items",
+        title: "Items",
         type: "array",
-        of: [
-          {
-            type: "object",
-            title: "Parameter",
-            icon: ParameterMapIcon,
-            // options: { columns: 2 },
-            fields: [
-              { name: "key", title: "Key", type: "string" },
-              { name: "value", title: "Value", type: "string" },
-            ],
-            preview: { select: { title: "key", subtitle: "value" } },
-          },
-        ],
+        of: [{ type: "inputField" }],
         group: "main",
-      },
-      {
-        name: "clusterItems",
-        title: "Cluster Items",
-        type: "array",
-        of: [
-          {
-            type: "object",
-            title: "Parameter",
-            icon: ParameterMapIcon,
-            options: { columns: 2 },
-            fields: [
-              {
-                title: "Label Text",
-                name: "labelText",
-                type: "string",
-                // validation: (Rule) => Rule.required(),
-              },
-              { name: "key", title: "Key", type: "string" },
-              { name: "value", title: "Value", type: "string" },
-            ],
-            preview: { select: { title: "key", subtitle: "value" } },
-          },
-          {
-            name: "url",
-            title: "URL",
-            type: "link",
-          },
-        ],
       },
       {
         name: "PrimaryAction",
@@ -132,7 +87,7 @@ export default function form({ variants }: { variants: VariantDefinition[] }) {
         const variantText = variant ? `(${variant})` : "";
 
         return {
-          title: `${hiddenIndicator}${title ?? "<Form>"}`,
+          title: `${hiddenIndicator}${title ?? "<inputField>"}`,
           subtitle: `${subtitle ?? ""}${variantText}`,
         };
       },

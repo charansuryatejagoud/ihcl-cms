@@ -20,8 +20,8 @@ import { contentFragment } from "./ihcl/contentFragment";
 import { stepperComponent } from "./ihcl/stepperComponent";
 import giftCardsCollection from "./giftCardsCollection";
 import { dialogHeader } from "./ihcl/dialogHeader";
-import form from "./ihcl/form";
-import inputField from "./ihcl/inputField";
+import form from "./ihcl/inputField";
+import inputField from "./ihcl/form";
 
 export default createSchema({
   name: "default",
