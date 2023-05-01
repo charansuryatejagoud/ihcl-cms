@@ -29,7 +29,7 @@ export const ihclcore: FeatureSchemaDefinition = {
     cfReference,
     uiConfiguration,
     divider,
-    linkOnHover
+    linkOnHover,
   ],
   pageItems: [
     { type: "banner" },
@@ -45,6 +45,9 @@ export const ihclcore: FeatureSchemaDefinition = {
     {
       type: "divider",
     },
+    {
+      type: "inputField",
+    },
   ],
   groupItems: [
     { type: "richText" },
@@ -57,6 +60,9 @@ export const ihclcore: FeatureSchemaDefinition = {
     },
     { type: "tabsComponent" },
     { type: "divider" },
+    {
+      type: "formComponent",
+    },
   ],
 
   variants: {
