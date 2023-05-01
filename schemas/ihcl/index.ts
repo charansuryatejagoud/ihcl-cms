@@ -46,7 +46,7 @@ export const ihclcore: FeatureSchemaDefinition = {
       type: "divider",
     },
     {
-      type: "inputField",
+      type: "formComponent",
     },
   ],
   groupItems: [
