@@ -57,7 +57,7 @@ export class VariantSchemaProperties {
   contentFragment: VariantDefinition[];
   stepper: VariantDefinition[];
   tabs: VariantDefinition[];
-  form: VariantDefinition[];
+  forms: VariantDefinition[];
   inputField: VariantDefinition[];
 }
 

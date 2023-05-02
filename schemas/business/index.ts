@@ -43,16 +43,22 @@ export const businessServices: FeatureSchemaDefinition = {
         value:
           "businessServices.card.right-media-left-content-in-between-variable-gap",
       },
-      {
-        title: "[Business Services] Enquiry From",
-        value: "businessServices.card.enquiry-form",
-      },
     ],
     placeholder: [
       {
         title: "[Business Services] Title with Single Action",
         value: "businessServices.placeholders.title-with-single-action",
       },
+    ],
+    forms: [
+      {
+        title: "[Business Services] Enquiry Form",
+        value: "businessServices.form.enquiry-form",
+      },
+      {
+        title: "[Business Services] Selective Form",
+        value: "businessServices.form.selective-form"
+      }
     ],
   },
 };

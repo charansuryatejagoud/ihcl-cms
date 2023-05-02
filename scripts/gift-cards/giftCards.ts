@@ -79,7 +79,16 @@ async function run() {
               minPrice: minPrice,
               maxPrice: maxPrice,
               price: price,
-              images: images,
+              // images: images,
+              images: {
+                base:
+                  data?.images?.base !== "" && data?.images?.base
+                    ? data?.images?.base
+                    : "https://cdn.sanity.io/images/ocl5w36p/production/6f000ddf9f1d17aaf0fdcbb1a47e5c07300a6f93-454x340.png",
+                small: data?.images?.small ?? "",
+                thumbnail: data?.images?.thumbnail ?? "",
+                mobile: data?.images?.mobile ?? "",
+              },
             })
             .commit()
             .then((updatedData) => {
