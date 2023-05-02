@@ -13,6 +13,7 @@ import cfReference from "./cfReference";
 import uiConfiguration from "./uiConfiguration";
 import divider from "./divider";
 import linkOnHover from "./linkOnHover";
+import inputField from "./inputField";
 
 export const ihclcore: FeatureSchemaDefinition = {
   schemas: [
@@ -30,6 +31,7 @@ export const ihclcore: FeatureSchemaDefinition = {
     uiConfiguration,
     divider,
     linkOnHover,
+    inputField,
   ],
   pageItems: [
     { type: "banner" },
@@ -189,6 +191,10 @@ export const ihclcore: FeatureSchemaDefinition = {
         title: "3 Column Grid With Border ",
         value: "ihcl.core.group.3-column-grid-with-border",
       },
+      {
+        title: "Icons with Title",
+        value: "card-with-image-title"
+      }
     ],
     card: [
       {

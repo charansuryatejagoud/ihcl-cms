@@ -8,10 +8,10 @@ import { SchemaItem, VariantDefinition } from "schemas/types";
 
 export default function form({
   variants,
-  items,
-}: {
-  variants: SchemaItem[];
-  items: SchemaItem[];
+}: // items,
+{
+  variants: VariantDefinition[];
+  // items: SchemaItem[];
 }) {
   return {
     title: "[IHCL] Form",
@@ -53,6 +53,11 @@ export default function form({
         type: "string",
         options: { list: variants },
         group: "main",
+      },
+      {
+        title: "Content",
+        name: "content",
+        type: "blockContent",
       },
       {
         name: "items",
