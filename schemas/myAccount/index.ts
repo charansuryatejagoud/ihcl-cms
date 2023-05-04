@@ -81,6 +81,26 @@ export const myAccount: FeatureSchemaDefinition = {
         title: "[My Account] Claim Missing Points",
         value: "myAccount.placeholders.claim-missing-points",
       },
+      {
+        title: "[My Account] Hotel Booking Overview",
+        value: "myAccount.placeholders.hotel-booking-overview",
+      },
+      {
+        title: "[My Account] Vouchers Overview",
+        value: "myAccount.placeholders.vouchers-overview",
+      },
+      {
+        title: "[My Account] Offers & Benefits Overview",
+        value: "myAccount.placeholders.offers-and-benefits-overview",
+      },
+      {
+        title: "[My Account] Gift Cards Overview",
+        value: "myAccount.placeholders.gift-cards-overview",
+      },
+      {
+        title: "[My Account] Membership Type Overview",
+        value: "myAccount.placeholders.membership-type-overview",
+      },
     ],
     tabs: [
       {

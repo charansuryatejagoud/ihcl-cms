@@ -20,6 +20,7 @@ import { contentFragment } from "./ihcl/contentFragment";
 import { stepperComponent } from "./ihcl/stepperComponent";
 import giftCardsCollection from "./giftCardsCollection";
 import { dialogHeader } from "./ihcl/dialogHeader";
+import form from "./ihcl/form";
 
 export default createSchema({
   name: "default",
@@ -80,6 +81,7 @@ export default createSchema({
     giftCardsCollection,
     dialogHeader({
       items: featureDefinition.groupItems,
-    })
+    }),
+    form({ variants: featureDefinition.variants.forms }),
   ]),
 });

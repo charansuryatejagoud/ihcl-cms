@@ -13,6 +13,7 @@ import cfReference from "./cfReference";
 import uiConfiguration from "./uiConfiguration";
 import divider from "./divider";
 import linkOnHover from "./linkOnHover";
+import inputField from "./inputField";
 
 export const ihclcore: FeatureSchemaDefinition = {
   schemas: [
@@ -29,7 +30,8 @@ export const ihclcore: FeatureSchemaDefinition = {
     cfReference,
     uiConfiguration,
     divider,
-    linkOnHover
+    linkOnHover,
+    inputField,
   ],
   pageItems: [
     { type: "banner" },
@@ -45,6 +47,9 @@ export const ihclcore: FeatureSchemaDefinition = {
     {
       type: "divider",
     },
+    {
+      type: "formComponent",
+    },
   ],
   groupItems: [
     { type: "richText" },
@@ -57,6 +62,9 @@ export const ihclcore: FeatureSchemaDefinition = {
     },
     { type: "tabsComponent" },
     { type: "divider" },
+    {
+      type: "formComponent",
+    },
   ],
 
   variants: {
@@ -180,13 +188,17 @@ export const ihclcore: FeatureSchemaDefinition = {
         value: "ihcl.core.group.3-column-grid-with-border",
       },
       {
-        title:"Group With Vertical Components",
-        value:"ihcl.core.group.group-with-vertical-components"
+        title: "Group With Vertical Components",
+        value: "ihcl.core.group.group-with-vertical-components",
       },
       {
-        title:"Hexagonal Content",
-        value:"ihcl.core.group.hexagonal-content"
-      }
+        title: "Hexagonal Content",
+        value: "ihcl.core.group.hexagonal-content",
+      },
+      {
+        title: "Icons with Title",
+        value: "card-with-image-title",
+      },
     ],
     card: [
       {
@@ -244,13 +256,13 @@ export const ihclcore: FeatureSchemaDefinition = {
         value: "ihcl.core.card.card-with-center-aligned-content",
       },
       {
-        title:"Media With Bottom And Top Content",
-        value:"ihcl.core.card.media-with-bottom-and-top-content"
+        title: "Media With Bottom And Top Content",
+        value: "ihcl.core.card.media-with-bottom-and-top-content",
       },
       {
-        title:"Triangle Shape Image On Content",
-        value:"ihcl.core.card.triangle-shape-image-on-content"
-      }
+        title: "Triangle Shape Image On Content",
+        value: "ihcl.core.card.triangle-shape-image-on-content",
+      },
     ],
     banner: [
       {
