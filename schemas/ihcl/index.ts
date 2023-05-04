@@ -96,10 +96,6 @@ export const ihclcore: FeatureSchemaDefinition = {
       },
       { title: "Multiple Data", value: "ihcl.core.group.multiple-data" },
       {
-        title: "Group With Filter Buttons",
-        value: "ihcl.core.group.group-with-filter-buttons",
-      },
-      {
         title: "Images With Single Column Grid",
         value: "ihcl.core.group.images-with-single-column-grid",
       },
@@ -183,6 +179,14 @@ export const ihclcore: FeatureSchemaDefinition = {
         title: "3 Column Grid With Border ",
         value: "ihcl.core.group.3-column-grid-with-border",
       },
+      {
+        title:"Group With Vertical Components",
+        value:"ihcl.core.group.group-with-vertical-components"
+      },
+      {
+        title:"Hexagonal Content",
+        value:"ihcl.core.group.hexagonal-content"
+      }
     ],
     card: [
       {
@@ -239,6 +243,14 @@ export const ihclcore: FeatureSchemaDefinition = {
         title: "Card With Center Aligned Content",
         value: "ihcl.core.card.card-with-center-aligned-content",
       },
+      {
+        title:"Media With Bottom And Top Content",
+        value:"ihcl.core.card.media-with-bottom-and-top-content"
+      },
+      {
+        title:"Triangle Shape Image On Content",
+        value:"ihcl.core.card.triangle-shape-image-on-content"
+      }
     ],
     banner: [
       {
