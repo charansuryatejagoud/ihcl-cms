@@ -19,6 +19,7 @@ import { partners } from "./ihcl-partners";
 import { businessServices } from "./business";
 import hotel from "./content-fragments/hotels/hotel";
 import { hotels } from "./content-fragments/hotels";
+import { myAccount } from "./myAccount";
 
 const features: FeatureSchemaDefinition[] = [
   core,
@@ -34,6 +35,7 @@ const features: FeatureSchemaDefinition[] = [
   partners,
   businessServices,
   hotels,
+  myAccount
 ];
 
 export const featureDefinition: FeatureSchemaDefinition =

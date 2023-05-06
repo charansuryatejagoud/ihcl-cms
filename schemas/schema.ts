@@ -18,6 +18,9 @@ import { bannerComponents } from "./ihcl/banner";
 import { tabs, tab } from "./ihcl/Tabs";
 import { contentFragment } from "./ihcl/contentFragment";
 import { stepperComponent } from "./ihcl/stepperComponent";
+import giftCardsCollection from "./giftCardsCollection";
+import { dialogHeader } from "./ihcl/dialogHeader";
+import form from "./ihcl/form";
 
 export default createSchema({
   name: "default",
@@ -75,5 +78,10 @@ export default createSchema({
     }),
     stepperComponent({ variants: featureDefinition.variants.stepper }),
     ...featureDefinition.schemas,
+    giftCardsCollection,
+    dialogHeader({
+      items: featureDefinition.groupItems,
+    }),
+    form({ variants: featureDefinition.variants.forms }),
   ]),
 });

@@ -20,6 +20,14 @@ const AlignmentVariant = [
     title: "Center With Multi Line Title",
     value: "center-with-multi-line-title",
   },
+  {
+    title: "Center Aligned Regular Title",
+    value: "center-aligned-regular-title",
+  },
+  {
+    title: "Center Aligned Regular Title with No Hyphens",
+    value: "center-aligned-regular-title-with-no-hyphens",
+  },
 ];
 
 export const groupPreview = {
@@ -50,7 +58,7 @@ export default function group({
     name: "group",
     title: "Group",
     type: "object",
-    initialValue: { hasAllLink: false },
+    initialValue: { hasAllLink: false, allowAdditionalParameters: false },
     icon: Icon,
     groups: [
       { name: "main", title: "Main", icon: IoApps },
@@ -74,13 +82,20 @@ export default function group({
         group: "main",
       },
       {
+        name: "charactersLimit",
+        title: "Characters Limit",
+        type: "number",
+        group: "main",
+        Description: "Number of characters limit for group subtitle.",
+      },
+      {
         name: "heading",
         title: "Heading",
         type: "string",
       },
       {
-        name:"aesthetic",
-        title:"Aesthetic",
+        name: "aesthetic",
+        title: "Aesthetic",
         type: "reference",
         to: [{ type: "uiConfiguration" }],
       },
@@ -118,6 +133,26 @@ export default function group({
         group: "main",
       },
       {
+        name: "logo",
+        title: "Logo",
+        type: "image",
+        group: "main",
+      },
+      {
+        name: "image",
+        title: "Image",
+        description: "Image that will be used for smaller screens like Mobile",
+        type: "image",
+        group: "main",
+      },
+      {
+        name: "largeImage",
+        title: "Large Image",
+        description: "Image that will be used for larger screens like Desktop",
+        type: "image",
+        group: "main",
+      },
+      {
         name: "backgroundImage",
         title: "Background Image",
         type: "image",
@@ -140,9 +175,10 @@ export default function group({
         group: "main",
       },
       {
-        name: "alternateAllLink",
+        name: "alternateAllLinks",
         title: "Alternate See all",
-        type: "link",
+        type: "array",
+        of: [{ type: "navigationItem" }],
         hidden: ({ parent }) => !parent?.hasAlternateAllLink,
         group: "main",
         options: {
@@ -150,6 +186,27 @@ export default function group({
           collapsed: true,
         },
       },
+      {
+        name: "isDynamicComponent",
+        title: "is Dynamic Component",
+        type: "boolean",
+        description:
+          "This field is for Load More Option for dynamically managing the items",
+        group: "main",
+      },
+      {
+        name: "preRenderItemsCount",
+        title: "Pre Render Items Count",
+        type: "number",
+        hidden: ({ parent }) => !parent?.isDynamicComponent,
+      },
+      {
+        name: "postRenderItemsCount",
+        title: "Post Render Items Count",
+        type: "number",
+        hidden: ({ parent }) => !parent?.isDynamicComponent,
+      },
+
       // uiConfiguration([
       //   {
       //     name: "childAspectRatio",
@@ -181,6 +238,45 @@ export default function group({
         title: "Items",
         type: "array",
         of: items,
+        group: "main",
+      },
+      {
+        name: "allowAdditionalParameters",
+        type: "boolean",
+        title: "Allow Additional Parameters",
+        group: "main",
+      },
+      {
+        name: "parameterMap",
+        title: "Parameter Map",
+        description: "Parameters as a set of key-value pairs",
+        hidden: ({ parent }) => !parent.allowAdditionalParameters,
+        type: "array",
+        of: [
+          {
+            type: "object",
+            title: "Parameter",
+            options: { columns: 2 },
+            fields: [
+              {
+                name: "key",
+                title: "Key",
+                type: "string",
+              },
+              {
+                name: "value",
+                title: "Value",
+                type: "string",
+              },
+            ],
+            preview: {
+              select: {
+                title: "key",
+                subtitle: "value",
+              },
+            },
+          },
+        ],
         group: "main",
       },
       // {

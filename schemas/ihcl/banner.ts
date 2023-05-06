@@ -1,5 +1,35 @@
 import { GiVerticalBanner } from "react-icons/gi";
 import { IoApps, IoSettings } from "react-icons/io5";
+
+const AlignmentVariant = [
+  {
+    title: "Regular Title with Two Rows",
+    value: "regular-title-with-two-rows",
+  },
+  {
+    title: " Short Hero Title With Two Rows",
+    value: "short-hero-title-with-two-rows",
+  },
+  {
+    title: " Short Hero Title With One Row",
+    value: "short-hero-title-with-one-row",
+  },
+  {
+    title: "Title With One Row",
+    value: "title-with-one-row",
+  },
+];
+const variants = [
+  {
+    title: "Hero Banner",
+    value: "hero-banner",
+  },
+  {
+    title: "Banner With Action",
+    value: "banner-with-action",
+  },
+];
+
 export default {
   title: "Banner",
   name: "banner",
@@ -32,21 +62,76 @@ export default {
       group: "main",
     },
     {
+      title: "Content",
+      name: "singleContent",
+      type: "blockContent",
+      group: "main",
+    },
+    {
+      name: "alignmentVariant",
+      title: "Alignment Variant",
+      type: "string",
+      description: "This variant is for Title alignment",
+      options: {
+        list: AlignmentVariant,
+      },
+      group: "main",
+    },
+    {
       name: "chatBotImage",
       title: "Chat Bot Image",
       type: "image",
       group: "main",
     },
     {
+      name: "doesBannerContainsFeaturedLogo",
+      title: "Does Banner Contains Featured Logo",
+      type: "boolean",
+    },
+    {
+      name: "image",
+      title: "Image",
+      type: "image",
+      hidden: ({ parent }) => !parent?.doesBannerContainsFeaturedLogo,
+    },
+    {
       title: "Variant",
       name: "variant",
       type: "string",
+      options: {
+        list: variants,
+      },
       group: "main",
     },
     {
       title: "Large Variant",
       name: "largeVariant",
       type: "string",
+      options: {
+        list: variants,
+      },
+      group: "main",
+    },
+    {
+      title: "Search Field Variant",
+      name: "searchFieldVariant",
+      type: "string",
+      options: {
+        list: [
+          {
+            title: "Global Search Field",
+            value: "ihcl.banner.global-search-field",
+          },
+          {
+            title: "Global Booking Mask",
+            value: "ihcl.banner.global-booking-mask",
+          },
+          {
+            title: "Global Search Field is not Allowed",
+            value: "ihcl.banner.global-search-field-is-not-allowed",
+          },
+        ],
+      },
       group: "main",
     },
     {

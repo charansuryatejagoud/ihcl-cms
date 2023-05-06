@@ -11,6 +11,10 @@ import textContainer from "./textContainer";
 import { videoAsset } from "./videoAsset";
 import cfReference from "./cfReference";
 import uiConfiguration from "./uiConfiguration";
+import divider from "./divider";
+import linkOnHover from "./linkOnHover";
+import inputField from "./inputField";
+
 export const ihclcore: FeatureSchemaDefinition = {
   schemas: [
     videoAsset,
@@ -24,7 +28,10 @@ export const ihclcore: FeatureSchemaDefinition = {
     specification,
     comparative,
     cfReference,
-    uiConfiguration
+    uiConfiguration,
+    divider,
+    linkOnHover,
+    inputField,
   ],
   pageItems: [
     { type: "banner" },
@@ -37,6 +44,12 @@ export const ihclcore: FeatureSchemaDefinition = {
     {
       type: "stepper",
     },
+    {
+      type: "divider",
+    },
+    {
+      type: "formComponent",
+    },
   ],
   groupItems: [
     { type: "richText" },
@@ -48,6 +61,10 @@ export const ihclcore: FeatureSchemaDefinition = {
       type: "cfReference",
     },
     { type: "tabsComponent" },
+    { type: "divider" },
+    {
+      type: "formComponent",
+    },
   ],
 
   variants: {
@@ -155,6 +172,10 @@ export const ihclcore: FeatureSchemaDefinition = {
         value: "ihcl.core.group.carousel-with-tabs",
       },
       {
+        title: "Multi Static With Tabs",
+        value: "ihcl.core.group.multi-static-with-tabs",
+      },
+      {
         title: "8:4 Ratio Grid With only two items",
         value: "ihcl.core.group.8-4-ratio-grid-with-only-two-items",
       },
@@ -163,8 +184,16 @@ export const ihclcore: FeatureSchemaDefinition = {
         value: "ihcl.core.group.carousel-transparent-3-cards",
       },
       {
-        title:"Multiple Square Card Carousel",
-        value:"ihcl.core.group.multiple-square-card-carousel"
+        title: "Multiple Square Card Carousel",
+        value: "ihcl.core.group.multiple-square-card-carousel",
+      },
+      {
+        title: "3 Column Grid With Border ",
+        value: "ihcl.core.group.3-column-grid-with-border",
+      },
+      {
+        title: "Icons with Title",
+        value: "card-with-image-title"
       }
     ],
     card: [
@@ -216,8 +245,12 @@ export const ihclcore: FeatureSchemaDefinition = {
       },
       {
         title: "Social Media Card Image",
-        value: "ihcl.core.card.social-media-card-image"
-      }
+        value: "ihcl.core.card.social-media-card-image",
+      },
+      {
+        title: "Card With Center Aligned Content",
+        value: "ihcl.core.card.card-with-center-aligned-content",
+      },
     ],
     banner: [
       {
@@ -242,6 +275,7 @@ export const ihclcore: FeatureSchemaDefinition = {
       { title: "Banner Nudge", value: "ihcl.core.nudge.banner" },
       { title: "Open Url Nudge", value: "ihcl.core.nudge.open-url" },
       { title: "Pincode Nudge", value: "ihcl.core.nudge.pincode" },
+      { title: "Navigation", value: "ihcl.core.nudge.navigation" },
     ],
     dialog: [
       { title: "Alert", value: "ihcl.core.alert" },

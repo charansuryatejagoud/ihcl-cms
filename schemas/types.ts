@@ -53,10 +53,12 @@ export class VariantSchemaProperties {
   ifElseBlock: VariantDefinition[];
   switchCaseBlock: VariantDefinition[];
   dataGrid: VariantDefinition[];
-  banner:VariantDefinition[];
-  contentFragment:VariantDefinition[];
-  stepper:VariantDefinition[];
-  tabs:VariantDefinition[];
+  banner: VariantDefinition[];
+  contentFragment: VariantDefinition[];
+  stepper: VariantDefinition[];
+  tabs: VariantDefinition[];
+  forms: VariantDefinition[];
+  inputField: VariantDefinition[];
 }
 
 export class DialogSizeSchemaProperties {

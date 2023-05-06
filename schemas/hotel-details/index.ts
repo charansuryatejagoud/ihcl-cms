@@ -25,23 +25,19 @@ export const details: FeatureSchemaDefinition = {
       },
       {
         title: "[Details] Group With Carousel-Card Left Media Right Content",
-        value:
-          "details.group.group-with-carousel-card-left-media-right-content-aspect-ratio-2:4",
+        value: "details.group.group-with-carousel-card-left-media-right-content-aspect-ratio-2:4",
       },
       {
         title: "[Details] Group With Card Left Media Right Content",
-        value:
-          "details.group.group-with-card-left-media-right-content-aspect-ratio-2:4",
+        value: "details.group.group-with-card-left-media-right-content-aspect-ratio-2:4",
       },
       {
         title: "[Details] Group With Carousel- Card right Media Left Content",
-        value:
-          "details.group.group-with-carousel-card-right-media-left-content-aspect-ratio-2:4",
+        value: "details.group.group-with-carousel-card-right-media-left-content-aspect-ratio-2:4",
       },
       {
         title: "[Details] Group With Card right Media Left Content",
-        value:
-          "details.group.group-with-card-right-media-left-content-aspect-ratio-2:4",
+        value: "details.group.group-with-card-right-media-left-content-aspect-ratio-2:4",
       },
       {
         title: "[Details] Group with Full Width Media",
@@ -71,6 +67,18 @@ export const details: FeatureSchemaDefinition = {
         title: "[Details] Hotel Dine In Details",
         value: "details.group.hotel-dine-in-details",
       },
+      {
+        title: "[Details] Carousel With Single Card",
+        value: "details.group.carousel-with-single-card",
+      },
+      {
+        title: "[Details] Group With Room Details",
+        value: "details.group.group-with-room-details",
+      },
+      {
+        title: "[Details] Gallery Image Carousel",
+        value: "details.group.gallery-image-carousel",
+      },
     ],
     card: [
       {
@@ -91,13 +99,11 @@ export const details: FeatureSchemaDefinition = {
       },
       {
         title: "[Details] Card With Left Media Right Content",
-        value:
-          "details.card.card-with-left-media-right-content-aspect-ratio-2:4",
+        value: "details.card.card-with-left-media-right-content-aspect-ratio-2:4",
       },
       {
         title: "[Details] Card With Right Media Left Content",
-        value:
-          "details.card.card-with-right-media-left-content-aspect-ratio-2:4",
+        value: "details.card.card-with-right-media-left-content-aspect-ratio-2:4",
       },
       {
         title: "[Details] Card with Left Align Content",
@@ -135,7 +141,28 @@ export const details: FeatureSchemaDefinition = {
         title: "[Details] Experience Enquiry Model Form",
         value: "details.card.experience-enquiry-model-form",
       },
+      {
+        title: "[Details] Title With Bullet Points",
+        value: "details.card.title-with-bullet-points",
+      },
+      {
+        title: "[Details] Card With Bullet Points",
+        value: "details.card.card-with-bullet-points",
+      },
+      {
+        title: "[Details] Card With Room Properties",
+        value: "details.card.card-with-room-properties",
+      },
+      {
+        title: "[Details] Card With Image On Title ",
+        value: "details.card.card-with-image-on-title",
+      },
+      {
+         title:"[Details] Book A Stay With Aspect ratio 1:2",
+         value:"details.card-book-a-stay-with-aspect-ratio-1:2"
+      }
     ],
+
     banner: [],
     dialog: [
       { title: "[Details] Image Gallery", value: "details.image-gallery" },
@@ -145,12 +172,9 @@ export const details: FeatureSchemaDefinition = {
       { title: "[Details] Video Pop Up", value: "details.video-pop-up" },
       {
         title: "[Details] Gallery With Carousel",
-        value: "details.gallery-with-carousel",
+        value: "details.dialog.gallery-with-carousel",
       },
-      {
-        title: "[Details] Hotel Accommodation and its General Information",
-        value: "details.dialog.hotel-accommodation-and-general-information",
-      },
+
       {
         title: "[Details] Enquiry Form Models",
         value: "details.dialog.enquiries-form-models",
@@ -158,6 +182,10 @@ export const details: FeatureSchemaDefinition = {
       {
         title: "[Details] Image Carousal Model",
         value: "details.dialog.image-carousel-model",
+      },
+      {
+        title: "[Details] Hotel Room Types",
+        value: "details.dialog.hotel-room-types",
       },
     ],
   },

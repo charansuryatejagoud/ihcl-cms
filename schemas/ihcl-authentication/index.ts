@@ -1,6 +1,11 @@
 import { FeatureSchemaDefinition } from "schemas/types";
 
 export const Authentication: FeatureSchemaDefinition = {
+  headers: [
+    {
+      type: "dialogHeader",
+    },
+  ],
   connectedStores: [
     {
       title: "[Authentication] Login Store",
@@ -10,7 +15,12 @@ export const Authentication: FeatureSchemaDefinition = {
       title: "[Authentication] Neupass Global User Registration Details",
       value: "authentication.neupass-global-user-registration-details",
     },
+    {
+      title: "[Authentication] Register Store",
+      value: "authentication.stores.register-store",
+    },
   ],
+
   variants: {
     group: [
       {
@@ -20,7 +30,7 @@ export const Authentication: FeatureSchemaDefinition = {
       {
         title: "[Authentication] Grey Grid",
         value: "authentication.group.grey-grid",
-      }
+      },
     ],
     card: [
       {
@@ -46,6 +56,10 @@ export const Authentication: FeatureSchemaDefinition = {
       {
         title: "[Authentication] Action Labels",
         value: "authentication.card.action-labels",
+      },
+      {
+        title: "[Authentication] Membership Global Login options",
+        value: "authentication.card.membership-global-login-options",
       },
     ],
     nudge: [
@@ -79,6 +93,10 @@ export const Authentication: FeatureSchemaDefinition = {
         title: "[Authentication] OTP Login Model",
         value: "authentication.dialog.otp-login-model",
       },
+      {
+        title: "[Authentication] Global Membership Login",
+        value: "authentication.dialog.global-membership-login",
+      }
     ],
     tabs: [
       {
