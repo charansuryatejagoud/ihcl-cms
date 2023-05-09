@@ -29,11 +29,23 @@ export const giftCards: FeatureSchemaDefinition = {
         title: "[Gift Card] Card Order Status Form",
         value: "giftCards.card.order-status-form",
       },
+      {
+        title: "[Gift Card] Bottom media with Top content",
+        value: "giftCards.card.bottom-media-with-top-content",
+      },
+      {
+        title: "[Gift Card] Bottom media with Top Center aligned Action",
+        value: "giftCards.card.bottom-media-with-top-center-aligned-action",
+      },
     ],
     group: [
       {
         title: "[Gift Card] Failure Status",
         value: "giftCards.group.failure-status",
+      },
+      {
+        title: "[Gift Card] Horizontal Tabs",
+        value: "giftCards.group.horizontal-tabs",
       },
     ],
 

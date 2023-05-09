@@ -166,17 +166,25 @@ export default function page(props: PageProps) {
         ],
       },
       {
+        title: "Items",
+        name: "items",
+        type: "array",
+        group: "main",
+        of: props.items,
+      },
+      {
         title: "Show Bottom Navigation",
         name: "showBottomNavigation",
         type: "boolean",
         group: "configuration",
       },
       {
-        title: "Items",
-        name: "items",
+        title: "Bottom Navigation Items",
+        name: "bottomNavigationItems",
         type: "array",
-        group: "main",
-        of: props.items,
+        description: "This field will be used for Mobile bottom navigation",
+        hidden: ({parent}) => !parent?.showBottomNavigation,
+        of: props.items
       },
       // {
       //   title: "Seo",
