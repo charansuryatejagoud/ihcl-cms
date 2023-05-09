@@ -22,6 +22,10 @@ export const bookings: FeatureSchemaDefinition = {
         title: "Hotel Booking Confirmation",
         value: "bookings.switchCaseBlock.booking-confirmation",
       },
+      {
+        title: "Loyalty Booking Confirmation",
+        value: "bookings.switchCaseBlock.loyalty-booking-confirmation",
+      },
     ],
     placeholder: [
       {
@@ -57,8 +61,16 @@ export const bookings: FeatureSchemaDefinition = {
         value: "bookings.placeholders.confirmed-room-details",
       },
       {
-         title: "[Bookings] Other Guest Details",
-         value: "bookings.placeholders.primary-guest-details",
+        title: "[Bookings] Other Guest Details",
+        value: "bookings.placeholders.primary-guest-details",
+      },
+      {
+        title: "[Bookings] Loyalty Product Price Details",
+        value: "bookings.placeholders.loyalty-product-price-details",
+      },
+      {
+        title: "[Bookings] Loyalty Payment Details",
+        value: "bookings.placeholders.loyalty-payment-details",
       },
     ],
     nudge: [
@@ -79,6 +91,14 @@ export const bookings: FeatureSchemaDefinition = {
       {
         title: "[Bookings] Booking Hotel Failure Confirmation",
         value: "bookings.group.booking-hotel-failure",
+      },
+      {
+        title: "[Bookings] Loyalty Booking Successful",
+        value: "bookings.group.loyalty-booking-successful",
+      },
+      {
+        title: "[Bookings] Loyalty Product Payment and Information",
+        value: "bookings.group.loyalty-product-payment-and-information",
       },
     ],
     tabs: [
