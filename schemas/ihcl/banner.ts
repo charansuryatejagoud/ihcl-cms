@@ -3,8 +3,8 @@ import { IoApps, IoSettings } from "react-icons/io5";
 
 const AlignmentVariant = [
   {
-    title: "Regular Title with Two Rows",
-    value: "regular-title-with-two-rows",
+    title: " Title with Two Rows",
+    value: "title-with-two-rows",
   },
   {
     title: " Short Hero Title With Two Rows",
