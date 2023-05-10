@@ -34,7 +34,7 @@ export const giftCards: FeatureSchemaDefinition = {
       {
         title: "[Gift Card] Failure Status",
         value: "giftCards.group.failure-status",
-      },
+      }, 
     ],
 
     tabs: [
