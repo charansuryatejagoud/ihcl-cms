@@ -160,7 +160,11 @@ export const details: FeatureSchemaDefinition = {
       {
          title:"[Details] Book A Stay With Aspect ratio 1:2",
          value:"details.card-book-a-stay-with-aspect-ratio-1:2"
-      }
+      },
+      {
+        title:"[Details] Vertical Aligned Content With Aspect ratio 2:4",
+        value:"details.card-vertical-aligned-content-with-aspect-ratio-2:4"
+     }
     ],
 
     banner: [],

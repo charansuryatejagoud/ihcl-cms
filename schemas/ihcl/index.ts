@@ -139,10 +139,6 @@ export const ihclcore: FeatureSchemaDefinition = {
 
       { title: "Toll Free No", value: "ihcl.core.group.toll-free-no" },
       {
-        title: "Group With Filter Buttons",
-        value: "ihcl.core.group.group-with-filter-buttons",
-      },
-      {
         title: "Group With Multiple Buttons",
         value: "ihcl.core.group.group-with-multiple-buttons",
       },
@@ -194,6 +190,14 @@ export const ihclcore: FeatureSchemaDefinition = {
       {
         title: "Option Selector PopUp Modal",
         value: "ihcl.core.group.option-selector-popup-modal",
+      },
+      {
+        title: "Group With Vertical Components",
+        value: "ihcl.core.group.group-with-vertical-components",
+      },
+      {
+        title: "Hexagonal Content",
+        value: "ihcl.core.group.hexagonal-content",
       },
     ],
     card: [
@@ -261,6 +265,14 @@ export const ihclcore: FeatureSchemaDefinition = {
       {
         title: "Custom Bottom Navigation",
         value: "ihcl.core.card.custom-bottom-navigation",
+      },
+      {
+        title: "Media With Bottom And Top Content",
+        value: "ihcl.core.card.media-with-bottom-and-top-content",
+      },
+      {
+        title: "Triangle Shape Image On Content",
+        value: "ihcl.core.card.triangle-shape-image-on-content",
       },
     ],
     banner: [
