@@ -2,7 +2,12 @@ import { FeatureSchemaDefinition } from "schemas/types";
 
 export const partners: FeatureSchemaDefinition = {
   variants: {
-    group: [],
+    group: [
+      {
+        title: "[Partners] Questions And Answers",
+        value: "partners.group.questions-and-answers",
+      },
+    ],
     card: [
       {
         title: "[Partners] Right Media Image Carousel with Left Content",
@@ -14,10 +19,10 @@ export const partners: FeatureSchemaDefinition = {
         title: "[Partners] Left Image Right Content With Border",
         value: "partners.nudge.left-image-right-content-with-border",
       },
-    {
-        title:"[Partners] Nudge With Two Links",
-        value:"partners.nudge.nudge-with-two-links"
-    }
+      {
+        title: "[Partners] Nudge With Two Links",
+        value: "partners.nudge.nudge-with-two-links",
+      },
     ],
   },
 };

@@ -7,6 +7,10 @@ export const loyalty: FeatureSchemaDefinition = {
       title: "[Loyalty] Epicure Cards Store",
       value: "loyalty.stores.loyalty-epicure-cards-store",
     },
+    {
+      title:"[Loyalty] Member Confirm Details",
+      value:"loyalty.stores.member-confirm-details"
+    }
   ],
   variants: {
     group: [
