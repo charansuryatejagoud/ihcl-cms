@@ -9,9 +9,21 @@ export default {
       type: "string",
     },
     {
+      name: "isGradientEnabled",
+      title: "Is Gradient Enabled",
+      type: "boolean",
+    },
+    {
+      name: "gradient",
+      title: "Gradient",
+      type: "string",
+      hidden: ({parent}) => !parent?.isGradientEnabled
+    },
+    {
       name: "backgroundColor",
       title: "Background Color",
       type: "color",
+      hidden: ({parent}) => parent?.isGradientEnabled
     },
     {
       name: "titleColor",
