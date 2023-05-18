@@ -29,4 +29,8 @@ export const inputFieldTypes = [
     title: "Checkbox",
     value: "checkbox",
   },
+  {
+    title: "Number",
+    value: "number",
+  }
 ];

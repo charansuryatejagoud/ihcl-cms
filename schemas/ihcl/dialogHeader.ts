@@ -1,7 +1,7 @@
 import { SchemaItem } from "schemas/types";
 
 interface dialogProps {
-  items: SchemaItem[]
+  items: SchemaItem[];
 }
 export const dialogHeader = (props: dialogProps) => {
   return {
@@ -17,7 +17,19 @@ export const dialogHeader = (props: dialogProps) => {
       {
         name: "logo",
         title: "Logo",
-        type: "image",
+        type: "object",
+        fields: [
+          {
+            Title: "Image",
+            name: "image",
+            type: "image",
+          },
+          {
+            Title: "Large Image",
+            name: "largeImage",
+            type: "image",
+          },
+        ],
       },
       {
         title: "Image",
@@ -32,4 +44,4 @@ export const dialogHeader = (props: dialogProps) => {
       },
     ],
   };
-}
+};

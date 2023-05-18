@@ -66,7 +66,12 @@ export const ihclcore: FeatureSchemaDefinition = {
       type: "formComponent",
     },
   ],
-
+  connectedStores: [
+    {
+      title: "Search Results",
+      value: "ihcl.core.connectedStores.search-results",
+    },
+  ],
   variants: {
     group: [
       {
@@ -300,9 +305,9 @@ export const ihclcore: FeatureSchemaDefinition = {
       { title: "Pincode Nudge", value: "ihcl.core.nudge.pincode" },
       { title: "Navigation", value: "ihcl.core.nudge.navigation" },
       {
-        title:"Alert Message Status",
-        value:"ihcl.core.nudge.alert-message-status"
-      }
+        title: "Alert Message",
+        value: "ihcl.core.nudge.alert-message-status",
+      },
     ],
     dialog: [
       { title: "Alert", value: "ihcl.core.alert" },
