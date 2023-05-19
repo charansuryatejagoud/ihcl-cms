@@ -32,5 +32,9 @@ export const inputFieldTypes = [
   {
     title: "Number",
     value: "number",
-  }
+  },
+  {
+    title: "TextArea",
+    value: "textarea",
+  },
 ];

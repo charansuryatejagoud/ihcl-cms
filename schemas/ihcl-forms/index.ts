@@ -15,7 +15,6 @@ export const ihclForms: FeatureSchemaDefinition = {
     card: [],
     placeholder: [
       { title: "[IHCL Forms] Login Form", value: "ihclforms.login-form" },
-      
     ],
     dialog: [
       {
@@ -23,6 +22,23 @@ export const ihclForms: FeatureSchemaDefinition = {
         value: "login-form-with-multiple-tabs",
       },
     ],
- 
+    forms: [
+      {
+        title: "[IHCL Forms] Khazana Enquiry",
+        value: "ihclForms.khazana-enquiry-form",
+      },
+      {
+        title: "[IHCL Forms] Hamper Products Enquiry",
+        value: "ihclForms.hamper-product-enquiry-form",
+      },
+      {
+        title: "[IHCL Forms] TAP Enquiry",
+        value: "ihclForms.tap-enquiry-form",
+      },
+      {
+        title: "[IHCL Forms] TAPPME Enquiry",
+        value: "ihclForms.tappme-enquiry-form",
+      },
+    ],
   },
 };
