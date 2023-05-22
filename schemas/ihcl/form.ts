@@ -27,7 +27,7 @@ export default function form({
         title: "Title",
         name: "title",
         type: "string",
-        validation: (Rule) => Rule.required(),
+        // validation: (Rule) => Rule.required(),
       },
       {
         name: "subtitle",

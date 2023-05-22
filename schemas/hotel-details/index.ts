@@ -68,10 +68,6 @@ export const details: FeatureSchemaDefinition = {
         value: "details.group.hotel-dine-in-details",
       },
       {
-        title: "[Details] Carousel With Single Card",
-        value: "details.group.carousel-with-single-card",
-      },
-      {
         title: "[Details] Group With Room Details",
         value: "details.group.group-with-room-details",
       },
@@ -160,7 +156,11 @@ export const details: FeatureSchemaDefinition = {
       {
          title:"[Details] Book A Stay With Aspect ratio 1:2",
          value:"details.card-book-a-stay-with-aspect-ratio-1:2"
-      }
+      },
+      {
+        title:"[Details] Vertical Aligned Content With Aspect ratio 2:4",
+        value:"details.card-vertical-aligned-content-with-aspect-ratio-2:4"
+     }
     ],
 
     banner: [],

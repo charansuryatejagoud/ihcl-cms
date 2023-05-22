@@ -57,8 +57,12 @@ export const businessServices: FeatureSchemaDefinition = {
       },
       {
         title: "[Business Services] Option Selection Form",
-        value: "businessServices.form.option-selection-form"
-      }
+        value: "businessServices.form.option-selection-form",
+      },
+      {
+        title: "[Business Services] Business Connect Enquiry Form",
+        value: "businessServices.form.business-connect-enquiry-form",
+      },
     ],
   },
 };

@@ -29,11 +29,27 @@ export const giftCards: FeatureSchemaDefinition = {
         title: "[Gift Card] Card Order Status Form",
         value: "giftCards.card.order-status-form",
       },
+      {
+        title: "[Gift Card] Bottom media with Top content",
+        value: "giftCards.card.bottom-media-with-top-content",
+      },
+      {
+        title: "[Gift Card] Bottom media with Top Center aligned Action",
+        value: "giftCards.card.bottom-media-with-top-center-aligned-action",
+      },
+      {
+        title: "[Gift Card] Member Purchase Details With Cta",
+        value: "giftCards.card.member-purchase-details-with-cta",
+      },
     ],
     group: [
       {
         title: "[Gift Card] Failure Status",
         value: "giftCards.group.failure-status",
+      },
+      {
+        title: "[Gift Card] Horizontal Tabs",
+        value: "giftCards.group.horizontal-tabs",
       },
     ],
 
@@ -41,6 +57,18 @@ export const giftCards: FeatureSchemaDefinition = {
       {
         title: "[Gift Card] Manage Card Multiple Tabs",
         value: "giftCards.tabs.manage-card-multiple-tabs",
+      },
+    ],
+    forms: [
+      {
+        title: "[Gift Card] Participating Hotel Search",
+        value: "giftCards.form.participating-hotel-search",
+      },
+    ],
+    dialog: [
+      {
+        title: "[Gift Card] Finding Participating Hotel Search Modal",
+        value: "giftCards.dialog.finding-participating-hotel-search-modal",
       },
     ],
   },

@@ -7,6 +7,10 @@ export const loyalty: FeatureSchemaDefinition = {
       title: "[Loyalty] Epicure Cards Store",
       value: "loyalty.stores.loyalty-epicure-cards-store",
     },
+    {
+      title:"[Loyalty] Member Confirm Details",
+      value:"loyalty.stores.member-confirm-details"
+    }
   ],
   variants: {
     group: [
@@ -44,6 +48,10 @@ export const loyalty: FeatureSchemaDefinition = {
         title: "[Loyalty] Group with Card Media Content Positions",
         value: "loyalty.group.card-media-content-positions",
       },
+      {
+        title:"[Loyalty] Membership Success Details",
+        value:"loyalty.group.membership-success-details"
+      }
     ],
     card: [
       { title: "[Loyalty] Text on Image", value: "loyalty.text-on-image" },
@@ -74,6 +82,18 @@ export const loyalty: FeatureSchemaDefinition = {
       {
         title: "[Loyalty] Card With background Image and Column aligned dual actions",
         value: "loyalty.card.card-with-background-image.horizontal-dual-actions",
+      },
+      {
+        title: "[Loyalty] Membership Holder Details",
+        value: "loyalty.card.membership-holder-details",
+      },
+      {
+        title: "[Loyalty] Membership Product Price Details",
+        value: "loyalty.card.membership-product-price-details",
+      },
+      {
+        title: "[Loyalty] Price Breakup Details",
+        value: "loyalty.card.price-breakup-details",
       },
     ],
     nudge: [

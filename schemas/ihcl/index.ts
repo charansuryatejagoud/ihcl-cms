@@ -66,7 +66,12 @@ export const ihclcore: FeatureSchemaDefinition = {
       type: "formComponent",
     },
   ],
-
+  connectedStores: [
+    {
+      title: "Search Results",
+      value: "ihcl.core.connectedStores.search-results",
+    },
+  ],
   variants: {
     group: [
       {
@@ -139,10 +144,6 @@ export const ihclcore: FeatureSchemaDefinition = {
 
       { title: "Toll Free No", value: "ihcl.core.group.toll-free-no" },
       {
-        title: "Group With Filter Buttons",
-        value: "ihcl.core.group.group-with-filter-buttons",
-      },
-      {
         title: "Group With Multiple Buttons",
         value: "ihcl.core.group.group-with-multiple-buttons",
       },
@@ -192,9 +193,17 @@ export const ihclcore: FeatureSchemaDefinition = {
         value: "ihcl.core.group.3-column-grid-with-border",
       },
       {
-        title: "Icons with Title",
-        value: "card-with-image-title"
-      }
+        title: "Option Selector PopUp Modal",
+        value: "ihcl.core.group.option-selector-popup-modal",
+      },
+      {
+        title: "Group With Vertical Components",
+        value: "ihcl.core.group.group-with-vertical-components",
+      },
+      {
+        title: "Hexagonal Content",
+        value: "ihcl.core.group.hexagonal-content",
+      },
     ],
     card: [
       {
@@ -212,7 +221,6 @@ export const ihclcore: FeatureSchemaDefinition = {
         title: "Card With Description Actions",
         value: "ihcl.core.card.card-with-description-actions",
       },
-
       {
         title: "[Split Cards] Card With Aspect Ratio (1:2)",
         value: "ihcl.core.card.card-with-aspect-ratio-of-1:2",
@@ -251,6 +259,26 @@ export const ihclcore: FeatureSchemaDefinition = {
         title: "Card With Center Aligned Content",
         value: "ihcl.core.card.card-with-center-aligned-content",
       },
+      {
+        title: "Image and Content With Aspect Ratio 1:1",
+        value: "ihcl.core.card.image-and-content-with-aspect-ratio-1:1",
+      },
+      {
+        title: "Default Bottom Navigation",
+        value: "ihcl.core.card.default-bottom-navigation",
+      },
+      {
+        title: "Custom Bottom Navigation",
+        value: "ihcl.core.card.custom-bottom-navigation",
+      },
+      {
+        title: "Media With Bottom And Top Content",
+        value: "ihcl.core.card.media-with-bottom-and-top-content",
+      },
+      {
+        title: "Triangle Shape Image On Content",
+        value: "ihcl.core.card.triangle-shape-image-on-content",
+      },
     ],
     banner: [
       {
@@ -276,6 +304,10 @@ export const ihclcore: FeatureSchemaDefinition = {
       { title: "Open Url Nudge", value: "ihcl.core.nudge.open-url" },
       { title: "Pincode Nudge", value: "ihcl.core.nudge.pincode" },
       { title: "Navigation", value: "ihcl.core.nudge.navigation" },
+      {
+        title: "Alert Message Status",
+        value: "ihcl.core.nudge.alert-message-status",
+      },
     ],
     dialog: [
       { title: "Alert", value: "ihcl.core.alert" },
