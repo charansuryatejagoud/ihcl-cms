@@ -20,9 +20,27 @@ import eventVenues from "./eventVenues";
 import awards from "./awards";
 import perfectEvent from "./perfectEvent";
 import roomDetails from "./roomDetails";
+import diningDetails from "./diningDetails";
+import specifications from "./specifications";
+import offerDetails from "./offerDetails";
+import attractions from "./attractions";
+import attractionDetails from "./attractionDetails";
+import signatureTreatmentDetails from "./signatureTreatmentDetails";
+import holidayDetails from "./holidayDetails";
+import experienceDetails from "./experienceDetails";
+import exclusiveOffersDetails from "./exclusiveOffersDetails";
+import eventVenueDetails from "./eventVenueDetails";
+import awardDetails from "./awardDetails";
+import socialInfo from "./socialInfo";
+import venues from "./venues";
+import facilityDetails from "./facilityDetails";
+import highlightDetails from "./highlightDetails";
 
 export const hotels: FeatureSchemaDefinition = {
-  schemas: [hotel,hotelDetails, address, availability, contact, gallery, wellness,
-  spaDetails, signatureTreatments,signatureDining, rooms, offers, holidays, highlights,
-  facilities, experiences, exclusiveOffers, eventVenues, awards, perfectEvent,roomDetails],
+  schemas: [hotel, hotelDetails, address, availability, contact, gallery, wellness, attractions,
+    spaDetails, signatureTreatments, signatureDining, rooms, offers, holidays, highlights,
+    facilities, experiences, exclusiveOffers, eventVenues, awards, perfectEvent, roomDetails,
+    diningDetails, specifications, offerDetails, attractionDetails, signatureTreatmentDetails,
+    holidayDetails, experienceDetails, exclusiveOffersDetails, eventVenueDetails, awardDetails,
+    socialInfo, venues, facilityDetails, highlightDetails],
 };

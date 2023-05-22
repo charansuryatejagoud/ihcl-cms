@@ -50,10 +50,32 @@ const appConfigItem = S.listItem()
 
 const contentFragments = S.listItem().title("CFs").child(
   S.list().title("CFs Types").items([
+    S.listItem().title("Highlights").child(S.documentTypeList("highlights")),
+    S.listItem().title("Facilities").child(S.documentTypeList("facilities")),
+    S.listItem().title("Rooms").child(S.documentTypeList("rooms")),
+    S.listItem().title("Offers").child(S.documentTypeList("offers")),
+    S.listItem().title("Exclusive Offers").child(S.documentTypeList("exclusiveOffers")),
+    S.listItem().title("Awards").child(S.documentTypeList("awards")),
+    S.listItem().title("Social Info").child(S.documentTypeList("socialInfo")),
+    S.listItem().title("Dining").child(S.documentTypeList("signatureDining")),
+    S.listItem().title("Venues").child(S.documentTypeList("venues")),
+    S.listItem().title("Wellness").child(S.documentTypeList("wellness")),
+    S.listItem().title("Experiences").child(S.documentTypeList("experiences")),
+    S.listItem().title("Gallery").child(S.documentTypeList("gallery")),
+    S.listItem().title("Attractions").child(S.documentTypeList("attractions")),
+    S.listItem().title("Holidays").child(S.documentTypeList("holidays")),
     S.listItem().title("Address").child(S.documentTypeList("address")),
-    S.listItem().title("Contact").child(S.documentTypeList("contact"))
+    S.listItem().title("Contact").child(S.documentTypeList("contact")),
+    // S.listItem().title("Room Offers").child(S.documentTypeList("roomOffer")),
+    S.listItem().title("Guest Details").child(S.documentTypeList("guestDetails"))
   ])
 )  
+// const contentFragments = S.listItem().title("Bookings").child(
+//   S.list().title("Bookings").items([
+//     S.listItem().title("Room Offers").child(S.documentTypeList("roomOffer")),
+//     S.listItem().title("Guest Details").child(S.documentTypeList("guestDetails"))
+//   ])
+// )  
 
 const categoryList = S.documentTypeList("category")
   .title("Category")
@@ -87,7 +109,9 @@ const standardListItems = [
 
   ...S.documentTypeListItems().filter(
     (listItem) =>
-      !["settings", "media.tag", "appConfig"].includes(listItem.getId()),
+      !["settings", "media.tag", "appConfig", "address", "contact","rooms", "roomInfo", "roomOffer", 
+      "guestDetails", "awards", "wellness", "attractions", "signatureDining", "offers", "holidays", 
+      "facilities", "experiences", "exclusiveOffers", "socialInfo", "venues", "gallery", "highlights"].includes(listItem.getId()),
   ),
 ];
 

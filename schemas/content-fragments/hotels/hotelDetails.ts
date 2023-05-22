@@ -1,5 +1,5 @@
 export default {
-  Title:"Hotel Details",
+  Title: "Hotel Details",
   name: "hotelDetails",
   type: "object",
   fields: [
@@ -9,7 +9,7 @@ export default {
       type: "string",
     },
     {
-      name: "sunTitle",
+      name: "subTitle",
       title: "Sub Title",
       type: "string",
     },
@@ -17,6 +17,33 @@ export default {
       name: "description",
       title: "Description",
       type: "string",
+    },
+    {
+      name: "bannerImage",
+      title: "Banner Image",
+      type: "image",
+    },
+    {
+      name: "overviewInfo",
+      title: "Overview Info",
+      type: 'object',
+      fields: [
+        {
+          name: "title",
+          title: "Title",
+          type: "string",
+        },
+        {
+          name: "description",
+          title: "Description",
+          type: "string",
+        },
+        {
+          name: "image",
+          title: "Image",
+          type: "image",
+        },
+      ]
     },
   ],
 };

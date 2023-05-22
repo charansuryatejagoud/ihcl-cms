@@ -1,6 +1,6 @@
 export default {
-    title: "Rooms",
-    name: 'rooms',
+    title: "Social Info",
+    name: 'socialInfo',
     type: "document",
     fields: [
         {
@@ -19,17 +19,12 @@ export default {
             type: "string",
         },
         {
-            name: "bannerImage",
-            title: "Banner Image",
-            type: "image",
-        },
-        {
-            name: "roomsList",
-            title: "Rooms List",
+            name: "socialImages",
+            title: "Social Images",
             type: "array",
             of: [
-                { type: "roomDetails" }
+                { name: "image", title: "Image", type: "image" }
             ]
         },
     ],
-}
+} 

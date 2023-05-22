@@ -4,127 +4,143 @@ export default {
   type: "document",
   fields: [
     {
-      name: "propertyId",
-      title: "Property Id",
+      name: "hotelId",
+      title: "Hotel Id",
       type: "string",
     },
     {
-      name: "propertyType",
-      title: "Property Type",
+      name: "hotelType",
+      title: "Hotel Type",
       type: "string",
     },
     {
-      name: "propertySubType",
-      title: "Property Sub Type",
+      name: "hotelSubType",
+      title: "Hotel Sub Type",
       type: "string",
     },
     {
-      name: "propertyDetails",
-      title: "Property Details",
+      name: "hotelDetails",
+      title: "Hotel Details",
       type: "hotelDetails",
     },
     {
-      name: "propertyAddress",
-      title: "Property Address",
-      type: 'array',
-      of: [{
-        type: 'reference',
-        to: { type: "address" }
-      }]
+      name: "hotelAddress",
+      title: "Hotel Address",
+      type: 'reference',
+      to: [{type: "address" }]
     },
     {
-      name: "propertyContact",
-      title: "Property Contact",
-      type: 'array',
-      of: [{
-        type: 'reference',
-        to: { type: "contact" }
-      }]
+      name: "hotelContact",
+      title: "Hotel Contact",
+      type: 'reference',
+      to: [{type: "contact" }]
     },
     {
-      name: "propertyAvailability",
-      title: "Property Availability",
+      name: "hotelAvailability",
+      title: "Hotel Availability",
       type: "availability",
     },
     {
-      name: "propertyFacilities",
-      title: "Property Facilities",
-      type: "string",
+      name: "hotelFacilities",
+      title: "Hotel Facilities",
+      type: 'reference',
+      to: [{type: "facilities" }]
     },
     {
-      name: "propertyAwards",
-      title: "Property Awards",
-      type: "string",
+      name: "hotelAwards",
+      title: "Hotel Awards",
+      type: 'reference',
+      to: [{type: "awards" }]
     },
     {
-      name: "propertySocialInfo",
-      title: "Property Social Info",
-      type: "string",
+      name: "hotelSocialInfo",
+      title: "Hotel Social Info",
+      type: 'reference',
+      to: [{type: "socialInfo" }]
     },
     {
       name: "hotelRooms",
       title: "Hotel Rooms",
-      type: "rooms",
+      type: 'reference',
+      to: [{type: "rooms" }]
     },
     {
-      name: "propertyHighlights",
-      title: "Property Highlights",
-      type: "highlights",
+      name: "hotelHighlights",
+      title: "Hotel Highlights",
+      type: 'reference',
+      to: [{type: "highlights" }]
     },
     {
-      name: "propertyExclusiveOffers",
-      title: "Property Exclusive Offers",
-      type: "exclusiveOffers",
+      name: "hotelExclusiveOffers",
+      title: "Hotel Exclusive Offers",
+      type: 'reference',
+      to: [{type: "exclusiveOffers" }]
     },
     {
-      name: "propertyOffers",
-      title: "Property Offers",
-      type: "offers",
+      name: "hotelOffers",
+      title: "Hotel Offers",
+      type: 'reference',
+      to: [{type: "offers" }]
     },
     {
-      name: "propertyHolidays",
-      title: "Property Holidays",
-      type: "holidays",
+      name: "hotelHolidays",
+      title: "Hotel Holidays",
+      type: 'reference',
+      to: [{type: "holidays" }]
     },
     {
-      name: "propertySignatureDining",
-      title: "Property Signature Dining",
-      type: "signatureDining",
+      name: "hotelSignatureDining",
+      title: "Hotel Signature Dining",
+      type: 'reference',
+      to: [{type: "signatureDining" }]
     },
     {
-      name: "propertyEventVenues",
-      title: "Property Event Venues",
-      type: "eventVenues",
+      name: "hotelEventVenues",
+      title: "Hotel Event Venues",
+      type: 'reference',
+      to: [{type: "venues" }]
+    },
+    // {
+    //   name: "hotelPerfectEvent",
+    //   title: "Hotel Perfect Event",
+    //   type: 'reference',
+    //   to: [{type: "perfectEvent" }]
+    // },
+    // {
+    //   name: "hotelSpaDetails",
+    //   title: "Hotel Spa Details",
+    //   type: 'reference',
+    //   to: [{type: "spaDetails" }]
+    // },
+    // {
+    //   name: "hotelSignatureTreatments",
+    //   title: "Hotel Signature Treatments",
+    //   type: 'reference',
+    //   to: [{type: "signatureTreatments" }]
+    // },
+    {
+      name: "hotelWellness",
+      title: "Hotel Wellness",
+      type: 'reference',
+      to: [{type: "wellness" }]
     },
     {
-      name: "propertyPerfectEvent",
-      title: "Property Perfect Event",
-      type: "perfectEvent",
+      name: "hotelExperiences",
+      title: "Hotel Experiences",
+      type: 'reference',
+      to: [{type: "experiences" }]
     },
     {
-      name: "propertySpaDetails",
-      title: "Property Spa Details",
-      type: "spaDetails",
+      name: "hotelGallery",
+      title: "Hotel Gallery",
+      type: 'reference',
+      to: [{type: "gallery" }]
     },
     {
-      name: "propertySignatureTreatments",
-      title: "Property Signature Treatments",
-      type: "signatureTreatments",
+      name: "hotelAttractions",
+      title: "Hotel Attractions",
+      type: 'reference',
+      to: [{type: "attractions" }]
     },
-    {
-      name: "propertyWellness",
-      title: "Property Wellness",
-      type: "wellness",
-    },
-    {
-      name: "propertyExperiences",
-      title: "Property Experiences",
-      type: "experiences",
-    },
-    {
-      name: "propertyGallery",
-      title: "Property Gallery",
-      type: "gallery",
-    }
   ],
 };

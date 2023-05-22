@@ -1,26 +1,30 @@
 export default {
-    title:"Facilities",
-      name: 'facilities',
-      type: "object",
-      fields: [
-        {
-          name: "title",
-          title: "Title",
-          type: 'object',
-          fields: [
-            {name: 'icon', type: 'string', title: 'Icon'},
-            {name: 'text', type: 'string', title: 'Text'},
-          ]
-        },
-        {
-          name: "info",
-          title: "Info",
-          type: "string",
-        },
-        {
-          name: "moreInfo",
-          title: "More Info",
-          type: "string",
-        },
-      ],
-  }
+  title: "Facilities",
+  name: 'facilities',
+  type: "document",
+  fields: [
+    {
+      name: "title",
+      title: "Title",
+      type: 'string',
+    },
+    {
+      name: "sectionTitle",
+      title: "Section Title",
+      type: 'string',
+    },
+    {
+      name: "info",
+      title: "Info",
+      type: "string",
+    },
+    {
+      name: "facilityDetails",
+      title: "Facility  Details",
+      type: "array",
+      of: [
+        { type: "facilityDetails" }
+      ]
+    },
+  ],
+}

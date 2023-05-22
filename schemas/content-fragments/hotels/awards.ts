@@ -1,21 +1,25 @@
 export default {
-    title:"Awards",
-      name: 'awards',
-      type: "object",
-      fields: [
-        {
-          name: "title",
-          title: "Title",
-          type: 'object',
-          fields: [
-            {name: 'icon', type: 'string', title: 'Icon'},
-            {name: 'text', type: 'string', title: 'Text'},
-          ]
-        },
-        {
-          name: "info",
-          title: "Info",
-          type: "text",
-        },
-      ],
-  }
+  title: "Awards",
+  name: 'awards',
+  type: "document",
+  fields: [
+    {
+      name: "title",
+      title: "Title",
+      type: 'string',
+    },
+    {
+        name: "sectionTitle",
+        title: "Section Title",
+        type: 'string',
+    },
+    {
+      name: "awardDetails",
+      title: "Award Details",
+      type: 'array',
+      of: [
+         {type:"awardDetails"}
+      ]
+    }
+  ],
+}

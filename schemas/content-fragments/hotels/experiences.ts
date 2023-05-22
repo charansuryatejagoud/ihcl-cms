@@ -1,13 +1,33 @@
 export default {
-    title:"Experiences",
-      name: 'experiences',
-      type: "object",
+  title: "Experiences",
+  name: 'experiences',
+  type: "document",
+  fields: [
+    {
+      name: "title",
+      title: "Title",
+      type: "string",
+    },
+    {
+      name: "sectionTitle",
+      title: "Section Title",
+      type: 'string',
+    },
+    {
+      name: "description",
+      title: "Description",
+      type: "string",
+    },
+    {
+      name: "bannerImage",
+      title: "Banner Image",
+      type: "image",
+    },
+    {
+      name: "signatureExperience",
+      title: "Signature Experience",
+      type: 'object',
       fields: [
-        {
-          name: "image",
-          title: "Image",
-          type: "string",
-        },
         {
           name: "title",
           title: "Title",
@@ -18,5 +38,20 @@ export default {
           title: "Description",
           type: "string",
         },
-      ],
-  }
+        {
+          name: "image",
+          title: "Image",
+          type: "image",
+        },
+      ]
+    },
+    {
+      name: "experienceDetails",
+      title: "Experience Details",
+      type: "array",
+      of: [
+        { type: "experienceDetails" }
+      ]
+    },
+  ],
+}

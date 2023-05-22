@@ -1,10 +1,11 @@
 export default {
 
-    name: "roomDetails",
-    titile: "Room Details",
+    name: "roomDetailsModal",
+    titile: "Room Details Modal",
     type: "object",
     fields: [
         { name: 'title', type: 'string', title: 'Title' },
+        { name: 'sectionTitle', type: 'string', title: 'Section Title' },
         { name: 'code', type: 'string', title: 'Code' },
         { name: 'type', type: 'string', title: 'Type' },
         { name: 'description', type: 'string', title: 'Description' },

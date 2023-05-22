@@ -1,17 +1,17 @@
 export default {
     title:"Exclusive Offers",
       name: 'exclusiveOffers',
-      type: "object",
+      type: "document",
       fields: [
-        {
-          name: "image",
-          title: "Image",
-          type: "string",
-        },
         {
           name: "title",
           title: "Title",
           type: "string",
+        },
+        {
+            name: "sectionTitle",
+            title: "Section Title",
+            type: 'string',
         },
         {
           name: "description",
@@ -19,11 +19,11 @@ export default {
           type: "string",
         },
         {
-          name: "highlights",
-          title: "Highlights",
+          name: "exclusiveOfferDetails",
+          title: "Exclusive Offer Details",
           type: "array",
           of: [
-            { name: "hightlite", type: "string", title: "Highlite"}
+            { type: "exclusiveOfferDetails" }
           ]
         },
       ],

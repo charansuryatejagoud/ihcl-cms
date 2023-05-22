@@ -6,12 +6,12 @@ export default {
         {
           name: "checkinTime",
           title: "Checkin Time",
-          type: "datetime",
+          type: "string",
         },
         {
           name: "checkoutTime",
           title: "Checkout Time",
-          type: "datetime",
+          type: "string",
         },
         {
           name: "roomsInfo",
@@ -26,6 +26,11 @@ export default {
         {
           name: "wellnessInfo",
           title: "Wellness Info",
+          type: "string",
+        },
+        {
+          name: "temperatureInfo",
+          title: "Temperature Info",
           type: "string",
         },
         {

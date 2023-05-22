@@ -1,6 +1,6 @@
 export default {
-    title: "Rooms",
-    name: 'rooms',
+    title: "Attractions",
+    name: 'attractions',
     type: "document",
     fields: [
         {
@@ -24,12 +24,12 @@ export default {
             type: "image",
         },
         {
-            name: "roomsList",
-            title: "Rooms List",
+            name: "attractionDetails",
+            title: "AttractionDetails",
             type: "array",
             of: [
-                { type: "roomDetails" }
+                { type: "attractionDetails" }
             ]
         },
     ],
-}
+} 

@@ -1,17 +1,25 @@
 export default {
     title:"Highlights",
       name: 'highlights',
-      type: "object",
+      type: "document",
       fields: [
-        {
-          name: "image",
-          title: "Image",
-          type: "string",
-        },
         {
           name: "title",
           title: "Title",
           type: "string",
+        },
+        {
+          name: "sectionTitle",
+          title: "Section Title",
+          type: "string",
+        },
+        {
+          name: "highlightDetails",
+          title: "Highlight Details",
+          type: "array",
+          of: [
+            { type: "highlightDetails" }
+          ]
         },
       ],
   }
