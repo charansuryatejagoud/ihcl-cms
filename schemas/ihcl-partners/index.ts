@@ -13,6 +13,10 @@ export const partners: FeatureSchemaDefinition = {
         title: "[Partners] Right Media Image Carousel with Left Content",
         value: "partners.card.right-media-image-carousel-with-left-content",
       },
+      {
+        title: "[Partners] Left Media Right Center Align Content",
+        value: "partners.card.left-media-right-center-align-content",
+      },
     ],
     nudge: [
       {

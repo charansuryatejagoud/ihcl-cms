@@ -44,6 +44,18 @@ export default function placeholder({
         Description: "Number of characters limit for placeholder description.",
       },
       {
+        name: "aesthetic",
+        title: "Aesthetic",
+        type: "reference",
+        to: [{ type: "uiConfiguration" }],
+      },
+      {
+        title: "Content",
+        name: "singleContent",
+        type: "blockContent",
+        group: "main",
+      },
+      {
         name: "variant",
         title: "Variant",
         type: "string",

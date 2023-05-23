@@ -89,8 +89,14 @@ export default {
       type: "boolean",
     },
     {
-      name: "image",
-      title: "Image",
+      name: "shortImage",
+      title: "Short Image",
+      type: "image",
+      hidden: ({ parent }) => !parent?.doesBannerContainsFeaturedLogo,
+    },
+    {
+      name: "largeImage",
+      title: "Large Image",
       type: "image",
       hidden: ({ parent }) => !parent?.doesBannerContainsFeaturedLogo,
     },
