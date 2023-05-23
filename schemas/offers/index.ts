@@ -5,8 +5,14 @@ export const Offers: FeatureSchemaDefinition = {
     group: [
       {
         title: "[Offers] 3 Column Grid With No Border Lines For Cards",
-        value: "Offers.group.3-column-grid-with-no-borders-lines-for-cards",
+        value: "offers.group.3-column-grid-with-no-borders-lines-for-cards",
       },
     ],
+    forms:[ 
+      {
+        title: "[Offers] Book A Stay Template",
+        value: "offers.form.book-a-stay-template"
+      }
+    ]
   },
 };
