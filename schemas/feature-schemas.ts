@@ -20,6 +20,7 @@ import { businessServices } from "./business";
 import hotel from "./content-fragments/hotels/hotel";
 import { hotels } from "./content-fragments/hotels";
 import { myAccount } from "./myAccount";
+import { Offers } from "./offers";
 
 const features: FeatureSchemaDefinition[] = [
   core,
@@ -35,7 +36,8 @@ const features: FeatureSchemaDefinition[] = [
   partners,
   businessServices,
   hotels,
-  myAccount
+  myAccount,
+  Offers,
 ];
 
 export const featureDefinition: FeatureSchemaDefinition =

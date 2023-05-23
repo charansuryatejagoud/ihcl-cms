@@ -51,7 +51,7 @@ export default function group({
   variants,
   items,
 }: {
-  variants: SchemaItem[];
+  variants: VariantDefinition[];
   items: SchemaItem[];
 }) {
   return {

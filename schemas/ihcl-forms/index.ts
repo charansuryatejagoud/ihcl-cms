@@ -39,6 +39,10 @@ export const ihclForms: FeatureSchemaDefinition = {
         title: "[IHCL Forms] TAPPME Enquiry",
         value: "ihclForms.tappme-enquiry-form",
       },
+      {
+        title: "[IHCL Forms] Asya Enquiry",
+        value: "ihclForms.asya-enquiry-form",
+      },
     ],
   },
 };
