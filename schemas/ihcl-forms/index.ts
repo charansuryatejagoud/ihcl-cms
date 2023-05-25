@@ -4,22 +4,40 @@ import { FeatureSchemaDefinition } from "schemas/types";
 export const ihclForms: FeatureSchemaDefinition = {
   variants: {
     group: [
-      { title: "[IHCL Forms] Details Form", value: "ihclforms.details-form" },
-      { title: "[IHCL Forms] Payment Form", value: "ihclforms.payment-form" },
+      { title: "[IHCL Forms] Details Form",
+        value: "ihclforms.details-form" 
+      },
+      { title: "[IHCL Forms] Payment Form",
+        value: "ihclforms.payment-form" 
+      },
       {
         title: "[IHCL Forms] Feedback Form",
         value: "ihclforms.group.feedback-form",
       },
-      { title: "[IHCL Forms] Personalize Form", value: "ihclforms.gift-form" },
+      { title: "[IHCL Forms] Personalize Form", 
+        value: "ihclforms.gift-form" 
+      },
+      {
+        title: "[IHCL Forms] Table Reservation",
+        value: "ihclForms.group.table-reservation",
+      },
     ],
     card: [],
     placeholder: [
-      { title: "[IHCL Forms] Login Form", value: "ihclforms.login-form" },
+      { title: "[IHCL Forms] Login Form",
+        value: "ihclforms.login-form" 
+      },
     ],
     dialog: [
       {
         title: "[IHCL Forms] Login Form With Multiple Tabs",
         value: "login-form-with-multiple-tabs",
+      },
+    ],
+    tabs: [
+      {
+        title: "[IHCL Forms] Contact Form",
+        value: "ihclForms.tabs.contact-form",
       },
     ],
     forms: [
@@ -42,6 +60,14 @@ export const ihclForms: FeatureSchemaDefinition = {
       {
         title: "[IHCL Forms] Asya Enquiry",
         value: "ihclForms.asya-enquiry-form",
+      },
+      {
+        title: "[IHCL Forms] Dining Enquiry",
+        value: "ihclForms.dining-enquiry",
+      },
+      {
+        title: "[IHCL Forms] Contact Form Tabs",
+        value: "ihclForms.contact-form-tabs",
       },
     ],
   },
