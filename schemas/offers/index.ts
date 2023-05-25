@@ -13,6 +13,12 @@ export const Offers: FeatureSchemaDefinition = {
         title: "[Offers] Book A Stay Template",
         value: "offers.form.book-a-stay-template"
       }
-    ]
+    ],
+    dialog:[
+      {
+        title:"[Offers] Offers Check Rates",
+        value:"offers.dialog.offers-check-rates"
+      }
+    ],
   },
 };
