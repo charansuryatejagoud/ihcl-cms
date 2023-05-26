@@ -108,8 +108,7 @@ export const details: FeatureSchemaDefinition = {
       },
       {
         title: "[Details] Card With Right Media Left Content",
-        value:
-          "details.card.card-with-right-media-left-content-aspect-ratio-2:4",
+        value: "details.card.card-with-right-media-left-content-aspect-ratio-2:4",
       },
       {
         title: "[Details] Card with Left Align Content",
@@ -171,6 +170,10 @@ export const details: FeatureSchemaDefinition = {
         title: "[Details] Vertical Aligned Content With Aspect ratio 2:4",
         value: "details.card-vertical-aligned-content-with-aspect-ratio-2:4",
       },
+      {
+        title: "[Details] Share Link Icon",
+        value: "details.card-share-link-icon",
+      },
     ],
 
     banner: [],
@@ -180,6 +183,7 @@ export const details: FeatureSchemaDefinition = {
       { title: "[Details] Event Enquiry", value: "details.event-enquiry" },
       { title: "[Details] Venue Details", value: "details.venue-details" },
       { title: "[Details] Video Pop Up", value: "details.video-pop-up" },
+      { title: "[Details] Share Pop Up", value: "details.share-pop-up" },
       {
         title: "[Details] Gallery With Carousel",
         value: "details.dialog.gallery-with-carousel",
