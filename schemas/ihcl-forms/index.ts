@@ -5,17 +5,17 @@ export const ihclForms: FeatureSchemaDefinition = {
   variants: {
     group: [
       { title: "[IHCL Forms] Details Form",
-        value: "ihclforms.details-form" 
+        value: "ihclForms.details-form" 
       },
       { title: "[IHCL Forms] Payment Form",
-        value: "ihclforms.payment-form" 
+        value: "ihclForms.payment-form" 
       },
       {
         title: "[IHCL Forms] Feedback Form",
-        value: "ihclforms.group.feedback-form",
+        value: "ihclForms.group.feedback-form",
       },
       { title: "[IHCL Forms] Personalize Form", 
-        value: "ihclforms.gift-form" 
+        value: "ihclForms.gift-form" 
       },
       {
         title: "[IHCL Forms] Table Reservation",
@@ -25,7 +25,7 @@ export const ihclForms: FeatureSchemaDefinition = {
     card: [],
     placeholder: [
       { title: "[IHCL Forms] Login Form",
-        value: "ihclforms.login-form" 
+        value: "ihclForms.login-form" 
       },
     ],
     dialog: [
