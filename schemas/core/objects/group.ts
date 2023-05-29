@@ -28,6 +28,14 @@ const AlignmentVariant = [
     title: "Center Aligned Regular Title with No Hyphens",
     value: "center-aligned-regular-title-with-no-hyphens",
   },
+  {
+    title: "Center",
+    value: "center",
+  },
+  {
+    title: "Regular",
+    value: "regular"
+  }
 ];
 
 export const groupPreview = {
@@ -92,6 +100,23 @@ export default function group({
         name: "heading",
         title: "Heading",
         type: "string",
+      },
+      {
+        title: "Header Title",
+        name: "headerTitle",
+        type: "array",
+        of: [
+          {
+            type: "object",
+            fields: [
+              {
+                type: "string",
+                title: "Title",
+                name: "title",
+              },
+            ],
+          },
+        ],
       },
       {
         name: "aesthetic",

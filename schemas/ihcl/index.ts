@@ -321,5 +321,17 @@ export const ihclcore: FeatureSchemaDefinition = {
         value: "ihcl.core.alert-without-close-cta",
       },
     ],
+    tabs: [
+      {
+        title: "Multiple Tabs with Border",
+        value: "ihcl.core.tabs.multiple-tabs-with-border",
+      }
+    ],
+    switchCaseBlock: [
+      {
+        title: "Default Switch Case",
+        value: "ihcl.core.default-switch-case",
+      }
+    ]
   },
 };
