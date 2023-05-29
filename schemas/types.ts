@@ -47,8 +47,10 @@ export class VariantSchemaProperties {
   connectedStores: VariantDefinition[];
   navigation: VariantDefinition[];
   group: VariantDefinition[];
+  groupLayout: VariantDefinition[];
   nudge: VariantDefinition[];
   card: VariantDefinition[];
+  cardLayout: VariantDefinition[];
   dialog: VariantDefinition[];
   ifElseBlock: VariantDefinition[];
   switchCaseBlock: VariantDefinition[];

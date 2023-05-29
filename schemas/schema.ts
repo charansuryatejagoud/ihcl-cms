@@ -5,8 +5,10 @@ import { featureDefinition } from "./feature-schemas";
 
 import page from "./core/documents/page";
 import group from "./core/objects/group";
+import groupLayout from "./core/objects/groupLayout";
 import placeholder from "./core/objects/placeholder";
 import card from "./core/objects/card";
+import cardLayout from "./core/objects/cardLayout";
 import dialog from "./core/documents/dialog";
 import nudge from "./core/objects/nudge";
 import lockableItem from "./core/objects/lockableItem";
@@ -42,6 +44,10 @@ export default createSchema({
       variants: featureDefinition.variants.group,
       items: featureDefinition.groupItems,
     }),
+    groupLayout({
+      variants: featureDefinition.variants.group,
+      items: featureDefinition.groupItems,
+    }),
     section({
       items: featureDefinition.pageItems,
       headers: featureDefinition.headers,
@@ -49,6 +55,7 @@ export default createSchema({
     }),
 
     card({ variants: featureDefinition.variants.card }),
+    cardLayout({ variants: featureDefinition.variants.card }),
     nudge({ variants: featureDefinition.variants.nudge }),
 
     placeholder({ variants: featureDefinition.variants.placeholder }),

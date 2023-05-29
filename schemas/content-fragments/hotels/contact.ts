@@ -15,7 +15,7 @@ export default {
             of: [{
                 type: 'object',
                 fields: [
-                    { name: 'mobile', type: 'number', title: 'Mobile' },
+                    { name: 'mobile', type: 'string', title: 'Mobile' },
                     { name: 'type', type: 'string', title: 'Type' },
                 ]
             }

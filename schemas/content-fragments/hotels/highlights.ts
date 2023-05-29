@@ -14,6 +14,11 @@ export default {
           type: "string",
         },
         {
+          name: "description",
+          title: "Description",
+          type: "string",
+        },
+        {
           name: "highlightDetails",
           title: "Highlight Details",
           type: "array",

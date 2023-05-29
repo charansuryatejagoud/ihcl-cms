@@ -53,6 +53,7 @@ const contentFragments = S.listItem().title("CFs").child(
     S.listItem().title("Highlights").child(S.documentTypeList("highlights")),
     S.listItem().title("Facilities").child(S.documentTypeList("facilities")),
     S.listItem().title("Rooms").child(S.documentTypeList("rooms")),
+    S.listItem().title("Rate Codes").child(S.documentTypeList("rateCodes")),
     S.listItem().title("Offers").child(S.documentTypeList("offers")),
     S.listItem().title("Exclusive Offers").child(S.documentTypeList("exclusiveOffers")),
     S.listItem().title("Awards").child(S.documentTypeList("awards")),
@@ -111,7 +112,8 @@ const standardListItems = [
     (listItem) =>
       !["settings", "media.tag", "appConfig", "address", "contact","rooms", "roomInfo", "roomOffer", 
       "guestDetails", "awards", "wellness", "attractions", "signatureDining", "offers", "holidays", 
-      "facilities", "experiences", "exclusiveOffers", "socialInfo", "venues", "gallery", "highlights"].includes(listItem.getId()),
+      "facilities", "experiences", "exclusiveOffers", "socialInfo", "venues", "gallery", "highlights", 
+      "rateCodes"].includes(listItem.getId()),
   ),
 ];
 

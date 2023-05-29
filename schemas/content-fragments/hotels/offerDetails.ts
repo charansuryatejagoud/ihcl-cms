@@ -8,6 +8,7 @@ export default {
           title: "Title",
           type: "string",
         },
+        { name: 'subTitle', type: 'string', title: 'Sub Title' },
         {
           name: "description",
           title: "Description",

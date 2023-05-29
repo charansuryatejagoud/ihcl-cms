@@ -7,6 +7,7 @@ export default {
         { name: 'title', type: 'string', title: 'Title' },
         { name: 'code', type: 'string', title: 'Code' },
         { name: 'type', type: 'string', title: 'Type' },
+        { name: 'subTitle', type: 'string', title: 'Sub Title' },
         { name: 'description', type: 'string', title: 'Description' },
         {
           name: "highlights",

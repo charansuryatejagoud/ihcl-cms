@@ -71,23 +71,9 @@ export default {
                 {
                     name: "weddingEvents",
                     title: "Weddings Events",
-                    type: 'object',
-                    fields: [
-                        {
-                            name: "title",
-                            title: "Title",
-                            type: "string",
-                        },
-                        {
-                            name: "description",
-                            title: "Description",
-                            type: "string",
-                        },
-                        {
-                            name: "image",
-                            title: "Image",
-                            type: "image",
-                        },
+                    type: 'array',
+                    of: [
+                        { type: "weddingEventDetails" }
                     ]
                 },
             ]
