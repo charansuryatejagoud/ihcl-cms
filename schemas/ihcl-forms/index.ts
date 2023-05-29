@@ -69,6 +69,23 @@ export const ihclForms: FeatureSchemaDefinition = {
         title: "[IHCL Forms] Contact Form Tabs",
         value: "ihclForms.contact-form-tabs",
       },
+      {
+        title: "[IHCL Forms] Holidays Enquiry",
+        value: "ihclForms.holidays-enquiry",
+      },
+      {
+        title: "[IHCL Forms] Contact Details",
+        value: "ihclForms.contact-details",
+      },
+      {
+        title: "[IHCL Forms] Wedding Enquiry",
+        value: "ihclForms.wedding-enquiry",
+      },
+      {
+        title: "[IHCL Forms] Wedding Event Enquiry",
+        value: "ihclForms.wedding-event-enquiry"
+      }
+
     ],
   },
 };

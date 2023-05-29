@@ -41,17 +41,17 @@ export const loyalty: FeatureSchemaDefinition = {
         value: "loyalty.group-4-cards-with-comperative-specifications",
       },
       {
-        title: "[Loyalty] Group With Group Of Gift Items Right Content",
-        value: "loyalty.group.group-of-gift-items-right-content",
-      },
-      {
         title: "[Loyalty] Group with Card Media Content Positions",
         value: "loyalty.group.card-media-content-positions",
       },
       {
-        title:"[Loyalty] Membership Success Details",
-        value:"loyalty.group.membership-success-details"
-      }
+        title:"[Loyalty] Membership Purchase Details",
+        value:"loyalty.group.membership-purchase-details"
+      },
+      {
+        title: "[Loyalty] Loyalty Product Payment and Information",
+        value: "loyalty.group.loyalty-product-payment-and-information",
+      },
     ],
     card: [
       { title: "[Loyalty] Text on Image", value: "loyalty.text-on-image" },
@@ -84,16 +84,8 @@ export const loyalty: FeatureSchemaDefinition = {
         value: "loyalty.card.card-with-background-image.horizontal-dual-actions",
       },
       {
-        title: "[Loyalty] Membership Holder Details",
-        value: "loyalty.card.membership-holder-details",
-      },
-      {
-        title: "[Loyalty] Membership Product Price Details",
-        value: "loyalty.card.membership-product-price-details",
-      },
-      {
-        title: "[Loyalty] Price Breakup Details",
-        value: "loyalty.card.price-breakup-details",
+        title: "[Loyalty] Left Media with Group Of Gift Items Right Content",
+        value: "loyalty.card.left-media-with-group-of-gift-items-right-content",
       },
     ],
     nudge: [
@@ -135,6 +127,14 @@ export const loyalty: FeatureSchemaDefinition = {
       {
         title: "[Loyalty] Customer Information Form",
         value: "loyalty.placeholders.customer-information-form",
+      },
+      {
+        title: "[Loyalty] Membership Holder Details",
+        value: "loyalty.placeholders.membership-holder-details",
+      },
+      {
+        title: "[Loyalty] Price Breakup Details",
+        value: "loyalty.placeholders.price-breakup-details",
       },
     ],
   },

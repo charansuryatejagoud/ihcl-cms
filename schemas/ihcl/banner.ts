@@ -56,6 +56,23 @@ export default {
       group: "main",
     },
     {
+      title: "Header Title",
+      name: "headerTitle",
+      type: "array",
+      of:[ 
+        {
+          type: "object",
+          fields: [
+            {
+              type: "string",
+              title: "Title",
+              name: "title"
+            },
+          ]
+      }
+      ]
+    },
+    {
       name: "subTitle",
       title: "Sub Title",
       type: "string",
@@ -131,10 +148,6 @@ export default {
           {
             title: "Global Booking Mask",
             value: "ihcl.banner.global-booking-mask",
-          },
-          {
-            title: "Global Search Field is not Allowed",
-            value: "ihcl.banner.global-search-field-is-not-allowed",
           },
         ],
       },

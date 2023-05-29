@@ -12,6 +12,11 @@ export const videoAsset = {
       },
     },
     {
+      title: "Play Icon",
+      name: "playIcon",
+      type: "image",
+    },
+    {
       title: "Video Thumbnail",
       name: "videoThumbnail",
       type: "image",

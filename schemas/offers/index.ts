@@ -7,6 +7,10 @@ export const Offers: FeatureSchemaDefinition = {
         title: "[Offers] 3 Column Grid With No Border Lines For Cards",
         value: "offers.group.3-column-grid-with-no-borders-lines-for-cards",
       },
+      {
+        title: "[Offers] T & C Dropdown Content",
+        value: "offers.group.t&c-dropdown-content"
+      }
     ],
     forms:[ 
       {
