@@ -55,8 +55,7 @@ export const core: FeatureSchemaDefinition = {
     },
   ],
   pageItems: [
-    { type: "groupLayout" },
-    { type: "cardLayout" },
+    { type: "layoutPlaceholder" },
     { type: "group" },
     { type: "section" },
     {

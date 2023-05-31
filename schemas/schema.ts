@@ -5,7 +5,7 @@ import { featureDefinition } from "./feature-schemas";
 
 import page from "./core/documents/page";
 import group from "./core/objects/group";
-import groupLayout from "./core/objects/groupLayout";
+import layoutPlaceholder from "./core/objects/layoutPlaceholder";
 import placeholder from "./core/objects/placeholder";
 import card from "./core/objects/card";
 import cardLayout from "./core/objects/cardLayout";
@@ -44,7 +44,7 @@ export default createSchema({
       variants: featureDefinition.variants.group,
       items: featureDefinition.groupItems,
     }),
-    groupLayout({
+    layoutPlaceholder({
       variants: featureDefinition.variants.group,
       items: featureDefinition.groupItems,
     }),
