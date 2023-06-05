@@ -4,19 +4,13 @@ import { FeatureSchemaDefinition } from "schemas/types";
 export const ihclForms: FeatureSchemaDefinition = {
   variants: {
     group: [
-      { title: "[IHCL Forms] Details Form",
-        value: "ihclForms.details-form" 
-      },
-      { title: "[IHCL Forms] Payment Form",
-        value: "ihclForms.payment-form" 
-      },
+      { title: "[IHCL Forms] Details Form", value: "ihclForms.group.details-form" },
+      { title: "[IHCL Forms] Payment Form", value: "ihclForms.group.payment-form" },
       {
         title: "[IHCL Forms] Feedback Form",
         value: "ihclForms.group.feedback-form",
       },
-      { title: "[IHCL Forms] Personalize Form", 
-        value: "ihclForms.gift-form" 
-      },
+      { title: "[IHCL Forms] Personalize Form", value: "ihclForms.group.gift-form" },
       {
         title: "[IHCL Forms] Table Reservation",
         value: "ihclForms.group.table-reservation",
@@ -24,9 +18,7 @@ export const ihclForms: FeatureSchemaDefinition = {
     ],
     card: [],
     placeholder: [
-      { title: "[IHCL Forms] Login Form",
-        value: "ihclForms.login-form" 
-      },
+      { title: "[IHCL Forms] Login Form", value: "ihclForms.placeholders.login-form" },
     ],
     dialog: [
       {
@@ -83,9 +75,20 @@ export const ihclForms: FeatureSchemaDefinition = {
       },
       {
         title: "[IHCL Forms] Wedding Event Enquiry",
-        value: "ihclForms.wedding-event-enquiry"
-      }
-
+        value: "ihclForms.wedding-event-enquiry",
+      },
+      {
+        title: "[IHCL Forms] Wellness Enquiry Modal",
+        value: "ihclForms.wellness-enquiry-modal",
+      },
+      {
+        title: "[IHCL Forms] Experiences Enquiry Modal",
+        value: "ihclForms.experiences-enquiry-modal",
+      },
+      {
+        title: "[IHCL Forms] Venue Enquiry Modal",
+        value: "ihclForms.venue-enquiry-modal",
+      },
     ],
   },
 };

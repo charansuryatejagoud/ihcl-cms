@@ -55,6 +55,10 @@ export const giftCards: FeatureSchemaDefinition = {
         title: "[Gift Card] Horizontal Tabs",
         value: "giftCards.group.horizontal-tabs",
       },
+      {
+        title: "[Gift Card] Successful Purchase",
+        value: "giftCards.group.successful-purchase",
+      }
     ],
 
     tabs: [
