@@ -62,9 +62,19 @@ export default function group({
         group: "configuration",
       },
       {
-        title: "Title",
-        name: "title",
+          title: "Title",
+          name: "title",
+          type: "string",
+          group: "main",
+      },
+      {
+        title: "GroupTitle",
+        name: "groupTitle",
         type: "object",
+        options: {
+          collapsible: true,
+          collapsed: false, 
+        },
         fields: [
           {
             type: "array",
