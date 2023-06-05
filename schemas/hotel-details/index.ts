@@ -130,21 +130,13 @@ export const details: FeatureSchemaDefinition = {
         title: "[Details] Left Media Image carousal with right Content",
         value: "details.card.left-media-image-carousel-with-right-content",
       },
-      {
-        title: "[Details] Venue Enquiry Model Form",
-        value: "details.card.venue-enquiry-model-form",
-      },
+      // {
+      //   title: "[Details] Venue Enquiry Model Form",
+      //   value: "details.card.venue-enquiry-model-form",
+      // },
       {
         title: "[Details] Venue Quote Model Form",
         value: "details.card.venue-quote-model-form",
-      },
-      {
-        title: "[Details] Wellness Enquiry Model Form",
-        value: "details.card.wellness-enquiry-model-form",
-      },
-      {
-        title: "[Details] Experience Enquiry Model Form",
-        value: "details.card.experience-enquiry-model-form",
       },
       {
         title: "[Details] Title With Bullet Points",
