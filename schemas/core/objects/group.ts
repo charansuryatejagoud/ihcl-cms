@@ -4,22 +4,6 @@ import { hiddenField } from "../../shared-utils";
 import CustomText from "../../../components/custom-text/index";
 
 const AlignmentVariant = [
-  // {
-  //   title: "Regular With Two Row Title",
-  //   value: "regular-with-two-row-title",
-  // },
-  // {
-  //   title: "Regular With One Row Title",
-  //   value: "regular-with-one-row-title",
-  // },
-  // {
-  //   title: "Center With One Row Title",
-  //   value: "center-with-one-row-title",
-  // },
-  // {
-  //   title: "Center With Multi Line Title",
-  //   value: "center-with-multi-line-title",
-  // },
   {
     title: "Center",
     value: "center",
@@ -28,19 +12,11 @@ const AlignmentVariant = [
     title: "Regular",
     value: "regular",
   },
-  {
-    title: "Center Aligned Regular Title",
-    value: "center-aligned-regular-title",
-  },
-  {
-    title: "Center Aligned Regular Title with No Hyphens",
-    value: "center-aligned-regular-title-with-no-hyphens",
-  },
 ];
 
 export const groupPreview = {
   select: {
-    title: "title.desktopTitle",
+    title: "title",
     items: "items",
     subtitle: "subtitle",
     hidden: "isHidden",
