@@ -46,6 +46,7 @@ export default createSchema({
     }),
     layoutPlaceholder({
       variants: featureDefinition.variants.group,
+      cardVariants: featureDefinition.variants.card,
       items: featureDefinition.groupItems,
     }),
     section({

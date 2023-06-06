@@ -19,7 +19,7 @@ const AlignmentVariant = [
     value: "title-with-one-row",
   },
 ];
-const variants = [
+export const bannerVariants = [
   {
     title: "Hero Banner",
     value: "hero-banner",
@@ -99,7 +99,7 @@ export default {
       name: "variant",
       type: "string",
       options: {
-        list: variants,
+        list: bannerVariants,
       },
       group: "main",
     },
@@ -108,7 +108,7 @@ export default {
       name: "largeVariant",
       type: "string",
       options: {
-        list: variants,
+        list: bannerVariants,
       },
       group: "main",
     },

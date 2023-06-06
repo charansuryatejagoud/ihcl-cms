@@ -1,12 +1,15 @@
 import {IoApps, IoCodeWorking as ParameterMapIcon, IoLogoWebComponent as Icon, IoSettings,} from "react-icons/io5";
-import {SchemaItem} from "../../types";
+import {SchemaItem, VariantDefinition} from "../../types";
 import {hiddenField} from "../../shared-utils";
+import { bannerVariants } from "../../ihcl/banner";
 
 export default function placeholder({
-  variants,
+  variants, cardVariants
 }: {
-  variants: SchemaItem[];
+  variants: SchemaItem[],
+  cardVariants: VariantDefinition[]
 }) {
+  
   return {
     name: "layoutPlaceholder",
     title: "Layout Placeholder",
@@ -26,11 +29,29 @@ export default function placeholder({
         Description: "Number of characters limit for placeholder description.",
       },
       {
-        name: "largeVariant",
-        title: "Large Variant",
+        name: "bannerLargeVariant",
+        title: "Banner Large Variant",
+        type: "string",
+        options: {
+          list: bannerVariants,
+        },
+        group: "main",
+      },
+      {
+        name: "groupLargeVariant",
+        title: "Group Large Variant",
         type: "string",
         options: {
           list: variants,
+        },
+        group: "main",
+      },
+      {
+        name: "cardLargeVariant",
+        title: "Card Large Variant",
+        type: "string",
+        options: {
+          list: cardVariants,
         },
         group: "main",
       },
