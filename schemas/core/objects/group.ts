@@ -4,22 +4,22 @@ import { hiddenField } from "../../shared-utils";
 import CustomText from "../../../components/custom-text/index";
 
 const AlignmentVariant = [
-  {
-    title: "Regular With Two Row Title",
-    value: "regular-with-two-row-title",
-  },
-  {
-    title: "Regular With One Row Title",
-    value: "regular-with-one-row-title",
-  },
-  {
-    title: "Center With One Row Title",
-    value: "center-with-one-row-title",
-  },
-  {
-    title: "Center With Multi Line Title",
-    value: "center-with-multi-line-title",
-  },
+  // {
+  //   title: "Regular With Two Row Title",
+  //   value: "regular-with-two-row-title",
+  // },
+  // {
+  //   title: "Regular With One Row Title",
+  //   value: "regular-with-one-row-title",
+  // },
+  // {
+  //   title: "Center With One Row Title",
+  //   value: "center-with-one-row-title",
+  // },
+  // {
+  //   title: "Center With Multi Line Title",
+  //   value: "center-with-multi-line-title",
+  // },
   {
     title: "Center",
     value: "center",
@@ -40,7 +40,7 @@ const AlignmentVariant = [
 
 export const groupPreview = {
   select: {
-    title: "title",
+    title: "title.desktopTitle",
     items: "items",
     subtitle: "subtitle",
     hidden: "isHidden",
@@ -78,14 +78,8 @@ export default function group({
         group: "configuration",
       },
       {
-          title: "Title",
-          name: "title",
-          type: "string",
-          group: "main",
-      },
-      {
-        title: "GroupTitle",
-        name: "groupTitle",
+        title: "Title",
+        name: "title",
         type: "object",
         options: {
           collapsible: true,
