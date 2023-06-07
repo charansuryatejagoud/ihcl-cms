@@ -41,6 +41,10 @@ export const giftCards: FeatureSchemaDefinition = {
         title: "[Gift Card] Member Purchase Details With Cta",
         value: "giftCards.card.member-purchase-details-with-cta",
       },
+      {
+        title:"[Gift Card] Square Card With Profile",
+        value:"giftCards.card.square-card-with-profile"
+      },
     ],
     group: [
       {
@@ -51,6 +55,10 @@ export const giftCards: FeatureSchemaDefinition = {
         title: "[Gift Card] Horizontal Tabs",
         value: "giftCards.group.horizontal-tabs",
       },
+      {
+        title: "[Gift Card] Successful Purchase",
+        value: "giftCards.group.successful-purchase",
+      }
     ],
 
     tabs: [

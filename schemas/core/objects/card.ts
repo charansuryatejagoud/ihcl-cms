@@ -234,6 +234,28 @@ export default function card(props: Props) {
         group: "main",
       },
       {
+        name: "specificationTags",
+        title: "Specification Tags",
+        type: "array",
+        of: [
+          {
+            type: "object",
+            fields: [
+              {
+                name: "tag",
+                title: "Tag",
+                type: "string",
+              },
+              {
+                name: "url",
+                title: "URL",
+                type: "string",
+              },
+            ],
+          },
+        ],
+      },
+      {
         name: "primaryAction",
         title: "Primary Action",
         type: "navigationItem",

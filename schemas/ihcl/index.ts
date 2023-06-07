@@ -14,7 +14,6 @@ import uiConfiguration from "./uiConfiguration";
 import divider from "./divider";
 import linkOnHover from "./linkOnHover";
 import inputField from "./inputField";
-
 export const ihclcore: FeatureSchemaDefinition = {
   schemas: [
     videoAsset,
@@ -204,6 +203,10 @@ export const ihclcore: FeatureSchemaDefinition = {
         title: "Hexagonal Content",
         value: "ihcl.core.group.hexagonal-content",
       },
+      {
+        title: "Group With SignUp Form",
+        value: "ihcl.core.group.signup-form"
+      }
     ],
     card: [
       {
@@ -318,5 +321,17 @@ export const ihclcore: FeatureSchemaDefinition = {
         value: "ihcl.core.alert-without-close-cta",
       },
     ],
+    tabs: [
+      {
+        title: "Multiple Tabs with Border",
+        value: "ihcl.core.tabs.multiple-tabs-with-border",
+      }
+    ],
+    switchCaseBlock: [
+      {
+        title: "Default Switch Case",
+        value: "ihcl.core.default-switch-case",
+      }
+    ]
   },
 };

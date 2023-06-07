@@ -89,8 +89,14 @@ export default {
       type: "boolean",
     },
     {
-      name: "image",
-      title: "Image",
+      name: "shortImage",
+      title: "Short Image",
+      type: "image",
+      hidden: ({ parent }) => !parent?.doesBannerContainsFeaturedLogo,
+    },
+    {
+      name: "largeImage",
+      title: "Large Image",
       type: "image",
       hidden: ({ parent }) => !parent?.doesBannerContainsFeaturedLogo,
     },
@@ -125,10 +131,6 @@ export default {
           {
             title: "Global Booking Mask",
             value: "ihcl.banner.global-booking-mask",
-          },
-          {
-            title: "Global Search Field is not Allowed",
-            value: "ihcl.banner.global-search-field-is-not-allowed",
           },
         ],
       },

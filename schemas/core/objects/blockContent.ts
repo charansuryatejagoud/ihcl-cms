@@ -26,7 +26,8 @@ export default {
         { title: "H4", value: "h4" },
         { title: "Quote", value: "blockquote" },
         { title: "Section", value: "section" },
-        {title:"Span",value:"span"}
+        {title:"Span",value:"span"},
+        {title: "Break", value:"break"}
       ],
       lists: [
         { title: "Bullet", value: "bullet" },

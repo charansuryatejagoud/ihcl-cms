@@ -36,6 +36,13 @@ export default function form({
         group: "main",
       },
       {
+        name: "description",
+        title: "Description",
+        type: "text",
+        rows: 6,
+        group: "main",
+      },
+      {
         name: "logo",
         title: "logo",
         type: "image",
@@ -54,10 +61,32 @@ export default function form({
         options: { list: variants },
         group: "main",
       },
+      // {
+      //   title: "Content",
+      //   name: "content",
+      //   type: "blockContent",
+      // },
+      {
+        title: "Is Multi Block Content?",
+        name: "isMultiBlockContent",
+        type: "boolean",
+      },
       {
         title: "Content",
-        name: "content",
+        name: "singleContent",
         type: "blockContent",
+        hidden: ({ parent }) => parent?.isMultiBlockContent,
+      },
+      {
+        title: "Multi Block Contents",
+        name: "content",
+        type: "array",
+        of: [
+          {
+            type: "blockSection",
+          },
+        ],
+        hidden: ({ parent }) => !parent?.isMultiBlockContent,
       },
       {
         name: "items",

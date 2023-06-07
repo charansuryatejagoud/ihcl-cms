@@ -5,20 +5,12 @@ import CustomText from "../../../components/custom-text/index";
 
 const AlignmentVariant = [
   {
-    title: "Regular With Two Row Title",
-    value: "regular-with-two-row-title",
+    title: "Center",
+    value: "center",
   },
   {
-    title: "Regular With One Row Title",
-    value: "regular-with-one-row-title",
-  },
-  {
-    title: "Center With One Row Title",
-    value: "center-with-one-row-title",
-  },
-  {
-    title: "Center With Multi Line Title",
-    value: "center-with-multi-line-title",
+    title: "Regular",
+    value: "regular",
   },
   {
     title: "Center Aligned Regular Title",
@@ -32,7 +24,7 @@ const AlignmentVariant = [
 
 export const groupPreview = {
   select: {
-    title: "title",
+    title: "title.desktopTitle",
     items: "items",
     subtitle: "subtitle",
     hidden: "isHidden",
@@ -51,7 +43,7 @@ export default function group({
   variants,
   items,
 }: {
-  variants: SchemaItem[];
+  variants: VariantDefinition[];
   items: SchemaItem[];
 }) {
   return {
@@ -70,10 +62,39 @@ export default function group({
         group: "configuration",
       },
       {
-        name: "title",
         title: "Title",
-        type: "string",
-        group: "main",
+        name: "title",
+        type: "object",
+        options: {
+          collapsible: true,
+          collapsed: false, 
+        },
+        fields: [
+          {
+            type: "array",
+            name: "desktopTitle",
+            description:
+              "This Title is used for the Larger Screens like Desktop",
+            of: [
+              {
+                type: "string",
+                name: "value",
+              },
+            ],
+          },
+          {
+            type: "array",
+            name: "mobileTitle",
+            description:
+              "This Title is used for the Smaller Screens like Mobile",
+            of: [
+              {
+                type: "string",
+                name: "value",
+              },
+            ],
+          },
+        ],
       },
       {
         name: "subTitle",
@@ -108,6 +129,13 @@ export default function group({
           list: AlignmentVariant,
         },
         group: "main",
+      },
+      {
+        name: "isMobileComponentFullWidth",
+        title: "is Mobile Component Full Width",
+        type: "boolean",
+        description:
+          "This is used to handle Full width for the Mobile Component",
       },
       {
         name: "variant",

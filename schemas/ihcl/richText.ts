@@ -39,6 +39,12 @@ export default {
       group: "main",
     },
     {
+      title: "Show Bottom Border",
+      name: "showBottomBorder",
+      type: "boolean",
+      initialValue: false,
+    },
+    {
       name: "menuItems",
       title: "Menu Items",
       type: "array",

@@ -25,19 +25,23 @@ export const details: FeatureSchemaDefinition = {
       },
       {
         title: "[Details] Group With Carousel-Card Left Media Right Content",
-        value: "details.group.group-with-carousel-card-left-media-right-content-aspect-ratio-2:4",
+        value:
+          "details.group.group-with-carousel-card-left-media-right-content-aspect-ratio-2:4",
       },
       {
         title: "[Details] Group With Card Left Media Right Content",
-        value: "details.group.group-with-card-left-media-right-content-aspect-ratio-2:4",
+        value:
+          "details.group.group-with-card-left-media-right-content-aspect-ratio-2:4",
       },
       {
         title: "[Details] Group With Carousel- Card right Media Left Content",
-        value: "details.group.group-with-carousel-card-right-media-left-content-aspect-ratio-2:4",
+        value:
+          "details.group.group-with-carousel-card-right-media-left-content-aspect-ratio-2:4",
       },
       {
         title: "[Details] Group With Card right Media Left Content",
-        value: "details.group.group-with-card-right-media-left-content-aspect-ratio-2:4",
+        value:
+          "details.group.group-with-card-right-media-left-content-aspect-ratio-2:4",
       },
       {
         title: "[Details] Group with Full Width Media",
@@ -75,6 +79,10 @@ export const details: FeatureSchemaDefinition = {
         title: "[Details] Gallery Image Carousel",
         value: "details.group.gallery-image-carousel",
       },
+      {
+        title: "[Details] Media Image Carousel",
+        value: "details.group.media-image-carousel",
+      },
     ],
     card: [
       {
@@ -95,7 +103,8 @@ export const details: FeatureSchemaDefinition = {
       },
       {
         title: "[Details] Card With Left Media Right Content",
-        value: "details.card.card-with-left-media-right-content-aspect-ratio-2:4",
+        value:
+          "details.card.card-with-left-media-right-content-aspect-ratio-2:4",
       },
       {
         title: "[Details] Card With Right Media Left Content",
@@ -121,21 +130,13 @@ export const details: FeatureSchemaDefinition = {
         title: "[Details] Left Media Image carousal with right Content",
         value: "details.card.left-media-image-carousel-with-right-content",
       },
-      {
-        title: "[Details] Venue Enquiry Model Form",
-        value: "details.card.venue-enquiry-model-form",
-      },
+      // {
+      //   title: "[Details] Venue Enquiry Model Form",
+      //   value: "details.card.venue-enquiry-model-form",
+      // },
       {
         title: "[Details] Venue Quote Model Form",
         value: "details.card.venue-quote-model-form",
-      },
-      {
-        title: "[Details] Wellness Enquiry Model Form",
-        value: "details.card.wellness-enquiry-model-form",
-      },
-      {
-        title: "[Details] Experience Enquiry Model Form",
-        value: "details.card.experience-enquiry-model-form",
       },
       {
         title: "[Details] Title With Bullet Points",
@@ -154,13 +155,17 @@ export const details: FeatureSchemaDefinition = {
         value: "details.card.card-with-image-on-title",
       },
       {
-         title:"[Details] Book A Stay With Aspect ratio 1:2",
-         value:"details.card-book-a-stay-with-aspect-ratio-1:2"
+        title: "[Details] Book A Stay With Aspect ratio 1:2",
+        value: "details.card-book-a-stay-with-aspect-ratio-1:2",
       },
       {
-        title:"[Details] Vertical Aligned Content With Aspect ratio 2:4",
-        value:"details.card-vertical-aligned-content-with-aspect-ratio-2:4"
-     }
+        title: "[Details] Vertical Aligned Content With Aspect ratio 2:4",
+        value: "details.card-vertical-aligned-content-with-aspect-ratio-2:4",
+      },
+      {
+        title: "[Details] Share Link Icon",
+        value: "details.card-share-link-icon",
+      },
     ],
 
     banner: [],
@@ -170,6 +175,7 @@ export const details: FeatureSchemaDefinition = {
       { title: "[Details] Event Enquiry", value: "details.event-enquiry" },
       { title: "[Details] Venue Details", value: "details.venue-details" },
       { title: "[Details] Video Pop Up", value: "details.video-pop-up" },
+      { title: "[Details] Share Pop Up", value: "details.share-pop-up" },
       {
         title: "[Details] Gallery With Carousel",
         value: "details.dialog.gallery-with-carousel",
