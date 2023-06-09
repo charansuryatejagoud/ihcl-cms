@@ -101,6 +101,10 @@ export const myAccount: FeatureSchemaDefinition = {
         title: "[My Account] Membership Type Overview",
         value: "myAccount.placeholders.membership-type-overview",
       },
+      {
+        title: "[My Account] Booking Cancellation",
+        value: "myAccount.placeholders.booking-cancellation",
+      }
     ],
     tabs: [
       {

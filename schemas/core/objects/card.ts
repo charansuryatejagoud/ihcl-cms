@@ -37,14 +37,12 @@ export default function card(props: Props) {
         ...hiddenField,
         group: "configuration",
       },
-
       {
         name: "title",
         title: "Title",
         type: "string",
         group: "main",
       },
-
       {
         name: "subTitle",
         title: "Sub Title",
@@ -104,6 +102,19 @@ export default function card(props: Props) {
           list: props.variants,
         },
         group: "main",
+      },
+      {
+        title: "isHeroTitleFont",
+        name: "isHeroTitleFont",
+        type: "boolean",
+        initialValue: false,
+        description:
+          "This is used for the handling the Title Font Size of the very First Component",
+        hidden: ({ parent }) =>
+          parent?.largeVariant !=
+            "details.card.card-with-right-media-left-content-aspect-ratio-2:4" &&
+          parent?.largeVariant !=
+            "details.card.card-with-left-media-right-content-aspect-ratio-2:4",
       },
       {
         title: "Is Multi Block Content?",
