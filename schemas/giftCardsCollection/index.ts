@@ -14,6 +14,33 @@ export default {
       name: "name",
     },
     {
+      title: "Description",
+      type: "string",
+      name: "description",
+    },
+    {
+      title: "Banner Image",
+      type: "image",
+      name: "bannerImage",
+    },
+    {
+      title: "Card Images",
+      type: "object",
+      name: "cardImages",
+      fields: [
+        {
+          title: "Front Image",
+          type: "image",
+          name: "frontImage",
+        },
+        {
+          title: "Back Image",
+          type: "image",
+          name: "backImage",
+        }
+      ],
+    },
+    {
       title: "Currency",
       type: "object",
       name: "currency",

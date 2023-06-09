@@ -14,6 +14,9 @@ import uiConfiguration from "./uiConfiguration";
 import divider from "./divider";
 import linkOnHover from "./linkOnHover";
 import inputField from "./inputField";
+import categoryHighlights from "./categoryHighlights";
+import items from "./items";
+
 export const ihclcore: FeatureSchemaDefinition = {
   schemas: [
     videoAsset,
@@ -31,6 +34,8 @@ export const ihclcore: FeatureSchemaDefinition = {
     divider,
     linkOnHover,
     inputField,
+    categoryHighlights,
+    items,
   ],
   pageItems: [
     { type: "banner" },
@@ -63,6 +68,9 @@ export const ihclcore: FeatureSchemaDefinition = {
     { type: "divider" },
     {
       type: "formComponent",
+    },
+    {
+      type: "categoryHighlights",
     },
   ],
   connectedStores: [
@@ -205,8 +213,8 @@ export const ihclcore: FeatureSchemaDefinition = {
       },
       {
         title: "Group With SignUp Form",
-        value: "ihcl.core.group.signup-form"
-      }
+        value: "ihcl.core.group.signup-form",
+      },
     ],
     card: [
       {
@@ -325,13 +333,17 @@ export const ihclcore: FeatureSchemaDefinition = {
       {
         title: "Multiple Tabs with Border",
         value: "ihcl.core.tabs.multiple-tabs-with-border",
-      }
+      },
     ],
     switchCaseBlock: [
       {
         title: "Default Switch Case",
         value: "ihcl.core.default-switch-case",
-      }
-    ]
+      },
+      {
+        title: "Payments Switch Case",
+        value: "ihcl.core.switchCaseBlock.payments",
+      },
+    ],
   },
 };
