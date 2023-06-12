@@ -34,14 +34,24 @@ export const details: FeatureSchemaDefinition = {
           "details.group.group-with-card-left-media-right-content-aspect-ratio-2:4",
       },
       {
-        title: "[Details] Group With Carousel- Card right Media Left Content",
+        title: "[Details] Group With Card Left Media Right Content(Hotel)",
+        value:
+          "details.group.group-with-card-left-media-right-content-aspect-ratio-2:4-hotel",
+      },
+      {
+        title: "[Details] Group With Carousel- Card Right Media Left Content",
         value:
           "details.group.group-with-carousel-card-right-media-left-content-aspect-ratio-2:4",
       },
       {
-        title: "[Details] Group With Card right Media Left Content",
+        title: "[Details] Group With Card Right Media Left Content",
         value:
           "details.group.group-with-card-right-media-left-content-aspect-ratio-2:4",
+      },
+      {
+        title: "[Details] Group With Card Right Media Left Content(Hotel)",
+        value:
+          "details.group.group-with-card-right-media-left-content-aspect-ratio-2:4-hotel",
       },
       {
         title: "[Details] Group with Full Width Media",
@@ -82,6 +92,22 @@ export const details: FeatureSchemaDefinition = {
       {
         title: "[Details] Media Image Carousel",
         value: "details.group.media-image-carousel",
+      },
+      {
+        title: "[Details] 3 Card Carousel (Hotel Awards)",
+        value: "details.group.3-card-carousel-hotel-awards",
+      },
+      {
+        title: "[Details] 3 Card Carousel (Hotel Highlights)",
+        value: "details.group.3-card-carousel-hotel-highlights",
+      },
+      {
+        title: "[Details] 3 Card Carousel (Hotel Exclusive Offers)",
+        value: "details.group.3-card-carousel-hotel-exclusive-offers",
+      },
+      {
+        title: "[Details] 3 Card Carousel (Hotel Treatments)",
+        value: "details.group.3-card-carousel-hotel-treatements",
       },
     ],
     card: [

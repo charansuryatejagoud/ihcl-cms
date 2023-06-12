@@ -206,7 +206,35 @@ export const ihclcore: FeatureSchemaDefinition = {
       {
         title: "Group With SignUp Form",
         value: "ihcl.core.group.signup-form"
-      }
+      },
+      {
+        title: "Highlighted 2 Card Carousel (Hotel Rooms)",
+        value: "ihcl.core.group.highlighted-2-card-carousel-hotel-rooms",
+      },
+      {
+        title: "Highlighted 2 Card Carousel (Hotel Dining)",
+        value: "ihcl.core.group.highlighted-2-card-carousel-hotel-dining",
+      },
+      {
+        title: "Highlighted 2 Card Carousel (Hotel Venues)",
+        value: "ihcl.core.group.highlighted-2-card-carousel-hotel-venues",
+      },
+      {
+        title: "Highlighted 2 Card Carousel (Hotel Attractions)",
+        value: "ihcl.core.group.highlighted-2-card-carousel-hotel-attractions",
+      },
+      {
+        title: "Group With 3 Column Cards Grid (Hotel Venues)",
+        value: "ihcl.core.group.group-with-3-column-cards-grid-hotel-venues",
+      },
+      {
+        title: "Group With 3 Column Cards Grid (Hotel Experiences)",
+        value: "ihcl.core.group.group-with-3-column-cards-grid-hotel-experiences",
+      },
+      {
+        title: "Group With 3 Column Cards Grid (Hotel Offers)",
+        value: "ihcl.core.group.group-with-3-column-cards-grid-hotel-offers",
+      },
     ],
     card: [
       {
