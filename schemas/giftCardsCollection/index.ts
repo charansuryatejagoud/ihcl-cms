@@ -24,23 +24,6 @@ export default {
       name: "bannerImage",
     },
     {
-      title: "Card Images",
-      type: "object",
-      name: "cardImages",
-      fields: [
-        {
-          title: "Front Image",
-          type: "image",
-          name: "frontImage",
-        },
-        {
-          title: "Back Image",
-          type: "image",
-          name: "backImage",
-        },
-      ],
-    },
-    {
       title: "Card Preview",
       type: "object",
       name: "cardPreview",
