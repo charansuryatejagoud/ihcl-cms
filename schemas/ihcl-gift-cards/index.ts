@@ -14,6 +14,10 @@ export const giftCards: FeatureSchemaDefinition = {
       title: "[Gift Card] FormDetails Store",
       value: "giftCards.formDetails-store",
     },
+    {
+      title: "[Gift Card] Balance Reload",
+      value:"giftCards.connectedStores.balance-reload",
+    }
   ],
   variants: {
     card: [
@@ -79,5 +83,11 @@ export const giftCards: FeatureSchemaDefinition = {
         value: "giftCards.dialog.finding-participating-hotel-search-modal",
       },
     ],
+    placeholder: [
+      {
+        title: "[Gift Card] Reload Details",
+        value: "giftCards.placeholders.reload-details"
+      }
+    ]
   },
 };
