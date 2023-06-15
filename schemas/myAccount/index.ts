@@ -33,6 +33,10 @@ export const myAccount: FeatureSchemaDefinition = {
         title: "[My Account] Title with SubHeader",
         value: "myAccount.group.title-with-subHeader",
       },
+      {
+        title: "[My Account] Change Booking Confirmed",
+        value: "myAccount.group.change-booking-confirmed",
+      }
     ],
     card: [
       {

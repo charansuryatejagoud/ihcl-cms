@@ -28,6 +28,10 @@ const variants = [
     title: "Banner With Action",
     value: "banner-with-action",
   },
+  {
+    title: "Gift Card Personalize Banner",
+    value: "gift-card-personalize-banner",
+  }
 ];
 
 export default {

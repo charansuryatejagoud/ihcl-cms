@@ -20,6 +20,11 @@ export default {
       type: "image",
     },
     {
+      name: "largeImage",
+      title: "Large Image",
+      type: "image",
+    },
+    {
       name: "primaryAction",
       title: "Primary Action",
       type: "navigationItem",

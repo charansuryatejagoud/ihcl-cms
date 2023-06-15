@@ -16,6 +16,7 @@ import linkOnHover from "./linkOnHover";
 import inputField from "./inputField";
 import categoryHighlights from "./categoryHighlights";
 import items from "./items";
+import { images } from "./images";
 
 export const ihclcore: FeatureSchemaDefinition = {
   schemas: [
@@ -36,6 +37,7 @@ export const ihclcore: FeatureSchemaDefinition = {
     inputField,
     categoryHighlights,
     items,
+    images,
   ],
   pageItems: [
     { type: "banner" },
@@ -289,6 +291,10 @@ export const ihclcore: FeatureSchemaDefinition = {
       {
         title: "Triangle Shape Image On Content",
         value: "ihcl.core.card.triangle-shape-image-on-content",
+      },
+      {
+        title: "City Card",
+        value: "ihcl.core.card.city-card",
       },
     ],
     banner: [
