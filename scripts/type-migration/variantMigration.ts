@@ -45,7 +45,7 @@ async function run() {
 
   const updatedItems = pageItems?.map((item) => {
     console.log(item._type);
-    const newItem = extractItems(item, "mobileVariant", "variant");
+    const newItem = extractItems(item, "variant", "mobileVariant");
     return newItem;
   });
 
