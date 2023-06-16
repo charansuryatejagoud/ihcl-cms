@@ -53,8 +53,8 @@ export const loyalty: FeatureSchemaDefinition = {
         value: "loyalty.group.loyalty-product-payment-and-information",
       },
       {
-        title: "[Loyalty] Carousel with selected Image Tabs",
-        value: "loyalty.group.carousel-with-selected-image-tabs",
+        title: "[Loyalty] Carousel with Membership Tabs",
+        value: "loyalty.group.carousel-with-membership-tabs",
       }
     ],
     card: [
