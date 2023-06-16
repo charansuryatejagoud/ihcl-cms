@@ -7,7 +7,6 @@ import header from "./header";
 import { imageAsset } from "./imageAsset";
 import richText from "./richText";
 import specification from "./specification";
-import textContainer from "./textContainer";
 import { videoAsset } from "./videoAsset";
 import cfReference from "./cfReference";
 import uiConfiguration from "./uiConfiguration";
@@ -26,7 +25,6 @@ export const ihclcore: FeatureSchemaDefinition = {
     header,
     footer,
     banner,
-    textContainer,
     comparator,
     specification,
     comparative,
@@ -44,7 +42,6 @@ export const ihclcore: FeatureSchemaDefinition = {
     {
       type: "richText",
     },
-    { type: "motor.insurance.customText" },
     { type: "comparator" },
     { type: "tabsComponent" },
     {

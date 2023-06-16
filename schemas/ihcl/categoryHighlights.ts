@@ -23,8 +23,8 @@ export default {
       type: "string",
     },
     {
-      name: "highlights",
-      title: "Highlights",
+      name: "items",
+      title: "items",
       type: "array",
       of: [{ type: "items" }],
     },
