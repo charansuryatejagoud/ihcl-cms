@@ -9,7 +9,7 @@ export default {
   type: "document",
   icon: Icon,
   // Disallow creation and deletion
-  __experimental_actions: [/*"create", */ "update", /*'delete',*/ "publish"],
+  __experimental_actions: ["create",  "update", 'delete', "publish"],
   fields: [
     {
       name: "cityMap",
@@ -42,6 +42,16 @@ export default {
               subtitle: "cities",
             },
           },
+        },
+      ],
+    },
+    {
+      name: "membership",
+      title: "Membership",
+      type: "array",
+      of: [
+        {
+          type: "membership",
         },
       ],
     },

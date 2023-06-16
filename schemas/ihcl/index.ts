@@ -16,6 +16,7 @@ import inputField from "./inputField";
 import categoryHighlights from "./categoryHighlights";
 import items from "./items";
 import { images } from "./images";
+import membership from "./membership";
 
 export const ihclcore: FeatureSchemaDefinition = {
   schemas: [
@@ -36,6 +37,7 @@ export const ihclcore: FeatureSchemaDefinition = {
     categoryHighlights,
     items,
     images,
+    membership
   ],
   pageItems: [
     { type: "banner" },
