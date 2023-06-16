@@ -1,13 +1,21 @@
-import {
-  IoCardOutline
-  } from "react-icons/io5";
-  
+import { IoCardOutline } from "react-icons/io5";
+
 export default {
   name: "membership",
   title: "Membership",
   type: "object",
   icon: IoCardOutline,
   fields: [
+    {
+      name: "title",
+      title: "Title",
+      type: "string",
+    },
+    {
+      name: "text",
+      title: "Text",
+      type: "string",
+    },
     {
       name: "type",
       title: "Type",
@@ -31,7 +39,7 @@ export default {
   ],
   preview: {
     select: {
-      title: "type",
+      title: "title",
       subtitle: "price",
       media: "image.largeImage",
     },
