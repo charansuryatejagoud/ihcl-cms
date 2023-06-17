@@ -93,22 +93,6 @@ export const details: FeatureSchemaDefinition = {
         title: "[Details] Media Image Carousel",
         value: "details.group.media-image-carousel",
       },
-      {
-        title: "[Details] 3 Card Carousel (Hotel Awards)",
-        value: "details.group.3-card-carousel-hotel-awards",
-      },
-      {
-        title: "[Details] 3 Card Carousel (Hotel Highlights)",
-        value: "details.group.3-card-carousel-hotel-highlights",
-      },
-      {
-        title: "[Details] 3 Card Carousel (Hotel Exclusive Offers)",
-        value: "details.group.3-card-carousel-hotel-exclusive-offers",
-      },
-      {
-        title: "[Details] 3 Card Carousel (Hotel Treatments)",
-        value: "details.group.3-card-carousel-hotel-treatements",
-      },
     ],
     card: [
       {
@@ -134,7 +118,8 @@ export const details: FeatureSchemaDefinition = {
       },
       {
         title: "[Details] Card With Right Media Left Content",
-        value: "details.card.card-with-right-media-left-content-aspect-ratio-2:4",
+        value:
+          "details.card.card-with-right-media-left-content-aspect-ratio-2:4",
       },
       {
         title: "[Details] Card with Left Align Content",
