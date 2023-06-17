@@ -205,23 +205,7 @@ export const ihclcore: FeatureSchemaDefinition = {
       },
       {
         title: "Group With SignUp Form",
-        value: "ihcl.core.group.signup-form"
-      },
-      {
-        title: "Highlighted 2 Card Carousel (Hotel Rooms)",
-        value: "ihcl.core.group.highlighted-2-card-carousel-hotel-rooms",
-      },
-      {
-        title: "Highlighted 2 Card Carousel (Hotel Dining)",
-        value: "ihcl.core.group.highlighted-2-card-carousel-hotel-dining",
-      },
-      {
-        title: "Highlighted 2 Card Carousel (Hotel Venues)",
-        value: "ihcl.core.group.highlighted-2-card-carousel-hotel-venues",
-      },
-      {
-        title: "Highlighted 2 Card Carousel (Hotel Attractions)",
-        value: "ihcl.core.group.highlighted-2-card-carousel-hotel-attractions",
+        value: "ihcl.core.group.signup-form",
       },
       {
         title: "Group With 3 Column Cards Grid (Hotel Venues)",
@@ -229,7 +213,8 @@ export const ihclcore: FeatureSchemaDefinition = {
       },
       {
         title: "Group With 3 Column Cards Grid (Hotel Experiences)",
-        value: "ihcl.core.group.group-with-3-column-cards-grid-hotel-experiences",
+        value:
+          "ihcl.core.group.group-with-3-column-cards-grid-hotel-experiences",
       },
       {
         title: "Group With 3 Column Cards Grid (Hotel Offers)",
@@ -353,13 +338,13 @@ export const ihclcore: FeatureSchemaDefinition = {
       {
         title: "Multiple Tabs with Border",
         value: "ihcl.core.tabs.multiple-tabs-with-border",
-      }
+      },
     ],
     switchCaseBlock: [
       {
         title: "Default Switch Case",
         value: "ihcl.core.default-switch-case",
-      }
-    ]
+      },
+    ],
   },
 };
