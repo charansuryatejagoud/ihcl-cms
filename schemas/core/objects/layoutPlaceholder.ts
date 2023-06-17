@@ -1,6 +1,6 @@
-import {IoApps, IoCodeWorking as ParameterMapIcon, IoLogoWebComponent as Icon, IoSettings,} from "react-icons/io5";
-import {SchemaItem, VariantDefinition} from "../../types";
-import {hiddenField} from "../../shared-utils";
+import { IoApps, IoCodeWorking as ParameterMapIcon, IoLogoWebComponent as Icon, IoSettings, } from "react-icons/io5";
+import { SchemaItem, VariantDefinition } from "../../types";
+import { hiddenField } from "../../shared-utils";
 import { bannerVariants } from "../../ihcl/banner";
 
 export default function placeholder({
@@ -9,7 +9,7 @@ export default function placeholder({
   variants: SchemaItem[],
   cardVariants: VariantDefinition[]
 }) {
-  
+
   return {
     name: "layoutPlaceholder",
     title: "Layout Placeholder",
@@ -52,6 +52,34 @@ export default function placeholder({
         type: "string",
         options: {
           list: cardVariants,
+        },
+        group: "main",
+      },
+      {
+        name: "aesthetic",
+        title: "Aesthetic",
+        type: "reference",
+        to: [{ type: "uiConfiguration" }],
+      },
+      {
+        name: "contentType",
+        title: "Content Type",
+        type: "string",
+        options: {
+          list: [
+            {
+              title: "Hotel Rooms",
+              value: "hotelRooms",
+            },
+            {
+              title: "Hotel Signature Dining",
+              value: "hotelSignatureDining",
+            },
+            {
+              title: "Hotel Attractions",
+              value: "hotelAttractions",
+            }
+          ],
         },
         group: "main",
       },
