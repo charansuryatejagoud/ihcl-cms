@@ -39,7 +39,7 @@ async function run() {
   const res = await response.json();
 
   res?.products?.map(async (gc) => {
-    const { sku, name, currency, url, minPrice, maxPrice, price, images } = gc;
+    const { sku, name, currency, url, minPrice, maxPrice, price } = gc;
     let newGc = {
       _type: "giftCardsDetails",
       sku: sku,
@@ -49,7 +49,6 @@ async function run() {
       minPrice: minPrice,
       maxPrice: maxPrice,
       price: price,
-      images: images,
     };
 
     await client
@@ -79,16 +78,6 @@ async function run() {
               minPrice: minPrice,
               maxPrice: maxPrice,
               price: price,
-              // images: images,
-              images: {
-                base:
-                  data?.images?.base !== "" && data?.images?.base
-                    ? data?.images?.base
-                    : "https://cdn.sanity.io/images/ocl5w36p/production/6f000ddf9f1d17aaf0fdcbb1a47e5c07300a6f93-454x340.png",
-                small: data?.images?.small ?? "",
-                thumbnail: data?.images?.thumbnail ?? "",
-                mobile: data?.images?.mobile ?? "",
-              },
             })
             .commit()
             .then((updatedData) => {

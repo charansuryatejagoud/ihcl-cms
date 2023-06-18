@@ -10,7 +10,7 @@ export const ihclForms: FeatureSchemaDefinition = {
         title: "[IHCL Forms] Feedback Form",
         value: "ihclForms.group.feedback-form",
       },
-      { title: "[IHCL Forms] Personalize Form", value: "ihclForms.group.gift-form" },
+      { title: "[IHCL Forms] Gift Form", value: "ihclForms.group.gift-form" },
       {
         title: "[IHCL Forms] Table Reservation",
         value: "ihclForms.group.table-reservation",

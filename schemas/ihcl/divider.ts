@@ -4,7 +4,7 @@ import { IoApps, IoSettings } from "react-icons/io5";
 
 export default {
   name: "divider",
-  title: "[IHCL] Divider",
+  title: "Divider",
   type: "object",
   icon: Icon,
   groups: [

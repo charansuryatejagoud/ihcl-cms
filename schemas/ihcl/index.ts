@@ -7,13 +7,16 @@ import header from "./header";
 import { imageAsset } from "./imageAsset";
 import richText from "./richText";
 import specification from "./specification";
-import textContainer from "./textContainer";
 import { videoAsset } from "./videoAsset";
 import cfReference from "./cfReference";
 import uiConfiguration from "./uiConfiguration";
 import divider from "./divider";
 import linkOnHover from "./linkOnHover";
 import inputField from "./inputField";
+import categoryHighlights from "./categoryHighlights";
+import items from "./items";
+import { images } from "./images";
+
 export const ihclcore: FeatureSchemaDefinition = {
   schemas: [
     videoAsset,
@@ -22,7 +25,6 @@ export const ihclcore: FeatureSchemaDefinition = {
     header,
     footer,
     banner,
-    textContainer,
     comparator,
     specification,
     comparative,
@@ -31,13 +33,15 @@ export const ihclcore: FeatureSchemaDefinition = {
     divider,
     linkOnHover,
     inputField,
+    categoryHighlights,
+    items,
+    images,
   ],
   pageItems: [
     { type: "banner" },
     {
       type: "richText",
     },
-    { type: "motor.insurance.customText" },
     { type: "comparator" },
     { type: "tabsComponent" },
     {
@@ -63,6 +67,9 @@ export const ihclcore: FeatureSchemaDefinition = {
     { type: "divider" },
     {
       type: "formComponent",
+    },
+    {
+      type: "categoryHighlights",
     },
   ],
   connectedStores: [
@@ -207,19 +214,6 @@ export const ihclcore: FeatureSchemaDefinition = {
         title: "Group With SignUp Form",
         value: "ihcl.core.group.signup-form",
       },
-      {
-        title: "Group With 3 Column Cards Grid (Hotel Venues)",
-        value: "ihcl.core.group.group-with-3-column-cards-grid-hotel-venues",
-      },
-      {
-        title: "Group With 3 Column Cards Grid (Hotel Experiences)",
-        value:
-          "ihcl.core.group.group-with-3-column-cards-grid-hotel-experiences",
-      },
-      {
-        title: "Group With 3 Column Cards Grid (Hotel Offers)",
-        value: "ihcl.core.group.group-with-3-column-cards-grid-hotel-offers",
-      },
     ],
     card: [
       {
@@ -295,6 +289,10 @@ export const ihclcore: FeatureSchemaDefinition = {
         title: "Triangle Shape Image On Content",
         value: "ihcl.core.card.triangle-shape-image-on-content",
       },
+      {
+        title: "City Card",
+        value: "ihcl.core.card.city-card",
+      },
     ],
     banner: [
       {
@@ -344,6 +342,10 @@ export const ihclcore: FeatureSchemaDefinition = {
       {
         title: "Default Switch Case",
         value: "ihcl.core.default-switch-case",
+      },
+      {
+        title: "Payments Switch Case",
+        value: "ihcl.core.switchCaseBlock.payments",
       },
     ],
   },

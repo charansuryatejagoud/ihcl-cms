@@ -14,6 +14,39 @@ export default {
       name: "name",
     },
     {
+      title: "Description",
+      type: "string",
+      name: "description",
+    },
+    {
+      title: "Banner Image",
+      type: "images",
+      name: "bannerImage",
+    },
+    {
+      title: "Card Preview",
+      type: "object",
+      name: "cardPreview",
+      fields: [
+        {
+          title: "Front Image",
+          type: "images",
+          name: "frontImage",
+        },
+        {
+          title: "Back Image",
+          type: "images",
+          name: "backImage",
+        },
+      ],
+    },
+    {
+      title: "Base",
+      type: "images",
+      name: "base",
+      description: "This is used for Image Front Side only",
+    },
+    {
       title: "Currency",
       type: "object",
       name: "currency",
@@ -48,37 +81,6 @@ export default {
           type: "array",
           name: "cpg",
           of: [{ title: "cpgID", type: "string", name: "cpgId" }],
-        },
-      ],
-    },
-    {
-      title: "Images",
-      type: "object",
-      name: "images",
-      fields: [
-        {
-          title: "Thumbnail",
-          type: "string",
-          name: "thumbnail",
-          description: "Thumbnail image",
-        },
-        {
-          title: "Mobile",
-          type: "string",
-          name: "mobile",
-          description: "image is used for mobile view",
-        },
-        {
-          title: "Base",
-          type: "string",
-          name: "base",
-          description: "Base image",
-        },
-        {
-          title: "Small",
-          type: "string",
-          name: "small",
-          description: "Small image",
         },
       ],
     },
