@@ -92,6 +92,14 @@ export default function placeholder({
               title: "Hotel Awards",
               value: "hotelAwards",
             },
+            {
+              title: "Hotel Offers",
+              value: "hotelOffers",
+            },
+            {
+              title: "Hotel Holidays",
+              value: "hotelHolidays",
+            },
           ],
         },
         group: "main",
