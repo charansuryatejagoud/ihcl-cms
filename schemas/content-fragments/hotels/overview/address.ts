@@ -9,6 +9,11 @@ export default {
         type: "string",
       },
       {
+        name: "sectionTitle",
+        title: "Section Title",
+        type: "title",
+      },
+      {
         name: "addressLine1",
         title: "Adddress Line 1",
         type: "string",

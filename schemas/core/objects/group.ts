@@ -1,7 +1,6 @@
 import { IoApps, IoLayers as Icon, IoSettings } from "react-icons/io5";
 import { SchemaItem, VariantDefinition } from "../../types";
 import { hiddenField } from "../../shared-utils";
-import CustomText from "../../../components/custom-text/index";
 
 const AlignmentVariant = [
   {
