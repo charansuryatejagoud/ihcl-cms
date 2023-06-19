@@ -14,13 +14,13 @@ import ifElseBlock from "./core/objects/ifElseBlock";
 import { switchCaseBlock } from "./core/objects/switchCaseBlock";
 import section from "./core/objects/section";
 import dataGrid from "./core/objects/dataGrid";
-import { bannerComponents } from "./commonUtils/banner";
-import { tabs, tab } from "./commonUtils/Tabs";
-import { contentFragment } from "./commonUtils/contentFragment";
-import { stepperComponent } from "./commonUtils/stepperComponent";
-import giftCardsCollection from "./core/documents/giftCardsCollection";
-import { dialogHeader } from "./commonUtils/dialogHeader";
-import form from "./commonUtils/form";
+import { bannerComponents } from "./ihcl/banner";
+import { tabs, tab } from "./ihcl/Tabs";
+import { contentFragment } from "./ihcl/contentFragment";
+import { stepperComponent } from "./ihcl/stepperComponent";
+import giftCardsCollection from "./giftCardsCollection";
+import { dialogHeader } from "./ihcl/dialogHeader";
+import form from "./ihcl/form";
 
 export default createSchema({
   name: "default",
