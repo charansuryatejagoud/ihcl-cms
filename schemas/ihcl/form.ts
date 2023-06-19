@@ -8,13 +8,12 @@ import { SchemaItem, VariantDefinition } from "schemas/types";
 
 export default function form({
   variants,
-}: // items,
+}:
 {
   variants: VariantDefinition[];
-  // items: SchemaItem[];
 }) {
   return {
-    title: "[IHCL] Form",
+    title: "Form",
     name: "formComponent",
     type: "object",
     options: { collapsed: false, collapsible: true },
@@ -107,7 +106,6 @@ export default function form({
         type: "navigationItem",
         group: "main",
       },
-      //   { title: "Url", name: "Url", type: "link" },
     ],
     preview: {
       select: {
