@@ -6,13 +6,12 @@ import {
 } from "react-icons/io5";
 import { SchemaItem, VariantDefinition } from "../../types";
 import { hiddenField } from "../../shared-utils";
-import { bannerVariants } from "../../ihcl/banner";
 
 export default function placeholder({
   variants,
   cardVariants,
 }: {
-  variants: SchemaItem[];
+  variants: VariantDefinition[];
   cardVariants: VariantDefinition[];
 }) {
   return {
@@ -32,15 +31,6 @@ export default function placeholder({
         type: "number",
         group: "main",
         Description: "Number of characters limit for placeholder description.",
-      },
-      {
-        name: "bannerLargeVariant",
-        title: "Banner Large Variant",
-        type: "string",
-        options: {
-          list: bannerVariants,
-        },
-        group: "main",
       },
       {
         name: "groupLargeVariant",
