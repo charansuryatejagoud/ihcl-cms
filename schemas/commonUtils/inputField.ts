@@ -4,7 +4,7 @@ import {
   IoSend as Icon,
   IoSettings,
 } from "react-icons/io5";
-import { inputFieldTypes } from "../../schemas/constants";
+import { inputFieldTypes } from "../constants";
 
 export default {
   title: "[IHCL] Input Field",
