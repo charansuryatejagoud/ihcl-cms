@@ -166,10 +166,6 @@ export const details: FeatureSchemaDefinition = {
         title: "[Details] Share Link Icon",
         value: "details.card-share-link-icon",
       },
-      {
-        title:"[Details] Left Media Right Content With Equally Occupied Space",
-        value:"details.card.left-media-right-content-with-equally-occupied-space"
-      }
     ],
 
     banner: [],
