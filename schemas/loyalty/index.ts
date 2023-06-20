@@ -91,19 +91,6 @@ export const loyalty: FeatureSchemaDefinition = {
         title: "[Loyalty] Left Media with Group Of Gift Items Right Content",
         value: "loyalty.card.left-media-with-group-of-gift-items-right-content",
       },
-      {
-        title:"[Loyalty] Membership Holder Details ",
-        value:"loyalty.card.membership-holder-details"
-      },
-      {
-        title:"[Loyalty] Membership Product Price Details ",
-        value:"loyalty.card.membership-product-price-details"
-      },
-      {
-        title:"[Loyalty] Price Breakup Details ",
-        value:"loyalty.card.price-breakup-details"
-      },
-      
     ],
     nudge: [
       {
