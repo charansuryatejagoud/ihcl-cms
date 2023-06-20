@@ -312,6 +312,10 @@ export const ihclcore: FeatureSchemaDefinition = {
         title: "Search-Result-Component",
         value: "ihcl.core.search-result-component",
       },
+      {
+        title: "Search Result Component City",
+        value: "ihcl.core.search-result-component-city",  
+      },
     ],
     nudge: [
       { title: "Default Nudge", value: "ihcl.core.nudge.default" },

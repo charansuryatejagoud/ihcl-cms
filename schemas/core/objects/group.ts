@@ -77,7 +77,6 @@ export default function group({
             of: [
               {
                 type: "string",
-                name: "value",
               },
             ],
           },
@@ -89,7 +88,6 @@ export default function group({
             of: [
               {
                 type: "string",
-                name: "value",
               },
             ],
           },
