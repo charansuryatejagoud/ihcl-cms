@@ -141,6 +141,11 @@ export default function nudge({ variants }: { variants: VariantDefinition[] }) {
         ],
       },
       {
+        name:"content",
+        title:"Content",
+        type:"blockContent",
+      },
+      {
         name: "metadata",
         type: "metadata",
         title: "Metadata",
