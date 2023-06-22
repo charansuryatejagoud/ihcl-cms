@@ -30,16 +30,42 @@ export default {
         list: [...inputFieldTypes],
       },
     },
-    { title: "Hint Text", name: "hintText", type: "string" },
-    { title: "Helper Text", name: "helperText", type: "string" },
+    {
+      title: "Hint Text",
+      name: "hintText",
+      type: "string",
+      hidden: ({ parent }) =>
+        parent?.inputFieldType == "terms-and-conditions-checkbox",
+    },
+    {
+      title: "Helper Text",
+      name: "helperText",
+      type: "string",
+      hidden: ({ parent }) =>
+        parent?.inputFieldType == "terms-and-conditions-checkbox",
+    },
     { title: "Error Text", name: "errorText", type: "string" },
-    { title: "Is Input Field Read Only?", name: "readOnly", type: "boolean" },
-    { title: "Max Width", name: "fieldMaxWidth", type: "number" },
+    {
+      title: "Is Input Field Read Only?",
+      name: "readOnly",
+      type: "boolean",
+      hidden: ({ parent }) =>
+        parent?.inputFieldType == "terms-and-conditions-checkbox",
+    },
+    {
+      title: "Max Width",
+      name: "fieldMaxWidth",
+      type: "number",
+      hidden: ({ parent }) =>
+        parent?.inputFieldType == "terms-and-conditions-checkbox",
+    },
     {
       title: "Max Length",
       name: "maxLength",
       type: "string",
       description: "Number of characters allow for the input component",
+      hidden: ({ parent }) =>
+        parent?.inputFieldType == "terms-and-conditions-checkbox",
     },
     { title: "Prefix Icon", name: "prefixIcon", type: "image" },
     { title: "Suffix Icon", name: "suffixIcon", type: "image" },
@@ -65,6 +91,15 @@ export default {
         },
       ],
       hidden: ({ parent }) => parent?.inputFieldType !== "dropDown",
+    },
+
+    {
+      title: "Content",
+      name: "content",
+      type: "blockContent",
+      description: "Helper Text for the Checkbox",
+      hidden: ({ parent }) =>
+        parent?.inputFieldType !== "terms-and-conditions-checkbox",
     },
   ],
   preview: {
