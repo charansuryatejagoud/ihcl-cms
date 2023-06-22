@@ -53,6 +53,11 @@ export default {
           type: "object",
           fields: [
             {
+              name: "logo",
+              title: "Logo",
+              type: "image",
+            },
+            {
               name: "blockContent",
               title: "Block Content",
               type: "blockContent",

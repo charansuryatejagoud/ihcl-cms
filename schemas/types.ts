@@ -59,6 +59,7 @@ export class VariantSchemaProperties {
   tabs: VariantDefinition[];
   forms: VariantDefinition[];
   inputField: VariantDefinition[];
+  categoryHighlights: VariantDefinition[];
 }
 
 export class DialogSizeSchemaProperties {

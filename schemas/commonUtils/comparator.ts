@@ -22,24 +22,12 @@ export default {
   name: "comparator",
   title: "Comparator",
   type: "object",
+  initialValue: { showComparison: true },
   groups: [
     { name: "main", title: "Main", icon: IoApps },
     { name: "configuration", title: "Configuration", icon: IoSettings },
   ],
   preview: comparatorPreview,
-  // preview: {
-  //     select: {
-  //       title: "title",
-  //       subtitle: "subtitle",
-  //       items: `comparator`
-  //     },
-  //     prepare({ title, subtitle, items }) {
-  //       return {
-  //         title: `${title ?? "<Comparator>"}`,
-  //         subtitle: `${subtitle} items: ${items.length ?? ""}`,
-  //       };
-  //     },
-  // },
   fields: [
     {
       name: "title",
@@ -50,6 +38,13 @@ export default {
       name: "subtitle",
       title: "Subtitle",
       type: "string",
+    },
+    {
+      name: "showComparison",
+      title: "Show Comparison",
+      type: "boolean",
+      description:
+        "This is for VIEW COMPARISON Dropdown and wherever Comparison is showed, if enabled Comparison is Displayed",
     },
     {
       name: "comparatives",
