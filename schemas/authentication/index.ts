@@ -75,6 +75,10 @@ export const Authentication: FeatureSchemaDefinition = {
         title: "[Authentication] Membership Login Options",
         value: "authentication.nudge.membership-login-options",
       },
+      {
+        title: "[Authentication] Alert Message",
+        value: "authentication.nudge.alert-message",
+      }
     ],
     dialog: [
       {
