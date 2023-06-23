@@ -5,15 +5,15 @@ export const chambers: FeatureSchemaDefinition = {
     card: [
       {
         title:
-          "[Chambers] Vertical Left Media With Graphical Bullet Line With Respect To Right Content",
+          "[Chambers] Left Vertical Media With Bullet Line and Right Content",
         value:
-          "chambers.card.vertical-left-media-with-graphical-bullet-line-with-respect-to-right-content",
+          "chambers.card.left-vertical-media-with-bullet-line-and-right-content",
       },
       {
         title:
-          "[Chambers] Vertical Right Media With Graphical Bullet Line With Respect To Left Content",
+          "[Chambers] Right Vertical Media With Bullet Line and Left Content",
         value:
-          "chambers.card.vertical-right-media-with-graphical-bullet-line-with-respect-to-left-content",
+          "chambers.card.right-vertical-media-with-bullet-line-and-left-content",
       },
     ],
   },
