@@ -216,7 +216,7 @@ export const ihclcore: FeatureSchemaDefinition = {
       },
       {
         title: "Cookie Management System Modal",
-        value: "ihcl.core.group.cookie-management-system-modal",
+        value: "common-utils.group.cookie-management-system-modal",
       },
     ],
     card: [
@@ -355,7 +355,7 @@ export const ihclcore: FeatureSchemaDefinition = {
     categoryHighlights: [
       {
         title: "category with logo and text",
-        value: "ihcl.core.categoryHighlights.category-with-logo-and-text",
+        value: "common-utils.categoryHighlights.category-with-logo-and-text",
       },
     ],
   },
