@@ -90,6 +90,14 @@ export default function placeholder({
               title: "Hotel Holidays",
               value: "hotelHolidays",
             },
+            {
+              title: "Hotel Wellness",
+              value: "hotelWellness",
+            },
+            {
+              title: "Hotel Experiences",
+              value: "hotelExperiences",
+            },
           ],
         },
         group: "main",
