@@ -34,11 +34,6 @@ export const details: FeatureSchemaDefinition = {
           "details.group.group-with-card-left-media-right-content-aspect-ratio-2:4",
       },
       {
-        title: "[Details] Group With Card Left Media Right Content(Hotel)",
-        value:
-          "details.group.group-with-card-left-media-right-content-aspect-ratio-2:4-hotel",
-      },
-      {
         title: "[Details] Group With Carousel- Card Right Media Left Content",
         value:
           "details.group.group-with-carousel-card-right-media-left-content-aspect-ratio-2:4",
