@@ -1,5 +1,6 @@
 import { GiVerticalBanner } from "react-icons/gi";
 import { IoApps, IoSettings } from "react-icons/io5";
+import { contentTypes } from "../constants";
 
 const AlignmentVariant = [
   {
@@ -31,6 +32,10 @@ export const bannerVariants = [
   {
     title: "Gift Card Personalize Banner",
     value: "gift-card-personalize-banner",
+  },
+  {
+    title: "Hero Banner (Layout Placeholder)",
+    value: "hero-banner-layout-placeholder",
   }
 ];
 
@@ -119,6 +124,15 @@ export default {
       type: "string",
       options: {
         list: bannerVariants,
+      },
+      group: "main",
+    },
+    {
+      name: "contentType",
+      title: "Content Type",
+      type: "string",
+      options: {
+        list: contentTypes,
       },
       group: "main",
     },

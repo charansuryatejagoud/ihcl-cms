@@ -6,6 +6,7 @@ import {
 } from "react-icons/io5";
 import { SchemaItem, VariantDefinition } from "../../types";
 import { hiddenField } from "../../shared-utils";
+import { contentTypes } from "../../constants";
 
 export default function placeholder({
   variants,
@@ -61,36 +62,7 @@ export default function placeholder({
         title: "Content Type",
         type: "string",
         options: {
-          list: [
-            {
-              title: "Hotel Rooms",
-              value: "hotelRooms",
-            },
-            {
-              title: "Hotel Signature Dining",
-              value: "hotelSignatureDining",
-            },
-            {
-              title: "Hotel Attractions",
-              value: "hotelAttractions",
-            },
-            {
-              title: "Hotel Event Venues",
-              value: "hotelEventVenues",
-            },
-            {
-              title: "Hotel Awards",
-              value: "hotelAwards",
-            },
-            {
-              title: "Hotel Offers",
-              value: "hotelOffers",
-            },
-            {
-              title: "Hotel Holidays",
-              value: "hotelHolidays",
-            },
-          ],
+          list: contentTypes,
         },
         group: "main",
       },

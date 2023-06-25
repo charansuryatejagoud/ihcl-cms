@@ -31,6 +31,7 @@ export default {
                 },
             ]
         },
+        { name: 'roomModalDetails', type: 'modalDetails', title: 'Room Modal Details' },
         // {
         //     name: "packages",
         //     title: "Packages",

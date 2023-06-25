@@ -4,6 +4,11 @@ export default {
   type: "document",
   fields: [
     {
+      name: "hotelName",
+      title: "Hotel Name",
+      type: "string",
+    },
+    {
       name: "hotelId",
       title: "Hotel Id",
       type: "string",

@@ -19,9 +19,9 @@ export default {
       type: "string",
     },
     {
-      name: "bannerImage",
-      title: "Banner Image",
-      type: "image",
+        name: "bannerImage",
+        title: "Banner Image",
+        type: "bannerDetails",
     },
     {
       name: "overviewInfo",

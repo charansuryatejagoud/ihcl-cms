@@ -32,7 +32,7 @@ export default {
       title: "Highlights",
       type: "array",
       of: [
-        { name: "hightlite", type: "string", title: "Highlite" }
+        { type: "string"}
       ]
     },
     {

@@ -38,6 +38,9 @@ import offers from "./offers/offers";
 import offerDetails from "./offers/offerDetails";
 import exclusiveOffersDetails from "./offers/exclusiveOffersDetails";
 import title from "../title";
+import modalDetails from "./rooms/modalDetails";
+import categories from "../categories";
+import bannerCF from "../bannerCF";
 
 export const hotels: FeatureSchemaDefinition = {
   schemas: [hotel, hotelDetails, address, availability, contact, gallery, wellness, attractions,
@@ -45,5 +48,6 @@ export const hotels: FeatureSchemaDefinition = {
     facilities, experiences, exclusiveOffers, eventVenues, awards, perfectEvent, roomDetails,
     diningDetails, specifications, offerDetails, attractionDetails, signatureTreatmentDetails,
     holidayDetails, experienceDetails, exclusiveOffersDetails, eventVenueDetails, awardDetails,
-    socialInfo, venues, facilityDetails, highlightDetails, weddingEventDetails, rateCodes, title],
+    socialInfo, venues, facilityDetails, highlightDetails, weddingEventDetails, rateCodes, title,
+    modalDetails, categories, bannerCF],
 };

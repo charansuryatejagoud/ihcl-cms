@@ -16,7 +16,7 @@ export default {
     {
         name: "bannerImage",
         title: "Banner Image",
-        type: "image",
+        type: "bannerDetails",
     },
     {
       name: "hotelSpaDetails",

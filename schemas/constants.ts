@@ -38,3 +38,50 @@ export const inputFieldTypes = [
     value: "textarea",
   },
 ];
+
+export const contentTypes = [
+  {
+    title: "Hotel Rooms",
+    value: "hotelRooms",
+  },
+  {
+    title: "Hotel Signature Dining",
+    value: "hotelSignatureDining",
+  },
+  {
+    title: "Hotel Attractions",
+    value: "hotelAttractions",
+  },
+  {
+    title: "Hotel Event Venues",
+    value: "hotelEventVenues",
+  },
+  {
+    title: "Hotel Awards",
+    value: "hotelAwards",
+  },
+  {
+    title: "Hotel Offers",
+    value: "hotelOffers",
+  },
+  {
+    title: "Hotel Holidays",
+    value: "hotelHolidays",
+  },
+  {
+    title: "Hotel Wellness",
+    value: "hotelWellness",
+  },
+  {
+    title: "Hotel Overview",
+    value: "hotelDetails",
+  },
+  {
+    title: "Hotel Experiences",
+    value: "hotelExperiences",
+  },
+  {
+    title: "Hotel Experiences",
+    value: "hotelExperiences",
+  },
+]

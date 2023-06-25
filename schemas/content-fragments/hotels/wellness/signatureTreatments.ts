@@ -6,7 +6,7 @@ export default {
     {
       name: "sectionTitle",
       title: "Section Title",
-      type: 'string',
+      type: 'title',
     },
     {
       name: "description",
