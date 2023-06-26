@@ -6,12 +6,7 @@ import {
 } from "react-icons/io5";
 import { SchemaItem, VariantDefinition } from "schemas/types";
 
-export default function form({
-  variants,
-}:
-{
-  variants: VariantDefinition[];
-}) {
+export default function form({ variants }: { variants: VariantDefinition[] }) {
   return {
     title: "Form",
     name: "formComponent",

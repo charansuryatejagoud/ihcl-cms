@@ -61,6 +61,10 @@ export const Authentication: FeatureSchemaDefinition = {
         title: "[Authentication] Membership Global Login options",
         value: "authentication.card.membership-global-login-options",
       },
+      {
+        title: "[Authentication] Reset Password",
+        value: "authentication.card.reset-password",
+      }
     ],
     nudge: [
       {
@@ -75,6 +79,10 @@ export const Authentication: FeatureSchemaDefinition = {
         title: "[Authentication] Membership Login Options",
         value: "authentication.nudge.membership-login-options",
       },
+      {
+        title: "[Authentication] Alert Message",
+        value: "authentication.nudge.alert-message",
+      }
     ],
     dialog: [
       {

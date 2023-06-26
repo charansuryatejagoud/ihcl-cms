@@ -1,7 +1,11 @@
 import { IoBrushOutline, IoApps, IoSettings } from "react-icons/io5";
-
-export default {
-  name: "categoryHighlights",
+import { VariantDefinition } from "schemas/types";
+interface Props {
+  variants: VariantDefinition[];
+}
+export default function categoryHighlights(props: Props){
+  return {
+    name: "categoryHighlights",
   title: "Category Highlights",
   type: "object",
   icon: IoBrushOutline,
@@ -17,10 +21,22 @@ export default {
       group: "main",
     },
     {
-      title: "Identifier",
-      description: "This will be used to identify this Schema when rendering",
-      name: "identifier",
+      name: "variant",
+      title: "Variant",
       type: "string",
+      options: {
+        list: props.variants,
+      },
+      group: "main",
+    },
+    {
+      name: "largeVariant",
+      title: "Large Variant",
+      type: "string",
+      options: {
+        list: props.variants,
+      },
+      group: "main",
     },
     {
       name: "items",
@@ -29,4 +45,5 @@ export default {
       of: [{ type: "items" }],
     },
   ],
+  }
 };
