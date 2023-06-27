@@ -215,8 +215,8 @@ export const ihclcore: FeatureSchemaDefinition = {
         value: "ihcl.core.group.signup-form",
       },
       {
-        title: "Cookie Management System Modal",
-        value: "common-utils.group.cookie-management-system-modal",
+        title: "Cookies Management System Modal",
+        value: "common-utils.group.cookies-management-system-modal",
       },
     ],
     card: [
