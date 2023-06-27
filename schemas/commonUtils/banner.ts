@@ -31,7 +31,7 @@ const variants = [
   {
     title: "Gift Card Personalize Banner",
     value: "gift-card-personalize-banner",
-  }
+  },
 ];
 
 export default {
@@ -58,6 +58,39 @@ export default {
       name: "title",
       type: "string",
       group: "main",
+    },
+    {
+      title: "test Title",
+      name: "testTitle",
+      type: "object",
+      options: {
+        collapsible: true,
+        collapsed: false,
+      },
+      fields: [
+        {
+          type: "array",
+          name: "desktopTitle",
+          description: "This Title is used for the Larger Screens like Desktop",
+          of: [
+            {
+              type: "string",
+              name: "value",
+            },
+          ],
+        },
+        {
+          type: "array",
+          name: "mobileTitle",
+          description: "This Title is used for the Smaller Screens like Mobile",
+          of: [
+            {
+              type: "string",
+              name: "value",
+            },
+          ],
+        },
+      ],
     },
     {
       name: "subTitle",
