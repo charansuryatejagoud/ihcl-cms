@@ -74,14 +74,76 @@ export const contentTypes = [
   },
   {
     title: "Hotel Overview",
-    value: "hotelDetails",
+    value: "hotelOverview",
   },
   {
     title: "Hotel Experiences",
     value: "hotelExperiences",
   },
   {
-    title: "Hotel Experiences",
-    value: "hotelExperiences",
+    title: "Hotel Gallery",
+    value: "hotelGallery",
+  },
+]
+
+export const actionTypes =[
+  {
+    title: "Primary Action",
+    value: "primaryAction",
+  },
+  {
+    title: "Secondary Action",
+    value: "secondaryAction",
+  },
+  {
+    title: "CTA Label",
+    value: "ctaLabel",
+  },
+]
+
+export const galleryCategories =[
+  {
+    title: "Exterior",
+    value: "exterior",
+  },
+  {
+    title: "Common Areas",
+    value: "commonAreas",
+  },
+  {
+    title: "Room & Suites",
+    value: "roomAndSuites",
+  },
+  {
+    title: "Dining & Bar",
+    value: "diningAndBar",
+  },
+  {
+    title: "Venues",
+    value: "venues",
+  },
+  {
+    title: "Spa & Wellness",
+    value: "spaAndWellness",
+  },
+  {
+    title: "Services & Amenities",
+    value: "servicesAndAmenities",
+  },
+  {
+    title: "Experiences",
+    value: "experiences",
+  },
+  {
+    title: "Swimming Pool",
+    value: "swimmingPool",
+  },
+  {
+    title: "Video",
+    value: "video",
+  },
+  {
+    title: "Others",
+    value: "others",
   },
 ]

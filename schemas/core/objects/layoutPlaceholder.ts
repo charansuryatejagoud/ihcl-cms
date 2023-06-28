@@ -67,14 +67,16 @@ export default function placeholder({
         group: "main",
       },
       {
-        name: "primaryAction",
-        title: "Primary Action",
-        type: "navigationItem",
+        name: "groupActionType",
+        title: "Group Action Type",
+        type: "array",
+        of: [{ type: 'actionTypes' }]
       },
       {
-        name: "secondaryAction",
-        title: "Secondary Action",
-        type: "navigationItem",
+        name: "cardActionType",
+        title: "Card Action Type",
+        type: "array",
+        of: [{ type: 'actionTypes' }]
       },
     ],
     preview: {

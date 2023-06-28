@@ -1,7 +1,7 @@
 export default {
 
-    name: "bannerDetails",
-    titile: "Banner Details",
+    name: "media",
+    titile: "Media",
     type: "object",
     fields: [
     {

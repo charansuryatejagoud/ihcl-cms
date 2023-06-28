@@ -1,8 +1,13 @@
 export default {
     title:"Availability",
       name: 'availability',
-      type: "object",
+      type: "document",
       fields: [
+        {
+          name: "title",
+          title: "Title",
+          type: "string",
+        },
         {
           name: "sectionTitle",
           title: "Section Title",

@@ -24,9 +24,10 @@ export default {
       type: "string",
     },
     {
-      name: "hotelDetails",
-      title: "Hotel Details",
-      type: "hotelDetails",
+      name: "hotelOverview",
+      title: "Hotel Overview",
+      type: 'reference',
+      to: [{type: "hotelOverview" }]
     },
     {
       name: "hotelAddress",
@@ -43,7 +44,8 @@ export default {
     {
       name: "hotelAvailability",
       title: "Hotel Availability",
-      type: "availability",
+      type: 'reference',
+      to: [{type: "availability" }]
     },
     {
       name: "hotelFacilities",

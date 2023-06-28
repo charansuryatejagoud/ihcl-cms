@@ -25,7 +25,7 @@ import signatureTreatments from "./wellness/signatureTreatments";
 import signatureTreatmentDetails from "./wellness/signatureTreatmentDetails";
 import roomDetails from "./rooms/roomDetails";
 import signatureDining from "./dining/signatureDining";
-import hotelDetails from "./overview/hotelDetails";
+import hotelOverview from "./overview/hotelOverview";
 import availability from "./overview/availability";
 import highlights from "./overview/highlights";
 import attractionDetails from "./attractions/attractionDetails";
@@ -40,14 +40,14 @@ import exclusiveOffersDetails from "./offers/exclusiveOffersDetails";
 import title from "../title";
 import modalDetails from "./rooms/modalDetails";
 import categories from "../categories";
-import bannerCF from "../bannerCF";
+import media from "../media";
 
 export const hotels: FeatureSchemaDefinition = {
-  schemas: [hotel, hotelDetails, address, availability, contact, gallery, wellness, attractions,
+  schemas: [hotel, hotelOverview, address, availability, contact, gallery, wellness, attractions,
     spaDetails, signatureTreatments, signatureDining, rooms, offers, holidays, highlights,
     facilities, experiences, exclusiveOffers, eventVenues, awards, perfectEvent, roomDetails,
     diningDetails, specifications, offerDetails, attractionDetails, signatureTreatmentDetails,
     holidayDetails, experienceDetails, exclusiveOffersDetails, eventVenueDetails, awardDetails,
     socialInfo, venues, facilityDetails, highlightDetails, weddingEventDetails, rateCodes, title,
-    modalDetails, categories, bannerCF],
+    modalDetails, categories, media],
 };

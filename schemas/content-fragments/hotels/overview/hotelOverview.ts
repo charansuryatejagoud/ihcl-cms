@@ -1,7 +1,7 @@
 export default {
-  Title: "Hotel Details",
-  name: "hotelDetails",
-  type: "object",
+  Title: "Hotel Overview",
+  name: "hotelOverview",
+  type: "document",
   fields: [
     {
       name: "title",
@@ -21,7 +21,7 @@ export default {
     {
         name: "bannerImage",
         title: "Banner Image",
-        type: "bannerDetails",
+        type: "media",
     },
     {
       name: "overviewInfo",

@@ -21,7 +21,7 @@ export default {
         {
             name: "bannerImage",
             title: "Banner Image",
-            type: "bannerDetails",
+            type: "media",
         },
         {
             name: "roomsList",
