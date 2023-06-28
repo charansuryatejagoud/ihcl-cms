@@ -32,6 +32,10 @@ const variants = [
     title: "Gift Card Personalize Banner",
     value: "gift-card-personalize-banner",
   },
+  {
+    title: "Page Not Found",
+    value: "page-not-found"
+  }
 ];
 
 export default {

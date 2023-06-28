@@ -50,10 +50,6 @@ export const Authentication: FeatureSchemaDefinition = {
         value: "authentication.card.image-with-title",
       },
       {
-        title: "[Authentication] OTP fields",
-        value: "authentication.card.otp-fields",
-      },
-      {
         title: "[Authentication] Action Labels",
         value: "authentication.card.action-labels",
       },
@@ -122,5 +118,11 @@ export const Authentication: FeatureSchemaDefinition = {
         value: "authentication.mobile-number-verification",
       },
     ],
+    authentication: [
+      {
+        title: "[Authentication] Mobile Number Verification",
+        value: "authentication.mobile-number-verification",
+      },
+    ]
   },
 };
