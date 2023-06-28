@@ -60,6 +60,7 @@ export class VariantSchemaProperties {
   forms: VariantDefinition[];
   inputField: VariantDefinition[];
   categoryHighlights: VariantDefinition[];
+  authentication: VariantDefinition[];
 }
 
 export class DialogSizeSchemaProperties {
