@@ -78,8 +78,14 @@ export default {
       to: [{type: "highlights" }]
     },
     {
-      name: "hotelExclusiveOffers",
-      title: "Hotel Exclusive Offers",
+      name: "hotelExclusiveOffersDining",
+      title: "Hotel Exclusive Offers(Dining)",
+      type: 'reference',
+      to: [{type: "exclusiveOffers" }]
+    },
+    {
+      name: "hotelExclusiveOffersWellness",
+      title: "Hotel Exclusive Offers(Wellness)",
       type: 'reference',
       to: [{type: "exclusiveOffers" }]
     },
