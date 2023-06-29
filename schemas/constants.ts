@@ -65,6 +65,10 @@ export const contentTypes = [
     value: "hotelOffers",
   },
   {
+    title: "Hotel Exclusive Offers",
+    value: "hotelExclusiveOffers",
+  },
+  {
     title: "Hotel Holidays",
     value: "hotelHolidays",
   },
@@ -84,9 +88,9 @@ export const contentTypes = [
     title: "Hotel Gallery",
     value: "hotelGallery",
   },
-]
+];
 
-export const actionTypes =[
+export const actionTypes = [
   {
     title: "Primary Action",
     value: "primaryAction",
@@ -99,9 +103,9 @@ export const actionTypes =[
     title: "CTA Label",
     value: "ctaLabel",
   },
-]
+];
 
-export const galleryCategories =[
+export const galleryCategories = [
   {
     title: "Exterior",
     value: "exterior",
@@ -146,4 +150,4 @@ export const galleryCategories =[
     title: "Others",
     value: "others",
   },
-]
+];
