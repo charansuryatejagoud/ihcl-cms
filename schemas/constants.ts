@@ -88,6 +88,10 @@ export const contentTypes = [
     title: "Hotel Gallery",
     value: "hotelGallery",
   },
+  {
+    title: "Hotel Highlights",
+    value: "hotelHighlights",
+  },
 ];
 
 export const actionTypes = [
