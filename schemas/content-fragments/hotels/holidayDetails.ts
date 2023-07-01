@@ -1,7 +1,7 @@
 export default {
 
     name: "holidayDetails",
-    titile: "Holiday Details",
+    title: "Holiday Details",
     type: "object",
     fields: [
         { name: 'title', type: 'string', title: 'Title' },
@@ -14,7 +14,7 @@ export default {
             title: "Images",
             type: "array",
             of: [
-                { name: 'roomImage', type: 'image', title: 'Room Image' },
+                { type: 'imageAsset' },
             ]
         },
     ]
