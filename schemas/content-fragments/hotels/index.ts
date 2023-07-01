@@ -24,7 +24,6 @@ import signatureDining from "./dining/signatureDining";
 import hotelOverview from "./overview/hotelOverview";
 import availability from "./overview/availability";
 import highlights from "./overview/highlights";
-import attractionDetails from "./attractions/attractionDetails";
 import facilityDetails from "./overview/facilityDetails";
 import facilities from "./overview/facilities";
 import address from "./overview/address";
@@ -43,7 +42,7 @@ export const hotels: FeatureSchemaDefinition = {
   schemas: [hotel, hotelOverview, address, availability, contact, gallery, wellness, attractions,
     spaDetails, signatureTreatments, signatureDining, rooms, offers, holidays, highlights,
     facilities, experiences, exclusiveOffers, eventVenues, awards, roomDetails,
-    diningDetails, specifications, offerDetails, attractionDetails, basicInfo,
+    diningDetails, specifications, offerDetails, basicInfo,
     holidayDetails, exclusiveOffersDetails, eventVenueDetails,
     socialInfo, venues, facilityDetails, weddingEventDetails, rateCodes, title,
     modalDetails, categories, media, wellnessDetails],
