@@ -11,9 +11,20 @@ export default {
       type: "string"
     },
     {
+        name: "sectionTitle",
+        title: "Section Title",
+        type: 'title',
+    },
+    {
+      name: "description",
+      title: "Description",
+      type: "string",
+    },
+    {
       name: "bannerImage",
       title: "Banner Image",
-      type: "media",
+      type: 'array',
+      of: [{type:'media'}]
     },
     {
       name: "hotelImages",
@@ -35,7 +46,8 @@ export default {
           {
             title: 'Media',
             name: 'media',
-            type: 'media'
+            type: 'array',
+            of: [{type:'media'}]
           }
         ]
       }]

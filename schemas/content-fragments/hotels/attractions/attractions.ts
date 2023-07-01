@@ -21,14 +21,15 @@ export default {
         {
             name: "bannerImage",
             title: "Banner Image",
-            type: "media",
+            type: 'array',
+            of: [{type:'media'}]
         },
         {
             name: "attractionDetails",
             title: "AttractionDetails",
             type: "array",
             of: [
-                { type: "attractionDetails" }
+                { type: "basicInfo" }
             ]
         },
     ],

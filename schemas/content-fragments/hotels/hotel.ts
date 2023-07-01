@@ -90,6 +90,12 @@ export default {
       to: [{type: "exclusiveOffers" }]
     },
     {
+      name: "hotelExclusiveOffersRooms",
+      title: "Hotel Exclusive Offers(Rooms)",
+      type: 'reference',
+      to: [{type: "exclusiveOffers" }]
+    },
+    {
       name: "hotelOffers",
       title: "Hotel Offers",
       type: 'reference',

@@ -4,19 +4,26 @@ export default {
     type: "object",
     fields: [
         {
-            name: "title",
-            title: "Title",
-            type: "string",
+            name: "basicInfo",
+            title: "Basic Info",
+            type: "basicInfo",
         },
         {
-            name: "description",
-            title: "Description",
-            type: "string",
-        },
-        {
-            name: "image",
-            title: "Image",
-            type: "image",
+            name: "backgroundImage",
+            title: "Backgorund Image",
+            type: "imageAsset",
         },
     ],
+    preview: {
+      select: {
+        title: 'basicInfo',
+        // subtitle: 'releaseDate'
+      },
+      prepare(selection) {
+        const {title} = selection
+        return {
+          title: title.title
+        }
+      }
+    }
   }

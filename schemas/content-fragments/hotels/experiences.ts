@@ -19,38 +19,22 @@ export default {
       type: "string",
     },
     {
-        name: "bannerImage",
-        title: "Banner Image",
-        type: "media",
+      name: "bannerImage",
+      title: "Banner Image",
+      type: 'array',
+      of: [{ type: 'media' }]
     },
     {
       name: "signatureExperience",
       title: "Signature Experience",
-      type: 'object',
-      fields: [
-        {
-          name: "title",
-          title: "Title",
-          type: "string",
-        },
-        {
-          name: "description",
-          title: "Description",
-          type: "string",
-        },
-        {
-          name: "image",
-          title: "Image",
-          type: "image",
-        },
-      ]
+      type: 'basicInfo'
     },
     {
       name: "experienceDetails",
       title: "Experience Details",
       type: "array",
       of: [
-        { type: "experienceDetails" }
+        { type: "basicInfo" }
       ]
     },
   ],

@@ -16,7 +16,8 @@ export default {
         {
             name: "bannerImage",
             title: "Banner Image",
-            type: "media",
+            type: 'array',
+            of: [{ type: 'media' }]
         },
         {
             name: "eventVenues",
@@ -39,11 +40,11 @@ export default {
                     type: "string",
                 },
                 {
-                    name: "perfectEvents",
-                    title: "Perfect Events",
+                    name: "perfectEvent",
+                    title: "Perfect Event Details",
                     type: "array",
                     of: [
-                        { type: "perfectEvent" }
+                        { type: "basicInfo" }
                     ]
                 },
             ]
@@ -62,11 +63,6 @@ export default {
                     name: "description",
                     title: "Description",
                     type: "string",
-                },
-                {
-                    name: "backgroundImage",
-                    title: "Backgorund Image",
-                    type: "image",
                 },
                 {
                     name: "weddingEvents",

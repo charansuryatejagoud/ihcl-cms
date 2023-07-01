@@ -1,7 +1,7 @@
 export default {
 
     name: "media",
-    titile: "Media",
+    title: "Media",
     type: "object",
     fields: [
     {
@@ -10,8 +10,8 @@ export default {
         type: "string",
         options: {
           list: [
-            { title: "Video", value: "video" },
             { title: "Image", value: "image" },
+            { title: "Video", value: "video" },
             { title: "Component", value: "component" },
           ],
         },
@@ -30,6 +30,20 @@ export default {
         hidden: ({ parent }) =>
           parent?.mediaType !== "video" && parent?.largeVariant !== "video",
       },
-    ]
+    ],
+    preview: {
+      select: {
+        image: 'imageAsset',
+        title: 'mediaType',
+        videoAsset: 'videoAsset'
+      },
+      prepare(selection) {
+        const {image, title, videoAsset} = selection
+        return {
+          title: title,
+          media: image ? image.largeImage[0].asset : videoAsset ? videoAsset.videoThumbnail.asset : {}
+        }
+      }
+    }
 
 }

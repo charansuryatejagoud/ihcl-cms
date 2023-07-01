@@ -11,25 +11,20 @@ import diningDetails from "./dining/diningDetails";
 import specifications from "./specifications";
 import attractions from "./attractions/attractions";
 import holidayDetails from "./holidayDetails";
-import experienceDetails from "./experienceDetails";
-import awardDetails from "./awards/awardDetails";
 import socialInfo from "./socialInfo";
 import venues from "./venues/venues";
 import weddingEventDetails from "./venues/weddingEventDetails";
 import rateCodes from "./rateCodes";
 import eventVenues from "./venues/eventVenues";
-import perfectEvent from "./venues/perfectEvent";
 import eventVenueDetails from "./venues/eventVenueDetails";
 import spaDetails from "./wellness/spaDetails";
 import signatureTreatments from "./wellness/signatureTreatments";
-import signatureTreatmentDetails from "./wellness/signatureTreatmentDetails";
 import roomDetails from "./rooms/roomDetails";
 import signatureDining from "./dining/signatureDining";
 import hotelOverview from "./overview/hotelOverview";
 import availability from "./overview/availability";
 import highlights from "./overview/highlights";
 import attractionDetails from "./attractions/attractionDetails";
-import highlightDetails from "./overview/highlightDetails";
 import facilityDetails from "./overview/facilityDetails";
 import facilities from "./overview/facilities";
 import address from "./overview/address";
@@ -41,13 +36,15 @@ import title from "../title";
 import modalDetails from "./rooms/modalDetails";
 import categories from "../categories";
 import media from "../media";
+import basicInfo from "../basicInfo";
+import wellnessDetails from "./wellness/wellnessDetails";
 
 export const hotels: FeatureSchemaDefinition = {
   schemas: [hotel, hotelOverview, address, availability, contact, gallery, wellness, attractions,
     spaDetails, signatureTreatments, signatureDining, rooms, offers, holidays, highlights,
-    facilities, experiences, exclusiveOffers, eventVenues, awards, perfectEvent, roomDetails,
-    diningDetails, specifications, offerDetails, attractionDetails, signatureTreatmentDetails,
-    holidayDetails, experienceDetails, exclusiveOffersDetails, eventVenueDetails, awardDetails,
-    socialInfo, venues, facilityDetails, highlightDetails, weddingEventDetails, rateCodes, title,
-    modalDetails, categories, media],
+    facilities, experiences, exclusiveOffers, eventVenues, awards, roomDetails,
+    diningDetails, specifications, offerDetails, attractionDetails, basicInfo,
+    holidayDetails, exclusiveOffersDetails, eventVenueDetails,
+    socialInfo, venues, facilityDetails, weddingEventDetails, rateCodes, title,
+    modalDetails, categories, media, wellnessDetails],
 };

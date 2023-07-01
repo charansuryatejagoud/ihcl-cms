@@ -18,7 +18,7 @@ export default {
       title: "Award Details",
       type: 'array',
       of: [
-         {type:"awardDetails"}
+         {type:"basicInfo"}
       ]
     }
   ],

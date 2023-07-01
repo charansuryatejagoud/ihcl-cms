@@ -3,7 +3,7 @@ import { specificationTypes } from "../utility";
 export default {
 
     name: "modalDetails",
-    titile: "Modal Details",
+    title: "Modal Details",
     type: "object",
     fields: [
         {

@@ -8,18 +8,19 @@ export default {
             title: "Title",
             type: 'string',
         },
+        { name: 'icon', type: 'image', title: 'Icon' },
         {
-            name: "info",
-            title: "Info",
-            type: "object",
-            fields: [
-                { name: 'icon', type: 'string', title: 'Icon' },
+            name: "list",
+            title: "List",
+            type: "array",
+            of: [
                 {
                     name: 'bulletPoints',
                     title: 'Bullet points',
-                    type: 'array',
-                    of: [
-                        { name: "activity", title: "Activity", type: "string" }
+                    type: 'object',
+                    fields: [
+                        { name: 'mobileIcon', title: 'Mobile Icon', type: 'image' },
+                        { name: "item", title: "Item", type: "string" }
                     ]
                 },
             ]

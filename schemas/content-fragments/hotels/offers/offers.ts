@@ -21,7 +21,8 @@ export default {
     {
         name: "bannerImage",
         title: "Banner Image",
-        type: "media",
+        type: 'array',
+        of: [{ type: 'media' }]
     },
     {
       name: "offerDetails",

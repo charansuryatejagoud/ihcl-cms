@@ -14,11 +14,6 @@ export default {
       type: 'title',
     },
     {
-      name: "info",
-      title: "Info",
-      type: "string",
-    },
-    {
       name: "facilityDetails",
       title: "Facility  Details",
       type: "array",

@@ -21,11 +21,12 @@ export default {
         {
             name: "bannerImage",
             title: "Banner Image",
-            type: "media",
+            type: 'array',
+            of: [{ type: 'media' }]
         },
         {
             name: "roomsList",
-            title: "Rooms List",
+            title: "Rooms",
             type: "array",
             of: [
                 { type: "roomDetails" }

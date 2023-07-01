@@ -7,6 +7,7 @@ import {
 import { SchemaItem, VariantDefinition } from "../../types";
 import { hiddenField } from "../../shared-utils";
 import { contentTypes } from "../../constants";
+import { AlignmentVariant } from "../../constants";
 
 export default function placeholder({
   variants,
@@ -56,6 +57,16 @@ export default function placeholder({
         title: "Aesthetic",
         type: "reference",
         to: [{ type: "uiConfiguration" }],
+      },
+      {
+        name: "alignmentVariant",
+        title: "Alignment Variant",
+        type: "string",
+        description: "This variant is for Title and Subtitle alignment",
+        options: {
+          list: AlignmentVariant,
+        },
+        group: "main",
       },
       {
         name: "contentType",

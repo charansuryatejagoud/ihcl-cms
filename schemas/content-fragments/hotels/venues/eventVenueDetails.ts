@@ -5,12 +5,23 @@ const seatingStyles = [
 export default {
 
   name: "eventVenueDetails",
-  titile: "Event Venue Details",
+  title: "Event Venue Details",
   type: "object",
   fields: [
-    { name: 'title', type: 'string', title: 'Title' },
-    { name: 'code', type: 'string', title: 'Code' },
-    { name: 'type', type: 'string', title: 'Type' },
+    {
+      name: "basicInfo",
+      title: "Basic Info",
+      type: "basicInfo"
+    },
+    {
+      name: "highlights",
+      title: "Highlights",
+      type: "array",
+      of: [
+        { type: "string" }
+      ]
+    },
+    { name: 'capacity', type: 'string', title: 'Capacity' },
     {
       name: "seatingStyles",
       title: "Seating Styles",
@@ -24,25 +35,18 @@ export default {
         }
       ]
     },
-    { name: 'capacity', type: 'string', title: 'Capacity' },
-    { name: 'subTitle', type: 'string', title: 'Sub Title' },
-    { name: 'description', type: 'string', title: 'Description' },
-    {
-      name: "highlights",
-      title: "Highlights",
-      type: "array",
-      of: [
-        { type: "string"}
-      ]
+  ],
+  preview: {
+    select: {
+      title: 'basicInfo',
+      // subtitle: 'releaseDate'
     },
-    {
-      name: "images",
-      title: "Images",
-      type: "array",
-      of: [
-        { name: 'roomImage', type: 'image', title: 'Room Image' },
-      ]
-    },
-  ]
+    prepare(selection) {
+      const {title} = selection
+      return {
+        title: title.title
+      }
+    }
+  }
 
 }

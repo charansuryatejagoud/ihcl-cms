@@ -1,23 +1,16 @@
 export default {
 
     name: "roomDetails",
-    titile: "Room Details",
+    title: "Room Details",
     type: "object",
     fields: [
-        { name: 'title', type: 'string', title: 'Title' },
-        { name: 'roomCode', type: 'string', title: 'Room Code' },
-        // { name: 'rateCode', type: 'string', title: 'Rate Code' },
-        { name: 'type', type: 'string', title: 'Type' },
-        { name: 'subTitle', type: 'string', title: 'Sub Title' },
-        { name: 'description', type: 'string', title: 'Description' },
         {
-            name: "images",
-            title: "Images",
-            type: "array",
-            of: [
-                { name: 'roomImage', type: 'image', title: 'Room Image' },
-            ]
+            name: "basicInfo",
+            title: "Basic Info",
+            type: "basicInfo"
         },
+        { name: 'roomCode', type: 'string', title: 'Room Code' },
+        { name: 'type', type: 'string', title: 'Type' },
         {
             name: "rateCodeList",
             title: "Rate Code List",
@@ -31,17 +24,23 @@ export default {
                 },
             ]
         },
-        { name: 'roomModalDetails', type: 'modalDetails', title: 'Room Modal Details' },
-        // {
-        //     name: "packages",
-        //     title: "Packages",
-        //     type: "array",
-        //     of: [
-        //         { name: 'code', type: 'string', title: 'Code' },
-        //         { name: 'title', type: 'string', title: 'Title' },
-        //         { name: 'details', type: 'string', title: 'Details' },
-        //     ]
-        // },
-    ]
+        {
+            name: 'roomModalDetails',
+            type: 'modalDetails',
+            title: 'Room Modal Details'
+        },
+    ],
+    preview: {
+        select: {
+            title: 'basicInfo',
+            // subtitle: 'releaseDate'
+        },
+        prepare(selection) {
+            const { title } = selection
+            return {
+                title: title.title
+            }
+        }
+    }
 
 }

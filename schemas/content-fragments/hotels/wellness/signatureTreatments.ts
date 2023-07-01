@@ -18,7 +18,7 @@ export default {
       title: "Signature Treatment Details",
       type: "array",
       of: [
-        { type: "signatureTreatmentDetails" }
+        { type: "basicInfo" }
       ]
     },
   ],
