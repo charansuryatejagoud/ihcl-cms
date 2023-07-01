@@ -92,6 +92,14 @@ export const contentTypes = [
     title: "Hotel Highlights",
     value: "hotelHighlights",
   },
+  {
+    title: "Hotel Dining Exclusive Offers",
+    value: "hotelExclusiveOffersDining",
+  },
+  {
+    title: "Hotel Wellness Exclusive Offers",
+    value: "hotelExclusiveOffersWellness",
+  },
 ];
 
 export const actionTypes = [
