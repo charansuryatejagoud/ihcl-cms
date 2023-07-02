@@ -1,3 +1,5 @@
+import { addressTypes } from "../utility";
+
 export default {
   title:"Address",
     name: 'address',
@@ -7,6 +9,12 @@ export default {
         name: "title",
         title: "Title",
         type: "string",
+      },
+      {
+        name: "type",
+        title: "Type",
+        type: "string",
+        options: {list:addressTypes}
       },
       {
         name: "sectionTitle",

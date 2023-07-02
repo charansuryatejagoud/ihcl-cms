@@ -48,5 +48,14 @@ export default {
           title: "Hotel Essential Info",
           type: "string",
         },
+        {
+          name: "hotelInfo",
+          title: "Hotel Information",
+          type: "array",
+          of: [
+            { type: "facilityDetails" }
+          ]
+        },
+        
       ],
   }

@@ -9,16 +9,35 @@ export default {
       type: 'string',
     },
     {
-        name: "sectionTitle",
-        title: "Section Title",
-        type: 'title',
+      name: "sectionTitle",
+      title: "Section Title",
+      type: 'title',
     },
     {
       name: "awardDetails",
       title: "Award Details",
       type: 'array',
       of: [
-         {type:"basicInfo"}
+        {
+          type: "object",
+          fields: [{
+            name: 'basicInfo',
+            title: 'Basic Info',
+            type: 'basicInfo'
+          }],
+          preview: {
+            select: {
+              title: 'basicInfo',
+              // subtitle: 'releaseDate'
+            },
+            prepare(selection) {
+              const { title } = selection
+              return {
+                title: title.title
+              }
+            }
+          }
+        }
       ]
     }
   ],

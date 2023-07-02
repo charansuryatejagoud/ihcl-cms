@@ -44,7 +44,26 @@ export default {
                     title: "Perfect Event Details",
                     type: "array",
                     of: [
-                        { type: "basicInfo" }
+                        {
+                            type: "object",
+                            fields: [{
+                                name: 'basicInfo',
+                                title: 'Basic Info',
+                                type: 'basicInfo'
+                            }],
+                            preview: {
+                              select: {
+                                title: 'basicInfo',
+                                // subtitle: 'releaseDate'
+                              },
+                              prepare(selection) {
+                                const { title } = selection
+                                return {
+                                  title: title.title
+                                }
+                              }
+                            }
+                        }
                     ]
                 },
             ]

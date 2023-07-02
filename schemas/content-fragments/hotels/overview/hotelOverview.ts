@@ -20,7 +20,7 @@ export default {
       of: [{ type: 'media' }]
     },
     {
-      name: "overviewInfo",
+      name: "basicInfo",
       title: "Overview Info",
       type: 'basicInfo'
     },

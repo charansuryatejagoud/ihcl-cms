@@ -50,6 +50,8 @@ const appConfigItem = S.listItem()
 
 const contentFragments = S.listItem().title("CFs").child(
   S.list().title("CFs Types").items([
+    S.listItem().title("Property Overview").child(S.documentTypeList("hotelOverview")),
+    S.listItem().title("Availablity").child(S.documentTypeList("availability")),
     S.listItem().title("Highlights").child(S.documentTypeList("highlights")),
     S.listItem().title("Facilities").child(S.documentTypeList("facilities")),
     S.listItem().title("Rooms").child(S.documentTypeList("rooms")),
@@ -113,7 +115,7 @@ const standardListItems = [
       !["settings", "media.tag", "appConfig", "address", "contact","rooms", "roomInfo", "roomOffer", 
       "guestDetails", "awards", "wellness", "attractions", "signatureDining", "offers", "holidays", 
       "facilities", "experiences", "exclusiveOffers", "socialInfo", "venues", "gallery", "highlights", 
-      "rateCodes"].includes(listItem.getId()),
+      "rateCodes", "hotelOverview", "availability"].includes(listItem.getId()),
   ),
 ];
 

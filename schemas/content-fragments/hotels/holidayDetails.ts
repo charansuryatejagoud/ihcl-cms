@@ -4,19 +4,24 @@ export default {
     title: "Holiday Details",
     type: "object",
     fields: [
-        { name: 'title', type: 'string', title: 'Title' },
-        { name: 'subTitle', type: 'string', title: 'Sub Title' },
+        {
+            name: "basicInfo",
+            title: "Basic Info",
+            type: "basicInfo",
+        },
         { name: 'code', type: 'string', title: 'Code' },
         { name: 'type', type: 'string', title: 'Type' },
-        { name: 'description', type: 'string', title: 'Description' },
-        {
-            name: "images",
-            title: "Images",
-            type: "array",
-            of: [
-                { type: 'imageAsset' },
-            ]
+    ],
+    preview: {
+        select: {
+            title: 'basicInfo',
+            // subtitle: 'releaseDate'
         },
-    ]
-
+        prepare(selection) {
+            const { title } = selection
+            return {
+                title: title.title
+            }
+        }
+    }
 }

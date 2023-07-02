@@ -1,5 +1,5 @@
 export default {
-    title: "Facility details",
+    title: "Grid Info",
     name: 'facilityDetails',
     type: "object",
     fields: [
