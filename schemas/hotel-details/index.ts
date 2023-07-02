@@ -88,6 +88,18 @@ export const details: FeatureSchemaDefinition = {
         title: "[Details] Media Image Carousel",
         value: "details.group.media-image-carousel",
       },
+      {
+        title: "[Details] Group With Specifications",
+        value: "details.group.group-with-specifications",
+      },
+      {
+        title: "[Details] Group With Bullet Points",
+        value: "details.group.group-with-bullet-points",
+      },
+      {
+        title: "[details] Group With 4-Row 3-Column Grid",
+        value: "details.group.group-with-four-row-three-column-grid",
+      },
     ],
     card: [
       {
