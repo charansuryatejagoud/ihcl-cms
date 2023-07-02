@@ -7,7 +7,7 @@ import {
 import { SchemaItem, VariantDefinition } from "../../types";
 import { hiddenField } from "../../shared-utils";
 import { contentTypes } from "../../constants";
-import { AlignmentVariant } from "../../constants";
+import { AlignmentVariant, cardAlignmentVariant } from "../../constants";
 
 export default function placeholder({
   variants,
@@ -69,6 +69,16 @@ export default function placeholder({
         group: "main",
       },
       {
+        name: "cardAlignmentVariant",
+        title: "Card Alignment Variant",
+        type: "string",
+        description: "This variant is for Hypen preceding the Title  for card",
+        options: {
+          list: cardAlignmentVariant,
+        },
+        group: "main",
+      },
+      {
         name: "contentType",
         title: "Content Type",
         type: "string",
@@ -81,13 +91,13 @@ export default function placeholder({
         name: "groupActionType",
         title: "Group Action Type",
         type: "array",
-        of: [{ type: 'actionTypes' }]
+        of: [{ type: "actionTypes" }],
       },
       {
         name: "cardActionType",
         title: "Card Action Type",
         type: "array",
-        of: [{ type: 'actionTypes' }]
+        of: [{ type: "actionTypes" }],
       },
     ],
     preview: {

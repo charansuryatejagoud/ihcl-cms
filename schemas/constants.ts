@@ -41,20 +41,12 @@ export const inputFieldTypes = [
 
 export const AlignmentVariant = [
   {
-    title: "Regular With Two Row Title",
-    value: "regular-with-two-row-title",
+    title: "Center",
+    value: "center",
   },
   {
-    title: "Regular With One Row Title",
-    value: "regular-with-one-row-title",
-  },
-  {
-    title: "Center With One Row Title",
-    value: "center-with-one-row-title",
-  },
-  {
-    title: "Center With Multi Line Title",
-    value: "center-with-multi-line-title",
+    title: "Regular",
+    value: "regular",
   },
   {
     title: "Center Aligned Regular Title",
@@ -193,4 +185,9 @@ export const galleryCategories = [
     title: "Others",
     value: "others",
   },
+];
+
+export const cardAlignmentVariant = [
+  { title: "Preceding Hyphen Title", value: "preceding-hyphen-title" },
+  { title: "Normal Title", value: "normal-title" },
 ];
