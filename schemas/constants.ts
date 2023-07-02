@@ -127,6 +127,10 @@ export const contentTypes = [
     title: "Hotel Wellness Exclusive Offers",
     value: "hotelExclusiveOffersWellness",
   },
+  {
+    title: "Hotel Facilities",
+    value: "hotelFacilities",
+  },
 ];
 
 export const actionTypes = [
