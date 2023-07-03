@@ -3,22 +3,11 @@ import { IoApps, IoSettings } from "react-icons/io5";
 
 const AlignmentVariant = [
   {
-    title: " Title with Two Rows",
-    value: "title-with-two-rows",
-  },
-  {
-    title: " Short Hero Title With Two Rows",
-    value: "short-hero-title-with-two-rows",
-  },
-  {
-    title: " Short Hero Title With One Row",
-    value: "short-hero-title-with-one-row",
-  },
-  {
-    title: "Title With One Row",
-    value: "title-with-one-row",
+    title: "Normal",
+    value: "normal",
   },
 ];
+
 const variants = [
   {
     title: "Hero Banner",
@@ -187,7 +176,7 @@ export default {
   ],
   preview: {
     select: {
-      title: "title",
+      title: "title.desktopTitle",
       subtitle: "description",
       media: "image",
       hidden: "isHidden",
