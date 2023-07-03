@@ -31,19 +31,19 @@ import awards from "./awards/awards";
 import offers from "./offers/offers";
 import offerDetails from "./offers/offerDetails";
 import exclusiveOffersDetails from "./offers/exclusiveOffersDetails";
-import title from "../title";
 import modalDetails from "./rooms/modalDetails";
 import categories from "../categories";
 import media from "../media";
 import basicInfo from "../basicInfo";
 import wellnessDetails from "./wellness/wellnessDetails";
+import title from "../../commonUtils/title";
 
 export const hotels: FeatureSchemaDefinition = {
   schemas: [hotel, hotelOverview, address, availability, contact, gallery, wellness, attractions,
     spaDetails, signatureTreatments, signatureDining, rooms, offers, holidays, highlights,
     facilities, experiences, exclusiveOffers, eventVenues, awards, roomDetails,
     diningDetails, specifications, offerDetails, basicInfo,
-    holidayDetails, exclusiveOffersDetails, eventVenueDetails,
-    socialInfo, venues, facilityDetails, weddingEventDetails, rateCodes, title,
+    holidayDetails, exclusiveOffersDetails, eventVenueDetails, 
+    socialInfo, venues, facilityDetails, weddingEventDetails, rateCodes,
     modalDetails, categories, media, wellnessDetails],
 };
