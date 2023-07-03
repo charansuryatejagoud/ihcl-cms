@@ -22,6 +22,11 @@ export default {
       type: "string",
     },
     {
+      name: "tier",
+      title: "Tier",
+      type: "string",
+    },
+    {
       name: "image",
       title: "Images",
       type: "images",
@@ -39,9 +44,17 @@ export default {
   ],
   preview: {
     select: {
-      title: "title",
-      subtitle: "price",
+      title: "type",
+      subtitle: "tier",
+      price: "price",
       media: "image.largeImage",
     },
+    prepare({title,subtitle,media,price}) {
+      return {
+        title: title,
+        subtitle: `${subtitle} ${price ? price : "" }`,
+        media
+      }
+    }
   },
 };
