@@ -34,9 +34,13 @@ export const bannerVariants = [
     value: "gift-card-personalize-banner",
   },
   {
+    title: "Page Not Found",
+    value: "page-not-found"
+  },
+  {
     title: "Hero Banner (Layout Placeholder)",
     value: "hero-banner-layout-placeholder",
-  }
+  },
 ];
 
 export default {
@@ -61,7 +65,7 @@ export default {
     {
       title: "Title",
       name: "title",
-      type: "string",
+      type: "title",
       group: "main",
     },
     {

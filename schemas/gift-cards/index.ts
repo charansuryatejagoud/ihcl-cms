@@ -16,8 +16,8 @@ export const giftCards: FeatureSchemaDefinition = {
     },
     {
       title: "[Gift Card] Balance Reload",
-      value:"giftCards.connectedStores.balance-reload",
-    }
+      value: "giftCards.connectedStores.balance-reload",
+    },
   ],
   variants: {
     card: [
@@ -46,8 +46,8 @@ export const giftCards: FeatureSchemaDefinition = {
         value: "giftCards.card.member-purchase-details-with-cta",
       },
       {
-        title:"[Gift Card] Square Card With Profile",
-        value:"giftCards.card.square-card-with-profile"
+        title: "[Gift Card] Square Card With Profile",
+        value: "giftCards.card.square-card-with-profile",
       },
     ],
     group: [
@@ -62,7 +62,7 @@ export const giftCards: FeatureSchemaDefinition = {
       {
         title: "[Gift Card] Successful Purchase",
         value: "giftCards.group.successful-purchase",
-      }
+      },
     ],
 
     tabs: [
@@ -86,8 +86,12 @@ export const giftCards: FeatureSchemaDefinition = {
     placeholder: [
       {
         title: "[Gift Card] Reload Details",
-        value: "giftCards.placeholders.reload-details"
-      }
-    ]
+        value: "giftCards.placeholders.reload-details",
+      },
+      {
+        title: "[Gift Card] Reload Price Breakup",
+        value: "giftCards.placeholders.reload-price-breakup",
+      },
+    ],
   },
 };

@@ -6,6 +6,18 @@ import fetch from "node-fetch";
  1. Open cmd.
  2. Check out to scripts\gift-cards in cmd.
  3. Run sanity exec giftCards.ts
+ 4.npm exec giftCards.ts
+ 5.delete command:-
+ sanity documents delete <document-id>
+ * if you want to update the script monthly basis you need to install
+ npm install node-cron
+ 6.use this code
+ import cron from 'node-cron';
+
+// Schedule the task to run on the 1st of every month at 8:00 AM
+cron.schedule('0 8 1 * *', () => {
+  updateCatalog();
+});
 */
 
 run();
@@ -25,7 +37,7 @@ async function run() {
     useCdn: false,
   });
 
-  const response = await fetch("http://20.219.150.172:8084/gc/getProducts", {
+  const response = await fetch("https://api-devv2.tajhotels.com/loyaltyService/v1/qc/fetch-products", {
     method: "POST",
     headers: new Headers({
       "Content-Type": "application/json;charset=UTF-8",

@@ -41,7 +41,7 @@ const features: FeatureSchemaDefinition[] = [
   hotelBookings,
   myAccount,
   Offers,
-  aboutUs
+  aboutUs,
 ];
 
 export const featureDefinition: FeatureSchemaDefinition =

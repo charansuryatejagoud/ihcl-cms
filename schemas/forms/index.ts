@@ -16,7 +16,12 @@ export const ihclForms: FeatureSchemaDefinition = {
         value: "ihclForms.group.table-reservation",
       },
     ],
-    card: [],
+    card: [
+      {
+        title: "[IHCL Forms] Description with CTA",
+        value: "ihclForms.card.description-with-cta",
+      },
+    ],
     placeholder: [
       { title: "[IHCL Forms] Login Form", value: "ihclForms.placeholders.login-form" },
     ],
@@ -89,6 +94,10 @@ export const ihclForms: FeatureSchemaDefinition = {
         title: "[IHCL Forms] Venue Enquiry Modal",
         value: "ihclForms.venue-enquiry-modal",
       },
+      {
+        title: "[IHCL Forms] Dining Plan An Event Enquiry",
+        value: "ihclForms.dining-plan-an-event-enquiry",
+      }
     ],
   },
 };

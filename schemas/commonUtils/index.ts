@@ -13,10 +13,10 @@ import uiConfiguration from "./uiConfiguration";
 import divider from "./divider";
 import linkOnHover from "./linkOnHover";
 import inputField from "./inputField";
-import categoryHighlights from "./categoryHighlights";
 import items from "./items";
 import { images } from "./images";
 import membership from "./membership";
+import title from "./title";
 
 export const ihclcore: FeatureSchemaDefinition = {
   schemas: [
@@ -34,10 +34,10 @@ export const ihclcore: FeatureSchemaDefinition = {
     divider,
     linkOnHover,
     inputField,
-    categoryHighlights,
     items,
     images,
-    membership
+    membership,
+    title
   ],
   pageItems: [
     { type: "banner" },
@@ -55,6 +55,9 @@ export const ihclcore: FeatureSchemaDefinition = {
     {
       type: "formComponent",
     },
+    {
+      type: "authentication"
+    }
   ],
   groupItems: [
     { type: "richText" },
@@ -216,6 +219,10 @@ export const ihclcore: FeatureSchemaDefinition = {
         title: "Group With SignUp Form",
         value: "ihcl.core.group.signup-form",
       },
+      {
+        title: "Cookies Management System Modal",
+        value: "common-utils.group.cookies-management-system-modal",
+      },
     ],
     card: [
       {
@@ -348,6 +355,12 @@ export const ihclcore: FeatureSchemaDefinition = {
       {
         title: "Payments Switch Case",
         value: "ihcl.core.switchCaseBlock.payments",
+      },
+    ],
+    categoryHighlights: [
+      {
+        title: "category with logo and text",
+        value: "common-utils.categoryHighlights.category-with-logo-and-text",
       },
     ],
   },

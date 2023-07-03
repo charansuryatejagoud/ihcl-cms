@@ -37,6 +37,10 @@ export const inputFieldTypes = [
     title: "TextArea",
     value: "textarea",
   },
+  {
+    title: "Terms & Conditions Checkbox",
+    value: "terms-and-conditions-checkbox",
+  }
 ];
 
 export const AlignmentVariant = [

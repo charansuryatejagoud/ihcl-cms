@@ -55,6 +55,10 @@ export const loyalty: FeatureSchemaDefinition = {
       {
         title: "[Loyalty] Carousel with Membership Tabs",
         value: "loyalty.group.carousel-with-membership-tabs",
+      },
+      {
+        title: "[Loyalty] Carousel with selected Tabs",
+        value: "loyalty.group.carousel-with-selected-image-tabs",
       }
     ],
     card: [
@@ -90,6 +94,14 @@ export const loyalty: FeatureSchemaDefinition = {
       {
         title: "[Loyalty] Left Media with Group Of Gift Items Right Content",
         value: "loyalty.card.left-media-with-group-of-gift-items-right-content",
+      },
+      {
+        title: "[Loyalty] Chambers Details",
+        value: "loyalty.card.chambers-details",
+      },
+      {
+        title: "[Loyalty] Reverse Chambers Details",
+        value: "loyalty.card.reverse-chambers-details",
       },
     ],
     nudge: [
