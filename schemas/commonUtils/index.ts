@@ -16,6 +16,7 @@ import inputField from "./inputField";
 import items from "./items";
 import { images } from "./images";
 import membership from "./membership";
+import title from "./title";
 
 export const ihclcore: FeatureSchemaDefinition = {
   schemas: [
@@ -36,6 +37,7 @@ export const ihclcore: FeatureSchemaDefinition = {
     items,
     images,
     membership,
+    title
   ],
   pageItems: [
     { type: "banner" },
@@ -53,6 +55,9 @@ export const ihclcore: FeatureSchemaDefinition = {
     {
       type: "formComponent",
     },
+    {
+      type: "authentication"
+    }
   ],
   groupItems: [
     { type: "richText" },
@@ -215,8 +220,8 @@ export const ihclcore: FeatureSchemaDefinition = {
         value: "ihcl.core.group.signup-form",
       },
       {
-        title: "Cookie Management System Modal",
-        value: "common-utils.group.cookie-management-system-modal",
+        title: "Cookies Management System Modal",
+        value: "common-utils.group.cookies-management-system-modal",
       },
     ],
     card: [

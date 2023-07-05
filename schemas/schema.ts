@@ -22,6 +22,7 @@ import giftCardsCollection from "./core/documents/giftCardsCollection";
 import { dialogHeader } from "./commonUtils/dialogHeader";
 import form from "./commonUtils/form";
 import categoryHighlights from "./commonUtils/categoryHighlights";
+import authentication from "./commonUtils/authentication";
 
 export default createSchema({
   name: "default",
@@ -84,6 +85,9 @@ export default createSchema({
       items: featureDefinition.groupItems,
     }),
     form({ variants: featureDefinition.variants.forms }),
-    categoryHighlights({variants: featureDefinition.variants.categoryHighlights})
+    categoryHighlights({
+      variants: featureDefinition.variants.categoryHighlights,
+    }),
+    authentication({ variants: featureDefinition.variants.authentication }),
   ]),
 });
