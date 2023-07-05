@@ -113,6 +113,16 @@ export default {
         },
       ],
     },
+    {
+      title:"Primary Hamburger Logo",
+      name:"primaryHamburgerLogo",
+      type:"image"
+    },
+    {
+      title:"Secondary Hamburger Logo",
+      name:"secondaryHamburgerLogo",
+      type:"image"
+    },
 
     {
       name: "primaryAction",
