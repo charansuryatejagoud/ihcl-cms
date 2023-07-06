@@ -17,6 +17,7 @@ import items from "./items";
 import { images } from "./images";
 import membership from "./membership";
 import title from "./title";
+import cancellationDropdown from "../myAccount/cancellationDropdown";
 
 export const ihclcore: FeatureSchemaDefinition = {
   schemas: [
@@ -37,7 +38,8 @@ export const ihclcore: FeatureSchemaDefinition = {
     items,
     images,
     membership,
-    title
+    title,
+    cancellationDropdown
   ],
   pageItems: [
     { type: "banner" },
@@ -57,6 +59,9 @@ export const ihclcore: FeatureSchemaDefinition = {
     },
     {
       type: "authentication"
+    },
+    {
+      type: "custom"
     }
   ],
   groupItems: [
@@ -76,6 +81,14 @@ export const ihclcore: FeatureSchemaDefinition = {
     {
       type: "categoryHighlights",
     },
+    {
+      type: "custom"
+    }
+  ],
+  customItems: [
+    {
+      type: "cancellationDropdown"
+    }
   ],
   connectedStores: [
     {
