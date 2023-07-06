@@ -1,7 +1,7 @@
 import {
   IoApps,
   IoCodeWorking as ParameterMapIcon,
-  IoLogoWebComponent as Icon,
+  IoLogIn as Icon,
   IoSettings,
 } from "react-icons/io5";
 import { VariantDefinition } from "schemas/types";
@@ -73,6 +73,11 @@ export default function authentication({
           list: variants,
         },
         group: "main",
+      },
+      {
+        name: "ctaLabel",
+        title: "CTA Label",
+        type: "navigationItem",
       },
       {
         name: "primaryAction",

@@ -23,6 +23,7 @@ import { dialogHeader } from "./commonUtils/dialogHeader";
 import form from "./commonUtils/form";
 import categoryHighlights from "./commonUtils/categoryHighlights";
 import authentication from "./commonUtils/authentication";
+import custom from "./commonUtils/custom";
 
 export default createSchema({
   name: "default",
@@ -89,5 +90,8 @@ export default createSchema({
       variants: featureDefinition.variants.categoryHighlights,
     }),
     authentication({ variants: featureDefinition.variants.authentication }),
+    custom({
+      items: featureDefinition.customItems
+    }),
   ]),
 });
