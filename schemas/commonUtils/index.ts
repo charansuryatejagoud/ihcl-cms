@@ -85,11 +85,6 @@ export const ihclcore: FeatureSchemaDefinition = {
       type: "custom"
     }
   ],
-  customItems: [
-    {
-      type: "cancellationDropdown"
-    }
-  ],
   connectedStores: [
     {
       title: "Search Results",
