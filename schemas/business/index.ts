@@ -16,6 +16,10 @@ export const businessServices: FeatureSchemaDefinition = {
         title: "[Business Services] Group With 1:2 outer padding",
         value: "businessServices.group.group-with-1:2-outer-padding",
       },
+      {
+        title: "[Business Services] Full Width Media with Bottom Content",
+        value: "businessServices.group.full-width-media-with-bottom-content",
+      },
     ],
     card: [
       {
