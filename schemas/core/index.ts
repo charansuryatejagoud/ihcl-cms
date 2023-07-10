@@ -21,6 +21,7 @@ import reorderTransformer from "./transformers/reorder.transformer";
 import { cellSchema, rowSchema } from "./objects/dataGrid";
 import formGroup from "./objects/form-group";
 import navigationItem from "./objects/navigationItem";
+import propertyList from "./documents/participatingHotels/propertyList";
 
 export const core: FeatureSchemaDefinition = {
   schemas: [
@@ -46,6 +47,7 @@ export const core: FeatureSchemaDefinition = {
     cellSchema,
     rowSchema,
     formGroup,
+    propertyList
   ],
   transformers: [reorderTransformer],
   headers: [],
