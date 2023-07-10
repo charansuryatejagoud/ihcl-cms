@@ -30,6 +30,11 @@ export default {
       type: "string",
     },
     {
+      name: "city",
+      title: "City",
+      type: "string",
+    },
+    {
       name: "ctaLabel",
       title: "CTA Label",
       type: "navigationItem",
