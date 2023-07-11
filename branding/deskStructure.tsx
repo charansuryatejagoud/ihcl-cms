@@ -80,7 +80,7 @@ const standardListItems = [
 
   ...S.documentTypeListItems().filter(
     (listItem) =>
-      !["settings", "media.tag", "appConfig"].includes(listItem.getId()),
+      !["settings", "media.tag", "appConfig", "giftCardGroup"].includes(listItem.getId()),
   ),
 ];
 

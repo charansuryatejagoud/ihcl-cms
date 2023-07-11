@@ -24,6 +24,7 @@ import form from "./commonUtils/form";
 import categoryHighlights from "./commonUtils/categoryHighlights";
 import authentication from "./commonUtils/authentication";
 import custom from "./commonUtils/custom";
+import giftCardGroup from "./core/documents/giftCardsCollection/giftCardGroup";
 
 export default createSchema({
   name: "default",
@@ -82,6 +83,7 @@ export default createSchema({
     stepperComponent({ variants: featureDefinition.variants.stepper }),
     ...featureDefinition.schemas,
     giftCardsCollection,
+    giftCardGroup,
     dialogHeader({
       items: featureDefinition.groupItems,
     }),
