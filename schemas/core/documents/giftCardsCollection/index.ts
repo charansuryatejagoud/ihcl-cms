@@ -22,6 +22,7 @@ export default {
       title: "Font Color",
       name: "fontColor",
       type: "color",
+      description: "Field Used for Gift Card Preview Title and Description Font Colors"
     },
     {
       title: "Banner Image",
