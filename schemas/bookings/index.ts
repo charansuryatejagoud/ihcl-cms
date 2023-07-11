@@ -58,7 +58,7 @@ export const bookings: FeatureSchemaDefinition = {
       },
       {
         title: "[Bookings] Other Guest Details",
-        value: "bookings.placeholders.primary-guest-details",
+        value: "bookings.placeholders.other-guest-details",
       },
       {
         title: "[Bookings] Loyalty Product Price Details",
