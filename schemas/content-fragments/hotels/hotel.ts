@@ -14,6 +14,16 @@ export default {
       type: "string",
     },
     {
+      name: "hotelDescription",
+      title: "Hotel Description",
+      type: "string",
+    },
+    {
+      name: "hotelPath",
+      title: "Hotel URL",
+      type: "string",
+    },
+    {
       name: "hotelType",
       title: "Hotel Type",
       type: "string",

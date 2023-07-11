@@ -14,7 +14,7 @@ export default {
       type: "string",
     },
     {
-      name: "spaInfo",
+      name: "basicInfo",
       title: "Spa Info",
       type: 'basicInfo'
     },
