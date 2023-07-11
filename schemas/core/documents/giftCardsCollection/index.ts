@@ -19,6 +19,11 @@ export default {
       name: "description",
     },
     {
+      title: "Font Color",
+      name: "fontColor",
+      type: "color",
+    },
+    {
       title: "Banner Image",
       type: "images",
       name: "bannerImage",
