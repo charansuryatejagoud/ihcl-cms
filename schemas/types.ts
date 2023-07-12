@@ -37,6 +37,7 @@ export class FeatureSchemaProperties {
   variants: VariantSchemaDefinition;
   dialogSize: DialogSizeSchemaDefinition;
   transformers: Schema[];
+  customItems: SchemaItem[];
 }
 
 export type VariantSchemaDefinition = Partial<VariantSchemaProperties>;

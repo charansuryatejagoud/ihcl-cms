@@ -45,12 +45,6 @@ export default {
   ],
   fields: [
     {
-      title: "Is Guest Search",
-      name: "isGuestSearch",
-      type: "boolean",
-      initialValue: true,
-    },
-    {
       title: "Title",
       name: "title",
       type: "title",

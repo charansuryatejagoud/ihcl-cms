@@ -115,7 +115,7 @@ const standardListItems = [
       !["settings", "media.tag", "appConfig", "address", "contact","rooms", "roomInfo", "roomOffer", 
       "guestDetails", "awards", "wellness", "attractions", "signatureDining", "offers", "holidays", 
       "facilities", "experiences", "exclusiveOffers", "socialInfo", "venues", "gallery", "highlights", 
-      "rateCodes", "hotelOverview", "availability"].includes(listItem.getId()),
+      "rateCodes", "hotelOverview", "availability", "giftCardGroup"].includes(listItem.getId()),
   ),
 ];
 

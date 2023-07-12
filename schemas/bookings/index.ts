@@ -58,12 +58,16 @@ export const bookings: FeatureSchemaDefinition = {
       },
       {
         title: "[Bookings] Other Guest Details",
-        value: "bookings.placeholders.primary-guest-details",
+        value: "bookings.placeholders.other-guest-details",
       },
       {
         title: "[Bookings] Loyalty Product Price Details",
         value: "bookings.placeholders.loyalty-product-price-details",
       },
+      {
+        title: "[Bookings] Booking Mask Modal",
+        value: "bookings.placeholders.booking-mask-modal",
+      }
     ],
     nudge: [
       {
@@ -95,5 +99,11 @@ export const bookings: FeatureSchemaDefinition = {
         value: "bookings.tabs.bookings-payments",
       },
     ],
+    dialog: [
+      {
+        title: "[Bookings] Booking Mask",
+        value: "bookings.dialog.booking-mask",
+      }
+    ]
   },
 };

@@ -7,6 +7,11 @@ export const myAccount: FeatureSchemaDefinition = {
       value: "myAccount.stores.my-account-store",
     },
   ],
+  customItems: [
+    {
+      type: "cancellationDropdown",
+    },
+  ],
   variants: {
     group: [
       {
@@ -36,7 +41,7 @@ export const myAccount: FeatureSchemaDefinition = {
       {
         title: "[My Account] Change Booking Confirmed",
         value: "myAccount.group.change-booking-confirmed",
-      }
+      },
     ],
     card: [
       {
@@ -108,7 +113,7 @@ export const myAccount: FeatureSchemaDefinition = {
       {
         title: "[My Account] Booking Cancellation",
         value: "myAccount.placeholders.booking-cancellation",
-      }
+      },
     ],
     tabs: [
       {

@@ -31,6 +31,10 @@ export const Authentication: FeatureSchemaDefinition = {
         title: "[Authentication] Grey Grid",
         value: "authentication.group.grey-grid",
       },
+      {
+        title: "[Authentication] Membership Carousel",
+        value: "authentication.group.membership-carousel",
+      },
     ],
     card: [
       {
@@ -60,7 +64,7 @@ export const Authentication: FeatureSchemaDefinition = {
       {
         title: "[Authentication] Reset Password",
         value: "authentication.card.reset-password",
-      }
+      },
     ],
     nudge: [
       {
@@ -78,7 +82,7 @@ export const Authentication: FeatureSchemaDefinition = {
       {
         title: "[Authentication] Alert Message",
         value: "authentication.nudge.alert-message",
-      }
+      },
     ],
     dialog: [
       {
@@ -100,7 +104,7 @@ export const Authentication: FeatureSchemaDefinition = {
       {
         title: "[Authentication] Global Membership Login",
         value: "authentication.dialog.global-membership-login",
-      }
+      },
     ],
     tabs: [
       {
@@ -123,6 +127,6 @@ export const Authentication: FeatureSchemaDefinition = {
         title: "[Authentication] Mobile Number Verification",
         value: "authentication.mobile-number-verification",
       },
-    ]
+    ],
   },
 };

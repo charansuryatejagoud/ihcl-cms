@@ -1,5 +1,5 @@
 export default {
-  title: "Gift Cards Details",
+  title: "Gift Cards",
   type: "document",
   name: "giftCardsDetails",
   fields: [
@@ -7,6 +7,12 @@ export default {
       title: "SKU",
       type: "string",
       name: "sku",
+    },
+    {
+      title: "Category",
+      name: "category",
+      type: "reference",
+      to: [{ type: "giftCardGroup" }],
     },
     {
       title: "Name",
@@ -17,6 +23,12 @@ export default {
       title: "Description",
       type: "string",
       name: "description",
+    },
+    {
+      title: "Font Color",
+      name: "fontColor",
+      type: "color",
+      description: "Field Used for Gift Card Preview Title and Description Font Colors"
     },
     {
       title: "Banner Image",

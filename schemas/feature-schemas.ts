@@ -23,6 +23,7 @@ import { myAccount } from "./myAccount";
 import { hotelBookings } from "./content-fragments/hotelBookings";
 import { Offers } from "./offers";
 import { aboutUs } from "./aboutUs";
+import { events } from "./events";
 
 const features: FeatureSchemaDefinition[] = [
   core,
@@ -42,6 +43,7 @@ const features: FeatureSchemaDefinition[] = [
   myAccount,
   Offers,
   aboutUs,
+  events
 ];
 
 export const featureDefinition: FeatureSchemaDefinition =
