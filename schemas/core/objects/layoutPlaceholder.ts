@@ -28,11 +28,9 @@ export default function placeholder({
     fields: [
       { ...hiddenField, group: "main" },
       {
-        name: "charactersLimit",
-        title: "Characters Limit",
-        type: "number",
-        group: "main",
-        Description: "Number of characters limit for placeholder description.",
+        title: "Placeholder Title",
+        name: "title",
+        type: "string",
       },
       {
         name: "groupLargeVariant",
@@ -57,6 +55,13 @@ export default function placeholder({
         title: "Aesthetic",
         type: "reference",
         to: [{ type: "uiConfiguration" }],
+      },
+      {
+        name: "charactersLimit",
+        title: "Characters Limit",
+        type: "number",
+        group: "main",
+        Description: "Number of characters limit for placeholder description.",
       },
       {
         name: "alignmentVariant",
