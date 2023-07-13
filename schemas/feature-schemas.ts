@@ -20,7 +20,6 @@ import { businessServices } from "./business";
 import hotel from "./content-fragments/hotels/hotel";
 import { hotels } from "./content-fragments/hotels";
 import { myAccount } from "./myAccount";
-import { hotelBookings } from "./content-fragments/hotelBookings";
 import { Offers } from "./offers";
 import { aboutUs } from "./aboutUs";
 import { events } from "./events";
@@ -39,7 +38,6 @@ const features: FeatureSchemaDefinition[] = [
   partners,
   businessServices,
   hotels,
-  hotelBookings,
   myAccount,
   Offers,
   aboutUs,
