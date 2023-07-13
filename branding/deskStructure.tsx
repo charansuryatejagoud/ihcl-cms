@@ -70,7 +70,7 @@ const contentFragments = S.listItem().title("CFs").child(
     S.listItem().title("Address").child(S.documentTypeList("address")),
     S.listItem().title("Contact").child(S.documentTypeList("contact")),
     // S.listItem().title("Room Offers").child(S.documentTypeList("roomOffer")),
-    S.listItem().title("Guest Details").child(S.documentTypeList("guestDetails"))
+    // S.listItem().title("Guest Details").child(S.documentTypeList("guestDetails"))
   ])
 )  
 // const contentFragments = S.listItem().title("Bookings").child(
@@ -112,8 +112,8 @@ const standardListItems = [
 
   ...S.documentTypeListItems().filter(
     (listItem) =>
-      !["settings", "media.tag", "appConfig", "address", "contact","rooms", "roomInfo", "roomOffer", 
-      "guestDetails", "awards", "wellness", "attractions", "signatureDining", "offers", "holidays", 
+      !["settings", "media.tag", "appConfig", "address", "contact","rooms", "roomInfo", "roomOffer",
+      "awards", "wellness", "attractions", "signatureDining", "offers", "holidays", 
       "facilities", "experiences", "exclusiveOffers", "socialInfo", "venues", "gallery", "highlights", 
       "rateCodes", "hotelOverview", "availability", "giftCardGroup"].includes(listItem.getId()),
   ),
