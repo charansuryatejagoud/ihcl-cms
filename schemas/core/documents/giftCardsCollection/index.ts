@@ -2,6 +2,9 @@ export default {
   title: "Gift Cards",
   type: "document",
   name: "giftCardsDetails",
+  initialValue: {
+    isPhysicalGIftCard: false,
+  },
   fields: [
     {
       title: "SKU",
@@ -25,10 +28,16 @@ export default {
       name: "description",
     },
     {
+      title: "Is Physical GIft Card",
+      type: "boolean",
+      name: "isPhysicalGIftCard",
+    },
+    {
       title: "Font Color",
       name: "fontColor",
       type: "color",
-      description: "Field Used for Gift Card Preview Title and Description Font Colors"
+      description:
+        "Field Used for Gift Card Preview Title and Description Font Colors",
     },
     {
       title: "Banner Image",
