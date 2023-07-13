@@ -62,6 +62,29 @@ export const AlignmentVariant = [
   },
 ];
 
+export const hotelTypes = [
+  {
+    title: "Hotels",
+    value: "hotels",
+  },
+  {
+    title: "Palaces",
+    value: "palaces",
+  },
+  {
+    title: "Safaris",
+    value: "safaris",
+  },
+  {
+    title: "Resorts",
+    value: "resorts",
+  },
+  {
+    title: "Residencies",
+    value: "residencies",
+  },
+];
+
 export const contentTypes = [
   {
     title: "Hotel Rooms",

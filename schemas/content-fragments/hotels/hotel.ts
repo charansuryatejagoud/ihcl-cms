@@ -1,3 +1,5 @@
+import { hotelTypes } from "../../constants";
+
 export default {
   name: "hotel",
   title: "Hotels",
@@ -27,6 +29,9 @@ export default {
       name: "hotelType",
       title: "Hotel Type",
       type: "string",
+      options: {
+        list: hotelTypes,
+      },
     },
     {
       name: "hotelSubType",
