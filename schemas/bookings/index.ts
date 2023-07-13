@@ -67,6 +67,10 @@ export const bookings: FeatureSchemaDefinition = {
       {
         title: "[Bookings] Booking Mask Modal",
         value: "bookings.placeholders.booking-mask-modal",
+      },
+      {
+        title: "[Bookings] Bottom Navigation Cart Details",
+        value: "bookings.placeholders.bottom-navigation-cart-details",
       }
     ],
     nudge: [
@@ -98,6 +102,10 @@ export const bookings: FeatureSchemaDefinition = {
         title: "[Bookings] Bookings Payments Tabs",
         value: "bookings.tabs.bookings-payments",
       },
+      {
+        title: "[Bookings] selectable Buttons",
+        value: "bookings.tabs.selectable-buttons",
+      }
     ],
     dialog: [
       {
