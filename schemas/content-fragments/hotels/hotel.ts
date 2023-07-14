@@ -16,6 +16,11 @@ export default {
       type: "string",
     },
     {
+      name: "brandId",
+      title: "Brand Id",
+      type: "string",
+    },
+    {
       name: "hotelDescription",
       title: "Hotel Description",
       type: "string",
