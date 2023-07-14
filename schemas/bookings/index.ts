@@ -71,6 +71,10 @@ export const bookings: FeatureSchemaDefinition = {
       {
         title: "[Bookings] Bottom Navigation Cart Details",
         value: "bookings.placeholders.bottom-navigation-cart-details",
+      },
+      {
+        title: "[Bookings] Payment Details CC Avenue",
+        value: "bookings.placeholders.payment-details-cc-avenue"
       }
     ],
     nudge: [

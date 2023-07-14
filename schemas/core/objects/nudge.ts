@@ -41,6 +41,16 @@ export default function nudge({ variants }: { variants: VariantDefinition[] }) {
         Description: "Number of characters limit for nudge description.",
       },
       {
+        name: "text",
+        title: "Text",
+        type: "array",
+        of: [
+          {
+            type: "textEditor",
+          },
+        ],
+      },
+      {
         name: "variant",
         title: "Variant",
         type: "string",
