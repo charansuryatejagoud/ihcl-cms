@@ -134,10 +134,38 @@ export default function group({
         title: "Gift Card Category",
         type: "reference",
         to: [{ type: "giftCardGroup" }],
-        description:"This Field is a Reference to specify Gift Card Category",
+        description: "This Field is a Reference to specify Gift Card Category",
         hidden: ({ parent }) =>
           parent?.largeVariant != "giftCards.group.2-by-3-grid" &&
           parent?.variant != "giftCards.group.2-by-3-grid",
+      },
+      {
+        title: "Start Date",
+        name: "startDate",
+        type: "datetime",
+        options: {
+          dateFormat: "YYYY-MM-DD",
+          timeFormat: "HH:mm",
+          calendarTodayLabel: "Today",
+        },
+        description: "Used for Showing Social Feeds based on Time Period",
+        hidden: ({ parent }) =>
+          parent?.largeVariant !==
+          "ihcl.core.group.multiple-row-four-column-grid",
+      },
+      {
+        title: "End Date",
+        name: "endDate",
+        type: "datetime",
+        options: {
+          dateFormat: "YYYY-MM-DD",
+          timeFormat: "HH:mm",
+          calendarTodayLabel: "Today",
+        },
+        description: "Used for Showing Social Feeds based on Time Period",
+        hidden: ({ parent }) =>
+          parent?.largeVariant !==
+          "ihcl.core.group.multiple-row-four-column-grid",
       },
       {
         name: "logo",

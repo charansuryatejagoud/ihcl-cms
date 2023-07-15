@@ -13,16 +13,16 @@ export default {
       title: "Text",
       type: "array",
       of: [
-        {
-          type: "object",
-          fields: [
+        // {
+        //   type: "object",
+        //   fields: [
             {
-              name: "value",
-              title: "Value",
+              // name: "value",
+              // title: "Value",
               type: "string",
             },
-          ],
-        },
+          // ],
+        // },
       ],
     },
     {

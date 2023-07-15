@@ -20,14 +20,14 @@ import fileDocument from "./objects/fileDocument";
 import reorderTransformer from "./transformers/reorder.transformer";
 import { cellSchema, rowSchema } from "./objects/dataGrid";
 import formGroup from "./objects/form-group";
-import navigationItem from "./objects/navigationItem";
+import { navigationItem } from "./objects/navigationItem";
 
 export const core: FeatureSchemaDefinition = {
   schemas: [
     category,
     settings,
     link,
-    navigationItem,
+    // navigationItem(),
     blockImage,
     seo,
     blockContent,
