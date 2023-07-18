@@ -65,6 +65,34 @@ export default function placeholder({
         group: "main",
       },
       {
+        title: "Start Date",
+        name: "startDate",
+        type: "datetime",
+        options: {
+          dateFormat: "YYYY-MM-DD",
+          timeFormat: "HH:mm",
+          calendarTodayLabel: "Today",
+        },
+        description: "Used for Showing Social Feeds based on Time Period",
+        hidden: ({ parent }) =>
+          parent?.variant !==
+          "common-utils.placeholders.social-feed",
+      },
+      {
+        title: "End Date",
+        name: "endDate",
+        type: "datetime",
+        options: {
+          dateFormat: "YYYY-MM-DD",
+          timeFormat: "HH:mm",
+          calendarTodayLabel: "Today",
+        },
+        description: "Used for Showing Social Feeds based on Time Period",
+        hidden: ({ parent }) =>
+          parent?.variant !==
+          "common-utils.placeholders.social-feed",
+      },
+      {
         name: "documents",
         title: "Documents",
         description: "Documents supported are PDF and DOCX.",
