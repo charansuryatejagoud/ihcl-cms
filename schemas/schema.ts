@@ -26,7 +26,7 @@ import authentication from "./commonUtils/authentication";
 import custom from "./commonUtils/custom";
 import giftCardGroup from "./core/documents/giftCardsCollection/giftCardGroup";
 import { textActionList, textEditor } from "./commonUtils/textEditor";
-import { navigation, navigationItem } from "./core/objects/navigationItem";
+import { navigation, navigationItem, navigationList } from "./core/objects/navigationItem";
 
 export default createSchema({
   name: "default",
@@ -90,6 +90,7 @@ export default createSchema({
     textEditor(),
     navigation(),
     navigationItem(),
+    navigationList(),
     dialogHeader({
       items: featureDefinition.groupItems,
     }),
