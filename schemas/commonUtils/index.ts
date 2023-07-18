@@ -18,6 +18,9 @@ import { images } from "./images";
 import membership from "./membership";
 import title from "./title";
 import cancellationDropdown from "../myAccount/cancellationDropdown";
+import taxonomies from "./taxonomies";
+import customBlock from "./customBlock";
+import portableText from "./portableText";
 
 export const ihclcore: FeatureSchemaDefinition = {
   schemas: [
@@ -39,7 +42,9 @@ export const ihclcore: FeatureSchemaDefinition = {
     images,
     membership,
     title,
-    cancellationDropdown
+    cancellationDropdown,
+    customBlock,
+    portableText
   ],
   pageItems: [
     { type: "banner" },
