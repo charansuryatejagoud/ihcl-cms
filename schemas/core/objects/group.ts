@@ -140,34 +140,6 @@ export default function group({
           parent?.variant != "giftCards.group.2-by-3-grid",
       },
       {
-        title: "Start Date",
-        name: "startDate",
-        type: "datetime",
-        options: {
-          dateFormat: "YYYY-MM-DD",
-          timeFormat: "HH:mm",
-          calendarTodayLabel: "Today",
-        },
-        description: "This Field is for Selecting Start Day of the Social Feed",
-        hidden: ({ parent }) =>
-          parent?.largeVariant !==
-          "ihcl.core.group.multiple-row-four-column-grid",
-      },
-      {
-        title: "End Date",
-        name: "endDate",
-        type: "datetime",
-        options: {
-          dateFormat: "YYYY-MM-DD",
-          timeFormat: "HH:mm",
-          calendarTodayLabel: "Today",
-        },
-        description: "This Field is for Selecting End Day of the Social Feed",
-        hidden: ({ parent }) =>
-          parent?.largeVariant !==
-          "ihcl.core.group.multiple-row-four-column-grid",
-      },
-      {
         name: "logo",
         title: "Logo",
         type: "image",
