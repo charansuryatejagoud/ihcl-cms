@@ -327,6 +327,10 @@ export const ihclcore: FeatureSchemaDefinition = {
         title: "Search-Result-Component",
         value: "ihcl.core.search-result-component",
       },
+      {
+        title: "Social Feed",
+        value: "common-utils.placeholders.social-feed"
+      }
     ],
     nudge: [
       { title: "Default Nudge", value: "ihcl.core.nudge.default" },
