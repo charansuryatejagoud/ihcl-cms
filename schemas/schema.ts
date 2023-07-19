@@ -59,7 +59,6 @@ export default createSchema({
     }),
 
     card({ variants: featureDefinition.variants.card }),
-    cardLayout({ variants: featureDefinition.variants.card }),
     nudge({ variants: featureDefinition.variants.nudge }),
 
     placeholder({ variants: featureDefinition.variants.placeholder }),

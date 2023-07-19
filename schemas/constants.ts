@@ -62,6 +62,25 @@ export const AlignmentVariant = [
   },
 ];
 
+export const propertyCategories = [
+  {
+    title: "Hotels",
+    value: "hotels",
+  },
+  {
+    title: "Restaurants",
+    value: "restaurants",
+  },
+  {
+    title: "Destinations",
+    value: "destinations",
+  },
+  {
+    title: "Holidays",
+    value: "holidays",
+  },
+];
+
 export const hotelTypes = [
   {
     title: "Hotels",
@@ -82,6 +101,41 @@ export const hotelTypes = [
   {
     title: "Residencies",
     value: "residencies",
+  },
+];
+
+export const holidayTypes = [
+  {
+    title: "Beach retreats",
+    value: "beachRetreats",
+  },
+  {
+    title: "Hill stations",
+    value: "hillStations",
+  },
+  {
+    title: "Royal India",
+    value: "royalIndia",
+  },
+  {
+    title: "Urban oasis",
+    value: "urbanOasis",
+  },
+  {
+    title: "Wilderness getaways",
+    value: "wildernessGetaways",
+  },
+  {
+    title: "Spa retreats",
+    value: "spaRetreats",
+  },
+  {
+    title: "Cultural carnivals",
+    value: "culturalCarnivals",
+  },
+  {
+    title: "International holidays",
+    value: "internationalHolidays",
   },
 ];
 

@@ -98,9 +98,6 @@ export const core: FeatureSchemaDefinition = {
       type: "card",
     },
     {
-      type: "cardLayout",
-    },
-    {
       type: "nudge",
     },
     {
