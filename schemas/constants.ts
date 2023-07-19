@@ -104,7 +104,26 @@ export const hotelTypes = [
   },
 ];
 
-export const holidayTypes = [
+export const holidayExperiences = [
+  {
+    title: "Family Getaways",
+    value: "familyGetaways",
+  },
+  {
+    title: "Romantic Getaways",
+    value: "romanticGetaways",
+  },
+  {
+    title: "Incerdible Itineraries",
+    value: "incredibleItineraries",
+  },
+  {
+    title: "Woyage",
+    value: "woyage",
+  },
+];
+
+export const holidayThemes = [
   {
     title: "Beach retreats",
     value: "beachRetreats",

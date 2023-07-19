@@ -10,25 +10,7 @@ export default {
             name: "specifications",
             title: "Specifications",
             type: "array",
-            of: [
-                {
-                    name: "item",
-                    title: "Item",
-                    type: "object",
-                    fields: [
-                        {
-                            title: "Key",
-                            name: "key",
-                            type: "string",
-                            options: {
-                                list: specificationTypes
-                            }
-                        },
-                        { name: 'value', type: 'string', title: 'Value' },
-
-                    ]
-                }
-            ]
+            of: [{ type: 'specifications' }]
         },
         {
             name: "highlights",

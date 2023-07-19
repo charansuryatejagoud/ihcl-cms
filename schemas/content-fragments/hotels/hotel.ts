@@ -1,4 +1,4 @@
-import { hotelTypes } from "../../constants";
+import { holidayExperiences, holidayThemes, hotelTypes, propertyCategories } from "../../constants";
 
 export default {
   name: "hotel",
@@ -7,12 +7,12 @@ export default {
   fields: [
     {
       name: "hotelName",
-      title: "Hotel Name",
+      title: "Name",
       type: "string",
     },
     {
       name: "hotelId",
-      title: "Hotel Id",
+      title: "Id",
       type: "string",
     },
     {
@@ -22,164 +22,175 @@ export default {
     },
     {
       name: "hotelDescription",
-      title: "Hotel Description",
+      title: "Description",
       type: "string",
     },
     {
       name: "hotelPath",
-      title: "Hotel URL",
+      title: "URL",
       type: "string",
     },
     {
-      name: "hotelType",
-      title: "Hotel Type",
-      type: "string",
-      options: {
-        list: hotelTypes,
-      },
+      name: "taxonomies",
+      title: "Taxonomies",
+      type: "object",
+      fields: [
+        {
+          name: "propertyCategory",
+          title: "Category",
+          type: "string",
+          options: { list: propertyCategories }
+        },
+        {
+          name: "hotelType",
+          title: "Hotel Type",
+          type: "string",
+          options: {
+            list: hotelTypes,
+          },
+        },
+        {
+          name: "holidayExperience",
+          title: "Holiday Experience",
+          type: "string",
+          options: {
+            list: holidayExperiences,
+          },
+        },
+        {
+          name: "holidayTheme",
+          title: "Holiday THeme",
+          type: "string",
+          options: {
+            list: holidayThemes,
+          },
+        },
+      ]
     },
     {
       name: "hotelSubType",
-      title: "Hotel Sub Type",
+      title: "Sub Type",
       type: "string",
     },
     {
       name: "hotelOverview",
-      title: "Hotel Overview",
+      title: "Overview",
       type: 'reference',
-      to: [{type: "hotelOverview" }]
+      to: [{ type: "hotelOverview" }]
     },
     {
       name: "hotelAddress",
-      title: "Hotel Address",
+      title: "Address",
       type: 'reference',
-      to: [{type: "address" }]
+      to: [{ type: "address" }]
     },
     {
       name: "hotelContact",
-      title: "Hotel Contact",
+      title: "Contact",
       type: 'reference',
-      to: [{type: "contact" }]
+      to: [{ type: "contact" }]
     },
     {
       name: "hotelAvailability",
-      title: "Hotel Availability",
+      title: "Availability",
       type: 'reference',
-      to: [{type: "availability" }]
+      to: [{ type: "availability" }]
     },
     {
       name: "hotelFacilities",
-      title: "Hotel Facilities",
+      title: "Facilities",
       type: 'reference',
-      to: [{type: "facilities" }]
+      to: [{ type: "facilities" }]
     },
     {
       name: "hotelAwards",
-      title: "Hotel Awards",
+      title: "Awards",
       type: 'reference',
-      to: [{type: "awards" }]
+      to: [{ type: "awards" }]
     },
     {
       name: "hotelSocialInfo",
-      title: "Hotel Social Info",
+      title: "Social Info",
       type: 'reference',
-      to: [{type: "socialInfo" }]
+      to: [{ type: "socialInfo" }]
     },
     {
       name: "hotelRooms",
-      title: "Hotel Rooms",
+      title: "Rooms",
       type: 'reference',
-      to: [{type: "rooms" }]
+      to: [{ type: "rooms" }]
     },
     {
       name: "hotelHighlights",
-      title: "Hotel Highlights",
+      title: "Highlights",
       type: 'reference',
-      to: [{type: "highlights" }]
+      to: [{ type: "highlights" }]
     },
     {
       name: "hotelExclusiveOffersDining",
-      title: "Hotel Exclusive Offers(Dining)",
+      title: "Exclusive Offers(Dining)",
       type: 'reference',
-      to: [{type: "exclusiveOffers" }]
+      to: [{ type: "exclusiveOffers" }]
     },
     {
       name: "hotelExclusiveOffersWellness",
-      title: "Hotel Exclusive Offers(Wellness)",
+      title: "Exclusive Offers(Wellness)",
       type: 'reference',
-      to: [{type: "exclusiveOffers" }]
+      to: [{ type: "exclusiveOffers" }]
     },
     {
       name: "hotelExclusiveOffersRooms",
-      title: "Hotel Exclusive Offers(Rooms)",
+      title: "Exclusive Offers(Rooms)",
       type: 'reference',
-      to: [{type: "exclusiveOffers" }]
+      to: [{ type: "exclusiveOffers" }]
     },
     {
       name: "hotelOffers",
-      title: "Hotel Offers",
+      title: "Offers",
       type: 'reference',
-      to: [{type: "offers" }]
+      to: [{ type: "offers" }]
     },
     {
       name: "hotelHolidays",
-      title: "Hotel Holidays",
+      title: "Holidays",
       type: 'reference',
-      to: [{type: "holidays" }]
+      to: [{ type: "holidays" }]
     },
     {
       name: "hotelSignatureDining",
-      title: "Hotel Signature Dining",
+      title: "Signature Dining",
       type: 'reference',
-      to: [{type: "signatureDining" }]
+      to: [{ type: "signatureDining" }]
     },
     {
       name: "hotelEventVenues",
-      title: "Hotel Event Venues",
+      title: "Event Venues",
       type: 'reference',
-      to: [{type: "venues" }]
+      to: [{ type: "venues" }]
     },
-    // {
-    //   name: "hotelPerfectEvent",
-    //   title: "Hotel Perfect Event",
-    //   type: 'reference',
-    //   to: [{type: "perfectEvent" }]
-    // },
-    // {
-    //   name: "hotelSpaDetails",
-    //   title: "Hotel Spa Details",
-    //   type: 'reference',
-    //   to: [{type: "spaDetails" }]
-    // },
-    // {
-    //   name: "hotelSignatureTreatments",
-    //   title: "Hotel Signature Treatments",
-    //   type: 'reference',
-    //   to: [{type: "signatureTreatments" }]
-    // },
     {
       name: "hotelWellness",
-      title: "Hotel Wellness",
+      title: "Wellness",
       type: 'reference',
-      to: [{type: "wellness" }]
+      to: [{ type: "wellness" }]
     },
     {
       name: "hotelExperiences",
-      title: "Hotel Experiences",
+      title: "Experiences",
       type: 'reference',
-      to: [{type: "experiences" }]
+      to: [{ type: "experiences" }]
     },
     {
       name: "hotelGallery",
-      title: "Hotel Gallery",
+      title: "Gallery",
       type: 'reference',
-      to: [{type: "gallery" }]
+      to: [{ type: "gallery" }]
     },
     {
       name: "hotelAttractions",
-      title: "Hotel Attractions",
+      title: "Attractions",
       type: 'reference',
-      to: [{type: "attractions" }]
+      to: [{ type: "attractions" }]
     },
   ],
 };
