@@ -14,7 +14,7 @@ export const inputFieldTypes = [
     value: "phoneNumber",
   },
   {
-    title: "Drop Down",
+    title: "Dropdown",
     value: "dropDown",
   },
   {

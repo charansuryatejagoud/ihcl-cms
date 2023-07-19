@@ -49,6 +49,10 @@ export const giftCards: FeatureSchemaDefinition = {
         title: "[Gift Card] Square Card With Profile",
         value: "giftCards.card.square-card-with-profile",
       },
+      {
+        title: "[Gift Card] selectable Tab",
+        value: "giftCards.card.selectable-tab",
+      }
     ],
     group: [
       {
