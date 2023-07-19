@@ -55,6 +55,16 @@ export default {
         },
       ],
     },
+    {
+      name: "propertyList",
+      title: "Property List",
+      type: "array",
+      of: [
+        {
+          type: "propertyList",
+        }
+      ]
+    }
   ],
   preview: {
     prepare: () => {
