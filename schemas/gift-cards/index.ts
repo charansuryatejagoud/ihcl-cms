@@ -80,6 +80,10 @@ export const giftCards: FeatureSchemaDefinition = {
         title: "[Gift Card] Participating Hotel Search",
         value: "giftCards.form.participating-hotel-search",
       },
+      {
+        title: "[Gift Card] Member Purchase Details with CTA",
+        value: "giftCards.form.member-purchase-details-with-cta"
+      }
     ],
     dialog: [
       {

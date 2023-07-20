@@ -9,8 +9,9 @@ import { VariantDefinition } from "schemas/types";
 const authenticationTypes = [
   { title: "Mobile", value: "mobile" },
   { title: "Email", value: "email" },
-  { title: "Membership", value: "membership" },
   { title: "Forgot Password", value: "forgotPassword" },
+  { title: "Chambers Membership", value: "chambersMembership" },
+  { title: "Epicure Membership", value: "epicureMembership" },
 ];
 
 export default function authentication({
@@ -108,7 +109,7 @@ export default function authentication({
         const variantText = variant ? `(${variant})` : "";
 
         return {
-          title: `${hiddenIndicator}${title ?? "<Placeholder>"}`,
+          title: `${hiddenIndicator}${title ?? "<Authentication>"}`,
           subtitle: `${subtitle ?? ""}${variantText}`,
         };
       },

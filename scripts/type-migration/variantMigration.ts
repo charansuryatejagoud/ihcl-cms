@@ -26,9 +26,9 @@ async function run() {
   let pageResponse;
   let pageItems;
   await client
-    .fetch(`*[_type == "page" && path == "/testing"][0]{...}`)
+    .fetch(`*[_type == "page" && path == "/test-script"][0]{...}`)
     .then((response) => {
-      console.log(response);
+      // console.log(response);
       pageResponse = response;
       pageItems = response.items;
     })
@@ -44,8 +44,8 @@ async function run() {
   */
 
   const updatedItems = pageItems?.map((item) => {
-    console.log(item._type);
-    const newItem = extractItems(item, "variant", "mobileVariant");
+    console.log("groupLevel 1 ", item._type);
+    const newItem = extractItems(item, "highLights", "highLights");
     return newItem;
   });
 
@@ -61,11 +61,15 @@ async function run() {
     .set({ items: updatedItems })
     .commit()
     .then((res) => {
-      console.log("Updated!");
-      console.log(res);
+      console.log(res?.path + " Updated!");
     })
     .catch((err) => {
-      console.error("Oh no, the update failed: ", err.message);
+      console.error(
+        "Oh no, the update failed: ",
+        pageResponse.path,
+        "Error : ",
+        err.message,
+      );
     });
 }
 
@@ -73,7 +77,10 @@ function extractItems(item, existingKey, newKey) {
   item?.items?.map((nestedItem) => {
     extractItems(nestedItem, existingKey, newKey);
   });
-  replaceKey(item, existingKey, newKey);
+  // replaceKey(item, existingKey, newKey);
+  convertStringToArrayInCard(item, existingKey);
+  console.log("Deep Nested item ", item._type);
+
   return item;
 }
 
@@ -84,3 +91,20 @@ function replaceKey(item, existingKey, newKey) {
   }
   return item;
 }
+
+function convertStringToArrayInCard(item, existingKey) {
+  // console.log("nesteditem 3 : " , item._type);
+  console.log("sting item ", item[existingKey]);
+
+  if (item[existingKey] && item._type === "card") {
+    item[existingKey] = [item[existingKey]];
+  }
+  return item;
+}
+
+// function convertImageFieldToObject(item, existing){
+//   console.log("Image ", item )
+//   if(item[]) {
+
+//   }
+// }

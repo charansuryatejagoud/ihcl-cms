@@ -20,7 +20,11 @@ export const Authentication: FeatureSchemaDefinition = {
       value: "authentication.stores.register-store",
     },
   ],
-
+  customItems: [
+    {
+      type: "membershipLogin" 
+    }
+  ],
   variants: {
     group: [
       {
