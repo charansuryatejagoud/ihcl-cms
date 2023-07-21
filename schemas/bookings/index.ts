@@ -23,6 +23,7 @@ export const bookings: FeatureSchemaDefinition = {
         value: "bookings.switchCaseBlock.booking-confirmation",
       },
     ],
+
     placeholder: [
       {
         title: "[Bookings] Hotels Rooms",
