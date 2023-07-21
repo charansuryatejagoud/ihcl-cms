@@ -101,10 +101,3 @@ function convertStringToArrayInCard(item, existingKey) {
   }
   return item;
 }
-
-// function convertImageFieldToObject(item, existing){
-//   console.log("Image ", item )
-//   if(item[]) {
-
-//   }
-// }
