@@ -8,7 +8,6 @@ import holidays from "./holidays";
 import experiences from "./experiences";
 import exclusiveOffers from "./offers/exclusiveOffers";
 import diningDetails from "./dining/diningInfo";
-import specifications from "./specifications";
 import attractions from "./attractions/attractions";
 import holidayDetails from "./holidayInfo";
 import socialInfo from "./socialInfo";
@@ -21,7 +20,7 @@ import spaDetails from "./wellness/spaInfo";
 import signatureTreatments from "./wellness/treatments";
 import roomDetails from "./rooms/roomInfo";
 import signatureDining from "./dining/signatureDining";
-import hotelOverview from "./overview/overview";
+import overview from "./overview/overview";
 import availability from "./overview/availability";
 import highlights from "./overview/highlights";
 import facilityDetails from "./overview/facilityInfo";
@@ -41,7 +40,7 @@ import title from "../../commonUtils/title";
 export const hotels: FeatureSchemaDefinition = {
   schemas: [
     hotel,
-    hotelOverview,
+    overview,
     address,
     availability,
     contact,
@@ -62,7 +61,6 @@ export const hotels: FeatureSchemaDefinition = {
     awards,
     roomDetails,
     diningDetails,
-    specifications,
     offerDetails,
     basicInfo,
     holidayDetails,

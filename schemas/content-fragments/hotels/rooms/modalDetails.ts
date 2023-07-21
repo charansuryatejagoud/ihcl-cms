@@ -7,7 +7,7 @@ export default {
       name: "specifications",
       title: "Specifications",
       type: "array",
-      of: [{ type: "specifications" }],
+      of: [{ type: "specification" }],
     },
     {
       name: "highlights",

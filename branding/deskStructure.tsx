@@ -56,7 +56,7 @@ const contentFragments = S.listItem()
       .items([
         S.listItem()
           .title("Property Overview")
-          .child(S.documentTypeList("hotelOverview")),
+          .child(S.documentTypeList("overview")),
         S.listItem()
           .title("Availablity")
           .child(S.documentTypeList("availability")),
@@ -149,7 +149,7 @@ const standardListItems = [
         "gallery",
         "highlights",
         "rateCodes",
-        "hotelOverview",
+        "overview",
         "availability",
         "giftCardGroup",
       ].includes(listItem.getId()),

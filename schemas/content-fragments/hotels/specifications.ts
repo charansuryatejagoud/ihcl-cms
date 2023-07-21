@@ -1,6 +1,6 @@
 export default {
-  name: "specifications",
-  title: "Specifications",
+  name: "specification",
+  title: "Specification",
   type: "object",
   fields: [
     {
