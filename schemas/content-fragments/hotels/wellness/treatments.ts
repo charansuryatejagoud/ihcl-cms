@@ -1,13 +1,8 @@
 export default {
-  title: "Experiences",
-  name: "experiences",
-  type: "document",
+  title: "Treatments",
+  name: "treatments",
+  type: "object",
   fields: [
-    {
-      name: "title",
-      title: "Title",
-      type: "string",
-    },
     {
       name: "sectionTitle",
       title: "Section Title",
@@ -19,19 +14,8 @@ export default {
       type: "string",
     },
     {
-      name: "bannerImage",
-      title: "Banner",
-      type: "array",
-      of: [{ type: "mediaInput" }],
-    },
-    {
-      name: "signatureExperience",
-      title: "Signature Experience",
-      type: "basicDetails",
-    },
-    {
-      name: "experienceDetails",
-      title: "Experience Details",
+      name: "signatureTreatmentDetails",
+      title: "Signature Treatment Info",
       type: "array",
       of: [
         {

@@ -1,6 +1,6 @@
 export default {
   title: "Wellness",
-  name: 'wellness',
+  name: "wellness",
   type: "document",
   fields: [
     {
@@ -15,30 +15,30 @@ export default {
     },
     {
       name: "bannerImage",
-      title: "Banner Image",
-      type: 'array',
-      of: [{ type: 'media' }]
+      title: "Banner",
+      type: "array",
+      of: [{ type: "mediaInput" }],
     },
     {
       name: "spaDetails",
       title: "Spa Details",
-      type: 'spaDetails',
+      type: "spaInfo",
     },
     {
       name: "signatureTreatments",
       title: "Signature Treatments",
-      type: 'signatureTreatments',
+      type: "treatments",
     },
     {
       name: "dividerImage",
       title: "Divider Image",
       type: "array",
-      of: [{ type: 'media' }]
+      of: [{ type: "mediaInput" }],
     },
     {
       name: "wellnessDetails",
       title: "Wellness Details",
-      type: 'wellnessDetails',
+      type: "wellnessInfo",
     },
   ],
-}
+};

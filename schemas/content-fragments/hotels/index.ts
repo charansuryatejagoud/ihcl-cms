@@ -7,43 +7,75 @@ import rooms from "./rooms/rooms";
 import holidays from "./holidays";
 import experiences from "./experiences";
 import exclusiveOffers from "./offers/exclusiveOffers";
-import diningDetails from "./dining/diningDetails";
+import diningDetails from "./dining/diningInfo";
 import specifications from "./specifications";
 import attractions from "./attractions/attractions";
-import holidayDetails from "./holidayDetails";
+import holidayDetails from "./holidayInfo";
 import socialInfo from "./socialInfo";
 import venues from "./venues/venues";
-import weddingEventDetails from "./venues/weddingEventDetails";
+import weddingEventDetails from "./venues/weddingEventInfo";
 import rateCodes from "./rateCodes";
-import eventVenues from "./venues/eventVenues";
-import eventVenueDetails from "./venues/eventVenueDetails";
-import spaDetails from "./wellness/spaDetails";
-import signatureTreatments from "./wellness/signatureTreatments";
-import roomDetails from "./rooms/roomDetails";
+import eventVenues from "./venues/venuesAndOccasions";
+import eventVenueDetails from "./venues/venueAndOccasionInfo";
+import spaDetails from "./wellness/spaInfo";
+import signatureTreatments from "./wellness/treatments";
+import roomDetails from "./rooms/roomInfo";
 import signatureDining from "./dining/signatureDining";
-import hotelOverview from "./overview/hotelOverview";
+import hotelOverview from "./overview/overview";
 import availability from "./overview/availability";
 import highlights from "./overview/highlights";
-import facilityDetails from "./overview/facilityDetails";
+import facilityDetails from "./overview/facilityInfo";
 import facilities from "./overview/facilities";
 import address from "./overview/address";
 import awards from "./awards/awards";
 import offers from "./offers/offers";
-import offerDetails from "./offers/offerDetails";
-import exclusiveOffersDetails from "./offers/exclusiveOffersDetails";
+import offerDetails from "./offers/offerInfo";
+import exclusiveOffersDetails from "./offers/exclusiveOffersInfo";
 import modalDetails from "./rooms/modalDetails";
 import categories from "../categories";
-import media from "../media";
-import basicInfo from "../basicInfo";
-import wellnessDetails from "./wellness/wellnessDetails";
+import media from "../mediaInput";
+import basicInfo from "../basicDetails";
+import wellnessDetails from "./wellness/wellnessInfo";
 import title from "../../commonUtils/title";
 
 export const hotels: FeatureSchemaDefinition = {
-  schemas: [hotel, hotelOverview, address, availability, contact, gallery, wellness, attractions,
-    spaDetails, signatureTreatments, signatureDining, rooms, offers, holidays, highlights,
-    facilities, experiences, exclusiveOffers, eventVenues, awards, roomDetails,
-    diningDetails, specifications, offerDetails, basicInfo,
-    holidayDetails, exclusiveOffersDetails, eventVenueDetails, 
-    socialInfo, venues, facilityDetails, weddingEventDetails, rateCodes,
-    modalDetails, categories, media, wellnessDetails],
+  schemas: [
+    hotel,
+    hotelOverview,
+    address,
+    availability,
+    contact,
+    gallery,
+    wellness,
+    attractions,
+    spaDetails,
+    signatureTreatments,
+    signatureDining,
+    rooms,
+    offers,
+    holidays,
+    highlights,
+    facilities,
+    experiences,
+    exclusiveOffers,
+    eventVenues,
+    awards,
+    roomDetails,
+    diningDetails,
+    specifications,
+    offerDetails,
+    basicInfo,
+    holidayDetails,
+    exclusiveOffersDetails,
+    eventVenueDetails,
+    socialInfo,
+    venues,
+    facilityDetails,
+    weddingEventDetails,
+    rateCodes,
+    modalDetails,
+    categories,
+    media,
+    wellnessDetails,
+  ],
 };

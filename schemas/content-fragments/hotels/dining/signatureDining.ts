@@ -1,6 +1,6 @@
 export default {
   title: "Signature Dining",
-  name: 'signatureDining',
+  name: "signatureDining",
   type: "document",
   fields: [
     {
@@ -11,7 +11,7 @@ export default {
     {
       name: "sectionTitle",
       title: "Section Title",
-      type: 'title',
+      type: "title",
     },
     {
       name: "description",
@@ -19,18 +19,16 @@ export default {
       type: "string",
     },
     {
-        name: "bannerImage",
-        title: "Banner Image",
-        type: 'array',
-        of: [{ type: 'media' }]
+      name: "bannerImage",
+      title: "Banner",
+      type: "array",
+      of: [{ type: "mediaInput" }],
     },
     {
       name: "diningRooms",
       title: "Dining Rooms",
       type: "array",
-      of: [
-        { type: "diningDetails" }
-      ]
+      of: [{ type: "diningInfo" }],
     },
   ],
-} 
+};

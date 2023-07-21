@@ -1,6 +1,6 @@
 export default {
   title: "Offers",
-  name: 'offers',
+  name: "offers",
   type: "document",
   fields: [
     {
@@ -11,7 +11,7 @@ export default {
     {
       name: "sectionTitle",
       title: "Section Title",
-      type: 'title',
+      type: "title",
     },
     {
       name: "description",
@@ -19,18 +19,16 @@ export default {
       type: "string",
     },
     {
-        name: "bannerImage",
-        title: "Banner Image",
-        type: 'array',
-        of: [{ type: 'media' }]
+      name: "bannerImage",
+      title: "Banner",
+      type: "array",
+      of: [{ type: "mediaInput" }],
     },
     {
       name: "offerDetails",
       title: "Offer Details",
       type: "array",
-      of: [
-        { type: "offerDetails" }
-      ]
+      of: [{ type: "offerInfo" }],
     },
   ],
-} 
+};

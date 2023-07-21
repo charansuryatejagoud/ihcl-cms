@@ -1,13 +1,8 @@
 export default {
-  title: "Holidays",
-  name: "holidays",
-  type: "document",
+  title: "Venues and Occasions",
+  name: "venuesAndOccasions",
+  type: "object",
   fields: [
-    {
-      name: "title",
-      title: "Title",
-      type: "string",
-    },
     {
       name: "sectionTitle",
       title: "Section Title",
@@ -19,10 +14,10 @@ export default {
       type: "string",
     },
     {
-      name: "holidayDetails",
-      title: "Holiday Details",
+      name: "eventVenueDetails",
+      title: "Venue and Occasion Info",
       type: "array",
-      of: [{ type: "holidayInfo" }],
+      of: [{ type: "venueAndOccasionInfo" }],
     },
   ],
 };

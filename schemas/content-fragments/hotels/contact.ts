@@ -1,38 +1,40 @@
 export default {
-    title: "Contact",
-    name: 'contact',
-    type: "document",
-    fields: [
+  title: "Contact",
+  name: "contact",
+  type: "document",
+  fields: [
+    {
+      name: "title",
+      title: "Title",
+      type: "string",
+    },
+    {
+      name: "phone",
+      title: "Phone",
+      type: "array",
+      of: [
         {
-            name: "title",
-            title: "Title",
-            type: "string",
+          type: "object",
+          fields: [
+            { name: "mobile", type: "string", title: "Mobile" },
+            { name: "type", type: "string", title: "Type" },
+          ],
         },
+      ],
+    },
+    {
+      name: "email",
+      title: "Email",
+      type: "array",
+      of: [
         {
-            name: "phone",
-            title: "Phone",
-            type: 'array',
-            of: [{
-                type: 'object',
-                fields: [
-                    { name: 'mobile', type: 'string', title: 'Mobile' },
-                    { name: 'type', type: 'string', title: 'Type' },
-                ]
-            }
-            ]
+          type: "object",
+          fields: [
+            { name: "email", type: "string", title: "Email" },
+            { name: "type", type: "string", title: "Type" },
+          ],
         },
-        {
-            name: "email",
-            title: "Email",
-            type: 'array',
-            of: [{
-                type: 'object',
-                fields: [
-                    { name: 'email', type: 'string', title: 'Email' },
-                    { name: 'type', type: 'string', title: 'Type' },
-                ]
-            }
-            ]
-        },
-    ],
-}
+      ],
+    },
+  ],
+};

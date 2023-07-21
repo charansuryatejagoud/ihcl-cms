@@ -1,6 +1,6 @@
 export default {
-  Title: "Hotel Overview",
-  name: "hotelOverview",
+  Title: "Overview",
+  name: "overview",
   type: "document",
   fields: [
     {
@@ -15,14 +15,14 @@ export default {
     },
     {
       name: "bannerImage",
-      title: "Banner Image",
-      type: 'array',
-      of: [{ type: 'media' }]
+      title: "Banner",
+      type: "array",
+      of: [{ type: "mediaInput" }],
     },
     {
       name: "basicInfo",
       title: "Overview Info",
-      type: 'basicInfo'
+      type: "basicDetails",
     },
   ],
 };

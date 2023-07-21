@@ -1,4 +1,9 @@
-import { holidayExperiences, holidayThemes, hotelTypes, propertyCategories } from "../../constants";
+import {
+  holidayExperiences,
+  holidayThemes,
+  hotelTypes,
+  propertyCategories,
+} from "../../constants";
 
 export default {
   name: "hotel",
@@ -39,7 +44,7 @@ export default {
           name: "propertyCategory",
           title: "Category",
           type: "string",
-          options: { list: propertyCategories }
+          options: { list: propertyCategories },
         },
         {
           name: "hotelType",
@@ -65,7 +70,7 @@ export default {
             list: holidayThemes,
           },
         },
-      ]
+      ],
     },
     {
       name: "hotelSubType",
@@ -75,122 +80,122 @@ export default {
     {
       name: "hotelOverview",
       title: "Overview",
-      type: 'reference',
-      to: [{ type: "hotelOverview" }]
+      type: "reference",
+      to: [{ type: "overview" }],
     },
     {
       name: "hotelAddress",
       title: "Address",
-      type: 'reference',
-      to: [{ type: "address" }]
+      type: "reference",
+      to: [{ type: "address" }],
     },
     {
       name: "hotelContact",
       title: "Contact",
-      type: 'reference',
-      to: [{ type: "contact" }]
+      type: "reference",
+      to: [{ type: "contact" }],
     },
     {
       name: "hotelAvailability",
       title: "Availability",
-      type: 'reference',
-      to: [{ type: "availability" }]
+      type: "reference",
+      to: [{ type: "availability" }],
     },
     {
       name: "hotelFacilities",
       title: "Facilities",
-      type: 'reference',
-      to: [{ type: "facilities" }]
+      type: "reference",
+      to: [{ type: "facilities" }],
     },
     {
       name: "hotelAwards",
       title: "Awards",
-      type: 'reference',
-      to: [{ type: "awards" }]
+      type: "reference",
+      to: [{ type: "awards" }],
     },
     {
       name: "hotelSocialInfo",
       title: "Social Info",
-      type: 'reference',
-      to: [{ type: "socialInfo" }]
+      type: "reference",
+      to: [{ type: "socialInfo" }],
     },
     {
       name: "hotelRooms",
       title: "Rooms",
-      type: 'reference',
-      to: [{ type: "rooms" }]
+      type: "reference",
+      to: [{ type: "rooms" }],
     },
     {
       name: "hotelHighlights",
       title: "Highlights",
-      type: 'reference',
-      to: [{ type: "highlights" }]
+      type: "reference",
+      to: [{ type: "highlights" }],
     },
     {
       name: "hotelExclusiveOffersDining",
       title: "Exclusive Offers(Dining)",
-      type: 'reference',
-      to: [{ type: "exclusiveOffers" }]
+      type: "reference",
+      to: [{ type: "exclusiveOffers" }],
     },
     {
       name: "hotelExclusiveOffersWellness",
       title: "Exclusive Offers(Wellness)",
-      type: 'reference',
-      to: [{ type: "exclusiveOffers" }]
+      type: "reference",
+      to: [{ type: "exclusiveOffers" }],
     },
     {
       name: "hotelExclusiveOffersRooms",
       title: "Exclusive Offers(Rooms)",
-      type: 'reference',
-      to: [{ type: "exclusiveOffers" }]
+      type: "reference",
+      to: [{ type: "exclusiveOffers" }],
     },
     {
       name: "hotelOffers",
       title: "Offers",
-      type: 'reference',
-      to: [{ type: "offers" }]
+      type: "reference",
+      to: [{ type: "offers" }],
     },
     {
       name: "hotelHolidays",
       title: "Holidays",
-      type: 'reference',
-      to: [{ type: "holidays" }]
+      type: "reference",
+      to: [{ type: "holidays" }],
     },
     {
       name: "hotelSignatureDining",
       title: "Signature Dining",
-      type: 'reference',
-      to: [{ type: "signatureDining" }]
+      type: "reference",
+      to: [{ type: "signatureDining" }],
     },
     {
       name: "hotelEventVenues",
       title: "Event Venues",
-      type: 'reference',
-      to: [{ type: "venues" }]
+      type: "reference",
+      to: [{ type: "venues" }],
     },
     {
       name: "hotelWellness",
       title: "Wellness",
-      type: 'reference',
-      to: [{ type: "wellness" }]
+      type: "reference",
+      to: [{ type: "wellness" }],
     },
     {
       name: "hotelExperiences",
       title: "Experiences",
-      type: 'reference',
-      to: [{ type: "experiences" }]
+      type: "reference",
+      to: [{ type: "experiences" }],
     },
     {
       name: "hotelGallery",
       title: "Gallery",
-      type: 'reference',
-      to: [{ type: "gallery" }]
+      type: "reference",
+      to: [{ type: "gallery" }],
     },
     {
       name: "hotelAttractions",
       title: "Attractions",
-      type: 'reference',
-      to: [{ type: "attractions" }]
+      type: "reference",
+      to: [{ type: "attractions" }],
     },
   ],
 };

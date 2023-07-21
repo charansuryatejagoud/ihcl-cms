@@ -2,18 +2,18 @@ import { galleryCategories } from "../../constants";
 
 export default {
   title: "Gallery",
-  name: 'gallery',
+  name: "gallery",
   type: "document",
   fields: [
     {
       name: "title",
       title: "Title",
-      type: "string"
+      type: "string",
     },
     {
-        name: "sectionTitle",
-        title: "Section Title",
-        type: 'title',
+      name: "sectionTitle",
+      title: "Section Title",
+      type: "title",
     },
     {
       name: "description",
@@ -22,35 +22,37 @@ export default {
     },
     {
       name: "bannerImage",
-      title: "Banner Image",
-      type: 'array',
-      of: [{type:'media'}]
+      title: "Banner",
+      type: "array",
+      of: [{ type: "mediaInput" }],
     },
     {
       name: "hotelImages",
       title: "Hotel Images",
-      type: 'array',
-      of: [{
-        name: "mediaDetails",
-        title: "Media Details",
-        type: "object",
-        fields: [
-          {
-            title: 'Category',
-            name: 'category',
-            type: 'string',
-            options: {
-              list: galleryCategories
-            }
-          },
-          {
-            title: 'Media',
-            name: 'media',
-            type: 'array',
-            of: [{type:'media'}]
-          }
-        ]
-      }]
+      type: "array",
+      of: [
+        {
+          name: "mediaDetails",
+          title: "Media Details",
+          type: "object",
+          fields: [
+            {
+              title: "Category",
+              name: "category",
+              type: "string",
+              options: {
+                list: galleryCategories,
+              },
+            },
+            {
+              title: "Media",
+              name: "media",
+              type: "array",
+              of: [{ type: "mediaInput" }],
+            },
+          ],
+        },
+      ],
     },
   ],
-}
+};

@@ -1,12 +1,12 @@
 export default {
-  title: "Event Venues",
-  name: 'eventVenues',
+  title: "Spa Info",
+  name: "spaInfo",
   type: "object",
   fields: [
     {
       name: "sectionTitle",
       title: "Section Title",
-      type: 'title',
+      type: "title",
     },
     {
       name: "description",
@@ -14,12 +14,9 @@ export default {
       type: "string",
     },
     {
-      name: "eventVenueDetails",
-      title: "Event Venue Details",
-      type: "array",
-      of: [
-        { type: "eventVenueDetails" }
-      ]
+      name: "basicInfo",
+      title: "Spa Info",
+      type: "basicDetails",
     },
   ],
-}
+};

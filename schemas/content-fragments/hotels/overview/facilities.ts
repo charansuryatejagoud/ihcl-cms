@@ -1,25 +1,23 @@
 export default {
   title: "Facilities",
-  name: 'facilities',
+  name: "facilities",
   type: "document",
   fields: [
     {
       name: "title",
       title: "Title",
-      type: 'string',
+      type: "string",
     },
     {
       name: "sectionTitle",
       title: "Section Title",
-      type: 'title',
+      type: "title",
     },
     {
       name: "facilityDetails",
       title: "Facility  Details",
       type: "array",
-      of: [
-        { type: "facilityDetails" }
-      ]
+      of: [{ type: "facilityInfo" }],
     },
   ],
-}
+};
