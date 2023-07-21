@@ -29,6 +29,10 @@ export const bookings: FeatureSchemaDefinition = {
         value: "bookings.placeholders.hotels-rooms",
       },
       {
+        title: "[Bookings] Hotels Packages",
+        value: "bookings.placeholders.hotels-packages",
+      },
+      {
         title: "[Bookings] Cart View",
         value: "bookings.placeholders.cart-view",
       },
@@ -71,7 +75,7 @@ export const bookings: FeatureSchemaDefinition = {
       {
         title: "[Bookings] Bottom Navigation Cart Details",
         value: "bookings.placeholders.bottom-navigation-cart-details",
-      }
+      },
     ],
     nudge: [
       {
@@ -105,13 +109,13 @@ export const bookings: FeatureSchemaDefinition = {
       {
         title: "[Bookings] selectable Buttons",
         value: "bookings.tabs.selectable-buttons",
-      }
+      },
     ],
     dialog: [
       {
         title: "[Bookings] Booking Mask",
         value: "bookings.dialog.booking-mask",
-      }
-    ]
+      },
+    ],
   },
 };
