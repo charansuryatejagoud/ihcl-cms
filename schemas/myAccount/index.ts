@@ -121,5 +121,20 @@ export const myAccount: FeatureSchemaDefinition = {
         value: "myAccount.tabs.account-and-preferences-tabs",
       },
     ],
+    nudge:[
+        {
+          title:"[My Account] Alert Message With Two Buttons",
+          value:"myAccount.nudge.alert-message-with-two-buttons"
+        },
+        {
+          title:"[My Account] Alert Message With Middle Aligned Button",
+          value:"myAccount.nudge.alert-message-with-middle-aligned-button"
+        },
+      ],
+      switchCaseBlock:[{
+        title:"[My Account] Booking Status",
+        value:"myAccount.switchCaseBlock.booking-status"
+      }
+      ]
   },
 };
