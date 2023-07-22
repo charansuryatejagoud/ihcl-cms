@@ -9,7 +9,7 @@ import { hiddenField } from "../../shared-utils";
 import { contentTypes } from "../../constants";
 import { AlignmentVariant, cardAlignmentVariant } from "../../constants";
 
-export default function placeholder({
+export default function layoutPlaceholder({
   variants,
   cardVariants,
 }: {
