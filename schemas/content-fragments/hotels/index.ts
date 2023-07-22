@@ -31,11 +31,11 @@ import offers from "./offers/offers";
 import offerDetails from "./offers/offerInfo";
 import exclusiveOffersDetails from "./offers/exclusiveOffersInfo";
 import modalDetails from "./rooms/modalDetails";
-import categories from "../categories";
+import categoriesInfo from "../categoriesInfo";
 import media from "../mediaInput";
 import basicInfo from "../basicDetails";
 import wellnessDetails from "./wellness/wellnessInfo";
-import title from "../../commonUtils/title";
+import contentSpecification from "./contentSpecification";
 
 export const hotels: FeatureSchemaDefinition = {
   schemas: [
@@ -72,8 +72,9 @@ export const hotels: FeatureSchemaDefinition = {
     weddingEventDetails,
     rateCodes,
     modalDetails,
-    categories,
+    categoriesInfo,
     media,
     wellnessDetails,
+    contentSpecification
   ],
 };

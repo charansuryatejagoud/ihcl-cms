@@ -7,7 +7,7 @@ export default {
       name: "specifications",
       title: "Specifications",
       type: "array",
-      of: [{ type: "specification" }],
+      of: [{ type: "contentSpecification" }],
     },
     {
       name: "highlights",
@@ -19,7 +19,7 @@ export default {
       name: "amenities",
       title: "Amenities",
       type: "array",
-      of: [{ name: "categories", type: "categories", title: "Categories" }],
+      of: [{ name: "categories", type: "categoriesInfo", title: "Categories" }],
     },
   ],
 };

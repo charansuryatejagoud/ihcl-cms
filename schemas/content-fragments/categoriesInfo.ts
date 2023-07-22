@@ -1,6 +1,6 @@
 export default {
-  name: "categories",
-  title: "categories",
+  name: "categoriesInfo",
+  title: "Categories",
   type: "object",
   fields: [
     { name: "category", type: "string", title: "Category" },

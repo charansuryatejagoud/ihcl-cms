@@ -23,7 +23,7 @@ export default {
       name: "specifications",
       title: "Specifications",
       type: "array",
-      of: [{ type: "specification" }],
+      of: [{ type: "contentSpecification" }],
     },
     {
       title: "Media",
