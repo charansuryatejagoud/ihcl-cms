@@ -7,15 +7,15 @@ export default {
   },
   fields: [
     {
-      title: "SKU",
-      type: "string",
-      name: "sku",
-    },
-    {
       title: "Category",
       name: "category",
       type: "reference",
       to: [{ type: "giftCardGroup" }],
+    },
+    {
+      title: "SKU",
+      type: "string",
+      name: "sku",
     },
     {
       title: "Name",
@@ -38,6 +38,12 @@ export default {
       type: "color",
       description:
         "Field Used for Gift Card Preview Title and Description Font Colors",
+    },
+    {
+      title: "Front Cover",
+      name: "frontCover",
+      type: "images",
+      // hidden: ({parent}) => parent?.category?.name !== "E-Gift Card" 
     },
     {
       title: "Banner Image",

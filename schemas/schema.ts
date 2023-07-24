@@ -25,6 +25,7 @@ import categoryHighlights from "./commonUtils/categoryHighlights";
 import authentication from "./commonUtils/authentication";
 import custom from "./commonUtils/custom";
 import giftCardGroup from "./core/documents/giftCardsCollection/giftCardGroup";
+import layoutPlaceholder from "./core/objects/layoutPlaceholder";
 
 export default createSchema({
   name: "default",
@@ -50,6 +51,10 @@ export default createSchema({
       items: featureDefinition.pageItems,
       headers: featureDefinition.headers,
       footers: featureDefinition.footers,
+    }),
+    layoutPlaceholder({
+      variants: featureDefinition.variants.group,
+      cardVariants: featureDefinition.variants.card,
     }),
 
     card({ variants: featureDefinition.variants.card }),

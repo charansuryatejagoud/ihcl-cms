@@ -47,6 +47,51 @@ const appConfigItem = S.listItem()
           .schemaType("appConfig")
           .documentId("appConfig")
   );
+  const contentFragments = S.listItem()
+  .title("CFs")
+  .child(
+    S.list()
+      .title("CFs Types")
+      .items([
+        S.listItem()
+          .title("Property Overview")
+          .child(S.documentTypeList("overview")),
+        S.listItem()
+          .title("Availablity")
+          .child(S.documentTypeList("availability")),
+        S.listItem()
+          .title("Highlights")
+          .child(S.documentTypeList("highlights")),
+        S.listItem()
+          .title("Facilities")
+          .child(S.documentTypeList("facilities")),
+        S.listItem().title("Rooms").child(S.documentTypeList("rooms")),
+        S.listItem().title("Rate Codes").child(S.documentTypeList("rateCodes")),
+        S.listItem().title("Offers").child(S.documentTypeList("offers")),
+        S.listItem()
+          .title("Exclusive Offers")
+          .child(S.documentTypeList("exclusiveOffers")),
+        S.listItem().title("Awards").child(S.documentTypeList("awards")),
+        S.listItem()
+          .title("Social Info")
+          .child(S.documentTypeList("socialInfo")),
+        S.listItem()
+          .title("Dining")
+          .child(S.documentTypeList("signatureDining")),
+        S.listItem().title("Venues").child(S.documentTypeList("venues")),
+        S.listItem().title("Wellness").child(S.documentTypeList("wellness")),
+        S.listItem()
+          .title("Experiences")
+          .child(S.documentTypeList("experiences")),
+        S.listItem().title("Gallery").child(S.documentTypeList("gallery")),
+        S.listItem()
+          .title("Attractions")
+          .child(S.documentTypeList("attractions")),
+        S.listItem().title("Holidays").child(S.documentTypeList("holidays")),
+        S.listItem().title("Address").child(S.documentTypeList("address")),
+        S.listItem().title("Contact").child(S.documentTypeList("contact")),
+      ]),
+  );
 
 const categoryList = S.documentTypeList("category")
   .title("Category")
@@ -70,6 +115,7 @@ const pagesByCategory = S.listItem()
 const standardListItems = [
   settingsItem,
   appConfigItem,
+contentFragments,
 
   S.divider(),
 
@@ -80,7 +126,33 @@ const standardListItems = [
 
   ...S.documentTypeListItems().filter(
     (listItem) =>
-      !["settings", "media.tag", "appConfig", "giftCardGroup"].includes(listItem.getId()),
+      ![ 
+        "settings", 
+        "media.tag", 
+        "appConfig", 
+        "address",
+        "contact",
+        "rooms",
+        "roomInfo",
+        "roomOffer",
+        "awards",
+        "wellness",
+        "attractions",
+        "signatureDining",
+        "offers",
+        "holidays",
+        "facilities",
+        "experiences",
+        "exclusiveOffers",
+        "socialInfo",
+        "venues",
+        "gallery",
+        "highlights",
+        "rateCodes",
+        "overview",
+        "availability", 
+        "giftCardGroup"
+      ].includes(listItem.getId()),
   ),
 ];
 
