@@ -23,7 +23,7 @@ export const bannerVariants = [
   },
   {
     title: "Page Not Found",
-    value: "page-not-found"
+    value: "page-not-found",
   },
   {
     title: "Hero Banner (Layout Placeholder)",
@@ -121,14 +121,6 @@ export default {
         list: contentTypes,
       },
       group: "main",
-    },
-    {
-      name: "contentType",
-      title: "Content Type",
-      type: "string",
-      options: {
-        list: contentTypes,
-      },
     },
     {
       title: "Search Field Variant",

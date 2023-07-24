@@ -27,17 +27,17 @@ export default {
     {
       name: "brandKey",
       title: "Brand Key",
-      type: "string"
+      type: "string",
     },
     {
       name: "ihclHotelKey",
       title: "IHCL Hotel Key",
-      type: "string"
+      type: "string",
     },
     {
       name: "hotelCode",
       title: "Hotel Code",
-      type: "string"
+      type: "string",
     },
     {
       name: "propertyCategory",
@@ -80,17 +80,17 @@ export default {
     {
       name: "hotelPmsCode",
       title: "Hotel PMS Code",
-      type: "string"
+      type: "string",
     },
     {
       name: "orionCode",
       title: "Orion Code",
-      type: "string"
+      type: "string",
     },
     {
       name: "siebelCode",
       title: "Siebel Code",
-      type: "string"
+      type: "string",
     },
     {
       name: "status",
@@ -103,12 +103,12 @@ export default {
     {
       name: "legalEntity",
       title: "Legal Entity",
-      type: "string"
+      type: "string",
     },
     {
       name: "currency",
       title: "Currency",
-      type: "string"
+      type: "string",
     },
     {
       name: "pmsName",
@@ -160,32 +160,32 @@ export default {
     {
       name: "synxisHotelId",
       title: "Synxis Hotel Id",
-      type: "string"
+      type: "string",
     },
     {
       name: "rating",
       title: "Rating",
-      type: "number"
+      type: "number",
     },
     {
       name: "aminities",
       title: "Aminities",
-      type: "string"
+      type: "string",
     },
     {
       name: "longDescription",
       title: "Long Description",
-      type: "string"
+      type: "string",
     },
     {
       name: "shortDescription",
       title: "Short Description",
-      type: "string"
+      type: "string",
     },
     {
       name: "highlights",
       title: "Highlights",
-      type: "string"
+      type: "string",
     },
     {
       name: "restaurantTypes",
@@ -234,6 +234,31 @@ export default {
       options: {
         list: hotelFeatures,
       },
+    },
+    {
+      name: "restaurantName",
+      title: "Restaurant Name",
+      type: "string",
+    },
+    {
+      name: "diningPath",
+      title: "Dining Path",
+      type: "string",
+    },
+    {
+      name: "lunch",
+      title: "Lunch",
+      type: "string",
+    },
+    {
+      name: "dinner",
+      title: "Dinner",
+      type: "string",
+    },
+    {
+      name: "destinationPath",
+      title: "Destination Path",
+      type: "string",
     },
   ],
 };
