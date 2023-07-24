@@ -28,7 +28,6 @@ async function run() {
   await client
     .fetch(`*[_type == "page" && path == "/test-script"][0]{...}`)
     .then((response) => {
-      // console.log(response);
       pageResponse = response;
       pageItems = response.items;
     })
@@ -44,7 +43,6 @@ async function run() {
   */
 
   const updatedItems = pageItems?.map((item) => {
-    console.log("groupLevel 1 ", item._type);
     const newItem = extractItems(item, "highLights", "highLights");
     return newItem;
   });
@@ -79,7 +77,6 @@ function extractItems(item, existingKey, newKey) {
   });
   // replaceKey(item, existingKey, newKey);
   convertStringToArrayInCard(item, existingKey);
-  console.log("Deep Nested item ", item._type);
 
   return item;
 }
@@ -93,9 +90,6 @@ function replaceKey(item, existingKey, newKey) {
 }
 
 function convertStringToArrayInCard(item, existingKey) {
-  // console.log("nesteditem 3 : " , item._type);
-  console.log("sting item ", item[existingKey]);
-
   if (item[existingKey] && item._type === "card") {
     item[existingKey] = [item[existingKey]];
   }
