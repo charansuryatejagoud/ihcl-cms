@@ -43,7 +43,8 @@ export default {
       title: "Front Cover",
       name: "frontCover",
       type: "images",
-      // hidden: ({parent}) => parent?.category?.name !== "E-Gift Card" 
+      hidden: ({ parent }) =>
+        parent?.category?._ref !== "06a84b5f-4ef6-42f7-a253-39ed5830d3d6",
     },
     {
       title: "Banner Image",
