@@ -1,10 +1,3 @@
-import {
-  holidayExperiences,
-  holidayThemes,
-  hotelTypes,
-  propertyCategories,
-} from "../../constants";
-
 export default {
   name: "hotel",
   title: "Hotels",
@@ -36,41 +29,10 @@ export default {
       type: "string",
     },
     {
-      name: "taxonomies",
+      name: "searchTaxonomies",
       title: "Taxonomies",
-      type: "object",
-      fields: [
-        {
-          name: "propertyCategory",
-          title: "Category",
-          type: "string",
-          options: { list: propertyCategories },
-        },
-        {
-          name: "hotelType",
-          title: "Hotel Type",
-          type: "string",
-          options: {
-            list: hotelTypes,
-          },
-        },
-        {
-          name: "holidayExperience",
-          title: "Holiday Experience",
-          type: "string",
-          options: {
-            list: holidayExperiences,
-          },
-        },
-        {
-          name: "holidayTheme",
-          title: "Holiday THeme",
-          type: "string",
-          options: {
-            list: holidayThemes,
-          },
-        },
-      ],
+      type: "reference",
+      to: [{ type: "taxonomyInfo" }],
     },
     {
       name: "hotelSubType",

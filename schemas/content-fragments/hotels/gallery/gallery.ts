@@ -1,4 +1,4 @@
-import { galleryCategories } from "../../constants";
+import { galleryCategories } from "../../../constants";
 
 export default {
   title: "Gallery",
