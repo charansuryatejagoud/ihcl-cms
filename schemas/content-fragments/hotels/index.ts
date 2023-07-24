@@ -1,15 +1,15 @@
 import { FeatureSchemaDefinition } from "schemas/types";
 import hotel from "./hotel";
-import contact from "./contact/contact";
-import gallery from "./gallery/gallery";
+import contact from "./contact";
+import gallery from "./gallery";
 import wellness from "./wellness/wellness";
 import rooms from "./rooms/rooms";
-import holidays from "./holiday/holidays";
-import experiences from "./experiences/experiences";
+import holidays from "./holidays";
+import experiences from "./experiences";
 import exclusiveOffers from "./offers/exclusiveOffers";
 import diningDetails from "./dining/diningInfo";
 import attractions from "./attractions/attractions";
-import holidayDetails from "./holiday/holidayInfo";
+import holidayDetails from "./holidayInfo";
 import socialInfo from "./socialInfo";
 import venues from "./venues/venues";
 import weddingEventDetails from "./venues/weddingEventInfo";
@@ -35,8 +35,7 @@ import categoriesInfo from "../categoriesInfo";
 import media from "../mediaInput";
 import basicInfo from "../basicDetails";
 import wellnessDetails from "./wellness/wellnessInfo";
-import contentSpecification from "../contentSpecification";
-import taxonomyInfo from "../taxonomyInfo";
+import contentSpecification from "./contentSpecification";
 
 export const hotels: FeatureSchemaDefinition = {
   schemas: [
@@ -76,7 +75,6 @@ export const hotels: FeatureSchemaDefinition = {
     categoriesInfo,
     media,
     wellnessDetails,
-    contentSpecification,
-    taxonomyInfo,
+    contentSpecification
   ],
 };

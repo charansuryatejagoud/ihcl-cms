@@ -7,8 +7,7 @@ import {
 import { SchemaItem, VariantDefinition } from "../../types";
 import { hiddenField } from "../../shared-utils";
 import { contentTypes } from "../../constants";
-import { groupAlignmentVariant } from "./group";
-import { cardAlignmentVariant } from "./card";
+import { AlignmentVariant, cardAlignmentVariant } from "../../constants";
 
 export default function layoutPlaceholder({
   variants,
@@ -70,7 +69,7 @@ export default function layoutPlaceholder({
         type: "string",
         description: "This variant is for Title and Subtitle alignment",
         options: {
-          list: groupAlignmentVariant,
+          list: AlignmentVariant,
         },
         group: "main",
       },

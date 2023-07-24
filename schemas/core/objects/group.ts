@@ -2,7 +2,7 @@ import { IoApps, IoLayers as Icon, IoSettings } from "react-icons/io5";
 import { SchemaItem, VariantDefinition } from "../../types";
 import { hiddenField } from "../../shared-utils";
 
-export const groupAlignmentVariant = [
+const AlignmentVariant = [
   {
     title: "Center",
     value: "center",
@@ -95,7 +95,7 @@ export default function group({
         type: "string",
         description: "This variant is for Title and Subtitle alignment",
         options: {
-          list: groupAlignmentVariant,
+          list: AlignmentVariant,
         },
         group: "main",
       },

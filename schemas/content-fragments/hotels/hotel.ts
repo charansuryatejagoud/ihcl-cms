@@ -36,10 +36,41 @@ export default {
       type: "string",
     },
     {
-      name: "searchTaxonomies",
+      name: "taxonomies",
       title: "Taxonomies",
-      type: "reference",
-      to: [{ type: "taxonomyInfo" }],
+      type: "object",
+      fields: [
+        {
+          name: "propertyCategory",
+          title: "Category",
+          type: "string",
+          options: { list: propertyCategories },
+        },
+        {
+          name: "hotelType",
+          title: "Hotel Type",
+          type: "string",
+          options: {
+            list: hotelTypes,
+          },
+        },
+        {
+          name: "holidayExperience",
+          title: "Holiday Experience",
+          type: "string",
+          options: {
+            list: holidayExperiences,
+          },
+        },
+        {
+          name: "holidayTheme",
+          title: "Holiday THeme",
+          type: "string",
+          options: {
+            list: holidayThemes,
+          },
+        },
+      ],
     },
     {
       name: "hotelSubType",

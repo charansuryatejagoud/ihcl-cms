@@ -5,7 +5,6 @@ import { featureDefinition } from "./feature-schemas";
 
 import page from "./core/documents/page";
 import group from "./core/objects/group";
-import layoutPlaceholder from "./core/objects/layoutPlaceholder";
 import placeholder from "./core/objects/placeholder";
 import card from "./core/objects/card";
 import dialog from "./core/documents/dialog";
@@ -47,10 +46,6 @@ export default createSchema({
     group({
       variants: featureDefinition.variants.group,
       items: featureDefinition.groupItems,
-    }),
-    layoutPlaceholder({
-      variants: featureDefinition.variants.group,
-      cardVariants: featureDefinition.variants.card,
     }),
     section({
       items: featureDefinition.pageItems,

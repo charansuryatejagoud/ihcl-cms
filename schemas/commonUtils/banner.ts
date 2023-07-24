@@ -8,7 +8,8 @@ const AlignmentVariant = [
     value: "normal",
   },
 ];
-export const bannerVariants = [
+
+export const bannerVariants  = [
   {
     title: "Hero Banner",
     value: "hero-banner",
@@ -110,15 +111,6 @@ export default {
       type: "string",
       options: {
         list: bannerVariants,
-      },
-      group: "main",
-    },
-    {
-      name: "contentType",
-      title: "Content Type",
-      type: "string",
-      options: {
-        list: contentTypes,
       },
       group: "main",
     },

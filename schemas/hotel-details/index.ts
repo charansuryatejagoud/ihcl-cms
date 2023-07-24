@@ -44,11 +44,6 @@ export const details: FeatureSchemaDefinition = {
           "details.group.group-with-card-right-media-left-content-aspect-ratio-2:4",
       },
       {
-        title: "[Details] Group With Card Right Media Left Content(Hotel)",
-        value:
-          "details.group.group-with-card-right-media-left-content-aspect-ratio-2:4-hotel",
-      },
-      {
         title: "[Details] Group with Full Width Media",
         value: "details.group.group-with-full-width-media",
       },
@@ -130,8 +125,7 @@ export const details: FeatureSchemaDefinition = {
       },
       {
         title: "[Details] Card With Right Media Left Content",
-        value:
-          "details.card.card-with-right-media-left-content-aspect-ratio-2:4",
+        value: "details.card.card-with-right-media-left-content-aspect-ratio-2:4",
       },
       {
         title: "[Details] Card with Left Align Content",
