@@ -1,6 +1,10 @@
 import { FeatureSchemaDefinition } from "schemas/types";
+import cancellationDropdown from "./cancellationDropdown";
 
 export const myAccount: FeatureSchemaDefinition = {
+  schemas: [
+    cancellationDropdown
+  ],
   connectedStores: [
     {
       title: "[My Account] My Account Store",

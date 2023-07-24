@@ -1,6 +1,10 @@
 import { FeatureSchemaDefinition } from "schemas/types";
+import membershipLogin from "./membershipLogin";
 
 export const Authentication: FeatureSchemaDefinition = {
+  schemas: [
+    membershipLogin
+  ],
   headers: [
     {
       type: "dialogHeader",
