@@ -43,25 +43,6 @@ export const inputFieldTypes = [
   }
 ];
 
-export const AlignmentVariant = [
-  {
-    title: "Center",
-    value: "center",
-  },
-  {
-    title: "Regular",
-    value: "regular",
-  },
-  {
-    title: "Center Aligned Regular Title",
-    value: "center-aligned-regular-title",
-  },
-  {
-    title: "Center Aligned Regular Title with No Hyphens",
-    value: "center-aligned-regular-title-with-no-hyphens",
-  },
-];
-
 export const propertyCategories = [
   {
     title: "Hotels",
@@ -287,7 +268,283 @@ export const galleryCategories = [
   },
 ];
 
-export const cardAlignmentVariant = [
-  { title: "Preceding Hyphen Title", value: "preceding-hyphen-title" },
-  { title: "Normal Title", value: "normal-title" },
+export const brandNames = [
+  {
+    title: "Taj",
+    value: "taj",
+  },
+  {
+    title: "SeleQtions",
+    value: "seleqtions",
+  },
+  {
+    title: "Vivanta",
+    value: "vivanta",
+  },
+  {
+    title: "Ama Stays and Trails",
+    value: "ama",
+  },
+  {
+    title: "Ginger",
+    value: "ginger",
+  },
+];
+
+export const posTypes = [
+  {
+    title: "POS GOLD",
+    value: "posGold",
+  },
+  {
+    title: "POS ULTRA",
+    value: "posUltra",
+  },
+  {
+    title: "Micros",
+    value: "micros",
+  },
+  {
+    title: "Infogenesis",
+    value: "infogenesis",
+  },
+  {
+    title: "VPOS9",
+    value: "vpos9",
+  },
+  {
+    title: "Shawman",
+    value: "shawman",
+  },
+];
+
+export const statusTypes = [
+  {
+    title: "Active",
+    value: "active",
+  },
+  {
+    title: "Inactive",
+    value: "inactive",
+  },
+];
+
+export const pmsNames = [
+  {
+    title: "Opera",
+    value: "opera",
+  },
+  {
+    title: "APM",
+    value: "apm",
+  },
+  {
+    title: "Fidelio",
+    value: "fidelio",
+  },
+  {
+    title: "IDS",
+    value: "ids",
+  },
+];
+
+export const flagTypes = [
+  {
+    title: "Yes",
+    value: "Y",
+  },
+  {
+    title: "No",
+    value: "N",
+  },
+  {
+    title: "Null",
+    value: "NULL",
+  },
+];
+
+export const dressCodes = [
+  {
+    title: "Smart Casual",
+    value: "smartCasual",
+  },
+  {
+    title: "Formal",
+    value: "formal",
+  },
+  {
+    title: "Casual",
+    value: "casual",
+  },
+];
+
+export const cuisines = [
+  {
+    title: "Southeast Asian",
+    value: "hotels",
+  },
+  {
+    title: "Bhutanese",
+    value: "palaces",
+  },
+  {
+    title: "Multi Cuisine",
+    value: "safaris",
+  },
+  {
+    title: "Seafood",
+    value: "resorts",
+  },
+  {
+    title: "Indian",
+    value: "residencies",
+  },
+  {
+    title: "Japanese",
+    value: "hotels",
+  },
+  {
+    title: "Healthful",
+    value: "palaces",
+  },
+  {
+    title: "French",
+    value: "safaris",
+  },
+  {
+    title: "Thai",
+    value: "resorts",
+  },
+  {
+    title: "Italian",
+    value: "residencies",
+  },
+  {
+    title: "Mediterranean",
+    value: "hotels",
+  },
+  {
+    title: "Vegetarian",
+    value: "palaces",
+  },
+  {
+    title: "Fusion",
+    value: "safaris",
+  },
+  {
+    title: "Seafood",
+    value: "resorts",
+  },
+  {
+    title: "International",
+    value: "residencies",
+  },
+  {
+    title: "Chinese",
+    value: "resorts",
+  },
+];
+
+export const therapies = [
+  {
+    title: "Swedish Massage",
+    value: "swedishMassage",
+  },
+  {
+    title: "Deep Tissue Massage",
+    value: "deepTissueMassage",
+  },
+  {
+    title: "Ayurvedic Treatments",
+    value: "AyurvedicTreatments",
+  },
+];
+
+export const searchCategoryType = [
+  {
+    title: "Holiday-Restaurant-Hotel",
+    value: "holiday-restaurant-hotel",
+  },
+  {
+    title: "Holiday-Hotel",
+    value: "holiday-hotel",
+  },
+  {
+    title: "Hotel",
+    value: "hotel",
+  },
+  {
+    title: "Hotel-Restaurant",
+    value: "hotel-restaurant",
+  },
+  {
+    title: "Restaurant",
+    value: "restaurant",
+  },
+];
+
+export const hotelFeatures = [
+  {
+    title: "Jiva Spa",
+    value: "jivaSpa",
+  },
+  {
+    title: "Khazana",
+    value: "khazana",
+  },
+  {
+    title: "Award Winning",
+    value: "awardWinning",
+  },
+  {
+    title: "Chambers",
+    value: "chambers",
+  },
+  {
+    title: "Airport",
+    value: "airport",
+  },
+  {
+    title: "Kid Friendly",
+    value: "kidFriendly",
+  },
+];
+
+export const restaurantTypes = [
+  {
+    title: "Fine Dining",
+    value: "fineDining",
+  },
+  {
+    title: "Outdoor",
+    value: "outdoor",
+  },
+  {
+    title: "Live Music",
+    value: "liveMusic",
+  },
+  {
+    title: "Afternoon Tea",
+    value: "afternoonTea",
+  },
+  {
+    title: "Casual",
+    value: "causal",
+  },
+  {
+    title: "Bakery",
+    value: "bakery",
+  },
+  {
+    title: "Coffee Shop",
+    value: "coffeShop",
+  },
+  {
+    title: "Restaurant",
+    value: "restaurant",
+  },
+  {
+    title: "Bar",
+    value: "bar",
+  },
 ];

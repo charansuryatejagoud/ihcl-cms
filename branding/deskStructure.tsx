@@ -47,7 +47,7 @@ const appConfigItem = S.listItem()
           .schemaType("appConfig")
           .documentId("appConfig")
   );
-  const contentFragments = S.listItem()
+const contentFragments = S.listItem()
   .title("CFs")
   .child(
     S.list()
@@ -126,10 +126,10 @@ contentFragments,
 
   ...S.documentTypeListItems().filter(
     (listItem) =>
-      ![ 
-        "settings", 
-        "media.tag", 
-        "appConfig", 
+      ![
+        "settings",
+        "media.tag",
+        "appConfig",
         "address",
         "contact",
         "rooms",
@@ -150,8 +150,8 @@ contentFragments,
         "highlights",
         "rateCodes",
         "overview",
-        "availability", 
-        "giftCardGroup"
+        "availability",
+        "giftCardGroup",
       ].includes(listItem.getId()),
   ),
 ];
