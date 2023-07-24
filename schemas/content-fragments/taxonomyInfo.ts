@@ -25,12 +25,6 @@ export default {
       type: "string",
     },
     {
-      name: "brandName",
-      title: "Brand Name",
-      type: "string",
-      options: { list: brandNames },
-    },
-    {
       name: "brandKey",
       title: "Brand Key",
       type: "string"

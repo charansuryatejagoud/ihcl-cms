@@ -1,8 +1,5 @@
 import {
-  holidayExperiences,
-  holidayThemes,
-  hotelTypes,
-  propertyCategories,
+  brandNames
 } from "../../constants";
 
 export default {
@@ -19,6 +16,12 @@ export default {
       name: "hotelId",
       title: "Id",
       type: "string",
+    },
+    {
+      name: "brandName",
+      title: "Brand Name",
+      type: "string",
+      options: { list: brandNames },
     },
     {
       name: "brandId",
