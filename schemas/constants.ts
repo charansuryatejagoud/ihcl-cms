@@ -40,7 +40,7 @@ export const inputFieldTypes = [
   {
     title: "Terms & Conditions Checkbox",
     value: "terms-and-conditions-checkbox",
-  }
+  },
 ];
 
 export const propertyCategories = [
@@ -85,57 +85,77 @@ export const hotelTypes = [
   },
 ];
 
-export const holidayExperiences = [
+export const holidayThemes = [
   {
     title: "Family Getaways",
-    value: "familyGetaways",
+    value: "Family Getaways",
   },
   {
     title: "Romantic Getaways",
-    value: "romanticGetaways",
+    value: "Romantic Getaways",
   },
   {
     title: "Incerdible Itineraries",
-    value: "incredibleItineraries",
+    value: "Incredible Itineraries",
   },
   {
     title: "Woyage",
-    value: "woyage",
+    value: "Woyage",
+  },
+  {
+    title: "Group Holidays",
+    value: "Group Holidays",
+  },
+  {
+    title: "Honeymoon",
+    value: "Honeymoon",
+  },
+  {
+    title: "Multi destinations",
+    value: "Multi destinations",
+  },
+  {
+    title: "Solo traveller",
+    value: "Solo traveller",
   },
 ];
 
-export const holidayThemes = [
+export const holidayExperiences = [
   {
-    title: "Beach retreats",
-    value: "beachRetreats",
+    title: "Beach Retreats",
+    value: "Beach Retreats",
   },
   {
     title: "Hill stations",
-    value: "hillStations",
+    value: "Hill Stations",
   },
   {
     title: "Royal India",
-    value: "royalIndia",
+    value: "Royal India",
   },
   {
-    title: "Urban oasis",
-    value: "urbanOasis",
+    title: "Urban Oasis",
+    value: "Urban Oasis",
   },
   {
-    title: "Wilderness getaways",
-    value: "wildernessGetaways",
+    title: "Wilderness Getaways",
+    value: "Wilderness Getaways",
   },
   {
-    title: "Spa retreats",
-    value: "spaRetreats",
+    title: "Spa Retreats",
+    value: "Spa Retreats",
   },
   {
-    title: "Cultural carnivals",
-    value: "culturalCarnivals",
+    title: "Cultural Carnivals",
+    value: "Cultural Carnivals",
   },
   {
-    title: "International holidays",
-    value: "internationalHolidays",
+    title: "International Holidays",
+    value: "International Holidays",
+  },
+  {
+    title: "Heritage capitals",
+    value: "Heritage capitals",
   },
 ];
 
@@ -204,6 +224,10 @@ export const contentTypes = [
     title: "Hotel Facilities",
     value: "hotelFacilities",
   },
+  {
+    title: "All Hotels(HotelTypes)",
+    value: "allHotels-hotelTypes",
+  },
 ];
 
 export const actionTypes = [
@@ -271,80 +295,80 @@ export const galleryCategories = [
 export const brandNames = [
   {
     title: "Taj",
-    value: "taj",
+    value: "Taj",
   },
   {
     title: "SeleQtions",
-    value: "seleqtions",
+    value: "Seleqtions",
   },
   {
     title: "Vivanta",
-    value: "vivanta",
+    value: "Vivanta",
   },
   {
     title: "Ama Stays and Trails",
-    value: "ama",
+    value: "Ama",
   },
   {
     title: "Ginger",
-    value: "ginger",
+    value: "Ginger",
   },
 ];
 
 export const posTypes = [
   {
     title: "POS GOLD",
-    value: "posGold",
+    value: "POS GOLD",
   },
   {
     title: "POS ULTRA",
-    value: "posUltra",
+    value: "POS ULTRA",
   },
   {
     title: "Micros",
-    value: "micros",
+    value: "Micros",
   },
   {
     title: "Infogenesis",
-    value: "infogenesis",
+    value: "Infogenesis",
   },
   {
     title: "VPOS9",
-    value: "vpos9",
+    value: "VPOS9",
   },
   {
     title: "Shawman",
-    value: "shawman",
+    value: "Shawman",
   },
 ];
 
 export const statusTypes = [
   {
     title: "Active",
-    value: "active",
+    value: "Active",
   },
   {
     title: "Inactive",
-    value: "inactive",
+    value: "Inactive",
   },
 ];
 
 export const pmsNames = [
   {
     title: "Opera",
-    value: "opera",
+    value: "Opera",
   },
   {
     title: "APM",
-    value: "apm",
+    value: "APM",
   },
   {
     title: "Fidelio",
-    value: "fidelio",
+    value: "Fidelio",
   },
   {
     title: "IDS",
-    value: "ids",
+    value: "IDS",
   },
 ];
 
@@ -366,185 +390,208 @@ export const flagTypes = [
 export const dressCodes = [
   {
     title: "Smart Casual",
-    value: "smartCasual",
+    value: "Smart Casual",
   },
   {
     title: "Formal",
-    value: "formal",
+    value: "Formal",
   },
   {
     title: "Casual",
-    value: "casual",
+    value: "Casual",
   },
 ];
 
 export const cuisines = [
   {
     title: "Southeast Asian",
-    value: "hotels",
+    value: "Southeast Asian",
   },
   {
     title: "Bhutanese",
-    value: "palaces",
+    value: "Bhutanese",
   },
   {
     title: "Multi Cuisine",
-    value: "safaris",
+    value: "Multi Cuisine",
   },
   {
     title: "Seafood",
-    value: "resorts",
+    value: "Seafood",
   },
   {
     title: "Indian",
-    value: "residencies",
+    value: "Indian",
   },
   {
     title: "Japanese",
-    value: "hotels",
+    value: "Japanese",
   },
   {
     title: "Healthful",
-    value: "palaces",
+    value: "Healthful",
   },
   {
     title: "French",
-    value: "safaris",
+    value: "French",
   },
   {
     title: "Thai",
-    value: "resorts",
+    value: "Thai",
   },
   {
     title: "Italian",
-    value: "residencies",
+    value: "Italian",
   },
   {
     title: "Mediterranean",
-    value: "hotels",
+    value: "Mediterranean",
   },
   {
     title: "Vegetarian",
-    value: "palaces",
+    value: "Vegetarian",
   },
   {
     title: "Fusion",
-    value: "safaris",
+    value: "Fusion",
   },
   {
     title: "Seafood",
-    value: "resorts",
+    value: "Seafood",
   },
   {
     title: "International",
-    value: "residencies",
+    value: "International",
   },
   {
     title: "Chinese",
-    value: "resorts",
+    value: "Chinese",
   },
 ];
 
 export const therapies = [
   {
     title: "Swedish Massage",
-    value: "swedishMassage",
+    value: "Swedish Massage",
   },
   {
     title: "Deep Tissue Massage",
-    value: "deepTissueMassage",
+    value: "Deep Tissue Massage",
   },
   {
     title: "Ayurvedic Treatments",
-    value: "AyurvedicTreatments",
+    value: "Ayurvedic Treatments",
   },
 ];
 
 export const searchCategoryType = [
   {
     title: "Holiday-Restaurant-Hotel",
-    value: "holiday-restaurant-hotel",
+    value: "Holiday-Restaurant-Hotel",
   },
   {
     title: "Holiday-Hotel",
-    value: "holiday-hotel",
+    value: "Holiday-Hotel",
   },
   {
     title: "Hotel",
-    value: "hotel",
+    value: "Hotel",
   },
   {
     title: "Hotel-Restaurant",
-    value: "hotel-restaurant",
+    value: "Hotel-Restaurant",
   },
   {
     title: "Restaurant",
-    value: "restaurant",
+    value: "Restaurant",
+  },
+  {
+    title: "Holiday",
+    value: "Holiday",
   },
 ];
 
 export const hotelFeatures = [
   {
     title: "Jiva Spa",
-    value: "jivaSpa",
+    value: "Jiva Spa",
   },
   {
     title: "Khazana",
-    value: "khazana",
+    value: "Khazana",
   },
   {
     title: "Award Winning",
-    value: "awardWinning",
+    value: "Award Winning",
   },
   {
     title: "Chambers",
-    value: "chambers",
+    value: "Chambers",
   },
   {
     title: "Airport",
-    value: "airport",
+    value: "Airport",
   },
   {
     title: "Kid Friendly",
-    value: "kidFriendly",
+    value: "Kid Friendly",
+  },
+  {
+    title: "Salon",
+    value: "Salon",
+  },
+  {
+    title: "Newly Opened",
+    value: "Newly Opened",
   },
 ];
 
 export const restaurantTypes = [
   {
     title: "Fine Dining",
-    value: "fineDining",
+    value: "Fine Dining",
   },
   {
     title: "Outdoor",
-    value: "outdoor",
+    value: "Outdoor",
   },
   {
     title: "Live Music",
-    value: "liveMusic",
+    value: "LiveMusic",
   },
   {
     title: "Afternoon Tea",
-    value: "afternoonTea",
+    value: "AfternoonTea",
   },
   {
     title: "Casual",
-    value: "causal",
+    value: "Causal",
   },
   {
     title: "Bakery",
-    value: "bakery",
+    value: "Bakery",
   },
   {
     title: "Coffee Shop",
-    value: "coffeShop",
+    value: "Coffe Shop",
   },
   {
     title: "Restaurant",
-    value: "restaurant",
+    value: "Restaurant",
   },
   {
     title: "Bar",
-    value: "bar",
+    value: "Bar",
+  },
+];
+
+export const contactTypes = [
+  {
+    title: "Business",
+    value: "business",
+  },
+  {
+    title: "Support",
+    value: "support",
   },
 ];

@@ -1,11 +1,13 @@
 import {
   brandNames,
+  cuisines,
   dressCodes,
   flagTypes,
   holidayExperiences,
   holidayThemes,
   hotelFeatures,
   hotelTypes,
+  pmsNames,
   posTypes,
   propertyCategories,
   restaurantTypes,
@@ -115,7 +117,7 @@ export default {
       title: "PMS Name",
       type: "string",
       options: {
-        list: statusTypes,
+        list: pmsNames,
       },
     },
     {
@@ -208,7 +210,7 @@ export default {
       title: "Cuisines",
       type: "string",
       options: {
-        list: dressCodes,
+        list: cuisines,
       },
     },
     {

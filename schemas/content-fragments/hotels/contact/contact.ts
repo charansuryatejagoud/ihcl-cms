@@ -1,3 +1,5 @@
+import { contactTypes } from "../../../constants";
+
 export default {
   title: "Contact",
   name: "contact",
@@ -17,7 +19,14 @@ export default {
           type: "object",
           fields: [
             { name: "mobile", type: "string", title: "Mobile" },
-            { name: "type", type: "string", title: "Type" },
+            {
+              name: "type",
+              type: "string",
+              title: "Type",
+              options: {
+                list: contactTypes,
+              },
+            },
           ],
         },
       ],
@@ -31,7 +40,14 @@ export default {
           type: "object",
           fields: [
             { name: "email", type: "string", title: "Email" },
-            { name: "type", type: "string", title: "Type" },
+            {
+              name: "type",
+              type: "string",
+              title: "Type",
+              options: {
+                list: contactTypes,
+              },
+            },
           ],
         },
       ],
