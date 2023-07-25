@@ -105,6 +105,10 @@ export const details: FeatureSchemaDefinition = {
         title: "[details] Group With 4-Row 3-Column Grid",
         value: "details.group.group-with-four-row-three-column-grid",
       },
+      {
+        title: "[Details] Group With 2 Column Cards Grid(Placeholder)",
+        value: "details.group.group-with-2-column-cards-grid-placeholder",
+      },
     ],
     card: [
       {
@@ -188,6 +192,10 @@ export const details: FeatureSchemaDefinition = {
       {
         title: "[Details] Share Link Icon",
         value: "details.card-share-link-icon",
+      },
+      {
+        title: "[Details] Card With Right Aligned Content(Placeholder)",
+        value: "details.card.card-with-right-aligned-content-placeholder",
       },
     ],
 

@@ -5,6 +5,7 @@ import {
   flagTypes,
   holidayExperiences,
   holidayThemes,
+  hospitalityTitles,
   hotelFeatures,
   hotelTypes,
   pmsNames,
@@ -261,6 +262,14 @@ export default {
       name: "destinationPath",
       title: "Destination Path",
       type: "string",
+    },
+    {
+      name: "hospitalityTitle",
+      title: "Hospitality Title",
+      type: "string",
+      options: {
+        list: hospitalityTitles,
+      },
     },
   ],
 };

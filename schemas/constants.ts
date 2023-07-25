@@ -595,3 +595,10 @@ export const contactTypes = [
     value: "support",
   },
 ];
+
+export const hospitalityTitles = [
+  {
+    title: "IHCL",
+    value: "IHCL",
+  },
+];
