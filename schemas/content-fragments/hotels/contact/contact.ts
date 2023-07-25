@@ -11,6 +11,26 @@ export default {
       type: "string",
     },
     {
+      name: "businessPhone",
+      title: "Business Phone",
+      type: "string",
+    },
+    {
+      name: "supportPhone",
+      title: "Support Phone",
+      type: "string",
+    },
+    {
+      name: "businessEmail",
+      title: "Business Email",
+      type: "string",
+    },
+    {
+      name: "supportEmail",
+      title: "Support Email",
+      type: "string",
+    },
+    {
       name: "phone",
       title: "Phone",
       type: "array",

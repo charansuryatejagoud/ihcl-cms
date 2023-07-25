@@ -18,6 +18,11 @@ export default {
       type: "string",
     },
     {
+      name: "identifier",
+      title: "Identifier",
+      type: "string",
+    },
+    {
       name: "brandName",
       title: "Brand Name",
       type: "string",
