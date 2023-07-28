@@ -37,6 +37,8 @@ import basicInfo from "../basicDetails";
 import wellnessDetails from "./wellness/wellnessInfo";
 import contentSpecification from "../contentSpecification";
 import taxonomyInfo from "../taxonomyInfo";
+import locationAndDirections from "./locationAndDirections/locationAndDirections";
+import locationInfo from "../locationInfo";
 
 export const hotels: FeatureSchemaDefinition = {
   schemas: [
@@ -78,5 +80,7 @@ export const hotels: FeatureSchemaDefinition = {
     wellnessDetails,
     contentSpecification,
     taxonomyInfo,
+    locationAndDirections,
+    locationInfo,
   ],
 };

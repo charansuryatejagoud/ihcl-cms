@@ -76,5 +76,43 @@ export default {
       title: "Longitude",
       type: "string",
     },
+    {
+      name: "regionKey",
+      title: "Region Key",
+      type: "string",
+    },
+    {
+      name: "locationAndDirectionsInfo",
+      title: "Location & Directions",
+      type: "array",
+      of: [
+        {
+          type: "object",
+          fields: [
+            {
+              name: "basicInfo",
+              title: "Basic Info",
+              type: "basicDetails",
+            },
+            {
+              name: "locationDetails",
+              title: "Location Details",
+              type: "locationInfo",
+            }
+          ],
+          preview: {
+            select: {
+              title: "basicInfo",
+            },
+            prepare(selection) {
+              const { title } = selection;
+              return {
+                title: title.title,
+              };
+            },
+          },
+        },
+      ],
+    },
   ],
 };

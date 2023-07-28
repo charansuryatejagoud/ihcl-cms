@@ -228,6 +228,26 @@ export const contentTypes = [
     title: "All Hotels(HotelTypes)",
     value: "allHotels-hotelTypes",
   },
+  {
+    title: "Hotel Address",
+    value: "hotelAddress",
+  },
+  {
+    title: "Restaurant Overview",
+    value: "restaurantOverview",
+  },
+  {
+    title: "Restaurant Availability",
+    value: "restaurantAvailability",
+  },
+  {
+    title: "Restaurant Highlights",
+    value: "restaurantHighlights",
+  },
+  {
+    title: "Restaurant Exclusive Offers",
+    value: "restaurantExclusiveOffers",
+  },
 ];
 
 export const actionTypes = [

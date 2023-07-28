@@ -41,7 +41,7 @@ export default {
       return {
         title: title,
         media: image
-          ? image.largeImage[0].asset
+          ? (image.largeImage[0].asset || image.image[0].asset)
           : videoAsset
           ? videoAsset.videoThumbnail.asset
           : {},

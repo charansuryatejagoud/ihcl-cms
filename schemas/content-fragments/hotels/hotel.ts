@@ -44,6 +44,12 @@ export default {
       type: "string",
     },
     {
+      name: "gcCategory",
+      title: "Gift Card Category",
+      type: "reference",
+      to: [{ type: "giftCardsDetails" }],
+    },
+    {
       name: "searchTaxonomies",
       title: "Taxonomies",
       type: "reference",

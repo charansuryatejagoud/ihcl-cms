@@ -21,5 +21,16 @@ export default {
       type: "array",
       of: [{ name: "categories", type: "categoriesInfo", title: "Categories" }],
     },
+    {
+      name: "mobileAmenities",
+      title: "Mobile Amenities",
+      type: "array",
+      of: [{ type: "contentSpecification" }],
+    },
+    {
+      name: "mobileAmenitiesTitle",
+      title: "Mobile Amenities Title",
+      type: "string",
+    },
   ],
 };

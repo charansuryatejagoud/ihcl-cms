@@ -19,10 +19,31 @@ export default {
       type: "string",
     },
     {
-      name: "socialImages",
-      title: "Social Images",
-      type: "array",
-      of: [{ name: "image", title: "Image", type: "image" }],
+      name: "socialHandle",
+      title: "Social Handle",
+      type: "string",
+    },
+    {
+      title: "Start Date",
+      name: "startDate",
+      type: "datetime",
+      options: {
+        dateFormat: "YYYY-MM-DD",
+        timeFormat: "HH:mm",
+        calendarTodayLabel: "Today",
+      },
+      description: "Used for Showing Social Feeds based on Time Period",
+    },
+    {
+      title: "End Date",
+      name: "endDate",
+      type: "datetime",
+      options: {
+        dateFormat: "YYYY-MM-DD",
+        timeFormat: "HH:mm",
+        calendarTodayLabel: "Today",
+      },
+      description: "Used for Showing Social Feeds based on Time Period",
     },
   ],
 };

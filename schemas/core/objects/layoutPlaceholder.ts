@@ -34,11 +34,29 @@ export default function layoutPlaceholder({
         type: "string",
       },
       {
+        name: "groupMobileVariant",
+        title: "Group Mobile Variant",
+        type: "string",
+        options: {
+          list: variants,
+        },
+        group: "main",
+      },
+      {
         name: "groupLargeVariant",
         title: "Group Large Variant",
         type: "string",
         options: {
           list: variants,
+        },
+        group: "main",
+      },
+      {
+        name: "cardMobileVariant",
+        title: "Card Mobile Variant",
+        type: "string",
+        options: {
+          list: cardVariants,
         },
         group: "main",
       },

@@ -8,6 +8,7 @@ export default {
       title: "Basic Info",
       type: "basicDetails",
     },
+    { name: "urlPath", type: "string", title: "URL Path" },
     { name: "code", type: "string", title: "Code" },
     { name: "type", type: "string", title: "Type" },
   ],

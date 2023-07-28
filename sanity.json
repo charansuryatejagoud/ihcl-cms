@@ -35,6 +35,24 @@
             "projectId": "ocl5w36p",
             "dataset": "production"
           }
+        },
+        {
+          "name": "sit",
+          "title": "SIT",
+          "default": true,
+          "api": {
+            "projectId": "ocl5w36p",
+            "dataset": "sit"
+          }
+        },
+        {
+          "name": "dev",
+          "title": "DEV",
+          "default": true,
+          "api": {
+            "projectId": "ocl5w36p",
+            "dataset": "develop"
+          }
         }
       ]
     }

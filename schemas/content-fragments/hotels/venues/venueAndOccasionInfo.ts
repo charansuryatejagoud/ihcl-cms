@@ -32,6 +32,11 @@ export default {
         },
       ],
     },
+    {
+      title: "Venue Modal Details",
+      name: "venueModalDetails",
+      type: "modalDetails",
+    },
   ],
   preview: {
     select: {

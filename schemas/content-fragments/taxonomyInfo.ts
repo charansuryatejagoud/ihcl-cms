@@ -43,6 +43,14 @@ export default {
       type: "string",
     },
     {
+      name: "hospitalityTitle",
+      title: "Hospitality Title",
+      type: "string",
+      options: {
+        list: hospitalityTitles,
+      },
+    },
+    {
       name: "propertyCategory",
       title: "Category",
       type: "string",
@@ -186,6 +194,11 @@ export default {
       type: "string",
     },
     {
+      name: "images",
+      title: "Images",
+      type: "string",
+    },
+    {
       name: "highlights",
       title: "Highlights",
       type: "string",
@@ -244,6 +257,16 @@ export default {
       type: "string",
     },
     {
+      name: "menuLink",
+      title: "Restaurant Link",
+      type: "string",
+    },
+    {
+      name: "timings",
+      title: "Timings",
+      type: "string",
+    },
+    {
       name: "diningPath",
       title: "Dining Path",
       type: "string",
@@ -262,14 +285,6 @@ export default {
       name: "destinationPath",
       title: "Destination Path",
       type: "string",
-    },
-    {
-      name: "hospitalityTitle",
-      title: "Hospitality Title",
-      type: "string",
-      options: {
-        list: hospitalityTitles,
-      },
     },
   ],
 };
