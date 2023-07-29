@@ -622,3 +622,18 @@ export const hospitalityTitles = [
     value: "IHCL",
   },
 ];
+
+export const featureVariants = [
+  {
+    title: "Default",
+    value: "default",
+  },
+  {
+    title: "Dining",
+    value: "dining",
+  },
+  {
+    title: "Offers",
+    value: "offers",
+  }
+]

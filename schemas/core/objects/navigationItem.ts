@@ -1,6 +1,7 @@
 import { IoNavigate as Icon } from "react-icons/io5";
 // import { pathUrlRule } from "../../shared-utils";
 import { linkTypeField, pathUrlRule } from "../../shared-utils";
+import { featureVariants } from "../../constants";
 const buttonVariants = [
   { title: "Light Contained", value: "light-contained" },
   { title: "Dark Contained", value: "dark-contained" },
@@ -14,6 +15,9 @@ export default {
   title: "Navigation Item",
   type: "object",
   icon: Icon,
+  initialValue: {
+    featureVariant: "default"
+  },
   fields: [
     {
       name: "title",
@@ -30,6 +34,14 @@ export default {
       name: "image",
       title: "Image",
       type: "image",
+    },
+    {
+      name: "featureVariant",
+      title: "Feature Variant",
+      type: "string",
+      options: {
+        list: [...featureVariants]
+      }
     },
     {
       name: "variant",

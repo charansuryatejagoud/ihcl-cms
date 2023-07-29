@@ -1,6 +1,12 @@
 import { FeatureSchemaDefinition } from "schemas/types";
 
 export const details: FeatureSchemaDefinition = {
+  connectedStores: [
+    {
+      title: "[Details] Hotel Listing",
+      value: "details.connectedStores.hotel-listing",
+    },
+  ],
   variants: {
     group: [
       {

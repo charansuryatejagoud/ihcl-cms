@@ -128,10 +128,6 @@ export const loyalty: FeatureSchemaDefinition = {
     ],
     dialog: [
       { title: "[Loyalty] Manage Card", value: "manage-card" },
-      {
-        title: "[Loyalty] Enquire Bulk Gift Card",
-        value: "enquire-bulk-gift-card",
-      },
     ],
     stepper: [
       {
