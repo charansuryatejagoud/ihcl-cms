@@ -70,6 +70,18 @@ export default function layoutPlaceholder({
         group: "main",
       },
       {
+        name: "isMobileComponentFullWidth",
+        title: "is Mobile Component Full Width",
+        type: "boolean",
+        description:
+          "This is used to handle Full width for the Mobile Component",
+      },
+      {
+        name: "isComponentFullWidth",
+        title: "Is Component Full Width",
+        type: "boolean",
+      },
+      {
         name: "aesthetic",
         title: "Aesthetic",
         type: "reference",

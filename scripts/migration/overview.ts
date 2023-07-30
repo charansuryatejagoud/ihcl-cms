@@ -27,7 +27,7 @@ async function run() {
 
   await client
     .fetch(
-      `*[_type == "page" && path == "/hotels/taj-lands-end-mumbai/overview"]{
+      `*[_type == "page" && path == "/hotels/taj-samudra-colomba/overview"]{
           items
          }[0]`,
     )
@@ -38,17 +38,24 @@ async function run() {
       } else {
         // console.log(data)
         let title = ''
-        let mediaType = ''
-        let imageAsset = {}
+        let bannerMediaObj = {
+          mediaType: 'image',
+          imageAsset: {
+            largeImage: [],
+            image:[]
+          }
+        }
+        let bannerArr = []
         let sectionTitle = {}
         let description = ''
         let basicInfo = {}
 
-        data?.items?.map((item) => {
+        data?.items?.map((item, index) => {
           if (item?._type == "banner") {
-            title = item?.title
-            mediaType = item?.mediaType
-            imageAsset = item?.imageAsset
+            title = item?.title?.desktopTitle.toString()
+            bannerMediaObj.imageAsset.image = item?.imageAsset?.image
+            bannerMediaObj.imageAsset.largeImage = item?.imageAsset?.largeImage
+            bannerArr.push({_key: `${index}`, ...bannerMediaObj})
           }
           else if (item?._type == "card" && item?.largeVariant == "details.card.card-with-right-media-left-content-aspect-ratio-2:4") {
             // sectionTitle = item?.title
@@ -61,39 +68,42 @@ async function run() {
                 media: [],
               }
             }
-            let mediaArr = []
             let mediaObj = {
+              _key: `${index}`,
+              _type:'mediaInput',
+              mediaType: 'image',
               imageAsset: {
-                largeImage: []
+                largeImage: [],
+                image:[]
               }
             }
+            let images = []
+            let largeImages = []
             cardObj.basicInfo.title = item?.title
             cardObj.basicInfo.description = item?.description
 
-            mediaObj.imageAsset.largeImage = item?.largeImage
-            mediaArr.push(mediaObj)
-
-            cardObj.basicInfo.media = mediaArr
+            images.push({_key: `${index}`, ...item?.image})
+            largeImages.push({_key: `${index}`, ...item?.largeImage})
+            mediaObj.imageAsset.image = images
+            mediaObj.imageAsset.largeImage = largeImages
+            cardObj.basicInfo.media.push({_key: `${index}`, ...mediaObj})
             // console.log("cardObj.images", cardObj.images)
             basicInfo = cardObj?.basicInfo
           }
         })
 
         let newOverview = {
-          _type: "hotelOverview",
+          _type: "overview",
           title: title,
           sectionTitle: sectionTitle,
           description: description,
-          bannerImage: {
-            mediaType: mediaType,
-            imageAsset: imageAsset
-          },
+          bannerImage: bannerArr,
           basicInfo: basicInfo
         }
         client
           .create(newOverview)
           .then((newOverview) => {
-            console.log("Created new Wellness ", newOverview?.title);
+            console.log("Created new Overview ", newOverview?.title);
           })
           .catch((err) => {
             console.log("failed to update");

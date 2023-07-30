@@ -27,7 +27,7 @@ async function run() {
 
   await client
     .fetch(
-      `*[_type == "page" && path == "/hotels/taj-lands-end-mumbai/wellness"]{
+      `*[_type == "page" && path == "/palace/taj-mahal-palace-mumbai/wellness"]{
           items
          }[0]`,
     )
@@ -38,71 +38,88 @@ async function run() {
       } else {
         // console.log(data)
         let title = ''
-        let mediaType = ''
-        let imageAsset = {}
-        let sectionTitle = {}
-        let description = ''
-        let signatureTreatments = []
-        let wellnessFacilities = []
-        let spaDetails = []
+        let bannerMediaObj = {
+          mediaType: 'image',
+          imageAsset: {
+            largeImage: [],
+            image:[]
+          }
+        }
+        let bannerArr = []
+        // let sectionTitle = {}
+        // let description = ''
+        let signatureTreatments = {
+          sectionTitle: [],
+          description: '',
+          signatureTreatmentDetails: []
+        }
+        let wellnessFacilities = {
+          sectionTitle: [],
+          description: '',
+          wellnessFacilities: []
+        }
+        let spaDetails = {
+          sectionTitle: [],
+          description: '',
+          basicInfo: {}
+        }
 
-        data?.items?.map((item) => {
+        data?.items?.map((item, index) => {
           if (item?._type == "banner") {
-            title = item?.title
-            mediaType = item?.mediaType
-            imageAsset = item?.imageAsset
+            title = item?.title?.desktopTitle.toString()
+            bannerMediaObj.imageAsset.image = item?.imageAsset?.image
+            bannerMediaObj.imageAsset.largeImage = item?.imageAsset?.largeImage
+            bannerArr.push({_key: `${index}`, ...bannerMediaObj})
           }
           else if (item?._type == "group" && item?.largeVariant == "details.group.group-with-card-left-media-right-content-aspect-ratio-2:4") {
-            sectionTitle = item?.title
-            description = item?.subTitle
+            spaDetails.sectionTitle = item?.title
+            spaDetails.description = item?.subTitle
             if (item?.items) {
               item?.items?.map((card) => {
                 let cardObj = {
                   _key: '',
-                  basicInfo: {
+                  basicInfo : {
                     title: "",
-                    subTitle: "",
                     description: "",
-                    specifications: [{
-                      keyType: "",
-                      key: "",
-                      value: ""
-                    }],
                     media: [],
+                    specifications: []
                   },
-                  highlights: []
+                  // highlights: []
                 }
-                let mediaArr = []
                 let mediaObj = {
+                  _key: `${index}`,
+                  _type:'mediaInput',
+                  mediaType: 'image',
                   imageAsset: {
-                    largeImage: []
+                    largeImage: [],
+                    image:[]
                   }
                 }
-                let highlightsArr = []
+                let images = []
+                let largeImages = []
                 if (card?._type == 'card') {
                   cardObj._key = card?._key
                   cardObj.basicInfo.title = card?.title
-                  cardObj.basicInfo.subTitle = card?.subTitle
                   cardObj.basicInfo.description = card?.description
+                  images.push({_key: `${index}`, ...card?.image})
+                  largeImages.push({_key: `${index}`, ...card?.largeImage})
+                  mediaObj.imageAsset.image = images
+                  mediaObj.imageAsset.largeImage = largeImages
+                  cardObj.basicInfo.media.push({_key: `${index}`, ...mediaObj})
 
-                  highlightsArr.push(card?.highLights)
+                  // cardObj.highlights.push(card?.highLights)
 
-                  mediaObj.imageAsset.largeImage = card?.largeImage
-                  mediaArr.push(mediaObj)
-
-                  cardObj.basicInfo.media = mediaArr
-                  cardObj.highlights = highlightsArr
                   // console.log("cardObj.images", cardObj.images)
-                  spaDetails.push(cardObj)
+                  spaDetails.basicInfo = cardObj
                 }
               })
             }
           }
           else if (item?._type == "group" && item?.largeVariant == "details.group.3-card-carousel") {
-            sectionTitle = item?.title
-            description = item?.subTitle
+            signatureTreatments.sectionTitle = item?.title
+            signatureTreatments.description = item?.subTitle
             if (item?.items) {
-              item?.items?.map((card) => {
+              item?.items?.map((card, index) => {
                 let cardObj = {
                   _key: '',
                   basicInfo: {
@@ -111,32 +128,37 @@ async function run() {
                     media: [],
                   }
                 }
-                let mediaArr = []
                 let mediaObj = {
+                  _key: `${index}`,
+                  _type:'mediaInput',
+                  mediaType: 'image',
                   imageAsset: {
-                    largeImage: []
+                    largeImage: [],
+                    image:[]
                   }
                 }
+                let images = []
+                let largeImages = []
                 if (card?._type == 'card') {
                   cardObj._key = card?._key
                   cardObj.basicInfo.title = card?.title
                   cardObj.basicInfo.description = card?.description
-
-                  mediaObj.imageAsset.largeImage = card?.largeImage
-                  mediaArr.push(mediaObj)
-
-                  cardObj.basicInfo.media = mediaArr
+                  images.push({_key: `${index}`, ...card?.image})
+                  largeImages.push({_key: `${index}`, ...card?.largeImage})
+                  mediaObj.imageAsset.image = images
+                  mediaObj.imageAsset.largeImage = largeImages
+                  cardObj.basicInfo.media.push({_key: `${index}`, ...mediaObj})
                   // console.log("cardObj.images", cardObj.images)
-                  signatureTreatments.push(cardObj)
+                  signatureTreatments.signatureTreatmentDetails.push(cardObj)
                 }
               })
             }
           }
           else if (item?._type == "group" && item?.largeVariant == "details.group.3-card-carousel") {
-            sectionTitle = item?.title
-            description = item?.subTitle
+            wellnessFacilities.sectionTitle = item?.title
+            wellnessFacilities.description = item?.subTitle
             if (item?.items) {
-              item?.items?.map((card) => {
+              item?.items?.map((card, index) => {
                 let cardObj = {
                   _key: '',
                   basicInfo: {
@@ -145,23 +167,28 @@ async function run() {
                     media: [],
                   }
                 }
-                let mediaArr = []
                 let mediaObj = {
+                  _key: `${index}`,
+                  _type:'mediaInput',
+                  mediaType: 'image',
                   imageAsset: {
-                    largeImage: []
+                    largeImage: [],
+                    image:[]
                   }
                 }
+                let images = []
+                let largeImages = []
                 if (card?._type == 'card') {
                   cardObj._key = card?._key
                   cardObj.basicInfo.title = card?.title
                   cardObj.basicInfo.description = card?.description
-
-                  mediaObj.imageAsset.largeImage = card?.largeImage
-                  mediaArr.push(mediaObj)
-
-                  cardObj.basicInfo.media = mediaArr
+                  images.push({_key: `${index}`, ...card?.image})
+                  largeImages.push({_key: `${index}`, ...card?.largeImage})
+                  mediaObj.imageAsset.image = images
+                  mediaObj.imageAsset.largeImage = largeImages
+                  cardObj.basicInfo.media.push({_key: `${index}`, ...mediaObj})
                   // console.log("cardObj.images", cardObj.images)
-                  wellnessFacilities.push(cardObj)
+                  wellnessFacilities.wellnessFacilities.push(cardObj)
                 }
               })
             }
@@ -171,14 +198,11 @@ async function run() {
         let newWellness = {
           _type: "wellness",
           title: title,
-          sectionTitle: sectionTitle,
-          description: description,
-          bannerImage: {
-            mediaType: mediaType,
-            imageAsset: imageAsset
-          },
+          // sectionTitle: sectionTitle,
+          // description: description,
+          bannerImage: bannerArr,
           signatureTreatments: signatureTreatments,
-          wellnessFacilities: wellnessFacilities,
+          wellnessDetails: wellnessFacilities,
           spaDetails: spaDetails
         }
         client

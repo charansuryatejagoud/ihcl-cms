@@ -61,6 +61,11 @@ export default {
       type: "string",
     },
     {
+      name: "hotelBannerTitle",
+      title: "Hotel Banner Title",
+      type: "title",
+    },
+    {
       name: "hotelOverview",
       title: "Overview",
       type: "reference",

@@ -27,7 +27,7 @@ async function run() {
 
   await client
     .fetch(
-      `*[_type == "page" && path == "/hotels/taj-samudra-colomba/rooms-and-suites"]{
+      `*[_type == "page" && path == "/hotels/taj-samudra-colomba/overview"]{
           items
          }[0]`,
     )
@@ -36,29 +36,30 @@ async function run() {
         //Skipping
         console.log("No doc found")
       } else {
+        //Creating a new attractions component
         // console.log(data)
         let title = ''
-        let bannerMediaObj = {
-          mediaType: 'image',
-          imageAsset: {
-            largeImage: [],
-            image:[]
-          }
-        }
-        let bannerArr = []
+        // let bannerMediaObj = {
+        //   mediaType: 'image',
+        //   imageAsset: {
+        //     largeImage: [],
+        //     image:[]
+        //   }
+        // }
+        // let bannerArr = []
         let sectionTitle = {}
         let description = ''
-        let signatureExp = {}
-        let roomsDetails = []
+        let highlightsDetails = []
 
         data?.items?.map((item, index) => {
           if (item?._type == "banner") {
+            // console.group(item,"sdfsc")
             title = item?.title?.desktopTitle.toString()
-            bannerMediaObj.imageAsset.image = item?.imageAsset?.image
-            bannerMediaObj.imageAsset.largeImage = item?.imageAsset?.largeImage
-            bannerArr.push({_key: `${index}`, ...bannerMediaObj})
+            // bannerMediaObj.imageAsset.image = item?.imageAsset?.image
+            // bannerMediaObj.imageAsset.largeImage = item?.imageAsset?.largeImage
+            // bannerArr.push({_key: `${index}`, ...bannerMediaObj})
           }
-          else if (item?._type == "group" && item?.largeVariant == "ihcl.core.group.highlighted-2-card-carousel") {
+          else if (item?._type == "group" && item?.largeVariant == "details.group.3-card-carousel") {
             sectionTitle = item?.title
             description = item?.subTitle
             if (item?.items) {
@@ -67,13 +68,10 @@ async function run() {
                   _key: '',
                   basicInfo : {
                     title: "",
-                    description: "",
                     media: [],
-                    specifications: []
                   }
                 }
                 let mediaObj = {
-                  _key: `${index}`,
                   _type:'mediaInput',
                   mediaType: 'image',
                   imageAsset: {
@@ -83,35 +81,33 @@ async function run() {
                 }
                 let images = []
                 let largeImages = []
-                // let specArr = []
                 if (card?._type == 'card') {
                   cardObj._key = card?._key
                   cardObj.basicInfo.title = card?.title
-                  cardObj.basicInfo.description = card?.description
                   images.push({_key: `${index}`, ...card?.image})
                   largeImages.push({_key: `${index}`, ...card?.largeImage})
                   mediaObj.imageAsset.image = images
                   mediaObj.imageAsset.largeImage = largeImages
                   cardObj.basicInfo.media.push({_key: `${index}`, ...mediaObj})
-                  // console.log("cardObj.images", cardObj.images)
-                  roomsDetails.push(cardObj)
+                  highlightsDetails.push(cardObj)
                 }
               })
             }
           }
         })
-        let newRooms = {
-          _type: "rooms",
+        // console.log("Migrated Data",highlightsDetails)
+        let newHighlights = {
+          _type: "highlights",
           title: title,
           sectionTitle: sectionTitle,
           description: description,
-          bannerImage: bannerArr,
-          roomsList: roomsDetails
+        //   bannerImage: bannerArr,
+          highlightDetails: highlightsDetails
         }
         client
-          .create(newRooms)
-          .then((newRooms) => {
-            console.log("Created new Rooms ", newRooms?.title);
+          .create(newHighlights)
+          .then((newHighlights) => {
+            console.log("Created new Highlights ", newHighlights?.title);
           })
           .catch((err) => {
             console.log("failed to update");

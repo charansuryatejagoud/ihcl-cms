@@ -27,7 +27,7 @@ async function run() {
 
   await client
     .fetch(
-      `*[_type == "page" && path == "/hotels/taj-mahal-palace-mumbai/experiences"]{
+      `*[_type == "page" && path == "/hotels/taj-samudra-colomba/attractions"]{
           items
          }[0]`,
     )
@@ -39,49 +39,72 @@ async function run() {
         //Creating a new attractions component
         // console.log(data)
         let title = ''
-        let mediaType = ''
-        let imageAsset = {}
+        let bannerMediaObj = {
+          mediaType: 'image',
+          imageAsset: {
+            largeImage: [],
+            image:[]
+          }
+        }
+        let bannerArr = []
         let sectionTitle = {}
         let description = ''
-        let experienceDetails = []
+        let attractionDetails = []
 
-        data?.items?.map((item) => {
+        data?.items?.map((item, index) => {
           if (item?._type == "banner") {
-            title = item?.title
-            mediaType = item?.mediaType
-            imageAsset = item?.imageAsset
+            // console.group(item,"sdfsc")
+            title = item?.title?.desktopTitle.toString()
+            bannerMediaObj.imageAsset.image = item?.imageAsset?.image
+            bannerMediaObj.imageAsset.largeImage = item?.imageAsset?.largeImage
+            bannerArr.push({_key: `${index}`, ...bannerMediaObj})
           }
           else if (item?._type == "group" && item?.largeVariant == "ihcl.core.group.highlighted-2-card-carousel") {
             sectionTitle = item?.title
             description = item?.subTitle
             if (item?.items) {
-              item?.items?.map((card) => {
+              item?.items?.map((card, index) => {
                 let cardObj = {
                   _key: '',
-                  title: "",
-                  description: "",
-                  images: [],
-                  specifications: []
+                  basicInfo : {
+                    title: "",
+                    description: "",
+                    media: [],
+                    specifications: []
+                  }
                 }
-                // let specArr = []
+                let mediaObj = {
+                  _type:'mediaInput',
+                  mediaType: 'image',
+                  imageAsset: {
+                    largeImage: [],
+                    image:[]
+                  }
+                }
+                let images = []
+                let largeImages = []
                 if (card?._type == 'card') {
                   cardObj._key = card?._key
-                  cardObj.title = card?.title
-                  cardObj.description = card?.description
-                  cardObj.images = [card?.largeImage]
-                  card?.richText?.map((subItem) => {
+                  cardObj.basicInfo.title = card?.title
+                  cardObj.basicInfo.description = card?.description
+                  images.push({_key: `${index}`, ...card?.image})
+                  largeImages.push({_key: `${index}`, ...card?.largeImage})
+                  mediaObj.imageAsset.image = images
+                  mediaObj.imageAsset.largeImage = largeImages
+                  cardObj.basicInfo.media.push({_key: `${index}`, ...mediaObj})
+                  card?.parameterMap?.map((subItem) => {
                     let specObj = {
                       _key: '',
+                      keyType:'string',
                       key: '',
                       value: ''
                     }
                     specObj._key = subItem?._key
-                    specObj.key = subItem?.richTextKey
-                    specObj.value = subItem?.richTextValue
-                    cardObj?.specifications.push(specObj)
+                    specObj.key = subItem?.key
+                    specObj.value = subItem?.value
+                    cardObj?.basicInfo.specifications.push(specObj)
                   })
-                  // console.log("cardObj.images", cardObj.images)
-                  experienceDetails.push(cardObj)
+                  attractionDetails.push(cardObj)
                 }
               })
             }
@@ -93,11 +116,8 @@ async function run() {
           title: title,
           sectionTitle: sectionTitle,
           description: description,
-          bannerImage: {
-            mediaType: mediaType,
-            imageAsset: imageAsset
-          },
-          experienceDetails: experienceDetails
+          bannerImage: bannerArr,
+          attractionDetails: attractionDetails
         }
         client
           .create(newAttractions)

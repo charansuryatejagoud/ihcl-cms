@@ -19,5 +19,11 @@ export default {
       type: "array",
       of: [{ type: "facilityInfo" }],
     },
+    {
+      name: "mobileFacilities",
+      title: "Mobile Facilities",
+      type: "array",
+      of: [{ type: "contentSpecification" }],
+    },
   ],
 };
