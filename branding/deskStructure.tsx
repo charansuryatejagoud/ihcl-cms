@@ -57,7 +57,7 @@ const contentFragments = S.listItem()
           .title("Property Overview")
           .child(S.documentTypeList("overview")),
         S.listItem()
-          .title("Availablity")
+          .title("Hotel Information")
           .child(S.documentTypeList("availability")),
         S.listItem()
           .title("Highlights")
