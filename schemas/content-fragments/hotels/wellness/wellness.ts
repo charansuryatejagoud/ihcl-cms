@@ -30,6 +30,41 @@ export default {
       type: "treatments",
     },
     {
+      name: "indianTherapies",
+      title: "Indian Therapies",
+      type: "treatments",
+    },
+    {
+      name: "indianAromaTherapies",
+      title: "Indian Aroma Therapies",
+      type: "treatments",
+    },
+    {
+      name: "spaIndulgences",
+      title: "Spa Indulgences",
+      type: "treatments",
+    },
+    {
+      name: "bodyScrubsAndWraps",
+      title: "Body Scrubs And Wraps",
+      type: "treatments",
+    },
+    {
+      name: "yogaAndMeditation",
+      title: "Yoga And Meditation",
+      type: "treatments",
+    },
+    {
+      name: "ayurvedaTherapies",
+      title: "Ayurveda Therapies",
+      type: "treatments",
+    },
+    {
+      name: "beauty",
+      title: "Beauty",
+      type: "treatments",
+    },
+    {
       name: "dividerImage",
       title: "Divider Image",
       type: "array",

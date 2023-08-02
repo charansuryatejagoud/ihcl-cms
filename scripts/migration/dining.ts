@@ -27,7 +27,7 @@ async function run() {
 
   await client
     .fetch(
-      `*[_type == "page" && path == "/hotels/taj-samudra-colomba/dining"]{
+      `*[_type == "page" && path == "/hotels/taj-lands-end-mumbai/dining"]{
           items
          }[0]`,
     )
@@ -64,6 +64,7 @@ async function run() {
               item?.items?.map((card, index) => {
                 let cardObj = {
                   _key: '',
+                  _type: 'diningInfo',
                   basicInfo : {
                     title: "",
                     description: "",

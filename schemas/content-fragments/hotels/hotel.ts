@@ -85,7 +85,7 @@ export default {
     },
     {
       name: "hotelAvailability",
-      title: "Availability",
+      title: "Hotel Information",
       type: "reference",
       to: [{ type: "availability" }],
     },

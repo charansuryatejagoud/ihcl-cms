@@ -27,7 +27,7 @@ async function run() {
 
   await client
     .fetch(
-      `*[_type == "page" && path == "/hotels/taj-samudra-colomba/rooms-and-suites"]{
+      `*[_type == "page" && path == "/hotels/taj-coromandel-chennai/rooms-and-suites"]{
           items
          }[0]`,
     )
@@ -65,6 +65,7 @@ async function run() {
               item?.items?.map((card, index) => {
                 let cardObj = {
                   _key: '',
+                  _type: 'roomInfo',
                   basicInfo : {
                     title: "",
                     description: "",

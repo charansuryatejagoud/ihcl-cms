@@ -27,7 +27,7 @@ async function run() {
 
   await client
     .fetch(
-      `*[_type == "page" && path == "/hotels/taj-samudra-colomba/venues"]{
+      `*[_type == "page" && path == "/hotels/taj-coromandel-chennai/venues"]{
           items
          }[0]`,
     )
@@ -49,16 +49,19 @@ async function run() {
         let sectionTitle = {}
         let description = ''
         let venuesAndOccasions = {
+          type: 'venuesAndOccasions',
           sectionTitle: [],
           description: '',
           eventVenueDetails: []
         }
         let perfectEventSection = {
+          type:'object',
           sectionTitle: [],
           description: '',
           perfectEvent: []
         }
         let timelessWeddings = {
+          type:'object',
           sectionTitle: [],
           description: '',
           weddingEvents: []
@@ -78,7 +81,9 @@ async function run() {
               item?.items?.map((card, index) => {
                 let cardObj = {
                   _key: '',
+                  _type: 'venueAndOccasionInfo',
                   basicInfo : {
+                    _type:'basicDetails',
                     title: "",
                     description: "",
                     media: [],
