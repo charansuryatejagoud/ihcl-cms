@@ -194,5 +194,11 @@ export const details: FeatureSchemaDefinition = {
         value: "details.dialog.hotel-room-types",
       },
     ],
+    placeholder: [
+      {
+        title: "[Details] Hotels Locations on Map",
+        value: "details.placeholders.hotels-locations-on-map"
+      }
+    ]
   },
 };

@@ -1,6 +1,10 @@
 import { FeatureSchemaDefinition } from "schemas/types";
+import { weddingAssets, weddingMedia } from "./weddingAssets";
+import { featureDefinition } from "schemas/feature-schemas";
 
 export const events: FeatureSchemaDefinition = {
+  schemas: [weddingAssets(), weddingMedia()],
+  customItems: [{ type: "weddingAssets" }],
   variants: {
     group: [
       {
