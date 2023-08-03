@@ -23,6 +23,7 @@ import { myAccount } from "./myAccount";
 import { Offers } from "./offers";
 import { aboutUs } from "./aboutUs";
 import { events } from "./events";
+import { notifications } from "./notifications";
 
 const features: FeatureSchemaDefinition[] = [
   core,
@@ -41,7 +42,8 @@ const features: FeatureSchemaDefinition[] = [
   myAccount,
   Offers,
   aboutUs,
-  events
+  events,
+  notifications,
 ];
 
 export const featureDefinition: FeatureSchemaDefinition =
