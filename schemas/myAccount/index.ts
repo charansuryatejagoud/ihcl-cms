@@ -118,6 +118,14 @@ export const myAccount: FeatureSchemaDefinition = {
         title: "[My Account] Booking Cancellation",
         value: "myAccount.placeholders.booking-cancellation",
       },
+      {
+        title: "[My Account] Booking Change Rooms",
+        value: "myAccount.placeholders.booking-change-rooms",
+      },
+      {
+        title: "[MyAccount] Email OTP Verification",
+        value: "myAccount.placeholders.email-otp-verification",
+      }
     ],
     tabs: [
       {
