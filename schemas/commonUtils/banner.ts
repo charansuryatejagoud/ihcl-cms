@@ -6,6 +6,10 @@ const AlignmentVariant = [
     title: "Normal",
     value: "normal",
   },
+  {
+    title:"Center",
+    value:"center"
+  }
 ];
 
 const variants = [
