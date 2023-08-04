@@ -2,9 +2,7 @@ import { FeatureSchemaDefinition } from "schemas/types";
 import cancellationDropdown from "./cancellationDropdown";
 
 export const myAccount: FeatureSchemaDefinition = {
-  schemas: [
-    cancellationDropdown
-  ],
+  schemas: [cancellationDropdown],
   connectedStores: [
     {
       title: "[My Account] My Account Store",
@@ -45,10 +43,6 @@ export const myAccount: FeatureSchemaDefinition = {
       {
         title: "[My Account] Change Booking Confirmed",
         value: "myAccount.group.change-booking-confirmed",
-      },
-      {
-        title: "[My Account] 8:4 Ratio Grid With only two items",
-        value: "myAccount.group.8-4-ratio-grid-with-only-two-items",
       },
     ],
     card: [
@@ -138,6 +132,10 @@ export const myAccount: FeatureSchemaDefinition = {
         title: "[MyAccount] Confirm Room Price Breakup",
         value: "myAccount.placeholders.confirm-room-price-breakup",
       },
+      {
+        title: "[My Account] Change Room Packages",
+        value: "myAccount.placeholders.hotels-packages",
+      },
     ],
     tabs: [
       {
@@ -146,8 +144,14 @@ export const myAccount: FeatureSchemaDefinition = {
       },
       {
         title: "[My Account] Manage Gift Card",
-        value: "myAccount.tabs.manage-gift-card"
-      }
+        value: "myAccount.tabs.manage-gift-card",
+      },
+    ],
+    stepper: [
+      {
+        title: "[My Account] Change Rooms Stepper",
+        value: "myAccount.stepper.default",
+      },
     ],
   },
 };
