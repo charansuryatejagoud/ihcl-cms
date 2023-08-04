@@ -2,9 +2,7 @@ import { FeatureSchemaDefinition } from "schemas/types";
 import cancellationDropdown from "./cancellationDropdown";
 
 export const myAccount: FeatureSchemaDefinition = {
-  schemas: [
-    cancellationDropdown
-  ],
+  schemas: [cancellationDropdown],
   connectedStores: [
     {
       title: "[My Account] My Account Store",
@@ -118,11 +116,41 @@ export const myAccount: FeatureSchemaDefinition = {
         title: "[My Account] Booking Cancellation",
         value: "myAccount.placeholders.booking-cancellation",
       },
+      {
+        title: "[My Account] Booking Change Rooms",
+        value: "myAccount.placeholders.booking-change-rooms",
+      },
+      {
+        title: "[MyAccount] Email OTP Verification",
+        value: "myAccount.placeholders.email-otp-verification",
+      },
+      {
+        title: "[MyAccount] Hotels Rooms",
+        value: "myAccount.placeholders.hotels-rooms",
+      },
+      {
+        title: "[MyAccount] Confirm Room Price Breakup",
+        value: "myAccount.placeholders.confirm-room-price-breakup",
+      },
+      {
+        title: "[My Account] Change Room Packages",
+        value: "myAccount.placeholders.hotels-packages",
+      },
     ],
     tabs: [
       {
         title: "[My Account] Account and Preferences Tabs",
         value: "myAccount.tabs.account-and-preferences-tabs",
+      },
+      {
+        title: "[My Account] Manage Gift Card",
+        value: "myAccount.tabs.manage-gift-card",
+      },
+    ],
+    stepper: [
+      {
+        title: "[My Account] Change Rooms Stepper",
+        value: "myAccount.stepper.default",
       },
     ],
   },
