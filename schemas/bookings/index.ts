@@ -117,6 +117,10 @@ export const bookings: FeatureSchemaDefinition = {
         title: "[Bookings] Booking Mask",
         value: "bookings.dialog.booking-mask",
       },
+      {
+        title: "[Bookings] Booking Cancelation Status",
+        value: "bookings.dialog.booking-cancelation-status",
+      },
     ],
   },
 };
