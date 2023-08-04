@@ -46,6 +46,10 @@ export const myAccount: FeatureSchemaDefinition = {
         title: "[My Account] Change Booking Confirmed",
         value: "myAccount.group.change-booking-confirmed",
       },
+      {
+        title: "[My Account] 8:4 Ratio Grid With only two items",
+        value: "myAccount.group.8-4-ratio-grid-with-only-two-items",
+      },
     ],
     card: [
       {
@@ -125,13 +129,25 @@ export const myAccount: FeatureSchemaDefinition = {
       {
         title: "[MyAccount] Email OTP Verification",
         value: "myAccount.placeholders.email-otp-verification",
-      }
+      },
+      {
+        title: "[MyAccount] Hotels Rooms",
+        value: "myAccount.placeholders.hotels-rooms",
+      },
+      {
+        title: "[MyAccount] Confirm Room Price Breakup",
+        value: "myAccount.placeholders.confirm-room-price-breakup",
+      },
     ],
     tabs: [
       {
         title: "[My Account] Account and Preferences Tabs",
         value: "myAccount.tabs.account-and-preferences-tabs",
       },
+      {
+        title: "[My Account] Manage Gift Card",
+        value: "myAccount.tabs.manage-gift-card"
+      }
     ],
   },
 };
