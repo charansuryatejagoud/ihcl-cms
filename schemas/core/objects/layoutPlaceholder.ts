@@ -6,7 +6,7 @@ import {
 } from "react-icons/io5";
 import { SchemaItem, VariantDefinition } from "../../types";
 import { hiddenField } from "../../shared-utils";
-import { contentTypes } from "../../constants";
+import { contentTypes, subContentTypes } from "../../constants";
 import { groupAlignmentVariant } from "./group";
 import { cardAlignmentVariant } from "./card";
 
@@ -122,6 +122,17 @@ export default function layoutPlaceholder({
           list: contentTypes,
         },
         group: "main",
+      },
+      {
+        name: "subContentType",
+        title: "Sub Content Type",
+        type: "string",
+        options: {
+          list: subContentTypes,
+        },
+        group: "main",
+        hidden: ({ parent }) =>
+          parent?.contentType !== "hotelWellness"
       },
       {
         name: "groupActionType",

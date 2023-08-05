@@ -185,8 +185,8 @@ export const contentTypes = [
     value: "hotelOffers",
   },
   {
-    title: "Hotel Exclusive Offers",
-    value: "hotelExclusiveOffers",
+    title: "Hotel Rooms Exclusive Offers",
+    value: "hotelExclusiveOffersRooms",
   },
   {
     title: "Hotel Holidays",
@@ -247,6 +247,41 @@ export const contentTypes = [
   {
     title: "Restaurant Exclusive Offers",
     value: "restaurantExclusiveOffers",
+  },
+];
+
+export const subContentTypes = [
+  {
+    title: "Treatments",
+    value: "treatments",
+  },
+  {
+    title: "Indian Therapies",
+    value: "indianTherapies",
+  },
+  {
+    title: "Indian Aroma Therapies",
+    value: "indianAromaTherapies",
+  },
+  {
+    title: "Spa Indulgences",
+    value: "spaIndulgences",
+  },
+  {
+    title: "Body,Scrubs & Wraps",
+    value: "bodyScrubsAndWraps",
+  },
+  {
+    title: "Yoga & Meditation",
+    value: "yogaAndMeditation",
+  },
+  {
+    title: "Ayurveda Therapies",
+    value: "ayurvedaTherapies",
+  },
+  {
+    title: "Beauty",
+    value: "beauty",
   },
 ];
 
