@@ -20,10 +20,15 @@ export function tabs(props: TabsProps) {
         type: "string",
       },
       {
-        name: "image",
-        title: "Image",
-        type: "array",
-        of: [{ type: "image" }],
+        name: "subTitle",
+        title: "Sub Title",
+        type: "string",
+      },
+      {
+        name: "aesthetic",
+        title: "Aesthetic",
+        type: "reference",
+        to: [{ type: "uiConfiguration" }],
       },
       {
         name: "variant",
@@ -32,6 +37,12 @@ export function tabs(props: TabsProps) {
         options: {
           list: [...props.variants],
         },
+      },
+      {
+        name: "image",
+        title: "Image",
+        type: "array",
+        of: [{ type: "image" }],
       },
       {
         name: "tabs",
