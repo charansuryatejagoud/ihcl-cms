@@ -144,6 +144,10 @@ export const myAccount: FeatureSchemaDefinition = {
         title: "[My Account] Change Room Packages",
         value: "myAccount.placeholders.hotels-packages",
       },
+      {
+        title: "[My Account] Change Rooms Cart View",
+        value: "myAccount.placeholders.change-rooms-cart-view",
+      }
     ],
     tabs: [
       {
@@ -156,8 +160,8 @@ export const myAccount: FeatureSchemaDefinition = {
       },
       {
         title: "[My Account] Find Booking Tabs",
-        value: "myAccount.tabs.find-booking-tabs"
-      }
+        value: "myAccount.tabs.find-booking-tabs",
+      },
     ],
     stepper: [
       {
@@ -167,8 +171,12 @@ export const myAccount: FeatureSchemaDefinition = {
     ],
     forms: [
       {
-        title: "[My Account] Reservation Details",
-        value: "myAccount.forms.reservation-details",
+        title: "[My Account] Stay Reservation Details",
+        value: "myAccount.forms.stay-reservation-details",
+      },
+      {
+        title: "[My Account] Dining Reservation Details",
+        value: "myAccount.forms.dining-reservation-details",
       },
     ],
   },
