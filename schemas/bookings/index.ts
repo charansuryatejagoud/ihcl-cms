@@ -83,6 +83,10 @@ export const bookings: FeatureSchemaDefinition = {
         title: "[Bookings] Checking Hotel Room Rates",
         value: "bookings.nudge.checking-hotel-room-rates",
       },
+      {
+        title: "[Bookings] Review Reselect Room",
+        value: "bookings.nudge.review-reselect-room"
+      }
     ],
     group: [
       {
@@ -121,6 +125,10 @@ export const bookings: FeatureSchemaDefinition = {
         title: "[Bookings] Booking Cancelation Status",
         value: "bookings.dialog.booking-cancelation-status",
       },
+      {
+        title: "[Bookings] Reselect Room Modal",
+      value: "bookings.dialog.reselect-room-modal"
+      }
     ],
   },
 };

@@ -44,6 +44,14 @@ export const myAccount: FeatureSchemaDefinition = {
         title: "[My Account] Change Booking Confirmed",
         value: "myAccount.group.change-booking-confirmed",
       },
+      {
+        title: "[My Account] Gift Card viewer",
+        value: "myAccount.group.gift-card-viewer",
+      },
+      {
+        title: "[My Account] Find Your Booking",
+        value: "myAccount.group.find-your-booking",
+      },
     ],
     card: [
       {
@@ -136,6 +144,10 @@ export const myAccount: FeatureSchemaDefinition = {
         title: "[My Account] Change Room Packages",
         value: "myAccount.placeholders.hotels-packages",
       },
+      {
+        title: "[My Account] Change Rooms Cart View",
+        value: "myAccount.placeholders.change-rooms-cart-view",
+      }
     ],
     tabs: [
       {
@@ -146,11 +158,25 @@ export const myAccount: FeatureSchemaDefinition = {
         title: "[My Account] Manage Gift Card",
         value: "myAccount.tabs.manage-gift-card",
       },
+      {
+        title: "[My Account] Find Booking Tabs",
+        value: "myAccount.tabs.find-booking-tabs",
+      },
     ],
     stepper: [
       {
         title: "[My Account] Change Rooms Stepper",
         value: "myAccount.stepper.default",
+      },
+    ],
+    forms: [
+      {
+        title: "[My Account] Stay Reservation Details",
+        value: "myAccount.forms.stay-reservation-details",
+      },
+      {
+        title: "[My Account] Dining Reservation Details",
+        value: "myAccount.forms.dining-reservation-details",
       },
     ],
   },
