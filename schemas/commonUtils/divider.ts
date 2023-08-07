@@ -41,6 +41,11 @@ export default {
       initialValue: "default",
     },
     {
+      name:"color",
+      title:"Color",
+      type:"color"
+    },
+    {
       name: "metadata",
       type: "metadata",
       title: "Metadata",

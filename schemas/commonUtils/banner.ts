@@ -7,6 +7,10 @@ const AlignmentVariant = [
     title: "Normal",
     value: "normal",
   },
+  {
+    title:"Center",
+    value:"center"
+  }
 ];
 export const bannerVariants = [
   {

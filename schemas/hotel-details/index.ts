@@ -203,6 +203,10 @@ export const details: FeatureSchemaDefinition = {
         title: "[Details] Card With Right Aligned Content(Placeholder)",
         value: "details.card.card-with-right-aligned-content-placeholder",
       },
+      {
+        title: "[Details] Left Media Right Content With Equally Occupied Space",
+        value: "details.card.left-media-right-content-with-equally-occupied-space",
+      },
     ],
 
     banner: [],
@@ -231,5 +235,11 @@ export const details: FeatureSchemaDefinition = {
         value: "details.dialog.hotel-room-types",
       },
     ],
+    placeholder: [
+      {
+        title: "[Details] Hotels Locations on Map",
+        value: "details.placeholders.hotels-locations-on-map"
+      }
+    ]
   },
 };

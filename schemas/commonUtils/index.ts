@@ -373,5 +373,11 @@ export const ihclcore: FeatureSchemaDefinition = {
         value: "common-utils.categoryHighlights.category-with-logo-and-text",
       },
     ],
+    forms:[
+      {
+        title:"Subscription",
+        value:"common-utils.forms.subscription"
+      }
+    ]
   },
 };
