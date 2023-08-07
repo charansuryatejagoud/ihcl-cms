@@ -28,8 +28,8 @@
       ],
       "__experimental_spaces": [
         {
-          "name": "develop",
-          "title": "Develop",
+          "name": "production",
+          "title": "Production",
           "default": true,
           "api": {
             "projectId": "ocl5w36p",
