@@ -1,16 +1,31 @@
 name: ihcl-cms
-
 trigger:
-  - master
+- master
+- uat
 
 pool:
   vmImage: ubuntu-latest
 
-steps:
-  - script: echo Hello, world!
-    displayName: "Run a one-line script"
+stages:
+  - stage: "git-hash"
+    jobs:
+      - job: BuildPush
+        steps:
+          - bash: |
+             short_hash=`git rev-parse --short=7 HEAD`
+             mkdir -p $(Pipeline.Workspace)/variables
+             echo "$short_hash" > $(Pipeline.Workspace)/variables/short_hash
+             echo "##vso[task.setvariable variable=short_hash]$short_hash" 
 
-  - script: |
-      echo Add other tasks to build, test, and deploy your project.
-      echo See https://aka.ms/yaml
-    displayName: "Run a multi-line script"
+          - publish: $(Pipeline.Workspace)/variables
+            artifact: variables
+            displayName: Publish Docker Image Tag
+  - stage:  "dev-deploy"
+    displayName: Deploy to DEV
+    jobs:
+     - deployment: ""
+       variables:
+       - group: DevVariableGroup
+
+
+    
