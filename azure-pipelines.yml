@@ -1,7 +1,6 @@
 name: ihcl-cms
 trigger:
 - master
-- uat
 
 pool:
   vmImage: ubuntu-latest
