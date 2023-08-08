@@ -6,7 +6,7 @@ pool:
   vmImage: ubuntu-latest
 
 stages:
-  - stage: "git-hash"
+  - stage: "build"
     jobs:
       - job: BuildPush
         steps:
