@@ -23,6 +23,7 @@ stages:
               mkdir -p $(Pipeline.Workspace)/variables
               echo "$short_hash" > $(Pipeline.Workspace)/variables/short_hash
               echo "##vso[task.setvariable variable=short_hash]$short_hash" 
+              echo "short hash value ===$short_hash"
             displayName: Set Docker Image Tag
           - publish: $(Pipeline.Workspace)
             artifact: variables
