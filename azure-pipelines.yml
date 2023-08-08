@@ -21,7 +21,7 @@ stages:
             artifact: variables
             displayName: Publish Docker Image Tag Artifact
 
-  - stage: dev-deploy
+  - stage: dev_deploy
     displayName: Deploy to DEV
     jobs:
       - deployment: DeployToDev
