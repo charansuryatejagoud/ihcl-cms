@@ -18,19 +18,13 @@ stages:
     jobs:
       - job: BuildImageTag
         steps:
-          - bash: |
-<<<<<<< HEAD
-=======
-              
->>>>>>> 7ac91d5 (pipelinchnges)
+          - bash: |  
+
               short_hash=`git rev-parse --short=7 HEAD`
               mkdir -p $(Pipeline.Workspace)/variables
               echo "$short_hash" > $(Pipeline.Workspace)/variables/short_hash
               echo "##vso[task.setvariable variable=short_hash]$short_hash" 
-<<<<<<< HEAD
               echo "short hash value ===$short_hash"
-=======
->>>>>>> 7ac91d5 (pipelinchnges)
             displayName: Set Docker Image Tag
           - publish: $(Pipeline.Workspace)/variables
             artifact: variables
@@ -53,11 +47,7 @@ stages:
                 - bash: |
                     short_hash=$(cat $(Pipeline.Workspace)/variables/short_hash)
                     echo "##vso[task.setvariable variable=short_hash]$short_hash"
-<<<<<<< HEAD
-                    echo "short hash ==$short_hash"
-=======
                     echo "short hash ==${short_hash}"
->>>>>>> 7ac91d5 (pipelinchnges)
                   displayName: Get Docker Image Tag
 
                 - bash: |
