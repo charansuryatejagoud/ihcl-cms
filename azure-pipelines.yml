@@ -19,7 +19,7 @@ stages:
           - publish: $(Pipeline.Workspace)/variables
             artifact: variables
             displayName: Publish Docker Image Tag
-  - stage:  "dev-deploy"
+  - stage:  dev-deploy
     displayName: Deploy to DEV
     jobs:
      - deployment: Deploy to DEV
