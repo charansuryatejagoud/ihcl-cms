@@ -30,6 +30,8 @@ stages:
     displayName: Deploy to DEV
     jobs:
       - deployment: DeployToDev
+        variables:
+          - group: DevVariableGroup
         environment: 'ihcl-dev'
         strategy:
           runOnce:
