@@ -19,7 +19,6 @@ stages:
       - job: BuildPush
         steps:
           - bash: |
-              
               short_hash=`git rev-parse --short=7 HEAD`
               mkdir -p $(Pipeline.Workspace)/variables
               echo "$short_hash" > $(Pipeline.Workspace)/variables/short_hash
@@ -46,7 +45,7 @@ stages:
                 - bash: |
                     short_hash=$(cat $(Pipeline.Workspace)/variables/short_hash)
                     echo "##vso[task.setvariable variable=short_hash]$short_hash"
-                    echo "short hash ==${short_hash}"
+                    echo "short hash ==$short_hash"
                   displayName: Get Docker Image Tag
 
                 - bash: |
