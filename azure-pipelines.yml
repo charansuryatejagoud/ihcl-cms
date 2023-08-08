@@ -31,8 +31,8 @@ stages:
           deploy:
             steps:
               - checkout: self
-              - download: 
-                artifact: current
+              - download: current
+                artifact: varible
               - bash: |
                  pwd
                  ls -ltr
