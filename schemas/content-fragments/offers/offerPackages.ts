@@ -76,7 +76,7 @@ export default {
       name: "validityDates",
       title: "Validity Dates",
       type: "array",
-      of: [{ type: "string" }],
+      of: [{ type: "dateRange" }],
     },
     {
       name: "stayDates",
@@ -155,8 +155,7 @@ export default {
     {
       name: "tnc",
       title: "TNC",
-      type: "array",
-      of: [{ type: "string" }],
+      type: "blockContent",
     },
   ],
 };
