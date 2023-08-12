@@ -9,6 +9,11 @@ export default {
       type: "string",
     },
     {
+      name: "identifier",
+      title: "Identifier",
+      type: "string",
+    },
+    {
       name: "rateCode",
       title: "Rate Code",
       type: "string",
@@ -36,6 +41,12 @@ export default {
     {
       name: "banner",
       title: "Banner",
+      type: "array",
+      of: [{ type: "mediaInput" }],
+    },
+    {
+      name: "thumbnail",
+      title: "Thumbnail",
       type: "array",
       of: [{ type: "mediaInput" }],
     },
@@ -71,13 +82,13 @@ export default {
       name: "stayDates",
       title: "Stay Dates",
       type: "array",
-      of: [{ type: "string" }],
+      of: [{ type: "dateRange" }],
     },
     {
       name: "blackoutDates",
       title: "Blackout Dates",
       type: "array",
-      of: [{ type: "string" }],
+      of: [{ type: "dateRange" }],
     },
     {
       name: "inclusions",
@@ -140,6 +151,12 @@ export default {
           to: [{ type: "hotel" }],
         },
       ],
+    },
+    {
+      name: "tnc",
+      title: "TNC",
+      type: "array",
+      of: [{ type: "string" }],
     },
   ],
 };

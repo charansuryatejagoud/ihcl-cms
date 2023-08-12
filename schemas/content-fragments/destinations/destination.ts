@@ -70,22 +70,37 @@ export default {
     },
     {
       name: "diningTab",
-      title: "Dining Tab",
+      title: "Dining",
       type: "tabInfo",
     },
     {
       name: "experiencesTab",
-      title: "Experiences Tab",
+      title: "Experiences",
       type: "tabInfo",
     },
     {
       name: "spaTab",
-      title: "Spa Tab",
+      title: "Spa",
+      type: "tabInfo",
+    },
+    {
+      name: "treatments",
+      title: "Treatments",
       type: "tabInfo",
     },
     {
       name: "holidaysTab",
-      title: "Holidays Tab",
+      title: "Holidays",
+      type: "tabInfo",
+    },
+    {
+      name: "featuredHolidays",
+      title: "Featured Holidays",
+      type: "tabInfo",
+    },
+    {
+      name: "journeys",
+      title: "Journeys",
       type: "tabInfo",
     },
   ],
