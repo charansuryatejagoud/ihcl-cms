@@ -4,6 +4,8 @@ metadata:
   name: {{ include "ihcl-cms.fullname" . }}
   labels:
     {{- include "ihcl-cms.labels" . | nindent 4 }}
+  annotations:
+    service.beta.kubernetes.io/azure-load-balancer-internal: "true"    
 spec:
   type: {{ .Values.service.type }}
   ports:
