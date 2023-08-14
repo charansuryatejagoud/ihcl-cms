@@ -3,7 +3,8 @@ name: ihcl-cms
 trigger:
   branches:
     include:
-      - master
+      - refs/heads/master
+      - refs/heads/CICD-PT
 
 pool:
   vmImage: ubuntu-latest
@@ -31,7 +32,10 @@ stages:
             displayName: Publish Docker Image Tag Artifact
 
   - stage: dev_deploy
+    dependsOn:
+    - Build
     displayName: Deploy to DEV
+    condition: and(succeeded(), eq(variables['build.sourceBranch'], 'refs/heads/master'))
     jobs:
       - deployment: DeployToDev
         variables:
@@ -59,3 +63,35 @@ stages:
                 - bash: |
                     helm upgrade --install ihcl-cms --set-string image.tag=$(short_hash) --namespace dev --create-namespace -f ./charts/ihcl-cms/values/values-dev.yaml --wait ./charts/ihcl-cms
                   displayName: Helm Upgrade
+  - stage: pt_deploy
+    dependsOn:
+    - Build
+    displayName: Deploy to PT
+    condition: and(succeeded(), eq(variables['build.sourceBranch'], 'refs/heads/CICD-PT'))
+    jobs:
+      - deployment: DeployToPT
+        variables:
+          - group: PtVariableGroup
+        environment: 'ihcl-pt'
+        strategy:
+          runOnce:
+            deploy:
+              steps:
+                - checkout: self
+                - download: current
+                  artifact: variables
+                - bash: |
+                    short_hash=$(cat $(Pipeline.Workspace)/variables/short_hash)
+                    echo "##vso[task.setvariable variable=short_hash]$short_hash"
+                    echo "short hash ==${short_hash}"
+                  displayName: Get Docker Image Tag
+
+                - bash: |
+                    az login --service-principal --username $(Service_Principle_Name) --password $(Service_Priniciple_Password) --tenant $(Tenant_ID)
+                    az acr build --image pt/ihcl-cms:$(short_hash) --registry ihclwebsites --file Dockerfile .
+                    az aks get-credentials --resource-group Website_PT_RG --name app-PT-aks
+                  displayName: Login to ACR and AKS
+                  enabled: true
+                - bash: |
+                    helm upgrade --install ihcl-cms --set-string image.tag=$(short_hash) --namespace pt --create-namespace -f ./charts/ihcl-cms/values/values-pt.yaml --wait ./charts/ihcl-cms
+                  displayName: Helm Upgrade 
