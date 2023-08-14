@@ -52,8 +52,7 @@ export default function card(props: Props) {
       {
         name: "highLights",
         title: "High Lights",
-        type: "array",
-        of: [{ type: "string" }],
+        type: "string",
         group: "main",
       },
       {

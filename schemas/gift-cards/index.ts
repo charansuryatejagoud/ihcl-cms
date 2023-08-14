@@ -22,18 +22,6 @@ export const giftCards: FeatureSchemaDefinition = {
   variants: {
     card: [
       {
-        title: "[Gift Card] Check Balance Form",
-        value: "giftCards.card.check-balance-form",
-      },
-      {
-        title: "[Gift Card] Reload Balance Form",
-        value: "giftCards.card.reload-balance-form",
-      },
-      {
-        title: "[Gift Card] Card Order Status Form",
-        value: "giftCards.card.order-status-form",
-      },
-      {
         title: "[Gift Card] Bottom media with Top content",
         value: "giftCards.card.bottom-media-with-top-content",
       },
@@ -65,8 +53,8 @@ export const giftCards: FeatureSchemaDefinition = {
       },
       {
         title: "[Gift Card] 2x3 Grid",
-        value: "giftCards.group.2-by-3-grid"
-      }
+        value: "giftCards.group.2-by-3-grid",
+      },
     ],
 
     tabs: [
@@ -82,8 +70,20 @@ export const giftCards: FeatureSchemaDefinition = {
       },
       {
         title: "[Gift Card] Member Purchase Details with CTA",
-        value: "giftCards.form.member-purchase-details-with-cta"
-      }
+        value: "giftCards.form.member-purchase-details-with-cta",
+      },
+      {
+        title: "[Gift Card] Check Balance Form",
+        value: "giftCards.forms.check-balance-form",
+      },
+      {
+        title: "[Gift Card] Reload Balance Form",
+        value: "giftCards.forms.reload-balance-form",
+      },
+      {
+        title: "[Gift Card] Card Order Status Form",
+        value: "giftCards.forms.order-status-form",
+      },
     ],
     dialog: [
       {

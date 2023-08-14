@@ -248,6 +248,10 @@ export const contentTypes = [
     title: "Restaurant Exclusive Offers",
     value: "restaurantExclusiveOffers",
   },
+  {
+    title: "Offers",
+    value: "offers",
+  },
 ];
 
 export const subContentTypes = [

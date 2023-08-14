@@ -10,7 +10,15 @@ export const Offers: FeatureSchemaDefinition = {
       {
         title: "[Offers] T & C Dropdown Content",
         value: "offers.group.t&c-dropdown-content"
-      }
+      },
+      {
+        title: "[Offers] 3 Column Grid With Package Images",
+        value: "offers.group.3-column-grid-with-package-images",
+      },
+      {
+        title: "[Offers] 3 Column Grid With Package Icons",
+        value: "offers.group.3-column-grid-with-package-icons",
+      },
     ],
     forms:[ 
       {
@@ -24,5 +32,23 @@ export const Offers: FeatureSchemaDefinition = {
         value:"offers.dialog.offers-check-rates"
       }
     ],
+    card:[
+      {
+        title: "[Offers] Book A Stay With Agency Id",
+        value: "offers.card.book-a-stay-with-agency-id",
+      },
+      {
+        title: "[Offers] Book A Stay With Packages",
+        value: "offers.card.book-a-stay-with-packages",
+      },
+      {
+        title: "[Offers] Book A Stay With Coupon",
+        value: "offers.card.book-a-stay-with-coupon",
+      },
+      {
+        title: "[Offers] Book A Stay With Access Code",
+        value: "offers.card.book-a-stay-with-access-code",
+      },
+    ]
   },
 };
