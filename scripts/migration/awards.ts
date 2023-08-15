@@ -27,7 +27,7 @@ async function run() {
 
   await client
     .fetch(
-      `*[_type == "page" && path == "/hotels/rambagh-palace/overview"]{
+      `*[_type == "page" && path == "/hotels/taj-deccan/overview"]{
           items
          }[0]`,
     )
@@ -62,13 +62,15 @@ async function run() {
             // bannerArr.push({_key: `${index}`, ...bannerMediaObj})
           }
           else if (item?._type == "group" && item?.largeVariant == "details.group.3-card-carousel"
-          && item?.alignmentVariant == "center-with-one-row-title") {
+        //   && item?.alignmentVariant == "center-with-one-row-title" 
+          && item?.heading?.toLowerCase()?.includes("awards")) {
             sectionTitle.desktopTitle.push(item?.heading)
             // description = item?.subTitle
             if (item?.items) {
               item?.items?.map((card, index) => {
                 let cardObj = {
                   _key: '',
+                  _type: "object",
                   basicInfo : {
                     title: "",
                     media: [],
