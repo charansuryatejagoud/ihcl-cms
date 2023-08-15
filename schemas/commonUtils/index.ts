@@ -229,6 +229,10 @@ export const ihclcore: FeatureSchemaDefinition = {
         title: "Cookies Management System Modal",
         value: "common-utils.group.cookies-management-system-modal",
       },
+      {
+        title: "Group With 3 Column Cards Grid (Placeholder)",
+        value: "ihcl.core.group.group-with-3-column-cards-grid-placeholder",
+      },
     ],
     card: [
       {

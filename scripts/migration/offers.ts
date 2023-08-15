@@ -27,7 +27,7 @@ async function run() {
 
   await client
     .fetch(
-      `*[_type == "page" && path == "/hotels/taj-samudra-colomba/offers"]{
+      `*[_type == "page" && path == "/resort/taj-chia-kutir-resort-and-spa-darjeeling/offers"]{
           items
          }[0]`,
     )
@@ -48,7 +48,6 @@ async function run() {
         let bannerArr = []
         let sectionTitle = {}
         let description = ''
-        let signatureExp = {}
         let offersDetails = []
 
         data?.items?.map((item, index) => {
@@ -65,6 +64,7 @@ async function run() {
               item?.items?.map((card, index) => {
                 let cardObj = {
                   _key: '',
+                  _type: 'offerInfo',
                   basicInfo : {
                     title: "",
                     description: "",
@@ -98,6 +98,7 @@ async function run() {
                   card?.parameterMap?.map((subItem) => {
                     let specObj = {
                     _key: '',
+                    _type: 'contentSpecification',
                     keyType:'string',
                     key: '',
                     value: ''
