@@ -5,6 +5,10 @@ export const bookings: FeatureSchemaDefinition = {
       title: "[Bookings] Booking Store",
       value: "bookings.store",
     },
+    {
+      title: "[Bookings] Booking Confirmation Page Store",
+      value: "bookings.booking-confirmation-page-store",
+    },
   ],
   variants: {
     stepper: [
@@ -85,8 +89,8 @@ export const bookings: FeatureSchemaDefinition = {
       },
       {
         title: "[Bookings] Review Reselect Room",
-        value: "bookings.nudge.review-reselect-room"
-      }
+        value: "bookings.nudge.review-reselect-room",
+      },
     ],
     group: [
       {
@@ -127,8 +131,8 @@ export const bookings: FeatureSchemaDefinition = {
       },
       {
         title: "[Bookings] Reselect Room Modal",
-      value: "bookings.dialog.reselect-room-modal"
-      }
+        value: "bookings.dialog.reselect-room-modal",
+      },
     ],
   },
 };
