@@ -4,6 +4,7 @@ import {
 } from "react-icons/io5";
 import { linkTypeField, pathUrlRule } from "../../shared-utils";
 import { PageLink } from "../../../branding/components/page-link/PageLink";
+// import headlineSmall from "@components/portable-text-snippets/headlineSmall";
 
 export default {
   title: "Block Content",
@@ -26,13 +27,20 @@ export default {
         { title: "H4", value: "h4" },
         { title: "Quote", value: "blockquote" },
         { title: "Section", value: "section" },
-        {title:"Span",value:"span"},
-        {title: "Break", value:"break"}
+        { title: "Span", value: "span" },
+        { title: "Break", value: "break" },
+        // {
+        //   title: "Title",
+        //   value: "title",
+        //   // component: headlineSmall,
+        //   components: {
+        //     input: headlineSmall,
+        //   },
+        // },
       ],
       lists: [
         { title: "Bullet", value: "bullet" },
         { title: "Number", value: "number" },
-        
       ],
       // Marks let you mark up inline text in the block editor.
       marks: {
@@ -73,7 +81,7 @@ export default {
               icon: IoColorPaletteOutline,
             },
           },
-          
+
           {
             name: "placeholderText",
             title: "Placeholder Text",
@@ -102,8 +110,7 @@ export default {
       type: "group",
     },
     {
-      type:"navigationItem"
+      type: "navigationItem",
     },
-    
   ],
 };
