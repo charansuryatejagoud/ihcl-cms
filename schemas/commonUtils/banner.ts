@@ -145,6 +145,13 @@ export default {
       group: "main",
     },
     {
+      name: "placeholderText",
+      title: "Placeholder Text",
+      type: "string",
+      description: "Placeholder Text for the Search Field",
+      hidden: ({parent}) => parent?.searchFieldVariant !== "ihcl.banner.global-search-field"
+    },
+    {
       name: "mediaType",
       title: "Media Type",
       type: "string",

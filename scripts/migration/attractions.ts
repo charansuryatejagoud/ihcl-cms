@@ -27,7 +27,7 @@ async function run() {
 
   await client
     .fetch(
-      `*[_type == "page" && path == "/hotels/taj-samudra-colomba/attractions"]{
+      `*[_type == "page" && path == "/resort/taj-chia-kutir-resort-and-spa-darjeeling/attractions"]{
           items
          }[0]`,
     )
@@ -66,6 +66,7 @@ async function run() {
               item?.items?.map((card, index) => {
                 let cardObj = {
                   _key: '',
+                  _type: 'object',
                   basicInfo : {
                     title: "",
                     description: "",

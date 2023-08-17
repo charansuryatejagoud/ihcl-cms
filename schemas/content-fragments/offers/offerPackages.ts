@@ -68,7 +68,10 @@ export default {
         list: [
           { title: "Single Package", value: "singlePackage" },
           { title: "Multiple Packages", value: "multiplePackages" },
-          { title: "Multiple Themes and Packages", value: "multipleThemesAndPackages" },
+          {
+            title: "Multiple Themes and Packages",
+            value: "multipleThemesAndPackages",
+          },
         ],
       },
     },
@@ -107,9 +110,9 @@ export default {
               name: "inclusionTitle",
               title: "Inclusion Title",
               type: "string",
-              initialValue: 'PACKAGE INCLUSIONS',
+              initialValue: "PACKAGE INCLUSIONS",
               hidden: ({ document }) =>
-              document?.packageType == "singlePackage",
+                document?.packageType == "singlePackage",
             },
             {
               name: "highlights",
@@ -117,15 +120,15 @@ export default {
               type: "array",
               of: [{ type: "string" }],
               hidden: ({ document }) =>
-              document?.packageType == "singlePackage",
+                document?.packageType == "singlePackage",
             },
             {
               name: "inclusionTheme",
               title: "Inclusion Theme",
               type: "reference",
-              to: [{type: "offerThemes"}],
+              to: [{ type: "offerThemes" }],
               hidden: ({ document }) =>
-              document?.packageType !== "multipleThemesAndPackages",
+                document?.packageType !== "multipleThemesAndPackages",
             },
           ],
           preview: {
@@ -139,7 +142,8 @@ export default {
               };
             },
           },
-        },]
+        },
+      ],
     },
     {
       name: "participatingHotels",
@@ -156,6 +160,34 @@ export default {
       name: "tnc",
       title: "TNC",
       type: "blockContent",
+    },
+    {
+      name: "offerFAQs",
+      title: "Offer FAQs",
+      type: "object",
+      fields: [
+        {
+          name: "items",
+          type: "array",
+          of: [
+            {
+              type: "object",
+              fields: [
+                {
+                  title: "Question",
+                  name: "question",
+                  type: "string",
+                },
+                {
+                  title: "Answer",
+                  name: "answer",
+                  type: "blockContent",
+                },
+              ],
+            },
+          ],
+        },
+      ],
     },
   ],
 };

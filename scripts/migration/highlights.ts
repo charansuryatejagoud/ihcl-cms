@@ -27,7 +27,7 @@ async function run() {
 
   await client
     .fetch(
-      `*[_type == "page" && path == "/hotels/taj-samudra-colomba/overview"]{
+      `*[_type == "page" && path == "/hotels/taj-deccan/overview"]{
           items
          }[0]`,
     )
@@ -59,13 +59,15 @@ async function run() {
             // bannerMediaObj.imageAsset.largeImage = item?.imageAsset?.largeImage
             // bannerArr.push({_key: `${index}`, ...bannerMediaObj})
           }
-          else if (item?._type == "group" && item?.largeVariant == "details.group.3-card-carousel") {
+          else if (item?._type == "group" && item?.largeVariant == "details.group.3-card-carousel"
+          && item?.title?.desktopTitle?.[0]?.toLowerCase()?.includes("highlights")) {
             sectionTitle = item?.title
             description = item?.subTitle
             if (item?.items) {
               item?.items?.map((card, index) => {
                 let cardObj = {
                   _key: '',
+                  _type: "object",
                   basicInfo : {
                     title: "",
                     media: [],
