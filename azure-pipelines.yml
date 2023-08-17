@@ -104,7 +104,7 @@ stages:
     jobs:
       - deployment: DeployToE2E
         variables:
-          - group: PtVariableGroup
+          - group: e2eVariableGroup
         environment: 'ihcl-e2e'
         strategy:
           runOnce:
