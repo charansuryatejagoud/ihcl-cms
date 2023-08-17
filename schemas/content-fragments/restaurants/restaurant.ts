@@ -64,6 +64,17 @@ export default {
       ],
     },
     {
+      name: "participatingHotels",
+      title: "Participating Hotels",
+      type: "array",
+      of: [
+        {
+          type: "reference",
+          to: [{ type: "hotel" }],
+        },
+      ],
+    },
+    {
       name: "restaurantBrandPage",
       title: "Restaurant Brand Page",
       type: "object",
@@ -83,17 +94,6 @@ export default {
           name: "locationsSection",
           title: "Locations Section",
           type: "restaurantDetails",
-        },
-        {
-          name: "participatingHotels",
-          title: "Participating Hotels",
-          type: "array",
-          of: [
-            {
-              type: "reference",
-              to: [{ type: "hotel" }],
-            },
-          ],
         },
         {
           name: "otherBrandsSection",
