@@ -21,8 +21,20 @@ export default {
     },
     {
       name: "promoCode",
-      title: "Promo Code",
+      title: "Promocode",
       type: "string",
+    },
+    {
+      name: "banner",
+      title: "Banner",
+      type: "array",
+      of: [{ type: "mediaInput" }],
+    },
+    {
+      name: "thumbnail",
+      title: "Thumbnail",
+      type: "array",
+      of: [{ type: "mediaInput" }],
     },
     {
       name: "participatingHotels",

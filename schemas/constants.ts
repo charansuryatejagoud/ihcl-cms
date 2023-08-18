@@ -679,4 +679,5 @@ export const featureVariants = [
     title: "Offers",
     value: "offers",
   }
-]
+];
+

@@ -83,6 +83,6 @@ export const hotels: FeatureSchemaDefinition = {
     taxonomyInfo,
     locationAndDirections,
     locationInfo,
-    vouchers
+    vouchers,
   ],
 };
