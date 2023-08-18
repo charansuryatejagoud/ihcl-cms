@@ -25,6 +25,11 @@ export default {
       type: "string",
     },
     {
+      name: "rateCode",
+      title: "Rate Code",
+      type: "string",
+    },
+    {
       name: "banner",
       title: "Banner",
       type: "array",

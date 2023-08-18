@@ -155,8 +155,8 @@ export const loyalty: FeatureSchemaDefinition = {
     ],
     switchCaseBlock: [
       {
-        title: "[Loyalty] Epicure Login",
-        value: "loyalty.switchCaseBlock.epicure-login",
+        title: "[Loyalty] Membership Login",
+        value: "loyalty.switchCaseBlock.membership-login",
       },
     ],
   },
