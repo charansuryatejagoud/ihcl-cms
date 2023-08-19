@@ -260,8 +260,8 @@ export const contentTypes = [
 
 export const subContentTypes = [
   {
-    title: "Treatments",
-    value: "treatments",
+    title: "Signature Treatments",
+    value: "signatureTreatments",
   },
   {
     title: "Indian Therapies",
