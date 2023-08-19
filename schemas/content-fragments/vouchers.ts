@@ -4,9 +4,14 @@ export default {
   title: "Vouchers",
   fields: [
     {
+      name: "title",
+      title: "Title",
+      type: "string",
+    },
+    {
       name: "voucherName",
       title: "Voucher Name",
-      type: "string",
+      type: "title",
     },
     {
       name: "description",
@@ -53,4 +58,15 @@ export default {
       ],
     },
   ],
+  preview: {
+    select: {
+      title: "voucherName",
+      code: "promoCode",
+    },
+    prepare({ title, code }) {
+      return {
+        title: `${title?.desktopTitle ?? code}`,
+      };
+    },
+  },
 };

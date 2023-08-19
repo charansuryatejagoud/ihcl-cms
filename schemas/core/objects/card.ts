@@ -50,10 +50,21 @@ export default function card(props: Props) {
         group: "main",
       },
       {
-        name: "highLights",
-        title: "High Lights",
-        type: "string",
+        name: "highlights",
+        title: "Highlights",
+        type: "array",
         group: "main",
+        of: [
+          {
+            type: "object",
+            fields: [
+              {
+                name: "term",
+                type: "string",
+              },
+            ],
+          },
+        ],
       },
       {
         name: "description",
@@ -211,6 +222,22 @@ export default function card(props: Props) {
         hidden: ({ parent }) =>
           parent?.mediaType !== "component" &&
           parent?.largeVariant !== "component",
+      },
+      {
+        name: "filterTerm",
+        title: "Filter Term",
+        type: "array",
+        of: [
+          {
+            type: "object",
+            fields: [
+              {
+                name: "term",
+                type: "string",
+              },
+            ],
+          },
+        ],
       },
       {
         name: "parameterMap",

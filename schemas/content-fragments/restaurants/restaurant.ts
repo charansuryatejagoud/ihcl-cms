@@ -54,7 +54,19 @@ export default {
         {
           name: "privateDiningInfo",
           title: "Private Dining Info",
-          type: "basicDetails",
+          type: "object",
+          fields:[
+            {
+              name:'diningInfo',
+              title:'Dining Info',
+              type:'basicDetails'
+            },
+            {
+              name:'contactInfo',
+              title:'Contact Info',
+              type:'blockContent'
+            },
+          ]
         },
         {
           name: "locationBasedRestaurants",
