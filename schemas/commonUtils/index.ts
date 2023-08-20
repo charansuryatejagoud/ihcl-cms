@@ -229,6 +229,10 @@ export const ihclcore: FeatureSchemaDefinition = {
         title: "Cookies Management System Modal",
         value: "common-utils.group.cookies-management-system-modal",
       },
+      {
+        title: "Center Moving Carousel With Back Ground Gradient",
+        value: "common-utils.group.center-moving-carousel-with-back-ground-gradient",
+      }
     ],
     card: [
       {
@@ -328,6 +332,10 @@ export const ihclcore: FeatureSchemaDefinition = {
       {
         title: "Social Feed",
         value: "common-utils.placeholders.social-feed"
+      },
+      {
+        title:"Radio Button Filters",
+        value:"common-utils.placeholders.radio-button-filters"
       }
     ],
     nudge: [
