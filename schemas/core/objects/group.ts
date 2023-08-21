@@ -286,6 +286,23 @@ export default function group({
         ],
       },
       {
+        name: "filterAlignment",
+        title: "Filter Alignment",
+        type: "string",
+        options: {
+          list: [
+            {
+              title: "Start",
+              value: "start",
+            },
+            {
+              title: "End",
+              value: "end",
+            },
+          ],
+        },
+      },
+      {
         name: "tabsConfig",
         title: "Tabs Config",
         type: "object",

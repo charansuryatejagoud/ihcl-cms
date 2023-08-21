@@ -237,16 +237,8 @@ export const contentTypes = [
     value: "restaurantOverview",
   },
   {
-    title: "Restaurant Availability",
-    value: "restaurantAvailability",
-  },
-  {
-    title: "Restaurant Highlights",
-    value: "restaurantHighlights",
-  },
-  {
-    title: "Restaurant Exclusive Offers",
-    value: "restaurantExclusiveOffers",
+    title: "Restaurant Private Dining",
+    value: "retaurantPrivateDining",
   },
   {
     title: "Offers",
