@@ -27,7 +27,7 @@ async function run() {
 
   await client
     .fetch(
-      `*[_type == "page" && path == "/hotels/taj-coromandel-chennai/venues"]{
+      `*[_type == "page" && path == "/hotels/taj-cape-town-south-africa/venues"]{
           items
          }[0]`,
     )
@@ -46,22 +46,20 @@ async function run() {
           }
         }
         let bannerArr = []
-        let sectionTitle = {}
-        let description = ''
         let venuesAndOccasions = {
-          type: 'venuesAndOccasions',
+          // _type: 'venuesAndOccasions',
           sectionTitle: [],
           description: '',
           eventVenueDetails: []
         }
         let perfectEventSection = {
-          type:'object',
+          // _type:'object',
           sectionTitle: [],
           description: '',
           perfectEvent: []
         }
         let timelessWeddings = {
-          type:'object',
+          // _type:'object',
           sectionTitle: [],
           description: '',
           weddingEvents: []
@@ -83,7 +81,6 @@ async function run() {
                   _key: '',
                   _type: 'venueAndOccasionInfo',
                   basicInfo : {
-                    _type:'basicDetails',
                     title: "",
                     description: "",
                     media: [],
@@ -125,6 +122,7 @@ async function run() {
               item?.items?.map((card, index) => {
                 let cardObj = {
                   _key: '',
+                  _type: "object",
                   basicInfo: {
                     title: "",
                     description: "",
@@ -164,12 +162,14 @@ async function run() {
               item?.items?.map((card) => {
                 let cardObj = {
                   _key: '',
+                  _type: "weddingEventInfo",
                   basicInfo: {
                     title: "",
                     description: "",
                     media: [],
                   },
                   backgroundImage: {
+                    _type: "imageAsset",
                     largeImage: []
                   }
                 }

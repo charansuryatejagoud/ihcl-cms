@@ -27,7 +27,7 @@ async function run() {
 
   await client
     .fetch(
-      `*[_type == "page" && path == "/palace/taj-mahal-palace-mumbai/wellness"]{
+      `*[_type == "page" && path == "/hotels/taj-deccan/wellness"]{
           items
          }[0]`,
     )
@@ -48,21 +48,57 @@ async function run() {
         let bannerArr = []
         // let sectionTitle = {}
         // let description = ''
-        let signatureTreatments = {
-          sectionTitle: [],
-          description: '',
-          signatureTreatmentDetails: []
-        }
         let wellnessFacilities = {
-          sectionTitle: [],
+          sectionTitle: {},
           description: '',
           wellnessFacilities: []
         }
         let spaDetails = {
-          sectionTitle: [],
+          sectionTitle: {},
           description: '',
           basicInfo: {}
         }
+        let signatureTreatments = {
+          sectionTitle: {},
+          description: '',
+          signatureTreatmentDetails: []
+        }
+        let indianTherapies = {
+          sectionTitle: {},
+          description: '',
+          signatureTreatmentDetails: []
+        }
+        let indianAromaTherapies = {
+          sectionTitle: {},
+          description: '',
+          signatureTreatmentDetails: []
+        }
+        let spaIndulgences = {
+          sectionTitle: {},
+          description: '',
+          signatureTreatmentDetails: []
+        }
+        let bodyScrubsAndWraps = {
+          sectionTitle: {},
+          description: '',
+          signatureTreatmentDetails: []
+        }
+        let yogaAndMeditation = {
+          sectionTitle: {},
+          description: '',
+          signatureTreatmentDetails: []
+        }
+        let ayurvedaTherapies = {
+          sectionTitle: {},
+          description: '',
+          signatureTreatmentDetails: []
+        }
+        let beauty = {
+          sectionTitle: {},
+          description: '',
+          signatureTreatmentDetails: []
+        }
+        let dividerImage = []
 
         data?.items?.map((item, index) => {
           if (item?._type == "banner") {
@@ -71,14 +107,16 @@ async function run() {
             bannerMediaObj.imageAsset.largeImage = item?.imageAsset?.largeImage
             bannerArr.push({_key: `${index}`, ...bannerMediaObj})
           }
-          else if (item?._type == "group" && item?.largeVariant == "details.group.group-with-card-left-media-right-content-aspect-ratio-2:4") {
+          else if (index < 5 && item?._type == "group" && item?.largeVariant == "details.group.group-with-card-left-media-right-content-aspect-ratio-2:4") {
             spaDetails.sectionTitle = item?.title
             spaDetails.description = item?.subTitle
             if (item?.items) {
               item?.items?.map((card) => {
                 let cardObj = {
                   _key: '',
+                  // _type: 'spaInfo',
                   basicInfo : {
+                    _type:'basicDetails',
                     title: "",
                     description: "",
                     media: [],
@@ -110,18 +148,20 @@ async function run() {
                   // cardObj.highlights.push(card?.highLights)
 
                   // console.log("cardObj.images", cardObj.images)
-                  spaDetails.basicInfo = cardObj
+                  spaDetails.basicInfo = cardObj.basicInfo
                 }
               })
             }
           }
-          else if (item?._type == "group" && item?.largeVariant == "details.group.3-card-carousel") {
+          else if (index < 6 && item?._type == "group" && item?.largeVariant == "details.group.3-card-carousel"
+          && item?.title?.desktopTitle?.[0]?.toLowerCase()?.includes("signature")) {
             signatureTreatments.sectionTitle = item?.title
             signatureTreatments.description = item?.subTitle
             if (item?.items) {
               item?.items?.map((card, index) => {
                 let cardObj = {
                   _key: '',
+                  _type: 'object',
                   basicInfo: {
                     title: "",
                     description: "",
@@ -154,13 +194,345 @@ async function run() {
               })
             }
           }
-          else if (item?._type == "group" && item?.largeVariant == "details.group.3-card-carousel") {
+          else if (item?._type == "group" && item?.largeVariant == "details.group.3-card-carousel"
+          && (!item?.title?.desktopTitle?.[0]?.toLowerCase()?.includes("aroma")) && 
+          (item?.title?.desktopTitle?.[0]?.toLowerCase()?.includes("indian"))) {
+            indianTherapies.sectionTitle = item?.title
+            indianTherapies.description = item?.subTitle
+            if (item?.items) {
+              item?.items?.map((card, index) => {
+                let cardObj = {
+                  _key: '',
+                  _type: 'object',
+                  basicInfo: {
+                    title: "",
+                    description: "",
+                    media: [],
+                  }
+                }
+                let mediaObj = {
+                  _key: `${index}`,
+                  _type:'mediaInput',
+                  mediaType: 'image',
+                  imageAsset: {
+                    largeImage: [],
+                    image:[]
+                  }
+                }
+                let images = []
+                let largeImages = []
+                if (card?._type == 'card') {
+                  cardObj._key = card?._key
+                  cardObj.basicInfo.title = card?.title
+                  cardObj.basicInfo.description = card?.description
+                  images.push({_key: `${index}`, ...card?.image})
+                  largeImages.push({_key: `${index}`, ...card?.largeImage})
+                  mediaObj.imageAsset.image = images
+                  mediaObj.imageAsset.largeImage = largeImages
+                  cardObj.basicInfo.media.push({_key: `${index}`, ...mediaObj})
+                  // console.log("cardObj.images", cardObj.images)
+                  indianTherapies.signatureTreatmentDetails.push(cardObj)
+                }
+              })
+            }
+          }
+          else if (item?._type == "group" && (item?.largeVariant == "ihcl.core.group.group-with-3-column-cards-grid"
+          || item?.largeVariant == "details.group.3-card-carousel")
+          && (item?.title?.desktopTitle?.[0]?.toLowerCase()?.includes("aroma"))) {
+            indianAromaTherapies.sectionTitle = item?.title
+            indianAromaTherapies.description = item?.subTitle
+            if (item?.items) {
+              item?.items?.map((card, index) => {
+                let cardObj = {
+                  _key: '',
+                  _type: 'object',
+                  basicInfo: {
+                    title: "",
+                    description: "",
+                    media: [],
+                  }
+                }
+                let mediaObj = {
+                  _key: `${index}`,
+                  _type:'mediaInput',
+                  mediaType: 'image',
+                  imageAsset: {
+                    largeImage: [],
+                    image:[]
+                  }
+                }
+                let images = []
+                let largeImages = []
+                if (card?._type == 'card') {
+                  cardObj._key = card?._key
+                  cardObj.basicInfo.title = card?.title
+                  cardObj.basicInfo.description = card?.description
+                  images.push({_key: `${index}`, ...card?.image})
+                  largeImages.push({_key: `${index}`, ...card?.largeImage})
+                  mediaObj.imageAsset.image = images
+                  mediaObj.imageAsset.largeImage = largeImages
+                  cardObj.basicInfo.media.push({_key: `${index}`, ...mediaObj})
+                  // console.log("cardObj.images", cardObj.images)
+                  indianAromaTherapies.signatureTreatmentDetails.push(cardObj)
+                }
+              })
+            }
+          }
+          else if (item?._type == "group" && item?.largeVariant == "details.group.3-card-carousel"
+          && (!item?.title?.desktopTitle?.[0]?.toLowerCase()?.includes("offers"))
+          && (item?.title?.desktopTitle?.[0]?.toLowerCase()?.includes("spa"))) {
+            spaIndulgences.sectionTitle = item?.title
+            spaIndulgences.description = item?.subTitle
+            if (item?.items) {
+              item?.items?.map((card, index) => {
+                let cardObj = {
+                  _key: '',
+                  _type: 'object',
+                  basicInfo: {
+                    title: "",
+                    description: "",
+                    media: [],
+                  }
+                }
+                let mediaObj = {
+                  _key: `${index}`,
+                  _type:'mediaInput',
+                  mediaType: 'image',
+                  imageAsset: {
+                    largeImage: [],
+                    image:[]
+                  }
+                }
+                let images = []
+                let largeImages = []
+                if (card?._type == 'card') {
+                  cardObj._key = card?._key
+                  cardObj.basicInfo.title = card?.title
+                  cardObj.basicInfo.description = card?.description
+                  images.push({_key: `${index}`, ...card?.image})
+                  largeImages.push({_key: `${index}`, ...card?.largeImage})
+                  mediaObj.imageAsset.image = images
+                  mediaObj.imageAsset.largeImage = largeImages
+                  cardObj.basicInfo.media.push({_key: `${index}`, ...mediaObj})
+                  // console.log("cardObj.images", cardObj.images)
+                  spaIndulgences.signatureTreatmentDetails.push(cardObj)
+                }
+              })
+            }
+          }
+          else if (item?._type == "group" && (item?.largeVariant == "ihcl.core.group.group-with-3-column-cards-grid"
+          || item?.largeVariant == "details.group.3-card-carousel")
+          && (item?.title?.desktopTitle?.[0]?.toLowerCase()?.includes("body"))) {
+            bodyScrubsAndWraps.sectionTitle = item?.title
+            bodyScrubsAndWraps.description = item?.subTitle
+            if (item?.items) {
+              item?.items?.map((card, index) => {
+                let cardObj = {
+                  _key: '',
+                  _type: 'object',
+                  basicInfo: {
+                    title: "",
+                    description: "",
+                    media: [],
+                  }
+                }
+                let mediaObj = {
+                  _key: `${index}`,
+                  _type:'mediaInput',
+                  mediaType: 'image',
+                  imageAsset: {
+                    largeImage: [],
+                    image:[]
+                  }
+                }
+                let images = []
+                let largeImages = []
+                if (card?._type == 'card') {
+                  cardObj._key = card?._key
+                  cardObj.basicInfo.title = card?.title
+                  cardObj.basicInfo.description = card?.description
+                  images.push({_key: `${index}`, ...card?.image})
+                  largeImages.push({_key: `${index}`, ...card?.largeImage})
+                  mediaObj.imageAsset.image = images
+                  mediaObj.imageAsset.largeImage = largeImages
+                  cardObj.basicInfo.media.push({_key: `${index}`, ...mediaObj})
+                  // console.log("cardObj.images", cardObj.images)
+                  bodyScrubsAndWraps.signatureTreatmentDetails.push(cardObj)
+                }
+              })
+            }
+          }
+          else if (item?._type == "group" && item?.largeVariant == "details.group.3-card-carousel"
+          && (item?.title?.desktopTitle?.[0]?.toLowerCase()?.includes("yoga"))) {
+            yogaAndMeditation.sectionTitle = item?.title
+            yogaAndMeditation.description = item?.subTitle
+            if (item?.items) {
+              item?.items?.map((card, index) => {
+                let cardObj = {
+                  _key: '',
+                  _type: 'object',
+                  basicInfo: {
+                    title: "",
+                    description: "",
+                    media: [],
+                  }
+                }
+                let mediaObj = {
+                  _key: `${index}`,
+                  _type:'mediaInput',
+                  mediaType: 'image',
+                  imageAsset: {
+                    largeImage: [],
+                    image:[]
+                  }
+                }
+                let images = []
+                let largeImages = []
+                if (card?._type == 'card') {
+                  cardObj._key = card?._key
+                  cardObj.basicInfo.title = card?.title
+                  cardObj.basicInfo.description = card?.description
+                  images.push({_key: `${index}`, ...card?.image})
+                  largeImages.push({_key: `${index}`, ...card?.largeImage})
+                  mediaObj.imageAsset.image = images
+                  mediaObj.imageAsset.largeImage = largeImages
+                  cardObj.basicInfo.media.push({_key: `${index}`, ...mediaObj})
+                  // console.log("cardObj.images", cardObj.images)
+                  yogaAndMeditation.signatureTreatmentDetails.push(cardObj)
+                }
+              })
+            }
+          }
+          else if (item?._type == "group" && item?.largeVariant == "details.group.3-card-carousel"
+          && (item?.title?.desktopTitle?.[0]?.toLowerCase()?.includes("ayurveda"))) {
+            ayurvedaTherapies.sectionTitle = item?.title
+            ayurvedaTherapies.description = item?.subTitle
+            if (item?.items) {
+              item?.items?.map((card, index) => {
+                let cardObj = {
+                  _key: '',
+                  _type: 'object',
+                  basicInfo: {
+                    title: "",
+                    description: "",
+                    media: [],
+                  }
+                }
+                let mediaObj = {
+                  _key: `${index}`,
+                  _type:'mediaInput',
+                  mediaType: 'image',
+                  imageAsset: {
+                    largeImage: [],
+                    image:[]
+                  }
+                }
+                let images = []
+                let largeImages = []
+                if (card?._type == 'card') {
+                  cardObj._key = card?._key
+                  cardObj.basicInfo.title = card?.title
+                  cardObj.basicInfo.description = card?.description
+                  images.push({_key: `${index}`, ...card?.image})
+                  largeImages.push({_key: `${index}`, ...card?.largeImage})
+                  mediaObj.imageAsset.image = images
+                  mediaObj.imageAsset.largeImage = largeImages
+                  cardObj.basicInfo.media.push({_key: `${index}`, ...mediaObj})
+                  // console.log("cardObj.images", cardObj.images)
+                  ayurvedaTherapies.signatureTreatmentDetails.push(cardObj)
+                }
+              })
+            }
+          }
+          else if (item?._type == "group" && item?.largeVariant == "details.group.3-card-carousel"
+          && (item?.title?.desktopTitle?.[0]?.toLowerCase()?.includes("beauty"))) {
+            beauty.sectionTitle = item?.title
+            beauty.description = item?.subTitle
+            if (item?.items) {
+              item?.items?.map((card, index) => {
+                let cardObj = {
+                  _key: '',
+                  _type: 'object',
+                  basicInfo: {
+                    title: "",
+                    description: "",
+                    media: [],
+                  }
+                }
+                let mediaObj = {
+                  _key: `${index}`,
+                  _type:'mediaInput',
+                  mediaType: 'image',
+                  imageAsset: {
+                    largeImage: [],
+                    image:[]
+                  }
+                }
+                let images = []
+                let largeImages = []
+                if (card?._type == 'card') {
+                  cardObj._key = card?._key
+                  cardObj.basicInfo.title = card?.title
+                  cardObj.basicInfo.description = card?.description
+                  images.push({_key: `${index}`, ...card?.image})
+                  largeImages.push({_key: `${index}`, ...card?.largeImage})
+                  mediaObj.imageAsset.image = images
+                  mediaObj.imageAsset.largeImage = largeImages
+                  cardObj.basicInfo.media.push({_key: `${index}`, ...mediaObj})
+                  // console.log("cardObj.images", cardObj.images)
+                  beauty.signatureTreatmentDetails.push(cardObj)
+                }
+              })
+            }
+          }
+          else if (item?._type == "card" && item?.largeVariant == "ihcl.core.card.image-or-video-with-full-width") {
+            // wellnessFacilities.sectionTitle = item?.title
+            // wellnessFacilities.description = item?.subTitle
+            // if (item?.items) {
+            //   item?.items?.map((card, index) => {
+                // let cardObj = {
+                //   _key: '',
+                //   _type: 'object',
+                //   basicInfo: {
+                //     title: "",
+                //     description: "",
+                //     media: [],
+                //   }
+                // }
+                let mediaObj = {
+                  _key: `${index}`,
+                  _type:'mediaInput',
+                  mediaType: 'image',
+                  imageAsset: {
+                    largeImage: [],
+                    image:[]
+                  }
+                }
+                let images = []
+                let largeImages = []
+                if (item?._type == 'card') {
+                  // cardObj._key = item?._key
+                  images.push({_key: `${index}`, ...item?.image})
+                  largeImages.push({_key: `${index}`, ...item?.largeImage})
+                  mediaObj.imageAsset.image = images
+                  mediaObj.imageAsset.largeImage = largeImages
+                  dividerImage.push({_key: `${item?._key}`, ...mediaObj})
+                  // console.log("cardObj.images", cardObj.images)
+                  // dividerImage.push(cardObj)
+                }
+            //   })
+            // }
+          }
+          else if (item?._type == "group" && (item?.largeVariant == "details.group.group-with-card-right-media-left-content-aspect-ratio-2:4"
+          || item?.largeVariant == "details.group.3-card-carousel")
+          && (item?.title?.desktopTitle?.[0]?.toLowerCase()?.includes("wellness"))) {
             wellnessFacilities.sectionTitle = item?.title
             wellnessFacilities.description = item?.subTitle
             if (item?.items) {
               item?.items?.map((card, index) => {
                 let cardObj = {
                   _key: '',
+                  _type: 'object',
                   basicInfo: {
                     title: "",
                     description: "",
@@ -202,8 +574,16 @@ async function run() {
           // description: description,
           bannerImage: bannerArr,
           signatureTreatments: signatureTreatments,
+          indianTherapies: indianTherapies,
+          indianAromaTherapies: indianAromaTherapies,
+          spaIndulgences: spaIndulgences,
+          bodyScrubsAndWraps: bodyScrubsAndWraps,
+          yogaAndMeditation: yogaAndMeditation,
+          ayurvedaTherapies: ayurvedaTherapies,
+          beauty: beauty,
           wellnessDetails: wellnessFacilities,
-          spaDetails: spaDetails
+          spaDetails: spaDetails,
+          dividerImage: dividerImage
         }
         client
           .create(newWellness)

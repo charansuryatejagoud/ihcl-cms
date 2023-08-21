@@ -27,7 +27,7 @@ async function run() {
 
   await client
     .fetch(
-      `*[_type == "page" && path == "/hotels/taj-coromandel-chennai/rooms-and-suites"]{
+      `*[_type == "page" && path == "/resort/taj-chia-kutir-resort-and-spa-darjeeling/rooms-and-suites"]{
           items
          }[0]`,
     )

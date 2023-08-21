@@ -252,6 +252,10 @@ export const contentTypes = [
     title: "Offers",
     value: "offers",
   },
+  {
+    title: "Vouchers",
+    value: "vouchers",
+  }
 ];
 
 export const subContentTypes = [
