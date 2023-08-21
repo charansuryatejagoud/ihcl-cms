@@ -23,6 +23,12 @@ export default {
       type: "string",
     },
     {
+      name: "hotelNavigation",
+      title: "Hotel Navigation",
+      type: "reference",
+      to: [{ type: "navigation" }],
+    },
+    {
       name: "brandName",
       title: "Brand Name",
       type: "string",
