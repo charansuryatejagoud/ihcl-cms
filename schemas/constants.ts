@@ -347,6 +347,57 @@ export const galleryCategories = [
   },
 ];
 
+export const hotelNavigation = [
+  {
+    title: "Rooms and Suites",
+    value: "rooms_and_suites",
+  },
+  {
+    title: "Overview",
+    value: "overview",
+  },
+  {
+    title: "Dining",
+    value: "restaurants",
+  },
+  {
+    title: "Offers",
+    value: "offers_and_promotions",
+  },
+  {
+    title: "Venues",
+    value: "meetings_and_event_venues",
+  },
+  {
+    title: "J Wellness Circle",
+    value: "j_wellness_circle",
+  },
+  {
+    title: "Wellness",
+    value: "wellness",
+  },
+  {
+    title: "Experiences",
+    value: "experiences",
+  },
+  {
+    title: "Gallery",
+    value: "gallery",
+  },
+  {
+    title: "Attractions",
+    value: "places_to_visit",
+  },
+  {
+    title: "Niu and Nau",
+    value: "niu_and_nau",
+  },
+  {
+    title: "Gift Hamper",
+    value: "gift_hamper_festive"
+  }
+];
+
 export const brandNames = [
   {
     title: "Taj",
