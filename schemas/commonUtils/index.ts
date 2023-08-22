@@ -230,8 +230,8 @@ export const ihclcore: FeatureSchemaDefinition = {
         value: "common-utils.group.cookies-management-system-modal",
       },
       {
-        title: "Center Moving Carousel With Back Ground Gradient",
-        value: "common-utils.group.center-moving-carousel-with-back-ground-gradient",
+        title: "Center Moving Carousel With BackGround Gradient",
+        value: "common-utils.group.center-moving-carousel-with-background-gradient",
       }
     ],
     card: [
