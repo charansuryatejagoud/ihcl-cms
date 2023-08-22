@@ -31,6 +31,11 @@ export default function layoutPlaceholder({
       {
         title: "Placeholder Title",
         name: "title",
+        type: "title",
+      },
+      {
+        title: "Heading",
+        name: "heading",
         type: "string",
       },
       {
