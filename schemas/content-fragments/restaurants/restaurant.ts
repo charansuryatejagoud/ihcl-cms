@@ -14,6 +14,18 @@ export default {
       type: "string",
     },
     {
+      name: "thumbnail",
+      title: "Thumbnail",
+      type: "array",
+      of: [{ type: "mediaInput" }],
+    },
+    {
+      name: "gallery",
+      title: "Gallery",
+      type: "array",
+      of: [{ type: "mediaInput" }],
+    },
+    {
       name: "bannerTitle",
       title: "Banner Title",
       type: "title",
@@ -23,6 +35,17 @@ export default {
       title: "Banner",
       type: "array",
       of: [{ type: "mediaInput" }],
+    },
+    {
+      name: "openingHours",
+      title: "Opening Hours",
+      type: "array",
+      of: [{ type: "string" }],
+    },
+    {
+      name: "city",
+      title: "City",
+      type: "string",
     },
     {
       name: "hotelDetailDiningPage",
@@ -37,8 +60,7 @@ export default {
         {
           name: "bannerDiningInfo",
           title: "Banner Dining Info",
-          type: "array",
-          of: [{ type: "string" }],
+          type: "blockContent",
         },
         {
           name: "restaurantInfo",
@@ -52,9 +74,33 @@ export default {
           of: [{ type: "facilityInfo" }],
         },
         {
+          name: "restaurantContact",
+          title: "Contact",
+          type: "reference",
+          to: [{ type: "contact" }],
+        },
+        {
+          name: "restaurantAddress",
+          title: "Address",
+          type: "reference",
+          to: [{ type: "address" }],
+        },
+        {
           name: "privateDiningInfo",
           title: "Private Dining Info",
-          type: "basicDetails",
+          type: "object",
+          fields:[
+            {
+              name:'diningInfo',
+              title:'Dining Info',
+              type:'basicDetails'
+            },
+            {
+              name:'contactInfo',
+              title:'Contact Info',
+              type:'blockContent'
+            },
+          ]
         },
         {
           name: "locationBasedRestaurants",
