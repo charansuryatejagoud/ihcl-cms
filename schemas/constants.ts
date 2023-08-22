@@ -65,23 +65,23 @@ export const propertyCategories = [
 export const hotelTypes = [
   {
     title: "Hotels",
-    value: "hotels",
+    value: "Hotels",
   },
   {
     title: "Palaces",
-    value: "palaces",
+    value: "Palaces",
   },
   {
     title: "Safaris",
-    value: "safaris",
+    value: "Safaris",
   },
   {
     title: "Resorts",
-    value: "resorts",
+    value: "Resorts",
   },
   {
     title: "Residencies",
-    value: "residencies",
+    value: "Residencies",
   },
 ];
 
