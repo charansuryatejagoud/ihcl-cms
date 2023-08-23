@@ -1,7 +1,7 @@
 import { FeatureSchemaDefinition } from "schemas/types";
 import hotel from "./hotel";
 import contact from "./contact/contact";
-import navigation from "./navigation/navigation";
+import hotelNavigation from "./hotelNavigation/hotelNavigation";
 import gallery from "./gallery/gallery";
 import wellness from "./wellness/wellness";
 import rooms from "./rooms/rooms";
@@ -50,7 +50,7 @@ export const hotels: FeatureSchemaDefinition = {
     availability,
     contact,
     gallery,
-    navigation,
+    hotelNavigation,
     wellness,
     attractions,
     spaDetails,

@@ -12,8 +12,8 @@ hotelNavigation.forEach( h => {
 })
 
 export default {
-  title: "Navigation",
-  name: "navigation",
+  title: "Hotel Navigation",
+  name: "hotelNavigation",
   type: "document",
   fields: [
     {

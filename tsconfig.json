@@ -6,7 +6,7 @@
     "node_modules/@sanity/base/types/**/*.ts",
     "./**/*.ts",
     "./**/*.tsx", 
-    "branding/components/Actions.js" ],
+    "branding/components/actions/Actions.js" ],
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
     "module": "CommonJS",

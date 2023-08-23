@@ -7,7 +7,7 @@ import {
 import S from "@sanity/desk-tool/structure-builder";
 import userStore from "part:@sanity/base/user";
 import { isAdminUser } from "../schemas/shared-utils";
-import Actions from "@branding/components/Actions";
+import Actions from "@branding/components/actions/Actions";
 
 // Get the logged-in user
 const getCurrentUser = () => {

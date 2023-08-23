@@ -1,16 +1,55 @@
-import { Badge, Flex, Card, Container, TabList, Tab, TabPanel, Heading, TextArea, Button, Grid } from "@sanity/ui";
+import { Badge, Flex, Card, Container, TabList, Tab, TabPanel, Heading, TextArea, Button, Grid, Code } from "@sanity/ui";
 import React, {useState} from "react";
+import sanityClient from "@sanity/client";
+import { queries } from "./Queries";
 import {
   IoApps as AppIcon,
   IoEyeOff as EyeClosedIcon,
   IoEye as EyeOpenIcon,
 } from "react-icons/io5";
 
-export default function Logo() {
+export default function QueryBuilder() {
   
   const [tabId, setTabId] = useState('action-group')
-
   const [docs, setDocs] = useState('')
+  const [docOutput, setDocOutput] = useState({})
+
+  const _queryHead = (type, id, subQuery) => {
+    let _q = `_type == '${type}'`;
+    _q = id ? `${_q} && identifier in ${JSON.stringify(id.split(','))}` : _q;
+    _q = subQuery ? `${_q} ${subQuery}` : _q;
+    return `*[${_q}]`
+  }
+
+  const _queryBody = (body) => {
+    return body
+  }
+
+  const _query = (type, id, subQuery, body) =>  {
+    return `${_queryHead(type, id, subQuery)}${_queryBody(body)}`
+  }
+
+  const syncData = (type, id, subQuery, body) => {
+    const query = _query(type, id, subQuery, body)
+    const client = sanityClient({
+      projectId: "ocl5w36p",
+      dataset: "production",
+      apiVersion: "v2021-10-21",
+      token:
+        "skIlzYEV0AyovwCGKc4uvF7kNe3IdAp3zI4yjdqSBAB9gpj9r4GnsCmYh9o7iRe9htOJCKdLiJBLpjAFnedjFoLiKujs6mvSmwzkvr0t5obhmsh6Gb6s0MOnarAkqzRikYgBYNkZdEEc7v8BtvywajXtW9A4DmxeZ41aYnJbowf8XOPVt5vc",
+      useCdn: false,
+    });
+
+    console.log(query)
+    client
+      .fetch(query)
+      .then((response) => {
+        setDocOutput(response)
+      })
+      .catch((error) => {
+        console.log("error", error);
+      });
+  }
 
   return (
     // <Container width={0}>
@@ -58,6 +97,7 @@ export default function Logo() {
               <Button
                 fontSize={2}
                 padding={[3, 3, 4]}
+                onClick={() => syncData(queries.hotel.type, docs, null, queries.hotel.body)}
                 text="Sync Above Hotels"
               />
               <Button
@@ -68,6 +108,11 @@ export default function Logo() {
               />
             </Grid>
           </Card>
+          <Grid columns={1} padding={4}>
+              <Code language="json" size={1} style={{whiteSpace: 'break-spaces'}}>
+                {JSON.stringify(docOutput)}
+              </Code>
+          </Grid>
         </TabPanel>
 
         <TabPanel

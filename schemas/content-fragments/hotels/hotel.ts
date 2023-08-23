@@ -26,7 +26,7 @@ export default {
       name: "hotelNavigation",
       title: "Hotel Navigation",
       type: "reference",
-      to: [{ type: "navigation" }],
+      to: [{ type: "hotelNavigation" }],
     },
     {
       name: "brandName",
