@@ -1,7 +1,11 @@
 import dialog from "schemas/core/documents/dialog";
 import { FeatureSchemaDefinition } from "schemas/types";
+import cugOffers from "./cug-offers";
 
 export const loyalty: FeatureSchemaDefinition = {
+  schemas: [
+    cugOffers
+  ],
   connectedStores: [
     {
       title: "[Loyalty] Epicure Cards Store",
