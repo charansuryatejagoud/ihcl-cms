@@ -17,6 +17,7 @@ import items from "./items";
 import { images } from "./images";
 import membership from "./membership";
 import title from "./title";
+import dropDownItems from "./dropDownItems";
 
 export const ihclcore: FeatureSchemaDefinition = {
   schemas: [
@@ -38,6 +39,7 @@ export const ihclcore: FeatureSchemaDefinition = {
     images,
     membership,
     title,
+    dropDownItems
   ],
   pageItems: [
     { type: "banner" },
@@ -312,6 +314,10 @@ export const ihclcore: FeatureSchemaDefinition = {
         title: "City Card",
         value: "ihcl.core.card.city-card",
       },
+      {
+        title:"4 Column Grid With Bold Title",
+        value:"ihcl.core.card.4-column-grid-with-bold-title"
+      }
     ],
     banner: [
       {
