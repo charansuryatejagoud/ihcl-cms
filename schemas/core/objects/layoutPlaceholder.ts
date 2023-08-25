@@ -154,7 +154,7 @@ export default function layoutPlaceholder({
     ],
     preview: {
       select: {
-        title: "title",
+        title: "title.desktopTitle",
         subtitle: "subtitle",
         variant: "variant",
         hidden: "isHidden",

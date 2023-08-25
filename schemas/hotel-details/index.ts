@@ -119,6 +119,10 @@ export const details: FeatureSchemaDefinition = {
         title: "[Details] Group With Validity Dates",
         value: "details.group.group-with-validity-dates",
       },
+      {
+        title: "[Details] Media Gallery Carousel",
+        value: "details.group.media-gallery-carousel"
+      }
     ],
     card: [
       {
