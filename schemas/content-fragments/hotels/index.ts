@@ -13,6 +13,7 @@ import attractions from "./attractions/attractions";
 import holidayDetails from "./holiday/holidayInfo";
 import socialInfo from "./socialInfo";
 import venues from "./venues/venues";
+import events from "./venues/events";
 import weddingEventDetails from "./venues/weddingEventInfo";
 import rateCodes from "./rateCodes";
 import eventVenues from "./venues/venuesAndOccasions";
@@ -74,6 +75,7 @@ export const hotels: FeatureSchemaDefinition = {
     eventVenueDetails,
     socialInfo,
     venues,
+    events,
     facilityDetails,
     weddingEventDetails,
     rateCodes,

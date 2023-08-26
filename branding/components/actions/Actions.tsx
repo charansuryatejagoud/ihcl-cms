@@ -12,7 +12,9 @@ export default function QueryBuilder() {
   
   const [tabId, setTabId] = useState('action-group')
   const [docs, setDocs] = useState('')
+  const [updateScript, setUpdateScript] = useState('')
   const [docOutput, setDocOutput] = useState({})
+  const [dataMigrationOutput, setDataMigrationOutput] = useState({})
 
   const _queryHead = (type, id, subQuery) => {
     let _q = `_type == '${type}'`;
@@ -51,6 +53,36 @@ export default function QueryBuilder() {
       });
   }
 
+  const dataMigration = (query) => {
+    const client = sanityClient({
+      projectId: "ocl5w36p",
+      dataset: "production",
+      apiVersion: "v2021-10-21",
+      token:
+        "skIlzYEV0AyovwCGKc4uvF7kNe3IdAp3zI4yjdqSBAB9gpj9r4GnsCmYh9o7iRe9htOJCKdLiJBLpjAFnedjFoLiKujs6mvSmwzkvr0t5obhmsh6Gb6s0MOnarAkqzRikYgBYNkZdEEc7v8BtvywajXtW9A4DmxeZ41aYnJbowf8XOPVt5vc",
+      useCdn: false,
+    });
+
+    console.log(query)
+    client
+      .fetch(query)
+      .then((data) => {
+
+        if(data === null) {
+          console.log("No doc found")
+        } else {
+
+        }
+
+        setDataMigrationOutput(response)
+      })
+      .catch((error) => {
+        console.log("error", error);
+      });
+
+    
+  }
+
   return (
     // <Container width={0}>
       <Card padding={4}>
@@ -68,7 +100,7 @@ export default function QueryBuilder() {
             aria-controls="preview-panel"
             icon={tabId === 'preview' ? EyeOpenIcon : EyeClosedIcon}
             id="preview-tab"
-            label="Preview"
+            label="Data Migration"
             onClick={() => setTabId('preview')}
             selected={tabId === 'preview'}
             // space={2}
@@ -119,10 +151,35 @@ export default function QueryBuilder() {
           aria-labelledby="preview-tab"
           hidden={tabId !== 'preview'}
           id="preview-panel"
+          paddingTop={4}
         >
-          <Card marginTop={2} padding={4}>
-            <Heading>Preview</Heading>
+          <Card marginTop={2} radius={2}>
+            <Heading>Data Update with Script</Heading>
+            <br />
+            <TextArea
+              fontSize={2}
+              onChange={(event) =>
+                setUpdateScript(event.currentTarget.value)
+              }
+              style={{minHeight: '400px'}}
+              padding={[3, 3, 4]}
+              placeholder="Provide the script to process the data update"
+              value={updateScript}
+            />
+            <Grid columns={2} gap={[1, 1, 2, 3]} paddingTop={4}>
+            <Button
+              fontSize={2}
+              padding={[3, 3, 4]}
+              text="Process Data Update"
+              tone="positive"
+              onClick={() => dataMigration(updateScript)}
+            /></Grid>
           </Card>
+          <Grid columns={1} padding={4}>
+              <Code language="json" size={1} style={{whiteSpace: 'break-spaces'}}>
+                {JSON.stringify(dataMigrationOutput)}
+              </Code>
+          </Grid>
         </TabPanel>
       </Card>
     // </Container>
