@@ -118,5 +118,11 @@ export default {
         },
       ],
     },
+    {
+      name: "primaryAction",
+      title: "Primary Action",
+      type: "navigationItem",
+      description: "Navigates the Gift Card to Respective Landing Page If Any"
+    },
   ],
 };
