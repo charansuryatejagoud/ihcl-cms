@@ -14,7 +14,7 @@ import brand from "./documents/brand";
 import metadata from "./objects/metadata";
 import empty from "./objects/empty";
 import video from "./objects/video";
-import faqs from "./objects/faqs";
+import faqs, { questionAndAnswer } from "./objects/faqs";
 import appConfig from "./documents/appConfig";
 import fileDocument from "./objects/fileDocument";
 import reorderTransformer from "./transformers/reorder.transformer";
@@ -47,7 +47,9 @@ export const core: FeatureSchemaDefinition = {
     cellSchema,
     rowSchema,
     formGroup,
-    actionTypes
+    actionTypes,
+    questionAndAnswer
+    
   ],
   transformers: [reorderTransformer],
   headers: [],
