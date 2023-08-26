@@ -119,10 +119,6 @@ export const details: FeatureSchemaDefinition = {
         title: "[Details] Group With Validity Dates",
         value: "details.group.group-with-validity-dates",
       },
-      {
-        title: "[Details] Media Gallery Carousel",
-        value: "details.group.media-gallery-carousel"
-      }
     ],
     card: [
       {
@@ -215,10 +211,6 @@ export const details: FeatureSchemaDefinition = {
         title: "[Details] Left Media Right Content With Equally Occupied Space",
         value: "details.card.left-media-right-content-with-equally-occupied-space",
       },
-      {
-        title: "[Details] Restaurant Contact Details",
-        value: "details.card.restaurant-contact-details",
-      }
     ],
 
     banner: [],
