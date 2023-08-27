@@ -6,6 +6,16 @@ export default {
   type: "document",
   fields: [
     {
+      name: "title",
+      title: "Title",
+      type: "string",
+    },
+    {
+      name: "identifier",
+      title: "Identifier",
+      type: "string",
+    },
+    {
       name: "basicInfo",
       title: "Basic Info",
       type: "basicDetails",

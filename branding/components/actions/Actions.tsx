@@ -71,10 +71,39 @@ export default function QueryBuilder() {
         if(data === null) {
           console.log("No doc found")
         } else {
+          setDataMigrationOutput(data)
 
+          data && data.map(async doc => {
+
+            console.log("DOC:::", doc);
+
+            const identifier = doc?.events?.basicInfo?.title?.toLowerCase().replace(/ /g,"-")
+
+            let event = {
+              _type: "events",
+              title: doc?.events?.basicInfo?.title,
+              identifier: identifier,
+              seatingStyles: doc?.events?.seatingStyles,
+              basicInfo: doc?.events?.basicInfo,
+              venueModalDetails: doc?.events?.venueModalDetails,
+              highlights: doc?.events?.highlights
+            }
+
+            console.log("EVENT:::", event)
+
+            await client
+              .create(event)
+              .then((event) => {
+                console.log("Created new event ", event);
+              })
+              .catch((err) => {
+                console.log("failed to update");
+                console.log("err ", err);
+              });
+
+          })
         }
-
-        setDataMigrationOutput(response)
+        
       })
       .catch((error) => {
         console.log("error", error);
