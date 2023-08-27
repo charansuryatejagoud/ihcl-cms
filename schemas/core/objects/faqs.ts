@@ -42,7 +42,7 @@ export default {
           ],
         },
         {
-          type: "card",
+          type: "group",
         },
         {
           type: "object",

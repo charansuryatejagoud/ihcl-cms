@@ -65,6 +65,11 @@ export default {
         },
       ],
     },
+    {
+      name: "bookingPaymentQueries",
+      title: "Booking Payment Queries",
+      type: "group",
+    }
   ],
   preview: {
     prepare: () => {

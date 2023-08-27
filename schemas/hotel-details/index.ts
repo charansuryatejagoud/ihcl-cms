@@ -218,6 +218,10 @@ export const details: FeatureSchemaDefinition = {
       {
         title: "[Details] Restaurant Contact Details",
         value: "details.card.restaurant-contact-details",
+      },
+      {
+        title: "[Details] Image With Bottom Right Title",
+        value: "details.card.image-with-bottom-right-title",
       }
     ],
 

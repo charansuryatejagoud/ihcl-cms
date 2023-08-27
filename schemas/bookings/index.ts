@@ -138,5 +138,11 @@ export const bookings: FeatureSchemaDefinition = {
         value: "bookings.dialog.success-and-failure-pop-up",
       }
     ],
+    card: [
+      {
+        title: "[Bookings] Payment Description", 
+        value: "Bookings.card.payment-description",
+      }
+    ]
   },
 };
