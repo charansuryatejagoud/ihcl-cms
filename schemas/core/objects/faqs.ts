@@ -42,11 +42,11 @@ export default {
           ],
         },
         {
-          type: "card",
+          type: "group",
         },
         {
           type: "object",
-          name:"questionAndAnswer",
+          name: "questionAndAnswer",
           fields: [
             {
               name: "title",
@@ -55,10 +55,8 @@ export default {
             },
             {
               type: "array",
-               name:"items",
-              of: [
-                {type: "questionAndAnswer"}
-              ],
+              name: "items",
+              of: [{ type: "questionAndAnswer" }],
             },
           ],
         },
@@ -86,10 +84,8 @@ export default {
     },
   },
 };
-
-
 export const questionAndAnswer = {
-  name:"questionAndAnswer",
+  name: "questionAndAnswer",
   title: "Question and Answer",
   type: "object",
   fields: [
@@ -104,6 +100,4 @@ export const questionAndAnswer = {
       type: "blockContent",
     },
   ],
-
-
-}
+};

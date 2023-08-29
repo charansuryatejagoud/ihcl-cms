@@ -136,7 +136,7 @@ export default function group({
         title: "Gift Card Category",
         type: "reference",
         to: [{ type: "giftCardGroup" }],
-        description: "This Field is a Reference to specify Gift Card Category",
+        description:"This Field is a Reference to specify Gift Card Category",
         hidden: ({ parent }) =>
           parent?.largeVariant != "giftCards.group.2-by-3-grid" &&
           parent?.variant != "giftCards.group.2-by-3-grid",

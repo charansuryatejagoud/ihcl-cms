@@ -30,5 +30,15 @@ export default {
       type: "array",
       of: [{ type: "diningInfo" }],
     },
+    {
+      name: "pageTitle",
+      title: "Page Title",
+      type: "string",
+    },
+    {
+      name: "seoKeywords",
+      title: "SEO Keywords",
+      type: "string",
+    }
   ],
 };

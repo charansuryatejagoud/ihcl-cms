@@ -67,5 +67,15 @@ export default {
         },
       ],
     },
+    {
+      name: "pageTitle",
+      title: "Page Title",
+      type: "string",
+    },
+    {
+      name: "seoKeywords",
+      title: "SEO Keywords",
+      type: "string",
+    }
   ],
 };

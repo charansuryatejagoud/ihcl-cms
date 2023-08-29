@@ -12,9 +12,9 @@ export const loyalty: FeatureSchemaDefinition = {
       value: "loyalty.stores.loyalty-epicure-cards-store",
     },
     {
-      title: "[Loyalty] Member Confirm Details",
-      value: "loyalty.stores.member-confirm-details",
-    },
+      title:"[Loyalty] Member Confirm Details",
+      value:"loyalty.stores.member-confirm-details"
+    }
   ],
   variants: {
     group: [
@@ -49,8 +49,8 @@ export const loyalty: FeatureSchemaDefinition = {
         value: "loyalty.group.card-media-content-positions",
       },
       {
-        title: "[Loyalty] Membership Purchase Details",
-        value: "loyalty.group.membership-purchase-details",
+        title:"[Loyalty] Membership Purchase Details",
+        value:"loyalty.group.membership-purchase-details"
       },
       {
         title: "[Loyalty] Loyalty Product Payment and Information",
@@ -63,7 +63,7 @@ export const loyalty: FeatureSchemaDefinition = {
       {
         title: "[Loyalty] Carousel with selected Tabs",
         value: "loyalty.group.carousel-with-selected-image-tabs",
-      },
+      }
     ],
     card: [
       { title: "[Loyalty] Text on Image", value: "loyalty.text-on-image" },
@@ -92,10 +92,8 @@ export const loyalty: FeatureSchemaDefinition = {
         value: "loyalty.card.card-with-hotel-details",
       },
       {
-        title:
-          "[Loyalty] Card With background Image and Column aligned dual actions",
-        value:
-          "loyalty.card.card-with-background-image.horizontal-dual-actions",
+        title: "[Loyalty] Card With background Image and Column aligned dual actions",
+        value: "loyalty.card.card-with-background-image.horizontal-dual-actions",
       },
       {
         title: "[Loyalty] Left Media with Group Of Gift Items Right Content",
@@ -112,7 +110,7 @@ export const loyalty: FeatureSchemaDefinition = {
       {
         title: "[Loyalty] Epicure Membership Login",
         value: "loyalty.card.epicure-membership-login",
-      },
+      }
     ],
     nudge: [
       {
@@ -136,7 +134,9 @@ export const loyalty: FeatureSchemaDefinition = {
         value: "loyalty.nudge.rounded.mail-action",
       },
     ],
-    dialog: [{ title: "[Loyalty] Manage Card", value: "manage-card" }],
+    dialog: [
+      { title: "[Loyalty] Manage Card", value: "manage-card" },
+    ],
     stepper: [
       {
         title: "[Loyalty] E-Gift Card Flow",
