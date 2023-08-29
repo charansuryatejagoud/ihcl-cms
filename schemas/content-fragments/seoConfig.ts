@@ -19,7 +19,7 @@ export default {
               {
                 name: "name",
                 title: "Name",
-                type: "text",
+                type: "string",
               },
               {
                 name: "content",
@@ -41,7 +41,7 @@ export default {
               {
                 name: "src",
                 title: "Src",
-                type: "text",
+                type: "string",
               },
               {
                 name: "script",
@@ -51,7 +51,7 @@ export default {
               {
                 name: "type",
                 title: "Type",
-                type: "text",
+                type: "string",
               },
               {
                 name: "async",
@@ -77,18 +77,18 @@ export default {
             fields: [
               {
                 name: "rel",
-                title: "Name",
-                type: "text",
+                title: "Rel",
+                type: "string",
               },
               {
                 name: "href",
                 title: "Href",
-                type: "text",
+                type: "string",
               },
               {
                 name: "type",
                 title: "Type",
-                type: "text",
+                type: "string",
               },
             ],
           },
