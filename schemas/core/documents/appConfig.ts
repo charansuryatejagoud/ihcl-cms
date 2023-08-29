@@ -55,21 +55,6 @@ export default {
         },
       ],
     },
-    {
-      name: "cancellationDropdown",
-      title: "Cancellation Dropdown",
-      type: "array",
-      of: [
-        {
-          type: "cancellationDropdown",
-        },
-      ],
-    },
-    {
-      name: "bookingPaymentQueries",
-      title: "Booking Payment Queries",
-      type: "group",
-    }
   ],
   preview: {
     prepare: () => {
