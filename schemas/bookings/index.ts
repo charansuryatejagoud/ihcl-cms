@@ -134,5 +134,11 @@ export const bookings: FeatureSchemaDefinition = {
         value: "bookings.dialog.reselect-room-modal",
       },
     ],
+    card: [
+      {
+        title: "[Bookings] Payment Description", 
+        value: "Bookings.card.payment-description",
+      }
+    ]
   },
 };
