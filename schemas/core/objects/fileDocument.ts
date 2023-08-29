@@ -16,11 +16,6 @@ export default {
       type: "string",
     },
     {
-      name: "identifier",
-      title: "Identifier",
-      type: "string",
-    },
-    {
       type: "file",
       title: "File",
       name: "file",

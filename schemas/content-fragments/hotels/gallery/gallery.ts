@@ -27,8 +27,8 @@ export default {
       of: [{ type: "mediaInput" }],
     },
     {
-      name: "hotelMedia",
-      title: "Hotel Media",
+      name: "hotelImages",
+      title: "Hotel Images",
       type: "array",
       of: [
         {
@@ -45,23 +45,10 @@ export default {
               },
             },
             {
-              title: "Category Title",
-              name: "categoryTitle",
-              type: "string",
-            },
-            {
-              title: "Images",
-              name: "images",
+              title: "Media",
+              name: "media",
               type: "array",
-              of: [{ type: "image" }],
-              hidden: ({ parent }) => parent?.category == "video",
-            },
-            {
-              title: "Videos",
-              name: "videos",
-              type: "array",
-              of: [{ type: "videoAsset" }],
-              hidden: ({ parent }) => parent?.category !== "video",
+              of: [{ type: "mediaInput" }],
             },
           ],
         },

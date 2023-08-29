@@ -53,10 +53,6 @@ export const Offers: FeatureSchemaDefinition = {
         title: "[Offers] Book A Stay With Access Code",
         value: "offers.card.book-a-stay-with-access-code",
       },
-      {
-        title:"[Offers] Vertical Aligned Diamond Points",
-        value:"offers.card.vertical-aligned-diamond-points"
-      }
     ]
   },
 };

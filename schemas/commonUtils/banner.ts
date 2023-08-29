@@ -10,10 +10,6 @@ const AlignmentVariant = [
   {
     title:"Center",
     value:"center"
-  },
-  {
-    title: "No Preceding Hyphen for Mobile",
-    value: "no-preceding-hyphen-for-mobile"
   }
 ];
 export const bannerVariants = [

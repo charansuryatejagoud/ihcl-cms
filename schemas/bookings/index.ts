@@ -133,10 +133,6 @@ export const bookings: FeatureSchemaDefinition = {
         title: "[Bookings] Reselect Room Modal",
         value: "bookings.dialog.reselect-room-modal",
       },
-      {
-        title: "[Bookings] Success and Failure Pop-up",
-        value: "bookings.dialog.success-and-failure-pop-up",
-      }
     ],
   },
 };

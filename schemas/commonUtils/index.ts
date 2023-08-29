@@ -233,10 +233,6 @@ export const ihclcore: FeatureSchemaDefinition = {
         title: "Group With 3 Column Cards Grid (Layout Placeholder)",
         value: "ihcl.core.group.group-with-3-column-cards-grid-layout-placeholder",
       },
-      {
-        title: "Center Moving Carousel With BackGround Gradient",
-        value: "common-utils.group.center-moving-carousel-with-background-gradient",
-      }
     ],
     card: [
       {
@@ -336,10 +332,6 @@ export const ihclcore: FeatureSchemaDefinition = {
       {
         title: "Social Feed",
         value: "common-utils.placeholders.social-feed"
-      },
-      {
-        title:"Radio Button Filters",
-        value:"common-utils.placeholders.radio-button-filters"
       }
     ],
     nudge: [

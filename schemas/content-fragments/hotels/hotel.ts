@@ -23,6 +23,12 @@ export default {
       type: "string",
     },
     {
+      name: "hotelNavigation",
+      title: "Hotel Navigation",
+      type: "reference",
+      to: [{ type: "hotelNavigation" }],
+    },
+    {
       name: "brandName",
       title: "Brand Name",
       type: "string",
@@ -185,12 +191,5 @@ export default {
       type: "reference",
       to: [{ type: "attractions" }],
     },
-    {
-      name: "hotelDocuments",
-      title: "Hotel Documents",
-      description: "Documents supported are PDF and DOCX.",
-      type: "array",
-      of: [{ type: "fileDocument" }],
-    }
   ],
 };

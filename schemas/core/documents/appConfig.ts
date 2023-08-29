@@ -55,16 +55,6 @@ export default {
         },
       ],
     },
-    {
-      name: "cancellationDropdown",
-      title: "Cancellation Dropdown",
-      type: "array",
-      of: [
-        {
-          type: "cancellationDropdown",
-        },
-      ],
-    },
   ],
   preview: {
     prepare: () => {

@@ -1,6 +1,7 @@
 import { FeatureSchemaDefinition } from "schemas/types";
 import hotel from "./hotel";
 import contact from "./contact/contact";
+import hotelNavigation from "./hotelNavigation/hotelNavigation";
 import gallery from "./gallery/gallery";
 import wellness from "./wellness/wellness";
 import rooms from "./rooms/rooms";
@@ -12,6 +13,7 @@ import attractions from "./attractions/attractions";
 import holidayDetails from "./holiday/holidayInfo";
 import socialInfo from "./socialInfo";
 import venues from "./venues/venues";
+import events from "./venues/events";
 import weddingEventDetails from "./venues/weddingEventInfo";
 import rateCodes from "./rateCodes";
 import eventVenues from "./venues/venuesAndOccasions";
@@ -49,6 +51,7 @@ export const hotels: FeatureSchemaDefinition = {
     availability,
     contact,
     gallery,
+    hotelNavigation,
     wellness,
     attractions,
     spaDetails,
@@ -72,6 +75,7 @@ export const hotels: FeatureSchemaDefinition = {
     eventVenueDetails,
     socialInfo,
     venues,
+    events,
     facilityDetails,
     weddingEventDetails,
     rateCodes,
@@ -83,6 +87,6 @@ export const hotels: FeatureSchemaDefinition = {
     taxonomyInfo,
     locationAndDirections,
     locationInfo,
-    vouchers,
+    vouchers
   ],
 };

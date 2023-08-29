@@ -11,7 +11,7 @@ ENV NODE_OPTIONS --max_old_space_size=2048
 RUN yarn install
 
 # Configure the dataset before build, defaults to "staging"
-ARG DATASET=staging
+ARG DATASET=production
 ENV SANITY_STUDIO_API_DATASET $DATASET
 ENV NODE_ENV production
 RUN echo "Building for dataset: $SANITY_STUDIO_API_DATASET" && yarn build

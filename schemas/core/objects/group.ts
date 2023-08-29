@@ -136,7 +136,7 @@ export default function group({
         title: "Gift Card Category",
         type: "reference",
         to: [{ type: "giftCardGroup" }],
-        description: "This Field is a Reference to specify Gift Card Category",
+        description:"This Field is a Reference to specify Gift Card Category",
         hidden: ({ parent }) =>
           parent?.largeVariant != "giftCards.group.2-by-3-grid" &&
           parent?.variant != "giftCards.group.2-by-3-grid",
@@ -242,85 +242,6 @@ export default function group({
       //     },
       //   },
       // ]),
-
-      {
-        name: "filterConfig",
-        title: "Filter Config",
-        type: "array",
-        of: [
-          {
-            type: "object",
-            fields: [
-              {
-                name: "enableFilter",
-                title: "Enable Filter",
-                type: "boolean",
-              },
-              {
-                name: "filterPlaceholder",
-                title: "Filter Placeholder",
-                type: "string",
-              },
-              {
-                name: "filterTerm",
-                title: "Filter Term",
-                type: "string",
-              },
-              {
-                name: "filterType",
-                title: "Filter Type",
-                type: "string",
-                options: {
-                  list: [
-                    {
-                      title: "Dropdown",
-                      value: "dropdown",
-                    },
-                    {
-                      title: "Search Field",
-                      value: "searchField",
-                    },
-                  ],
-                },
-              },
-            ],
-          },
-        ],
-      },
-      {
-        name: "filterAlignment",
-        title: "Filter Alignment",
-        type: "string",
-        options: {
-          list: [
-            {
-              title: "Start",
-              value: "start",
-            },
-            {
-              title: "End",
-              value: "end",
-            },
-          ],
-        },
-      },
-      {
-        name: "tabsConfig",
-        title: "Tabs Config",
-        type: "object",
-        fields: [
-          {
-            name: "enableTabs",
-            title: "Enable Tabs",
-            type: "boolean",
-          },
-          {
-            name: "tabTerm",
-            title: "Tab Term",
-            type: "string",
-          },
-        ],
-      },
       {
         name: "filterConfig",
         title: "Filter Config",

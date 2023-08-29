@@ -27,17 +27,6 @@ export default {
       type: "string",
     },
     {
-      name: "icon",
-      title: "Icon",
-      type: "image",
-    },
-    {
-      name: "onHoverText",
-      title: "On Hover Text",
-      type: "text",
-      rows: 3,
-    },
-    {
       name: "comparativeSpefications",
       title: "Comparative Spefications",
       type: "array",
