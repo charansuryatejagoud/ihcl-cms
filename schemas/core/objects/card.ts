@@ -7,6 +7,7 @@ import {
 } from "../../shared-utils";
 import { VariantDefinition } from "../../types";
 import { PageLink } from "../../../branding/components/page-link/PageLink";
+import { poweredBy } from "../../constants";
 export const acceleratorCardVariant: VariantDefinition = {
   title: "Accelerator Card",
   value: "accelerator.card",
@@ -31,6 +32,7 @@ export default function card(props: Props) {
     groups: [
       { name: "main", title: "Main", icon: IoApps },
       { name: "configuration", title: "Configuration", icon: IoSettings },
+      { name: "analyticsConfig", title: "Analytics Config", icon: IoSettings },
     ],
     fields: [
       {
@@ -50,21 +52,10 @@ export default function card(props: Props) {
         group: "main",
       },
       {
-        name: "highlights",
-        title: "Highlights",
-        type: "array",
+        name: "highLights",
+        title: "High Lights",
+        type: "string",
         group: "main",
-        of: [
-          {
-            type: "object",
-            fields: [
-              {
-                name: "term",
-                type: "string",
-              },
-            ],
-          },
-        ],
       },
       {
         name: "description",
@@ -224,22 +215,6 @@ export default function card(props: Props) {
           parent?.largeVariant !== "component",
       },
       {
-        name: "filterTerm",
-        title: "Filter Term",
-        type: "array",
-        of: [
-          {
-            type: "object",
-            fields: [
-              {
-                name: "term",
-                type: "string",
-              },
-            ],
-          },
-        ],
-      },
-      {
         name: "parameterMap",
         title: "Parameter Map",
         description: "Parameters as a set of key-value pairs",
@@ -304,6 +279,25 @@ export default function card(props: Props) {
         title: "Secondary Action",
         type: "navigationItem",
         group: "main",
+      },
+      {
+        name: "analytics",
+        title: "Analytics",
+        type: "object",
+        fields: [
+          {
+            name: "clickEvent",
+            title: "Click Event",
+            type: "string",
+          },
+          {
+            name: "poweredBy",
+            title: "Powered By",
+            type: "string",
+            options: { list: poweredBy },
+          },
+        ],
+        group: "analyticsConfig",
       },
     ],
     preview: {

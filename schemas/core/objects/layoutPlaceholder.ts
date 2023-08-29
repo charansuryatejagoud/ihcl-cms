@@ -31,11 +31,6 @@ export default function layoutPlaceholder({
       {
         title: "Placeholder Title",
         name: "title",
-        type: "title",
-      },
-      {
-        title: "Heading",
-        name: "heading",
         type: "string",
       },
       {
@@ -164,7 +159,7 @@ export default function layoutPlaceholder({
         const variantText = variant ? `(${variant})` : "";
 
         return {
-          title: `${hiddenIndicator}${title ?? "<Layout Placeholder>"}`,
+          title: `${hiddenIndicator}${title?.toString() ?? "<Layout Placeholder>"}`,
           subtitle: `${subtitle ?? ""}${variantText}`,
         };
       },

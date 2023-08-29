@@ -1,6 +1,7 @@
 import { IoApps, IoLayers as Icon, IoSettings } from "react-icons/io5";
 import { SchemaItem, VariantDefinition } from "../../types";
 import { hiddenField } from "../../shared-utils";
+import { poweredBy } from "../../constants";
 
 export const groupAlignmentVariant = [
   {
@@ -54,6 +55,7 @@ export default function group({
     groups: [
       { name: "main", title: "Main", icon: IoApps },
       { name: "configuration", title: "Configuration", icon: IoSettings },
+      { name: "analyticsConfig", title: "Analytics Config", icon: IoSettings },
     ],
     fields: [
       {
@@ -134,7 +136,7 @@ export default function group({
         title: "Gift Card Category",
         type: "reference",
         to: [{ type: "giftCardGroup" }],
-        description: "This Field is a Reference to specify Gift Card Category",
+        description:"This Field is a Reference to specify Gift Card Category",
         hidden: ({ parent }) =>
           parent?.largeVariant != "giftCards.group.2-by-3-grid" &&
           parent?.variant != "giftCards.group.2-by-3-grid",
@@ -240,7 +242,6 @@ export default function group({
       //     },
       //   },
       // ]),
-
       {
         name: "filterConfig",
         title: "Filter Config",
@@ -364,6 +365,25 @@ export default function group({
           },
         ],
         group: "main",
+      },
+      {
+        name: "analytics",
+        title: "Analytics",
+        type: "object",
+        fields: [
+          {
+            name: "clickEvent",
+            title: "Click Event",
+            type: "string",
+          },
+          {
+            name: "poweredBy",
+            title: "Powered By",
+            type: "string",
+            options: { list: poweredBy },
+          },
+        ],
+        group: "analyticsConfig",
       },
       // {
       //   name: "metadata",

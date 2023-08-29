@@ -119,6 +119,23 @@ export const details: FeatureSchemaDefinition = {
         title: "[Details] Group With Validity Dates",
         value: "details.group.group-with-validity-dates",
       },
+      {
+        title: "[Details] Media Gallery Carousel",
+        value: "details.group.media-gallery-carousel"
+      },
+      {
+        title: "[Details] Group With Carousel-Card Left Media Right Content(Layout Placeholder)",
+        value:
+          "details.group.group-with-carousel-card-left-media-right-content-aspect-ratio-2:4-layout-placeholder",
+      },
+      {
+        title: "[Details] Center Card Carousel(Layout Placeholder)",
+        value: "details.group.center-card-carousel-layout-placeholder",
+      },
+      {
+        title: "[Details] 3 Card Carousel (Layout Placeholder)",
+        value: "details.group.3-card-carousel-layout-placeholder",
+      },
     ],
     card: [
       {

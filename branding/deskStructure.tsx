@@ -7,7 +7,7 @@ import {
 import S from "@sanity/desk-tool/structure-builder";
 import userStore from "part:@sanity/base/user";
 import { isAdminUser } from "../schemas/shared-utils";
-import Actions from "@branding/components/Actions";
+import Actions from "@branding/components/actions/Actions";
 
 // Get the logged-in user
 const getCurrentUser = () => {
@@ -59,7 +59,8 @@ const contentSection = S.listItem()
       S.listItem().title("Restaurants").icon(ListItemIcon).child(S.documentTypeList("restaurants")),
       S.listItem().title("Offers").icon(ListItemIcon).child(S.documentTypeList("offerPackages")),
       S.listItem().title("Vouchers").icon(ListItemIcon).child(S.documentTypeList("vouchers")),
-      S.listItem().title("Events").icon(ListItemIcon).child(S.documentTypeList("venues")),
+      S.listItem().title("Venues").icon(ListItemIcon).child(S.documentTypeList("venues")),
+      S.listItem().title("Events").icon(ListItemIcon).child(S.documentTypeList("events")),
       //S.listItem().title("Experiences").icon(ListItemIcon).child(S.documentTypeList("experiences")),
       //S.listItem().title("Places").icon(ListItemIcon).child(S.documentTypeList("places")),
       S.listItem().title("Gift Cards").icon(ListItemIcon).child(S.documentTypeList("giftCardGroup")),
