@@ -164,7 +164,7 @@ export default function layoutPlaceholder({
         const variantText = variant ? `(${variant})` : "";
 
         return {
-          title: `${hiddenIndicator}${title?.desktopTitle ?? "<Layout Placeholder>"}`,
+          title: `${hiddenIndicator}${title?.toString() ?? "<Layout Placeholder>"}`,
           subtitle: `${subtitle ?? ""}${variantText}`,
         };
       },
