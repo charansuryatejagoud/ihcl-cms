@@ -35,27 +35,6 @@ export default {
             },
           ],
         },
-        {
-          type: "group",
-        },
-        {
-          type: "object",
-          name:"questionAndAnswer",
-          fields: [
-            {
-              name: "title",
-              title: "Title",
-              type: "string",
-            },
-            {
-              type: "array",
-               name:"items",
-              of: [
-                {type: "questionAndAnswer"}
-              ],
-            },
-          ],
-        },
       ],
     },
   ],
