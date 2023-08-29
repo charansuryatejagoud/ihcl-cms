@@ -190,6 +190,6 @@ export default {
       title: "Attractions",
       type: "reference",
       to: [{ type: "attractions" }],
-    },
+    }
   ],
 };
