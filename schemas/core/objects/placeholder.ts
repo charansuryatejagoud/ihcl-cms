@@ -65,6 +65,14 @@ export default function placeholder({
         group: "main",
       },
       {
+        name: "brandId",
+        title: "Brand Id",
+        type: "string",
+        hidden: ({ parent }) =>
+          parent?.variant !==
+          "common-utils.placeholders.social-feed",
+      },
+      {
         title: "Start Date",
         name: "startDate",
         type: "datetime",

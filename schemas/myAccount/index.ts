@@ -48,10 +48,6 @@ export const myAccount: FeatureSchemaDefinition = {
         title: "[My Account] Gift Card viewer",
         value: "myAccount.group.gift-card-viewer",
       },
-      {
-        title: "[My Account] Find Your Booking",
-        value: "myAccount.group.find-your-booking",
-      },
     ],
     card: [
       {
@@ -67,10 +63,6 @@ export const myAccount: FeatureSchemaDefinition = {
       {
         title: "[My Account] Vouchers Viewer",
         value: "myAccount.placeholders.vouchers-viewer",
-      },
-      {
-        title: "[My Account] Gift Card viewer",
-        value: "myAccount.placeholders.gift-card-viewer",
       },
       {
         title: "[My Account] Transactions Summary",

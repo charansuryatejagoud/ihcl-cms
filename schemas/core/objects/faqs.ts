@@ -1,4 +1,4 @@
-import { BsFillQuestionCircleFill as faqIcon } from "react-icons/bs";
+import {BsFillQuestionCircleFill as faqIcon} from "react-icons/bs";
 
 export default {
   name: "faqs",
@@ -12,15 +12,9 @@ export default {
       type: "string",
     },
     {
-      name: "aesthetic",
-      title: "Aesthetic",
-      type: "reference",
-      to: [{ type: "uiConfiguration" }],
-    },
-    {
-      name: "largeVariant",
-      title: "Large Variant",
-      type: "string",
+      name:"largeVariant",
+      title:"Large Variant",
+      type:"string"
     },
     {
       name: "items",

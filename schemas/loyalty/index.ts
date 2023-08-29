@@ -103,6 +103,10 @@ export const loyalty: FeatureSchemaDefinition = {
         title: "[Loyalty] Reverse Chambers Details",
         value: "loyalty.card.reverse-chambers-details",
       },
+      {
+        title: "[Loyalty] Epicure Membership Login",
+        value: "loyalty.card.epicure-membership-login",
+      }
     ],
     nudge: [
       {
@@ -128,10 +132,6 @@ export const loyalty: FeatureSchemaDefinition = {
     ],
     dialog: [
       { title: "[Loyalty] Manage Card", value: "manage-card" },
-      {
-        title: "[Loyalty] Enquire Bulk Gift Card",
-        value: "enquire-bulk-gift-card",
-      },
     ],
     stepper: [
       {

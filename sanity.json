@@ -28,12 +28,30 @@
       ],
       "__experimental_spaces": [
         {
-          "name": "develop",
-          "title": "Develop",
+          "name": "production",
+          "title": "Production",
           "default": true,
           "api": {
             "projectId": "ocl5w36p",
             "dataset": "production"
+          }
+        },
+        {
+          "name": "sit",
+          "title": "SIT",
+          "default": true,
+          "api": {
+            "projectId": "ocl5w36p",
+            "dataset": "sit"
+          }
+        },
+        {
+          "name": "dev",
+          "title": "DEV",
+          "default": true,
+          "api": {
+            "projectId": "ocl5w36p",
+            "dataset": "develop"
           }
         }
       ]
