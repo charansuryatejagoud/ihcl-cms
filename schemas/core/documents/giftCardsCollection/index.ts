@@ -40,6 +40,12 @@ export default {
         "Field Used for Gift Card Preview Title and Description Font Colors",
     },
     {
+      name: "gradient",
+      title: "Gradient",
+      type: "string",
+      description: "Field Used For Coloring Gift Card Background",
+    },
+    {
       title: "Front Cover",
       name: "frontCover",
       type: "images",
@@ -111,6 +117,12 @@ export default {
           of: [{ title: "cpgID", type: "string", name: "cpgId" }],
         },
       ],
+    },
+    {
+      name: "primaryAction",
+      title: "Primary Action",
+      type: "navigationItem",
+      description: "Navigates the Gift Card to Respective Landing Page If Any"
     },
   ],
 };

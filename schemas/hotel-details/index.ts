@@ -228,6 +228,14 @@ export const details: FeatureSchemaDefinition = {
         title: "[Details] Left Media Right Content With Equally Occupied Space",
         value: "details.card.left-media-right-content-with-equally-occupied-space",
       },
+      {
+        title: "[Details] Restaurant Contact Details",
+        value: "details.card.restaurant-contact-details",
+      },
+      {
+        title: "[Details] Image With Bottom Right Title",
+        value: "details.card.image-with-bottom-right-title",
+      }
     ],
 
     banner: [],
