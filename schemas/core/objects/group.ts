@@ -1,6 +1,7 @@
 import { IoApps, IoLayers as Icon, IoSettings } from "react-icons/io5";
 import { SchemaItem, VariantDefinition } from "../../types";
 import { hiddenField } from "../../shared-utils";
+import { poweredBy } from "../../constants";
 
 export const groupAlignmentVariant = [
   {
@@ -50,10 +51,14 @@ export default function group({
     title: "Group",
     type: "object",
     initialValue: { hasAllLink: false, allowAdditionalParameters: false },
+    options: {
+      collapsible: true,
+    },
     icon: Icon,
     groups: [
       { name: "main", title: "Main", icon: IoApps },
       { name: "configuration", title: "Configuration", icon: IoSettings },
+      { name: "analyticsConfig", title: "Analytics Config", icon: IoSettings },
     ],
     fields: [
       {
@@ -241,6 +246,84 @@ export default function group({
       //   },
       // ]),
       {
+        name: "filterConfig",
+        title: "Filter Config",
+        type: "array",
+        of: [
+          {
+            type: "object",
+            fields: [
+              {
+                name: "enableFilter",
+                title: "Enable Filter",
+                type: "boolean",
+              },
+              {
+                name: "filterPlaceholder",
+                title: "Filter Placeholder",
+                type: "string",
+              },
+              {
+                name: "filterTerm",
+                title: "Filter Term",
+                type: "string",
+              },
+              {
+                name: "filterType",
+                title: "Filter Type",
+                type: "string",
+                options: {
+                  list: [
+                    {
+                      title: "Dropdown",
+                      value: "dropdown",
+                    },
+                    {
+                      title: "Search Field",
+                      value: "searchField",
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        ],
+      },
+      {
+        name: "filterAlignment",
+        title: "Filter Alignment",
+        type: "string",
+        options: {
+          list: [
+            {
+              title: "Start",
+              value: "start",
+            },
+            {
+              title: "End",
+              value: "end",
+            },
+          ],
+        },
+      },
+      {
+        name: "tabsConfig",
+        title: "Tabs Config",
+        type: "object",
+        fields: [
+          {
+            name: "enableTabs",
+            title: "Enable Tabs",
+            type: "boolean",
+          },
+          {
+            name: "tabTerm",
+            title: "Tab Term",
+            type: "string",
+          },
+        ],
+      },
+      {
         name: "items",
         title: "Items",
         type: "array",
@@ -285,6 +368,25 @@ export default function group({
           },
         ],
         group: "main",
+      },
+      {
+        name: "analytics",
+        title: "Analytics",
+        type: "object",
+        fields: [
+          {
+            name: "clickEvent",
+            title: "Click Event",
+            type: "string",
+          },
+          {
+            name: "poweredBy",
+            title: "Powered By",
+            type: "string",
+            options: { list: poweredBy },
+          },
+        ],
+        group: "analyticsConfig",
       },
       // {
       //   name: "metadata",

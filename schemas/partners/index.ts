@@ -27,6 +27,10 @@ export const partners: FeatureSchemaDefinition = {
         title: "[Partners] Nudge With Two Links",
         value: "partners.nudge.nudge-with-two-links",
       },
+      {
+        title: "[Partners] Content Wrapped In Outlined Border",
+        value: "partners.nudge.content-wrapped-in-outlined-border",
+      }
     ],
   },
 };

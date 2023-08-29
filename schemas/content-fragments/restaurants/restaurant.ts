@@ -85,7 +85,7 @@ export default {
           type: "restaurantDetails",
         },
         {
-          name: "RestaurantHighlights",
+          name: "restaurantHighlights",
           title: "Restaurant Highlights",
           type: "reference",
           to: [{ type: "highlights" }],

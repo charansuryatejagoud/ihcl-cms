@@ -255,6 +255,30 @@ export const contentTypes = [
   {
     title: "Vouchers",
     value: "vouchers",
+  },
+  {
+    title: "Destinations Hotels",
+    value: "destinationsHotels",
+  },
+  {
+    title: "Destinations Highlights",
+    value: "destinationsHighlights",
+  },
+  {
+    title: "Destinations Dining",
+    value: "destinationsDining",
+  },
+  {
+    title: "Destinations Experiences",
+    value: "destinationsExperiences",
+  },
+  {
+    title: "Destinations Spa",
+    value: "destinationsSpa",
+  },
+  {
+    title: "Destinations Holidays",
+    value: "destinationsHolidays",
   }
 ];
 
@@ -730,4 +754,11 @@ export const featureVariants = [
     title: "Offers",
     value: "offers",
   }
-]
+];
+
+export const poweredBy = [
+  {
+    title: "Sanity",
+    value: "sanity",
+  },
+];
