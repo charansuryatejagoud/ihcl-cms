@@ -42,7 +42,6 @@ import taxonomyInfo from "../taxonomyInfo";
 import locationAndDirections from "./locationAndDirections/locationAndDirections";
 import locationInfo from "../locationInfo";
 import vouchers from "../vouchers";
-import seo from "../seo";
 
 export const hotels: FeatureSchemaDefinition = {
   schemas: [
@@ -88,7 +87,6 @@ export const hotels: FeatureSchemaDefinition = {
     taxonomyInfo,
     locationAndDirections,
     locationInfo,
-    vouchers,
-    seo
+    vouchers
   ],
 };
