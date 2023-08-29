@@ -186,12 +186,12 @@ export default function page(props: PageProps) {
         hidden: ({parent}) => !parent?.showBottomNavigation,
         of: props.items
       },
-      // {
-      //   title: "Seo",
-      //   name: "seo",
-      //   type: "seo",
-      //   group: "seo",
-      // },
+      {
+        title: "SEO",
+        name: "seo",
+        type: "seoConfig",
+        group: "seo",
+      },
       {
         title: "Is Live",
         name: "isLive",

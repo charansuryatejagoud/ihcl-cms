@@ -39,6 +39,11 @@ export default {
       type: "tabInfo",
     },
     {
+      name: "offers",
+      title: "Offers",
+      type: "tabInfo",
+    },
+    {
       name: "highlights",
       title: "Highlights",
       type: "reference",
@@ -49,24 +54,6 @@ export default {
       title: "About Destination",
       type: "reference",
       to: [{ type: "about" }],
-    },
-    {
-      name: "exclusiveOffersHotels",
-      title: "Exclusive Offers(Hotels)",
-      type: "reference",
-      to: [{ type: "exclusiveOffers" }],
-    },
-    {
-      name: "exclusiveOffersSpa",
-      title: "Exclusive Offers(Spa)",
-      type: "reference",
-      to: [{ type: "exclusiveOffers" }],
-    },
-    {
-      name: "exclusiveOffersDining",
-      title: "Exclusive Offers(Dining)",
-      type: "reference",
-      to: [{ type: "exclusiveOffers" }],
     },
     {
       name: "diningTab",
@@ -102,6 +89,17 @@ export default {
       name: "journeys",
       title: "Journeys",
       type: "tabInfo",
+    },
+    {
+      name: "participatingHotels",
+      title: "Participating Hotels",
+      type: "array",
+      of: [
+        {
+          type: "reference",
+          to: [{ type: "hotel" }],
+        },
+      ],
     },
   ],
 };
