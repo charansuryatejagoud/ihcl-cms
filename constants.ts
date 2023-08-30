@@ -3,7 +3,11 @@ export const availabilitySectionTitle = {
   desktopTitle: ["HOTEL INFORMATION"],
   mobileTitle: ["HOTEL", "INFORMATION"],
 };
-
+export const availabilitySectionTitleHighLights = {
+  _type: "title",
+  desktopTitle: ["HIGHLIGHTS"],
+  mobileTitle: ["HIGHLIGHTS"],
+};
 export const checkinandout = "CHECK IN – CHECK OUT";
 export const dining = "DINING";
 export const roomsandsuite = "ROOMS & SUITES";

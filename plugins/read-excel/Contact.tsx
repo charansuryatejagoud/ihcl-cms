@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import { Box, Card, Stack, Button, Inline, Flex } from "@sanity/ui";
+import { Button, Flex } from "@sanity/ui";
 import * as XLSX from "xlsx";
 import { customAlphabet } from "nanoid";
 import sanityClient from "@sanity/client";
@@ -102,7 +102,7 @@ function Contact() {
                 );
               });
           } else {
-            console.log("Creating...", contact.title);
+            console.log("Creating...", contact?.title);
             let doc = {
               _type: "contact",
               title: contact.title,

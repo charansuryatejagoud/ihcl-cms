@@ -1,22 +1,12 @@
-import {
-  Box,
-  Stack,
-  Flex,
-  Button,
-  Text,
-  Tab,
-  TabList,
-  Select,
-  Grid,
-} from "@sanity/ui";
-import React, { FormEvent, useState } from "react";
+import { Box, Stack, Text, Select, Grid } from "@sanity/ui";
+import React, { useState } from "react";
 import HotelInformation from "./HotelInformation";
 import Contact from "./Contact";
-import { retry } from "rxjs";
+import Highlights from "./Highlights";
 
 function ReadExcel() {
   const [selected, setSelected] = useState("Hotel Information");
-  const dropDown = ["Hotel Information", "Contact"];
+  const dropDown = ["Hotel Information", "Contact", "Highlights"];
 
   function handleChange(event: any): void {
     setSelected(event.target.value);
@@ -58,9 +48,11 @@ function ReadExcel() {
               <Text size={2} weight="bold">
                 {selected == "Hotel Information" && "Hotel Information"}
                 {selected == "Contact" && "Contact"}
+                {selected == "Highlights" && "Highlights"}
               </Text>
               {selected == "Hotel Information" && <HotelInformation />}
               {selected == "Contact" && <Contact />}
+              {selected == "Highlights" && <Highlights />}
             </Stack>
           </Box>
         </Grid>

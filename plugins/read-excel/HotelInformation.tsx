@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import { Box, Card, Stack, Button, Text, Flex } from "@sanity/ui";
+import { Button, Flex } from "@sanity/ui";
 import * as XLSX from "xlsx";
 import sanityClient from "@sanity/client";
 import { availabilitySectionTitle } from "../../constants";
