@@ -65,23 +65,23 @@ export const propertyCategories = [
 export const hotelTypes = [
   {
     title: "Hotels",
-    value: "hotels",
+    value: "Hotels",
   },
   {
     title: "Palaces",
-    value: "palaces",
+    value: "Palaces",
   },
   {
     title: "Safaris",
-    value: "safaris",
+    value: "Safaris",
   },
   {
     title: "Resorts",
-    value: "resorts",
+    value: "Resorts",
   },
   {
     title: "Residencies",
-    value: "residencies",
+    value: "Residencies",
   },
 ];
 
@@ -237,16 +237,8 @@ export const contentTypes = [
     value: "restaurantOverview",
   },
   {
-    title: "Restaurant Availability",
-    value: "restaurantAvailability",
-  },
-  {
-    title: "Restaurant Highlights",
-    value: "restaurantHighlights",
-  },
-  {
-    title: "Restaurant Exclusive Offers",
-    value: "restaurantExclusiveOffers",
+    title: "Restaurant Private Dining",
+    value: "retaurantPrivateDining",
   },
   {
     title: "Offers",
@@ -284,8 +276,8 @@ export const contentTypes = [
 
 export const subContentTypes = [
   {
-    title: "Treatments",
-    value: "treatments",
+    title: "Signature Treatments",
+    value: "signatureTreatments",
   },
   {
     title: "Indian Therapies",

@@ -12,6 +12,12 @@ export default {
       type: "string",
     },
     {
+      name: "aesthetic",
+      title: "Aesthetic",
+      type: "reference",
+      to: [{ type: "uiConfiguration" }],
+    },
+    {
       name: "largeVariant",
       title: "Large Variant",
       type: "string",
@@ -55,6 +61,11 @@ export default {
           ],
         },
       ],
+    },
+    {
+      name: "primaryAction",
+      title: "Primary Action",
+      type: "navigationItem",
     },
   ],
   preview: {

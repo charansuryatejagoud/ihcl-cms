@@ -4,9 +4,14 @@ export default {
   title: "Vouchers",
   fields: [
     {
+      name: "title",
+      title: "Title",
+      type: "string",
+    },
+    {
       name: "voucherName",
       title: "Voucher Name",
-      type: "string",
+      type: "title",
     },
     {
       name: "description",
@@ -21,8 +26,25 @@ export default {
     },
     {
       name: "promoCode",
-      title: "Promo Code",
+      title: "Promocode",
       type: "string",
+    },
+    {
+      name: "rateCode",
+      title: "Rate Code",
+      type: "string",
+    },
+    {
+      name: "banner",
+      title: "Banner",
+      type: "array",
+      of: [{ type: "mediaInput" }],
+    },
+    {
+      name: "thumbnail",
+      title: "Thumbnail",
+      type: "array",
+      of: [{ type: "mediaInput" }],
     },
     {
       name: "participatingHotels",
@@ -36,4 +58,15 @@ export default {
       ],
     },
   ],
+  preview: {
+    select: {
+      title: "voucherName",
+      code: "promoCode",
+    },
+    prepare({ title, code }) {
+      return {
+        title: `${title?.desktopTitle ?? code}`,
+      };
+    },
+  },
 };

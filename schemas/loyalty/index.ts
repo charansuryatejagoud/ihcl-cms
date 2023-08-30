@@ -157,5 +157,11 @@ export const loyalty: FeatureSchemaDefinition = {
         value: "loyalty.placeholders.price-breakup-details",
       },
     ],
+    switchCaseBlock: [
+      {
+        title: "[Loyalty] Membership Login",
+        value: "loyalty.switchCaseBlock.membership-login",
+      },
+    ],
   },
 };

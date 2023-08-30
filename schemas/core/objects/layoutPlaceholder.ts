@@ -31,6 +31,11 @@ export default function layoutPlaceholder({
       {
         title: "Placeholder Title",
         name: "title",
+        type: "title",
+      },
+      {
+        title: "Heading",
+        name: "heading",
         type: "string",
       },
       {
@@ -149,7 +154,7 @@ export default function layoutPlaceholder({
     ],
     preview: {
       select: {
-        title: "title",
+        title: "title.desktopTitle",
         subtitle: "subtitle",
         variant: "variant",
         hidden: "isHidden",
