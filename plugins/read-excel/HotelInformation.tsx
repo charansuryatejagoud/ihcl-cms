@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Box, Card, Stack, Button, Inline, Flex } from "@sanity/ui";
+import React, { useRef, useState } from "react";
+import { Box, Card, Stack, Button, Text, Flex } from "@sanity/ui";
 import * as XLSX from "xlsx";
 import sanityClient from "@sanity/client";
 import { availabilitySectionTitle } from "../../constants";
@@ -14,8 +14,9 @@ const client = sanityClient({
   useCdn: false,
 });
 
-function MyTool() {
+function HotelInformation() {
   const [hotelData, setHotelData] = useState([]);
+  const ref: any = useRef();
   const nanoid = customAlphabet("1234567890abcdef", 12);
   let checkinandout = {
     title: "CHECK IN – CHECK OUT",
@@ -132,9 +133,8 @@ function MyTool() {
         const workbook = XLSX.read(data, { type: "array" });
         const worksheet = workbook.Sheets[workbook.SheetNames[0]];
         const jsonData = XLSX.utils.sheet_to_json(worksheet);
-        // setExcelData(jsonData);
-        jsonData.map((data) => {
-          let hotelModifiedData = {};
+        jsonData.map((data: any) => {
+          let hotelModifiedData: any = {};
           hotelModifiedData.title = data?.title;
           hotelModifiedData.hotelInfo = [
             {
@@ -228,7 +228,7 @@ function MyTool() {
         )
         .then(async (res) => {
           if (res) {
-            console.log("update");
+            console.log("updating ", res._id);
             console.log("res?.hotelInfo", res?.hotelInfo);
             let hotelInfo = updateHotelInfo(res?.hotelInfo, hotel);
             await client
@@ -241,13 +241,13 @@ function MyTool() {
               .catch((err) => {
                 console.error(
                   "Oh no, the update failed: ",
-                  pageResponse.path,
+                  res._id,
                   "Error : ",
                   err.message,
                 );
               });
           } else {
-            console.log("new ");
+            console.log("Creating...", hotel.title);
             let doc = {
               _type: "availability",
               sectionTitle: { ...availabilitySectionTitle },
@@ -365,38 +365,38 @@ function MyTool() {
     });
   };
 
+  function resetFile(): void {
+    ref.current.value = "";
+    setHotelData([]);
+  }
+
   return (
-    <Box padding={4} paddingY={5}>
-      <Stack space={4}>
-        <Flex padding={4} align={"center"}>
-          <input type="file" onChange={handleFile}></input>
-          {hotelData?.length != 0 && (
-            <Button
-              fontSize={[2, 2, 3]}
-              mode="ghost"
-              padding={[3, 3, 4]}
-              text="Migrate excel data"
-              onClick={migrateExcelData}
-            />
-          )}
-        </Flex>
-      </Stack>
-    </Box>
+    <Flex
+      marginTop={4}
+      align={"center"}
+      style={{ justifyContent: "space-evenly" }}
+    >
+      <input type="file" onChange={handleFile} ref={ref} />
+      {hotelData?.length != 0 && (
+        <Button
+          fontSize={[2, 2, 3]}
+          mode="ghost"
+          padding={[3, 3, 4]}
+          text="RESET"
+          onClick={resetFile}
+        />
+      )}
+      {hotelData?.length != 0 && (
+        <Button
+          fontSize={[2, 2, 3]}
+          mode="ghost"
+          padding={[3, 3, 4]}
+          text="Migrate Excel Data"
+          onClick={migrateExcelData}
+        />
+      )}
+    </Flex>
   );
 }
 
-export default MyTool;
-
-/* 
- const file = e.target.files[0];
-    const data = await file.arrayBuffer();
-    const workbook = XLSX.read(data);
-    // debugger;
-    const worksheet = workbook.Sheets[workbook.SheetNames[0]];
-    const jsonData = XLSX.utils.sheet_to_json(worksheet, {
-      header: 1,
-      defval: "",
-    });
-    setExcelData(jsonData);
-    console.log(excelData, jsonData);
-*/
+export default HotelInformation;
