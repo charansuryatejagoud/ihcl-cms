@@ -51,9 +51,6 @@ export default function group({
     title: "Group",
     type: "object",
     initialValue: { hasAllLink: false, allowAdditionalParameters: false },
-    options: {
-      collapsible: true,
-    },
     icon: Icon,
     groups: [
       { name: "main", title: "Main", icon: IoApps },
@@ -245,6 +242,7 @@ export default function group({
       //     },
       //   },
       // ]),
+
       {
         name: "filterConfig",
         title: "Filter Config",

@@ -49,6 +49,7 @@ export const core: FeatureSchemaDefinition = {
     formGroup,
     actionTypes,
     questionAndAnswer
+    
   ],
   transformers: [reorderTransformer],
   headers: [],

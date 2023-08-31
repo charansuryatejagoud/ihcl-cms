@@ -190,6 +190,13 @@ export default {
       title: "Attractions",
       type: "reference",
       to: [{ type: "attractions" }],
+    },
+    {
+      name: "hotelDocuments",
+      title: "Hotel Documents",
+      description: "Documents supported are PDF and DOCX.",
+      type: "array",
+      of: [{ type: "fileDocument" }],
     }
   ],
-};
+}; 
