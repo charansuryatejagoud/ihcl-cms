@@ -3,10 +3,11 @@ import React, { useState } from "react";
 import HotelInformation from "./HotelInformation";
 import Contact from "./Contact";
 import Highlights from "./Highlights";
+import Address from "./Address";
 
 function ReadExcel() {
   const [selected, setSelected] = useState("Hotel Information");
-  const dropDown = ["Hotel Information", "Contact", "Highlights"];
+  const dropDown = ["Hotel Information", "Contact", "Highlights", "Address"];
 
   function handleChange(event: any): void {
     setSelected(event.target.value);
@@ -49,10 +50,12 @@ function ReadExcel() {
                 {selected == "Hotel Information" && "Hotel Information"}
                 {selected == "Contact" && "Contact"}
                 {selected == "Highlights" && "Highlights"}
+                {selected == "Address" && "Address"}
               </Text>
               {selected == "Hotel Information" && <HotelInformation />}
               {selected == "Contact" && <Contact />}
               {selected == "Highlights" && <Highlights />}
+              {selected == "Address" && <Address />}
             </Stack>
           </Box>
         </Grid>
