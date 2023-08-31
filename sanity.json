@@ -19,7 +19,8 @@
     "@sanity/color-input",
     "@sanity/scheduled-publishing",
     "table",
-    "bulk-upload"
+    "bulk-upload",
+    "read-excel"
   ],
   "env": {
     "development": {
@@ -51,7 +52,7 @@
           "default": true,
           "api": {
             "projectId": "ocl5w36p",
-            "dataset": "develop"
+            "dataset": "dev"
           }
         }
       ]
