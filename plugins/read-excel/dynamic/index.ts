@@ -20,7 +20,7 @@ const sectionTitle = {
 
 const diningRooms = (dinRoomsArr, response) =>
   dinRoomsArr.map((a, i) => {
-    const diningRoomObj = {
+    const diningRoomObj:any = {
       _key: nanoid(),
       _type: "diningInfo",
       basicInfo: {

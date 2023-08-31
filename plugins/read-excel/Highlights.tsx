@@ -1,18 +1,9 @@
 import React, { useRef, useState } from "react";
 import { Button, Flex } from "@sanity/ui";
 import * as XLSX from "xlsx";
-import sanityClient from "@sanity/client";
-import { availabilitySectionTitleHighLights } from "../../constants";
+import { availabilitySectionTitleHighLights } from "./constants";
 import { customAlphabet } from "nanoid";
-
-const client = sanityClient({
-  projectId: "ocl5w36p",
-  dataset: "dev",
-  apiVersion: "v2021-10-21",
-  token:
-    "skIlzYEV0AyovwCGKc4uvF7kNe3IdAp3zI4yjdqSBAB9gpj9r4GnsCmYh9o7iRe9htOJCKdLiJBLpjAFnedjFoLiKujs6mvSmwzkvr0t5obhmsh6Gb6s0MOnarAkqzRikYgBYNkZdEEc7v8BtvywajXtW9A4DmxeZ41aYnJbowf8XOPVt5vc",
-  useCdn: false,
-});
+import { client } from "./client";
 
 function Highlights() {
   const ref: any = useRef();
@@ -32,7 +23,7 @@ function Highlights() {
           let highLightsModifiedData: any = {};
           highLightsModifiedData.title = data?.hotelTitle;
           highLightsModifiedData.description = data?.HighlightsIntro;
-          highLightsModifiedData.Highlights = data?.Highlights?.split("\\n");
+          highLightsModifiedData.Highlights = data?.Highlights?.split("|");
           setHighLights((prevData) => [...prevData, highLightsModifiedData]);
         });
       };
@@ -40,10 +31,10 @@ function Highlights() {
     }
   };
 
-  const updateHighLightInfo = (data, highlight) => {
-    return highlight.Highlights?.map((highInfo, index) => {
+  const updateHighLightInfo = (data: any, highlight: any) => {
+    return highlight.Highlights?.map((highInfo: any, index: any) => {
       const infoHighData = data.highlightDetails
-        ?.map((infoData, dIndex) => {
+        ?.map((infoData: any, dIndex: any) => {
           if (infoData.basicInfo?.title !== highInfo) {
             return {
               _key: nanoid(),
@@ -51,7 +42,6 @@ function Highlights() {
                 title: highInfo,
                 _key: infoData?._key,
                 _type: "basicDetails",
-                media: infoData?.media,
               },
             };
           } else {
@@ -66,7 +56,6 @@ function Highlights() {
               title: infoHighData?.basicInfo.title,
               _key: infoHighData?.basicInfo._key ?? nanoid(),
               _type: infoHighData?.basicInfo._type ?? "basicDetails",
-              media: infoHighData?.basicInfo?.media,
             },
           }
         : {
@@ -89,10 +78,29 @@ function Highlights() {
           if (res) {
             console.log("updating ", res._id);
             let highlightInfo = updateHighLightInfo(res, highlight);
+            const imageMedia = highlightInfo
+              .map((a: any, i: any) => {
+                if (res.highlightDetails[i]?.basicInfo?.media) {
+                  const basicInfo = {
+                    ...a.basicInfo,
+                    media: res.highlightDetails[i]?.basicInfo?.media,
+                  };
+                  return {
+                    ...a,
+                    basicInfo,
+                  };
+                } else {
+                  return a;
+                }
+              })
+              .filter(Boolean);
+
+            console.log(imageMedia);
+
             await client
               .patch(res._id)
               .set({
-                highlightDetails: highlightInfo,
+                highlightDetails: imageMedia,
                 description:
                   res?.description == highlight?.description
                     ? res?.description
@@ -112,7 +120,7 @@ function Highlights() {
               });
           } else {
             console.log("Creating...", highlight?.title);
-            const newHighLights = highlight?.Highlights?.map((data) => {
+            const newHighLights = highlight?.Highlights?.map((data: any) => {
               return {
                 _key: nanoid(),
                 basicInfo: {
@@ -129,7 +137,6 @@ function Highlights() {
               title: highlight.title,
               description: highlight.description,
             };
-
             await client
               .create(doc)
               .then((res) => {
@@ -156,7 +163,7 @@ function Highlights() {
       align={"center"}
       style={{ justifyContent: "space-evenly" }}
     >
-      <input type="file" onChange={handleFile}></input>
+      <input type="file" onChange={handleFile} ref={ref}></input>
       {highlights?.length != 0 && (
         <Button
           fontSize={[2, 2, 3]}

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { Box, Stack, Button, Flex } from "@sanity/ui";
 import * as XLSX from "xlsx";
 import { finalObj } from "./dynamic";
@@ -6,7 +6,7 @@ import { Create, Update, fetchByType } from "./utils";
 
 function DiningInfo() {
   const [excelData, setExcelData] = useState(null);
-
+  const ref: any = useRef();
   const handleFile = async (e) => {
     e.preventDefault();
     if (e.target.files) {
@@ -64,24 +64,37 @@ function DiningInfo() {
       }
     }
   };
+  function resetFile(): void {
+    ref.current.value = "";
+    setExcelData([]);
+  }
 
   return (
-    <Box padding={4} paddingY={5}>
-      <Stack space={4}>
-        <Flex padding={4} align={"center"}>
-          <input type="file" onChange={handleFile}></input>
-          {excelData != null && (
-            <Button
-              fontSize={[2, 2, 3]}
-              mode="ghost"
-              padding={[3, 3, 4]}
-              text="Migrate excel data"
-              onClick={migrateExcelData}
-            />
-          )}
-        </Flex>
-      </Stack>
-    </Box>
+    <Flex
+      marginTop={4}
+      align={"center"}
+      style={{ justifyContent: "space-evenly" }}
+    >
+      <input type="file" onChange={handleFile} ref={ref}></input>
+      {excelData != null && (
+        <Button
+          fontSize={[2, 2, 3]}
+          mode="ghost"
+          padding={[3, 3, 4]}
+          text="RESET"
+          onClick={resetFile}
+        />
+      )}
+      {excelData != null && (
+        <Button
+          fontSize={[2, 2, 3]}
+          mode="ghost"
+          padding={[3, 3, 4]}
+          text="Migrate excel data"
+          onClick={migrateExcelData}
+        />
+      )}
+    </Flex>
   );
 }
 

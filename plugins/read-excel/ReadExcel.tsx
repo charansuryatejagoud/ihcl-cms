@@ -4,10 +4,17 @@ import HotelInformation from "./HotelInformation";
 import Contact from "./Contact";
 import Highlights from "./Highlights";
 import Address from "./Address";
+import DiningInfo from "./DiningInfo";
 
 function ReadExcel() {
   const [selected, setSelected] = useState("Hotel Information");
-  const dropDown = ["Hotel Information", "Contact", "Highlights", "Address"];
+  const dropDown = [
+    "Hotel Information",
+    "Contact",
+    "Highlights",
+    "Address",
+    "Dining",
+  ];
 
   function handleChange(event: any): void {
     setSelected(event.target.value);
@@ -17,7 +24,6 @@ function ReadExcel() {
     <Box padding={4} paddingY={5}>
       <Stack space={4}>
         <Grid columns={[1, 1, 2, 2]}>
-          {console.log("h")}
           <Stack space={4}>
             <Text size={4} weight="bold">
               Migrate excel data to content here
@@ -51,11 +57,15 @@ function ReadExcel() {
                 {selected == "Contact" && "Contact"}
                 {selected == "Highlights" && "Highlights"}
                 {selected == "Address" && "Address"}
+                {selected == "Dining" && "Dining"}
               </Text>
-              {selected == "Hotel Information" && <HotelInformation />}
+              {selected == "Hotel Information" && (
+                <HotelInformation type="production" />
+              )}
               {selected == "Contact" && <Contact />}
               {selected == "Highlights" && <Highlights />}
               {selected == "Address" && <Address />}
+              {selected == "Dining" && <DiningInfo/>}
             </Stack>
           </Box>
         </Grid>
