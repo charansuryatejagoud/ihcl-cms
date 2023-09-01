@@ -61,6 +61,7 @@ stages:
                     az aks get-credentials --resource-group Websites_Dev --name app-dev-aks
                   displayName: Login to ACR and AKS
                   enabled: true
+                  condition: succeeded()
                 - bash: |
                     helm upgrade --install ihcl-cms --set-string image.tag=$(short_hash) --namespace dev --create-namespace -f ./charts/ihcl-cms/values/values-dev.yaml --wait ./charts/ihcl-cms
                   displayName: Helm Upgrade
