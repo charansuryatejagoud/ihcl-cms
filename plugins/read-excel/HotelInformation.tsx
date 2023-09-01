@@ -1,162 +1,11 @@
 import React, { useRef, useState } from "react";
 import { Button, Flex } from "@sanity/ui";
 import * as XLSX from "xlsx";
-import {
-  CHECK_IN_CHECK_OUT,
-  CONTACT,
-  DEV_CHECK_IN_CHECK_OUT_IMAGE,
-  DEV_CONTACT_IMAGE,
-  DEV_DINING_IMAGE,
-  DEV_E_MAIL_IMAGE,
-  DEV_QUERIES_IMAGE,
-  DEV_ROOMS_SUITES_IMAGE,
-  DEV_TEMPERATURE_IMAGE,
-  DEV_WELLNESS_IMAGE,
-  DINING,
-  E_MAIL,
-  PHONE,
-  PROD_CHECK_IN_CHECK_OUT_IMAGE,
-  PROD_CONTACT_IMAGE,
-  PROD_DINING_IMAGE,
-  PROD_E_MAIL_IMAGE,
-  PROD_QUERIES_IMAGE,
-  PROD_ROOMS_SUITES_IMAGE,
-  PROD_TEMPERATURE_IMAGE,
-  PROD_WELLNESS_IMAGE,
-  ROOMS_SUITES,
-  TEMPERATURE,
-  WELLNESS,
-  availabilitySectionTitle,
-} from "./constants";
-import { customAlphabet } from "nanoid";
 import { client } from "./client";
-
+import { createOrReplaceDoc } from "./utils";
 function HotelInformation({ type }) {
   const [hotelData, setHotelData] = useState([]);
   const ref: any = useRef();
-  const nanoid = customAlphabet("1234567890abcdef", 12);
-  let checkInAndCheckOut = {
-    title: CHECK_IN_CHECK_OUT,
-    icon: {
-      _type: "image",
-      asset: {
-        _ref:
-          type == "dev"
-            ? DEV_CHECK_IN_CHECK_OUT_IMAGE
-            : PROD_CHECK_IN_CHECK_OUT_IMAGE,
-        _type: "reference",
-      },
-    },
-    list: [],
-    _type: "facilityInfo",
-    _key: nanoid(),
-  };
-  let dining = {
-    title: DINING,
-    icon: {
-      _type: "image",
-      asset: {
-        _ref: type == "dev" ? DEV_DINING_IMAGE : PROD_DINING_IMAGE,
-        _type: "reference",
-      },
-    },
-    list: [],
-    _type: "facilityInfo",
-    _key: nanoid(),
-  };
-  let roomsAndSuites = {
-    title: ROOMS_SUITES,
-    icon: {
-      _type: "image",
-      asset: {
-        _ref: type == "dev" ? DEV_ROOMS_SUITES_IMAGE : PROD_ROOMS_SUITES_IMAGE,
-        _type: "reference",
-      },
-    },
-    list: [],
-    _type: "facilityInfo",
-    _key: nanoid(),
-  };
-  let wellness = {
-    title: WELLNESS,
-    icon: {
-      _type: "image",
-      asset: {
-        _ref: type == "dev" ? DEV_WELLNESS_IMAGE : PROD_WELLNESS_IMAGE,
-        _type: "reference",
-      },
-    },
-    list: [],
-    _type: "facilityInfo",
-    _key: nanoid(),
-  };
-  let temperature = {
-    title: TEMPERATURE,
-    icon: {
-      _type: "image",
-      asset: {
-        _ref: type == "dev" ? DEV_TEMPERATURE_IMAGE : PROD_TEMPERATURE_IMAGE,
-        _type: "reference",
-      },
-    },
-    _type: "facilityInfo",
-    _key: nanoid(),
-  };
-  let essentials = {
-    title: "HOTEL ESSENTIALS",
-    list: [],
-    _type: "facilityInfo",
-    _key: nanoid(),
-  };
-  let contact = {
-    title: CONTACT,
-    icon: {
-      _type: "image",
-      asset: {
-        _ref: type == "dev" ? DEV_CONTACT_IMAGE : PROD_CONTACT_IMAGE,
-        _type: "reference",
-      },
-    },
-    list: [],
-    _type: "facilityInfo",
-    _key: nanoid(),
-  };
-  let phone = {
-    title: PHONE,
-    icon: {
-      _type: "image",
-      asset: {
-        _ref: type == "dev" ? DEV_QUERIES_IMAGE : PROD_QUERIES_IMAGE,
-        _type: "reference",
-      },
-    },
-    list: [],
-    _type: "facilityInfo",
-    _key: nanoid(),
-  };
-  let email = {
-    title: E_MAIL,
-    icon: {
-      _type: "image",
-      asset: {
-        _ref: type == "dev" ? DEV_E_MAIL_IMAGE : PROD_E_MAIL_IMAGE,
-        _type: "reference",
-      },
-    },
-    list: [],
-    _type: "facilityInfo",
-    _key: nanoid(),
-  };
-  let hotelInfo = [];
-  hotelInfo.push(checkInAndCheckOut);
-  hotelInfo.push(roomsAndSuites);
-  hotelInfo.push(dining);
-  hotelInfo.push(wellness);
-  hotelInfo.push(temperature);
-  hotelInfo.push(essentials);
-  hotelInfo.push(email);
-  hotelInfo.push(contact);
-  hotelInfo.push(phone);
   const handleFile = async (e) => {
     e.preventDefault();
     if (e.target.files) {
@@ -223,177 +72,18 @@ function HotelInformation({ type }) {
   };
   console.log(hotelData);
 
-  const updateHotelInfo = (data, hotel) => {
-    const finalData = hotel.hotelInfo?.map((info, index) => {
-      const infoData = data.filter((d) => d.title == info.title)[0];
-      let updateInfo = infoData
-        ? {
-            title: infoData?.title,
-            icon: { ...infoData?.icon },
-            _key: infoData?._key ?? nanoid(),
-            _type: infoData?._type ?? "facilityInfo",
-            list: info.data?.map((value) => {
-              return {
-                item: value,
-                _key: nanoid(),
-                _type: "bulletPoints",
-              };
-            }),
-          }
-        : {
-            title: info?.title,
-            _key: nanoid(),
-            _type: "facilityInfo",
-            list: info.data?.map((value) => {
-              return {
-                item: value.trim(),
-                _key: nanoid(),
-                _type: "bulletPoints",
-              };
-            }),
-          };
-      return updateInfo;
-    });
-    return finalData;
-  };
-
   const migrateExcelData = async () => {
     console.log("hotelData", hotelData);
-    hotelData.map(async (hotel, index) => {
+    hotelData.map(async (hotel) => {
       await client
         .fetch(
           `*[_type == "availability" && title == "${hotel.title}"][0]{...}`,
         )
         .then(async (res) => {
           if (res) {
-            console.log("updating ", res._id);
-            console.log("Update for hotel information is working", res._id, " - ",res.title);
-            // let hotelInfo = updateHotelInfo(res?.hotelInfo, hotel);
-            // await client
-            //   .patch(res._id)
-            //   .set({ hotelInfo: hotelInfo })
-            //   .commit()
-            //   .then((res) => {
-            //     console.log(res?.title + " Updated!");
-            //   })
-            //   .catch((err) => {
-            //     console.error(
-            //       "Oh no, the update failed: ",
-            //       res._id,
-            //       "Error : ",
-            //       err.message,
-            //     );
-            //   });
+            await updateDocument(hotel, res);
           } else {
-            console.log("Creating...", hotel.title);
-            let doc = {
-              _type: "availability",
-              sectionTitle: { ...availabilitySectionTitle },
-              hotelInfo: [...hotelInfo],
-              title: hotel.title,
-            };
-            doc.hotelInfo.map((info, infoIndex) => {
-              switch (info.title) {
-                case checkInAndCheckOut.title: {
-                  doc.hotelInfo[infoIndex].list =
-                    hotel?.checkInAndCheckOut?.map((data) => {
-                      return {
-                        _type: "bulletPoints",
-                        _key: nanoid(),
-                        item: data.trim().replace("\r\n", ""),
-                      };
-                    });
-                  break;
-                }
-                case dining.title: {
-                  doc.hotelInfo[infoIndex].list = hotel?.dining?.map((data) => {
-                    return {
-                      _type: "bulletPoints",
-                      _key: nanoid(),
-                      item: data.replace("\r\n", ""),
-                    };
-                  });
-                  break;
-                }
-                case roomsAndSuites.title: {
-                  doc.hotelInfo[infoIndex].list = hotel?.roomsAndSuites?.map(
-                    (data) => {
-                      return {
-                        _type: "bulletPoints",
-                        _key: nanoid(),
-                        item: data.replace("\r\n", ""),
-                      };
-                    },
-                  );
-                  break;
-                }
-                case wellness.title: {
-                  doc.hotelInfo[infoIndex].list = hotel?.wellness?.map(
-                    (data) => {
-                      return {
-                        _type: "bulletPoints",
-                        _key: nanoid(),
-                        item: data.replace("\r\n", ""),
-                      };
-                    },
-                  );
-                  break;
-                }
-                case essentials.title: {
-                  doc.hotelInfo[infoIndex].list = hotel?.essentials?.map(
-                    (data) => {
-                      return {
-                        _type: "bulletPoints",
-                        _key: nanoid(),
-                        item: data.replace("\r\n", ""),
-                      };
-                    },
-                  );
-                  break;
-                }
-                case contact.title: {
-                  doc.hotelInfo[infoIndex].list = hotel?.contact?.map(
-                    (data) => {
-                      return {
-                        _type: "bulletPoints",
-                        _key: nanoid(),
-                        item: data.replace("\r\n", ""),
-                      };
-                    },
-                  );
-                  break;
-                }
-                case phone.title: {
-                  doc.hotelInfo[infoIndex].list = hotel?.phone?.map((data) => {
-                    return {
-                      _type: "bulletPoints",
-                      _key: nanoid(),
-                      item: data.replace("\r\n", ""),
-                    };
-                  });
-                  break;
-                }
-                case email.title: {
-                  doc.hotelInfo[infoIndex].list = hotel?.email?.map((data) => {
-                    return {
-                      _type: "bulletPoints",
-                      _key: nanoid(),
-                      item: data.replace("\r\n", ""),
-                    };
-                  });
-                  break;
-                }
-              }
-            });
-            await client
-              .create(doc)
-              .then((res) => {
-                console.log("id = ", res._id);
-              })
-              .catch((err) => {
-                console.log("failed to update");
-                console.log("err ", err);
-              });
+            await createDocument(hotel, type);
           }
         })
         .catch((error) => console.log(error));
@@ -435,3 +125,78 @@ function HotelInformation({ type }) {
 }
 
 export default HotelInformation;
+
+async function updateDocument(data, document) {
+  console.log("updating ", document._id);
+  console.log(
+    "Update for hotel information is working",
+    document._id,
+    " - ",
+    document.title,
+  );
+  const { hotelInfo } = createOrReplaceDoc(data, "dev");
+  await client
+    .patch(document._id)
+    .set({ hotelInfo: hotelInfo })
+    .commit()
+    .then((res) => {
+      console.log(res?.title + " Updated!");
+    })
+    .catch((err) => {
+      console.error(
+        "Oh no, the update failed: ",
+        document._id,
+        "Error : ",
+        err.message,
+      );
+    });
+}
+
+async function createDocument(data, type) {
+  console.log("Creating...", data.title);
+  await client
+    .create(createOrReplaceDoc(data, type))
+    .then((res) => {
+      console.log("Created document, id = ", res._id);
+    })
+    .catch((err) => {
+      console.log("failed to create document, ", data?.title);
+      console.log("err ", err);
+    });
+}
+
+/*
+// let hotelInfo = updateHotelInfo(res?.hotelInfo, hotel);
+const updateHotelInfo = (data, hotel) => {
+  const finalData = hotel.hotelInfo?.map((info, index) => {
+    const infoData = data.filter((d) => d.title == info.title)[0];
+    let updateInfo = infoData
+      ? {
+          title: infoData?.title,
+          icon: { ...infoData?.icon },
+          _key: infoData?._key ?? nanoid(),
+          _type: infoData?._type ?? "facilityInfo",
+          list: info.data?.map((value) => {
+            return {
+              item: value,
+              _key: nanoid(),
+              _type: "bulletPoints",
+            };
+          }),
+        }
+      : {
+          title: info?.title,
+          _key: nanoid(),
+          _type: "facilityInfo",
+          list: info.data?.map((value) => {
+            return {
+              item: value.trim(),
+              _key: nanoid(),
+              _type: "bulletPoints",
+            };
+          }),
+        };
+    return updateInfo;
+  });
+  return finalData;
+};*/
