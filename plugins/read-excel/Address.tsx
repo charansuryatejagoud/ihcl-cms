@@ -19,7 +19,6 @@ function Address() {
         const worksheet = workbook.Sheets[workbook.SheetNames[0]];
         const jsonData = XLSX.utils.sheet_to_json(worksheet);
         jsonData.map((data: any) => {
-          console.log("==", data?.locationAndDirectionTitle?.split("|"));
           let locationInfo: any = {};
           locationInfo.hotelTitle = data?.hotelTitle;
           locationInfo.hotelIdentifier = data?.hotelIdentifier;
@@ -35,6 +34,7 @@ function Address() {
       reader.readAsArrayBuffer(e.target.files[0]);
     }
   };
+  console.log(locationsData);
 
   const updatedLocInfo = (data, location) => {
     let updatedDoc = {
@@ -105,9 +105,7 @@ function Address() {
         .then(async (res) => {
           if (res) {
             console.log("updating ", res._id);
-            console.log("res?.locationInfo", res?.locationAndDirectionsInfo);
             const { locationAndDirectionsInfo } = updatedLocInfo(res, location);
-            console.log("locationAndDirectionsInfo", locationAndDirectionsInfo);
             await client
               .patch(res._id)
               .set({ locationAndDirectionsInfo: locationAndDirectionsInfo })
@@ -132,7 +130,7 @@ function Address() {
                 console.log("id = ", res._id);
               })
               .catch((err) => {
-                console.log("failed to update");
+                console.log("failed to update", location.hotelTitle);
                 console.log("err ", err);
               });
           }

@@ -21,14 +21,15 @@ function Contact() {
         jsonData.map((data: any) => {
           let contactModifiedData: any = {};
           contactModifiedData.title = data?.title;
-          contactModifiedData.phone = data?.phonemobiles?.split("\\n");
-          contactModifiedData.email = data?.email?.split("\\n");
+          contactModifiedData.phone = data?.phonemobiles?.split("|");
+          contactModifiedData.email = data?.email?.split("|");
           setContactData((prevData) => [...prevData, contactModifiedData]);
         });
       };
       reader.readAsArrayBuffer(e.target.files[0]);
     }
   };
+  console.log(contactData);
 
   const updateContacts = (data, contactData) => {
     let { email, phone } = data;
@@ -136,7 +137,7 @@ function Contact() {
       align={"center"}
       style={{ justifyContent: "space-evenly" }}
     >
-      <input type="file" onChange={handleFile}></input>
+      <input type="file" onChange={handleFile} ref={ref}></input>
       {contactData?.length != 0 && (
         <Button
           fontSize={[2, 2, 3]}
