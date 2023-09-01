@@ -1,10 +1,11 @@
 import { Box, Stack, Text, Select, Grid } from "@sanity/ui";
 import React, { useState } from "react";
-import HotelInformation from "./hotel-information/HotelInformation";
+import HotelInformation from "./HotelInformation";
 import Contact from "./Contact";
 import Highlights from "./Highlights";
 import Address from "./Address";
 import DiningInfo from "./DiningInfo";
+import TaxonomyInfo from "./TaxonomyInfo";
 
 function ReadExcel() {
   const [selected, setSelected] = useState("Hotel Information");
@@ -14,6 +15,7 @@ function ReadExcel() {
     "Highlights",
     "Address",
     "Dining",
+    "TaxonomyInfo",
   ];
 
   function handleChange(event: any): void {
@@ -58,6 +60,7 @@ function ReadExcel() {
                 {selected == "Highlights" && "Highlights"}
                 {selected == "Address" && "Address"}
                 {selected == "Dining" && "Dining"}
+                {selected == "TaxonomyInfo" && "TaxonomyInfo"}
               </Text>
               {selected == "Hotel Information" && (
                 <HotelInformation type="production" />
@@ -65,7 +68,8 @@ function ReadExcel() {
               {selected == "Contact" && <Contact />}
               {selected == "Highlights" && <Highlights />}
               {selected == "Address" && <Address />}
-              {selected == "Dining" && <DiningInfo/>}
+              {selected == "Dining" && <DiningInfo />}
+              {selected == "TaxonomyInfo" && <TaxonomyInfo />}
             </Stack>
           </Box>
         </Grid>

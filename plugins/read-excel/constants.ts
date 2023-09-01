@@ -63,3 +63,4 @@ export const TYPE_BULLET_POINTS = "bulletPoints";
 export const TYPE_FACILITY_INFO = "facilityInfo";
 export const TYPE_IMAGE = "image";
 export const TYPE_REFERENCE = "reference";
+export const TYPE_TAXONOMY_INFO = "taxonomyInfo";
