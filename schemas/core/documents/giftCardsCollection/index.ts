@@ -7,15 +7,15 @@ export default {
   },
   fields: [
     {
-      title: "SKU",
-      type: "string",
-      name: "sku",
-    },
-    {
       title: "Category",
       name: "category",
       type: "reference",
       to: [{ type: "giftCardGroup" }],
+    },
+    {
+      title: "SKU",
+      type: "string",
+      name: "sku",
     },
     {
       title: "Name",

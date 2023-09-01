@@ -34,14 +34,19 @@ export const details: FeatureSchemaDefinition = {
           "details.group.group-with-card-left-media-right-content-aspect-ratio-2:4",
       },
       {
-        title: "[Details] Group With Carousel- Card right Media Left Content",
+        title: "[Details] Group With Carousel- Card Right Media Left Content",
         value:
           "details.group.group-with-carousel-card-right-media-left-content-aspect-ratio-2:4",
       },
       {
-        title: "[Details] Group With Card right Media Left Content",
+        title: "[Details] Group With Card Right Media Left Content",
         value:
           "details.group.group-with-card-right-media-left-content-aspect-ratio-2:4",
+      },
+      {
+        title: "[Details] Group With Card Right Media Left Content(Hotel)",
+        value:
+          "details.group.group-with-card-right-media-left-content-aspect-ratio-2:4-hotel",
       },
       {
         title: "[Details] Group with Full Width Media",
@@ -83,6 +88,18 @@ export const details: FeatureSchemaDefinition = {
         title: "[Details] Media Image Carousel",
         value: "details.group.media-image-carousel",
       },
+      {
+        title: "[Details] Group With Specifications",
+        value: "details.group.group-with-specifications",
+      },
+      {
+        title: "[Details] Group With Bullet Points",
+        value: "details.group.group-with-bullet-points",
+      },
+      {
+        title: "[details] Group With 4-Row 3-Column Grid",
+        value: "details.group.group-with-four-row-three-column-grid",
+      },
     ],
     card: [
       {
@@ -108,7 +125,8 @@ export const details: FeatureSchemaDefinition = {
       },
       {
         title: "[Details] Card With Right Media Left Content",
-        value: "details.card.card-with-right-media-left-content-aspect-ratio-2:4",
+        value:
+          "details.card.card-with-right-media-left-content-aspect-ratio-2:4",
       },
       {
         title: "[Details] Card with Left Align Content",

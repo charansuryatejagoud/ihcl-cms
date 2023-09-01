@@ -21,6 +21,7 @@ import reorderTransformer from "./transformers/reorder.transformer";
 import { cellSchema, rowSchema } from "./objects/dataGrid";
 import formGroup from "./objects/form-group";
 import navigationItem from "./objects/navigationItem";
+import actionTypes from "../content-fragments/actionTypes";
 
 export const core: FeatureSchemaDefinition = {
   schemas: [
@@ -46,6 +47,7 @@ export const core: FeatureSchemaDefinition = {
     cellSchema,
     rowSchema,
     formGroup,
+    actionTypes
   ],
   transformers: [reorderTransformer],
   headers: [],
@@ -55,6 +57,7 @@ export const core: FeatureSchemaDefinition = {
     },
   ],
   pageItems: [
+    { type: "layoutPlaceholder" },
     { type: "group" },
     { type: "section" },
     {

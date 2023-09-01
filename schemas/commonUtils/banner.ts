@@ -1,5 +1,6 @@
 import { GiVerticalBanner } from "react-icons/gi";
 import { IoApps, IoSettings } from "react-icons/io5";
+import { contentTypes } from "../constants";
 
 const AlignmentVariant = [
   {
@@ -15,8 +16,7 @@ const AlignmentVariant = [
     value: "no-preceding-hyphen-for-mobile"
   }
 ];
-
-const variants = [
+export const bannerVariants = [
   {
     title: "Hero Banner",
     value: "hero-banner",
@@ -32,7 +32,11 @@ const variants = [
   {
     title: "Page Not Found",
     value: "page-not-found"
-  }
+  },
+  {
+    title: "Hero Banner (Layout Placeholder)",
+    value: "hero-banner-layout-placeholder",
+  },
 ];
 
 export default {
@@ -104,7 +108,7 @@ export default {
       name: "variant",
       type: "string",
       options: {
-        list: variants,
+        list: bannerVariants,
       },
       group: "main",
     },
@@ -113,7 +117,16 @@ export default {
       name: "largeVariant",
       type: "string",
       options: {
-        list: variants,
+        list: bannerVariants,
+      },
+      group: "main",
+    },
+    {
+      name: "contentType",
+      title: "Content Type",
+      type: "string",
+      options: {
+        list: contentTypes,
       },
       group: "main",
     },
