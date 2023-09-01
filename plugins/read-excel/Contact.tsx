@@ -137,7 +137,7 @@ function Contact() {
       align={"center"}
       style={{ justifyContent: "space-evenly" }}
     >
-      <input type="file" onChange={handleFile}></input>
+      <input type="file" onChange={handleFile} ref={ref}></input>
       {contactData?.length != 0 && (
         <Button
           fontSize={[2, 2, 3]}
