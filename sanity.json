@@ -17,6 +17,7 @@
     "@sanity/vision",
     "media",
     "@sanity/color-input",
+    "@sanity/code-input",
     "@sanity/scheduled-publishing",
     "table",
     "bulk-upload"

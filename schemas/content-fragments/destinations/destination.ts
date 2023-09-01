@@ -29,6 +29,11 @@ export default {
       type: "string",
     },
     {
+      name: "country",
+      title: "Country",
+      type: "string",
+    },
+    {
       name: "bannerTitle",
       title: "Banner Title",
       type: "title",
@@ -100,6 +105,6 @@ export default {
           to: [{ type: "hotel" }],
         },
       ],
-    },
+    }
   ],
 };
