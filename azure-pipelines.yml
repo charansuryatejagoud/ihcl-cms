@@ -57,8 +57,9 @@ stages:
 
                 - bash: |
                     az login --service-principal --username $(Service_Principle_Name) --password $(Service_Priniciple_Password) --tenant $(Tenant_ID)
-                    az acr build --image dev/ihcl-cms:$(short_hash) --registry ihclwebsites --file Dockerfile .
                     az aks get-credentials --resource-group Websites_Dev --name app-dev-aks
+                    az acr build --image dev/ihcl-cms:$(short_hash) --registry ihclwebsites --file Dockerfile .
+                    
                   displayName: Login to ACR and AKS
                   enabled: true
                   
