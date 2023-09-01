@@ -220,7 +220,7 @@ function extractTaxonomyData(data: any) {
   data?.epicureFlag && (finalData.epicureFlag = data?.epicureFlag?.trim());
   data?.updatedDate && (finalData.updatedDate = data?.updatedDate);
   data?.createdDate && (finalData.createdDate = data?.createdDate);
-  data?.activeInd && (finalData.activeInd = data?.activeInd);
+  String(data?.activeInd) && (finalData.activeInd = data?.activeInd);
   data?.synxisHotelId &&
     (finalData.synxisHotelId = String(data?.synxisHotelId)?.trim());
   data?.rating && (finalData.rating = data?.rating);
