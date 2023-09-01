@@ -7,7 +7,7 @@ RUN apk add --no-cache libc6-compat
 WORKDIR /app
 COPY . .
 
-ENV NODE_OPTIONS --max_old_space_size=4096
+ENV NODE_OPTIONS --max_old_space_size=2048
 RUN yarn install
 
 # Configure the dataset before build, defaults to "staging"
