@@ -35,9 +35,9 @@ import {
   availabilitySectionTitle,
 } from "./constants";
 
-async function Update({ id, diningRooms }) {
+async function Update({ id, data }) {
   try {
-    const updateRes = await client.patch(id).set(diningRooms).commit();
+    const updateRes = await client.patch(id).set(data).commit();
     return updateRes;
   } catch (err) {
     console.error(err);
