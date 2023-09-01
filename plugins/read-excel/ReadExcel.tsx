@@ -1,6 +1,6 @@
 import { Box, Stack, Text, Select, Grid } from "@sanity/ui";
 import React, { useState } from "react";
-import HotelInformation from "./HotelInformation";
+import HotelInformation from "./hotel-information/HotelInformation";
 import Contact from "./Contact";
 import Highlights from "./Highlights";
 import Address from "./Address";
