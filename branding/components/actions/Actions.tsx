@@ -277,11 +277,86 @@ export default function QueryBuilder() {
       useCdn: false,
     });
 
+
     data && data.map(async doc => {
 
       console.log("DOCUMENT:", doc);
 
-      
+      const hotel = doc.Hotel
+
+      if(doc.Detail != '') {
+        const detail = doc.Detail;
+
+        if(doc.Page == 'offers-and-promotions') {
+          //offerPackages Document
+          // Update SEO for Offers
+  
+        } else if(doc.Page == 'restaurants') {
+          //Restaurant Document
+          // Update SEO for Restaurant
+          // {
+          //   seoDescription,
+          //   seoKeywords,
+          //   pageTitle
+          // }
+  
+        }
+      } else {
+        //Hotel Document
+
+        switch(doc.Page) {
+          case '':
+          // Update SEO for Overview
+          // hotelOverview-> {
+          //   pageTitle, seoKeywords, description,             
+          // }
+
+          break;
+          case 'rooms-and-suites':
+          // Update SEO for Rooms Data
+  
+          break;
+          case 'fitness-centre':
+          // Update SEO for Wellness
+  
+          break;
+          case 'j-wellness-circle':
+          // Update SEO for Wellness
+  
+          break;
+          case 'image-gallery': 
+          // Update SEO for Gallery
+  
+          break;
+          case 'restaurants': 
+          // Update SEO for Restaurants
+          
+          break;
+          case 'offers-and-promotions': 
+          // Update SEO for Offers
+          
+          break;
+          case 'local-things-to-do':
+          // Update SEO for Attractions
+  
+          break;
+          case 'meetings-and-events':
+          // Update SEO for Events
+  
+          break;
+          case 'experiences':
+          // Update SEO for Experiences
+  
+          break;
+          case 'niu-and-nau':
+          // Niu
+  
+          break;
+          default:
+  
+          break;
+        }
+      }
 
       // await client
       //     .patch('user.cf26c3dd-7c63-4fcc-b936-6069b05213a7')
