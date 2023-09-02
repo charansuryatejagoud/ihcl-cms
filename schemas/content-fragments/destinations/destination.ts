@@ -19,6 +19,12 @@ export default {
       type: "string",
     },
     {
+      name: "destinationNavigation",
+      title: "Destination Navigation",
+      type: "reference",
+      to: [{ type: "destinationNavigation" }],
+    },
+    {
       name: "description",
       title: "Description",
       type: "string",
@@ -94,6 +100,12 @@ export default {
       name: "journeys",
       title: "Journeys",
       type: "tabInfo",
+    },
+    {
+      name: "seoInfo",
+      title: "SEO Info",
+      type: "array",
+      of: [{type: "destinationSeoInfo"}],
     },
     {
       name: "participatingHotels",

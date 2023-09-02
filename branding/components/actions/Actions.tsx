@@ -1,4 +1,4 @@
-import { Badge, Flex, Card, Container, TabList, Tab, TabPanel, Heading, TextArea, Button, Grid, Code } from "@sanity/ui";
+import { Badge, Flex, Card, Container, TabList, Tab, TabPanel, Heading, TextArea, Button, Grid, Code, TextInput } from "@sanity/ui";
 import React, { useState } from "react";
 import sanityClient from "@sanity/client";
 import { queries } from "./Queries";
@@ -8,6 +8,9 @@ import {
   IoEyeOff as EyeClosedIcon,
   IoEye as EyeOpenIcon,
 } from "react-icons/io5";
+import Papa from 'papaparse';
+import { any } from "prop-types";
+// import ReactJson from 'react-json-view';
 
 export default function QueryBuilder() {
 
@@ -17,6 +20,26 @@ export default function QueryBuilder() {
   const [docOutput, setDocOutput] = useState({})
   const [dataMigrationOutput, setDataMigrationOutput] = useState({})
   const [dataToHotel, setDataToHotel] = useState('')
+
+  const [csvData, setCsvData] = useState([]);
+  // const [jsonData, setJsonData] = useState([]);
+
+  const handleFileUpload = (e) => {
+    const file = e.target.files[0];
+
+    console.log("FILE", file);
+    Papa.parse(file, {
+      header: true, // Treat the first row as headers
+      dynamicTyping: true, // Automatically convert numbers and booleans
+      complete: (result) => {
+        setCsvData(result.data);
+        // setJsonData(JSON.stringify(result.data, null, 2));
+      },
+      error: (error) => {
+        console.error('CSV parsing error:', error);
+      },
+    });
+  };
 
   const _queryHead = (type, id, subQuery) => {
     let _q = `_type == '${type}'`;
@@ -124,8 +147,6 @@ export default function QueryBuilder() {
         "skIlzYEV0AyovwCGKc4uvF7kNe3IdAp3zI4yjdqSBAB9gpj9r4GnsCmYh9o7iRe9htOJCKdLiJBLpjAFnedjFoLiKujs6mvSmwzkvr0t5obhmsh6Gb6s0MOnarAkqzRikYgBYNkZdEEc7v8BtvywajXtW9A4DmxeZ41aYnJbowf8XOPVt5vc",
       useCdn: false,
     });
-
-
 
     let activities = {
       "_key": "9828306806a9",
@@ -245,6 +266,45 @@ export default function QueryBuilder() {
     importFacilities(data)
   }
 
+  const updateSeoData = (data) => {
+
+    const client = sanityClient({
+      projectId: "ocl5w36p",
+      dataset: "production",
+      apiVersion: "v2021-10-21",
+      token:
+        "skIlzYEV0AyovwCGKc4uvF7kNe3IdAp3zI4yjdqSBAB9gpj9r4GnsCmYh9o7iRe9htOJCKdLiJBLpjAFnedjFoLiKujs6mvSmwzkvr0t5obhmsh6Gb6s0MOnarAkqzRikYgBYNkZdEEc7v8BtvywajXtW9A4DmxeZ41aYnJbowf8XOPVt5vc",
+      useCdn: false,
+    });
+
+    data && data.map(async doc => {
+
+      console.log("DOCUMENT:", doc);
+
+      
+
+      // await client
+      //     .patch('user.cf26c3dd-7c63-4fcc-b936-6069b05213a7')
+      //     .set({
+      //       calculator: {
+      //         type: 'reference',
+      //       },
+      //     })
+      //     .commit();
+      // client.create(doc).then((event) => {
+
+      //   // get the _id from created document
+      //   // fetch the hotel by identifeir given from the data, say rambagh-palace-jaipur
+      //   // update the facility ref to the given hotel
+  
+      // })
+      //   .catch((err) => {
+      //     console.log("failed to update");
+      //     console.log("err ", err);
+      //   });
+    });
+  }
+
   return (
     // <Container width={0}>
     <Card padding={4}>
@@ -266,6 +326,24 @@ export default function QueryBuilder() {
           onClick={() => setTabId('preview')}
           selected={tabId === 'preview'}
         // space={2}
+        />
+        <Tab
+          aria-controls="seo-panel"
+          icon={AppIcon}
+          id="seo-tab"
+          label="SEO Update"
+          onClick={() => setTabId('seo')}
+          selected={tabId === 'seo'}
+        //space={2}
+        />
+        <Tab
+          aria-controls="script-panel"
+          icon={AppIcon}
+          id="script-tab"
+          label="Data Load"
+          onClick={() => setTabId('script')}
+          selected={tabId === 'script'}
+        //space={2}
         />
       </TabList>
 
@@ -338,7 +416,50 @@ export default function QueryBuilder() {
             /></Grid>
         </Card>
 
-        <br />
+        {/* <Grid columns={1} padding={4}>
+          <Code language="json" size={1} style={{ whiteSpace: 'break-spaces' }}>
+            
+          </Code>
+        </Grid> */}
+      </TabPanel>
+      <TabPanel
+        aria-labelledby="seo-tab"
+        hidden={tabId !== 'seo'}
+        id="seo-panel"
+        paddingTop={4}
+      >
+        <Card marginTop={2} radius={2}>
+          <Heading>Add/Update SEO Information</Heading>
+          <br />
+
+          <input type="file" accept=".csv" onChange={handleFileUpload} />
+
+          <br />
+
+          {/* <ReactJson src={csvData} /> */}
+
+          <Grid columns={2} gap={[1, 1, 2, 3]} paddingTop={4}>
+            <Button
+              fontSize={2}
+              padding={[3, 3, 4]}
+              text="Process Data Update"
+              tone="positive"
+              onClick={() => updateSeoData(csvData)}
+            /></Grid>
+        </Card>
+
+        {/* <Grid columns={1} padding={4}>
+          <Code language="json" size={1} style={{ whiteSpace: 'break-spaces' }}>
+            
+          </Code>
+        </Grid> */}
+      </TabPanel>
+      <TabPanel
+        aria-labelledby="script-tab"
+        hidden={tabId !== 'script'}
+        id="script-panel"
+        paddingTop={4}
+      >
         <Card marginTop={2} radius={2}>
           <Heading>Document create and tag to Hotel</Heading>
           <br />
@@ -361,12 +482,6 @@ export default function QueryBuilder() {
               onClick={() => tagDataToHotel(dataToHotel)}
             /></Grid>
         </Card>
-
-        {/* <Grid columns={1} padding={4}>
-          <Code language="json" size={1} style={{ whiteSpace: 'break-spaces' }}>
-            
-          </Code>
-        </Grid> */}
       </TabPanel>
     </Card>
     // </Container>
