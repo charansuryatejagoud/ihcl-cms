@@ -99,6 +99,7 @@ stages:
                 - bash: |
                     helm upgrade --install ihcl-cms --set-string image.tag=$(short_hash) --namespace pt --create-namespace -f ./charts/ihcl-cms/values/values-pt.yaml --wait ./charts/ihcl-cms
                   displayName: Helm Upgrade 
+                  condition: succeeded()
   - stage: e2e_deploy
     dependsOn:
     - Build
@@ -130,5 +131,6 @@ stages:
                   enabled: true
                 - bash: |
                     helm upgrade --install ihcl-cms --set-string image.tag=$(short_hash) --namespace e2e --create-namespace -f ./charts/ihcl-cms/values/values-e2e.yaml --wait ./charts/ihcl-cms
-                  displayName: Helm Upgrade                   
+                  displayName: Helm Upgrade
+                  condition: succeeded()                   
                   
