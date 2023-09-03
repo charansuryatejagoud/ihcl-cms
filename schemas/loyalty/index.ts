@@ -103,6 +103,10 @@ export const loyalty: FeatureSchemaDefinition = {
         title: "[Loyalty] Reverse Chambers Details",
         value: "loyalty.card.reverse-chambers-details",
       },
+      {
+        title: "[Loyalty] Epicure Membership Login",
+        value: "loyalty.card.epicure-membership-login",
+      },
     ],
     nudge: [
       {
@@ -153,5 +157,11 @@ export const loyalty: FeatureSchemaDefinition = {
         value: "loyalty.placeholders.price-breakup-details",
       },
     ],
+    switchCaseBlock: [
+      {
+        title: "[Loyalty] Epicure User Login",
+        value: "loyalty.switchCaseBlock.loyalty-user-login",
+      }
+    ]
   },
 };
