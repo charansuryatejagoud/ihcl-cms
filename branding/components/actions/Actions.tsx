@@ -14,7 +14,6 @@ import {
   TextInput,
 } from "@sanity/ui";
 import React, { useState } from "react";
-import sanityClient from "@sanity/client";
 import { queries } from "./Queries";
 import { facilitySectionTitle, mobileFacilities } from "./facilities/facilityData";
 import axios from 'axios';
@@ -74,15 +73,6 @@ export default function QueryBuilder() {
 
   const syncData = (type, id, subQuery, body) => {
     const query = _query(type, id, subQuery, body);
-    // const client = sanityClient({
-    //   projectId: "ocl5w36p",
-    //   dataset: "production",
-    //   apiVersion: "v2021-10-21",
-    //   token:
-    //     "skIlzYEV0AyovwCGKc4uvF7kNe3IdAp3zI4yjdqSBAB9gpj9r4GnsCmYh9o7iRe9htOJCKdLiJBLpjAFnedjFoLiKujs6mvSmwzkvr0t5obhmsh6Gb6s0MOnarAkqzRikYgBYNkZdEEc7v8BtvywajXtW9A4DmxeZ41aYnJbowf8XOPVt5vc",
-    //   useCdn: false,
-    // });
-
     console.log(query);
     client
       .fetch(query)
@@ -95,16 +85,6 @@ export default function QueryBuilder() {
   };
 
   const syncFullData = async (type) => {
-
-    const client = sanityClient({
-      projectId: "ocl5w36p",
-      dataset: "production",
-      apiVersion: "v2021-10-21",
-      token:
-        "skIlzYEV0AyovwCGKc4uvF7kNe3IdAp3zI4yjdqSBAB9gpj9r4GnsCmYh9o7iRe9htOJCKdLiJBLpjAFnedjFoLiKujs6mvSmwzkvr0t5obhmsh6Gb6s0MOnarAkqzRikYgBYNkZdEEc7v8BtvywajXtW9A4DmxeZ41aYnJbowf8XOPVt5vc",
-      useCdn: false,
-    });
-    
     switch(type) {
       case queries.hotel.type:
       const sQ = queries.hotel.body
@@ -113,16 +93,15 @@ export default function QueryBuilder() {
         && identifier != null
       ]${sQ}`
 
-      let result = [] 
-
       await client
       .fetch(q)
-      .then(async (response) => {
+      .then((response) => {
         // setDocOutput(response)
+        let result = []
         console.log(response);
 
         // write to search
-        response && await response.map(async doc => {
+        response && response.forEach(async doc => {
           try {
             const response = await axios.post(`${APIS.ENV_HOST}${APIS.SEARCH_DATA_SYNC}`, doc);
             console.log('Data successfully posted:', response.data);
@@ -140,13 +119,13 @@ export default function QueryBuilder() {
             // Handle the error here, e.g., show an error message to the user.
           }
         })
+
+        setDocOutput(result);
+        console.log('RES', result);
       })
       .catch((error) => {
         console.log("error", error);
       });
-
-      setDocOutput(result);
-      console.log('RES', result);
 
       break;
       default:
@@ -199,134 +178,6 @@ export default function QueryBuilder() {
       .catch((error) => {
         console.log("error", error);
       });
-  };
-
-  const importFacilities = (data) => {
-    const client = sanityClient({
-      projectId: "ocl5w36p",
-      dataset: "production",
-      apiVersion: "v2021-10-21",
-      token:
-        "skIlzYEV0AyovwCGKc4uvF7kNe3IdAp3zI4yjdqSBAB9gpj9r4GnsCmYh9o7iRe9htOJCKdLiJBLpjAFnedjFoLiKujs6mvSmwzkvr0t5obhmsh6Gb6s0MOnarAkqzRikYgBYNkZdEEc7v8BtvywajXtW9A4DmxeZ41aYnJbowf8XOPVt5vc",
-      useCdn: false,
-    });
-
-    let activities = {
-      _key: "9828306806a9",
-      _type: "facilityInfo",
-      icon: {
-        _type: "image",
-        asset: {
-          _ref: "image-e1dfe1eab75e0d243fc61d3ef5f7f529d2caf11d-24x24-png",
-          _type: "reference",
-        },
-      },
-      list: [],
-      title: "ACTIVITIES",
-    };
-
-    let hotel = {
-      _key: "89fa4a1ad653",
-      _type: "facilityInfo",
-      icon: {
-        _type: "image",
-        asset: {
-          _ref: "image-793569b75deb4a1528d9daab230fe757a39233a0-24x19-svg",
-          _type: "reference",
-        },
-      },
-      list: [],
-      title: "HOTEL",
-    };
-
-    let dining = {
-      _key: "e27548f412e5",
-      _type: "facilityInfo",
-      icon: {
-        _type: "image",
-        asset: {
-          _ref: "image-d4acf9ceb7f45f293af90b8c84c04507a7d59735-24x24-svg",
-          _type: "reference",
-        },
-      },
-      list: [],
-      title: "DINING",
-    };
-
-    let wellness = {
-      _key: "0f4b0a65fd36",
-      _type: "facilityInfo",
-      icon: {
-        _type: "image",
-        asset: {
-          _ref: "image-b50bc380118700d4f6dd9b4431552cb1b0096922-29x18-svg",
-          _type: "reference",
-        },
-      },
-      list: [],
-      title: "WELLNESS",
-    };
-
-    let rooms = {
-      _key: "4e6034a2c1fc",
-      _type: "facilityInfo",
-      icon: {
-        _type: "image",
-        asset: {
-          _ref: "image-009d678d4c5300dfa0638840b070e0722845762b-24x19-svg",
-          _type: "reference",
-        },
-      },
-      list: [],
-      title: "ROOMS",
-    };
-
-    let locations = {
-      _key: "7cf20edcc1f4",
-      _type: "facilityInfo",
-      icon: {
-        _type: "image",
-        asset: {
-          _ref: "image-986127afac51704f9281afb8a7d61502944d6863-17x24-svg",
-          _type: "reference",
-        },
-      },
-      list: [],
-      title: "LOCATION",
-    };
-
-    let facilities = [];
-
-    facilities.push(activities);
-    facilities.push(hotel);
-    facilities.push(dining);
-    facilities.push(rooms);
-    facilities.push(wellness);
-    facilities.push(locations);
-
-    let doc = {
-      _type: "facilities",
-      facilityDetails: facilities,
-      mobileFacilities: mobileFacilities,
-      sectionTitle: facilitySectionTitle,
-      title: "Taj Fateh Prakash Palace, Udaipur",
-    };
-
-    client
-      .create(doc)
-      .then((event) => {
-        // get the _id from created document
-        // fetch the hotel by identifeir given from the data, say rambagh-palace-jaipur
-        // update the facility ref to the given hotel
-      })
-      .catch((err) => {
-        console.log("failed to update");
-        console.log("err ", err);
-      });
-  };
-
-  const tagDataToHotel = (data) => {
-    importFacilities(data);
   };
 
   async function processSeo({
@@ -735,7 +586,7 @@ export default function QueryBuilder() {
               padding={[3, 3, 4]}
               text="Process Data Update"
               tone="positive"
-              onClick={() => tagDataToHotel(dataToHotel)}
+              // onClick={() => tagDataToHotel(dataToHotel)}
             />
           </Grid>
         </Card>
