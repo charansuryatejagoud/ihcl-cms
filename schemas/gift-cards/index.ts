@@ -55,6 +55,10 @@ export const giftCards: FeatureSchemaDefinition = {
         title: "[Gift Card] 2x3 Grid",
         value: "giftCards.group.2-by-3-grid",
       },
+      {
+        title: "[Gift Card] personalization",
+        value: "giftCards.group.personalization"
+      }
     ],
 
     tabs: [

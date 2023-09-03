@@ -231,6 +231,14 @@ export const details: FeatureSchemaDefinition = {
       {
         title: "[Details] Restaurant Contact Details",
         value: "details.card.restaurant-contact-details",
+      },
+      {
+        title: "[Details] Title with CTA Action",
+        value: "details.card.title-with-cta-action",
+      },
+      {
+        title: "[Details] Contact Details with Single CTA",
+        value: "details.card.contact-details-with-single-cta",
       }
     ],
 
@@ -264,6 +272,12 @@ export const details: FeatureSchemaDefinition = {
       {
         title: "[Details] Hotels Locations on Map",
         value: "details.placeholders.hotels-locations-on-map"
+      }
+    ],
+    nudge: [
+      {
+        title: "[Details] Right Aligned Actions",
+        value: "details.nudge.right-aligned-actions"
       }
     ]
   },
