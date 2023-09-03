@@ -422,6 +422,33 @@ export const hotelNavigation = [
   }
 ];
 
+export const destinationNavigation = [
+  {
+    title: "Hotels",
+    value: "hotels",
+  },
+  {
+    title: "Restaurants",
+    value: "restaurants",
+  },
+  {
+    title: "Highlights",
+    value: "highlights",
+  },
+  {
+    title: "Experiences",
+    value: "experiences",
+  },
+  {
+    title: "SPAs",
+    value: "spa",
+  },
+  {
+    title: "Holidays",
+    value: "holidays_packages",
+  }
+];
+
 export const brandNames = [
   {
     title: "Taj",

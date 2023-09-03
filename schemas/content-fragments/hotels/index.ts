@@ -43,6 +43,7 @@ import locationAndDirections from "./locationAndDirections/locationAndDirections
 import locationInfo from "../locationInfo";
 import vouchers from "../vouchers";
 import seoConfig from "../seoConfig";
+import destinationNavigation from "../destinations/destinationNavigation/destinationNavigation";
 
 export const hotels: FeatureSchemaDefinition = {
   schemas: [

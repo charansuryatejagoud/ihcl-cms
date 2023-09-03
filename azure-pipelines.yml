@@ -57,13 +57,16 @@ stages:
 
                 - bash: |
                     az login --service-principal --username $(Service_Principle_Name) --password $(Service_Priniciple_Password) --tenant $(Tenant_ID)
-                    az acr build --image dev/ihcl-cms:$(short_hash) --registry ihclwebsites --file Dockerfile .
                     az aks get-credentials --resource-group Websites_Dev --name app-dev-aks
+                    az acr build --image dev/ihcl-cms:$(short_hash) --registry ihclwebsites --file Dockerfile .
+                    
                   displayName: Login to ACR and AKS
                   enabled: true
+                  
                 - bash: |
                     helm upgrade --install ihcl-cms --set-string image.tag=$(short_hash) --namespace dev --create-namespace -f ./charts/ihcl-cms/values/values-dev.yaml --wait ./charts/ihcl-cms
                   displayName: Helm Upgrade
+                  condition: succeeded()
   - stage: pt_deploy
     dependsOn:
     - Build
@@ -96,6 +99,7 @@ stages:
                 - bash: |
                     helm upgrade --install ihcl-cms --set-string image.tag=$(short_hash) --namespace pt --create-namespace -f ./charts/ihcl-cms/values/values-pt.yaml --wait ./charts/ihcl-cms
                   displayName: Helm Upgrade 
+                  condition: succeeded()
   - stage: e2e_deploy
     dependsOn:
     - Build
@@ -127,5 +131,6 @@ stages:
                   enabled: true
                 - bash: |
                     helm upgrade --install ihcl-cms --set-string image.tag=$(short_hash) --namespace e2e --create-namespace -f ./charts/ihcl-cms/values/values-e2e.yaml --wait ./charts/ihcl-cms
-                  displayName: Helm Upgrade                   
+                  displayName: Helm Upgrade
+                  condition: succeeded()                   
                   

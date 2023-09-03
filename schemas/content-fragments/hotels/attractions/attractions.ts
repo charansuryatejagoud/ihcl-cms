@@ -61,6 +61,12 @@ export default {
       name: "seoKeywords",
       title: "SEO Keywords",
       type: "string",
+    },
+    {
+      name: "seoDescription",
+      title: "SEO Description",
+      type: "text",
+      rows: 5,
     }
   ],
 };

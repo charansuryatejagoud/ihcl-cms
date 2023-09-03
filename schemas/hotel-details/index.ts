@@ -63,6 +63,10 @@ export const details: FeatureSchemaDefinition = {
         value: "details.group.navigation-tabs",
       },
       {
+        title: "Hotel Details Navigation Tabs",
+        value: "details.hotels.group.navigation-tabs",
+      },
+      {
         title: "[Details] Tab Dropdown Selector",
         value: "details.group.tab-dropdown-selector",
       },
