@@ -441,7 +441,7 @@ export const destinationNavigation = [
   },
   {
     title: "SPAs",
-    value: "spas",
+    value: "spa",
   },
   {
     title: "Holidays",
