@@ -57,3 +57,10 @@ export const PROD_E_MAIL_IMAGE =
   "image-ae3e4add01c653d900d6d75bbe086b616dfaa0ee-17x14-svg";
 export const PROD_TEMPERATURE_IMAGE =
   "image-14685d1aa557f1d105c3ed1f6fa2f725d6c2d2e1-36x69-png";
+
+export const TYPE_AVAILABILITY = "availability";
+export const TYPE_BULLET_POINTS = "bulletPoints";
+export const TYPE_FACILITY_INFO = "facilityInfo";
+export const TYPE_IMAGE = "image";
+export const TYPE_REFERENCE = "reference";
+export const TYPE_TAXONOMY_INFO = "taxonomyInfo";
