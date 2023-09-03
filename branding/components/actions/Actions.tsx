@@ -80,7 +80,7 @@ export default function QueryBuilder() {
       });
   }
 
-  const syncFullData = (type) => {
+  const syncFullData = async (type) => {
 
     const client = sanityClient({
       projectId: "ocl5w36p",
@@ -101,14 +101,14 @@ export default function QueryBuilder() {
 
       let result = [] 
 
-      client
+      await client
       .fetch(q)
-      .then((response) => {
+      .then(async (response) => {
         // setDocOutput(response)
         console.log(response);
 
         // write to search
-        response && response.map(async doc => {
+        response && await response.map(async doc => {
           try {
             const response = await axios.post(`${APIS.ENV_HOST}${APIS.SEARCH_DATA_SYNC}`, doc);
             console.log('Data successfully posted:', response.data);

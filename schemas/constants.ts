@@ -445,7 +445,7 @@ export const destinationNavigation = [
   },
   {
     title: "Holidays",
-    value: "holidays",
+    value: "holidays_packages",
   }
 ];
 
