@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "package.json",
-  "author": "Charan surya <charandarling44@gmail.com>",
+  "author": "Venkata Raghu <venkataraghu@techouts.com>",
   "license": "UNLICENSED",
   "scripts": {
     "login": "sanity login",
