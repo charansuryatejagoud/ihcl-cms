@@ -16,10 +16,8 @@ import {
 import React, { useState } from "react";
 import sanityClient from "@sanity/client";
 import { queries } from "./Queries";
-import {
-  facilitySectionTitle,
-  mobileFacilities,
-} from "./facilities/facilityData";
+import { facilitySectionTitle, mobileFacilities } from "./facilities/facilityData";
+import axios from 'axios';
 import {
   IoApps as AppIcon,
   IoEyeOff as EyeClosedIcon,
@@ -27,6 +25,7 @@ import {
 } from "react-icons/io5";
 import Papa from "papaparse";
 import { any } from "prop-types";
+import { APIS } from "./apiConstants";
 // import ReactJson from 'react-json-view';
 import { client, updateSeo, getOriginalDoc } from "./apiConstants";
 
@@ -94,6 +93,66 @@ export default function QueryBuilder() {
         console.log("error", error);
       });
   };
+
+  const syncFullData = async (type) => {
+
+    const client = sanityClient({
+      projectId: "ocl5w36p",
+      dataset: "production",
+      apiVersion: "v2021-10-21",
+      token:
+        "skIlzYEV0AyovwCGKc4uvF7kNe3IdAp3zI4yjdqSBAB9gpj9r4GnsCmYh9o7iRe9htOJCKdLiJBLpjAFnedjFoLiKujs6mvSmwzkvr0t5obhmsh6Gb6s0MOnarAkqzRikYgBYNkZdEEc7v8BtvywajXtW9A4DmxeZ41aYnJbowf8XOPVt5vc",
+      useCdn: false,
+    });
+    
+    switch(type) {
+      case queries.hotel.type:
+      const sQ = queries.hotel.body
+      const q = `*[
+        _type == "hotel" 
+        && identifier != null
+      ]${sQ}`
+
+      let result = [] 
+
+      await client
+      .fetch(q)
+      .then(async (response) => {
+        // setDocOutput(response)
+        console.log(response);
+
+        // write to search
+        response && await response.map(async doc => {
+          try {
+            const response = await axios.post(`${APIS.ENV_HOST}${APIS.SEARCH_DATA_SYNC}`, doc);
+            console.log('Data successfully posted:', response.data);
+            result.push({
+              "hotel": doc.identifier,
+              "message": response?.data?.message
+            })
+            // You can handle the response or perform any additional actions here.
+          } catch (error) {
+            console.error('Error posting data:', error.message);
+            result.push({
+              "hotel": doc.identifier,
+              "message": error.message
+            })
+            // Handle the error here, e.g., show an error message to the user.
+          }
+        })
+      })
+      .catch((error) => {
+        console.log("error", error);
+      });
+
+      setDocOutput(result);
+      console.log('RES', result);
+
+      break;
+      default:
+      break;
+    }
+  }
 
   const dataMigration = (query) => {
     console.log(query);
@@ -574,6 +633,7 @@ export default function QueryBuilder() {
               fontSize={2}
               padding={[3, 3, 4]}
               text="Full Data Sync"
+              onClick={() => syncFullData('hotel')}
               tone="positive"
             />
           </Grid>
