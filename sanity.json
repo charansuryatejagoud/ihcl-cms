@@ -20,7 +20,8 @@
     "@sanity/code-input",
     "@sanity/scheduled-publishing",
     "table",
-    "bulk-upload"
+    "bulk-upload",
+    "read-excel"
   ],
   "env": {
     "development": {
