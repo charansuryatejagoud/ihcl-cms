@@ -32,21 +32,51 @@ const getIcon = (title: string) => {
     asset: {},
   };
 
-  if (title === "ALL DAY DINING") {
+  if (title === "ALL DAY") {
     icon = {
       _key: "b9a018260461",
       _type: "image",
       asset: {
-        _ref: "image-7890b23be2941307e4417630c791cc0302459ac2-21x21-png",
+        _ref: "image-c48628fbb4b039bdaba898224d9065dce969deff-63x63-png",
+        _type: "reference",
+      },
+    };
+  }
+  if (title === "BREAKFAST") {
+    icon = {
+      _key: "b9a018260461383",
+      _type: "image",
+      asset: {
+        _ref: "image-c48628fbb4b039bdaba898224d9065dce969deff-63x63-png",
+        _type: "reference",
+      },
+    };
+  }
+  if (title === "LUNCH") {
+    icon = {
+      _key: "b9a01826046193837",
+      _type: "image",
+      asset: {
+        _ref: "image-c48628fbb4b039bdaba898224d9065dce969deff-63x63-png",
+        _type: "reference",
+      },
+    };
+  }
+  if (title === "DINNER") {
+    icon = {
+      _key: "b9a018260461151526",
+      _type: "image",
+      asset: {
+        _ref: "image-c48628fbb4b039bdaba898224d9065dce969deff-63x63-png",
         _type: "reference",
       },
     };
   } else if (title === "CUISINE") {
     icon = {
-      _key: "4738329ebd16",
+      _key: "4738329ebd1698399",
       _type: "image",
       asset: {
-        _ref: "image-4e4e084da535cbe01ebed20bfaeb0d022042ffd4-24x24-png",
+        _ref: "image-fbac762be575b15ec474d0c1be9b91a1865d79b1-54x54-png",
         _type: "reference",
       },
     };
@@ -55,7 +85,7 @@ const getIcon = (title: string) => {
       _key: "70994442d444",
       _type: "image",
       asset: {
-        _ref: "image-a8f8671fe8f92635e7e7c0aa35ec4ae451deffe0-26x19-png",
+        _ref: "image-4e9079181f3689b540f613b3d30e6b32450661c3-78x57-png",
         _type: "reference",
       },
     };
@@ -64,7 +94,25 @@ const getIcon = (title: string) => {
       _key: "b5c8c47c0600",
       _type: "image",
       asset: {
-        _ref: "image-598c14538c94aef4ae4f7c4a2c26c071c338c4ed-14x20-png",
+        _ref: "image-ae7518f85f4fe59d50b66859a7091a28699b8d8c-48x69-png",
+        _type: "reference",
+      },
+    };
+  } else if (title === "EMAIL") {
+    icon = {
+      _key: "mhi0b5c8c47c0600",
+      _type: "image",
+      asset: {
+        _ref: "image-1596fd9490f39ee21269523336e72a8616921be3-51x41-png",
+        _type: "reference",
+      },
+    };
+  } else if (title === "TELEPHONE") {
+    icon = {
+      _key: "b5c8c47c06003838",
+      _type: "image",
+      asset: {
+        _ref: "image-b6b11f85e285579398b4644c8fdd5b61738ab811-57x57-png",
         _type: "reference",
       },
     };
@@ -81,7 +129,7 @@ const restaurantAvailability = ({ title, content }) => {
     list: [
       {
         _key: "0",
-        _type: "object",
+        _type: "bulletPoints",
         item: content,
         mobileIcon: {},
       },
@@ -235,7 +283,7 @@ const _hotelDetailDiningPage = (
         if (availabilityTitle && availabilityContent) {
           hotelDetailDiningPage.restaurantAvailability.push(
             restaurantAvailability({
-              title: availabilityTitle,
+              title: availabilityTitle.toUpperCase(),
               content: availabilityContent,
             }),
           );
