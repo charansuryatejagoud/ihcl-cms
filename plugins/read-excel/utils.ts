@@ -248,6 +248,14 @@ function extractTaxonomyData(data: any) {
   return finalData;
 }
 
+function ConvertJSONValuesToString(obj: object) {
+  if (typeof obj !== "object") return obj;
+
+  return JSON.parse(
+    JSON.stringify(obj, (k, v) => (v && typeof v === "object" ? v : "" + v)),
+  );
+}
+
 export {
   Update,
   Create,
@@ -255,4 +263,5 @@ export {
   createOrReplaceDoc,
   generateFacilityInfo,
   extractTaxonomyData,
+  ConvertJSONValuesToString,
 };
