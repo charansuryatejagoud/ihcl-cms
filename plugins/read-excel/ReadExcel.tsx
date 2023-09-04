@@ -6,6 +6,8 @@ import Highlights from "./Highlights";
 import Address from "./Address";
 import DiningInfo from "./DiningInfo";
 import TaxonomyInfo from "./TaxonomyInfo";
+import Restaurants from "./Restaurants";
+import Destinations from "./Destinations";
 
 function ReadExcel() {
   const [selected, setSelected] = useState("Hotel Information");
@@ -14,8 +16,10 @@ function ReadExcel() {
     "Contact",
     "Highlights",
     "Address",
+    "Restaurants",
     "Dining",
     "TaxonomyInfo",
+    "Destinations",
   ];
 
   function handleChange(event: any): void {
@@ -55,12 +59,7 @@ function ReadExcel() {
           >
             <Stack padding={3}>
               <Text size={2} weight="bold">
-                {selected == "Hotel Information" && "Hotel Information"}
-                {selected == "Contact" && "Contact"}
-                {selected == "Highlights" && "Highlights"}
-                {selected == "Address" && "Address"}
-                {selected == "Dining" && "Dining"}
-                {selected == "TaxonomyInfo" && "TaxonomyInfo"}
+                {selected}
               </Text>
               {selected == "Hotel Information" && (
                 <HotelInformation type="production" />
@@ -70,6 +69,8 @@ function ReadExcel() {
               {selected == "Address" && <Address />}
               {selected == "Dining" && <DiningInfo />}
               {selected == "TaxonomyInfo" && <TaxonomyInfo />}
+              {selected == "Restaurants" && <Restaurants />}
+              {selected == "Destinations" && <Destinations />}
             </Stack>
           </Box>
         </Grid>
