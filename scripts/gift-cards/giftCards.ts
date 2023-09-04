@@ -45,7 +45,7 @@ async function run() {
       PASSWORD: password,
     }),
     body: JSON.stringify({
-      categoryId: "122",
+      categoryId: "437",
     }),
   });
   const res = await response.json();

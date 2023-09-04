@@ -46,6 +46,12 @@ export default {
       type:"color"
     },
     {
+      name: "aesthetic",
+      title: "Aesthetic",
+      type: "reference",
+      to: [{ type: "uiConfiguration" }],
+    },
+    {
       name: "metadata",
       type: "metadata",
       title: "Metadata",

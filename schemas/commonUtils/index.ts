@@ -312,6 +312,10 @@ export const ihclcore: FeatureSchemaDefinition = {
         title: "City Card",
         value: "ihcl.core.card.city-card",
       },
+      {
+        title: " Bottom Navigation With Two Buttons",
+        value: "ihcl.core.card.bottom-navigation-with-two-buttons",
+      },
     ],
     banner: [
       {
@@ -358,6 +362,10 @@ export const ihclcore: FeatureSchemaDefinition = {
         title: "Alert Without Close Cta",
         value: "ihcl.core.alert-without-close-cta",
       },
+      {
+        title:"Cookies System Modal",
+        value:"ihcl.core.cookies-system-modal"
+      }
     ],
     tabs: [
       {
@@ -386,6 +394,6 @@ export const ihclcore: FeatureSchemaDefinition = {
         title:"Subscription",
         value:"common-utils.forms.subscription"
       }
-    ]
+    ],
   },
 };
