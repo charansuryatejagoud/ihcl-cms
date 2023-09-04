@@ -20,6 +20,11 @@ export default {
       of: [{ type: "mediaInput" }],
     },
     {
+      name: "thumbnailDescription",
+      title: "Thumbnail Description",
+      type: "string",
+    },
+    {
       name: "gallery",
       title: "Gallery",
       type: "array",
@@ -72,6 +77,12 @@ export default {
           title: "Restaurant Availability",
           type: "array",
           of: [{ type: "facilityInfo" }],
+        },
+        {
+          name: "restaurantInformation",
+          title: "Restaurant Information",
+          type: "reference",
+          to: [{ type: "availability" }],
         },
         {
           name: "restaurantContact",
