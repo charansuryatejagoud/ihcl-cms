@@ -23,6 +23,11 @@ export default {
       name: "name",
     },
     {
+      name: "heroSubtitle",
+      title: "Hero Subtitle",
+      type: "string",
+    },
+    {
       title: "Description",
       type: "string",
       name: "description",
@@ -38,6 +43,19 @@ export default {
       type: "color",
       description:
         "Field Used for Gift Card Preview Title and Description Font Colors",
+    },
+    {
+      name: "eGiftCardSubtitle",
+      title: "E-Gift Card Subtitle",
+      type: "string",
+      description: "Will Display Below The E-Gift Card Title"
+    },
+    {
+      title: "Front Cover",
+      name: "frontCover",
+      type: "images",
+      hidden: ({ parent }) =>
+        parent?.category?._ref !== "06a84b5f-4ef6-42f7-a253-39ed5830d3d6",
     },
     {
       title: "Banner Image",

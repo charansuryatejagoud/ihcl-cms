@@ -64,6 +64,16 @@ export default {
       ]
     },
     {
+      name:"dropDownItems",
+      title:"Drop Down Items",
+      type:"array",
+      of:[
+        {
+        type:"dropDownItems"
+        }
+      ]
+    },
+    {
       title: "Login List",
       name: "loginList",
       type: "array",
