@@ -64,3 +64,11 @@ export const TYPE_FACILITY_INFO = "facilityInfo";
 export const TYPE_IMAGE = "image";
 export const TYPE_REFERENCE = "reference";
 export const TYPE_TAXONOMY_INFO = "taxonomyInfo";
+export const TYPE_DESTINATION = "destination"
+export const TYPE_TITLE = "title"
+export const TYPE_TAB_INFO = "tabInfo"
+export const TYPE_MEDIA_INFO = "mediaInput"
+export const TYPE_IMAGE_ASSET = "imageAsset"
+
+export const KEY_DESKTOP_TITLE = "desktopTitle"
+export const KEY_MOBILE_TITLE = "mobileTitle"

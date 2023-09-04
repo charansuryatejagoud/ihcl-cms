@@ -77,7 +77,7 @@ function HotelInformation({ type }) {
     hotelData.map(async (hotel) => {
       await client
         .fetch(
-          `*[_type == "availability" && title == "${hotel.title}"][0]{...}`,
+          `*[_type == "availability" && title == "${hotel?.title?.trim()}"][0]{...}`,
         )
         .then(async (res) => {
           if (res) {
@@ -134,7 +134,8 @@ async function updateDocument(data, document) {
     " - ",
     document.title,
   );
-  const { hotelInfo } = createOrReplaceDoc(data, "dev");
+  const { hotelInfo } = createOrReplaceDoc(data, "dev", document);
+  console.log("hotelInfo", hotelInfo);
   await client
     .patch(document._id)
     .set({ hotelInfo: hotelInfo })
