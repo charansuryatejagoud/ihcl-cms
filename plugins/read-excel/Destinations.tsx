@@ -94,7 +94,6 @@ function Destinations() {
 
 async function updateDocument(data: any, document: any) {
   const updatedDoc = getDestinationsDoc({ data: data, doc: document });
-  console.log("update doc", updatedDoc, document);
   await client
     .patch(document._id)
     .set({ ...updatedDoc })

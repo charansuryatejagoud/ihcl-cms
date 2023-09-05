@@ -8,9 +8,10 @@ import DiningInfo from "./DiningInfo";
 import TaxonomyInfo from "./TaxonomyInfo";
 import Restaurants from "./Restaurants";
 import Destinations from "./Destinations";
+import ExclusiveOffers from "./ExclusiveOffers";
 
 function ReadExcel() {
-  const [selected, setSelected] = useState("Hotel Information");
+  const [selected, setSelected] = useState("Address");
   const dropDown = [
     "Hotel Information",
     "Contact",
@@ -20,6 +21,7 @@ function ReadExcel() {
     "Dining",
     "TaxonomyInfo",
     "Destinations",
+    "Exclusive Offers",
   ];
 
   function handleChange(event: any): void {
@@ -42,6 +44,7 @@ function ReadExcel() {
               fontSize={[2, 2, 3, 4]}
               padding={[3, 3, 4]}
               space={[3, 3, 4]}
+              value={selected}
               onChange={handleChange}
             >
               {dropDown.map((option, index) => {
@@ -71,6 +74,7 @@ function ReadExcel() {
               {selected == "TaxonomyInfo" && <TaxonomyInfo />}
               {selected == "Restaurants" && <Restaurants />}
               {selected == "Destinations" && <Destinations />}
+              {selected == "Exclusive Offers" && <ExclusiveOffers />}
             </Stack>
           </Box>
         </Grid>
