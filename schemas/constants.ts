@@ -233,6 +233,10 @@ export const contentTypes = [
     value: "hotelAddress",
   },
   {
+    title: "All Restaurants",
+    value: "allRestaurants",
+  },
+  {
     title: "Restaurant Overview",
     value: "restaurantOverview",
   },
@@ -247,6 +251,10 @@ export const contentTypes = [
   {
     title: "Vouchers",
     value: "vouchers",
+  },
+  {
+    title: "All Destinations",
+    value: "allDestinations",
   },
   {
     title: "Destinations Hotels",
@@ -752,5 +760,20 @@ export const poweredBy = [
   {
     title: "Sanity",
     value: "sanity",
+  },
+];
+
+export const destinationCategory = [
+  {
+    title: "City",
+    value: "city",
+  },
+  {
+    title: "State",
+    value: "state",
+  },
+  {
+    title: "Country",
+    value: "country",
   },
 ];

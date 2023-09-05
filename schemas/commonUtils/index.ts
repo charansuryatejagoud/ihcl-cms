@@ -238,7 +238,11 @@ export const ihclcore: FeatureSchemaDefinition = {
       {
         title: "Center Moving Carousel With BackGround Gradient",
         value: "common-utils.group.center-moving-carousel-with-background-gradient",
-      }
+      },
+      {
+        title: "Images With Single Column Grid(Layout Placeholder)",
+        value: "ihcl.core.group.images-with-single-column-grid-layout-placeholder",
+      },
     ],
     card: [
       {

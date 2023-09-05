@@ -47,6 +47,12 @@ export default {
       name: "venueModalDetails",
       type: "modalDetails",
     },
+    {
+      title: "Participating Hotels",
+      name: "participatingHotels",
+      type: "reference",
+      to: [{ type: "hotel" }],
+    },
   ],
   preview: {
     select: {
