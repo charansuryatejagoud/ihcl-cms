@@ -332,7 +332,7 @@ export default function QueryBuilder() {
                 itemKey: "hotelWellness",
               });
               break;
-            case "image-gallery":
+            case "gallery":
               // Update SEO for Gallery - hotelGallery
               await processSeo({
                 _type: "gallery",
@@ -368,7 +368,7 @@ export default function QueryBuilder() {
                 itemKey: "hotelOffers",
               });
               break;
-            case "local-things-to-do":
+            case "attractions":
               // Update SEO for Attractions - hotelAttractions
               await processSeo({
                 _type: "attractions",
@@ -380,7 +380,7 @@ export default function QueryBuilder() {
                 itemKey: "hotelAttractions",
               });
               break;
-            case "meetings-and-events":
+            case "meetings":
               // Update SEO for Events - hotelEventVenues
               await processSeo({
                 _type: "venues",
