@@ -14,6 +14,11 @@ export default {
       type: "string",
     },
     {
+      name: "brandName",
+      title: "Brand Name",
+      type: "string",
+    },
+    {
       name: "thumbnail",
       title: "Thumbnail",
       type: "array",
