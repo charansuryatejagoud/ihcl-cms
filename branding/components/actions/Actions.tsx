@@ -47,6 +47,7 @@ export default function QueryBuilder() {
       header: true, // Treat the first row as headers
       dynamicTyping: true, // Automatically convert numbers and booleans
       complete: (result) => {
+        console.log(result);
         setCsvData(result.data);
         // setJsonData(JSON.stringify(result.data, null, 2));
       },

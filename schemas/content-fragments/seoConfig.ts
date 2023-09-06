@@ -97,11 +97,8 @@ export default {
       {
         name: "keywords",
         title: "Keywords",
-        type: "array",
-        of: [{ type: "string" }],
-        options: {
-          layout: "tags",
-        },
+        type: "text",
+        rows: 5
       },
     ],
     preview: {
