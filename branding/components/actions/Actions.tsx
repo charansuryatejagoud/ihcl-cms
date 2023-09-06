@@ -191,7 +191,7 @@ export default function QueryBuilder() {
     itemKey,
   }: any) {
     // if (parentID == "taj-exotica-goa") {
-    console.log("#", _type, id);
+    console.log("#", _type, id, parentID);
     const documents: any = await fetchDocument({
       _type: id != null ? _type : parentType,
       identifier: id != null ? id : parentID,
@@ -237,7 +237,7 @@ export default function QueryBuilder() {
   }
 
   async function fetchDocument({ _type, identifier, key }: any) {
-    const query = key
+   const query = key
       ? `*[_type == "${_type}" && identifier == "${identifier}"]{...,"${key}":${key}->{...}}`
       : `*[_type == "${_type}" && identifier == "${identifier}"]{...}`;
     const response = await client
@@ -253,7 +253,7 @@ export default function QueryBuilder() {
   }
 
   const updateSeoData = (data) => {
-    data &&
+   data &&
       data.map(async (doc) => {
         const hotel = doc.Hotel;
         if (doc.Detail) {
@@ -491,7 +491,7 @@ export default function QueryBuilder() {
         </Card>
         <Grid columns={1} padding={4}>
           <Code language="json" size={1} style={{ whiteSpace: "break-spaces" }}>
-            {JSON.stringify(docOutput)}
+            {JSON.stringify(csvData)}
           </Code>
         </Grid>
       </TabPanel>
