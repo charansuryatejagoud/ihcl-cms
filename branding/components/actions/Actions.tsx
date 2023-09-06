@@ -198,11 +198,11 @@ export default function QueryBuilder() {
       identifier: id != null ? id : parentID,
       key: id != null ? null : itemKey,
     });
-    const originalDoc =
-      documents?.length == 1 ? documents[0] : getOriginalDoc(documents);
+   // const originalDoc = documents?.length == 1 ? documents[0] : getOriginalDoc(documents);
+   documents?.map(async (document) => {
     try {
       await updateSeo({
-        _id: id != null ? originalDoc?._id : originalDoc?.[itemKey]?._id,
+        _id: id != null ? document?._id : document?.[itemKey]?._id,
         updateData: {
           pageTitle: pageTitle,
           seoKeywords: seoKeywords,
@@ -213,7 +213,7 @@ export default function QueryBuilder() {
           console.log(
             id != null ? _type : parentType,
             id != null ? id : parentID,
-            id != null ? originalDoc?._id : originalDoc?.[itemKey]?._id,
+            id != null ? document?._id : document?.[itemKey]?._id,
             " the ID does not exist in sanity dataset",
           );
         } else if (res != null && res?._id) {
@@ -229,12 +229,12 @@ export default function QueryBuilder() {
     } catch (err) {
       console.error(
         "Oh no, the update failed: ",
-        originalDoc?._id,
+        document?._id,
         "Error : ",
         err.message,
       );
     }
-    // }
+  })
   }
 
   async function fetchDocument({ _type, identifier, key }: any) {
@@ -332,7 +332,7 @@ export default function QueryBuilder() {
                 itemKey: "hotelWellness",
               });
               break;
-            case "image-gallery":
+            case "gallery":
               // Update SEO for Gallery - hotelGallery
               await processSeo({
                 _type: "gallery",
@@ -368,7 +368,7 @@ export default function QueryBuilder() {
                 itemKey: "hotelOffers",
               });
               break;
-            case "local-things-to-do":
+            case "attractions":
               // Update SEO for Attractions - hotelAttractions
               await processSeo({
                 _type: "attractions",
@@ -380,7 +380,7 @@ export default function QueryBuilder() {
                 itemKey: "hotelAttractions",
               });
               break;
-            case "meetings-and-events":
+            case "meetings":
               // Update SEO for Events - hotelEventVenues
               await processSeo({
                 _type: "venues",
