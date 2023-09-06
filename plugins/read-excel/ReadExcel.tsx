@@ -73,7 +73,7 @@ function ReadExcel() {
               {selected == "Address" && <Address />}
               {selected == "Dining" && <DiningInfo />}
               {selected == "TaxonomyInfo" && <TaxonomyInfo />}
-              {selected == "Facilities" && <Facilities />}
+              {selected == "Facilities" && <Facilities type="production" />}
             </Stack>
           </Box>
         </Grid>
