@@ -9,3 +9,4 @@ yarn.lock
 .vscode
 /config/
 *.xlsx
+package-lock.json
