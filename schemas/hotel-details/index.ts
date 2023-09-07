@@ -79,6 +79,14 @@ export const details: FeatureSchemaDefinition = {
         value: "details.group.group-with-two-row-box-tabs",
       },
       {
+        title: "[details] Group With Two Row Box Tabs (Layout Placeholder)",
+        value: "details.group.group-with-two-row-box-tabs-layout-placeholder",
+      },
+      {
+        title: "[details] Group With Row Carousel",
+        value: "details.group.group-with-row-carousel",
+      },
+      {
         title: "[Details] Hotel Facilities",
         value: "details.group.hotel-facilities",
       },

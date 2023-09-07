@@ -261,6 +261,10 @@ export const contentTypes = [
     value: "destinationsDining",
   },
   {
+    title: "All Restaurants",
+    value: "allRestaurants",
+  },
+  {
     title: "Destinations Experiences",
     value: "destinationsExperiences",
   },
