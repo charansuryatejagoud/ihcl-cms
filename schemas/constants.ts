@@ -269,6 +269,10 @@ export const contentTypes = [
     value: "destinationsDining",
   },
   {
+    title: "All Restaurants",
+    value: "allRestaurants",
+  },
+  {
     title: "Destinations Experiences",
     value: "destinationsExperiences",
   },
@@ -427,6 +431,33 @@ export const hotelNavigation = [
   {
     title: "Gift Hamper",
     value: "gift_hamper_festive"
+  }
+];
+
+export const destinationNavigation = [
+  {
+    title: "Hotels",
+    value: "hotels",
+  },
+  {
+    title: "Restaurants",
+    value: "restaurants",
+  },
+  {
+    title: "Highlights",
+    value: "highlights",
+  },
+  {
+    title: "Experiences",
+    value: "experiences",
+  },
+  {
+    title: "SPAs",
+    value: "spa",
+  },
+  {
+    title: "Holidays",
+    value: "holiday_packages",
   }
 ];
 

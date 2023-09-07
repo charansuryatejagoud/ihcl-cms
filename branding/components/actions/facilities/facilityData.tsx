@@ -1,6 +1,3 @@
-import { constant } from "lodash"
-
-
 export const mobileFacilities = [
     {
       "_key": "f8f649c7e383",

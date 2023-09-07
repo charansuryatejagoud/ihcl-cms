@@ -14,6 +14,11 @@ export default {
       type: "string",
     },
     {
+      name: "brandName",
+      title: "Brand Name",
+      type: "string",
+    },
+    {
       name: "thumbnail",
       title: "Thumbnail",
       type: "array",
@@ -121,6 +126,12 @@ export default {
       ],
     },
     {
+      name: "thumbnailDescription",
+      title: "Thumbnail Description",
+      type: "string",
+      rows: 3,
+    },
+    {
       name: "participatingHotels",
       title: "Participating Hotels",
       type: "array",
@@ -159,5 +170,21 @@ export default {
         },
       ],
     },
+    {
+      name: "pageTitle",
+      title: "Page Title",
+      type: "string",
+    },
+    {
+      name: "seoKeywords",
+      title: "SEO Keywords",
+      type: "string",
+    },
+    {
+      name: "seoDescription",
+      title: "SEO Description",
+      type: "text",
+      rows: 5,
+    }
   ],
 };

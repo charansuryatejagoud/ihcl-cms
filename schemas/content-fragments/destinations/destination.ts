@@ -19,6 +19,18 @@ export default {
       type: "string",
     },
     {
+      name: "thumbnail",
+      title: "Thumbnail",
+      type: "array",
+      of: [{ type: "mediaInput" }],
+    },
+    {
+      name: "destinationNavigation",
+      title: "Destination Navigation",
+      type: "reference",
+      to: [{ type: "destinationNavigation" }],
+    },
+    {
       name: "description",
       title: "Description",
       type: "string",
@@ -26,6 +38,16 @@ export default {
     {
       name: "destinationURL",
       title: "URL",
+      type: "string",
+    },
+    {
+      name: "country",
+      title: "Country",
+      type: "string",
+    },
+    {
+      name: "city",
+      title: "City",
       type: "string",
     },
     {
@@ -91,6 +113,12 @@ export default {
       type: "tabInfo",
     },
     {
+      name: "seoInfo",
+      title: "SEO Info",
+      type: "array",
+      of: [{type: "destinationSeoInfo"}],
+    },
+    {
       name: "participatingHotels",
       title: "Participating Hotels",
       type: "array",
@@ -100,6 +128,6 @@ export default {
           to: [{ type: "hotel" }],
         },
       ],
-    },
+    }
   ],
 };

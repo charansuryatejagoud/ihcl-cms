@@ -27,7 +27,8 @@ export default {
         { title: "Quote", value: "blockquote" },
         { title: "Section", value: "section" },
         {title:"Span",value:"span"},
-        {title: "Break", value:"break"}
+        {title: "Break", value:"break"},
+        {title: "Html", value: "html"}
       ],
       lists: [
         { title: "Bullet", value: "bullet" },
@@ -104,6 +105,8 @@ export default {
     {
       type:"navigationItem"
     },
-    
+    {
+      type: "code"
+    }
   ],
 };
