@@ -7,6 +7,9 @@ import Address from "./Address";
 import DiningInfo from "./DiningInfo";
 import TaxonomyInfo from "./TaxonomyInfo";
 import Facilities from "./Facilities";
+import Restaurants from "./Restaurants";
+import Destinations from "./Destinations";
+import ExclusiveOffers from "./ExclusiveOffers";
 
 function ReadExcel() {
   const [selected, setSelected] = useState("Hotel Information");
@@ -15,9 +18,12 @@ function ReadExcel() {
     "Contact",
     "Highlights",
     "Address",
+    "Restaurants",
     "Dining",
     "TaxonomyInfo",
     "Facilities",
+    "Destinations",
+    "Exclusive Offers",
   ];
 
   function handleChange(event: any): void {
@@ -40,6 +46,7 @@ function ReadExcel() {
               fontSize={[2, 2, 3, 4]}
               padding={[3, 3, 4]}
               space={[3, 3, 4]}
+              value={selected}
               onChange={handleChange}
             >
               {dropDown.map((option, index) => {
@@ -57,13 +64,7 @@ function ReadExcel() {
           >
             <Stack padding={3}>
               <Text size={2} weight="bold">
-                {selected == "Hotel Information" && "Hotel Information"}
-                {selected == "Contact" && "Contact"}
-                {selected == "Highlights" && "Highlights"}
-                {selected == "Address" && "Address"}
-                {selected == "Dining" && "Dining"}
-                {selected == "TaxonomyInfo" && "TaxonomyInfo"}
-                {selected == "Facilities" && "Facilities"}
+                {selected}
               </Text>
               {selected == "Hotel Information" && (
                 <HotelInformation type="production" />
@@ -74,6 +75,9 @@ function ReadExcel() {
               {selected == "Dining" && <DiningInfo />}
               {selected == "TaxonomyInfo" && <TaxonomyInfo />}
               {selected == "Facilities" && <Facilities type="production" />}
+              {selected == "Restaurants" && <Restaurants />}
+              {selected == "Destinations" && <Destinations />}
+              {selected == "Exclusive Offers" && <ExclusiveOffers />}
             </Stack>
           </Box>
         </Grid>
