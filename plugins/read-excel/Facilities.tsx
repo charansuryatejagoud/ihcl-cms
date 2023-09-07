@@ -27,31 +27,31 @@ function Facilities({ type }) {
             },
             {
               title: "Hotel",
-              data: data?.hotel?.substring(1,data?.activities?.length).split("|"),
+              data: data?.hotel?.substring(1,data?.hotel?.length).split("|"),
             },
             {
               title: "Dining",
-              data: data?.dining?.substring(1,data?.activities?.length).split("|"),
+              data: data?.dining?.substring(1,data?.dining?.length).split("|"),
             },
             {
               title: "Wellness",
-              data: data?.wellness?.substring(1,data?.activities?.length).split("|"),
+              data: data?.wellness?.substring(1,data?.wellness?.length).split("|"),
             },
             {
               title: "Rooms",
-              data: data?.rooms?.substring(1,data?.activities?.length).split("|"),
+              data: data?.rooms?.substring(1,data?.rooms?.length).split("|"),
             },
             {
               title: "Location",
-              data: data?.location?.substring(1,data?.activities?.length).split("|"),
+              data: data?.location?.substring(1,data?.location?.length).split("|"),
             },
           ];
           facilitiesModifiedData.activities = data?.activities?.substring(1,data?.activities?.length).split("|");
-          facilitiesModifiedData.hotel = data?.hotel?.substring(1,data?.activities?.length).split("|");
-          facilitiesModifiedData.dining = data?.dining?.substring(1,data?.activities?.length).split("|");
-          facilitiesModifiedData.wellness = data?.wellness?.substring(1,data?.activities?.length).split("|");
-          facilitiesModifiedData.rooms = data?.rooms?.substring(1,data?.activities?.length).split("|");
-          facilitiesModifiedData.location = data?.location?.substring(1,data?.activities?.length).split("|");
+          facilitiesModifiedData.hotel = data?.hotel?.substring(1,data?.hotel?.length).split("|");
+          facilitiesModifiedData.dining = data?.dining?.substring(1,data?.dining?.length).split("|");
+          facilitiesModifiedData.wellness = data?.wellness?.substring(1,data?.wellness?.length).split("|");
+          facilitiesModifiedData.rooms = data?.rooms?.substring(1,data?.rooms?.length).split("|");
+          facilitiesModifiedData.location = data?.location?.substring(1,data?.location?.length).split("|");
           setHotelFacilitiesData((prevData) => [...prevData, facilitiesModifiedData]);
         });
       };
