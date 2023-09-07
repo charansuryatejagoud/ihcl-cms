@@ -315,6 +315,27 @@ export default function group({
             type: "boolean",
           },
           {
+            name: "largeVariant",
+            title: "Large Variant",
+            type: "string",
+            options: {
+              list: variants,
+            },
+          },
+          {
+            name: "mobileVariant",
+            title: "Mobile Variant",
+            type: "string",
+            options: {
+              list: variants,
+            },
+          },
+          {
+            name: "minimumItems",
+            title: "Minimum Items",
+            type: "number",
+          },
+          {
             name: "tabTerm",
             title: "Tab Term",
             type: "string",

@@ -242,6 +242,11 @@ export default function card(props: Props) {
         ],
       },
       {
+        name: "tabTerm",
+        title: "Tab Term",
+        type: "string",
+      },
+      {
         name: "parameterMap",
         title: "Parameter Map",
         description: "Parameters as a set of key-value pairs",
