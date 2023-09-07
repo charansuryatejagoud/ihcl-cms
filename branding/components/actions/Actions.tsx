@@ -86,51 +86,51 @@ export default function QueryBuilder() {
   };
 
   const syncFullData = async (type) => {
-    switch(type) {
+    switch (type) {
       case queries.hotel.type:
-      const sQ = queries.hotel.body
-      const q = `*[
+        const sQ = queries.hotel.body
+        const q = `*[
         _type == "hotel" 
         && identifier != null
       ]${sQ}`
 
-      await client
-      .fetch(q)
-      .then((response) => {
-        // setDocOutput(response)
-        let result = []
-        console.log(response);
+        await client
+          .fetch(q)
+          .then((response) => {
+            // setDocOutput(response)
+            let result = []
+            console.log(response);
 
-        // write to search
-        response && response.forEach(async doc => {
-          try {
-            const response = await axios.post(`${APIS.ENV_HOST}${APIS.SEARCH_DATA_SYNC}`, doc);
-            console.log('Data successfully posted:', response.data);
-            result.push({
-              "hotel": doc.identifier,
-              "message": response?.data?.message
+            // write to search
+            response && response.forEach(async doc => {
+              try {
+                const response = await axios.post(`${APIS.ENV_HOST}${APIS.SEARCH_DATA_SYNC}`, doc);
+                console.log('Data successfully posted:', response.data);
+                result.push({
+                  "hotel": doc.identifier,
+                  "message": response?.data?.message
+                })
+                // You can handle the response or perform any additional actions here.
+              } catch (error) {
+                console.error('Error posting data:', error.message);
+                result.push({
+                  "hotel": doc.identifier,
+                  "message": error.message
+                })
+                // Handle the error here, e.g., show an error message to the user.
+              }
             })
-            // You can handle the response or perform any additional actions here.
-          } catch (error) {
-            console.error('Error posting data:', error.message);
-            result.push({
-              "hotel": doc.identifier,
-              "message": error.message
-            })
-            // Handle the error here, e.g., show an error message to the user.
-          }
-        })
 
-        setDocOutput(result);
-        console.log('RES', result);
-      })
-      .catch((error) => {
-        console.log("error", error);
-      });
+            setDocOutput(result);
+            console.log('RES', result);
+          })
+          .catch((error) => {
+            console.log("error", error);
+          });
 
-      break;
+        break;
       default:
-      break;
+        break;
     }
   }
 
@@ -192,49 +192,50 @@ export default function QueryBuilder() {
     itemKey,
   }: any) {
     // if (parentID == "taj-exotica-goa") {
-    console.log("#", _type, id);
+    console.log("#", _type, id, parentID);
     const documents: any = await fetchDocument({
       _type: id != null ? _type : parentType,
       identifier: id != null ? id : parentID,
       key: id != null ? null : itemKey,
     });
-    const originalDoc =
-      documents?.length == 1 ? documents[0] : getOriginalDoc(documents);
-    try {
-      await updateSeo({
-        _id: id != null ? originalDoc?._id : originalDoc?.[itemKey]?._id,
-        updateData: {
-          pageTitle: pageTitle,
-          seoKeywords: seoKeywords,
-          seoDescription: seoDescription,
-        },
-      }).then((res) => {
-        if (res == false) {
-          console.log(
-            id != null ? _type : parentType,
-            id != null ? id : parentID,
-            id != null ? originalDoc?._id : originalDoc?.[itemKey]?._id,
-            " the ID does not exist in sanity dataset",
-          );
-        } else if (res != null && res?._id) {
-          console.log(
-            "Created Successfully",
-            id != null ? _type : parentType,
-            id == null && itemKey,
-            id != null ? id : parentID,
-            res?._id,
-          );
-        }
-      });
-    } catch (err) {
-      console.error(
-        "Oh no, the update failed: ",
-        originalDoc?._id,
-        "Error : ",
-        err.message,
-      );
-    }
-    // }
+    // const originalDoc =
+    //   documents?.length == 1 ? documents[0] : getOriginalDoc(documents);
+    documents?.map(async (document) => {
+      try {
+        await updateSeo({
+          _id: id != null ? document?._id : document?.[itemKey]?._id,
+          updateData: {
+            pageTitle: pageTitle,
+            seoKeywords: seoKeywords,
+            seoDescription: seoDescription,
+          },
+        }).then((res) => {
+          if (res == false) {
+            console.log(
+              id != null ? _type : parentType,
+              id != null ? id : parentID,
+              id != null ? document?._id : document?.[itemKey]?._id,
+              " the ID does not exist in sanity dataset",
+            );
+          } else if (res != null && res?._id) {
+            console.log(
+              "Created Successfully",
+              id != null ? _type : parentType,
+              id == null && itemKey,
+              id != null ? id : parentID,
+              res?._id,
+            );
+          }
+        });
+      } catch (err) {
+        console.error(
+          "Oh no, the update failed: ",
+          document?._id,
+          "Error : ",
+          err.message,
+        );
+      }
+    })
   }
 
   async function fetchDocument({ _type, identifier, key }: any) {
@@ -332,7 +333,7 @@ export default function QueryBuilder() {
                 itemKey: "hotelWellness",
               });
               break;
-            case "image-gallery":
+            case "gallery":
               // Update SEO for Gallery - hotelGallery
               await processSeo({
                 _type: "gallery",
@@ -368,7 +369,7 @@ export default function QueryBuilder() {
                 itemKey: "hotelOffers",
               });
               break;
-            case "local-things-to-do":
+            case "attractions":
               // Update SEO for Attractions - hotelAttractions
               await processSeo({
                 _type: "attractions",
@@ -380,7 +381,7 @@ export default function QueryBuilder() {
                 itemKey: "hotelAttractions",
               });
               break;
-            case "meetings-and-events":
+            case "meetings":
               // Update SEO for Events - hotelEventVenues
               await processSeo({
                 _type: "venues",
@@ -425,7 +426,7 @@ export default function QueryBuilder() {
           label="Data Sync"
           onClick={() => setTabId("action-group")}
           selected={tabId === "action-group"}
-          //space={2}
+        //space={2}
         />
         <Tab
           aria-controls="preview-panel"
@@ -434,7 +435,7 @@ export default function QueryBuilder() {
           label="Data Migration"
           onClick={() => setTabId("preview")}
           selected={tabId === "preview"}
-          // space={2}
+        // space={2}
         />
         <Tab
           aria-controls="seo-panel"
@@ -443,7 +444,7 @@ export default function QueryBuilder() {
           label="SEO Update"
           onClick={() => setTabId("seo")}
           selected={tabId === "seo"}
-          //space={2}
+        //space={2}
         />
         <Tab
           aria-controls="script-panel"
@@ -452,7 +453,7 @@ export default function QueryBuilder() {
           label="Data Load"
           onClick={() => setTabId("script")}
           selected={tabId === "script"}
-          //space={2}
+        //space={2}
         />
       </TabList>
 
@@ -492,7 +493,7 @@ export default function QueryBuilder() {
         </Card>
         <Grid columns={1} padding={4}>
           <Code language="json" size={1} style={{ whiteSpace: "break-spaces" }}>
-            {JSON.stringify(docOutput)}
+            {JSON.stringify(csvData)}
           </Code>
         </Grid>
       </TabPanel>
@@ -587,7 +588,7 @@ export default function QueryBuilder() {
               padding={[3, 3, 4]}
               text="Process Data Update"
               tone="positive"
-              // onClick={() => tagDataToHotel(dataToHotel)}
+            // onClick={() => tagDataToHotel(dataToHotel)}
             />
           </Grid>
         </Card>
