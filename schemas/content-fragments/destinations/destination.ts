@@ -19,6 +19,12 @@ export default {
       type: "string",
     },
     {
+      name: "thumbnail",
+      title: "Thumbnail",
+      type: "array",
+      of: [{ type: "mediaInput" }],
+    },
+    {
       name: "destinationNavigation",
       title: "Destination Navigation",
       type: "reference",
@@ -37,6 +43,11 @@ export default {
     {
       name: "country",
       title: "Country",
+      type: "string",
+    },
+    {
+      name: "city",
+      title: "City",
       type: "string",
     },
     {

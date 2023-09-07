@@ -14,10 +14,20 @@ export default {
       type: "string",
     },
     {
+      name: "brandName",
+      title: "Brand Name",
+      type: "string",
+    },
+    {
       name: "thumbnail",
       title: "Thumbnail",
       type: "array",
       of: [{ type: "mediaInput" }],
+    },
+    {
+      name: "brandName",
+      title: "Brand Name",
+      type: "string",
     },
     {
       name: "gallery",

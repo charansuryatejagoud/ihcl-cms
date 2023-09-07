@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
-import { Box, Stack, Button, Flex } from "@sanity/ui";
+import { Button, Flex } from "@sanity/ui";
 import * as XLSX from "xlsx";
-import { finalObj } from "./dynamic";
+import { finalDiningInfoObj } from "./dynamic";
 import { Create, Update, fetchByType } from "./utils";
 
 function DiningInfo() {
@@ -34,7 +34,7 @@ function DiningInfo() {
       type: "signatureDining",
     });
 
-    const modData = finalObj({
+    const modData = finalDiningInfoObj({
       title: excelData[0].title,
       description: excelData[0].description,
       dinRoomsArr: excelData,
@@ -46,7 +46,7 @@ function DiningInfo() {
         // Update
         const updateRes = await Update({
           id: res._id,
-          diningRooms: modData,
+          data: modData,
         });
         console.log(updateRes);
       } catch (err) {

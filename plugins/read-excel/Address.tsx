@@ -1,9 +1,46 @@
 import React, { useRef, useState } from "react";
 import { Button, Flex } from "@sanity/ui";
 import * as XLSX from "xlsx";
-import { addressSectionTitle } from "./constants";
+import { TYPE_ADDRESS, TYPE_TITLE } from "./constants";
 import { customAlphabet } from "nanoid";
 import { client } from "./client";
+
+function extractAddressData({ data }, returnObject: any = {}) {
+  data?.hotelTitle && (returnObject.hotelTitle = data?.hotelTitle);
+  data?.hotelIdentifier &&
+    (returnObject.hotelIdentifier = data?.hotelIdentifier);
+  data?.desktopTitle &&
+    (returnObject.desktopTitle = data?.desktopTitle?.split("|"));
+  data?.mobileTitle &&
+    (returnObject.mobileTitle = data?.mobileTitle?.split("|"));
+  if (
+    data?.locationAndDirectionTitle ||
+    data?.locationAndDirectionDescription ||
+    data?.latitude ||
+    data?.longitude
+  ) {
+    returnObject.locationAndDirectionInfo = {
+      titles: data?.locationAndDirectionTitle?.split("|"),
+      description: data?.locationAndDirectionDescription?.split("|"),
+      latitude: data?.latitude,
+      longitude: data?.longitude,
+    };
+  }
+  data?.latitude && (returnObject.latitude = data?.latitude);
+  data?.longitude && (returnObject.longitude = data?.longitude);
+  data?.regionKey && (returnObject.regionKey = data?.regionKey);
+  data?.pincode && (returnObject.pincode = data?.pincode);
+  data?.locality && (returnObject.locality = data?.locality);
+  data?.country && (returnObject.country = data?.country);
+  data?.state && (returnObject.state = data?.state);
+  data?.city && (returnObject.city = data?.city);
+  data?.street && (returnObject.street = data?.street);
+  data?.landmark && (returnObject.landmark = data?.landmark);
+  data?.addressLine2 && (returnObject.addressLine2 = data?.addressLine2);
+  data?.addressLine1 && (returnObject.addressLine1 = data?.addressLine1);
+  data?.type && (returnObject.type = data?.type);
+  return returnObject;
+}
 
 function Address() {
   const ref: any = useRef();
@@ -19,82 +56,16 @@ function Address() {
         const worksheet = workbook.Sheets[workbook.SheetNames[0]];
         const jsonData = XLSX.utils.sheet_to_json(worksheet);
         jsonData.map((data: any) => {
-          let locationInfo: any = {};
-          locationInfo.hotelTitle = data?.hotelTitle;
-          locationInfo.hotelIdentifier = data?.hotelIdentifier;
-          locationInfo.locationAndDirectionInfo = {
-            titles: data?.locationAndDirectionTitle?.split("|"),
-            description: data?.locationAndDirectionDescription?.split("|"),
-            latitude: data?.latitude,
-            longitude: data?.longitude,
-          };
-          setLocationsData((prevData) => [...prevData, locationInfo]);
+          setLocationsData((prevData) => [
+            ...prevData,
+            extractAddressData({ data: data }),
+          ]);
         });
       };
       reader.readAsArrayBuffer(e.target.files[0]);
     }
   };
   console.log(locationsData);
-
-  const updatedLocInfo = (data, location) => {
-    let updatedDoc = {
-      ...data,
-      locationAndDirectionsInfo: location.locationAndDirectionInfo?.titles?.map(
-        (title, infoIndex) => {
-          return {
-            _key: nanoid(),
-            basicInfo: {
-              _type: "basicDetails",
-              description:
-                location.locationAndDirectionInfo?.description[infoIndex],
-              title: title,
-            },
-            locationDetails: {
-              _type: "locationInfo",
-              latitude: location.locationAndDirectionInfo?.latitude
-                ? String(location.locationAndDirectionInfo?.latitude)
-                : "",
-              longitude: location.locationAndDirectionInfo?.longitude
-                ? String(location.locationAndDirectionInfo?.longitude)
-                : "",
-            },
-          };
-        },
-      ),
-    };
-    return updatedDoc;
-  };
-
-  const createLocationData = (location) => {
-    let data = {
-      _type: "address",
-      sectionTitle: { ...addressSectionTitle },
-      title: location.hotelTitle,
-      locationAndDirectionsInfo: location.locationAndDirectionInfo?.titles?.map(
-        (title, infoIndex) => {
-          return {
-            _key: nanoid(),
-            basicInfo: {
-              _type: "basicDetails",
-              description:
-                location.locationAndDirectionInfo?.description[infoIndex],
-              title: title,
-            },
-            locationDetails: {
-              _type: "locationInfo",
-              latitude: location.locationAndDirectionInfo?.latitude
-                ? String(location.locationAndDirectionInfo?.latitude)
-                : "",
-              longitude: location.locationAndDirectionInfo?.longitude
-                ? String(location.locationAndDirectionInfo?.longitude)
-                : "",
-            },
-          };
-        },
-      ),
-    };
-    return data;
-  };
 
   const migrateExcelData = async () => {
     locationsData.map(async (location, index) => {
@@ -105,10 +76,9 @@ function Address() {
         .then(async (res) => {
           if (res) {
             console.log("updating ", res._id);
-            const { locationAndDirectionsInfo } = updatedLocInfo(res, location);
             await client
               .patch(res._id)
-              .set({ locationAndDirectionsInfo: locationAndDirectionsInfo })
+              .set({ ...getDocument({ excelData: location, document: res }) })
               .commit()
               .then((res) => {
                 console.log(res?.title + " Updated!");
@@ -123,14 +93,13 @@ function Address() {
               });
           } else {
             console.log("Creating...", location.hotelTitle);
-            const doc = createLocationData(location);
             await client
-              .create(doc)
+              .create(getDocument({ excelData: location }))
               .then((res) => {
-                console.log("id = ", res._id);
+                console.log("Created  = ", location.hotelTitle, res._id);
               })
               .catch((err) => {
-                console.log("failed to update", location.hotelTitle);
+                console.log("failed to create", location.hotelTitle);
                 console.log("err ", err);
               });
           }
@@ -171,6 +140,140 @@ function Address() {
       )}
     </Flex>
   );
+}
+
+function getDocument({ excelData, document = null }, returnData: any = {}) {
+  const nanoid = customAlphabet("1234567890abcdef", 12);
+  if (!document) {
+    returnData._type = TYPE_ADDRESS;
+    returnData.title = excelData?.hotelTitle;
+  }
+  returnData.sectionTitle = {
+    _type: TYPE_TITLE,
+  };
+  //sectionTitle - mobileTitle
+  if (excelData?.mobileTitle?.length > 0) {
+    returnData.sectionTitle.mobileTitle = excelData?.mobileTitle;
+  }
+  //sectionTitle - desktopTitle
+  if (excelData?.desktopTitle?.length > 0) {
+    returnData.sectionTitle.desktopTitle = excelData?.desktopTitle;
+  }
+  //type
+  returnData.type = compareValues({
+    excelData: excelData,
+    documentData: document,
+    key: "type",
+  });
+  //addressLine1
+  returnData.addressLine1 = compareValues({
+    excelData: excelData,
+    documentData: document,
+    key: "addressLine1",
+  });
+  //addressLine2
+  returnData.addressLine2 = compareValues({
+    excelData: excelData,
+    documentData: document,
+    key: "addressLine2",
+  });
+  //landmark
+  returnData.landmark = compareValues({
+    excelData: excelData,
+    documentData: document,
+    key: "landmark",
+  });
+  //street
+  returnData.street = compareValues({
+    excelData: excelData,
+    documentData: document,
+    key: "street",
+  });
+  //city
+  returnData.city = compareValues({
+    excelData: excelData,
+    documentData: document,
+    key: "city",
+  });
+  //state
+  returnData.state = compareValues({
+    excelData: excelData,
+    documentData: document,
+    key: "state",
+  });
+  //country
+  returnData.country = compareValues({
+    excelData: excelData,
+    documentData: document,
+    key: "country",
+  });
+  //locality
+  returnData.locality = compareValues({
+    excelData: excelData,
+    documentData: document,
+    key: "locality",
+  });
+  //pincode
+  returnData.pincode = compareValues({
+    excelData: excelData,
+    documentData: document,
+    key: "pincode",
+  });
+  //regionKey
+  returnData.regionKey = compareValues({
+    excelData: excelData,
+    documentData: document,
+    key: "regionKey",
+  });
+  //longitude
+  const longitude = compareValues({
+    excelData: excelData,
+    documentData: document,
+    key: "longitude",
+  });
+  longitude && (returnData.longitude = String(longitude));
+  //latitude
+  const latitude = compareValues({
+    excelData: excelData,
+    documentData: document,
+    key: "latitude",
+  });
+  latitude && (returnData.latitude = String(latitude));
+  returnData.locationAndDirectionsInfo = returnData.locationAndDirectionsInfo =
+    excelData.locationAndDirectionInfo?.titles?.map((title, infoIndex) => {
+      return {
+        _key: nanoid(),
+        basicInfo: {
+          _type: "basicDetails",
+          description:
+            excelData.locationAndDirectionInfo?.description[infoIndex],
+          title: title,
+        },
+        locationDetails: {
+          _type: "locationInfo",
+          latitude: excelData.locationAndDirectionInfo?.latitude
+            ? String(excelData.locationAndDirectionInfo?.latitude)
+            : "",
+          longitude: excelData.locationAndDirectionInfo?.longitude
+            ? String(excelData.locationAndDirectionInfo?.longitude)
+            : "",
+        },
+      };
+    });
+  return returnData;
+}
+
+function compareValues({ excelData, documentData, key }) {
+  if (documentData?.[key]) {
+    if (documentData?.[key] == excelData?.[key]) {
+      return documentData?.[key];
+    } else {
+      return excelData?.[key];
+    }
+  } else {
+    return excelData?.[key];
+  }
+  return;
 }
 
 export default Address;
