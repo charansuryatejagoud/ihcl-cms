@@ -148,6 +148,22 @@ export const details: FeatureSchemaDefinition = {
         title: "[Details] 3 Card Carousel (Layout Placeholder)",
         value: "details.group.3-card-carousel-layout-placeholder",
       },
+      {
+        title: "[Details] Group With Card Left Media Right Content And Price (Layout Placeholder)",
+        value: "details.group.group-with-card-left-media-right-content-and-price-layout-placeholder",
+      },
+      {
+        title: "[Details] Group With Card Top Media Bottom Content And Price (Layout Placeholder)",
+        value: "details.group.group-with-card-top-media-bottom-content-and-price-layout-placeholder",
+      },
+      {
+        title: "[Details] Destination Navigation Tabs",
+        value: "details.group.destination.navigation-tabs",
+      },
+      {
+        title: "[Details] Group With 2 Column Cards Grid(Layout Placeholder)",
+        value: "details.group.group-with-2-column-cards-grid-layout-placeholder",
+      },
     ],
     card: [
       {
@@ -243,7 +259,28 @@ export const details: FeatureSchemaDefinition = {
       {
         title: "[Details] Restaurant Contact Details",
         value: "details.card.restaurant-contact-details",
-      }
+      },
+      {
+        title: "[Details] Title with CTA Action",
+        value: "details.card.title-with-cta-action",
+      },
+      {
+        title: "[Details] Contact Details with Single CTA",
+        value: "details.card.contact-details-with-single-cta",
+      },
+      {
+        title: "[Details] Card With Right Media Left Content(Layout Placeholder)",
+        value:
+          "details.card.card-with-right-media-left-content-aspect-ratio-2:4-layout-placeholder",
+      },
+      {
+        title: "[Details] Card With Left Media Right Content And Price (Layout Placeholder)",
+        value: "details.card.card-with-left-media-right-content-and-price-layout-placeholder",
+      },
+      {
+        title: "[Details] Card With Top Media Bottom Content And Price (Layout Placeholder)",
+        value: "details.card.card-with-top-media-bottom-content-and-price-layout-placeholder",
+      },
     ],
 
     banner: [],
@@ -276,6 +313,12 @@ export const details: FeatureSchemaDefinition = {
       {
         title: "[Details] Hotels Locations on Map",
         value: "details.placeholders.hotels-locations-on-map"
+      }
+    ],
+    nudge: [
+      {
+        title: "[Details] Right Aligned Actions",
+        value: "details.nudge.right-aligned-actions"
       }
     ]
   },
