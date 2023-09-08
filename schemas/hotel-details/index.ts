@@ -63,6 +63,10 @@ export const details: FeatureSchemaDefinition = {
         value: "details.group.navigation-tabs",
       },
       {
+        title: "Hotel Details Navigation Tabs",
+        value: "details.hotels.group.navigation-tabs",
+      },
+      {
         title: "[Details] Tab Dropdown Selector",
         value: "details.group.tab-dropdown-selector",
       },
@@ -73,6 +77,14 @@ export const details: FeatureSchemaDefinition = {
       {
         title: "[details] Group With Two Row Box Tabs",
         value: "details.group.group-with-two-row-box-tabs",
+      },
+      {
+        title: "[details] Group With Two Row Box Tabs (Layout Placeholder)",
+        value: "details.group.group-with-two-row-box-tabs-layout-placeholder",
+      },
+      {
+        title: "[details] Group With Row Carousel",
+        value: "details.group.group-with-row-carousel",
       },
       {
         title: "[Details] Hotel Facilities",

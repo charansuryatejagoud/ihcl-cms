@@ -48,10 +48,15 @@ export default {
       type: "modalDetails",
     },
     {
-      title: "Participating Hotels",
       name: "participatingHotels",
-      type: "reference",
-      to: [{ type: "hotel" }],
+      title: "Participating Hotels",
+      type: "array",
+      of: [
+        {
+          type: "reference",
+          to: [{ type: "hotel" }],
+        },
+      ],
     },
   ],
   preview: {

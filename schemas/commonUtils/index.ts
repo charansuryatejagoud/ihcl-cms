@@ -216,6 +216,10 @@ export const ihclcore: FeatureSchemaDefinition = {
         value: "ihcl.core.group.option-selector-popup-modal",
       },
       {
+        title: "Option Selector PopUp Modal Layout Placeholder",
+        value: "ihcl.core.group.option-selector-popup-modal-layout-placeholder",
+      },
+      {
         title: "Group With Vertical Components",
         value: "ihcl.core.group.group-with-vertical-components",
       },
