@@ -281,6 +281,15 @@ export const details: FeatureSchemaDefinition = {
         title: "[Details] Card With Top Media Bottom Content And Price (Layout Placeholder)",
         value: "details.card.card-with-top-media-bottom-content-and-price-layout-placeholder",
       },
+      {
+        title:"[Details] Right Aligned Content With Aspect ratio 1:3",
+        value:"details.card.right-aligned-content-with-aspect-ratio-1:3"
+      },
+      {
+        title: "[Details] Card With Left Media Right Content Aspect Ratio 2:2",
+        value:
+          "details.card.card-with-left-media-right-content-aspect-ratio-2:2",
+      },
     ],
 
     banner: [],

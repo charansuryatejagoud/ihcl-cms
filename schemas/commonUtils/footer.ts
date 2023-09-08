@@ -121,40 +121,71 @@ export default {
                 type: "navigationItem",
             }],
         },
+    {
+      title: "faqs",
+      name: "faqs",
+      type: "array",
+      of: [
         {
-            title: "Brands",
-            name: "brands",
-            type: "array",
-            of: [{
-                type: "navigationItem",
-            }],
+          type: "object",
+          fields: [
+            {
+              title: "Title",
+              name: "title",
+              type: "string",
+            },
+            {
+              title: "items",
+              name: "items",
+              type: "array",
+              of:[
+                {
+                    type:"navigationItem"
+                }
+              ]
+            },
+          ],
         },
+      ],
+    },
+    {
+      title: "Brands",
+      name: "brands",
+      type: "array",
+      of: [
         {
-            title: "Legal Information",
-            name: "legalInformation",
-            type: "array",
-            of: [{ type: "navigationItem" }],
+          type: "navigationItem",
         },
+      ],
+    },
+    {
+      title: "Legal Information",
+      name: "legalInformation",
+      type: "array",
+      of: [{ type: "navigationItem" }],
+    },
+    {
+      title: "Icons",
+      name: "icons",
+      type: "array",
+      of: [
         {
-            title: "Icons",
-            name: "icons",
-            type: "array",
-            of: [{
-                type: 'object',
-                fields: [
-                    {
-                        title: "Title",
-                        name: "title",
-                        type: "string"
-                    },
-                    {
-                        title: "Icons",
-                        name: "icons",
-                        type: "array",
-                        of: [{ type: "navigationItem" }]
-                    }
-                ]
-            }],
+          type: "object",
+          fields: [
+            {
+              title: "Title",
+              name: "title",
+              type: "string",
+            },
+            {
+              title: "Icons",
+              name: "icons",
+              type: "array",
+              of: [{ type: "navigationItem" }],
+            },
+          ],
         },
-    ],
+      ],
+    },
+  ],
 };

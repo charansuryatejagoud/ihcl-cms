@@ -37,6 +37,10 @@ export const bannerVariants = [
     title: "Hero Banner (Layout Placeholder)",
     value: "hero-banner-layout-placeholder",
   },
+  {
+    title:"Image Hider",
+    value:"image-hider"
+  }
 ];
 
 export default {
