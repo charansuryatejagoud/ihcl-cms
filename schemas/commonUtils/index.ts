@@ -315,6 +315,10 @@ export const ihclcore: FeatureSchemaDefinition = {
         value: "ihcl.core.card.city-card",
       },
       {
+        title: " Bottom Navigation With Two Buttons",
+        value: "ihcl.core.card.bottom-navigation-with-two-buttons",
+      },
+      {
         title:"4 Column Grid With Bold Title",
         value:"ihcl.core.card.4-column-grid-with-bold-title"
       }
@@ -364,6 +368,10 @@ export const ihclcore: FeatureSchemaDefinition = {
         title: "Alert Without Close Cta",
         value: "ihcl.core.alert-without-close-cta",
       },
+      {
+        title:"Cookies System Modal",
+        value:"ihcl.core.cookies-system-modal"
+      }
     ],
     tabs: [
       {
@@ -392,6 +400,6 @@ export const ihclcore: FeatureSchemaDefinition = {
         title:"Subscription",
         value:"common-utils.forms.subscription"
       }
-    ]
+    ],
   },
 };

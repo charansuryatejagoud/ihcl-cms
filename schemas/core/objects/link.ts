@@ -79,6 +79,23 @@ export default {
       group: "main",
     },
     {
+      name: "isGradientEnabled",
+      title: "Is Gradient Enabled",
+      type: "boolean",
+    },
+    {
+      name: "gradient",
+      title: "Gradient",
+      type: "string",
+      hidden: ({parent}) => !parent?.isGradientEnabled
+    },
+    {
+      name: "backgroundColor",
+      title: "Background Color",
+      type: "color",
+      hidden: ({parent}) => parent?.isGradientEnabled
+    },
+    {
       name: "metadata",
       type: "metadata",
       title: "Metadata",
