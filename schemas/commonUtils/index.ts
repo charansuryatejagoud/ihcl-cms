@@ -126,6 +126,10 @@ export const ihclcore: FeatureSchemaDefinition = {
         title: "Hotel Address Data",
         value: "ihcl.core.group.hotel-address-data",
       },
+      {
+        title: "Hotel Address Data(Layout Placeholder)",
+        value: "ihcl.core.group.hotel-address-data-layout-placeholder",
+      },
       { title: "Multiple Data", value: "ihcl.core.group.multiple-data" },
       {
         title: "Group With Filter Buttons",
@@ -246,6 +250,10 @@ export const ihclcore: FeatureSchemaDefinition = {
       {
         title: "Images With Single Column Grid(Layout Placeholder)",
         value: "ihcl.core.group.images-with-single-column-grid-layout-placeholder",
+      },
+      {
+        title: "Default Tab Filter",
+        value: "common-utils.default.tab.filter",
       },
     ],
     card: [

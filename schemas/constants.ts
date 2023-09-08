@@ -682,8 +682,8 @@ export const searchCategoryType = [
 
 export const hotelFeatures = [
   {
-    title: "Jiva Spa",
-    value: "Jiva Spa",
+    title: "J Wellness",
+    value: "J Wellness",
   },
   {
     title: "Khazana",

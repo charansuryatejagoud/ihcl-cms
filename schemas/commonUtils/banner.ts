@@ -144,6 +144,10 @@ export default {
             title: "Global Booking Mask",
             value: "ihcl.banner.global-booking-mask",
           },
+          {
+            title: "Global Booking Mask With Prices",
+            value: "ihcl.banner.global-booking-mask-with-prices",
+          },
         ],
       },
       group: "main",
