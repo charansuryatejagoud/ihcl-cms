@@ -233,6 +233,10 @@ export const contentTypes = [
     value: "hotelAddress",
   },
   {
+    title: "All Restaurants",
+    value: "allRestaurants",
+  },
+  {
     title: "Restaurant Overview",
     value: "restaurantOverview",
   },
@@ -249,6 +253,10 @@ export const contentTypes = [
     value: "vouchers",
   },
   {
+    title: "All Destinations",
+    value: "allDestinations",
+  },
+  {
     title: "Destinations Hotels",
     value: "destinationsHotels",
   },
@@ -259,6 +267,10 @@ export const contentTypes = [
   {
     title: "Destinations Dining",
     value: "destinationsDining",
+  },
+  {
+    title: "All Restaurants",
+    value: "allRestaurants",
   },
   {
     title: "Destinations Experiences",
@@ -780,4 +792,34 @@ export const poweredBy = [
     title: "Sanity",
     value: "sanity",
   },
+];
+
+export const destinationCategory = [
+  {
+    title: "City",
+    value: "city",
+  },
+  {
+    title: "State",
+    value: "state",
+  },
+  {
+    title: "Country",
+    value: "country",
+  },
+];
+
+export const offerTypes = [
+  {
+    title: "Global",
+    value: "global",
+  },
+  {
+    title: "Hotel Specific",
+    value: "hotel",
+  },
+  {
+    title: "Holiday",
+    value: "holiday",
+  }
 ];

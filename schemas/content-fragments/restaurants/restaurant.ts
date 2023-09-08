@@ -25,6 +25,12 @@ export default {
       of: [{ type: "mediaInput" }],
     },
     {
+      name: "thumbnailDescription",
+      title: "Thumbnail Description",
+      type: "string",
+      rows: 3,
+    },
+    {
       name: "gallery",
       title: "Gallery",
       type: "array",
@@ -79,6 +85,12 @@ export default {
           of: [{ type: "facilityInfo" }],
         },
         {
+          name: "restaurantInformation",
+          title: "Restaurant Information",
+          type: "reference",
+          to: [{ type: "availability" }],
+        },
+        {
           name: "restaurantContact",
           title: "Contact",
           type: "reference",
@@ -113,12 +125,6 @@ export default {
           type: "restaurantDetails",
         },
       ],
-    },
-    {
-      name: "thumbnailDescription",
-      title: "Thumbnail Description",
-      type: "string",
-      rows: 3,
     },
     {
       name: "participatingHotels",

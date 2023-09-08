@@ -216,6 +216,10 @@ export const ihclcore: FeatureSchemaDefinition = {
         value: "ihcl.core.group.option-selector-popup-modal",
       },
       {
+        title: "Option Selector PopUp Modal Layout Placeholder",
+        value: "ihcl.core.group.option-selector-popup-modal-layout-placeholder",
+      },
+      {
         title: "Group With Vertical Components",
         value: "ihcl.core.group.group-with-vertical-components",
       },
@@ -238,7 +242,11 @@ export const ihclcore: FeatureSchemaDefinition = {
       {
         title: "Center Moving Carousel With BackGround Gradient",
         value: "common-utils.group.center-moving-carousel-with-background-gradient",
-      }
+      },
+      {
+        title: "Images With Single Column Grid(Layout Placeholder)",
+        value: "ihcl.core.group.images-with-single-column-grid-layout-placeholder",
+      },
     ],
     card: [
       {
