@@ -177,7 +177,16 @@ export const details: FeatureSchemaDefinition = {
       {
         title: "[Details] Contact Details with Single CTA",
         value: "details.card.contact-details-with-single-cta",
-      }
+      },
+      {
+        title:"[Details] Right Aligned Content With Aspect ratio 1:3",
+        value:"details.card.right-aligned-content-with-aspect-ratio-1:3"
+      },
+      {
+        title: "[Details] Card With Left Media Right Content Aspect Ratio 2:2",
+        value:
+          "details.card.card-with-left-media-right-content-aspect-ratio-2:2",
+      },
     ],
 
     banner: [],

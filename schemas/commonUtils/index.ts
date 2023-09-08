@@ -126,6 +126,10 @@ export const ihclcore: FeatureSchemaDefinition = {
         title: "Hotel Address Data",
         value: "ihcl.core.group.hotel-address-data",
       },
+      {
+        title:"Contact Info",
+        value:"ihcl.core.group.contact-info"
+      },    
       { title: "Multiple Data", value: "ihcl.core.group.multiple-data" },
       {
         title: "Group With Filter Buttons",
@@ -234,7 +238,11 @@ export const ihclcore: FeatureSchemaDefinition = {
       {
         title: "Center Moving Carousel With BackGround Gradient",
         value: "common-utils.group.center-moving-carousel-with-background-gradient",
-      }
+      },
+      {
+        title:"Filter Address Dropdown",
+        value:"ihcl.core.group.filter-address-dropdown"
+      },
     ],
     card: [
       {
@@ -321,6 +329,10 @@ export const ihclcore: FeatureSchemaDefinition = {
       {
         title:"4 Column Grid With Bold Title",
         value:"ihcl.core.card.4-column-grid-with-bold-title"
+      },
+      {
+        title:"Center Aligned Content",
+        value:"ihcl.core.card.center-aligned-content"
       }
     ],
     banner: [

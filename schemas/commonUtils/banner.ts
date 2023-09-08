@@ -32,6 +32,10 @@ const variants = [
   {
     title: "Page Not Found",
     value: "page-not-found"
+  },
+  {
+    title:"Image Hider",
+    value:"image-hider"
   }
 ];
 

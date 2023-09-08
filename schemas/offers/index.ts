@@ -44,7 +44,11 @@ export const Offers: FeatureSchemaDefinition = {
       {
         title:"[Offers] Vertical Aligned Diamond Points",
         value:"offers.card.vertical-aligned-diamond-points"
-      }
+      },
+      {
+        title: "[Offers] Book A Stay With Aspect ratio 1:2",
+        value: "offers.card-book-a-stay-with-aspect-ratio-1:2",
+      },
     ]
   },
 };
