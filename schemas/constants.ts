@@ -285,7 +285,20 @@ export const contentTypes = [
     value: "destinationsHolidays",
   }
 ];
-
+export const filterAlignmentTypes = [
+  {
+    title: "Start",
+    value: "start",
+  },
+  {
+    title: "End",
+    value: "end",
+  },
+  {
+    title: "Center",
+    value: "center",
+  },
+];
 export const subContentTypes = [
   {
     title: "Signature Treatments",
