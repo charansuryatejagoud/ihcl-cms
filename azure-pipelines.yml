@@ -4,6 +4,7 @@ trigger:
   branches:
     include:
       - refs/heads/master
+      - refs/heads/develop
       - refs/heads/CICD-PT
       - refs/heads/CICD-E2E
 
@@ -36,7 +37,7 @@ stages:
     dependsOn:
     - Build
     displayName: Deploy to DEV
-    condition: and(succeeded(), eq(variables['build.sourceBranch'], 'refs/heads/master'))
+    condition: and(succeeded(), eq(variables['build.sourceBranch'], 'refs/heads/develop'))
     jobs:
       - deployment: DeployToDev
         variables:
