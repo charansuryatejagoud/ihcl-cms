@@ -60,7 +60,7 @@ stages:
                 - bash: |
                     az login --service-principal --username $(Service_Principle_Name) --password $(Service_Priniciple_Password) --tenant $(Tenant_ID)
                     az aks get-credentials --resource-group Websites_Dev --name app-dev-aks
-                    az acr build --image dev/ihcl-cms:$(short_hash) --registry ihclwebsites --file Dockerfile .
+                    az acr build --image dev/ihcl-cms:$(short_hash) --registry ihclwebsites --file Dockerfile . --build-arg DATASET=$(sanity_data_set_id)
                     
                   displayName: Login to ACR and AKS
                   enabled: true
@@ -77,7 +77,7 @@ stages:
     jobs:
       - deployment: DeployToSIT
         variables:
-          - group: DevVariableGroup
+          - group: SitVariableGroup
         environment: 'ihcl-sit'
         strategy:
           runOnce:
@@ -95,7 +95,7 @@ stages:
                 - bash: |
                     az login --service-principal --username $(Service_Principle_Name) --password $(Service_Priniciple_Password) --tenant $(Tenant_ID)
                     az aks get-credentials --resource-group Website_SIT_RG --name app-sit-aks
-                    az acr build --image sit/ihcl-cms:$(short_hash) --registry ihclwebsites --file Dockerfile .
+                    az acr build --image sit/ihcl-cms:$(short_hash) --registry ihclwebsites --file Dockerfile . --build-arg DATASET=$(sanity_data_set_id)
                     
                   displayName: Login to ACR and AKS
                   enabled: true
@@ -107,13 +107,13 @@ stages:
   - stage: uat_deploy
     dependsOn:
     - Build
-    displayName: Deploy to PT
+    displayName: Deploy to uat
     condition: and(succeeded(), eq(variables['build.sourceBranch'], 'refs/heads/master'))
     jobs:
-      - deployment: DeployToPT
+      - deployment: DeployTouat
         variables:
-          - group: PtVariableGroup
-        environment: 'ihcl-pt'
+          - group: UatVariableGroup
+        environment: 'ihcl-uat'
         strategy:
           runOnce:
             deploy:
@@ -129,14 +129,16 @@ stages:
 
                 - bash: |
                     az login --service-principal --username $(Service_Principle_Name) --password $(Service_Priniciple_Password) --tenant $(Tenant_ID)
-                    az acr build --image pt/ihcl-cms:$(short_hash) --registry ihclwebsites --file Dockerfile .
-                    az aks get-credentials --resource-group Website_PT_RG --name app-PT-aks
+                    az aks get-credentials --resource-group Website_UAT_RG --name app-uat-aks
+                    az acr build --image uat/ihcl-cms:$(short_hash) --registry ihclwebsites --file Dockerfile . --build-arg DATASET=$(sanity_data_set_id)
+                    
                   displayName: Login to ACR and AKS
                   enabled: true
+                  
                 - bash: |
-                    helm upgrade --install ihcl-cms --set-string image.tag=$(short_hash) --namespace pt --create-namespace -f ./charts/ihcl-cms/values/values-pt.yaml --wait ./charts/ihcl-cms
-                  displayName: Helm Upgrade 
-                  condition: succeeded()
+                    helm upgrade --install ihcl-cms --set-string image.tag=$(short_hash) --namespace uat --create-namespace -f ./charts/ihcl-cms/values/values-uat.yaml --wait ./charts/ihcl-cms
+                  displayName: Helm Upgrade
+                  condition: succeeded()         
   - stage: pt_deploy
     dependsOn:
     - Build
@@ -162,7 +164,7 @@ stages:
 
                 - bash: |
                     az login --service-principal --username $(Service_Principle_Name) --password $(Service_Priniciple_Password) --tenant $(Tenant_ID)
-                    az acr build --image pt/ihcl-cms:$(short_hash) --registry ihclwebsites --file Dockerfile .
+                    az acr build --image pt/ihcl-cms:$(short_hash) --registry ihclwebsites --file Dockerfile . --build-arg DATASET=$(sanity_data_set_id)
                     az aks get-credentials --resource-group Website_PT_RG --name app-PT-aks
                   displayName: Login to ACR and AKS
                   enabled: true
@@ -195,7 +197,7 @@ stages:
 
                 - bash: |
                     az login --service-principal --username $(Service_Principle_Name) --password $(Service_Priniciple_Password) --tenant $(Tenant_ID)
-                    az acr build --image e2e/ihcl-cms:$(short_hash) --registry ihclwebsites --file Dockerfile .
+                    az acr build --image e2e/ihcl-cms:$(short_hash) --registry ihclwebsites --file Dockerfile . --build-arg DATASET=$(sanity_data_set_id)
                     az aks get-credentials --resource-group Website_E2E_RG --name app-E2E-aks
                   displayName: Login to ACR and AKS
                   enabled: true
