@@ -283,7 +283,7 @@ export const contentTypes = [
   {
     title: "Destinations Holidays",
     value: "destinationsHolidays",
-  }
+  },
 ];
 export const filterAlignmentTypes = [
   {
@@ -443,8 +443,8 @@ export const hotelNavigation = [
   },
   {
     title: "Gift Hamper",
-    value: "gift_hamper_festive"
-  }
+    value: "gift_hamper_festive",
+  },
 ];
 
 export const destinationNavigation = [
@@ -471,7 +471,7 @@ export const destinationNavigation = [
   {
     title: "Holidays",
     value: "holiday_packages",
-  }
+  },
 ];
 
 export const brandNames = [
@@ -797,7 +797,7 @@ export const featureVariants = [
   {
     title: "Offers",
     value: "offers",
-  }
+  },
 ];
 
 export const poweredBy = [
@@ -834,5 +834,5 @@ export const offerTypes = [
   {
     title: "Holiday",
     value: "holiday",
-  }
+  },
 ];

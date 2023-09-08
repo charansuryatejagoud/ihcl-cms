@@ -6,7 +6,11 @@ import {
 } from "react-icons/io5";
 import { SchemaItem, VariantDefinition } from "../../types";
 import { hiddenField } from "../../shared-utils";
-import { contentTypes, filterAlignmentTypes, subContentTypes } from "../../constants";
+import {
+  contentTypes,
+  filterAlignmentTypes,
+  subContentTypes,
+} from "../../constants";
 import { groupAlignmentVariant } from "./group";
 import { cardAlignmentVariant } from "./card";
 
@@ -157,13 +161,13 @@ export default function layoutPlaceholder({
           list: subContentTypes,
         },
         group: "main",
-        hidden: ({ parent }) =>
-          parent?.contentType !== "hotelWellness"
-      },{
+        hidden: ({ parent }) => parent?.contentType !== "hotelWellness",
+      },
+      {
         name: "filterAlignment",
         title: "Filter Alignment",
         type: "string",
-        options: {list: filterAlignmentTypes}
+        options: { list: filterAlignmentTypes },
       },
       {
         name: "parameterMap",
@@ -191,7 +195,7 @@ export default function layoutPlaceholder({
                 name: "colSize",
                 title: "Column Size",
                 type: "number",
-              }
+              },
             ],
             preview: {
               select: {
@@ -228,7 +232,9 @@ export default function layoutPlaceholder({
         const variantText = variant ? `(${variant})` : "";
 
         return {
-          title: `${hiddenIndicator}${title?.toString() ?? "<Layout Placeholder>"}`,
+          title: `${hiddenIndicator}${
+            title?.toString() ?? "<Layout Placeholder>"
+          }`,
           subtitle: `${subtitle ?? ""}${variantText}`,
         };
       },
