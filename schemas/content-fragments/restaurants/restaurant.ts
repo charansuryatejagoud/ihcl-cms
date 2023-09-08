@@ -105,18 +105,18 @@ export default {
           name: "privateDiningInfo",
           title: "Private Dining Info",
           type: "object",
-          fields:[
+          fields: [
             {
-              name:'diningInfo',
-              title:'Dining Info',
-              type:'basicDetails'
+              name: "diningInfo",
+              title: "Dining Info",
+              type: "basicDetails",
             },
             {
-              name:'contactInfo',
-              title:'Contact Info',
-              type:'blockContent'
+              name: "contactInfo",
+              title: "Contact Info",
+              type: "blockContent",
             },
-          ]
+          ],
         },
         {
           name: "locationBasedRestaurants",
@@ -126,12 +126,6 @@ export default {
       ],
     },
     {
-      name: "thumbnailDescription",
-      title: "Thumbnail Description",
-      type: "string",
-      rows: 3,
-    },
-    {
       name: "participatingHotels",
       title: "Participating Hotels",
       type: "array",
@@ -139,34 +133,6 @@ export default {
         {
           type: "reference",
           to: [{ type: "hotel" }],
-        },
-      ],
-    },
-    {
-      name: "restaurantBrandPage",
-      title: "Restaurant Brand Page",
-      type: "object",
-      fields: [
-        {
-          name: "introSection",
-          title: "Intro Section",
-          type: "restaurantDetails",
-        },
-        {
-          name: "restaurantHighlights",
-          title: "Restaurant Highlights",
-          type: "reference",
-          to: [{ type: "highlights" }],
-        },
-        {
-          name: "locationsSection",
-          title: "Locations Section",
-          type: "restaurantDetails",
-        },
-        {
-          name: "otherBrandsSection",
-          title: "Other Brands Section",
-          type: "restaurantDetails",
         },
       ],
     },
