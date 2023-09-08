@@ -32,6 +32,11 @@ export default {
       options: {list : offerTypes}
     },
     {
+      name: "holidayOffer",
+      title: "Holiday Offer",
+      type: "boolean"
+    },
+    {
       name: "offerBannerTitle",
       title: "Offer Banner Title",
       type: "title",
@@ -183,6 +188,22 @@ export default {
                   },
                 },
               ],
+            },
+            {
+              name: "pageTitle",
+              title: "Page Title",
+              type: "string",
+            },
+            {
+              name: "seoKeywords",
+              title: "SEO Keywords",
+              type: "string",
+            },
+            {
+              name: "seoDescription",
+              title: "SEO Description",
+              type: "text",
+              rows: 5,
             }
           ],
           preview: {
@@ -231,22 +252,6 @@ export default {
           ],
         },
       ],
-    },
-    {
-      name: "pageTitle",
-      title: "Page Title",
-      type: "string",
-    },
-    {
-      name: "seoKeywords",
-      title: "SEO Keywords",
-      type: "string",
-    },
-    {
-      name: "seoDescription",
-      title: "SEO Description",
-      type: "text",
-      rows: 5,
     }
   ],
 };
