@@ -93,7 +93,7 @@ stages:
 
                 - bash: |
                     az login --service-principal --username $(Service_Principle_Name) --password $(Service_Priniciple_Password) --tenant $(Tenant_ID)
-                    az aks get-credentials --resource-group Websites_Dev --name app-sit-aks
+                    az aks get-credentials --resource-group Website_SIT_RG --name app-sit-aks
                     az acr build --image sit/ihcl-cms:$(short_hash) --registry ihclwebsites --file Dockerfile .
                     
                   displayName: Login to ACR and AKS
