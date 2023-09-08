@@ -6,7 +6,7 @@ import {
 } from "react-icons/io5";
 import { SchemaItem, VariantDefinition } from "../../types";
 import { hiddenField } from "../../shared-utils";
-import { contentTypes, subContentTypes } from "../../constants";
+import { contentTypes, filterAlignmentTypes, subContentTypes } from "../../constants";
 import { groupAlignmentVariant } from "./group";
 import { cardAlignmentVariant } from "./card";
 
@@ -161,6 +161,12 @@ export default function layoutPlaceholder({
           parent?.contentType !== "hotelWellness"
       },
       {
+        name: "filterAlignment",
+        title: "Filter Alignment",
+        type: "string",
+        options: {list: filterAlignmentTypes}
+      },
+      {
         name: "parameterMap",
         title: "Parameter Map",
         description: "Parameters as a set of key-value pairs",
@@ -182,6 +188,11 @@ export default function layoutPlaceholder({
                 title: "Value",
                 type: "string",
               },
+              {
+                name: "colSize",
+                title: "Column Size",
+                type: "number",
+              }
             ],
             preview: {
               select: {

@@ -1,7 +1,7 @@
 import { IoApps, IoLayers as Icon, IoSettings } from "react-icons/io5";
 import { SchemaItem, VariantDefinition } from "../../types";
 import { hiddenField } from "../../shared-utils";
-import { poweredBy } from "../../constants";
+import { filterAlignmentTypes, poweredBy } from "../../constants";
 
 export const groupAlignmentVariant = [
   {
@@ -292,16 +292,7 @@ export default function group({
         title: "Filter Alignment",
         type: "string",
         options: {
-          list: [
-            {
-              title: "Start",
-              value: "start",
-            },
-            {
-              title: "End",
-              value: "end",
-            },
-          ],
+          list: filterAlignmentTypes,
         },
       },
       {
