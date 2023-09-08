@@ -808,3 +808,18 @@ export const destinationCategory = [
     value: "country",
   },
 ];
+
+export const offerTypes = [
+  {
+    title: "Global",
+    value: "global",
+  },
+  {
+    title: "Hotel Specific",
+    value: "hotel",
+  },
+  {
+    title: "Holiday",
+    value: "holiday",
+  }
+];
