@@ -237,10 +237,6 @@ export const contentTypes = [
     value: "allRestaurants",
   },
   {
-    title: "Restaurant Brands",
-    value: "restaurantBrands",
-  },
-  {
     title: "Restaurant Overview",
     value: "restaurantOverview",
   },
@@ -773,21 +769,6 @@ export const hospitalityTitles = [
   {
     title: "IHCL",
     value: "IHCL",
-  },
-];
-
-export const filterAlignmentTypes = [
-  {
-    title: "Start",
-    value: "start",
-  },
-  {
-    title: "End",
-    value: "end",
-  },
-  {
-    title: "Center",
-    value: "center",
   },
 ];
 
