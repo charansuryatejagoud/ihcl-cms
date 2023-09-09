@@ -241,6 +241,10 @@ export const contentTypes = [
     value: "brandRestaurants",
   },
   {
+    title: "Other Brand Restaurants",
+    value: "otherbrandRestaurants",
+  },
+  {
     title: "Brand Restaurants Intro",
     value: "brandRestaurantsIntro",
   },
