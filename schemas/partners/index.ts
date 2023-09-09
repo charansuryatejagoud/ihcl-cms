@@ -7,6 +7,10 @@ export const partners: FeatureSchemaDefinition = {
         title: "[Partners] Questions And Answers",
         value: "partners.group.questions-and-answers",
       },
+      {
+        title:"[Partners] Multiple Row Two 2 Column Grid",
+        value:"partners.group.multiple-row-2-column-grid"
+      }
     ],
     card: [
       {

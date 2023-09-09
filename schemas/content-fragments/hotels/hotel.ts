@@ -46,7 +46,7 @@ export default {
     },
     {
       name: "hotelPath",
-      title: "URL",
+      title: "Hotel Path",
       type: "string",
     },
     {

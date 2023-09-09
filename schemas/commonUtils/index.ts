@@ -126,6 +126,14 @@ export const ihclcore: FeatureSchemaDefinition = {
         title: "Hotel Address Data",
         value: "ihcl.core.group.hotel-address-data",
       },
+      {
+        title: "Hotel Address Data(Layout Placeholder)",
+        value: "ihcl.core.group.hotel-address-data-layout-placeholder",
+      },
+      {
+        title:"Contact Info",
+        value:"ihcl.core.group.contact-info"
+      },    
       { title: "Multiple Data", value: "ihcl.core.group.multiple-data" },
       {
         title: "Group With Filter Buttons",
@@ -247,6 +255,14 @@ export const ihclcore: FeatureSchemaDefinition = {
         title: "Images With Single Column Grid(Layout Placeholder)",
         value: "ihcl.core.group.images-with-single-column-grid-layout-placeholder",
       },
+      {
+        title: "Default Tab Filter",
+        value: "common-utils.default.tab.filter",
+      },
+      {
+        title:"Filter Address Dropdown",
+        value:"ihcl.core.group.filter-address-dropdown"
+      },
     ],
     card: [
       {
@@ -327,8 +343,16 @@ export const ihclcore: FeatureSchemaDefinition = {
         value: "ihcl.core.card.city-card",
       },
       {
+        title: " Bottom Navigation With Two Buttons",
+        value: "ihcl.core.card.bottom-navigation-with-two-buttons",
+      },
+      {
         title:"4 Column Grid With Bold Title",
         value:"ihcl.core.card.4-column-grid-with-bold-title"
+      },
+      {
+        title:"Center Aligned Content",
+        value:"ihcl.core.card.center-aligned-content"
       }
     ],
     banner: [
@@ -376,6 +400,10 @@ export const ihclcore: FeatureSchemaDefinition = {
         title: "Alert Without Close Cta",
         value: "ihcl.core.alert-without-close-cta",
       },
+      {
+        title:"Cookies System Modal",
+        value:"ihcl.core.cookies-system-modal"
+      }
     ],
     tabs: [
       {
@@ -404,6 +432,6 @@ export const ihclcore: FeatureSchemaDefinition = {
         title:"Subscription",
         value:"common-utils.forms.subscription"
       }
-    ]
+    ],
   },
 };

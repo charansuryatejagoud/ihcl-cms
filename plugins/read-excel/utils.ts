@@ -130,7 +130,6 @@ async function fetchByType({ title, type }) {
     const res = await client.fetch(
       `*[_type == "${type}" && title == "${title}"][0]{...}`,
     );
-
     return res;
   } catch (err) {
     console.error(err);
@@ -140,13 +139,14 @@ async function fetchByType({ title, type }) {
 function generateFacilityInfo(props: FacilityInfoType) {
   const data = {
     title: props?.title,
-    icon: {
-      _type: TYPE_IMAGE,
-      asset: {
-        _ref: props?._imageRef,
-        _type: TYPE_REFERENCE,
+    icon: props?._imageRef &&
+      props?._imageRef != "" && {
+        _type: TYPE_IMAGE,
+        asset: {
+          _ref: props?._imageRef,
+          _type: TYPE_REFERENCE,
+        },
       },
-    },
     list: props?.list && props.list,
     _type: TYPE_FACILITY_INFO,
     _key: props?._key,
@@ -496,7 +496,6 @@ function extractTaxonomyData(data: any) {
   data?.lunch && (finalData.lunch = data?.lunch);
   data?.dinner && (finalData.dinner = data?.dinner);
   data?.destinationPath && (finalData.destinationPath = data?.destinationPath);
-  console.log(finalData);
   return finalData;
 }
 

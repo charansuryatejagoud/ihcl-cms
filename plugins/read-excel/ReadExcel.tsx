@@ -12,7 +12,7 @@ import Destinations from "./Destinations";
 import ExclusiveOffers from "./ExclusiveOffers";
 
 function ReadExcel() {
-  const [selected, setSelected] = useState("Hotel Information");
+  const [selected, setSelected] = useState("Address");
   const dropDown = [
     "Hotel Information",
     "Contact",
