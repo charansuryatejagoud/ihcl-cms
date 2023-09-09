@@ -186,7 +186,10 @@ export const ihclcore: FeatureSchemaDefinition = {
         title: "Carousel With 3 Column Grid",
         value: "ihcl.core.group.carousel-with-three-column-grid",
       },
-
+      {
+        title: "Carousel With 3 Column Grid(Layout Placeholder)",
+        value: "ihcl.core.group.carousel-with-three-column-grid-layout-placeholder",
+      },
       {
         title: "4 Column Rectangle Grid",
         value: "ihcl.core.group.four-column-rectangle-grid",

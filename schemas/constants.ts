@@ -237,6 +237,18 @@ export const contentTypes = [
     value: "allRestaurants",
   },
   {
+    title: "Brand Restaurants",
+    value: "brandRestaurants",
+  },
+  {
+    title: "Brand Restaurants Intro",
+    value: "brandRestaurantsIntro",
+  },
+  {
+    title: "Brand Restaurants Locations",
+    value: "brandRestaurantsLocations",
+  },
+  {
     title: "Restaurant Overview",
     value: "restaurantOverview",
   },

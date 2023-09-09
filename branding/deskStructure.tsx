@@ -57,6 +57,7 @@ const contentSection = S.listItem()
       S.listItem().title("Hotels").icon(ListItemIcon).child(S.documentTypeList("hotel")),
       S.listItem().title("Destinations").icon(ListItemIcon).child(S.documentTypeList("destination")),
       S.listItem().title("Restaurants").icon(ListItemIcon).child(S.documentTypeList("restaurants")),
+      S.listItem().title("Restaurant Brands").icon(ListItemIcon).child(S.documentTypeList("restaurantBrand")),
       S.listItem().title("Offers").icon(ListItemIcon).child(S.documentTypeList("offerPackages")),
       S.listItem().title("Vouchers").icon(ListItemIcon).child(S.documentTypeList("vouchers")),
       S.listItem().title("Venues").icon(ListItemIcon).child(S.documentTypeList("venues")),
