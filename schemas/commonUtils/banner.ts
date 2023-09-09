@@ -37,6 +37,10 @@ export const bannerVariants = [
     title: "Hero Banner (Layout Placeholder)",
     value: "hero-banner-layout-placeholder",
   },
+  {
+    title:"Image Hider",
+    value:"image-hider"
+  }
 ];
 
 export default {
@@ -143,6 +147,10 @@ export default {
           {
             title: "Global Booking Mask",
             value: "ihcl.banner.global-booking-mask",
+          },
+          {
+            title: "Global Booking Mask With Prices",
+            value: "ihcl.banner.global-booking-mask-with-prices",
           },
         ],
       },

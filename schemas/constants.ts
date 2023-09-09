@@ -237,6 +237,18 @@ export const contentTypes = [
     value: "allRestaurants",
   },
   {
+    title: "Brand Restaurants",
+    value: "brandRestaurants",
+  },
+  {
+    title: "Brand Restaurants Intro",
+    value: "brandRestaurantsIntro",
+  },
+  {
+    title: "Brand Restaurants Locations",
+    value: "brandRestaurantsLocations",
+  },
+  {
     title: "Restaurant Overview",
     value: "restaurantOverview",
   },
@@ -695,8 +707,8 @@ export const searchCategoryType = [
 
 export const hotelFeatures = [
   {
-    title: "Jiva Spa",
-    value: "Jiva Spa",
+    title: "J Wellness",
+    value: "J Wellness",
   },
   {
     title: "Khazana",
