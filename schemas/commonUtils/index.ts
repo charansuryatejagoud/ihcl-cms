@@ -203,6 +203,10 @@ export const ihclcore: FeatureSchemaDefinition = {
         value: "ihcl.core.group.carousel-with-tabs",
       },
       {
+        title: "Destinations Carousel With Tabs(Layout Placeholder)",
+        value: "ihcl.core.group.carousel-with-tabs-layout-placeholder",
+      },
+      {
         title: "Multi Static With Tabs",
         value: "ihcl.core.group.multi-static-with-tabs",
       },
