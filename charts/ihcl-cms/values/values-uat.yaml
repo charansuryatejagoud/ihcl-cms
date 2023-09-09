@@ -1,0 +1,4 @@
+image:
+  repository: ihclwebsites.azurecr.io/uat/ihcl-cms
+nameOverride: "ihcl-cms"
+fullnameOverride: "ihcl-cms"

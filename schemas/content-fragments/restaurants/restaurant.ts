@@ -28,6 +28,7 @@ export default {
       name: "thumbnailDescription",
       title: "Thumbnail Description",
       type: "string",
+      rows: 3,
     },
     {
       name: "gallery",

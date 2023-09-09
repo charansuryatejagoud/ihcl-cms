@@ -283,9 +283,22 @@ export const contentTypes = [
   {
     title: "Destinations Holidays",
     value: "destinationsHolidays",
-  }
+  },
 ];
-
+export const filterAlignmentTypes = [
+  {
+    title: "Start",
+    value: "start",
+  },
+  {
+    title: "End",
+    value: "end",
+  },
+  {
+    title: "Center",
+    value: "center",
+  },
+];
 export const subContentTypes = [
   {
     title: "Signature Treatments",
@@ -430,8 +443,8 @@ export const hotelNavigation = [
   },
   {
     title: "Gift Hamper",
-    value: "gift_hamper_festive"
-  }
+    value: "gift_hamper_festive",
+  },
 ];
 
 export const destinationNavigation = [
@@ -458,7 +471,7 @@ export const destinationNavigation = [
   {
     title: "Holidays",
     value: "holiday_packages",
-  }
+  },
 ];
 
 export const brandNames = [
@@ -784,7 +797,7 @@ export const featureVariants = [
   {
     title: "Offers",
     value: "offers",
-  }
+  },
 ];
 
 export const poweredBy = [
@@ -806,5 +819,20 @@ export const destinationCategory = [
   {
     title: "Country",
     value: "country",
+  },
+];
+
+export const offerTypes = [
+  {
+    title: "Global",
+    value: "global",
+  },
+  {
+    title: "Hotel Specific",
+    value: "hotel",
+  },
+  {
+    title: "Holiday",
+    value: "holiday",
   },
 ];
