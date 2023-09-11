@@ -1,7 +1,6 @@
 import React, { useRef, useState } from "react";
 import { Button, Flex } from "@sanity/ui";
 import * as XLSX from "xlsx";
-import { customAlphabet } from "nanoid";
 import { client } from "./client";
 import { getHotelDocument, getHotelQuery } from "./utils";
 
@@ -66,7 +65,6 @@ function extractDestinationData({ data }, returnObject: any = {}) {
 function Hotels() {
   const ref: any = useRef();
   const [hotels, setHotels] = useState([]);
-  const nanoid = customAlphabet("1234567890abcdef", 12);
 
   const handleFile = async (e) => {
     e.preventDefault();
