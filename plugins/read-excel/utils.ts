@@ -34,8 +34,10 @@ import {
   TYPE_AVAILABILITY,
   TYPE_BULLET_POINTS,
   TYPE_FACILITY_INFO,
+  TYPE_HOTEL,
   TYPE_IMAGE,
   TYPE_REFERENCE,
+  TYPE_TITLE,
   WELLNESS,
   availabilitySectionTitle,
 } from "./constants";
@@ -545,6 +547,411 @@ function extractDestinationData(data: any) {
   return finalData;
 }
 
+function compareValues({ excelData, documentData, key }) {
+  if (documentData?.[key]) {
+    if (documentData?.[key] == excelData?.[key]) {
+      return documentData?.[key];
+    } else {
+      return excelData?.[key];
+    }
+  } else {
+    return excelData?.[key];
+  }
+}
+
+async function fetchDocument({ type, identifierKey, identifierValue }) {
+  const response = await client
+    .fetch(
+      `*[_type == "${type}" && ${identifierKey} == "${identifierValue}"][0]{...}`,
+    )
+    .then((res) => {
+      return { ...res };
+    })
+    .catch((error) => {
+      console.log("Error while fetching documnet", error);
+      return null;
+    });
+  return response;
+}
+
+function getHotelQuery({ identifierKey, identifierValue }) {
+  return `*[_type == "hotel" && ${identifierKey} == "${identifierValue}"][0]{
+    ...,
+    hotelNavigation->{...},
+    gcCategory->{...},
+    searchTaxonomies->{...},
+    hotelOverview->{...},
+    hotelAddress->{...},
+    hotelContact->{...},
+    hotelAvailability->{...},
+    hotelFacilities->{...},
+    hotelAwards->{...},
+    hotelSocialInfo->{...},
+    hotelRooms->{...},
+    hotelHighlights->{...},
+    hotelExclusiveOffersDining->{...},
+    hotelExclusiveOffersWellness->{...},
+    hotelExclusiveOffersRooms->{...},
+    hotelOffers->{...},
+    hotelHolidays->{...},
+    hotelSignatureDining->{...},
+    hotelEventVenues->{...},
+    hotelWellness->{...},
+    hotelExperiences->{...},
+    hotelGallery->{...},
+    hotelAttractions->{...}}`;
+}
+
+async function getHotelDocument(
+  { excelData, document = null },
+  returnData: any = {},
+) {
+  if (!document) {
+    returnData._type = TYPE_HOTEL;
+    returnData.hotelName = excelData?.hotelName;
+  }
+  //hotelBannerTitle
+  returnData.hotelBannerTitle = {
+    _type: TYPE_TITLE,
+  };
+  //hotelDescription
+  const hotelDescription = compareValues({
+    excelData: excelData,
+    documentData: document,
+    key: "hotelDescription",
+  });
+  hotelDescription && (returnData.hotelDescription = hotelDescription);
+
+  //hotelId
+  const hotelId = compareValues({
+    excelData: excelData,
+    documentData: document,
+    key: "hotelId",
+  });
+  hotelId && (returnData.hotelId = hotelId);
+
+  //identifier
+  const identifier = compareValues({
+    excelData: excelData,
+    documentData: document,
+    key: "identifier",
+  });
+  identifier && (returnData.identifier = identifier);
+
+  //brandName
+  const brandName = compareValues({
+    excelData: excelData,
+    documentData: document,
+    key: "brandName",
+  });
+  brandName && (returnData.brandName = brandName);
+
+  //brandId
+  const brandId = compareValues({
+    excelData: excelData,
+    documentData: document,
+    key: "brandId",
+  });
+  brandId && (returnData.brandId = String(brandId));
+
+  //hotelPath
+  const hotelPath = compareValues({
+    excelData: excelData,
+    documentData: document,
+    key: "hotelPath",
+  });
+  hotelPath && (returnData.hotelPath = hotelPath);
+
+  //hotelSubType
+  const hotelSubType = compareValues({
+    excelData: excelData,
+    documentData: document,
+    key: "hotelSubType",
+  });
+  hotelSubType && (returnData.hotelSubType = hotelSubType);
+
+  excelData?.hotelOverview;
+
+  //hotelBannerTitle - hotelBannerMobileTitle
+  if (excelData?.hotelBannerMobileTitle?.length > 0) {
+    returnData.hotelBannerTitle.mobileTitle = excelData?.hotelBannerMobileTitle;
+  }
+  //hotelBannerTitle - hotelBannerDesktopTitle
+  if (excelData?.hotelBannerDesktopTitle?.length > 0) {
+    returnData.hotelBannerTitle.desktopTitle =
+      excelData?.hotelBannerDesktopTitle;
+  }
+  //hotelNavigation
+  const hotelNavigation = await getRefererenceObject({
+    excelData: excelData,
+    documentData: document,
+    key: "hotelNavigation",
+    type: "hotelNavigation",
+    identifierKey: "navType",
+  });
+  hotelNavigation && (returnData.hotelNavigation = hotelNavigation);
+  //gcCategory
+  const gcCategory = await getRefererenceObject({
+    excelData: excelData,
+    documentData: document,
+    key: "gcCategory",
+    type: "giftCardsDetails",
+    identifierKey: "name", //"sku"
+  });
+  gcCategory && (returnData.gcCategory = gcCategory);
+  //searchTaxonomies
+  const searchTaxonomies = await getRefererenceObject({
+    excelData: excelData,
+    documentData: document,
+    key: "searchTaxonomies",
+    type: "taxonomyInfo",
+    identifierKey: "title", //"sku"
+  });
+  searchTaxonomies && (returnData.searchTaxonomies = searchTaxonomies);
+  //hotelOverview
+  const hotelOverview = await getRefererenceObject({
+    excelData: excelData,
+    documentData: document,
+    key: "hotelOverview",
+    type: "overview",
+    identifierKey: "title",
+  });
+  hotelOverview && (returnData.hotelOverview = hotelOverview);
+
+  //hotelAddress
+  const hotelAddress = await getRefererenceObject({
+    excelData: excelData,
+    documentData: document,
+    key: "hotelAddress",
+    type: "address",
+    identifierKey: "title", //"sku"
+  });
+  hotelAddress && (returnData.hotelAddress = hotelAddress);
+
+  //hotelContact
+  const hotelContact = await getRefererenceObject({
+    excelData: excelData,
+    documentData: document,
+    key: "hotelContact",
+    type: "contact",
+    identifierKey: "title", //"sku"
+  });
+  hotelContact && (returnData.hotelContact = hotelContact);
+
+  //hotelAvailability
+  const hotelAvailability = await getRefererenceObject({
+    excelData: excelData,
+    documentData: document,
+    key: "hotelAvailability",
+    type: "availability",
+    identifierKey: "title", //"sku"
+  });
+  hotelAvailability && (returnData.hotelAvailability = hotelAvailability);
+  //hotelFacilities
+  const hotelFacilities = await getRefererenceObject({
+    excelData: excelData,
+    documentData: document,
+    key: "hotelFacilities",
+    type: "facilities",
+    identifierKey: "title", //"sku"
+  });
+  hotelFacilities && (returnData.hotelFacilities = hotelFacilities);
+  //hotelAwards
+  const hotelAwards = await getRefererenceObject({
+    excelData: excelData,
+    documentData: document,
+    key: "hotelAwards",
+    type: "awards",
+    identifierKey: "title", //"sku"
+  });
+  hotelAwards && (returnData.hotelAwards = hotelAwards);
+  //hotelSocialInfo
+  const hotelSocialInfo = await getRefererenceObject({
+    excelData: excelData,
+    documentData: document,
+    key: "hotelSocialInfo",
+    type: "socialInfo",
+    identifierKey: "title", //"sku"
+  });
+  hotelSocialInfo && (returnData.hotelSocialInfo = hotelSocialInfo);
+  //hotelRooms
+  const hotelRooms = await getRefererenceObject({
+    excelData: excelData,
+    documentData: document,
+    key: "hotelRooms",
+    type: "rooms",
+    identifierKey: "title", //"sku"
+  });
+  hotelRooms && (returnData.hotelRooms = hotelRooms);
+  //hotelHighlights
+  const hotelHighlights = await getRefererenceObject({
+    excelData: excelData,
+    documentData: document,
+    key: "hotelHighlights",
+    type: "highlights",
+    identifierKey: "title", //"sku"
+  });
+  hotelHighlights && (returnData.hotelHighlights = hotelHighlights);
+  //hotelExclusiveOffersDining
+  const hotelExclusiveOffersDining = await getRefererenceObject({
+    excelData: excelData,
+    documentData: document,
+    key: "hotelExclusiveOffersDining",
+    type: "exclusiveOffers",
+    identifierKey: "title", //"sku"
+  });
+  hotelExclusiveOffersDining &&
+    (returnData.hotelExclusiveOffersDining = hotelExclusiveOffersDining);
+  //hotelExclusiveOffersWellness
+  const hotelExclusiveOffersWellness = await getRefererenceObject({
+    excelData: excelData,
+    documentData: document,
+    key: "hotelExclusiveOffersWellness",
+    type: "exclusiveOffers",
+    identifierKey: "title", //"sku"
+  });
+  hotelExclusiveOffersWellness &&
+    (returnData.hotelExclusiveOffersWellness = hotelExclusiveOffersWellness);
+  //hotelExclusiveOffersRooms
+  const hotelExclusiveOffersRooms = await getRefererenceObject({
+    excelData: excelData,
+    documentData: document,
+    key: "hotelExclusiveOffersRooms",
+    type: "exclusiveOffers",
+    identifierKey: "title", //"sku"
+  });
+  hotelExclusiveOffersRooms &&
+    (returnData.hotelExclusiveOffersRooms = hotelExclusiveOffersRooms);
+
+  //hotelOffers
+  const hotelOffers = await getRefererenceObject({
+    excelData: excelData,
+    documentData: document,
+    key: "hotelOffers",
+    type: "offers",
+    identifierKey: "title", //"sku"
+  });
+  hotelOffers && (returnData.hotelOffers = hotelOffers);
+
+  //hotelHolidays
+  const hotelHolidays = await getRefererenceObject({
+    excelData: excelData,
+    documentData: document,
+    key: "hotelHolidays",
+    type: "holidays",
+    identifierKey: "title", //"sku"
+  });
+  hotelHolidays && (returnData.hotelHolidays = hotelHolidays);
+  //hotelSignatureDining
+  const hotelSignatureDining = await getRefererenceObject({
+    excelData: excelData,
+    documentData: document,
+    key: "hotelSignatureDining",
+    type: "signatureDining",
+    identifierKey: "title", //"sku"
+  });
+  hotelSignatureDining &&
+    (returnData.hotelSignatureDining = hotelSignatureDining);
+  //hotelEventVenues
+  const hotelEventVenues = await getRefererenceObject({
+    excelData: excelData,
+    documentData: document,
+    key: "hotelEventVenues",
+    type: "venues",
+    identifierKey: "title", //"sku"
+  });
+  hotelEventVenues && (returnData.hotelEventVenues = hotelEventVenues);
+  //hotelWellness
+  const hotelWellness = await getRefererenceObject({
+    excelData: excelData,
+    documentData: document,
+    key: "hotelWellness",
+    type: "wellness",
+    identifierKey: "title", //"sku"
+  });
+  hotelWellness && (returnData.hotelWellness = hotelWellness);
+  //hotelExperiences
+  const hotelExperiences = await getRefererenceObject({
+    excelData: excelData,
+    documentData: document,
+    key: "hotelExperiences",
+    type: "experiences",
+    identifierKey: "title", //"sku"
+  });
+  hotelExperiences && (returnData.hotelExperiences = hotelExperiences);
+  //hotelGallery
+  const hotelGallery = await getRefererenceObject({
+    excelData: excelData,
+    documentData: document,
+    key: "hotelGallery",
+    type: "gallery",
+    identifierKey: "title", //"sku"
+  });
+  hotelGallery && (returnData.hotelGallery = hotelGallery);
+  //hotelAttractions
+  const hotelAttractions = await getRefererenceObject({
+    excelData: excelData,
+    documentData: document,
+    key: "hotelAttractions",
+    type: "attractions",
+    identifierKey: "title", //"sku"
+  });
+  hotelAttractions && (returnData.hotelAttractions = hotelAttractions);
+
+  return returnData;
+}
+
+async function getRefererenceObject({
+  excelData,
+  documentData,
+  key,
+  type,
+  identifierKey,
+}) {
+  if (documentData?.[key]?.[identifierKey]) {
+    if (excelData?.[key]) {
+      if (documentData?.[key]?.[identifierKey] == excelData?.[key]) {
+        return {
+          _ref: documentData?.[key]?._id.replace("drafts.", ""),
+          _type: TYPE_REFERENCE,
+        };
+      } else {
+        const _typedDocument = await fetchDocument({
+          identifierKey: identifierKey,
+          identifierValue: excelData?.[key],
+          type: type,
+        });
+        if (_typedDocument?._id) {
+          return {
+            _ref: _typedDocument?._id.replace("drafts.", ""),
+            _type: TYPE_REFERENCE,
+          };
+        }
+      }
+    } else {
+      return {
+        _ref: documentData?.[key]?._id.replace("drafts.", ""),
+        _type: TYPE_REFERENCE,
+      };
+    }
+  } else {
+    if (excelData?.[key]) {
+      const _typedDocument = await fetchDocument({
+        identifierKey: identifierKey,
+        identifierValue: excelData?.[key],
+        type: type,
+      });
+      if (_typedDocument?._id) {
+        return {
+          _ref: _typedDocument?._id.replace("drafts.", ""),
+          _type: TYPE_REFERENCE,
+        };
+      }
+    }
+    return;
+  }
+}
+
 export {
   Update,
   Create,
@@ -554,4 +961,9 @@ export {
   extractTaxonomyData,
   ConvertJSONValuesToString,
   extractDestinationData,
+  compareValues,
+  fetchDocument,
+  getHotelQuery,
+  getHotelDocument,
+  getRefererenceObject,
 };

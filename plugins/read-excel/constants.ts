@@ -65,6 +65,7 @@ export const TYPE_MEDIA_INFO = "mediaInput";
 export const TYPE_IMAGE_ASSET = "imageAsset";
 export const TYPE_EXCLUSIVE_OFFERS = "exclusiveOffers";
 export const TYPE_ADDRESS = "address";
+export const TYPE_HOTEL = "hotel";
 
 export const KEY_DESKTOP_TITLE = "desktopTitle";
 export const KEY_MOBILE_TITLE = "mobileTitle";
