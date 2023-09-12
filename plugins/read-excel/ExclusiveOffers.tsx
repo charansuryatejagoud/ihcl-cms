@@ -3,7 +3,6 @@ import { Button, Flex } from "@sanity/ui";
 import * as XLSX from "xlsx";
 import { customAlphabet } from "nanoid";
 import { client } from "./client";
-import { async } from "rxjs";
 import { TYPE_EXCLUSIVE_OFFERS, TYPE_TITLE } from "./constants";
 
 function extractDestinationData({ data }, returnObject: any = {}) {

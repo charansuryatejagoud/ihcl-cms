@@ -6,12 +6,14 @@ import Highlights from "./Highlights";
 import Address from "./Address";
 import DiningInfo from "./DiningInfo";
 import TaxonomyInfo from "./TaxonomyInfo";
+import Facilities from "./Facilities";
 import Restaurants from "./Restaurants";
 import Destinations from "./Destinations";
 import ExclusiveOffers from "./ExclusiveOffers";
+import Hotels from "./Hotels";
 
 function ReadExcel() {
-  const [selected, setSelected] = useState("Address");
+  const [selected, setSelected] = useState("Hotels");
   const dropDown = [
     "Hotel Information",
     "Contact",
@@ -20,8 +22,10 @@ function ReadExcel() {
     "Restaurants",
     "Dining",
     "TaxonomyInfo",
+    "Facilities",
     "Destinations",
     "Exclusive Offers",
+    "Hotels"
   ];
 
   function handleChange(event: any): void {
@@ -72,9 +76,11 @@ function ReadExcel() {
               {selected == "Address" && <Address />}
               {selected == "Dining" && <DiningInfo />}
               {selected == "TaxonomyInfo" && <TaxonomyInfo />}
+              {selected == "Facilities" && <Facilities type="production" />}
               {selected == "Restaurants" && <Restaurants />}
               {selected == "Destinations" && <Destinations />}
               {selected == "Exclusive Offers" && <ExclusiveOffers />}
+              {selected == "Hotels" && <Hotels />}
             </Stack>
           </Box>
         </Grid>

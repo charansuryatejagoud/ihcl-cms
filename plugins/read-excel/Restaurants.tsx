@@ -2,7 +2,12 @@ import React, { useRef, useState } from "react";
 import { Button, Flex } from "@sanity/ui";
 import * as XLSX from "xlsx";
 import { finalRestaurantsInfoObj } from "./dynamic";
-import { ConvertJSONValuesToString, Create, Update, fetchByType } from "./utils";
+import {
+  ConvertJSONValuesToString,
+  Create,
+  Update,
+  fetchByType,
+} from "./utils";
 
 function Restaurants() {
   const [excelData, setExcelData] = useState([]);
@@ -20,7 +25,7 @@ function Restaurants() {
 
         setExcelData(
           jsonData.map((data: object) => {
-            return ConvertJSONValuesToString(data)
+            return ConvertJSONValuesToString(data);
           }),
         );
       };
