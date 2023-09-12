@@ -4,6 +4,7 @@ import * as XLSX from "xlsx";
 import { TYPE_ADDRESS, TYPE_TITLE } from "./constants";
 import { customAlphabet } from "nanoid";
 import { client } from "./client";
+import { compareValues } from "./utils";
 
 function extractAddressData({ data }, returnObject: any = {}) {
   data?.hotelTitle && (returnObject.hotelTitle = data?.hotelTitle);
@@ -261,19 +262,6 @@ function getDocument({ excelData, document = null }, returnData: any = {}) {
       };
     });
   return returnData;
-}
-
-function compareValues({ excelData, documentData, key }) {
-  if (documentData?.[key]) {
-    if (documentData?.[key] == excelData?.[key]) {
-      return documentData?.[key];
-    } else {
-      return excelData?.[key];
-    }
-  } else {
-    return excelData?.[key];
-  }
-  return;
 }
 
 export default Address;

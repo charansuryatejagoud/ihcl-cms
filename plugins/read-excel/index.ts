@@ -1,10 +1,11 @@
-import Contact from "./Contact";
 import ReadExcel from "./ReadExcel";
-import ReadExcelIcon from "./ReadExcelIcon";
+import {
+  TbTransform
+} from "react-icons/tb";
 
 export default {
   title: "Read Excel",
   name: "readexcel",
-  icon: ReadExcelIcon,
+  icon:   TbTransform,
   component: ReadExcel,
 };
