@@ -6,6 +6,7 @@ import Highlights from "./Highlights";
 import Address from "./Address";
 import DiningInfo from "./DiningInfo";
 import TaxonomyInfo from "./TaxonomyInfo";
+import Facilities from "./Facilities";
 import Restaurants from "./Restaurants";
 import Destinations from "./Destinations";
 import ExclusiveOffers from "./ExclusiveOffers";
@@ -21,6 +22,7 @@ function ReadExcel() {
     "Restaurants",
     "Dining",
     "TaxonomyInfo",
+    "Facilities",
     "Destinations",
     "Exclusive Offers",
     "Hotels"
@@ -74,6 +76,7 @@ function ReadExcel() {
               {selected == "Address" && <Address />}
               {selected == "Dining" && <DiningInfo />}
               {selected == "TaxonomyInfo" && <TaxonomyInfo />}
+              {selected == "Facilities" && <Facilities type="production" />}
               {selected == "Restaurants" && <Restaurants />}
               {selected == "Destinations" && <Destinations />}
               {selected == "Exclusive Offers" && <ExclusiveOffers />}
