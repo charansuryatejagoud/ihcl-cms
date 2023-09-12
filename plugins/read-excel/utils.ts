@@ -610,10 +610,12 @@ async function getHotelDocument(
     returnData._type = TYPE_HOTEL;
     returnData.hotelName = excelData?.hotelName;
   }
+
   //hotelBannerTitle
   returnData.hotelBannerTitle = {
     _type: TYPE_TITLE,
   };
+
   //hotelDescription
   const hotelDescription = compareValues({
     excelData: excelData,
@@ -670,17 +672,17 @@ async function getHotelDocument(
   });
   hotelSubType && (returnData.hotelSubType = hotelSubType);
 
-  excelData?.hotelOverview;
-
   //hotelBannerTitle - hotelBannerMobileTitle
   if (excelData?.hotelBannerMobileTitle?.length > 0) {
     returnData.hotelBannerTitle.mobileTitle = excelData?.hotelBannerMobileTitle;
   }
+
   //hotelBannerTitle - hotelBannerDesktopTitle
   if (excelData?.hotelBannerDesktopTitle?.length > 0) {
     returnData.hotelBannerTitle.desktopTitle =
       excelData?.hotelBannerDesktopTitle;
   }
+
   //hotelNavigation
   const hotelNavigation = await getRefererenceObject({
     excelData: excelData,
@@ -690,6 +692,7 @@ async function getHotelDocument(
     identifierKey: "navType",
   });
   hotelNavigation && (returnData.hotelNavigation = hotelNavigation);
+
   //gcCategory
   const gcCategory = await getRefererenceObject({
     excelData: excelData,
@@ -699,6 +702,7 @@ async function getHotelDocument(
     identifierKey: "name", //"sku"
   });
   gcCategory && (returnData.gcCategory = gcCategory);
+
   //searchTaxonomies
   const searchTaxonomies = await getRefererenceObject({
     excelData: excelData,
@@ -708,6 +712,7 @@ async function getHotelDocument(
     identifierKey: "title", //"sku"
   });
   searchTaxonomies && (returnData.searchTaxonomies = searchTaxonomies);
+
   //hotelOverview
   const hotelOverview = await getRefererenceObject({
     excelData: excelData,
@@ -747,6 +752,7 @@ async function getHotelDocument(
     identifierKey: "title", //"sku"
   });
   hotelAvailability && (returnData.hotelAvailability = hotelAvailability);
+
   //hotelFacilities
   const hotelFacilities = await getRefererenceObject({
     excelData: excelData,
@@ -756,6 +762,7 @@ async function getHotelDocument(
     identifierKey: "title", //"sku"
   });
   hotelFacilities && (returnData.hotelFacilities = hotelFacilities);
+
   //hotelAwards
   const hotelAwards = await getRefererenceObject({
     excelData: excelData,
@@ -765,6 +772,7 @@ async function getHotelDocument(
     identifierKey: "title", //"sku"
   });
   hotelAwards && (returnData.hotelAwards = hotelAwards);
+
   //hotelSocialInfo
   const hotelSocialInfo = await getRefererenceObject({
     excelData: excelData,
@@ -774,6 +782,7 @@ async function getHotelDocument(
     identifierKey: "title", //"sku"
   });
   hotelSocialInfo && (returnData.hotelSocialInfo = hotelSocialInfo);
+
   //hotelRooms
   const hotelRooms = await getRefererenceObject({
     excelData: excelData,
@@ -783,6 +792,7 @@ async function getHotelDocument(
     identifierKey: "title", //"sku"
   });
   hotelRooms && (returnData.hotelRooms = hotelRooms);
+
   //hotelHighlights
   const hotelHighlights = await getRefererenceObject({
     excelData: excelData,
@@ -792,6 +802,7 @@ async function getHotelDocument(
     identifierKey: "title", //"sku"
   });
   hotelHighlights && (returnData.hotelHighlights = hotelHighlights);
+
   //hotelExclusiveOffersDining
   const hotelExclusiveOffersDining = await getRefererenceObject({
     excelData: excelData,
@@ -802,6 +813,7 @@ async function getHotelDocument(
   });
   hotelExclusiveOffersDining &&
     (returnData.hotelExclusiveOffersDining = hotelExclusiveOffersDining);
+
   //hotelExclusiveOffersWellness
   const hotelExclusiveOffersWellness = await getRefererenceObject({
     excelData: excelData,
@@ -812,6 +824,7 @@ async function getHotelDocument(
   });
   hotelExclusiveOffersWellness &&
     (returnData.hotelExclusiveOffersWellness = hotelExclusiveOffersWellness);
+
   //hotelExclusiveOffersRooms
   const hotelExclusiveOffersRooms = await getRefererenceObject({
     excelData: excelData,
@@ -842,6 +855,7 @@ async function getHotelDocument(
     identifierKey: "title", //"sku"
   });
   hotelHolidays && (returnData.hotelHolidays = hotelHolidays);
+
   //hotelSignatureDining
   const hotelSignatureDining = await getRefererenceObject({
     excelData: excelData,
@@ -852,6 +866,7 @@ async function getHotelDocument(
   });
   hotelSignatureDining &&
     (returnData.hotelSignatureDining = hotelSignatureDining);
+
   //hotelEventVenues
   const hotelEventVenues = await getRefererenceObject({
     excelData: excelData,
@@ -861,6 +876,7 @@ async function getHotelDocument(
     identifierKey: "title", //"sku"
   });
   hotelEventVenues && (returnData.hotelEventVenues = hotelEventVenues);
+
   //hotelWellness
   const hotelWellness = await getRefererenceObject({
     excelData: excelData,
@@ -870,6 +886,7 @@ async function getHotelDocument(
     identifierKey: "title", //"sku"
   });
   hotelWellness && (returnData.hotelWellness = hotelWellness);
+
   //hotelExperiences
   const hotelExperiences = await getRefererenceObject({
     excelData: excelData,
@@ -879,6 +896,7 @@ async function getHotelDocument(
     identifierKey: "title", //"sku"
   });
   hotelExperiences && (returnData.hotelExperiences = hotelExperiences);
+
   //hotelGallery
   const hotelGallery = await getRefererenceObject({
     excelData: excelData,
@@ -888,6 +906,7 @@ async function getHotelDocument(
     identifierKey: "title", //"sku"
   });
   hotelGallery && (returnData.hotelGallery = hotelGallery);
+
   //hotelAttractions
   const hotelAttractions = await getRefererenceObject({
     excelData: excelData,
@@ -900,7 +919,6 @@ async function getHotelDocument(
 
   return returnData;
 }
-
 async function getRefererenceObject({
   excelData,
   documentData,
