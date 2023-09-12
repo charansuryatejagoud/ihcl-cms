@@ -519,7 +519,8 @@ function extractDestinationData(data: any) {
     (finalData.hotelCode = data?.description)?.trim();
   isEmptyString(data?.destinationURL) &&
     (finalData.destinationURL = data?.destinationURL?.trim());
-
+  isEmptyString(data?.country) && (finalData.country = data?.country?.trim());
+  isEmptyString(data?.city) && (finalData.city = data?.city?.trim());
   isEmptyString(data?.bannerDesktopTitle) &&
     (finalData.bannerDesktopTitle = splitString({
       data: data?.bannerDesktopTitle?.trim(),
