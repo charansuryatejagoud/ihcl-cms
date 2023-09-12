@@ -79,7 +79,7 @@ import {
 
 function splitString({ data, character }: SplitStringType) {
   if (data != null && data != "" && character != null && character != "") {
-    return data.split(character);
+    return data.split(character)?.map((value) => value?.trim());
   }
   return null;
 }
