@@ -18,6 +18,11 @@ export default {
       name: "sku",
     },
     {
+      name: "identifier",
+      title: "Identifier",
+      type: "string",
+    },
+    {
       title: "Name",
       type: "string",
       name: "name",
