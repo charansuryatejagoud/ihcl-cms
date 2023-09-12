@@ -83,6 +83,22 @@ export const hotelTypes = [
     title: "Residencies",
     value: "Residencies",
   },
+  {
+    title: "Bungalow",
+    value: "Bungalow",
+  },
+  {
+    title: "Beach",
+    value: "Beach",
+  },
+  {
+    title: "Mountains",
+    value: "Mountains",
+  },
+  {
+    title: "Lakeside",
+    value: "Lakeside",
+  },
 ];
 
 export const holidayThemes = [
