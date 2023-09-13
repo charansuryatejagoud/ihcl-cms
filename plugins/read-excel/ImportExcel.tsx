@@ -12,7 +12,7 @@ import Destinations from "./Destinations";
 import ExclusiveOffers from "./ExclusiveOffers";
 import Hotels from "./Hotels";
 
-function ReadExcel() {
+function ImportExcel() {
   const [selected, setSelected] = useState("Hotels");
   const dropDown = [
     "Hotel Information",
@@ -25,7 +25,7 @@ function ReadExcel() {
     "Facilities",
     "Destinations",
     "Exclusive Offers",
-    "Hotels"
+    "Hotels",
   ];
 
   function handleChange(event: any): void {
@@ -89,4 +89,4 @@ function ReadExcel() {
   );
 }
 
-export default ReadExcel;
+export default ImportExcel;

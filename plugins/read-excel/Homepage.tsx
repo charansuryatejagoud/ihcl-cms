@@ -1,7 +1,7 @@
-import { Card, TabList, Tab, TabPanel } from "@sanity/ui";
+import { Card, TabList, Tab, TabPanel, Text } from "@sanity/ui";
 import React, { useState } from "react";
-import ReadExcel from "./ReadExcel";
 import ExportExcel from "./ExportExcel";
+import ImportExcel from "./ImportExcel";
 
 function Homepage() {
   const [id, setId] = useState("import");
@@ -30,7 +30,7 @@ function Homepage() {
         id="import-panel"
       >
         <Card border marginTop={2} padding={4} radius={2}>
-          <ReadExcel />
+          <ImportExcel />
         </Card>
       </TabPanel>
 
@@ -39,7 +39,10 @@ function Homepage() {
         hidden={id !== "export"}
         id="export-panel"
       >
-        <Card border marginTop={2} padding={4}>
+        <Card border marginTop={4} padding={4}>
+          <Card marginBottom={2}>
+            <Text>Currenlty Hotel Banner Images export avaliable*</Text>
+          </Card>
           <ExportExcel />
         </Card>
       </TabPanel>

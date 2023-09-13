@@ -132,30 +132,26 @@ export const TYPE_IMAGE_ASSET = "imageAsset";
 export const TYPE_EXCLUSIVE_OFFERS = "exclusiveOffers";
 export const TYPE_ADDRESS = "address";
 export const TYPE_HOTEL = "hotel";
+export const TYPE_CONTACT = "contact";
 
 export const KEY_DESKTOP_TITLE = "desktopTitle";
 export const KEY_MOBILE_TITLE = "mobileTitle";
 
 export const QUREY_HOTELS_BANNER_IMAGES = `*[_type == "hotel"]{
-  ...,
-  gcCategory->{bannerImage},
-  hotelOverview->{...},
-  hotelAddress->{...},
-  hotelContact->{...},
-  hotelAvailability->{...},
-  hotelFacilities->{...},
-  hotelAwards->{...},
-  hotelSocialInfo->{...},
-  hotelRooms->{...},
-  hotelHighlights->{...},
-  hotelExclusiveOffersDining->{...},
-  hotelExclusiveOffersWellness->{...},
-  hotelExclusiveOffersRooms->{...},
-  hotelOffers->{...},
-  hotelHolidays->{...},
-  hotelSignatureDining->{...},
-  hotelEventVenues->{...},
-  hotelWellness->{...},
-  hotelExperiences->{...},
-  hotelGallery->{...},
-  hotelAttractions->{...}}`;
+  hotelName,
+  hotelOverview->{bannerImage},
+  hotelFacilities->{bannerImage},
+  hotelSocialInfo->{bannerImage},
+  hotelRooms->{bannerImage},
+  hotelExclusiveOffersDining->{bannerImage},
+  hotelExclusiveOffersWellness->{bannerImage},
+  hotelExclusiveOffersRooms->{bannerImage},
+  hotelOffers->{bannerImage},
+  hotelHolidays->{bannerImage},
+  hotelSignatureDining->{bannerImage},
+  hotelEventVenues->{bannerImage},
+  hotelWellness->{bannerImage},
+  hotelExperiences->{bannerImage},
+  hotelGallery->{bannerImage},
+  hotelAttractions->{bannerImage}
+}`;
