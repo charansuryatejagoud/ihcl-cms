@@ -498,6 +498,7 @@ function extractTaxonomyData(data: any) {
   data?.lunch && (finalData.lunch = data?.lunch);
   data?.dinner && (finalData.dinner = data?.dinner);
   data?.destinationPath && (finalData.destinationPath = data?.destinationPath);
+  data?.longDescription && (finalData.longDescription = data?.longDescription);
   return finalData;
 }
 
