@@ -1,11 +1,9 @@
-import {
-  TbTransform
-} from "react-icons/tb";
-import Homepage from "./homepage";
+import { TbTransform } from "react-icons/tb";
+import Homepage from "./Homepage";
 
 export default {
   title: "Read Excel",
   name: "readexcel",
-  icon:   TbTransform,
+  icon: TbTransform,
   component: Homepage,
 };
