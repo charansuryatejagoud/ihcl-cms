@@ -83,6 +83,10 @@ export const details: FeatureSchemaDefinition = {
         title: "[Details] Media Image Carousel",
         value: "details.group.media-image-carousel",
       },
+      {
+        title: "[Details] 3 Card Carousel With Center Aligned Carousel Icons",
+        value: "details.group.3-card-carousel-with-center-aligned-carousel-icons",
+      },
     ],
     card: [
       {

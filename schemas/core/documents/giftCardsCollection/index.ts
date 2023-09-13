@@ -18,6 +18,11 @@ export default {
       to: [{ type: "giftCardGroup" }],
     },
     {
+      title: "Title",
+      name: "title",
+      type: "title",
+    },
+    {
       title: "Name",
       type: "string",
       name: "name",
