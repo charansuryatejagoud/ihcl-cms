@@ -10,6 +10,10 @@ export const events: FeatureSchemaDefinition = {
         title: "[Events] Wedding - Randomly Arranged Media",
         value: "events.group.wedding-randomly-arranged-media",
       },
+      {
+        title: "[Events] Carousel Tabs",
+        value: "events.group.carousel-tabs"
+      }
     ],
     card: [
       {

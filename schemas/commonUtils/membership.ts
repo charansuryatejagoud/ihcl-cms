@@ -41,6 +41,11 @@ export default {
       title: "Tax",
       type: "string",
     },
+    {
+      name: "primaryAction",
+      title: "Primary Action",
+      type: "navigationItem",
+    },
   ],
   preview: {
     select: {
@@ -49,12 +54,12 @@ export default {
       price: "price",
       media: "image.largeImage",
     },
-    prepare({title,subtitle,media,price}) {
+    prepare({ title, subtitle, media, price }) {
       return {
         title: title,
-        subtitle: `${subtitle} ${price ? price : "" }`,
-        media
-      }
-    }
+        subtitle: `${subtitle} ${price ? price : ""}`,
+        media,
+      };
+    },
   },
 };

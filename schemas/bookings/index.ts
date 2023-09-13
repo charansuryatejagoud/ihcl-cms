@@ -81,6 +81,10 @@ export const bookings: FeatureSchemaDefinition = {
         title: "[Bookings] Bottom Navigation Cart Details",
         value: "bookings.placeholders.bottom-navigation-cart-details",
       },
+      {
+        title: "[Bookings] Payment Details CC Avenue",
+        value: "bookings.placeholders.payment-details-cc-avenue"
+      }
     ],
     nudge: [
       {
@@ -105,6 +109,10 @@ export const bookings: FeatureSchemaDefinition = {
         title: "[Bookings] Booking Hotel Failure Confirmation",
         value: "bookings.group.booking-hotel-failure",
       },
+      {
+        title: "[Bookings] FAQs",
+        value: "bookings.group.faqs",
+      }
     ],
     tabs: [
       {

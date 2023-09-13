@@ -164,6 +164,10 @@ export const details: FeatureSchemaDefinition = {
         title: "[Details] Group With 2 Column Cards Grid(Layout Placeholder)",
         value: "details.group.group-with-2-column-cards-grid-layout-placeholder",
       },
+      {
+        title: "[Details] 2 Column Grid Hotels List",
+        value: "details.group.2-column-grid-hotels-list",
+      }
     ],
     card: [
       {
