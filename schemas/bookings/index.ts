@@ -77,6 +77,10 @@ export const bookings: FeatureSchemaDefinition = {
         title: "[Bookings] Bottom Navigation Cart Details",
         value: "bookings.placeholders.bottom-navigation-cart-details",
       },
+      {
+        title: "[Bookings] Default Button",
+        value: "bookings.placeholders.default-button",
+      },
     ],
     nudge: [
       {

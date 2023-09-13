@@ -132,6 +132,12 @@ export default function page(props: PageProps) {
         group: "main",
       },
       {
+        name: "mobileBackgroundImage",
+        title: "Mobile Background Image",
+        type: "image",
+        group: "configuration",
+      },
+      {
         name: "backgroundImage",
         title: "Background Image",
         type: "image",
