@@ -32,6 +32,11 @@ export default {
       options: {list : offerTypes}
     },
     {
+      name: "themeInfo",
+      title: "Theme Info",
+      type: "tabInfo",
+    },
+    {
       name: "holidayOffer",
       title: "Holiday Offer",
       type: "boolean"
