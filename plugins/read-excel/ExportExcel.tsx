@@ -29,7 +29,8 @@ async function fetchBannerImages() {
             const image =
               hotel[key]?.bannerImage[0]?.imageAsset?.image?.[0]?.asset?._ref;
             const largeImage =
-              hotel[key]?.bannerImage[0]?.largeImage?.image?.[0]?.asset?._ref;
+              hotel[key]?.bannerImage[0]?.imageAsset?.largeImage?.[0]?.asset
+                ?._ref;
             const imageAsset = {
               [`${key}Image`]: image ? image : "",
               [`${key}LargeImage`]: largeImage ? largeImage : "",

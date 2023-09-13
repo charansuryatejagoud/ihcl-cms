@@ -125,7 +125,7 @@ function getDocument({ excelData, document = null }, returnData: any = {}) {
   const nanoid = customAlphabet("1234567890abcdef", 12);
   if (!document) {
     returnData._type = TYPE_CONTACT;
-    returnData.title = excelData?.title;
+    returnData.title = excelData?.title?.trim();
   }
 
   //businessPhone
@@ -134,7 +134,7 @@ function getDocument({ excelData, document = null }, returnData: any = {}) {
     documentData: document,
     key: "businessPhone",
   });
-  businessPhone && (returnData.businessPhone = businessPhone);
+  businessPhone && (returnData.businessPhone = businessPhone?.trim());
 
   //supportPhone
   const supportPhone = compareValues({
@@ -142,7 +142,7 @@ function getDocument({ excelData, document = null }, returnData: any = {}) {
     documentData: document,
     key: "supportPhone",
   });
-  supportPhone && (returnData.supportPhone = supportPhone);
+  supportPhone && (returnData.supportPhone = supportPhone?.trim());
 
   //businessEmail
   const businessEmail = compareValues({
@@ -150,7 +150,7 @@ function getDocument({ excelData, document = null }, returnData: any = {}) {
     documentData: document,
     key: "businessEmail",
   });
-  businessEmail && (returnData.businessEmail = businessEmail);
+  businessEmail && (returnData.businessEmail = businessEmail?.trim());
 
   //supportEmail
   const supportEmail = compareValues({
@@ -158,7 +158,7 @@ function getDocument({ excelData, document = null }, returnData: any = {}) {
     documentData: document,
     key: "supportEmail",
   });
-  supportEmail && (returnData.supportEmail = supportEmail);
+  supportEmail && (returnData.supportEmail = supportEmail?.trim());
 
   //email
   const email = getArrayOfStrings({
@@ -193,7 +193,7 @@ function getArrayOfStrings({
     return excelData?.[excelKey]?.map((data) => {
       return {
         _key: _key,
-        [schemaKey]: data,
+        [schemaKey]: data?.trim(),
       };
     });
   }

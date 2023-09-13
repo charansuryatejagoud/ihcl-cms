@@ -742,7 +742,7 @@ function compareValues({ excelData, documentData, key }) {
 async function fetchDocument({ type, identifierKey, identifierValue }) {
   const response = await client
     .fetch(
-      `*[_type == "${type}" && ${identifierKey} == "${identifierValue}"][0]{...}`,
+      `*[_type == "${type}" && ${identifierKey} == "${identifierValue?.trim()}"][0]{...}`,
     )
     .then((res) => {
       return { ...res };
@@ -755,7 +755,7 @@ async function fetchDocument({ type, identifierKey, identifierValue }) {
 }
 
 function getHotelQuery({ identifierKey, identifierValue }) {
-  return `*[_type == "hotel" && ${identifierKey} == "${identifierValue}"][0]{
+  return `*[_type == "hotel" && ${identifierKey} == "${identifierValue?.trim()}"][0]{
     ...,
     hotelNavigation->{...},
     gcCategory->{...},
