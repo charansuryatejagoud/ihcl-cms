@@ -108,7 +108,7 @@ export default {
     },
     {
       name: "hotels",
-      title: "Participating Hotels",
+      title: "Package Inclusions",
       type: "array",
       of: [
         {
@@ -164,6 +164,14 @@ export default {
                         document?.packageType == "singlePackage",
                     },
                     {
+                      name: "inclusionIdentifier",
+                      title: "Inclusion Identifier",
+                      type: "string",
+                      initialValue: "",
+                      hidden: ({ document }) =>
+                        document?.packageType == "singlePackage",
+                    },
+                    {
                       name: "highlights",
                       title: "Highlights",
                       type: "array",
@@ -213,12 +221,12 @@ export default {
           ],
           preview: {
             select: {
-              title: "hotels",
+              title: "sectionTitle",
             },
             prepare(selection) {
               const { title } = selection;
               return {
-                title: "Hotels" // title[0].participatingHotels[0].title,
+                title: title.desktopTitle[0],
               };
             },
           },
