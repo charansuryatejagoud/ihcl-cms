@@ -149,22 +149,27 @@ export default {
               rows: 4
             },
             {
+              name: "validThroughYear",
+              title: "Valid till round the year?",
+              type: "boolean",
+            },
+            {
               name: "validityDates",
               title: "Validity Dates",
               type: "array",
-              of: [{ type: "dateRange" }],
+              of: [{ type: "dateRange" }]
             },
             {
               name: "stayDates",
               title: "Stay Dates",
               type: "array",
-              of: [{ type: "dateRange" }],
+              of: [{ type: "dateRange" }]
             },
             {
               name: "blackoutDates",
               title: "Blackout Dates",
               type: "array",
-              of: [{ type: "dateRange" }],
+              of: [{ type: "dateRange" }]
             },
             {
               name: "inclusions",
