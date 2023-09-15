@@ -1,6 +1,5 @@
 import { Box, Stack, Text, Select, Grid } from "@sanity/ui";
 import React, { useState } from "react";
-import HotelInformation from "./HotelInformation";
 import Contact from "./Contact";
 import Highlights from "./Highlights";
 import Address from "./Address";
@@ -12,6 +11,7 @@ import Destinations from "./Destinations";
 import ExclusiveOffers from "./ExclusiveOffers";
 import Hotels from "./Hotels";
 import About from "./About";
+import HotelInformation from "./HotelInformationDynamic";
 
 function ImportExcel() {
   const [selected, setSelected] = useState("Hotels");
@@ -70,9 +70,7 @@ function ImportExcel() {
               <Text size={2} weight="bold">
                 {selected}
               </Text>
-              {selected == "Hotel Information" && (
-                <HotelInformation type="production" />
-              )}
+              {selected == "Hotel Information" && <HotelInformation />}
               {selected == "Contact" && <Contact />}
               {selected == "Highlights" && <Highlights />}
               {selected == "Address" && <Address />}
