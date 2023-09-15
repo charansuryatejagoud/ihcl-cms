@@ -203,6 +203,11 @@ export default {
               ],
             },
             {
+              name: "tnc",
+              title: "TNC",
+              type: "blockContent",
+            },
+            {
               name: "pageTitle",
               title: "Page Title",
               type: "string",
