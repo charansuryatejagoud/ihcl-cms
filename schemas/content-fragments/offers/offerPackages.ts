@@ -143,6 +143,12 @@ export default {
               of: [{ type: "mediaInput" }],
             },
             {
+              name: "thumbnailDescription",
+              title: "Thumbnail Description",
+              type: "string",
+              rows: 4
+            },
+            {
               name: "inclusions",
               title: "Inclusions",
               type: "array",
