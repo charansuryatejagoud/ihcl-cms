@@ -58,7 +58,6 @@ function Facilities({ type }) {
       reader.readAsArrayBuffer(e.target.files[0]);
     }
   };
-  console.log(hotelFacilitiesData);
 
   const migrateExcelData = async () => {
     console.log("hotelFacilitiesData", hotelFacilitiesData);
@@ -114,7 +113,6 @@ function Facilities({ type }) {
 
 async function updateFacilitiesDocument(data, document) {
   console.log("updating ", document._id);
-  console.log("Update for hotel facilities is working", document._id, " - ", document.title);
   const { facilityDetails, mobileFacilities } = createOrReplaceFacilitiesDoc(data, "prod");
   await client
     .patch(document._id)

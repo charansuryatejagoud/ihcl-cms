@@ -13,6 +13,12 @@ export default {
         title: "Description",
         type: "string",
       },
+      {
+        name: "thumbnail",
+        title: "Thumbnail",
+        type: "array",
+        of: [{ type: "mediaInput" }],
+      }
     ],
   };
   

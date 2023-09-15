@@ -149,9 +149,14 @@ function getDocument({ excelData, document = null }, returnData: any = {}) {
     returnData._type = TYPE_ADDRESS;
     returnData.title = excelData?.hotelTitle;
   }
-  returnData.sectionTitle = {
-    _type: TYPE_TITLE,
-  };
+  if (
+    excelData?.mobileTitle?.length > 0 ||
+    excelData?.desktopTitle?.length > 0
+  ) {
+    returnData.sectionTitle = {
+      _type: TYPE_TITLE,
+    };
+  }
   //sectionTitle - mobileTitle
   if (excelData?.mobileTitle?.length > 0) {
     returnData.sectionTitle.mobileTitle = excelData?.mobileTitle;
