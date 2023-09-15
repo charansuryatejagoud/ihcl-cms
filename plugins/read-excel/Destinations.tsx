@@ -1,17 +1,12 @@
 import React, { useRef, useState } from "react";
 import { Button, Flex } from "@sanity/ui";
 import * as XLSX from "xlsx";
-import { customAlphabet } from "nanoid";
 import { client } from "./client";
-import { extractDestinationData, getBanner } from "./utils";
+import { extractDestinationData, getBanner, getMediaInput } from "./utils";
 import {
   KEY_DESKTOP_TITLE,
   KEY_MOBILE_TITLE,
   TYPE_DESTINATION,
-  TYPE_IMAGE,
-  TYPE_IMAGE_ASSET,
-  TYPE_MEDIA_INFO,
-  TYPE_REFERENCE,
   TYPE_TAB_INFO,
   TYPE_TITLE,
 } from "./constants";
@@ -42,21 +37,25 @@ function Destinations() {
   console.log(destinationsData);
 
   const migrateExcelData = async () => {
-    await destinationsData?.map(async (destination, destinationIndex) => {
-      await client
-        .fetch(
-          `*[_type == "${TYPE_DESTINATION}" && name == "${destination?.title?.trim()}"]{...}`,
-        )
-        .then(async (res) => {
-          if (res?.length > 0) {
-            await res.map(async (doc) => {
-              await updateDocument(destination, doc, destinationIndex);
-            });
-          } else {
-            await createDocument(destination, destinationIndex);
-          }
-        });
-    });
+    try {
+      await destinationsData?.map(async (destination, destinationIndex) => {
+        await client
+          .fetch(
+            `*[_type == "${TYPE_DESTINATION}" && name == "${destination?.title?.trim()}"]{...}`,
+          )
+          .then(async (res) => {
+            if (res?.length > 0) {
+              await res.map(async (doc) => {
+                await updateDocument(destination, doc, destinationIndex);
+              });
+            } else {
+              await createDocument(destination, destinationIndex);
+            }
+          });
+      });
+    } catch (error) {
+      console.log("Error", error);
+    }
   };
 
   function resetFile(): void {
@@ -115,10 +114,8 @@ async function updateDocument(data: any, document: any, index) {
 }
 
 async function createDocument(data: any, index) {
-  const d = getDestinationsDoc({ data: data });
-  console.log("new", d);
   await client
-    .create(d)
+    .create(getDestinationsDoc({ data: data }))
     .then((res) => {
       console.log(index + 1, "Created document, id = ", res._id, res.name);
     })
@@ -302,10 +299,10 @@ function getTabInfo(
     excelData?.[bannerMobileKey]?.length > 0 ||
     excelData?.[bannerDeskTopKey]?.length > 0
   ) {
-    const bannerData = getBanner(
-      excelData?.[bannerMobileKey],
-      excelData?.[bannerDeskTopKey],
-    );
+    const bannerData = getBanner({
+      mobileData: excelData?.[bannerMobileKey],
+      deskTopData: excelData?.[bannerDeskTopKey],
+    });
     bannerData?.length > 0 &&
       (initialData.bannerImage = getMediaInput({
         mediaData: bannerData,
@@ -317,38 +314,4 @@ function getTabInfo(
   }
   return initialData;
 }
-
-function getMediaInput({ mediaData }) {
-  const nanoid = customAlphabet("1234567890abcdef", 12);
-  const d = mediaData?.map((media) => {
-    const mobileImage = getImage({ _ref: media?.mobile, _key: nanoid() });
-    const largeImage = getImage({ _ref: media?.deskTop, _key: nanoid() });
-    return {
-      _key: nanoid(),
-      _type: TYPE_MEDIA_INFO,
-      mediaType: "image",
-      [TYPE_IMAGE_ASSET]: {
-        _type: TYPE_IMAGE_ASSET,
-        image: mobileImage ? [mobileImage] : [],
-        largeImage: largeImage ? [largeImage] : [],
-      },
-    };
-  });
-  return d;
-}
-
-function getImage({ _ref, _key }) {
-  if (_ref) {
-    return {
-      _key: _key,
-      _type: TYPE_IMAGE,
-      asset: {
-        _ref: _ref,
-        _type: TYPE_REFERENCE,
-      },
-    };
-  }
-  return;
-}
-
 export default Destinations;

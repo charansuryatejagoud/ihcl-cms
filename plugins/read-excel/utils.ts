@@ -75,6 +75,8 @@ import {
   DEV_FITNESS_CENTER_IMAGE,
   DEV_OUTDOOR_AND_INDOOR_POOLS_IMAGE,
   DEV_JIVA_SPA_IMAGE,
+  TYPE_IMAGE_ASSET,
+  TYPE_MEDIA_INFO,
 } from "./constants";
 
 function splitString({ data, character }: SplitStringType) {
@@ -100,19 +102,19 @@ function splitMediaInput({ data, character }: SplitMediaType) {
   }
   return null;
 }
-function getBanner(mobileData, deskTopData) {
+function getBanner({mobileData, deskTopData}) {
   if (mobileData) {
     return mobileData?.map((data, index) => {
       return {
-        mobile: mobileData?.[index],
-        deskTop: deskTopData?.[index],
+        mobile: mobileData?.[index]?.trim(),
+        deskTop: deskTopData?.[index]?.trim(),
       };
     });
   } else {
     return deskTopData?.map((data, index) => {
       return {
-        mobile: mobileData?.[index],
-        deskTop: deskTopData?.[index],
+        mobile: mobileData?.[index]?.trim(),
+        deskTop: deskTopData?.[index]?.trim(),
       };
     });
   }
@@ -159,12 +161,12 @@ function generateFacilityInfo(props: FacilityInfoType) {
     title: props?.title,
     icon: props?._imageRef &&
       props?._imageRef != "" && {
-      _type: TYPE_IMAGE,
-      asset: {
-        _ref: props?._imageRef,
-        _type: TYPE_REFERENCE,
+        _type: TYPE_IMAGE,
+        asset: {
+          _ref: props?._imageRef,
+          _type: TYPE_REFERENCE,
+        },
       },
-    },
     list: props?.list && props.list,
     _type: TYPE_FACILITY_INFO,
     _key: props?._key,
@@ -216,11 +218,11 @@ function createOrReplaceDoc(hotelData, type, document = null) {
       title: CHECK_IN_CHECK_OUT,
       _imageRef: document
         ? document?.hotelInfo.filter(
-          (info) => info.title == CHECK_IN_CHECK_OUT,
-        )?.[0].icon?.asset?._ref
+            (info) => info.title == CHECK_IN_CHECK_OUT,
+          )?.[0].icon?.asset?._ref
         : type == "dev"
-          ? DEV_CHECK_IN_CHECK_OUT_IMAGE
-          : PROD_CHECK_IN_CHECK_OUT_IMAGE,
+        ? DEV_CHECK_IN_CHECK_OUT_IMAGE
+        : PROD_CHECK_IN_CHECK_OUT_IMAGE,
       _key: nanoid(),
       list: generateBulletPoints({
         data: hotelData?.checkInAndCheckOut,
@@ -233,10 +235,10 @@ function createOrReplaceDoc(hotelData, type, document = null) {
       title: DINING,
       _imageRef: document
         ? document?.hotelInfo.filter((info) => info.title == DINING)?.[0].icon
-          ?.asset?._ref
+            ?.asset?._ref
         : type == "dev"
-          ? DEV_DINING_IMAGE
-          : PROD_DINING_IMAGE,
+        ? DEV_DINING_IMAGE
+        : PROD_DINING_IMAGE,
       _key: nanoid(),
       list: generateBulletPoints({ data: hotelData?.dining, _key: nanoid() }),
     }),
@@ -246,10 +248,10 @@ function createOrReplaceDoc(hotelData, type, document = null) {
       title: ROOMS_SUITES,
       _imageRef: document
         ? document?.hotelInfo.filter((info) => info.title == ROOMS_SUITES)?.[0]
-          .icon?.asset?._ref
+            .icon?.asset?._ref
         : type == "dev"
-          ? DEV_ROOMS_SUITES_IMAGE
-          : PROD_ROOMS_SUITES_IMAGE,
+        ? DEV_ROOMS_SUITES_IMAGE
+        : PROD_ROOMS_SUITES_IMAGE,
       _key: nanoid(),
       list: generateBulletPoints({
         data: hotelData?.roomsAndSuites,
@@ -262,10 +264,10 @@ function createOrReplaceDoc(hotelData, type, document = null) {
       title: WELLNESS,
       _imageRef: document
         ? document?.hotelInfo.filter((info) => info.title == WELLNESS)?.[0].icon
-          ?.asset?._ref
+            ?.asset?._ref
         : type == "dev"
-          ? DEV_WELLNESS_IMAGE
-          : PROD_WELLNESS_IMAGE,
+        ? DEV_WELLNESS_IMAGE
+        : PROD_WELLNESS_IMAGE,
       _key: nanoid(),
       list: generateBulletPoints({ data: hotelData?.wellness, _key: nanoid() }),
     }),
@@ -275,10 +277,10 @@ function createOrReplaceDoc(hotelData, type, document = null) {
       title: TEMPERATURE,
       _imageRef: document
         ? document?.hotelInfo.filter((info) => info.title == TEMPERATURE)?.[0]
-          .icon?.asset?._ref
+            .icon?.asset?._ref
         : type == "dev"
-          ? DEV_TEMPERATURE_IMAGE
-          : PROD_TEMPERATURE_IMAGE,
+        ? DEV_TEMPERATURE_IMAGE
+        : PROD_TEMPERATURE_IMAGE,
       _key: nanoid(),
       list: generateBulletPoints({
         data: hotelData?.temperature,
@@ -301,10 +303,10 @@ function createOrReplaceDoc(hotelData, type, document = null) {
       title: E_MAIL,
       _imageRef: document
         ? document?.hotelInfo.filter((info) => info.title == E_MAIL)?.[0].icon
-          ?.asset?._ref
+            ?.asset?._ref
         : type == "dev"
-          ? DEV_E_MAIL_IMAGE
-          : PROD_E_MAIL_IMAGE,
+        ? DEV_E_MAIL_IMAGE
+        : PROD_E_MAIL_IMAGE,
       _key: nanoid(),
       list: generateBulletPoints({ data: hotelData?.email, _key: nanoid() }),
     }),
@@ -314,10 +316,10 @@ function createOrReplaceDoc(hotelData, type, document = null) {
       title: CONTACT,
       _imageRef: document
         ? document?.hotelInfo.filter((info) => info.title == CONTACT)?.[0].icon
-          ?.asset?._ref
+            ?.asset?._ref
         : type == "dev"
-          ? DEV_CONTACT_IMAGE
-          : PROD_CONTACT_IMAGE,
+        ? DEV_CONTACT_IMAGE
+        : PROD_CONTACT_IMAGE,
       _key: nanoid(),
       list: generateBulletPoints({ data: hotelData?.contact, _key: nanoid() }),
     }),
@@ -327,10 +329,10 @@ function createOrReplaceDoc(hotelData, type, document = null) {
       title: PHONE,
       _imageRef: document
         ? document?.hotelInfo.filter((info) => info.title == PHONE)?.[0].icon
-          ?.asset?._ref
+            ?.asset?._ref
         : type == "dev"
-          ? DEV_QUERIES_IMAGE
-          : PROD_QUERIES_IMAGE,
+        ? DEV_QUERIES_IMAGE
+        : PROD_QUERIES_IMAGE,
       _key: nanoid(),
       list: generateBulletPoints({ data: hotelData?.phone, _key: nanoid() }),
     }),
@@ -1186,6 +1188,39 @@ async function getRefererenceObject({
   }
 }
 
+function getMediaInput({ mediaData }) {
+  const nanoid = customAlphabet("1234567890abcdef", 12);
+  const d = mediaData?.map((media) => {
+    const mobileImage = getImage({ _ref: media?.mobile, _key: nanoid() });
+    const largeImage = getImage({ _ref: media?.deskTop, _key: nanoid() });
+    return {
+      _key: nanoid(),
+      _type: TYPE_MEDIA_INFO,
+      mediaType: "image",
+      [TYPE_IMAGE_ASSET]: {
+        _type: TYPE_IMAGE_ASSET,
+        image: mobileImage ? [mobileImage] : [],
+        largeImage: largeImage ? [largeImage] : [],
+      },
+    };
+  });
+  return d;
+}
+
+function getImage({ _ref, _key }) {
+  if (_ref) {
+    return {
+      _key: _key,
+      _type: TYPE_IMAGE,
+      asset: {
+        _ref: _ref,
+        _type: TYPE_REFERENCE,
+      },
+    };
+  }
+  return;
+}
+
 export {
   Update,
   Create,
@@ -1202,4 +1237,6 @@ export {
   getHotelDocument,
   getRefererenceObject,
   getBanner,
+  getMediaInput,
+  getImage,
 };

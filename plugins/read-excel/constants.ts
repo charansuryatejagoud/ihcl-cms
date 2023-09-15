@@ -133,6 +133,7 @@ export const TYPE_EXCLUSIVE_OFFERS = "exclusiveOffers";
 export const TYPE_ADDRESS = "address";
 export const TYPE_HOTEL = "hotel";
 export const TYPE_CONTACT = "contact";
+export const TYPE_ABOUT = "about";
 
 export const KEY_DESKTOP_TITLE = "desktopTitle";
 export const KEY_MOBILE_TITLE = "mobileTitle";

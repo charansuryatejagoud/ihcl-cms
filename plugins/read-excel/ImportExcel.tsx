@@ -11,6 +11,7 @@ import Restaurants from "./Restaurants";
 import Destinations from "./Destinations";
 import ExclusiveOffers from "./ExclusiveOffers";
 import Hotels from "./Hotels";
+import About from "./About";
 
 function ImportExcel() {
   const [selected, setSelected] = useState("Hotels");
@@ -26,6 +27,7 @@ function ImportExcel() {
     "Destinations",
     "Exclusive Offers",
     "Hotels",
+    "About",
   ];
 
   function handleChange(event: any): void {
@@ -81,6 +83,7 @@ function ImportExcel() {
               {selected == "Destinations" && <Destinations />}
               {selected == "Exclusive Offers" && <ExclusiveOffers />}
               {selected == "Hotels" && <Hotels />}
+              {selected == "About" && <About />}
             </Stack>
           </Box>
         </Grid>
