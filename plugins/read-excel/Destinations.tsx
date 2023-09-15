@@ -37,19 +37,25 @@ function Destinations() {
   console.log(destinationsData);
 
   const migrateExcelData = async () => {
-    await destinationsData?.map(async (destination, destinationIndex) => {
-      await client
-        .fetch(
-          `*[_type == "${TYPE_DESTINATION}" && name == "${destination?.title?.trim()}"][0]{...}`,
-        )
-        .then(async (res) => {
-          if (res) {
-            await updateDocument(destination, res, destinationIndex);
-          } else {
-            await createDocument(destination, destinationIndex);
-          }
-        });
-    });
+    try {
+      await destinationsData?.map(async (destination, destinationIndex) => {
+        await client
+          .fetch(
+            `*[_type == "${TYPE_DESTINATION}" && name == "${destination?.title?.trim()}"]{...}`,
+          )
+          .then(async (res) => {
+            if (res?.length > 0) {
+              await res.map(async (doc) => {
+                await updateDocument(destination, doc, destinationIndex);
+              });
+            } else {
+              await createDocument(destination, destinationIndex);
+            }
+          });
+      });
+    } catch (error) {
+      console.log("Error", error);
+    }
   };
 
   function resetFile(): void {
