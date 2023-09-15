@@ -149,6 +149,24 @@ export default {
               rows: 4
             },
             {
+              name: "validityDates",
+              title: "Validity Dates",
+              type: "array",
+              of: [{ type: "dateRange" }],
+            },
+            {
+              name: "stayDates",
+              title: "Stay Dates",
+              type: "array",
+              of: [{ type: "dateRange" }],
+            },
+            {
+              name: "blackoutDates",
+              title: "Blackout Dates",
+              type: "array",
+              of: [{ type: "dateRange" }],
+            },
+            {
               name: "inclusions",
               title: "Inclusions",
               type: "array",
@@ -233,11 +251,13 @@ export default {
           preview: {
             select: {
               title: "sectionTitle",
+              hotelTitle: "participatingHotels.0.hotelName",
+              multipleHotels: "participatingHotels.1.hotelName",
             },
             prepare(selection) {
-              const { title } = selection;
+              const { title, hotelTitle, multipleHotels } = selection;
               return {
-                title: title.desktopTitle[0],
+                title: !multipleHotels ? hotelTitle : title.desktopTitle[0],
               };
             },
           },
