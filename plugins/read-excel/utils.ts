@@ -79,6 +79,16 @@ import {
   TYPE_MEDIA_INFO,
 } from "./constants";
 
+function filterNullValues(data) {
+  return data?.map((item) => {
+    if (item === "null") {
+      return null;
+    } else {
+      return item;
+    }
+  });
+}
+
 function splitString({ data, character }: SplitStringType) {
   if (data != null && data != "" && character != null && character != "") {
     return data.split(character)?.map((value) => value?.trim());
@@ -102,7 +112,7 @@ function splitMediaInput({ data, character }: SplitMediaType) {
   }
   return null;
 }
-function getBanner({mobileData, deskTopData}) {
+function getBanner({ mobileData, deskTopData }) {
   if (mobileData) {
     return mobileData?.map((data, index) => {
       return {
@@ -157,20 +167,22 @@ async function fetchByType({ title, type }) {
 }
 
 function generateFacilityInfo(props: FacilityInfoType) {
-  const data = {
-    title: props?.title,
-    icon: props?._imageRef &&
-      props?._imageRef != "" && {
-        _type: TYPE_IMAGE,
-        asset: {
-          _ref: props?._imageRef,
-          _type: TYPE_REFERENCE,
-        },
-      },
-    list: props?.list && props.list,
+  const data: any = {
     _type: TYPE_FACILITY_INFO,
     _key: props?._key,
   };
+  props?.title && (data.title = props?.title?.trim());
+  props?.list && (data.list = props?.list);
+  if (props?._imageRef && props?._imageRef != "") {
+    data.icon = {
+      _type: TYPE_IMAGE,
+      asset: {
+        _ref: props?._imageRef?.trim(),
+        _type: TYPE_REFERENCE,
+      },
+    };
+  }
+
   return data;
 }
 
@@ -203,7 +215,7 @@ function generateBulletPoints(props: BulletPointsType) {
     return {
       _type: TYPE_BULLET_POINTS,
       _key: props?._key,
-      item: item.trim(),
+      item: item?.trim(),
       //   item: data.trim().replace("\r\n", "")
     };
   });
@@ -1239,4 +1251,6 @@ export {
   getBanner,
   getMediaInput,
   getImage,
+  filterNullValues,
+  generateBulletPoints,
 };

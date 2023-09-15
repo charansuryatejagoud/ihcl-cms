@@ -100,14 +100,13 @@ function About() {
 }
 
 async function updateDocument(about: any, doc: any, index: number) {
-  const update = getAboutDoc({ excelData: about, document: doc });
-  console.log("update", update);
+  console.log("updating ", doc._id, doc?.title);
   await client
     .patch(doc._id)
-    .set({ ...update })
+    .set({ ...getAboutDoc({ excelData: about, document: doc }) })
     .commit()
     .then((res) => {
-      console.log(res?.title + " Updated!");
+      console.log(index + 1, " Updated!", res?.title);
     })
     .catch((err) => {
       console.error(
@@ -121,12 +120,11 @@ async function updateDocument(about: any, doc: any, index: number) {
 }
 
 async function createDocument(about: any, index: number) {
-  const newDoc = getAboutDoc({ excelData: about });
-  console.log("newDoc", newDoc);
+  console.log("Creating...", about.title);
   await client
-    .create(newDoc)
+    .create(getAboutDoc({ excelData: about }))
     .then((res) => {
-      console.log("Created  = ", about.title, res._id);
+      console.log(index + 1, "Created  = ", about.title, res._id);
     })
     .catch((err) => {
       console.log("failed to create", about.title);
@@ -174,15 +172,12 @@ function getAboutDoc(
       deskTopData: excelData?.aboutBannerLargeImage,
       mobileData: excelData?.aboutBannerImage,
     });
-    console.log("bannerData", bannerData);
     bannerData?.length > 0 &&
       (returnObject.bannerImage = getMediaInput({
         mediaData: bannerData,
       }));
   } else {
-    if (document?.bannerImage) {
-      returnObject.bannerImage = document?.bannerImage;
-    }
+    document?.bannerImage && (returnObject.bannerImage = document?.bannerImage);
   }
 
   return returnObject;
