@@ -82,7 +82,7 @@ function TaxonomyInfo() {
 }
 
 async function updateTaxonomyDocument(taxonomy, res) {
-  console.log("updating ", res?._id);
+  console.log("updating ", res?.title);
   const document = {
     ...taxonomy,
   };
@@ -109,7 +109,6 @@ async function createTaxonomyDocument(taxonomy) {
     _type: TYPE_TAXONOMY_INFO,
     ...taxonomy,
   };
-  console.log("document", document);
   await client
     .create(document)
     .then((res) => {

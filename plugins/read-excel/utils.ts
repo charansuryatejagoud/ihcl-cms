@@ -94,12 +94,28 @@ function splitMediaInput({ data, character }: SplitMediaType) {
       const mediaData = item?.split(character);
       return {
         mediaType: mediaData?.[0],
-        largeImage: mediaData?.[1],
-        image: mediaData?.[2],
+        _ref: mediaData?.[1],
       };
     });
   }
   return null;
+}
+function getBanner(mobileData, deskTopData) {
+  if (mobileData) {
+    return mobileData?.map((data, index) => {
+      return {
+        mobile: mobileData?.[index],
+        deskTop: deskTopData?.[index],
+      };
+    });
+  } else {
+    return deskTopData?.map((data, index) => {
+      return {
+        mobile: mobileData?.[index],
+        deskTop: deskTopData?.[index],
+      };
+    });
+  }
 }
 
 function isEmptyString(data) {
@@ -143,12 +159,12 @@ function generateFacilityInfo(props: FacilityInfoType) {
     title: props?.title,
     icon: props?._imageRef &&
       props?._imageRef != "" && {
-        _type: TYPE_IMAGE,
-        asset: {
-          _ref: props?._imageRef,
-          _type: TYPE_REFERENCE,
-        },
+      _type: TYPE_IMAGE,
+      asset: {
+        _ref: props?._imageRef,
+        _type: TYPE_REFERENCE,
       },
+    },
     list: props?.list && props.list,
     _type: TYPE_FACILITY_INFO,
     _key: props?._key,
@@ -200,11 +216,11 @@ function createOrReplaceDoc(hotelData, type, document = null) {
       title: CHECK_IN_CHECK_OUT,
       _imageRef: document
         ? document?.hotelInfo.filter(
-            (info) => info.title == CHECK_IN_CHECK_OUT,
-          )?.[0].icon?.asset?._ref
+          (info) => info.title == CHECK_IN_CHECK_OUT,
+        )?.[0].icon?.asset?._ref
         : type == "dev"
-        ? DEV_CHECK_IN_CHECK_OUT_IMAGE
-        : PROD_CHECK_IN_CHECK_OUT_IMAGE,
+          ? DEV_CHECK_IN_CHECK_OUT_IMAGE
+          : PROD_CHECK_IN_CHECK_OUT_IMAGE,
       _key: nanoid(),
       list: generateBulletPoints({
         data: hotelData?.checkInAndCheckOut,
@@ -217,10 +233,10 @@ function createOrReplaceDoc(hotelData, type, document = null) {
       title: DINING,
       _imageRef: document
         ? document?.hotelInfo.filter((info) => info.title == DINING)?.[0].icon
-            ?.asset?._ref
+          ?.asset?._ref
         : type == "dev"
-        ? DEV_DINING_IMAGE
-        : PROD_DINING_IMAGE,
+          ? DEV_DINING_IMAGE
+          : PROD_DINING_IMAGE,
       _key: nanoid(),
       list: generateBulletPoints({ data: hotelData?.dining, _key: nanoid() }),
     }),
@@ -230,10 +246,10 @@ function createOrReplaceDoc(hotelData, type, document = null) {
       title: ROOMS_SUITES,
       _imageRef: document
         ? document?.hotelInfo.filter((info) => info.title == ROOMS_SUITES)?.[0]
-            .icon?.asset?._ref
+          .icon?.asset?._ref
         : type == "dev"
-        ? DEV_ROOMS_SUITES_IMAGE
-        : PROD_ROOMS_SUITES_IMAGE,
+          ? DEV_ROOMS_SUITES_IMAGE
+          : PROD_ROOMS_SUITES_IMAGE,
       _key: nanoid(),
       list: generateBulletPoints({
         data: hotelData?.roomsAndSuites,
@@ -246,10 +262,10 @@ function createOrReplaceDoc(hotelData, type, document = null) {
       title: WELLNESS,
       _imageRef: document
         ? document?.hotelInfo.filter((info) => info.title == WELLNESS)?.[0].icon
-            ?.asset?._ref
+          ?.asset?._ref
         : type == "dev"
-        ? DEV_WELLNESS_IMAGE
-        : PROD_WELLNESS_IMAGE,
+          ? DEV_WELLNESS_IMAGE
+          : PROD_WELLNESS_IMAGE,
       _key: nanoid(),
       list: generateBulletPoints({ data: hotelData?.wellness, _key: nanoid() }),
     }),
@@ -259,10 +275,10 @@ function createOrReplaceDoc(hotelData, type, document = null) {
       title: TEMPERATURE,
       _imageRef: document
         ? document?.hotelInfo.filter((info) => info.title == TEMPERATURE)?.[0]
-            .icon?.asset?._ref
+          .icon?.asset?._ref
         : type == "dev"
-        ? DEV_TEMPERATURE_IMAGE
-        : PROD_TEMPERATURE_IMAGE,
+          ? DEV_TEMPERATURE_IMAGE
+          : PROD_TEMPERATURE_IMAGE,
       _key: nanoid(),
       list: generateBulletPoints({
         data: hotelData?.temperature,
@@ -285,10 +301,10 @@ function createOrReplaceDoc(hotelData, type, document = null) {
       title: E_MAIL,
       _imageRef: document
         ? document?.hotelInfo.filter((info) => info.title == E_MAIL)?.[0].icon
-            ?.asset?._ref
+          ?.asset?._ref
         : type == "dev"
-        ? DEV_E_MAIL_IMAGE
-        : PROD_E_MAIL_IMAGE,
+          ? DEV_E_MAIL_IMAGE
+          : PROD_E_MAIL_IMAGE,
       _key: nanoid(),
       list: generateBulletPoints({ data: hotelData?.email, _key: nanoid() }),
     }),
@@ -298,10 +314,10 @@ function createOrReplaceDoc(hotelData, type, document = null) {
       title: CONTACT,
       _imageRef: document
         ? document?.hotelInfo.filter((info) => info.title == CONTACT)?.[0].icon
-            ?.asset?._ref
+          ?.asset?._ref
         : type == "dev"
-        ? DEV_CONTACT_IMAGE
-        : PROD_CONTACT_IMAGE,
+          ? DEV_CONTACT_IMAGE
+          : PROD_CONTACT_IMAGE,
       _key: nanoid(),
       list: generateBulletPoints({ data: hotelData?.contact, _key: nanoid() }),
     }),
@@ -311,10 +327,10 @@ function createOrReplaceDoc(hotelData, type, document = null) {
       title: PHONE,
       _imageRef: document
         ? document?.hotelInfo.filter((info) => info.title == PHONE)?.[0].icon
-            ?.asset?._ref
+          ?.asset?._ref
         : type == "dev"
-        ? DEV_QUERIES_IMAGE
-        : PROD_QUERIES_IMAGE,
+          ? DEV_QUERIES_IMAGE
+          : PROD_QUERIES_IMAGE,
       _key: nanoid(),
       list: generateBulletPoints({ data: hotelData?.phone, _key: nanoid() }),
     }),
@@ -498,6 +514,7 @@ function extractTaxonomyData(data: any) {
   data?.lunch && (finalData.lunch = data?.lunch);
   data?.dinner && (finalData.dinner = data?.dinner);
   data?.destinationPath && (finalData.destinationPath = data?.destinationPath);
+  data?.longDescription && (finalData.longDescription = data?.longDescription);
   return finalData;
 }
 
@@ -545,12 +562,15 @@ function extractDestinationData(data: any) {
   isEmptyString(data?.hotelsTabDescription) &&
     (finalData.hotelsTabDescription = data?.hotelsTabDescription?.trim());
   isEmptyString(data?.hotelsTabBannerImage) &&
-    (finalData.hotelsTabBannerImage = splitMediaInput({
-      data: splitString({
-        data: data?.hotelsTabBannerImage?.trim(),
-        character: "|",
-      }),
-      character: ",",
+    (finalData.hotelsTabBannerImage = splitString({
+      data: data?.hotelsTabBannerImage?.trim(),
+      character: "|",
+    }));
+
+  isEmptyString(data?.hotelsTabBannerLargeImage) &&
+    (finalData.hotelsTabBannerLargeImage = splitString({
+      data: data?.hotelsTabBannerLargeImage?.trim(),
+      character: "|",
     }));
 
   isEmptyString(data?.offersTabDesktopTitle) &&
@@ -566,12 +586,14 @@ function extractDestinationData(data: any) {
   isEmptyString(data?.offersTabDescription) &&
     (finalData.offersTabDescription = data?.offersTabDescription?.trim());
   isEmptyString(data?.offersTabBannerImage) &&
-    (finalData.offersTabBannerImage = splitMediaInput({
-      data: splitString({
-        data: data?.offersTabBannerImage?.trim(),
-        character: "|",
-      }),
-      character: ",",
+    (finalData.offersTabBannerImage = splitString({
+      data: data?.offersTabBannerImage?.trim(),
+      character: "|",
+    }));
+  isEmptyString(data?.offersTabBannerLargeImage) &&
+    (finalData.offersTabBannerLargeImage = splitString({
+      data: data?.offersTabBannerLargeImage?.trim(),
+      character: "|",
     }));
 
   isEmptyString(data?.diningDesktopTitle) &&
@@ -587,12 +609,14 @@ function extractDestinationData(data: any) {
   isEmptyString(data?.diningDescription) &&
     (finalData.diningDescription = data?.diningDescription?.trim());
   isEmptyString(data?.diningBannerImage) &&
-    (finalData.diningBannerImage = splitMediaInput({
-      data: splitString({
-        data: data?.diningBannerImage?.trim(),
-        character: "|",
-      }),
-      character: ",",
+    (finalData.diningBannerImage = splitString({
+      data: data?.diningBannerImage?.trim(),
+      character: "|",
+    }));
+  isEmptyString(data?.diningBannerLargeImage) &&
+    (finalData.diningBannerLargeImage = splitString({
+      data: data?.diningBannerLargeImage?.trim(),
+      character: "|",
     }));
 
   isEmptyString(data?.experiencesTabDesktopTitle) &&
@@ -609,12 +633,14 @@ function extractDestinationData(data: any) {
     (finalData.experiencesTabDescription =
       data?.experiencesTabDescription?.trim());
   isEmptyString(data?.experiencesTabBannerImage) &&
-    (finalData.experiencesTabBannerImage = splitMediaInput({
-      data: splitString({
-        data: data?.experiencesTabBannerImage?.trim(),
-        character: "|",
-      }),
-      character: ",",
+    (finalData.experiencesTabBannerImage = splitString({
+      data: data?.experiencesTabBannerImage?.trim(),
+      character: "|",
+    }));
+  isEmptyString(data?.experiencesTabBannerLargeImage) &&
+    (finalData.experiencesTabBannerLargeImage = splitString({
+      data: data?.experiencesTabBannerLargeImage?.trim(),
+      character: "|",
     }));
 
   isEmptyString(data?.spaTabDesktopTitle) &&
@@ -630,12 +656,14 @@ function extractDestinationData(data: any) {
   isEmptyString(data?.spaTabDescription) &&
     (finalData.spaTabDescription = data?.spaTabDescription?.trim());
   isEmptyString(data?.spaTabBannerImage) &&
-    (finalData.spaTabBannerImage = splitMediaInput({
-      data: splitString({
-        data: data?.spaTabBannerImage?.trim(),
-        character: "|",
-      }),
-      character: ",",
+    (finalData.spaTabBannerImage = splitString({
+      data: data?.spaTabBannerImage?.trim(),
+      character: "|",
+    }));
+  isEmptyString(data?.spaTabBannerLargeImage) &&
+    (finalData.spaTabBannerLargeImage = splitString({
+      data: data?.spaTabBannerLargeImage?.trim(),
+      character: "|",
     }));
 
   isEmptyString(data?.treatmentsTabDesktopTitle) &&
@@ -652,12 +680,14 @@ function extractDestinationData(data: any) {
     (finalData.treatmentsTabDescription =
       data?.treatmentsTabDescription?.trim());
   isEmptyString(data?.treatmentsTabBannerImage) &&
-    (finalData.treatmentsTabBannerImage = splitMediaInput({
-      data: splitString({
-        data: data?.treatmentsTabBannerImage?.trim(),
-        character: "|",
-      }),
-      character: ",",
+    (finalData.treatmentsTabBannerImage = splitString({
+      data: data?.treatmentsTabBannerImage?.trim(),
+      character: "|",
+    }));
+  isEmptyString(data?.treatmentsTabBannerLargeImage) &&
+    (finalData.treatmentsTabBannerLargeImage = splitString({
+      data: data?.treatmentsTabBannerLargeImage?.trim(),
+      character: "|",
     }));
 
   isEmptyString(data?.holidaysTabDesktopTitle) &&
@@ -673,12 +703,14 @@ function extractDestinationData(data: any) {
   isEmptyString(data?.holidaysTabDescription) &&
     (finalData.holidaysTabDescription = data?.holidaysTabDescription?.trim());
   isEmptyString(data?.holidaysTabBannerImage) &&
-    (finalData.holidaysTabBannerImage = splitMediaInput({
-      data: splitString({
-        data: data?.holidaysTabBannerImage?.trim(),
-        character: "|",
-      }),
-      character: ",",
+    (finalData.holidaysTabBannerImage = splitString({
+      data: data?.holidaysTabBannerImage?.trim(),
+      character: "|",
+    }));
+  isEmptyString(data?.holidaysTabBannerLargeImage) &&
+    (finalData.holidaysTabBannerLargeImage = splitString({
+      data: data?.holidaysTabBannerLargeImage?.trim(),
+      character: "|",
     }));
 
   isEmptyString(data?.featuredHolidaysDesktopTitle) &&
@@ -695,12 +727,14 @@ function extractDestinationData(data: any) {
     (finalData.featuredHolidaysDescription =
       data?.featuredHolidaysDescription?.trim());
   isEmptyString(data?.featuredHolidaysBannerImage) &&
-    (finalData.featuredHolidaysBannerImage = splitMediaInput({
-      data: splitString({
-        data: data?.featuredHolidaysBannerImage?.trim(),
-        character: "|",
-      }),
-      character: ",",
+    (finalData.featuredHolidaysBannerImage = splitString({
+      data: data?.featuredHolidaysBannerImage?.trim(),
+      character: "|",
+    }));
+  isEmptyString(data?.featuredHolidaysBannerLargeImage) &&
+    (finalData.featuredHolidaysBannerLargeImage = splitString({
+      data: data?.featuredHolidaysBannerLargeImage?.trim(),
+      character: "|",
     }));
 
   isEmptyString(data?.journeysDesktopTitle) &&
@@ -716,12 +750,14 @@ function extractDestinationData(data: any) {
   isEmptyString(data?.journeysDescription) &&
     (finalData.journeysDescription = data?.journeysDescription?.trim());
   isEmptyString(data?.journeysBannerImage) &&
-    (finalData.journeysBannerImage = splitMediaInput({
-      data: splitString({
-        data: data?.journeysBannerImage?.trim(),
-        character: "|",
-      }),
-      character: ",",
+    (finalData.journeysBannerImage = splitString({
+      data: data?.journeysBannerImage?.trim(),
+      character: "|",
+    }));
+  isEmptyString(data?.journeysBannerLargeImage) &&
+    (finalData.journeysBannerLargeImage = splitString({
+      data: data?.journeysBannerLargeImage?.trim(),
+      character: "|",
     }));
   return finalData;
 }
@@ -741,7 +777,7 @@ function compareValues({ excelData, documentData, key }) {
 async function fetchDocument({ type, identifierKey, identifierValue }) {
   const response = await client
     .fetch(
-      `*[_type == "${type}" && ${identifierKey} == "${identifierValue}"][0]{...}`,
+      `*[_type == "${type}" && ${identifierKey} == "${identifierValue?.trim()}"][0]{...}`,
     )
     .then((res) => {
       return { ...res };
@@ -754,7 +790,7 @@ async function fetchDocument({ type, identifierKey, identifierValue }) {
 }
 
 function getHotelQuery({ identifierKey, identifierValue }) {
-  return `*[_type == "hotel" && ${identifierKey} == "${identifierValue}"][0]{
+  return `*[_type == "hotel" && ${identifierKey} == "${identifierValue?.trim()}"][0]{
     ...,
     hotelNavigation->{...},
     gcCategory->{...},
@@ -1165,4 +1201,5 @@ export {
   getHotelQuery,
   getHotelDocument,
   getRefererenceObject,
+  getBanner,
 };

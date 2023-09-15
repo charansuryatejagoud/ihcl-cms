@@ -42,7 +42,6 @@ export const FITNESS_CENTRE = "24-hour fitness centre";
 export const OUTDOOR_INDOOR_POOLS = "Outdoor & indoor pools";
 export const JIVA_SPA = "Jiva Spa";
 
-
 export const DEV_CHECK_IN_CHECK_OUT_IMAGE =
   "image-077fc038955b9d328598f7520dd6d53afb196731-21x21-svg";
 export const DEV_DINING_IMAGE =
@@ -62,23 +61,23 @@ export const DEV_TEMPERATURE_IMAGE =
 export const DEV_ACTIVITIES_IMAGE =
   "image-0891ee9d255b03ddddac3c80e00c179c1e509cf8-72x72-png";
 export const DEV_HOTEL_IMAGE =
-"image-6ce67b089d7320d0b1d75f3d08bf9107af5bbb0a-72x57-png";
+  "image-6ce67b089d7320d0b1d75f3d08bf9107af5bbb0a-72x57-png";
 export const DEV_CITY_TOUR_IMAGE =
-"image-577a726b09fe6b01dd1675802525d0a6e519f84d-106x89-png";
+  "image-577a726b09fe6b01dd1675802525d0a6e519f84d-106x89-png";
 export const DEV_POLO_MATCHES_IMAGE =
-"image-39e78dbbe4cad628b2636d85f7f105e0c18eaf73-87x87-png";
+  "image-39e78dbbe4cad628b2636d85f7f105e0c18eaf73-87x87-png";
 export const DEV_KITE_FLYING_IMAGE =
-"image-362e91558b0c45fb8c0b2e43c0e3309b0ffd399f-132x123-png";
+  "image-362e91558b0c45fb8c0b2e43c0e3309b0ffd399f-132x123-png";
 export const DEV_WIFI_IMAGE =
-"image-8f302ab171dc9b3a655f192658dc44e545f60688-108x87-png";
+  "image-8f302ab171dc9b3a655f192658dc44e545f60688-108x87-png";
 export const DEV_CAR_RENTAL_SERVICES_IMAGE =
-"image-f050f0095367b3aa9b25e643293f28839c6b4ba0-93x78-png";
+  "image-f050f0095367b3aa9b25e643293f28839c6b4ba0-93x78-png";
 export const DEV_FITNESS_CENTER_IMAGE =
-"image-40550daa21c33571557228d13ad239327ebe8edf-120x75-png";
+  "image-40550daa21c33571557228d13ad239327ebe8edf-120x75-png";
 export const DEV_OUTDOOR_AND_INDOOR_POOLS_IMAGE =
-"image-4e35e5ebf2458ece68eca72ed4b407da967687a0-90x90-png";
+  "image-4e35e5ebf2458ece68eca72ed4b407da967687a0-90x90-png";
 export const DEV_JIVA_SPA_IMAGE =
-"image-4384994d03feb37a1b1c8e462f9fc7e8d4cafaeb-117x75-png";
+  "image-4384994d03feb37a1b1c8e462f9fc7e8d4cafaeb-117x75-png";
 
 export const PROD_CHECK_IN_CHECK_OUT_IMAGE =
   "image-c48628fbb4b039bdaba898224d9065dce969deff-63x63-png";
@@ -101,21 +100,21 @@ export const PROD_ACTIVITIES_IMAGE =
 export const PROD_HOTEL_IMAGE =
   "image-6ce67b089d7320d0b1d75f3d08bf9107af5bbb0a-72x57-png";
 export const PROD_CITY_TOUR_IMAGE =
-"image-577a726b09fe6b01dd1675802525d0a6e519f84d-106x89-png";
+  "image-577a726b09fe6b01dd1675802525d0a6e519f84d-106x89-png";
 export const PROD_POLO_MATCHES_IMAGE =
-"image-39e78dbbe4cad628b2636d85f7f105e0c18eaf73-87x87-png";
+  "image-39e78dbbe4cad628b2636d85f7f105e0c18eaf73-87x87-png";
 export const PROD_KITE_FLYING_IMAGE =
-"image-362e91558b0c45fb8c0b2e43c0e3309b0ffd399f-132x123-png";
+  "image-362e91558b0c45fb8c0b2e43c0e3309b0ffd399f-132x123-png";
 export const PROD_WIFI_IMAGE =
-"image-8f302ab171dc9b3a655f192658dc44e545f60688-108x87-png";
+  "image-8f302ab171dc9b3a655f192658dc44e545f60688-108x87-png";
 export const PROD_CAR_RENTAL_SERVICES_IMAGE =
-"image-f050f0095367b3aa9b25e643293f28839c6b4ba0-93x78-png";
+  "image-f050f0095367b3aa9b25e643293f28839c6b4ba0-93x78-png";
 export const PROD_FITNESS_CENTER_IMAGE =
-"image-40550daa21c33571557228d13ad239327ebe8edf-120x75-png";
+  "image-40550daa21c33571557228d13ad239327ebe8edf-120x75-png";
 export const PROD_OUTDOOR_AND_INDOOR_POOLS_IMAGE =
-"image-4e35e5ebf2458ece68eca72ed4b407da967687a0-90x90-png";
+  "image-4e35e5ebf2458ece68eca72ed4b407da967687a0-90x90-png";
 export const PROD_JIVA_SPA_IMAGE =
-"image-4384994d03feb37a1b1c8e462f9fc7e8d4cafaeb-117x75-png";
+  "image-4384994d03feb37a1b1c8e462f9fc7e8d4cafaeb-117x75-png";
 
 export const TYPE_AVAILABILITY = "availability";
 export const TYPE_BULLET_POINTS = "bulletPoints";
@@ -133,6 +132,26 @@ export const TYPE_IMAGE_ASSET = "imageAsset";
 export const TYPE_EXCLUSIVE_OFFERS = "exclusiveOffers";
 export const TYPE_ADDRESS = "address";
 export const TYPE_HOTEL = "hotel";
+export const TYPE_CONTACT = "contact";
 
 export const KEY_DESKTOP_TITLE = "desktopTitle";
 export const KEY_MOBILE_TITLE = "mobileTitle";
+
+export const QUREY_HOTELS_BANNER_IMAGES = `*[_type == "hotel"]{
+  hotelName,
+  hotelOverview->{bannerImage},
+  hotelFacilities->{bannerImage},
+  hotelSocialInfo->{bannerImage},
+  hotelRooms->{bannerImage},
+  hotelExclusiveOffersDining->{bannerImage},
+  hotelExclusiveOffersWellness->{bannerImage},
+  hotelExclusiveOffersRooms->{bannerImage},
+  hotelOffers->{bannerImage},
+  hotelHolidays->{bannerImage},
+  hotelSignatureDining->{bannerImage},
+  hotelEventVenues->{bannerImage},
+  hotelWellness->{bannerImage},
+  hotelExperiences->{bannerImage},
+  hotelGallery->{bannerImage},
+  hotelAttractions->{bannerImage}
+}`;
