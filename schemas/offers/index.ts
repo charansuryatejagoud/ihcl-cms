@@ -12,6 +12,10 @@ export const Offers: FeatureSchemaDefinition = {
         value: "offers.group.t&c-dropdown-content"
       },
       {
+        title: "[Offers] T & C Dropdown Content (Layout Placeholder)",
+        value: "offers.group.t&c-dropdown-content-layout-placeholder"
+      },
+      {
         title: "[Offers] 3 Column Grid With Package Images",
         value: "offers.group.3-column-grid-with-package-images",
       },
