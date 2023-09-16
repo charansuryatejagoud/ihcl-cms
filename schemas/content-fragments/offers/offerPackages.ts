@@ -89,6 +89,66 @@ export default {
       },
     },
     {
+      name: "inclusions",
+      title: "Inclusions",
+      type: "array",
+      of: [
+        {
+          type: "object",
+          fields: [
+            {
+              name: "basicInfo",
+              title: "Basic Info",
+              type: "basicDetails",
+            },
+            {
+              name: "inclusionTitle",
+              title: "Inclusion Title",
+              type: "string",
+              initialValue: "PACKAGE INCLUSIONS",
+              hidden: ({ document }) =>
+                document?.packageType == "singlePackage",
+            },
+            {
+              name: "inclusionIdentifier",
+              title: "Inclusion Identifier",
+              type: "string",
+              initialValue: "",
+              hidden: ({ document }) =>
+                document?.packageType == "singlePackage",
+            },
+            {
+              name: "highlights",
+              title: "Highlights",
+              type: "array",
+              of: [{ type: "string" }],
+              hidden: ({ document }) =>
+                document?.packageType == "singlePackage",
+            },
+            {
+              name: "inclusionTheme",
+              title: "Inclusion Theme",
+              type: "reference",
+              to: [{ type: "offerThemes" }],
+              hidden: ({ document }) =>
+                document?.packageType !== "multipleThemesAndPackages",
+            },
+          ],
+          preview: {
+            select: {
+              title: "basicInfo",
+            },
+            prepare(selection) {
+              const { title } = selection;
+              return {
+                title: title.title,
+              };
+            },
+          },
+        },
+      ],
+    },
+    {
       name: "validityDates",
       title: "Validity Dates",
       type: "array",
