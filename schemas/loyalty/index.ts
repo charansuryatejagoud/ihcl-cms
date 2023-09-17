@@ -1,7 +1,11 @@
 import dialog from "schemas/core/documents/dialog";
 import { FeatureSchemaDefinition } from "schemas/types";
+import cugOffers from "./cug-offers";
 
 export const loyalty: FeatureSchemaDefinition = {
+  schemas: [
+    cugOffers
+  ],
   connectedStores: [
     {
       title: "[Loyalty] Epicure Cards Store",
@@ -110,7 +114,7 @@ export const loyalty: FeatureSchemaDefinition = {
       {
         title: "[Loyalty] Epicure Membership Login",
         value: "loyalty.card.epicure-membership-login",
-      },
+      }
     ],
     nudge: [
       {
@@ -136,10 +140,6 @@ export const loyalty: FeatureSchemaDefinition = {
     ],
     dialog: [
       { title: "[Loyalty] Manage Card", value: "manage-card" },
-      {
-        title: "[Loyalty] Enquire Bulk Gift Card",
-        value: "enquire-bulk-gift-card",
-      },
     ],
     stepper: [
       {

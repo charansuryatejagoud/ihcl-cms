@@ -41,7 +41,31 @@ export default {
             },
           ],
         },
+        {
+          type: "group",
+        },
+        {
+          type: "object",
+          name: "questionAndAnswer",
+          fields: [
+            {
+              name: "title",
+              title: "Title",
+              type: "string",
+            },
+            {
+              type: "array",
+              name: "items",
+              of: [{ type: "questionAndAnswer" }],
+            },
+          ],
+        },
       ],
+    },
+    {
+      name: "primaryAction",
+      title: "Primary Action",
+      type: "navigationItem",
     },
   ],
   preview: {
@@ -59,4 +83,21 @@ export default {
       };
     },
   },
+};
+export const questionAndAnswer = {
+  name: "questionAndAnswer",
+  title: "Question and Answer",
+  type: "object",
+  fields: [
+    {
+      title: "Question",
+      name: "question",
+      type: "string",
+    },
+    {
+      title: "Answer",
+      name: "answer",
+      type: "blockContent",
+    },
+  ],
 };

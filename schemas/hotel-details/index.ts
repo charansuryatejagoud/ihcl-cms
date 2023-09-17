@@ -1,6 +1,12 @@
 import { FeatureSchemaDefinition } from "schemas/types";
 
 export const details: FeatureSchemaDefinition = {
+  connectedStores: [
+    {
+      title: "[Details] Hotel Listing",
+      value: "details.connectedStores.hotel-listing",
+    },
+  ],
   variants: {
     group: [
       {
@@ -34,14 +40,19 @@ export const details: FeatureSchemaDefinition = {
           "details.group.group-with-card-left-media-right-content-aspect-ratio-2:4",
       },
       {
-        title: "[Details] Group With Carousel- Card right Media Left Content",
+        title: "[Details] Group With Carousel- Card Right Media Left Content",
         value:
           "details.group.group-with-carousel-card-right-media-left-content-aspect-ratio-2:4",
       },
       {
-        title: "[Details] Group With Card right Media Left Content",
+        title: "[Details] Group With Card Right Media Left Content",
         value:
           "details.group.group-with-card-right-media-left-content-aspect-ratio-2:4",
+      },
+      {
+        title: "[Details] Group With Card Right Media Left Content(Hotel)",
+        value:
+          "details.group.group-with-card-right-media-left-content-aspect-ratio-2:4-hotel",
       },
       {
         title: "[Details] Group with Full Width Media",
@@ -50,6 +61,10 @@ export const details: FeatureSchemaDefinition = {
       {
         title: "[Details] Navigation Tabs",
         value: "details.group.navigation-tabs",
+      },
+      {
+        title: "Hotel Details Navigation Tabs",
+        value: "details.hotels.group.navigation-tabs",
       },
       {
         title: "[Details] Tab Dropdown Selector",
@@ -62,6 +77,14 @@ export const details: FeatureSchemaDefinition = {
       {
         title: "[details] Group With Two Row Box Tabs",
         value: "details.group.group-with-two-row-box-tabs",
+      },
+      {
+        title: "[details] Group With Two Row Box Tabs (Layout Placeholder)",
+        value: "details.group.group-with-two-row-box-tabs-layout-placeholder",
+      },
+      {
+        title: "[details] Group With Row Carousel",
+        value: "details.group.group-with-row-carousel",
       },
       {
         title: "[Details] Hotel Facilities",
@@ -80,12 +103,77 @@ export const details: FeatureSchemaDefinition = {
         value: "details.group.gallery-image-carousel",
       },
       {
+        title: "[Details] Group With Card Right Media Left Content(Hotel)",
+        value:
+          "details.group.group-with-card-right-media-left-content-aspect-ratio-2:4-hotel",
+      },
+      {
         title: "[Details] Media Image Carousel",
         value: "details.group.media-image-carousel",
       },
       {
         title: "[Details] 3 Card Carousel With Center Aligned Carousel Icons",
-        value: "details.group.3-card-carousel-with-center-aligned-carousel-icons",
+        value:
+          "details.group.3-card-carousel-with-center-aligned-carousel-icons",
+      },
+      {
+        title: "[Details] Group With Specifications",
+        value: "details.group.group-with-specifications",
+      },
+      {
+        title: "[Details] Group With Bullet Points",
+        value: "details.group.group-with-bullet-points",
+      },
+      {
+        title: "[details] Group With 4-Row 3-Column Grid",
+        value: "details.group.group-with-four-row-three-column-grid",
+      },
+      {
+        title: "[Details] Group With 2 Column Cards Grid(Placeholder)",
+        value: "details.group.group-with-2-column-cards-grid-placeholder",
+      },
+      {
+        title: "[Details] Group With Validity Dates",
+        value: "details.group.group-with-validity-dates",
+      },
+      {
+        title: "[Details] Media Gallery Carousel",
+        value: "details.group.media-gallery-carousel",
+      },
+      {
+        title:
+          "[Details] Group With Carousel-Card Left Media Right Content(Layout Placeholder)",
+        value:
+          "details.group.group-with-carousel-card-left-media-right-content-aspect-ratio-2:4-layout-placeholder",
+      },
+      {
+        title: "[Details] Center Card Carousel(Layout Placeholder)",
+        value: "details.group.center-card-carousel-layout-placeholder",
+      },
+      {
+        title: "[Details] 3 Card Carousel (Layout Placeholder)",
+        value: "details.group.3-card-carousel-layout-placeholder",
+      },
+      {
+        title:
+          "[Details] Group With Card Left Media Right Content And Price (Layout Placeholder)",
+        value:
+          "details.group.group-with-card-left-media-right-content-and-price-layout-placeholder",
+      },
+      {
+        title:
+          "[Details] Group With Card Top Media Bottom Content And Price (Layout Placeholder)",
+        value:
+          "details.group.group-with-card-top-media-bottom-content-and-price-layout-placeholder",
+      },
+      {
+        title: "[Details] Destination Navigation Tabs",
+        value: "details.group.destination.navigation-tabs",
+      },
+      {
+        title: "[Details] Group With 2 Column Cards Grid(Layout Placeholder)",
+        value:
+          "details.group.group-with-2-column-cards-grid-layout-placeholder",
       },
     ],
     card: [
@@ -112,7 +200,8 @@ export const details: FeatureSchemaDefinition = {
       },
       {
         title: "[Details] Card With Right Media Left Content",
-        value: "details.card.card-with-right-media-left-content-aspect-ratio-2:4",
+        value:
+          "details.card.card-with-right-media-left-content-aspect-ratio-2:4",
       },
       {
         title: "[Details] Card with Left Align Content",
@@ -171,8 +260,17 @@ export const details: FeatureSchemaDefinition = {
         value: "details.card-share-link-icon",
       },
       {
+        title: "[Details] Card With Right Aligned Content(Placeholder)",
+        value: "details.card.card-with-right-aligned-content-placeholder",
+      },
+      {
         title: "[Details] Left Media Right Content With Equally Occupied Space",
-        value: "details.card.left-media-right-content-with-equally-occupied-space",
+        value:
+          "details.card.left-media-right-content-with-equally-occupied-space",
+      },
+      {
+        title: "[Details] Restaurant Contact Details",
+        value: "details.card.restaurant-contact-details",
       },
       {
         title: "[Details] Title with CTA Action",
@@ -183,8 +281,26 @@ export const details: FeatureSchemaDefinition = {
         value: "details.card.contact-details-with-single-cta",
       },
       {
-        title:"[Details] Right Aligned Content With Aspect ratio 1:3",
-        value:"details.card.right-aligned-content-with-aspect-ratio-1:3"
+        title:
+          "[Details] Card With Right Media Left Content(Layout Placeholder)",
+        value:
+          "details.card.card-with-right-media-left-content-aspect-ratio-2:4-layout-placeholder",
+      },
+      {
+        title:
+          "[Details] Card With Left Media Right Content And Price (Layout Placeholder)",
+        value:
+          "details.card.card-with-left-media-right-content-and-price-layout-placeholder",
+      },
+      {
+        title:
+          "[Details] Card With Top Media Bottom Content And Price (Layout Placeholder)",
+        value:
+          "details.card.card-with-top-media-bottom-content-and-price-layout-placeholder",
+      },
+      {
+        title: "[Details] Right Aligned Content With Aspect ratio 1:3",
+        value: "details.card.right-aligned-content-with-aspect-ratio-1:3",
       },
       {
         title: "[Details] Card With Left Media Right Content Aspect Ratio 2:2",
@@ -222,14 +338,14 @@ export const details: FeatureSchemaDefinition = {
     placeholder: [
       {
         title: "[Details] Hotels Locations on Map",
-        value: "details.placeholders.hotels-locations-on-map"
-      }
+        value: "details.placeholders.hotels-locations-on-map",
+      },
     ],
     nudge: [
       {
         title: "[Details] Right Aligned Actions",
-        value: "details.nudge.right-aligned-actions"
-      }
-    ]
+        value: "details.nudge.right-aligned-actions",
+      },
+    ],
   },
 };

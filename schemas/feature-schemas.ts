@@ -9,21 +9,21 @@ import { ihclForms } from "./forms";
 import { loyalty } from "./loyalty";
 import { details } from "./hotel-details";
 import { ihclcore } from "./commonUtils";
-import { destinations } from "./destinations";
 import { bookings } from "./bookings";
-import solarDetails from "./search/searchBodyParams";
 import { search } from "./search";
 import { Authentication } from "./authentication";
 import { giftCards } from "./gift-cards";
 import { partners } from "./partners";
 import { businessServices } from "./business";
-import hotel from "./content-fragments/hotels/hotel";
 import { hotels } from "./content-fragments/hotels";
+import { restaurants } from "./content-fragments/restaurants";
 import { myAccount } from "./myAccount";
 import { Offers } from "./offers";
 import { aboutUs } from "./aboutUs";
 import { events } from "./events";
 import { notifications } from "./notifications";
+import { offersAndPromotions } from "./content-fragments/offers";
+import { destinations } from "./content-fragments/destinations";
 
 const features: FeatureSchemaDefinition[] = [
   core,
@@ -39,11 +39,14 @@ const features: FeatureSchemaDefinition[] = [
   partners,
   businessServices,
   hotels,
+  restaurants,
   myAccount,
   Offers,
   aboutUs,
   events,
   notifications,
+  offersAndPromotions,
+  
 ];
 
 export const featureDefinition: FeatureSchemaDefinition =

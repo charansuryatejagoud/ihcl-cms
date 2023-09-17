@@ -10,7 +10,19 @@ export const Offers: FeatureSchemaDefinition = {
       {
         title: "[Offers] T & C Dropdown Content",
         value: "offers.group.t&c-dropdown-content"
-      }
+      },
+      {
+        title: "[Offers] 3 Column Grid With Package Images",
+        value: "offers.group.3-column-grid-with-package-images",
+      },
+      {
+        title: "[Offers] 3 Column Grid With Package Icons",
+        value: "offers.group.3-column-grid-with-package-icons",
+      },
+      {
+        title: "[Offers] 3 Column Grid With Participating Hotels",
+        value: "offers.group.3-column-grid-with-participating-hotels",
+      },
     ],
     forms:[ 
       {

@@ -127,6 +127,10 @@ export const ihclcore: FeatureSchemaDefinition = {
         value: "ihcl.core.group.hotel-address-data",
       },
       {
+        title: "Hotel Address Data(Layout Placeholder)",
+        value: "ihcl.core.group.hotel-address-data-layout-placeholder",
+      },
+      {
         title:"Contact Info",
         value:"ihcl.core.group.contact-info"
       },    
@@ -182,7 +186,10 @@ export const ihclcore: FeatureSchemaDefinition = {
         title: "Carousel With 3 Column Grid",
         value: "ihcl.core.group.carousel-with-three-column-grid",
       },
-
+      {
+        title: "Carousel With 3 Column Grid(Layout Placeholder)",
+        value: "ihcl.core.group.carousel-with-three-column-grid-layout-placeholder",
+      },
       {
         title: "4 Column Rectangle Grid",
         value: "ihcl.core.group.four-column-rectangle-grid",
@@ -194,6 +201,10 @@ export const ihclcore: FeatureSchemaDefinition = {
       {
         title: "Carousel With Tabs",
         value: "ihcl.core.group.carousel-with-tabs",
+      },
+      {
+        title: "Destinations Carousel With Tabs(Layout Placeholder)",
+        value: "ihcl.core.group.carousel-with-tabs-layout-placeholder",
       },
       {
         title: "Multi Static With Tabs",
@@ -220,6 +231,10 @@ export const ihclcore: FeatureSchemaDefinition = {
         value: "ihcl.core.group.option-selector-popup-modal",
       },
       {
+        title: "Option Selector PopUp Modal Layout Placeholder",
+        value: "ihcl.core.group.option-selector-popup-modal-layout-placeholder",
+      },
+      {
         title: "Group With Vertical Components",
         value: "ihcl.core.group.group-with-vertical-components",
       },
@@ -236,8 +251,20 @@ export const ihclcore: FeatureSchemaDefinition = {
         value: "common-utils.group.cookies-management-system-modal",
       },
       {
+        title: "Group With 3 Column Cards Grid (Layout Placeholder)",
+        value: "ihcl.core.group.group-with-3-column-cards-grid-layout-placeholder",
+      },
+      {
         title: "Center Moving Carousel With BackGround Gradient",
         value: "common-utils.group.center-moving-carousel-with-background-gradient",
+      },
+      {
+        title: "Images With Single Column Grid(Layout Placeholder)",
+        value: "ihcl.core.group.images-with-single-column-grid-layout-placeholder",
+      },
+      {
+        title: "Default Tab Filter",
+        value: "common-utils.default.tab.filter",
       },
       {
         title:"Filter Address Dropdown",

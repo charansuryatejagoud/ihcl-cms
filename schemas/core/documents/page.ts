@@ -8,11 +8,11 @@ import { Schema, SchemaItem, VariantDefinition } from "../../types";
 import { LockFieldEditor } from "../../../branding/components/LockFieldEditor";
 import { client, isAdminUser } from "../../shared-utils";
 import connectedStore from "../objects/connectedStore";
+import { headerBGVariant } from "../../constants";
 
 interface PageProps {
   items: SchemaItem[];
   connectedStores: VariantDefinition[];
-  navigationVariants: VariantDefinition[];
 }
 
 export default function page(props: PageProps) {
@@ -29,7 +29,7 @@ export default function page(props: PageProps) {
     initialValue: {
       variant: "page",
       itemsRepresentation: "list",
-      navigationVariant: "default",
+      headerBGVariant: "default",
       showBottomNavigation: false,
       isLocked: false,
       tabItemSize: "dynamic",
@@ -151,12 +151,12 @@ export default function page(props: PageProps) {
         group: "configuration",
       },
       {
-        name: "navigationVariant",
-        title: "Navigation Variant",
+        name: "headerBGVariant",
+        title: "Header BG Variant",
         description: "This will default to Navigation header, if left empty.",
         type: "string",
         options: {
-          list: props.navigationVariants,
+          list: headerBGVariant,
         },
         group: "configuration",
       },
@@ -192,12 +192,12 @@ export default function page(props: PageProps) {
         hidden: ({parent}) => !parent?.showBottomNavigation,
         of: props.items
       },
-      // {
-      //   title: "Seo",
-      //   name: "seo",
-      //   type: "seo",
-      //   group: "seo",
-      // },
+      {
+        title: "SEO",
+        name: "seo",
+        type: "seoConfig",
+        group: "seo",
+      },
       {
         title: "Is Live",
         name: "isLive",

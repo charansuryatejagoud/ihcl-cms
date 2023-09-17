@@ -43,16 +43,15 @@ function Destinations() {
 
   const migrateExcelData = async () => {
     await destinationsData?.map(async (destination, destinationIndex) => {
-      console.log(destinationIndex, destination);
       await client
         .fetch(
           `*[_type == "${TYPE_DESTINATION}" && name == "${destination?.title?.trim()}"][0]{...}`,
         )
         .then(async (res) => {
           if (res) {
-            await updateDocument(destination, res);
+            await updateDocument(destination, res, destinationIndex);
           } else {
-            await createDocument(destination);
+            await createDocument(destination, destinationIndex);
           }
         });
     });
@@ -92,14 +91,14 @@ function Destinations() {
   );
 }
 
-async function updateDocument(data: any, document: any) {
+async function updateDocument(data: any, document: any, index) {
   const updatedDoc = getDestinationsDoc({ data: data, doc: document });
   await client
     .patch(document._id)
     .set({ ...updatedDoc })
     .commit()
     .then((res) => {
-      console.log(res?.name + " Updated!");
+      console.log(index + 1, res?.name + " Updated!");
     })
     .catch((err) => {
       console.error(
@@ -111,11 +110,11 @@ async function updateDocument(data: any, document: any) {
     });
 }
 
-async function createDocument(data: any) {
+async function createDocument(data: any, index) {
   await client
     .create(getDestinationsDoc({ data: data }))
     .then((res) => {
-      console.log("Created document, id = ", res._id, res.name);
+      console.log(index + 1, "Created document, id = ", res._id, res.name);
     })
     .catch((err) => console.log("error", err));
 }
@@ -139,6 +138,16 @@ function getDestinationsDoc({ data, doc = null, type = TYPE_DESTINATION }) {
         ? doc.destinationURL
         : data?.destinationURL
       : data?.destinationURL,
+    country: doc?.country
+      ? doc?.country == data?.country
+        ? doc.country
+        : data?.country
+      : data?.country,
+    city: doc?.city
+      ? doc?.city == data?.city
+        ? doc.city
+        : data?.city
+      : data?.city,
     bannerTitle: {
       _type: TYPE_TITLE,
       [KEY_DESKTOP_TITLE]: [...data?.bannerDesktopTitle],

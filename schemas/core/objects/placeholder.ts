@@ -1,6 +1,11 @@
-import {IoApps, IoCodeWorking as ParameterMapIcon, IoLogoWebComponent as Icon, IoSettings,} from "react-icons/io5";
-import {VariantDefinition} from "../../types";
-import {hiddenField} from "../../shared-utils";
+import {
+  IoApps,
+  IoCodeWorking as ParameterMapIcon,
+  IoLogoWebComponent as Icon,
+  IoSettings,
+} from "react-icons/io5";
+import { VariantDefinition } from "../../types";
+import { hiddenField } from "../../shared-utils";
 
 export default function placeholder({
   variants,
@@ -65,6 +70,20 @@ export default function placeholder({
         group: "main",
       },
       {
+        name: "brandId",
+        title: "Brand Id",
+        type: "string",
+        hidden: ({ parent }) =>
+          parent?.variant !== "common-utils.placeholders.social-feed",
+      },
+      {
+        name: "socialHandle",
+        title: "Social Handle",
+        type: "string",
+        hidden: ({ parent }) =>
+          parent?.variant !== "common-utils.placeholders.social-feed",
+      },
+      {
         title: "Start Date",
         name: "startDate",
         type: "datetime",
@@ -75,8 +94,7 @@ export default function placeholder({
         },
         description: "Used for Showing Social Feeds based on Time Period",
         hidden: ({ parent }) =>
-          parent?.variant !==
-          "common-utils.placeholders.social-feed",
+          parent?.variant !== "common-utils.placeholders.social-feed",
       },
       {
         title: "End Date",
@@ -89,8 +107,7 @@ export default function placeholder({
         },
         description: "Used for Showing Social Feeds based on Time Period",
         hidden: ({ parent }) =>
-          parent?.variant !==
-          "common-utils.placeholders.social-feed",
+          parent?.variant !== "common-utils.placeholders.social-feed",
       },
       {
         name: "documents",
@@ -125,7 +142,7 @@ export default function placeholder({
                 name: "value",
                 title: "Value",
                 type: "string",
-              }, 
+              },
             ],
             preview: {
               select: {
