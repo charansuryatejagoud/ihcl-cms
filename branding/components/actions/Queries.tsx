@@ -15,59 +15,74 @@ export const queries = {
     hotel: {
       type: `hotel`,
       body: `{
-        hotelId, hotelName, brandName,hotelPath,identifier,
-      hotelAddress->{
-        addressLine1,city,state,country,pincode,
-        latitude,longitude,regionKey
-      },
-      hotelContact->{
-        businessEmail, supportEmail, businessPhone, supportPhone
-      },
-      searchTaxonomies->{
-        ihclHotelKey,
-        brandKey,
-        hotelCode,
-        hospitalityTitle,
-        hotelType,
-        posTypes,
-        pos,
-        hotelPmsCode,
-        orionCode,
-        siebelCode,
-        status,
-        legalEntity,
-        currency,
-        pmsName,
-        nonOrionFlag,
-        ticFlag,
-        epicureFlag,
-        updatedDate,
-        createdDate,
-        activeInd,
-        synxisHotelId,
-        rating,
-        aminities,
-        longDescription,
-        shortDescription,
-        images,
-        highlights,
-        hospitalityTitle,
-        restaurantTypes,
-        dressCodes,
-        cuisines,
-        therapies,
-        searchCategory,
-        holidayExperience,
-        holidayTheme,
-        hotelFeature,
-        restaurantName,
-        menuLink,
-        timings,
-        diningPath,
-        lunch,
-        dinner,
-        destinationPath
-      }
-      }`
+        "restaurants": *[
+          _type == "restaurants"
+          && participatingHotels[]._ref match ^._id]
+        {
+         "restaurantIdentifier":identifier,
+         "restaurantTitle":title,
+         "restaurantCity":city,
+         "restaurantBrand": *[ _type == "restaurantBrand"
+          && participatingRestaurants[]._ref match ^._id][0].title,
+         "restaurantDescription": hotelDetailDiningPage.restaurantInfo.description,
+         "cusine": hotelDetailDiningPage.restaurantAvailability[lower(title) match "cuisine"][0].list[0].item,
+         "breakfast": hotelDetailDiningPage.restaurantAvailability[lower(title) match "breakfast"][0].list[0].item,
+         "lunch": hotelDetailDiningPage.restaurantAvailability[lower(title) match "lunch"][0].list[0].item,
+         "dinner": hotelDetailDiningPage.restaurantAvailability[lower(title) match "dinner"][0].list[0].item,
+         "openingHours": openingHours
+        },
+       hotelId, hotelName, brandName,hotelPath,identifier,
+            hotelAddress->{
+              addressLine1,city,state,country,pincode,
+              latitude,longitude,regionKey
+            },
+            hotelContact->{
+              businessEmail, supportEmail, businessPhone, supportPhone
+            },
+            searchTaxonomies->{
+              ihclHotelKey,
+              brandKey,
+              hotelCode,
+              hospitalityTitle,
+              hotelType,
+              posTypes,
+              pos,
+              hotelPmsCode,
+              orionCode,
+              siebelCode,
+              status,
+              legalEntity,
+              currency,
+              pmsName,
+              nonOrionFlag,
+              ticFlag,
+              epicureFlag,
+              updatedDate,
+              createdDate,
+              activeInd,
+              synxisHotelId,
+              rating,
+              aminities,
+              longDescription,
+              shortDescription,
+              images,
+              highlights,
+              hospitalityTitle,
+              restaurantTypes,
+              dressCodes,
+              cuisines,
+              therapies,
+              searchCategory,
+              holidayExperience,
+              holidayTheme,
+              hotelFeature,
+              restaurantName,
+              menuLink,
+              timings,
+              diningPath,
+              lunch,
+              dinner,
+              destinationPath
+            }`
     }
   }

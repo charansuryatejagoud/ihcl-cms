@@ -56,18 +56,32 @@ const contentSection = S.listItem()
     S.list().title("Content").items([
       S.listItem().title("Hotels").icon(ListItemIcon).child(S.documentTypeList("hotel")),
       S.listItem().title("Destinations").icon(ListItemIcon).child(S.documentTypeList("destination")),
-      S.listItem().title("Restaurants").icon(ListItemIcon).child(S.documentTypeList("restaurants")),
-      S.listItem().title("Restaurant Brands").icon(ListItemIcon).child(S.documentTypeList("restaurantBrand")),
-      S.listItem().title("Offers").icon(ListItemIcon).child(S.documentTypeList("offerPackages")),
+      S.listItem().title("Restaurants").icon(ListItemIcon).child(
+        S.list().title("Restaurants").items([
+          S.listItem().title("Restaurant List").icon(ListItemIcon).child(S.documentTypeList("restaurants")),
+          S.listItem().title("Restaurant Brands").icon(ListItemIcon).child(S.documentTypeList("restaurantBrand"))
+        ])
+      ),
       S.listItem().title("Vouchers").icon(ListItemIcon).child(S.documentTypeList("vouchers")),
       S.listItem().title("Venues").icon(ListItemIcon).child(S.documentTypeList("venues")),
       S.listItem().title("Events").icon(ListItemIcon).child(S.documentTypeList("events")),
       //S.listItem().title("Experiences").icon(ListItemIcon).child(S.documentTypeList("experiences")),
       //S.listItem().title("Places").icon(ListItemIcon).child(S.documentTypeList("places")),
-      S.listItem().title("Gift Cards").icon(ListItemIcon).child(S.documentTypeList("giftCardGroup")),
+      S.listItem().title("Gifting & Shopping").icon(ListItemIcon).child(
+        S.list().title("Gifting & Shopping").items([
+          S.listItem().title("Gift Cards").icon(ListItemIcon).child(S.documentTypeList("giftCardGroup"))
+        ])
+      ),
       //S.listItem().title("Gift Hampers").icon(ListItemIcon).child(S.documentTypeList("giftHampers")),
       //S.listItem().title("Asya").icon(ListItemIcon).child(S.documentTypeList("asya")),
       //S.listItem().title("Taj Khazana").icon(ListItemIcon).child(S.documentTypeList("tajKhazana"))
+      S.listItem().title("Offers & Holidays").icon(ListItemIcon).child(
+        S.list().title("Offers & Holidays").items([
+          S.listItem().title("Offer Packages").icon(ListItemIcon).child(S.documentTypeList("offerPackages")),
+          S.listItem().title("Offer Themes").icon(ListItemIcon).child(S.documentTypeList("offerThemes")),
+          S.listItem().title("Offer Holidays").icon(ListItemIcon).child(S.documentTypeList("offerHolidays"))
+        ])
+      ),
     ]
   )
 )

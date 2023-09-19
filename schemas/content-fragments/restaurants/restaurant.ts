@@ -133,6 +133,13 @@ export default {
       ],
     },
     {
+      name: "restaurantDocuments",
+      title: "Restaurant Documents",
+      description: "Documents supported are PDF and DOCX.",
+      type: "array",
+      of: [{ type: "fileDocument" }],
+    },
+    {
       name: "pageTitle",
       title: "Page Title",
       type: "string",

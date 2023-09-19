@@ -808,6 +808,14 @@ export const contactTypes = [
     title: "Support",
     value: "support",
   },
+  {
+    title: "Wellness",
+    value: "wellness",
+  },
+  {
+    title: "Venue",
+    value: "venue",
+  },
 ];
 
 export const hospitalityTitles = [
@@ -864,7 +872,18 @@ export const offerTypes = [
     value: "hotel",
   },
   {
-    title: "Holiday",
-    value: "holiday",
+    title: "4D Offer",
+    value: "4d_offer",
   },
 ];
+
+export const headerBGVariant = [
+  {
+    title: "Default",
+    value: "default",
+  },
+  {
+    title: "Gradient",
+    value: "gradient",
+  },
+]

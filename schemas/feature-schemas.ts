@@ -17,6 +17,7 @@ import { partners } from "./partners";
 import { businessServices } from "./business";
 import { hotels } from "./content-fragments/hotels";
 import { restaurants } from "./content-fragments/restaurants";
+import { hampers } from "./content-fragments/hampers";
 import { myAccount } from "./myAccount";
 import { Offers } from "./offers";
 import { aboutUs } from "./aboutUs";
@@ -40,6 +41,7 @@ const features: FeatureSchemaDefinition[] = [
   businessServices,
   hotels,
   restaurants,
+  hampers,
   myAccount,
   Offers,
   aboutUs,

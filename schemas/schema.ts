@@ -33,7 +33,6 @@ export default createSchema({
     page({
       items: featureDefinition.pageItems,
       connectedStores: featureDefinition.connectedStores,
-      navigationVariants: featureDefinition.variants.navigation,
     }),
     dialog({
       connectedStores: featureDefinition.connectedStores,

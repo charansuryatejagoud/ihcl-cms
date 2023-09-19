@@ -1,6 +1,5 @@
 import { Box, Stack, Text, Select, Grid } from "@sanity/ui";
 import React, { useState } from "react";
-import HotelInformation from "./HotelInformation";
 import Contact from "./Contact";
 import Highlights from "./Highlights";
 import Address from "./Address";
@@ -11,8 +10,10 @@ import Restaurants from "./Restaurants";
 import Destinations from "./Destinations";
 import ExclusiveOffers from "./ExclusiveOffers";
 import Hotels from "./Hotels";
+import About from "./About";
+import HotelInformation from "./HotelInformationDynamic";
 
-function ReadExcel() {
+function ImportExcel() {
   const [selected, setSelected] = useState("Hotels");
   const dropDown = [
     "Hotel Information",
@@ -25,7 +26,8 @@ function ReadExcel() {
     "Facilities",
     "Destinations",
     "Exclusive Offers",
-    "Hotels"
+    "Hotels",
+    "About",
   ];
 
   function handleChange(event: any): void {
@@ -68,9 +70,7 @@ function ReadExcel() {
               <Text size={2} weight="bold">
                 {selected}
               </Text>
-              {selected == "Hotel Information" && (
-                <HotelInformation type="production" />
-              )}
+              {selected == "Hotel Information" && <HotelInformation />}
               {selected == "Contact" && <Contact />}
               {selected == "Highlights" && <Highlights />}
               {selected == "Address" && <Address />}
@@ -81,6 +81,7 @@ function ReadExcel() {
               {selected == "Destinations" && <Destinations />}
               {selected == "Exclusive Offers" && <ExclusiveOffers />}
               {selected == "Hotels" && <Hotels />}
+              {selected == "About" && <About />}
             </Stack>
           </Box>
         </Grid>
@@ -89,4 +90,4 @@ function ReadExcel() {
   );
 }
 
-export default ReadExcel;
+export default ImportExcel;

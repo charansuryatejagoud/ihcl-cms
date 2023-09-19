@@ -1,5 +1,5 @@
 export default {
-  title: "Restaurant Brand",
+  title: "Restaurant Brands",
   name: "restaurantBrand",
   type: "document",
   fields: [

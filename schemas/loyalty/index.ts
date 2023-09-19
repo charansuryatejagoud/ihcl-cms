@@ -63,6 +63,10 @@ export const loyalty: FeatureSchemaDefinition = {
       {
         title: "[Loyalty] Carousel with selected Tabs",
         value: "loyalty.group.carousel-with-selected-image-tabs",
+      },
+      {
+        title: "[Loyalty] T&C Dropdown with border",
+        value: "loyalty.group.t&c-dropdown-with-border",
       }
     ],
     card: [
@@ -161,6 +165,12 @@ export const loyalty: FeatureSchemaDefinition = {
       {
         title: "[Loyalty] Epicure User Login",
         value: "loyalty.switchCaseBlock.loyalty-user-login",
+      }
+    ],
+    tabs: [
+      {
+        title: "[Loyalty] Chambers Tabs",
+        value: "loyalty.tabs.chambers-tabs"
       }
     ]
   },

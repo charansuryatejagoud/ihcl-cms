@@ -11,24 +11,21 @@ export default {
       type: "string",
     },
     {
-      name: "businessPhone",
-      title: "Business Phone",
+      name: "category",
+      title: "Category",
       type: "string",
-    },
-    {
-      name: "supportPhone",
-      title: "Support Phone",
-      type: "string",
-    },
-    {
-      name: "businessEmail",
-      title: "Business Email",
-      type: "string",
-    },
-    {
-      name: "supportEmail",
-      title: "Support Email",
-      type: "string",
+      options: {
+        list: [
+          {
+            title: "Hotel",
+            value: "hotel",
+          },
+          {
+            title: "Sale Office",
+            value: "saleOffice",
+          },
+        ],
+      },
     },
     {
       name: "phone",

@@ -12,12 +12,24 @@ export const Offers: FeatureSchemaDefinition = {
         value: "offers.group.t&c-dropdown-content"
       },
       {
+        title: "[Offers] T & C Dropdown Content (Layout Placeholder)",
+        value: "offers.group.t&c-dropdown-content-layout-placeholder"
+      },
+      {
         title: "[Offers] 3 Column Grid With Package Images",
         value: "offers.group.3-column-grid-with-package-images",
       },
       {
         title: "[Offers] 3 Column Grid With Package Icons",
         value: "offers.group.3-column-grid-with-package-icons",
+      },
+      {
+        title: "[Offers] 3 Column Grid With Multi Package Images",
+        value: "offers.group.3-column-grid-with-multi-package-images",
+      },
+      {
+        title: "[Offers] 3 Column Grid With Multi Package Icons",
+        value: "offers.group.3-column-grid-with-multi-package-icons",
       },
       {
         title: "[Offers] 3 Column Grid With Participating Hotels",
