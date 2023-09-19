@@ -24,6 +24,14 @@ export const Offers: FeatureSchemaDefinition = {
         value: "offers.group.3-column-grid-with-package-icons",
       },
       {
+        title: "[Offers] 3 Column Grid With Multi Package Images",
+        value: "offers.group.3-column-grid-with-multi-package-images",
+      },
+      {
+        title: "[Offers] 3 Column Grid With Multi Package Icons",
+        value: "offers.group.3-column-grid-with-multi-package-icons",
+      },
+      {
         title: "[Offers] 3 Column Grid With Participating Hotels",
         value: "offers.group.3-column-grid-with-participating-hotels",
       },
