@@ -9,7 +9,7 @@ export default {
   type: "document",
   icon: Icon,
   // Disallow creation and deletion
-  __experimental_actions: ["create",  "update", 'delete', "publish"],
+  __experimental_actions: ["create", "update", "delete", "publish"],
   fields: [
     {
       name: "cityMap",
@@ -64,6 +64,11 @@ export default {
           type: "cancellationDropdown",
         },
       ],
+    },
+    {
+      name: "bookingPaymentQueries",
+      title: "Booking Payment Queries",
+      type: "group",
     },
   ],
   preview: {

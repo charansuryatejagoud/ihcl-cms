@@ -162,6 +162,12 @@ export const loyalty: FeatureSchemaDefinition = {
         title: "[Loyalty] Epicure User Login",
         value: "loyalty.switchCaseBlock.loyalty-user-login",
       }
+    ],
+    tabs: [
+      {
+        title: "[Loyalty] Chambers Tabs",
+        value: "loyalty.tabs.chambers-tabs"
+      }
     ]
   },
 };
