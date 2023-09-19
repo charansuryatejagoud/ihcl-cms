@@ -872,8 +872,8 @@ export const offerTypes = [
     value: "hotel",
   },
   {
-    title: "Holiday",
-    value: "holiday",
+    title: "4D Offer",
+    value: "4d_offer",
   },
 ];
 

@@ -5,59 +5,67 @@ import { client } from "./client";
 import { getHotelDocument, getHotelQuery } from "./utils";
 
 function extractDestinationData({ data }, returnObject: any = {}) {
-  data?.hotelName && (returnObject.hotelName = data?.hotelName);
-  data?.hotelId && (returnObject.hotelId = data?.hotelId);
-  data?.identifier && (returnObject.identifier = data?.identifier);
+  data?.hotelName && (returnObject.hotelName = data?.hotelName?.trim());
+  data?.hotelId && (returnObject.hotelId = data?.hotelId?.trim());
+  data?.identifier && (returnObject.identifier = data?.identifier?.trim());
   data?.hotelNavigation &&
-    (returnObject.hotelNavigation = data?.hotelNavigation);
-  data?.brandName && (returnObject.brandName = data?.brandName);
-  data?.brandId && (returnObject.brandId = data?.brandId);
+    (returnObject.hotelNavigation = data?.hotelNavigation?.trim());
+  data?.brandName && (returnObject.brandName = data?.brandName?.trim());
+  data?.brandId && (returnObject.brandId = data?.brandId?.trim());
   data?.hotelDescription &&
-    (returnObject.hotelDescription = data?.hotelDescription);
-  data?.hotelPath && (returnObject.hotelPath = data?.hotelPath);
-  data?.gcCategory && (returnObject.gcCategory = data?.gcCategory);
+    (returnObject.hotelDescription = data?.hotelDescription?.trim());
+  data?.hotelPath && (returnObject.hotelPath = data?.hotelPath?.trim());
+  data?.gcCategory && (returnObject.gcCategory = data?.gcCategory?.trim());
   data?.searchTaxonomies &&
-    (returnObject.searchTaxonomies = data?.searchTaxonomies);
-  data?.hotelSubType && (returnObject.hotelSubType = data?.hotelSubType);
+    (returnObject.searchTaxonomies = data?.searchTaxonomies?.trim());
+  data?.hotelSubType &&
+    (returnObject.hotelSubType = data?.hotelSubType?.trim());
   data?.hotelBannerDesktopTitle &&
     (returnObject.hotelBannerDesktopTitle =
       data?.hotelBannerDesktopTitle?.split("|"));
   data?.hotelBannerMobileTitle &&
     (returnObject.hotelBannerMobileTitle =
       data?.hotelBannerMobileTitle?.split("|"));
-  data?.hotelOverview && (returnObject.hotelOverview = data?.hotelOverview);
-  data?.hotelAddress && (returnObject.hotelAddress = data?.hotelAddress);
-  data?.hotelContact && (returnObject.hotelContact = data?.hotelContact);
+  data?.hotelOverview &&
+    (returnObject.hotelOverview = data?.hotelOverview?.trim());
+  data?.hotelAddress &&
+    (returnObject.hotelAddress = data?.hotelAddress?.trim());
+  data?.hotelContact &&
+    (returnObject.hotelContact = data?.hotelContact?.trim());
   data?.hotelAvailability &&
-    (returnObject.hotelAvailability = data?.hotelAvailability);
+    (returnObject.hotelAvailability = data?.hotelAvailability?.trim());
   data?.hotelFacilities &&
-    (returnObject.hotelFacilities = data?.hotelFacilities);
-  data?.hotelAwards && (returnObject.hotelAwards = data?.hotelAwards);
+    (returnObject.hotelFacilities = data?.hotelFacilities?.trim());
+  data?.hotelAwards && (returnObject.hotelAwards = data?.hotelAwards?.trim());
   data?.hotelSocialInfo &&
-    (returnObject.hotelSocialInfo = data?.hotelSocialInfo);
-  data?.hotelRooms && (returnObject.hotelRooms = data?.hotelRooms);
+    (returnObject.hotelSocialInfo = data?.hotelSocialInfo?.trim());
+  data?.hotelRooms && (returnObject.hotelRooms = data?.hotelRooms?.trim());
   data?.hotelHighlights &&
-    (returnObject.hotelHighlights = data?.hotelHighlights);
+    (returnObject.hotelHighlights = data?.hotelHighlights?.trim());
   data?.hotelExclusiveOffersDining &&
     (returnObject.hotelExclusiveOffersDining =
-      data?.hotelExclusiveOffersDining);
+      data?.hotelExclusiveOffersDining?.trim());
   data?.hotelExclusiveOffersWellness &&
     (returnObject.hotelExclusiveOffersWellness =
-      data?.hotelExclusiveOffersWellness);
+      data?.hotelExclusiveOffersWellness?.trim());
   data?.hotelExclusiveOffersRooms &&
-    (returnObject.hotelExclusiveOffersRooms = data?.hotelExclusiveOffersRooms);
-  data?.hotelOffers && (returnObject.hotelOffers = data?.hotelOffers);
-  data?.hotelHolidays && (returnObject.hotelHolidays = data?.hotelHolidays);
+    (returnObject.hotelExclusiveOffersRooms =
+      data?.hotelExclusiveOffersRooms?.trim());
+  data?.hotelOffers && (returnObject.hotelOffers = data?.hotelOffers?.trim());
+  data?.hotelHolidays &&
+    (returnObject.hotelHolidays = data?.hotelHolidays?.trim());
   data?.hotelSignatureDining &&
-    (returnObject.hotelSignatureDining = data?.hotelSignatureDining);
+    (returnObject.hotelSignatureDining = data?.hotelSignatureDining?.trim());
   data?.hotelEventVenues &&
-    (returnObject.hotelEventVenues = data?.hotelEventVenues);
-  data?.hotelWellness && (returnObject.hotelWellness = data?.hotelWellness);
+    (returnObject.hotelEventVenues = data?.hotelEventVenues?.trim());
+  data?.hotelWellness &&
+    (returnObject.hotelWellness = data?.hotelWellness?.trim());
   data?.hotelExperiences &&
-    (returnObject.hotelExperiences = data?.hotelExperiences);
-  data?.hotelGallery && (returnObject.hotelGallery = data?.hotelGallery);
+    (returnObject.hotelExperiences = data?.hotelExperiences?.trim());
+  data?.hotelGallery &&
+    (returnObject.hotelGallery = data?.hotelGallery?.trim());
   data?.hotelAttractions &&
-    (returnObject.hotelAttractions = data?.hotelAttractions);
+    (returnObject.hotelAttractions = data?.hotelAttractions?.trim());
   // data?.hotelDocuments && (returnObject.hotelDocuments = data?.hotelDocuments);
   return returnObject;
 }

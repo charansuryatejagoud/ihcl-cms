@@ -67,6 +67,16 @@ export default {
       type: "string",
     },
     {
+      name: "isOpeningSoon",
+      title: "Is Opening Soon",
+      type: "boolean",
+    },
+    {
+      name: "isNewOpening",
+      title: "Is New Opening",
+      type: "boolean",
+    },
+    {
       name: "hotelBannerTitle",
       title: "Hotel Banner Title",
       type: "title",

@@ -32,6 +32,11 @@ export default {
       options: {list : offerTypes}
     },
     {
+      name: "themeInfo",
+      title: "Theme Info",
+      type: "tabInfo",
+    },
+    {
       name: "holidayOffer",
       title: "Holiday Offer",
       type: "boolean"
@@ -84,6 +89,66 @@ export default {
       },
     },
     {
+      name: "inclusions",
+      title: "Inclusions",
+      type: "array",
+      of: [
+        {
+          type: "object",
+          fields: [
+            {
+              name: "basicInfo",
+              title: "Basic Info",
+              type: "basicDetails",
+            },
+            {
+              name: "inclusionTitle",
+              title: "Inclusion Title",
+              type: "string",
+              initialValue: "PACKAGE INCLUSIONS",
+              hidden: ({ document }) =>
+                document?.packageType == "singlePackage",
+            },
+            {
+              name: "inclusionIdentifier",
+              title: "Inclusion Identifier",
+              type: "string",
+              initialValue: "",
+              hidden: ({ document }) =>
+                document?.packageType == "singlePackage",
+            },
+            {
+              name: "highlights",
+              title: "Highlights",
+              type: "array",
+              of: [{ type: "string" }],
+              hidden: ({ document }) =>
+                document?.packageType == "singlePackage",
+            },
+            {
+              name: "inclusionTheme",
+              title: "Inclusion Theme",
+              type: "reference",
+              to: [{ type: "offerThemes" }],
+              hidden: ({ document }) =>
+                document?.packageType !== "multipleThemesAndPackages",
+            },
+          ],
+          preview: {
+            select: {
+              title: "basicInfo",
+            },
+            prepare(selection) {
+              const { title } = selection;
+              return {
+                title: title.title,
+              };
+            },
+          },
+        },
+      ],
+    },
+    {
       name: "validityDates",
       title: "Validity Dates",
       type: "array",
@@ -103,7 +168,7 @@ export default {
     },
     {
       name: "hotels",
-      title: "Participating Hotels",
+      title: "Package Inclusions",
       type: "array",
       of: [
         {
@@ -138,6 +203,35 @@ export default {
               of: [{ type: "mediaInput" }],
             },
             {
+              name: "thumbnailDescription",
+              title: "Thumbnail Description",
+              type: "string",
+              rows: 4
+            },
+            {
+              name: "validThroughYear",
+              title: "Valid till round the year?",
+              type: "boolean",
+            },
+            {
+              name: "validityDates",
+              title: "Validity Dates",
+              type: "array",
+              of: [{ type: "dateRange" }]
+            },
+            {
+              name: "stayDates",
+              title: "Stay Dates",
+              type: "array",
+              of: [{ type: "dateRange" }]
+            },
+            {
+              name: "blackoutDates",
+              title: "Blackout Dates",
+              type: "array",
+              of: [{ type: "dateRange" }]
+            },
+            {
               name: "inclusions",
               title: "Inclusions",
               type: "array",
@@ -155,6 +249,14 @@ export default {
                       title: "Inclusion Title",
                       type: "string",
                       initialValue: "PACKAGE INCLUSIONS",
+                      hidden: ({ document }) =>
+                        document?.packageType == "singlePackage",
+                    },
+                    {
+                      name: "inclusionIdentifier",
+                      title: "Inclusion Identifier",
+                      type: "string",
+                      initialValue: "",
                       hidden: ({ document }) =>
                         document?.packageType == "singlePackage",
                     },
@@ -190,6 +292,11 @@ export default {
               ],
             },
             {
+              name: "tnc",
+              title: "TNC",
+              type: "blockContent",
+            },
+            {
               name: "pageTitle",
               title: "Page Title",
               type: "string",
@@ -208,12 +315,14 @@ export default {
           ],
           preview: {
             select: {
-              title: "hotels",
+              title: "sectionTitle",
+              hotelTitle: "participatingHotels.0.hotelName",
+              multipleHotels: "participatingHotels.1.hotelName",
             },
             prepare(selection) {
-              const { title } = selection;
+              const { title, hotelTitle, multipleHotels } = selection;
               return {
-                title: "Hotels" // title[0].participatingHotels[0].title,
+                title: !multipleHotels ? hotelTitle : title.desktopTitle[0],
               };
             },
           },

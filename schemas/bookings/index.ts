@@ -109,6 +109,10 @@ export const bookings: FeatureSchemaDefinition = {
         title: "[Bookings] Booking Hotel Failure Confirmation",
         value: "bookings.group.booking-hotel-failure",
       },
+      {
+        title: "[Bookings] FAQs",
+        value: "bookings.group.faqs",
+      }
     ],
     tabs: [
       {
@@ -142,5 +146,11 @@ export const bookings: FeatureSchemaDefinition = {
         value: "bookings.dialog.success-and-failure-pop-up",
       }
     ],
+    card: [
+      {
+        title: "[Bookings] Payment Description",
+        value: "Bookings.card.payment-description"
+      }
+    ]
   },
 };
