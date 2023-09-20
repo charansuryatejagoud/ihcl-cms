@@ -23,6 +23,11 @@ export default {
       type: "string",
     },
     {
+      title: "Title",
+      name: "title",
+      type: "title",
+    },
+    {
       title: "Name",
       type: "string",
       name: "name",
