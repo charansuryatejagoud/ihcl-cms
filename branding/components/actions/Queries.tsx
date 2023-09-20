@@ -83,6 +83,7 @@ export const queries = {
               lunch,
               dinner,
               destinationPath
-            }`
+            }
+          }`
     }
   }
