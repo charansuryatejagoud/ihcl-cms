@@ -270,6 +270,10 @@ export const ihclcore: FeatureSchemaDefinition = {
         title:"Filter Address Dropdown",
         value:"ihcl.core.group.filter-address-dropdown"
       },
+      {
+        title:"Accordion Wrapper",
+        value:"ihcl.core.group.accordion-wrapper"
+      },
     ],
     card: [
       {

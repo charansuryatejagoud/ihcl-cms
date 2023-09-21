@@ -46,6 +46,7 @@ export default {
       title: "Is Physical GIft Card",
       type: "boolean",
       name: "isPhysicalGIftCard",
+      initialValue:false
     },
     {
       title: "Font Color",
