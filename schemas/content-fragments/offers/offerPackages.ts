@@ -42,6 +42,11 @@ export default {
       type: "boolean"
     },
     {
+      name: "memberSpecific",
+      title: "Is Member Specific",
+      type: "boolean"
+    },
+    {
       name: "offerBannerTitle",
       title: "Offer Banner Title",
       type: "title",
@@ -359,6 +364,17 @@ export default {
               ],
             },
           ],
+        },
+      ],
+    },
+    {
+      name: "participatingDestinations",
+      title: "Participating Destinations",
+      type: "array",
+      of: [
+        {
+          type: "reference",
+          to: [{ type: "destination" }],
         },
       ],
     }
