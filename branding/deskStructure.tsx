@@ -153,6 +153,7 @@ const contentFragments = S.listItem()
         S.listItem().title("Holidays").child(S.documentTypeList("holidays")),
         S.listItem().title("Address").child(S.documentTypeList("address")),
         S.listItem().title("Contact").child(S.documentTypeList("contact")),
+        S.listItem().title("Search Config").child(S.documentTypeList("searchConfig"))
       ]),
   );
 

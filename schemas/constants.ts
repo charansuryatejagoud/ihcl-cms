@@ -895,3 +895,22 @@ export const headerBGVariant = [
     value: "gradient",
   },
 ]
+
+export const searchIdentifiers = [
+  {
+    title: "Hotels",
+    value: "hotels",
+  },
+  {
+    title: "Restaurants",
+    value: "restaurants",
+  },
+  {
+    title: "Holidays",
+    value: "holidays",
+  },
+  {
+    title: "SPA",
+    value: "spas",
+  }
+];

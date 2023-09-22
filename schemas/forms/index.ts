@@ -97,6 +97,10 @@ export const ihclForms: FeatureSchemaDefinition = {
       {
         title: "[IHCL Forms] Dining Plan An Event Enquiry",
         value: "ihclForms.dining-plan-an-event-enquiry",
+      },
+      {
+        title: "[IHCL Forms] Contact Suggestions",
+        value: "ihclForms.contact-suggestions",
       }
     ],
   },
