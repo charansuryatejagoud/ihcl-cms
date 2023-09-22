@@ -1,12 +1,4 @@
-import {
-  Stack,
-  Card,
-  Grid,
-  Text,
-  Flex,
-  Box,
-  Badge,
-} from "@sanity/ui";
+import { Stack, Card, Grid, Text, Flex, Box, Badge } from "@sanity/ui";
 import React from "react";
 import { BiError } from "react-icons/bi";
 
@@ -43,7 +35,9 @@ function ViewResults({ results }) {
                   style={{ paddingBottom: "8px" }}
                 >
                   <Badge tone="primary">{item?.response?._type}</Badge> -
-                  {item?.response?.title || item?.response?.name}
+                  {item?.response?.title ||
+                    item?.response?.name ||
+                    item?.response?.hotelName}
                 </Text>
                 <Text
                   align="center"

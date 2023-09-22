@@ -804,7 +804,7 @@ async function fetchDocument({ type, identifierKey, identifierValue }) {
 }
 
 function getHotelQuery({ identifierKey, identifierValue }) {
-  return `*[_type == "hotel" && ${identifierKey} == "${identifierValue?.trim()}"][0]{
+  return `*[_type == "hotel" && ${identifierKey} == "${identifierValue?.trim()}"]{
     ...,
     hotelNavigation->{...},
     gcCategory->{...},

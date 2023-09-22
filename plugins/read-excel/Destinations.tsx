@@ -43,6 +43,7 @@ function Destinations({ callBack }: ImportComponent) {
   console.log(destinationsData);
 
   const migrateExcelData = async (callBack) => {
+    callBack();
     try {
       await destinationsData?.map(async (destination, destinationIndex) => {
         await client

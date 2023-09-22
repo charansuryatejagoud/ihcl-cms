@@ -92,8 +92,8 @@ function ImportExcel() {
                     <Destinations callBack={updateCallBack} />
                   )}
                   {selected == "Exclusive Offers" && <ExclusiveOffers />}
-                  {selected == "Hotels" && <Hotels />}
-                  {selected == "About" && <About />}
+                  {selected == "Hotels" && <Hotels callBack={updateCallBack} />}
+                  {selected == "About" && <About  callBack={updateCallBack}/>}
                 </Stack>
               </Box>
             </Grid>

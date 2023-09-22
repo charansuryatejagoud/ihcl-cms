@@ -3,6 +3,7 @@ import { Button, Flex } from "@sanity/ui";
 import * as XLSX from "xlsx";
 import { client } from "./client";
 import { getHotelDocument, getHotelQuery } from "./utils";
+import { ImportComponent } from "./types";
 
 function extractDestinationData({ data }, returnObject: any = {}) {
   data?.hotelName && (returnObject.hotelName = data?.hotelName?.trim());
@@ -70,7 +71,7 @@ function extractDestinationData({ data }, returnObject: any = {}) {
   return returnObject;
 }
 
-function Hotels() {
+function Hotels({ callBack }: ImportComponent) {
   const ref: any = useRef();
   const [hotels, setHotels] = useState([]);
 
@@ -95,7 +96,8 @@ function Hotels() {
   };
   console.log(hotels);
 
-  const migrateExcelData = async () => {
+  const migrateExcelData = async (callBack) => {
+    callBack();
     hotels?.map(async (hotel, index) => {
       await client
         .fetch(
@@ -105,41 +107,12 @@ function Hotels() {
           }),
         )
         .then(async (res) => {
-          if (res) {
-            const updatedDoc = await getHotelDocument({
-              excelData: hotel,
-              document: res,
+          if (res?.length > 0) {
+            await res.map(async (doc) => {
+              await updateDocument(hotel, doc, index, callBack);
             });
-            console.log("update", res?.hotelName);
-            await client
-              .patch(res._id)
-              .set({ ...updatedDoc })
-              .commit()
-              .then((res) => {
-                console.log(index + 1, res?.hotelName + " Updated!");
-              })
-              .catch((err) => {
-                console.error(
-                  "Oh no, the update failed: ",
-                  res._id,
-                  "Error : ",
-                  err.message,
-                );
-              });
           } else {
-            const newDoc = await getHotelDocument({ excelData: hotel });
-            console.log("Creating ", newDoc?.hotelName);
-            await client
-              .create(newDoc)
-              .then((res) => {
-                console.log(
-                  index + 1,
-                  "Created document, id = ",
-                  res._id,
-                  res.hotelName,
-                );
-              })
-              .catch((err) => console.log("error", err));
+            await createDocument(hotel, index, callBack);
           }
         })
         .catch((error) => console.log(error));
@@ -149,6 +122,7 @@ function Hotels() {
   function resetFile(): void {
     ref.current.value = "";
     setHotels([]);
+    callBack();
   }
 
   return (
@@ -173,11 +147,72 @@ function Hotels() {
           mode="ghost"
           padding={[3, 3, 4]}
           text="Migrate excel data"
-          onClick={migrateExcelData}
+          onClick={() => {
+            migrateExcelData(callBack);
+          }}
         />
       )}
     </Flex>
   );
+}
+
+async function updateDocument(
+  data: any,
+  document: any,
+  index,
+  callBack: Function,
+) {
+  const updatedDoc = await getHotelDocument({
+    excelData: data,
+    document: document,
+  });
+  console.log("update", document?.hotelName);
+  const response = await client
+    .patch(document._id)
+    .set({ ...updatedDoc })
+    .commit()
+    .then((res) => {
+      console.log(index + 1, res?.hotelName + " Updated!");
+      return {
+        status: "Updated",
+        response: res,
+      };
+    })
+    .catch((err) => {
+      console.error(
+        "Oh no, the update failed: ",
+        document._id,
+        "Error : ",
+        err,
+      );
+      return {
+        status: "Failed to Update",
+        response: { _id: document._id, title: data?.title, error: err },
+      };
+    });
+  callBack(response);
+}
+
+async function createDocument(data: any, index, callBack: Function) {
+  const newDoc = await getHotelDocument({ excelData: data });
+  console.log("Creating ", newDoc?.hotelName);
+  const response = await client
+    .create(newDoc)
+    .then((res) => {
+      console.log(index + 1, "Created document, id = ", res._id, res.hotelName);
+      return {
+        status: "Created",
+        response: res,
+      };
+    })
+    .catch((err) => {
+      console.log("error", err);
+      return {
+        status: "Failed to Create",
+        response: { _id: null, title: data?.title, error: err },
+      };
+    });
+  callBack(response);
 }
 
 export default Hotels;
