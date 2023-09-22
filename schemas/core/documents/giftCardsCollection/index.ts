@@ -5,7 +5,6 @@ export default {
   initialValue: {
     isPhysicalGIftCard: false,
     isSeasonal: false,
-
   },
   fields: [
     {
