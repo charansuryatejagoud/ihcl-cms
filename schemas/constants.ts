@@ -253,6 +253,18 @@ export const contentTypes = [
     value: "allRestaurants",
   },
   {
+    title: "Taj Holidays",
+    value: "holidayOffers",
+  },
+  {
+    title: "Taj Holidays(Non IHCL)",
+    value: "holidayOffersNonIHCL",
+  },
+  {
+    title: "Holiday Details",
+    value: "holidayDetails",
+  },
+  {
     title: "Brand Restaurants",
     value: "brandRestaurants",
   },

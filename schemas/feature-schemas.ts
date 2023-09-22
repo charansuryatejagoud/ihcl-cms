@@ -22,6 +22,7 @@ import { myAccount } from "./myAccount";
 import { Offers } from "./offers";
 import { aboutUs } from "./aboutUs";
 import { events } from "./events";
+import { holidays } from "./holidays"
 import { notifications } from "./notifications";
 import { offersAndPromotions } from "./content-fragments/offers";
 import { destinations } from "./content-fragments/destinations";
@@ -44,6 +45,7 @@ const features: FeatureSchemaDefinition[] = [
   hampers,
   myAccount,
   Offers,
+  holidays,
   aboutUs,
   events,
   notifications,
