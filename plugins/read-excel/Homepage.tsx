@@ -29,9 +29,7 @@ function Homepage() {
         hidden={id !== "import"}
         id="import-panel"
       >
-        <Card border marginTop={2} padding={4} radius={2}>
-          <ImportExcel />
-        </Card>
+        <ImportExcel />
       </TabPanel>
 
       <TabPanel

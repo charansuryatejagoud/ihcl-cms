@@ -24,3 +24,7 @@ export type SplitMediaType = {
   data:string[],
   character:string
 }
+
+export interface ImportComponent  {
+  callBack: Function
+}
