@@ -178,6 +178,10 @@ export const details: FeatureSchemaDefinition = {
       {
         title: "[Details] 2 Column Grid Hotels List",
         value: "details.group.2-column-grid-hotels-list",
+      },
+      {
+        title: "[Details] New Openings Modal",
+        value: "details.group.new-openings-modal"
       }
     ],
     card: [
@@ -311,6 +315,10 @@ export const details: FeatureSchemaDefinition = {
         value:
           "details.card.card-with-left-media-right-content-aspect-ratio-2:2",
       },
+      {
+        title: "[Details] Opening Soon Hotels Details",
+        value: "details.card.opening-soon-hotels-details"
+      }
     ],
 
     banner: [],

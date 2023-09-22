@@ -114,6 +114,10 @@ export const loyalty: FeatureSchemaDefinition = {
       {
         title: "[Loyalty] Epicure Membership Login",
         value: "loyalty.card.epicure-membership-login",
+      },
+      {
+        title: "[Loyalty] Outlined Border with Actions",
+        value: "loyalty.card.outlined-border-with-actions"
       }
     ],
     nudge: [
