@@ -43,7 +43,7 @@ export const bannerVariants = [
   },
   {
     title:"Fullscreen Banner Image Width",
-    value:"fullscreen-banner-image-wridth"
+    value:"fullscreen-banner-image-width"
   }
 ];
 
