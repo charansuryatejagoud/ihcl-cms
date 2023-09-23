@@ -316,6 +316,22 @@ export const contentTypes = [
     title: "Destinations Holidays",
     value: "destinationsHolidays",
   },
+  {
+    title: "New TAJ Openings",
+    value: "newTajOpenings",
+  },
+  {
+    title: "Opening Soon(Taj)",
+    value: "openingSoonTaj",
+  },
+  {
+    title: "New Non TAJ Openings",
+    value: "newNonTajOpenings",
+  },
+  {
+    title: "Opening Soon(Non-Taj)",
+    value: "openingSoonNonTaj",
+  },
 ];
 export const filterAlignmentTypes = [
   {
@@ -885,5 +901,20 @@ export const headerBGVariant = [
   {
     title: "Gradient",
     value: "gradient",
+  },
+]
+
+export const programTypes = [
+  {
+    title: "Epciure",
+    value: "epicure",
+  },
+  {
+    title: "Signature Airlines",
+    value: "signatureAirlines",
+  },
+  {
+    title: "Club Vistara",
+    value: "clubVistara",
   },
 ]

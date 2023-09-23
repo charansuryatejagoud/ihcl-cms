@@ -227,6 +227,10 @@ export const ihclcore: FeatureSchemaDefinition = {
         value: "ihcl.core.group.3-column-grid-with-border",
       },
       {
+        title: "3 Column Grid With Border (Offers Layout Placeholder)",
+        value: "ihcl.core.group.3-column-grid-with-border-offers-layout-placeholder",
+      },
+      {
         title: "Option Selector PopUp Modal",
         value: "ihcl.core.group.option-selector-popup-modal",
       },

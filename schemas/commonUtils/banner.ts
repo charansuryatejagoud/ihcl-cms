@@ -40,6 +40,10 @@ export const bannerVariants = [
   {
     title:"Image Hider",
     value:"image-hider"
+  },
+  {
+    title:"Fullscreen Banner Image Width",
+    value:"fullscreen-banner-image-wridth"
   }
 ];
 
