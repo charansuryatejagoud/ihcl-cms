@@ -2,7 +2,12 @@ import React, { useRef, useState } from "react";
 import { Button, Flex } from "@sanity/ui";
 import * as XLSX from "xlsx";
 import { client } from "./client";
-import { extractDestinationData, getBanner, getMediaInput } from "./utils";
+import {
+  compareValues,
+  extractDestinationData,
+  getBanner,
+  getMediaInput,
+} from "./utils";
 import {
   KEY_DESKTOP_TITLE,
   KEY_MOBILE_TITLE,
@@ -94,7 +99,7 @@ function Destinations() {
 
 async function updateDocument(data: any, document: any, index) {
   // const d = getDestinationsDoc({ data: data, doc: document });
-  const updatedDoc = getDestinationsDoc({ data: data, doc: document });
+  const updatedDoc = getDestinationsDoc({ excelData: data, doc: document });
   console.log("update", updatedDoc);
   await client
     .patch(document._id)
@@ -115,53 +120,76 @@ async function updateDocument(data: any, document: any, index) {
 
 async function createDocument(data: any, index) {
   await client
-    .create(getDestinationsDoc({ data: data }))
+    .create(getDestinationsDoc({ excelData: data }))
     .then((res) => {
       console.log(index + 1, "Created document, id = ", res._id, res.name);
     })
-    .catch((err) => console.log("error", err));
+    .catch((err) => {
+      console.log("error", err);
+    });
 }
 
-function getDestinationsDoc({ data, doc = null, type = TYPE_DESTINATION }) {
-  let newDoc: any = {
-    name: data?.title,
-    id: doc?.id ? (doc?.id == data?.id ? doc.id : data?.id) : data?.id,
-    identifier: doc?.identifier
-      ? doc?.identifier == data?.identifier
-        ? doc.identifier
-        : data?.identifier
-      : data?.identifier,
-    description: doc?.description
-      ? doc?.description == data?.description
-        ? doc.description
-        : data?.description
-      : data?.description,
-    destinationURL: doc?.destinationURL
-      ? doc?.destinationURL == data?.destinationURL
-        ? doc.destinationURL
-        : data?.destinationURL
-      : data?.destinationURL,
-    country: doc?.country
-      ? doc?.country == data?.country
-        ? doc.country
-        : data?.country
-      : data?.country,
-    city: doc?.city
-      ? doc?.city == data?.city
-        ? doc.city
-        : data?.city
-      : data?.city,
-    bannerTitle: {
+function getDestinationsDoc(
+  { excelData, doc = null, type = TYPE_DESTINATION },
+  newDoc: any = {},
+) {
+  if (!doc) {
+    newDoc._type = type;
+    newDoc.name = excelData?.title?.trim();
+  }
+  if (excelData?.bannerDesktopTitle || excelData?.bannerMobileTitle) {
+    newDoc.bannerTitle = {
       _type: TYPE_TITLE,
-      [KEY_DESKTOP_TITLE]: [...data?.bannerDesktopTitle],
-      [KEY_MOBILE_TITLE]: [...data?.bannerMobileTitle],
-    },
-  };
-  !doc && (newDoc._type = type);
-  newDoc.diningTab = getTabInfo({
+      [KEY_DESKTOP_TITLE]: [...excelData?.bannerDesktopTitle],
+      [KEY_MOBILE_TITLE]: [...excelData?.bannerMobileTitle],
+    };
+  }
+  //id
+  const id = compareValues({
+    excelData: excelData,
+    documentData: doc,
+    key: "id",
+  });
+  //identifier
+  const identifier = compareValues({
+    excelData: excelData,
+    documentData: doc,
+    key: "identifier",
+  });
+  identifier && (newDoc.identifier = identifier);
+  //description
+  const description = compareValues({
+    excelData: excelData,
+    documentData: doc,
+    key: "description",
+  });
+  description && (newDoc.description = description);
+  //destinationURL
+  const destinationURL = compareValues({
+    excelData: excelData,
+    documentData: doc,
+    key: "destinationURL",
+  });
+  destinationURL && (newDoc.destinationURL = destinationURL);
+  //country
+  const country = compareValues({
+    excelData: excelData,
+    documentData: doc,
+    key: "country",
+  });
+  country && (newDoc.country = country);
+  //city
+  const city = compareValues({
+    excelData: excelData,
+    documentData: doc,
+    key: "city",
+  });
+  city && (newDoc.city = city);
+  //diningTab
+  const diningTab = getTabInfo({
     _type: TYPE_TAB_INFO,
     itemKey: "diningTab",
-    excelData: data,
+    excelData: excelData,
     doc: doc,
     bannerMobileKey: "diningBannerImage",
     bannerDeskTopKey: "diningBannerLargeImage",
@@ -169,10 +197,12 @@ function getDestinationsDoc({ data, doc = null, type = TYPE_DESTINATION }) {
     mobileTitleKey: "diningMobileTitle",
     desktopTitleKey: "diningDesktopTitle",
   });
-  newDoc.experiencesTab = getTabInfo({
+  diningTab && (newDoc.diningTab = diningTab);
+  //experiencesTab
+  const experiencesTab = getTabInfo({
     _type: TYPE_TAB_INFO,
     itemKey: "experiencesTab",
-    excelData: data,
+    excelData: excelData,
     doc: doc,
     bannerMobileKey: "experiencesTabBannerImage",
     bannerDeskTopKey: "experiencesTabBannerLargeImage",
@@ -180,10 +210,12 @@ function getDestinationsDoc({ data, doc = null, type = TYPE_DESTINATION }) {
     mobileTitleKey: "experiencesTabMobileTitle",
     desktopTitleKey: "experiencesTabDesktopTitle",
   });
-  newDoc.featuredHolidays = getTabInfo({
+  experiencesTab && (newDoc.experiencesTab = experiencesTab);
+  //featuredHolidays
+  const featuredHolidays = getTabInfo({
     _type: TYPE_TAB_INFO,
     itemKey: "featuredHolidays",
-    excelData: data,
+    excelData: excelData,
     doc: doc,
     bannerMobileKey: "featuredHolidaysBannerImage",
     bannerDeskTopKey: "featuredHolidaysBannerLargeImage",
@@ -191,10 +223,12 @@ function getDestinationsDoc({ data, doc = null, type = TYPE_DESTINATION }) {
     mobileTitleKey: "featuredHolidaysMobileTitle",
     desktopTitleKey: "featuredHolidaysDesktopTitle",
   });
-  newDoc.holidaysTab = getTabInfo({
+  featuredHolidays && (newDoc.featuredHolidays = featuredHolidays);
+  //holidaysTab
+  const holidaysTab = getTabInfo({
     _type: TYPE_TAB_INFO,
     itemKey: "holidaysTab",
-    excelData: data,
+    excelData: excelData,
     doc: doc,
     bannerMobileKey: "holidaysTabBannerImage",
     bannerDeskTopKey: "holidaysTabBannerLargeImage",
@@ -202,10 +236,12 @@ function getDestinationsDoc({ data, doc = null, type = TYPE_DESTINATION }) {
     mobileTitleKey: "holidaysTabMobileTitle",
     desktopTitleKey: "holidaysTabDesktopTitle",
   });
-  newDoc.hotelsTab = getTabInfo({
+  holidaysTab && (newDoc.holidaysTab = holidaysTab);
+  //hotelsTab
+  const hotelsTab = getTabInfo({
     _type: TYPE_TAB_INFO,
     itemKey: "hotelsTab",
-    excelData: data,
+    excelData: excelData,
     doc: doc,
     bannerMobileKey: "hotelsTabBannerImage",
     bannerDeskTopKey: "hotelsTabBannerLargeImage",
@@ -213,10 +249,12 @@ function getDestinationsDoc({ data, doc = null, type = TYPE_DESTINATION }) {
     mobileTitleKey: "hotelsTabMobileTitle",
     desktopTitleKey: "hotelsTabDesktopTitle",
   });
-  newDoc.journeys = getTabInfo({
+  hotelsTab && (newDoc.hotelsTab = hotelsTab);
+  //journeys
+  const journeys = getTabInfo({
     _type: TYPE_TAB_INFO,
     itemKey: "journeys",
-    excelData: data,
+    excelData: excelData,
     doc: doc,
     bannerMobileKey: "journeysBannerImage",
     bannerDeskTopKey: "journeysBannerLargeImage",
@@ -224,10 +262,12 @@ function getDestinationsDoc({ data, doc = null, type = TYPE_DESTINATION }) {
     mobileTitleKey: "journeysMobileTitle",
     desktopTitleKey: "journeysDesktopTitle",
   });
-  newDoc.offers = getTabInfo({
+  journeys && (newDoc.journeys = journeys);
+  //offers
+  const offers = getTabInfo({
     _type: TYPE_TAB_INFO,
     itemKey: "offers",
-    excelData: data,
+    excelData: excelData,
     doc: doc,
     bannerMobileKey: "offersTabBannerImage",
     bannerDeskTopKey: "offersTabBannerLargeImage",
@@ -235,10 +275,12 @@ function getDestinationsDoc({ data, doc = null, type = TYPE_DESTINATION }) {
     mobileTitleKey: "offersTabMobileTitle",
     desktopTitleKey: "offersTabDesktopTitle",
   });
-  newDoc.spaTab = getTabInfo({
+  offers && (newDoc.offers = offers);
+  //spaTab
+  const spaTab = getTabInfo({
     _type: TYPE_TAB_INFO,
     itemKey: "spaTab",
-    excelData: data,
+    excelData: excelData,
     doc: doc,
     bannerMobileKey: "spaTabBannerImage",
     bannerDeskTopKey: "spaTabBannerLargeImage",
@@ -246,10 +288,12 @@ function getDestinationsDoc({ data, doc = null, type = TYPE_DESTINATION }) {
     mobileTitleKey: "spaTabMobileTitle",
     desktopTitleKey: "spaTabDesktopTitle",
   });
-  newDoc.treatments = getTabInfo({
+  spaTab && (newDoc.spaTab = spaTab);
+  //treatments
+  const treatments = getTabInfo({
     _type: TYPE_TAB_INFO,
     itemKey: "treatments",
-    excelData: data,
+    excelData: excelData,
     doc: doc,
     bannerMobileKey: "treatmentsTabBannerImage",
     bannerDeskTopKey: "treatmentsTabBannerLargeImage",
@@ -257,6 +301,7 @@ function getDestinationsDoc({ data, doc = null, type = TYPE_DESTINATION }) {
     mobileTitleKey: "treatmentsTabMobileTitle",
     desktopTitleKey: "treatmentsTabDesktopTitle",
   });
+  treatments && (newDoc.treatments = treatments);
   return newDoc;
 }
 
@@ -274,44 +319,53 @@ function getTabInfo(
   },
   initialData: any = {},
 ) {
-  initialData._type = _type;
-  initialData.sectionTitle = {
-    _type: TYPE_TITLE,
-  };
-  //description
-  if (doc?.description) {
-    doc?.description == excelData?.[descriptionKey]
-      ? (initialData.description = doc?.description)
-      : (initialData.description = excelData?.[descriptionKey]);
-  } else {
-    initialData.description = excelData?.[descriptionKey];
-  }
-  //sectionTitle - mobileTitle
-  if (excelData?.[mobileTitleKey]?.length > 0) {
-    initialData.sectionTitle.mobileTitle = excelData?.[mobileTitleKey];
-  }
-  //sectionTitle - desktopTitle
-  if (excelData?.[desktopTitleKey]?.length > 0) {
-    initialData.sectionTitle.desktopTitle = excelData?.[desktopTitleKey];
-  }
-  //bannerImage
   if (
-    excelData?.[bannerMobileKey]?.length > 0 ||
-    excelData?.[bannerDeskTopKey]?.length > 0
+    !excelData?.[bannerDeskTopKey] &&
+    !excelData?.[bannerMobileKey] &&
+    !excelData?.[descriptionKey] &&
+    !excelData?.[desktopTitleKey]
   ) {
-    const bannerData = getBanner({
-      mobileData: excelData?.[bannerMobileKey],
-      deskTopData: excelData?.[bannerDeskTopKey],
-    });
-    bannerData?.length > 0 &&
-      (initialData.bannerImage = getMediaInput({
-        mediaData: bannerData,
-      }));
+    return null;
   } else {
-    if (doc?.[itemKey]?.bannerImage) {
-      initialData.bannerImage = doc?.[itemKey]?.bannerImage;
+    initialData._type = _type;
+    initialData.sectionTitle = {
+      _type: TYPE_TITLE,
+    };
+    //description
+    if (doc?.[itemKey]?.description) {
+      doc?.[itemKey]?.description == excelData?.[descriptionKey]
+        ? (initialData.description = doc?.[itemKey]?.description)
+        : (initialData.description = excelData?.[descriptionKey]);
+    } else {
+      initialData.description = excelData?.[descriptionKey];
     }
+    //sectionTitle - mobileTitle
+    if (excelData?.[mobileTitleKey]?.length > 0) {
+      initialData.sectionTitle.mobileTitle = excelData?.[mobileTitleKey];
+    }
+    //sectionTitle - desktopTitle
+    if (excelData?.[desktopTitleKey]?.length > 0) {
+      initialData.sectionTitle.desktopTitle = excelData?.[desktopTitleKey];
+    }
+    //bannerImage
+    if (
+      excelData?.[bannerMobileKey]?.length > 0 ||
+      excelData?.[bannerDeskTopKey]?.length > 0
+    ) {
+      const bannerData = getBanner({
+        mobileData: excelData?.[bannerMobileKey],
+        deskTopData: excelData?.[bannerDeskTopKey],
+      });
+      bannerData?.length > 0 &&
+        (initialData.bannerImage = getMediaInput({
+          mediaData: bannerData,
+        }));
+    } else {
+      if (doc?.[itemKey]?.bannerImage) {
+        initialData.bannerImage = doc?.[itemKey]?.bannerImage;
+      }
+    }
+    return initialData;
   }
-  return initialData;
 }
 export default Destinations;
