@@ -293,6 +293,14 @@ export const contentTypes = [
     value: "offers",
   },
   {
+    title: "Member Offers",
+    value: "memberOffers",
+  },
+  {
+    title: "Exclusive Offers",
+    value: "exclusiveOffers",
+  },
+  {
     title: "Vouchers",
     value: "vouchers",
   },
