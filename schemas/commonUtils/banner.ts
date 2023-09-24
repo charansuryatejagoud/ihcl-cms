@@ -168,6 +168,13 @@ export default {
       hidden: ({parent}) => parent?.searchFieldVariant !== "ihcl.banner.global-search-field"
     },
     {
+    name: "searchData",
+    type: 'reference',
+    to: [{type: 'searchConfig'}],
+    hidden: ({parent}) => parent?.searchFieldVariant !== "ihcl.banner.global-search-field"
+
+    },
+    {
       name: "mediaType",
       title: "Media Type",
       type: "string",

@@ -938,3 +938,21 @@ export const programTypes = [
     value: "clubVistara",
   },
 ]
+export const searchIdentifiers = [
+  {
+    title: "Hotels",
+    value: "hotels",
+  },
+  {
+    title: "Restaurants",
+    value: "restaurants",
+  },
+  {
+    title: "Holidays",
+    value: "holidays",
+  },
+  {
+    title: "SPA",
+    value: "spas",
+  }
+];
