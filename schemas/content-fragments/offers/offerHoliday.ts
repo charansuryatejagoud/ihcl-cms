@@ -30,6 +30,12 @@ export default {
         type: "tabInfo",
       },
       {
+        name: "aboutHoliday",
+        title: "About Holiday",
+        type: "reference",
+        to: [{ type: "about" }],
+      },
+      {
         name: "participatingOffers",
         title: "Participating Offers",
         type: "array",
@@ -39,6 +45,22 @@ export default {
             to: [{ type: "offerPackages" }],
           },
         ],
+      },
+      {
+        name: "pageTitle",
+        title: "Page Title",
+        type: "string",
+      },
+      {
+        name: "seoKeywords",
+        title: "SEO Keywords",
+        type: "string",
+      },
+      {
+        name: "seoDescription",
+        title: "SEO Description",
+        type: "text",
+        rows: 5,
       }
     ],
   };

@@ -154,6 +154,11 @@ export default {
       ],
     },
     {
+      name: "validThroughYear",
+      title: "Valid till round the year?",
+      type: "boolean",
+    },
+    {
       name: "validityDates",
       title: "Validity Dates",
       type: "array",
