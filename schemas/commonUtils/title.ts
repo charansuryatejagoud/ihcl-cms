@@ -1,3 +1,5 @@
+import { headings } from "../../schemas/constants";
+
 export default {
   title: "Title",
   name: "title",
@@ -29,5 +31,11 @@ export default {
         },
       ],
     },
+    {
+      type: "string",
+      name: "headingElement",
+      description: "Choose the heading element to be rendered",
+      options: { list: headings },
+    }
   ],
 };
