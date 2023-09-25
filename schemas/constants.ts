@@ -253,6 +253,10 @@ export const contentTypes = [
     value: "allRestaurants",
   },
   {
+    title: "Destination Taj Holidays",
+    value: "destinationHolidayOffers",
+  },
+  {
     title: "Taj Holidays",
     value: "holidayOffers",
   },
