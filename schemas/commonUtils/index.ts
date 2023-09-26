@@ -393,7 +393,11 @@ export const ihclcore: FeatureSchemaDefinition = {
       {
         title:"Radio Button Filters",
         value:"common-utils.placeholders.radio-button-filters"
-      }
+      },
+       {
+        title: " Redeem & Save",
+        value: "common-utils.placeholders.redeem-save",
+      },
     ],
     nudge: [
       { title: "Default Nudge", value: "ihcl.core.nudge.default" },
