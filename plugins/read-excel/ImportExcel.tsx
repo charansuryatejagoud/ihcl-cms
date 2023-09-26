@@ -87,13 +87,15 @@ function ImportExcel() {
                   {selected == "Dining" && <DiningInfo />}
                   {selected == "TaxonomyInfo" && <TaxonomyInfo />}
                   {selected == "Facilities" && <Facilities type="production" />}
-                  {selected == "Restaurants" && <Restaurants />}
+                  {selected == "Restaurants" && (
+                    <Restaurants callBack={updateCallBack} />
+                  )}
                   {selected == "Destinations" && (
                     <Destinations callBack={updateCallBack} />
                   )}
                   {selected == "Exclusive Offers" && <ExclusiveOffers />}
                   {selected == "Hotels" && <Hotels callBack={updateCallBack} />}
-                  {selected == "About" && <About  callBack={updateCallBack}/>}
+                  {selected == "About" && <About callBack={updateCallBack} />}
                 </Stack>
               </Box>
             </Grid>

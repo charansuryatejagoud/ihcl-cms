@@ -183,6 +183,7 @@ function getDestinationsDoc(
     documentData: doc,
     key: "id",
   });
+  id && (newDoc.id = id);
   //identifier
   const identifier = compareValues({
     excelData: excelData,

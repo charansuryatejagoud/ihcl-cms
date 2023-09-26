@@ -134,6 +134,9 @@ export const TYPE_ADDRESS = "address";
 export const TYPE_HOTEL = "hotel";
 export const TYPE_CONTACT = "contact";
 export const TYPE_ABOUT = "about";
+export const TYPE_RESTAURANT = "restaurants";
+export const TYPE_BASICDETAILS = "basicDetails";
+export const TYPE_RESTAURANT_DETAILS = "restaurantDetails";
 
 export const KEY_DESKTOP_TITLE = "desktopTitle";
 export const KEY_MOBILE_TITLE = "mobileTitle";
