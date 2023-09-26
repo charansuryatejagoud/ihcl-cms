@@ -278,6 +278,10 @@ export const ihclcore: FeatureSchemaDefinition = {
         title:"Accordion Wrapper",
         value:"ihcl.core.group.accordion-wrapper"
       },
+      {
+        title: "Tabular Data",
+        value: "ihcl.core.group.tabular-data",
+      },
     ],
     card: [
       {
