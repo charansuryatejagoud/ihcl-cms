@@ -50,21 +50,8 @@ async function run() {
  let applicableBenefits = []
   const cards = hotelsList?.map((item) => {
     let card = {
+        ...epicureData.tabularData[0],
         _key:nanoid(),
-        _type:"rowData",
-        applicableVouchers:{
-            bestAvailableRate20:true,
-            celebrationCake:true,
-            mealForTwo:true,
-            oneHourSpaTreatment:true,
-            oneNightStay:true,
-            bestAvailableRateTajPalaces20:false,
-            bestAvailableRateTajSafaris20:false
-        },
-        membershipBenefit:{
-            discountsOnFoodAndBeverage:true,
-            discountsOnSpa:true,
-        },
         participatingHotel:{
             _ref: item?._id,
             _type:"reference",

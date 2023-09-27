@@ -20,14 +20,19 @@ export default {
             type: "object",
             fields: [
                 {
+                    title: "Catergory Title",
+                    name: "categoryTitle",
+                    type: "string"
+                },
+                {
                     title: "Discounts on F&B",
                     name: "discountsOnFoodAndBeverage",
-                    type: "boolean"
+                    type: "columnData"
                 },
                 {
                     title: "Discounts on Spa",
                     name: "discountsOnSpa",
-                    type: "boolean"
+                    type: "columnData"
                 }
             ]
         },
@@ -37,39 +42,44 @@ export default {
             type: "object",
             fields: [
                 {
+                    title: "Catergory Title",
+                    name: "categoryTitle",
+                    type: "string"
+                },
+                {
                     title: "One Night Stay",
                     name: "oneNightStay",
-                    type: "boolean"
+                    type: "columnData"
                 },
                 {
                     title: "60 Minute Spa Treatment",
                     name: "oneHourSpaTreatment",
-                    type: "boolean"
+                    type: "columnData"
                 },
                 {
                     title: "Meal for 2",
                     name: "mealForTwo",
-                    type: "boolean"
+                    type: "columnData"
                 },
                 {
                     title: "Celebration Cake",
                     name: "celebrationCake",
-                    type: "boolean"
+                    type: "columnData"
                 },
                 {
                     title: "20% off Best Available Rate",
                     name: "bestAvailableRate20",
-                    type: "boolean"
+                    type: "columnData"
                 },
                 {
                     title: "20% off Best Available Rate  @ Taj Palaces",
                     name: "bestAvailableRateTajPalaces20",
-                    type: "boolean"
+                    type: "columnData"
                 },
                 {
                     title: "20% off Best Available Rate  @ Taj Safaris",
                     name: "bestAvailableRateTajSafaris20",
-                    type: "boolean"
+                    type: "columnData"
                 }
             ]
         },
