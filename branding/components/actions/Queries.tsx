@@ -34,7 +34,7 @@ export const queries = {
        hotelId, hotelName, brandName,hotelPath,identifier,
        "hotelImage":hotelOverview->basicInfo.media[0].imageAsset.largeImage[0].asset->url,
        "longDescription":hotelOverview->basicInfo.description,
-       "hotelHighlights":hotelHighlights->highlightDetails[].basicInfo.title,
+       "hotelHighlights":hotelFacilities->facilityDetails[title match "Hotels"].list[].item,
             hotelAddress->{
               addressLine1,city,state,country,pincode,
               latitude,longitude,regionKey
