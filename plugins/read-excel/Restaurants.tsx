@@ -7,8 +7,9 @@ import { ImportComponent } from "./types";
 import { client } from "./client";
 import { TYPE_RESTAURANT } from "./constants";
 
-function Restaurants({ callBack }: ImportComponent) {
+function Restaurants({ callBack, getLoader }: ImportComponent) {
   const [excelData, setExcelData] = useState([]);
+  const { UpdateLoader } = getLoader();
   const ref: any = useRef();
   const handleFile = async (e) => {
     e.preventDefault();
@@ -31,9 +32,13 @@ function Restaurants({ callBack }: ImportComponent) {
 
   console.log(excelData);
 
-  const migrateExcelData = async (callBack) => {
+  const migrateExcelData = async (callBack, UpdateLoader) => {
     callBack();
     if (Array.isArray(excelData) && excelData.length > 0) {
+      UpdateLoader({
+        status: true,
+        message: "Processing Import!!",
+      });
       excelData.map(async (restaurant, index) => {
         try {
           await client
@@ -49,7 +54,9 @@ function Restaurants({ callBack }: ImportComponent) {
                 await createDocument(restaurant, index, callBack);
               }
             });
+          UpdateLoader({ status: false });
         } catch (error) {
+          UpdateLoader({ status: false });
           console.log(error);
         }
       });
@@ -84,7 +91,7 @@ function Restaurants({ callBack }: ImportComponent) {
             padding={[3, 3, 4]}
             text="Migrate excel data"
             onClick={() => {
-              migrateExcelData(callBack);
+              migrateExcelData(callBack, UpdateLoader);
             }}
           />
         </>

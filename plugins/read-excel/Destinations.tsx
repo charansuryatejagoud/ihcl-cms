@@ -17,9 +17,10 @@ import {
 } from "./constants";
 import { ImportComponent } from "./types";
 
-function Destinations({ callBack }: ImportComponent) {
+function Destinations({ callBack, getLoader }: ImportComponent) {
   const ref: any = useRef();
   const [destinationsData, setDestinationsData] = useState([]);
+  const { UpdateLoader } = getLoader();
 
   const handleFile = async (e) => {
     e.preventDefault();
@@ -42,8 +43,12 @@ function Destinations({ callBack }: ImportComponent) {
   };
   console.log(destinationsData);
 
-  const migrateExcelData = async (callBack) => {
+  const migrateExcelData = async (callBack, UpdateLoader) => {
     callBack();
+    UpdateLoader({
+      status: true,
+      message: "Processing Import!!",
+    });
     try {
       await destinationsData?.map(async (destination, destinationIndex) => {
         await client
@@ -65,7 +70,9 @@ function Destinations({ callBack }: ImportComponent) {
             }
           });
       });
+      UpdateLoader({ status: false });
     } catch (error) {
+      UpdateLoader({ status: false });
       console.log("Error", error);
     }
   };
@@ -99,7 +106,7 @@ function Destinations({ callBack }: ImportComponent) {
           padding={[3, 3, 4]}
           text="Migrate excel data"
           onClick={() => {
-            migrateExcelData(callBack);
+            migrateExcelData(callBack, UpdateLoader);
           }}
         />
       )}

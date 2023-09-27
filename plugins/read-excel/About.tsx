@@ -24,9 +24,10 @@ function extractAbout({ data }, returnObject: any = {}) {
   return returnObject;
 }
 
-function About({ callBack }: ImportComponent) {
+function About({ callBack, getLoader }: ImportComponent) {
   const ref: any = useRef();
   const [aboutData, setAboutData] = useState([]);
+  const { UpdateLoader } = getLoader();
 
   const handleFile = async (e) => {
     e.preventDefault();
@@ -49,8 +50,12 @@ function About({ callBack }: ImportComponent) {
   };
   console.log(aboutData);
 
-  const migrateExcelData = async (callBack) => {
+  const migrateExcelData = async (callBack, UpdateLoader) => {
     callBack();
+    UpdateLoader({
+      status: true,
+      message: "Processing Import!!",
+    });
     await aboutData.map(async (about, index) => {
       await client
         .fetch(`*[_type == "about" && title == "${about?.title?.trim()}"]`)
@@ -63,6 +68,7 @@ function About({ callBack }: ImportComponent) {
             await createDocument(about, index, callBack);
           }
         });
+      UpdateLoader({ status: false });
     });
   };
 
@@ -95,7 +101,7 @@ function About({ callBack }: ImportComponent) {
           padding={[3, 3, 4]}
           text="Migrate excel data"
           onClick={() => {
-            migrateExcelData(callBack);
+            migrateExcelData(callBack, UpdateLoader);
           }}
         />
       )}
