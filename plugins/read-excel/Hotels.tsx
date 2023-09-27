@@ -71,9 +71,10 @@ function extractDestinationData({ data }, returnObject: any = {}) {
   return returnObject;
 }
 
-function Hotels({ callBack }: ImportComponent) {
+function Hotels({ callBack, getLoader }: ImportComponent) {
   const ref: any = useRef();
   const [hotels, setHotels] = useState([]);
+  const { UpdateLoader } = getLoader();
 
   const handleFile = async (e) => {
     e.preventDefault();
@@ -96,8 +97,12 @@ function Hotels({ callBack }: ImportComponent) {
   };
   console.log(hotels);
 
-  const migrateExcelData = async (callBack) => {
+  const migrateExcelData = async (callBack, UpdateLoader) => {
     callBack();
+    UpdateLoader({
+      status: true,
+      message: "Processing Import!!",
+    });
     hotels?.map(async (hotel, index) => {
       await client
         .fetch(
@@ -116,6 +121,7 @@ function Hotels({ callBack }: ImportComponent) {
           }
         })
         .catch((error) => console.log(error));
+      UpdateLoader({ status: false });
     });
   };
 
@@ -148,7 +154,7 @@ function Hotels({ callBack }: ImportComponent) {
           padding={[3, 3, 4]}
           text="Migrate excel data"
           onClick={() => {
-            migrateExcelData(callBack);
+            migrateExcelData(callBack, UpdateLoader);
           }}
         />
       )}

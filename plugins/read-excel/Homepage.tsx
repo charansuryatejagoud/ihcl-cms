@@ -2,9 +2,31 @@ import { Card, TabList, Tab, TabPanel, Text } from "@sanity/ui";
 import React, { useState } from "react";
 import ExportExcel from "./ExportExcel";
 import ImportExcel from "./ImportExcel";
+import Delete from "./Delete/Delete";
 
 function Homepage() {
   const [id, setId] = useState("import");
+  const [state, setState] = useState<{
+    status: boolean;
+    message: string;
+    currentTab?: string;
+  }>({
+    status: false,
+    message: "Loading!!",
+  });
+  function UpdateLoader({ status, message = "" }) {
+    setState({
+      status: status,
+      message: message,
+      currentTab: id,
+    });
+  }
+  function UseLoader() {
+    return {
+      state,
+      UpdateLoader,
+    };
+  }
   return (
     <Card padding={4}>
       <TabList space={2}>
@@ -22,6 +44,13 @@ function Homepage() {
           onClick={() => setId("export")}
           selected={id === "export"}
         />
+        <Tab
+          aria-controls="delete-panel"
+          id="delete-tab"
+          label="Delete"
+          onClick={() => setId("delete")}
+          selected={id === "delete"}
+        />
       </TabList>
 
       <TabPanel
@@ -29,7 +58,7 @@ function Homepage() {
         hidden={id !== "import"}
         id="import-panel"
       >
-        <ImportExcel />
+        <ImportExcel getLoader={UseLoader} />
       </TabPanel>
 
       <TabPanel
@@ -41,8 +70,16 @@ function Homepage() {
           <Card marginBottom={2}>
             <Text>Currenlty Hotel Banner Images export avaliable*</Text>
           </Card>
-          <ExportExcel />
+          <ExportExcel getLoader={UseLoader} />
         </Card>
+      </TabPanel>
+
+      <TabPanel
+        aria-labelledby="delete-tab"
+        hidden={id !== "delete"}
+        id="delete-panel"
+      >
+        <Delete getLoader={UseLoader} />
       </TabPanel>
     </Card>
   );

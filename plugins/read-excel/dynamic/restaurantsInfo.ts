@@ -438,8 +438,12 @@ async function getRestaurantDoc(
   if (excelData?.bannerDesktopTitle || excelData?.bannerMobileTitle) {
     newDoc.bannerTitle = {
       _type: TYPE_TITLE,
-      [KEY_DESKTOP_TITLE]: excelData?.bannerDesktopTitle?.split("|"),
-      [KEY_MOBILE_TITLE]: excelData?.bannerMobileTitle?.split("|"),
+      [KEY_DESKTOP_TITLE]: excelData?.bannerDesktopTitle
+        ?.split("|")
+        ?.map((item) => item?.trim()),
+      [KEY_MOBILE_TITLE]: excelData?.bannerMobileTitle
+        ?.split("|")
+        ?.map((item) => item?.trim()),
     };
   }
 
@@ -629,8 +633,12 @@ async function getRestaurantDoc(
   ) {
     restaurantInfo.sectionTitle = {
       _type: TYPE_TITLE,
-      [KEY_DESKTOP_TITLE]: excelData?.restaurantDetailsDesktopTitle?.split("|"),
-      [KEY_MOBILE_TITLE]: excelData?.restaurantDetailsMobileTitle?.split("|"),
+      [KEY_DESKTOP_TITLE]: excelData?.restaurantDetailsDesktopTitle
+        ?.split("|")
+        ?.map((item) => item?.trim()),
+      [KEY_MOBILE_TITLE]: excelData?.restaurantDetailsMobileTitle
+        ?.split("|")
+        ?.map((item) => item?.trim()),
     };
   } else {
     doc?.hotelDetailDiningPage?.restaurantInfo?.sectionTitle &&
@@ -677,10 +685,12 @@ async function getRestaurantDoc(
   ) {
     locationBasedRestaurants.sectionTitle = {
       _type: TYPE_TITLE,
-      [KEY_DESKTOP_TITLE]:
-        excelData?.locationBasedSectionDesktopTitle?.split("|"),
-      [KEY_MOBILE_TITLE]:
-        excelData?.locationBasedSectionMobileTitle?.split("|"),
+      [KEY_DESKTOP_TITLE]: excelData?.locationBasedSectionDesktopTitle
+        ?.split("|")
+        ?.map((item) => item?.trim()),
+      [KEY_MOBILE_TITLE]: excelData?.locationBasedSectionMobileTitle
+        ?.split("|")
+        ?.map((item) => item?.trim()),
     };
   } else {
     doc?.hotelDetailDiningPage?.locationBasedRestaurants?.sectionTitle &&

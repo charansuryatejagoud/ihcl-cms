@@ -13,8 +13,10 @@ import Hotels from "./Hotels";
 import About from "./About";
 import HotelInformation from "./HotelInformationDynamic";
 import { ViewResults } from "./ViewResults";
+import { Loader } from "./loader";
 
-function ImportExcel() {
+function ImportExcel({ getLoader }) {
+  const { state } = getLoader();
   const [selected, setSelected] = useState("Hotels");
   const [results, setResults] = useState([]);
   function updateCallBack(data = null): void {
@@ -88,20 +90,33 @@ function ImportExcel() {
                   {selected == "TaxonomyInfo" && <TaxonomyInfo />}
                   {selected == "Facilities" && <Facilities type="production" />}
                   {selected == "Restaurants" && (
-                    <Restaurants callBack={updateCallBack} />
+                    <Restaurants
+                      callBack={updateCallBack}
+                      getLoader={getLoader}
+                    />
                   )}
                   {selected == "Destinations" && (
-                    <Destinations callBack={updateCallBack} />
+                    <Destinations
+                      callBack={updateCallBack}
+                      getLoader={getLoader}
+                    />
                   )}
                   {selected == "Exclusive Offers" && <ExclusiveOffers />}
-                  {selected == "Hotels" && <Hotels callBack={updateCallBack} />}
-                  {selected == "About" && <About callBack={updateCallBack} />}
+                  {selected == "Hotels" && (
+                    <Hotels callBack={updateCallBack} getLoader={getLoader} />
+                  )}
+                  {selected == "About" && (
+                    <About callBack={updateCallBack} getLoader={getLoader} />
+                  )}
                 </Stack>
               </Box>
             </Grid>
           </Stack>
         </Box>
       </Card>
+      {state.status && state.currentTab == "import" && (
+        <Loader status={state.status} message={state.message} />
+      )}
       <ViewResults results={results} />
     </Box>
   );

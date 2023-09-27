@@ -4,7 +4,7 @@
 //
 // Place this script somewhere and run it through
 // `sanity exec <script-filename.js> --with-user-token`
-// Example: D:\ihcl-sanity\IHCLWebsites\ihcl-cms>sanity exec plugins\delete-unused-asserts\deleteUnusedAssets.js
+// Example: D:\ihcl-sanity\IHCLWebsites\ihcl-cms>sanity exec plugins\delete-unused-asserts\deleteUnusedAssets.ts
 /* eslint-disable no-console */
 import { client } from "../read-excel/client";
 
