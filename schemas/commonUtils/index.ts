@@ -396,7 +396,7 @@ export const ihclcore: FeatureSchemaDefinition = {
       },
        {
         title: " Redeem & Save",
-        value: "common-utils.placeholders.redeem-save",
+        value: "common-utils.placeholders.redeem-and-save",
       },
     ],
     nudge: [
