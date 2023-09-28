@@ -2,7 +2,7 @@
   "root": true,
   "api": {
     "projectId": "ocl5w36p",
-    "dataset": "dev"
+    "dataset": "production"
   },
   "project": {
     "name": "IHCL-TAJ"
