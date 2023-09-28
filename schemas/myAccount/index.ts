@@ -139,6 +139,10 @@ export const myAccount: FeatureSchemaDefinition = {
       {
         title: "[My Account] Change Rooms Cart View",
         value: "myAccount.placeholders.change-rooms-cart-view",
+      },
+      {
+        title:"[My Account] Alert Message With Middle Aligned Button",
+        value:"myAccount.placeholders.alert-message-with-middle-aligned-button"
       }
     ],
     tabs: [
@@ -176,10 +180,6 @@ export const myAccount: FeatureSchemaDefinition = {
         title:"[My Account] Alert Message With Two Buttons",
         value:"myAccount.nudge.alert-message-with-two-buttons"
       },
-      {
-        title:"[My Account] Alert Message With Middle Aligned Button",
-        value:"myAccount.nudge.alert-message-with-middle-aligned-button"
-      }
     ]
   },
 };
