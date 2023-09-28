@@ -79,7 +79,8 @@ const contentSection = S.listItem()
         S.list().title("Offers & Holidays").items([
           S.listItem().title("Offer Packages").icon(ListItemIcon).child(S.documentTypeList("offerPackages")),
           S.listItem().title("Offer Themes").icon(ListItemIcon).child(S.documentTypeList("offerThemes")),
-          S.listItem().title("Offer Holidays").icon(ListItemIcon).child(S.documentTypeList("offerHolidays"))
+          S.listItem().title("Offer Holidays").icon(ListItemIcon).child(S.documentTypeList("offerHolidays")),
+          S.listItem().title("Offer Icons").icon(ListItemIcon).child(S.documentTypeList("appIcons"))
         ])
       ),
     ]

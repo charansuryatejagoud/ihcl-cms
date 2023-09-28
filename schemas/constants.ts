@@ -1003,3 +1003,18 @@ export const headings = [
     value: "h6",
   },
 ];
+
+export const iconTypes = [
+  {
+    title: "Generic",
+    value: "generic",
+  },
+  {
+    title: "Offer",
+    value: "offer",
+  },
+  {
+    title: "Restaurant",
+    value: "restaurant",
+  }
+];

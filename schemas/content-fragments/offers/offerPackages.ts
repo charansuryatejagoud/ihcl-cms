@@ -207,6 +207,12 @@ export default {
               rows: 4
             },
             {
+              name: "banner",
+              title: "Banner",
+              type: "array",
+              of: [{ type: "mediaInput" }],
+            },
+            {
               name: "thumbnail",
               title: "Thumbnail",
               type: "array",
@@ -382,6 +388,22 @@ export default {
           to: [{ type: "destination" }],
         },
       ],
+    },
+    {
+      name: "pageTitle",
+      title: "Page Title",
+      type: "string",
+    },
+    {
+      name: "seoKeywords",
+      title: "SEO Keywords",
+      type: "string",
+    },
+    {
+      name: "seoDescription",
+      title: "SEO Description",
+      type: "text",
+      rows: 5,
     }
   ],
 };

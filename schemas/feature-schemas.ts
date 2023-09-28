@@ -25,6 +25,7 @@ import { events } from "./events";
 import { holidays } from "./holidays"
 import { notifications } from "./notifications";
 import { offersAndPromotions } from "./content-fragments/offers";
+import { appIcons } from "./content-fragments/appIcons";
 import { destinations } from "./content-fragments/destinations";
 import {membership} from "./content-fragments/membership";
 
@@ -51,7 +52,8 @@ const features: FeatureSchemaDefinition[] = [
   events,
   notifications,
   offersAndPromotions,
-  membership
+  membership,
+  appIcons
 ];
 
 export const featureDefinition: FeatureSchemaDefinition =
