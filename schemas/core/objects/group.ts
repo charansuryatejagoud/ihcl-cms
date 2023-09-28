@@ -24,6 +24,10 @@ export const groupAlignmentVariant = [
     title: "Right Aligned Title",
     value: "right-aligned-title",
   },
+  {
+    title: "Center Aligned Regular Title Variable Font Size",
+    value: "center-aligned-regular-title-variable-font-size",
+  },
 ];
 
 export const groupPreview = {
