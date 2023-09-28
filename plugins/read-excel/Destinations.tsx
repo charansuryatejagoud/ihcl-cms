@@ -15,10 +15,12 @@ import {
   TYPE_TAB_INFO,
   TYPE_TITLE,
 } from "./constants";
+import { ImportComponent } from "./types";
 
-function Destinations() {
+function Destinations({ callBack, getLoader }: ImportComponent) {
   const ref: any = useRef();
   const [destinationsData, setDestinationsData] = useState([]);
+  const { UpdateLoader } = getLoader();
 
   const handleFile = async (e) => {
     e.preventDefault();
@@ -41,7 +43,12 @@ function Destinations() {
   };
   console.log(destinationsData);
 
-  const migrateExcelData = async () => {
+  const migrateExcelData = async (callBack, UpdateLoader) => {
+    callBack();
+    UpdateLoader({
+      status: true,
+      message: "Processing Import!!",
+    });
     try {
       await destinationsData?.map(async (destination, destinationIndex) => {
         await client
@@ -51,14 +58,21 @@ function Destinations() {
           .then(async (res) => {
             if (res?.length > 0) {
               await res.map(async (doc) => {
-                await updateDocument(destination, doc, destinationIndex);
+                await updateDocument(
+                  destination,
+                  doc,
+                  destinationIndex,
+                  callBack,
+                );
               });
             } else {
-              await createDocument(destination, destinationIndex);
+              await createDocument(destination, destinationIndex, callBack);
             }
           });
       });
+      UpdateLoader({ status: false });
     } catch (error) {
+      UpdateLoader({ status: false });
       console.log("Error", error);
     }
   };
@@ -66,6 +80,7 @@ function Destinations() {
   function resetFile(): void {
     ref.current.value = "";
     setDestinationsData([]);
+    callBack();
   }
 
   return (
@@ -90,23 +105,34 @@ function Destinations() {
           mode="ghost"
           padding={[3, 3, 4]}
           text="Migrate excel data"
-          onClick={migrateExcelData}
+          onClick={() => {
+            migrateExcelData(callBack, UpdateLoader);
+          }}
         />
       )}
     </Flex>
   );
 }
 
-async function updateDocument(data: any, document: any, index) {
+async function updateDocument(
+  data: any,
+  document: any,
+  index,
+  callBack: Function,
+) {
   // const d = getDestinationsDoc({ data: data, doc: document });
   const updatedDoc = getDestinationsDoc({ excelData: data, doc: document });
   console.log("update", updatedDoc);
-  await client
+  const response = await client
     .patch(document._id)
     .set({ ...updatedDoc })
     .commit()
     .then((res) => {
       console.log(index + 1, res?.name + " Updated!", res._id);
+      return {
+        status: "Updated",
+        response: res,
+      };
     })
     .catch((err) => {
       console.error(
@@ -115,18 +141,32 @@ async function updateDocument(data: any, document: any, index) {
         "Error : ",
         err.message,
       );
+      return {
+        status: "Failed to Update",
+        response: { _id: document._id, title: data?.title, error: err },
+      };
     });
+  callBack(response);
 }
 
-async function createDocument(data: any, index) {
-  await client
+async function createDocument(data: any, index, callBack: Function) {
+  const response = await client
     .create(getDestinationsDoc({ excelData: data }))
     .then((res) => {
       console.log(index + 1, "Created document, id = ", res._id, res.name);
+      return {
+        status: "Created",
+        response: res,
+      };
     })
     .catch((err) => {
       console.log("error", err);
+      return {
+        status: "Failed to Create",
+        response: { _id: null, title: data?.title, error: err },
+      };
     });
+  callBack(response);
 }
 
 function getDestinationsDoc(
@@ -150,6 +190,7 @@ function getDestinationsDoc(
     documentData: doc,
     key: "id",
   });
+  id && (newDoc.id = id);
   //identifier
   const identifier = compareValues({
     excelData: excelData,
