@@ -154,6 +154,11 @@ export default {
       ],
     },
     {
+      name: "validThroughYear",
+      title: "Valid till round the year?",
+      type: "boolean",
+    },
+    {
       name: "validityDates",
       title: "Validity Dates",
       type: "array",
@@ -200,6 +205,12 @@ export default {
               title: "Description",
               type: "string",
               rows: 4
+            },
+            {
+              name: "banner",
+              title: "Banner",
+              type: "array",
+              of: [{ type: "mediaInput" }],
             },
             {
               name: "thumbnail",
@@ -377,6 +388,22 @@ export default {
           to: [{ type: "destination" }],
         },
       ],
+    },
+    {
+      name: "pageTitle",
+      title: "Page Title",
+      type: "string",
+    },
+    {
+      name: "seoKeywords",
+      title: "SEO Keywords",
+      type: "string",
+    },
+    {
+      name: "seoDescription",
+      title: "SEO Description",
+      type: "text",
+      rows: 5,
     }
   ],
 };

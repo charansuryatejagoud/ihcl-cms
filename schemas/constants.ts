@@ -253,6 +253,22 @@ export const contentTypes = [
     value: "allRestaurants",
   },
   {
+    title: "Destination Taj Holidays",
+    value: "destinationHolidayOffers",
+  },
+  {
+    title: "Taj Holidays",
+    value: "holidayOffers",
+  },
+  {
+    title: "Taj Holidays(Non IHCL)",
+    value: "holidayOffersNonIHCL",
+  },
+  {
+    title: "Holiday Details",
+    value: "holidayDetails",
+  },
+  {
     title: "Brand Restaurants",
     value: "brandRestaurants",
   },
@@ -279,6 +295,14 @@ export const contentTypes = [
   {
     title: "Offers",
     value: "offers",
+  },
+  {
+    title: "Member Offers",
+    value: "memberOffers",
+  },
+  {
+    title: "Exclusive Offers",
+    value: "exclusiveOffers",
   },
   {
     title: "Vouchers",
@@ -315,6 +339,22 @@ export const contentTypes = [
   {
     title: "Destinations Holidays",
     value: "destinationsHolidays",
+  },
+  {
+    title: "New TAJ Openings",
+    value: "newTajOpenings",
+  },
+  {
+    title: "Opening Soon(Taj)",
+    value: "openingSoonTaj",
+  },
+  {
+    title: "New Non TAJ Openings",
+    value: "newNonTajOpenings",
+  },
+  {
+    title: "Opening Soon(Non-Taj)",
+    value: "openingSoonNonTaj",
   },
 ];
 export const filterAlignmentTypes = [
@@ -727,12 +767,28 @@ export const searchCategoryType = [
 
 export const hotelFeatures = [
   {
-    title: "J Wellness",
-    value: "J Wellness",
+    title: "J Wellness Circle",
+    value: "J Wellness Circle",
   },
   {
-    title: "Khazana",
-    value: "Khazana",
+    title: "Beach",
+    value: "Beach",
+  },
+  {
+    title: "Mountains",
+    value: "Mountains",
+  },
+  {
+    title: "Lakeside",
+    value: "Lakeside",
+  },
+  {
+    title: "City",
+    value: "City",
+  },
+  {
+    title: "Pet Friendly",
+    value: "Pet Friendly",
   },
   {
     title: "Award Winning",
@@ -747,12 +803,12 @@ export const hotelFeatures = [
     value: "Airport",
   },
   {
-    title: "Kid Friendly",
-    value: "Kid Friendly",
+    title: "Business District",
+    value: "Business District",
   },
   {
-    title: "Salon",
-    value: "Salon",
+    title: "Kid's Play Area",
+    value: "Kid's Play Area",
   },
   {
     title: "Newly Opened",
@@ -887,3 +943,78 @@ export const headerBGVariant = [
     value: "gradient",
   },
 ]
+
+export const programTypes = [
+  {
+    title: "Epciure",
+    value: "epicure",
+  },
+  {
+    title: "Signature Airlines",
+    value: "signatureAirlines",
+  },
+  {
+    title: "Club Vistara",
+    value: "clubVistara",
+  },
+]
+export const searchIdentifiers = [
+  {
+    title: "Hotels",
+    value: "hotels",
+  },
+  {
+    title: "Restaurants",
+    value: "restaurants",
+  },
+  {
+    title: "Holidays",
+    value: "holidays",
+  },
+  {
+    title: "SPA",
+    value: "spas",
+  }
+]
+
+export const headings = [
+  {
+    title: "H1",
+    value: "h1",
+  },
+  {
+    title: "H2",
+    value: "h2",
+  },
+  {
+    title: "H3",
+    value: "h3",
+  },
+  {
+    title: "H4",
+    value: "h4",
+  },
+  {
+    title: "H5",
+    value: "h5",
+  },
+  {
+    title: "H6",
+    value: "h6",
+  },
+];
+
+export const iconTypes = [
+  {
+    title: "Generic",
+    value: "generic",
+  },
+  {
+    title: "Offer",
+    value: "offer",
+  },
+  {
+    title: "Restaurant",
+    value: "restaurant",
+  }
+];

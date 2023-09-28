@@ -1,10 +1,10 @@
 import React, { useRef, useState } from "react";
 import { Button, Flex } from "@sanity/ui";
 import * as XLSX from "xlsx";
-import { customAlphabet } from "nanoid";
 import { client } from "./client";
-import { TYPE_CONTACT, TYPE_ABOUT, TYPE_TITLE } from "./constants";
+import { TYPE_ABOUT, TYPE_TITLE } from "./constants";
 import { compareValues, getBanner, getMediaInput } from "./utils";
+import { ImportComponent } from "./types";
 
 function extractAbout({ data }, returnObject: any = {}) {
   data?.title && (returnObject.title = data?.title?.trim());
@@ -24,9 +24,10 @@ function extractAbout({ data }, returnObject: any = {}) {
   return returnObject;
 }
 
-function About() {
+function About({ callBack, getLoader }: ImportComponent) {
   const ref: any = useRef();
   const [aboutData, setAboutData] = useState([]);
+  const { UpdateLoader } = getLoader();
 
   const handleFile = async (e) => {
     e.preventDefault();
@@ -49,25 +50,32 @@ function About() {
   };
   console.log(aboutData);
 
-  const migrateExcelData = async () => {
+  const migrateExcelData = async (callBack, UpdateLoader) => {
+    callBack();
+    UpdateLoader({
+      status: true,
+      message: "Processing Import!!",
+    });
     await aboutData.map(async (about, index) => {
       await client
         .fetch(`*[_type == "about" && title == "${about?.title?.trim()}"]`)
         .then(async (res) => {
           if (res?.length > 0) {
             await res.map(async (doc) => {
-              await updateDocument(about, doc, index);
+              await updateDocument(about, doc, index, callBack);
             });
           } else {
-            await createDocument(about, index);
+            await createDocument(about, index, callBack);
           }
         });
+      UpdateLoader({ status: false });
     });
   };
 
   function resetFile(): void {
     ref.current.value = "";
     setAboutData([]);
+    callBack();
   }
 
   return (
@@ -92,44 +100,69 @@ function About() {
           mode="ghost"
           padding={[3, 3, 4]}
           text="Migrate excel data"
-          onClick={migrateExcelData}
+          onClick={() => {
+            migrateExcelData(callBack, UpdateLoader);
+          }}
         />
       )}
     </Flex>
   );
 }
 
-async function updateDocument(about: any, doc: any, index: number) {
-  console.log("updating ", doc._id, doc?.title);
-  await client
-    .patch(doc._id)
-    .set({ ...getAboutDoc({ excelData: about, document: doc }) })
+async function updateDocument(
+  data: any,
+  document: any,
+  index: number,
+  callBack: Function,
+) {
+  console.log("updating ", document._id, document?.title);
+  const response = await client
+    .patch(document._id)
+    .set({ ...getAboutDoc({ excelData: data, document: document }) })
     .commit()
     .then((res) => {
       console.log(index + 1, " Updated!", res?.title);
+      return {
+        status: "Updated",
+        response: res,
+      };
     })
     .catch((err) => {
       console.error(
         "Oh no, the update failed at: ",
-        doc._id,
-        about?.title,
+        document._id,
+        data?.title,
         "Error : ",
         err.message,
       );
+      return {
+        status: "Failed to Update",
+        response: { _id: document._id, title: data?.title, error: err },
+      };
     });
+  callBack(response);
 }
 
-async function createDocument(about: any, index: number) {
-  console.log("Creating...", about.title);
-  await client
-    .create(getAboutDoc({ excelData: about }))
+async function createDocument(data: any, index: number, callBack: Function) {
+  console.log("Creating...", data.title);
+  const response = await client
+    .create(getAboutDoc({ excelData: data }))
     .then((res) => {
-      console.log(index + 1, "Created  = ", about.title, res._id);
+      console.log(index + 1, "Created  = ", data.title, res._id);
+      return {
+        status: "Created",
+        response: res,
+      };
     })
     .catch((err) => {
-      console.log("failed to create", about.title);
+      console.log("failed to create", data.title);
       console.log("err ", err);
+      return {
+        status: "Failed to Create",
+        response: { _id: null, title: data?.title, error: err },
+      };
     });
+  callBack(response);
 }
 
 function getAboutDoc(

@@ -134,11 +134,14 @@ export const TYPE_ADDRESS = "address";
 export const TYPE_HOTEL = "hotel";
 export const TYPE_CONTACT = "contact";
 export const TYPE_ABOUT = "about";
+export const TYPE_RESTAURANT = "restaurants";
+export const TYPE_BASICDETAILS = "basicDetails";
+export const TYPE_RESTAURANT_DETAILS = "restaurantDetails";
 
 export const KEY_DESKTOP_TITLE = "desktopTitle";
 export const KEY_MOBILE_TITLE = "mobileTitle";
 
-export const QUREY_HOTELS_BANNER_IMAGES = `*[_type == "hotel"]{
+export const QUERY_HOTELS_BANNER_IMAGES = `*[_type == "hotel"]{
   hotelName,
   hotelOverview->{bannerImage},
   hotelFacilities->{bannerImage},
@@ -156,3 +159,7 @@ export const QUREY_HOTELS_BANNER_IMAGES = `*[_type == "hotel"]{
   hotelGallery->{bannerImage},
   hotelAttractions->{bannerImage}
 }`;
+
+export const QUERY_DELETE_UNUSED_ASSETS = `*[ _type in ["sanity.imageAsset", "sanity.fileAsset"] ] 
+{_id, "refs": count(*[ references(^._id) ])}
+[ refs == 0 ][0..99]`;

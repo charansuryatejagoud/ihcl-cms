@@ -246,10 +246,15 @@ export default {
     {
       name: "hotelFeature",
       title: "Hotel Feature",
-      type: "string",
-      options: {
-        list: hotelFeatures,
-      },
+      type: "array",
+      of: [
+        {
+          type: "string",
+          options: {
+            list: hotelFeatures,
+          },
+        },
+      ],
     },
     {
       name: "restaurantName",

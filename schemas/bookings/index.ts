@@ -82,6 +82,10 @@ export const bookings: FeatureSchemaDefinition = {
         value: "bookings.placeholders.bottom-navigation-cart-details",
       },
       {
+        title: "[Bookings] Payment Details CC Avenue",
+        value: "bookings.placeholders.payment-details-cc-avenue",
+      },
+      {
         title: "[Bookings] Default Button",
         value: "bookings.placeholders.default-button",
       },
@@ -112,7 +116,7 @@ export const bookings: FeatureSchemaDefinition = {
       {
         title: "[Bookings] FAQs",
         value: "bookings.group.faqs",
-      }
+      },
     ],
     tabs: [
       {
@@ -144,13 +148,13 @@ export const bookings: FeatureSchemaDefinition = {
       {
         title: "[Bookings] Success and Failure Pop-up",
         value: "bookings.dialog.success-and-failure-pop-up",
-      }
+      },
     ],
     card: [
       {
         title: "[Bookings] Payment Description",
-        value: "Bookings.card.payment-description"
-      }
-    ]
+        value: "Bookings.card.payment-description",
+      },
+    ],
   },
 };

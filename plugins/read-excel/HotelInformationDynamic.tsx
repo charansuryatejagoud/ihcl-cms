@@ -5,11 +5,9 @@ import { client } from "./client";
 import {
   compareValues,
   filterNullValues,
-  generateBulletPoints,
-  generateFacilityInfo,
+  getFacilities,
 } from "./utils";
 import { TYPE_AVAILABILITY, TYPE_TITLE } from "./constants";
-import { customAlphabet } from "nanoid";
 
 function extractHotelInformation({ data }, returnObject: any = {}) {
   data?.title && (returnObject.title = data?.title?.trim());
@@ -46,7 +44,9 @@ function extractHotelInformation({ data }, returnObject: any = {}) {
       data?.facilityInfoList?.trim()?.split("|"),
     );
     returnObject.facilityInfoList = facilityInfoList
-      ? facilityInfoList?.map((list) => list?.split("\\"))
+      ? facilityInfoList?.map((list) => {
+          return list == "null" ? null : list?.split("\\");
+        })
       : [];
   }
   return returnObject;
@@ -241,7 +241,7 @@ function getHotelInformationDoc(
   hotelEssentialInfo && (returnObject.hotelEssentialInfo = hotelEssentialInfo);
   //hotelInfo
   if (excelData?.facilityInfoTitle?.length > 0) {
-    const hotelInfo = getHotelInfo({
+    const hotelInfo = getFacilities({
       excelData: excelData,
       titleKey: "facilityInfoTitle",
       iconKey: "facilityInfoIcon",
@@ -253,22 +253,6 @@ function getHotelInformationDoc(
   }
 
   return returnObject;
-}
-
-function getHotelInfo({ excelData, titleKey, iconKey, listKey }) {
-  const nanoid = customAlphabet("1234567890abcdef", 12);
-  const data = excelData?.[titleKey]?.map((data, index) => {
-    return generateFacilityInfo({
-      title: excelData?.[titleKey]?.[index],
-      _imageRef: excelData?.[iconKey]?.[index],
-      _key: nanoid(),
-      list: generateBulletPoints({
-        data: excelData?.[listKey]?.[index],
-        _key: nanoid(),
-      }),
-    });
-  });
-  return data?.length > 0 ? data : [];
 }
 
 export default HotelInformation;

@@ -4,6 +4,7 @@ export default {
   name: "giftCardsDetails",
   initialValue: {
     isPhysicalGIftCard: false,
+    isSeasonal: false,
   },
   fields: [
     {
@@ -46,6 +47,23 @@ export default {
       title: "Is Physical GIft Card",
       type: "boolean",
       name: "isPhysicalGIftCard",
+      initialValue: false,
+    },
+    {
+      title: "Gradient",
+      type: "string",
+      name: "gradient",
+    },
+    {
+      title: "Priority Order",
+      type: "number",
+      name: "priorityOrder",
+      description: "E-Gift Cards will be displayed based on this Priority Number"
+    },
+    {
+      title: "Is Seasonal",
+      type: "boolean",
+      name: "isSeasonal",
     },
     {
       title: "Font Color",
@@ -58,7 +76,7 @@ export default {
       name: "eGiftCardSubtitle",
       title: "E-Gift Card Subtitle",
       type: "string",
-      description: "Will Display Below The E-Gift Card Title"
+      description: "Will Display Below The E-Gift Card Title",
     },
     {
       title: "Front Cover",
@@ -133,5 +151,10 @@ export default {
         },
       ],
     },
+    {
+      name: "isLive",
+      type: "boolean",
+      description: "Will Display this Gift Card Only When Set True"
+    }
   ],
 };

@@ -1,3 +1,4 @@
+import { contactTypes } from "../../../constants";
 import { addressTypes } from "../utility";
 
 export default {
@@ -15,6 +16,50 @@ export default {
       title: "Type",
       type: "string",
       options: { list: addressTypes },
+    },
+    {
+      name: "phone",
+      title: "Phone",
+      type: "array",
+      of: [
+        {
+          type: "object",
+          fields: [
+            { name: "mobile", type: "string", title: "Mobile" },
+            {
+              name: "type",
+              type: "string",
+              title: "Type",
+              options: {
+                list: contactTypes,
+              },
+            },
+          ],
+        },
+      ],
+      hidden: ({ parent }) => parent?.type !== "sales-office",
+    },
+    {
+      name: "email",
+      title: "Email",
+      type: "array",
+      of: [
+        {
+          type: "object",
+          fields: [
+            { name: "email", type: "string", title: "Email" },
+            {
+              name: "type",
+              type: "string",
+              title: "Type",
+              options: {
+                list: contactTypes,
+              },
+            },
+          ],
+        },
+      ],
+      hidden: ({ parent }) => parent?.type !== "sales-office",
     },
     {
       name: "sectionTitle",

@@ -804,7 +804,7 @@ async function fetchDocument({ type, identifierKey, identifierValue }) {
 }
 
 function getHotelQuery({ identifierKey, identifierValue }) {
-  return `*[_type == "hotel" && ${identifierKey} == "${identifierValue?.trim()}"][0]{
+  return `*[_type == "hotel" && ${identifierKey} == "${identifierValue?.trim()}"]{
     ...,
     hotelNavigation->{...},
     gcCategory->{...},
@@ -1182,6 +1182,8 @@ async function getRefererenceObject({
         _type: TYPE_REFERENCE,
       };
     }
+  } else if (documentData?.[key]?._ref) {
+    return documentData?.[key];
   } else {
     if (excelData?.[key]) {
       const _typedDocument = await fetchDocument({
@@ -1233,6 +1235,22 @@ function getImage({ _ref, _key }) {
   return;
 }
 
+function getFacilities({ excelData, titleKey, iconKey, listKey }) {
+  const nanoid = customAlphabet("1234567890abcdef", 12);
+  const data = excelData?.[titleKey]?.map((data, index) => {
+    return generateFacilityInfo({
+      title: excelData?.[titleKey]?.[index],
+      _imageRef: excelData?.[iconKey]?.[index],
+      _key: nanoid(),
+      list: generateBulletPoints({
+        data: excelData?.[listKey]?.[index],
+        _key: nanoid(),
+      }),
+    });
+  });
+  return data?.length > 0 ? data : [];
+}
+
 export {
   Update,
   Create,
@@ -1253,4 +1271,5 @@ export {
   getImage,
   filterNullValues,
   generateBulletPoints,
+  getFacilities,
 };

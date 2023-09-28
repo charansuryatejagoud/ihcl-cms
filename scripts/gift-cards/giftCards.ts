@@ -57,7 +57,7 @@ async function run() {
       sku: sku,
       name: name,
       currency: currency,
-      url: url,
+      identifier: url,
       minPrice: minPrice,
       maxPrice: maxPrice,
       price: price,

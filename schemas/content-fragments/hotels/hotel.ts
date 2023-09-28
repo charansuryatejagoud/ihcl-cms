@@ -1,5 +1,5 @@
 import {
-  brandNames
+  brandNames, programTypes
 } from "../../constants";
 
 export default {
@@ -200,6 +200,15 @@ export default {
       title: "Attractions",
       type: "reference",
       to: [{ type: "attractions" }],
+    },
+    {
+      name: "programs",
+      title: "Programs",
+      type: "array",
+      of: [{
+        type:"string",
+        options: {list: programTypes}
+      }]
     },
     {
       name: "hotelDocuments",

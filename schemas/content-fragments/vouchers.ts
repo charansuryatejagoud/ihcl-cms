@@ -25,6 +25,11 @@ export default {
       type: "string",
     },
     {
+      name: "iscomplementary",
+      title: "Is Complementary",
+      type: "boolean",
+    },
+    {
       name: "promoCode",
       title: "Promocode",
       type: "string",

@@ -40,6 +40,10 @@ export const bannerVariants = [
   {
     title:"Image Hider",
     value:"image-hider"
+  },
+  {
+    title:"Fullscreen Banner Image Width",
+    value:"fullscreen-banner-image-width"
   }
 ];
 
@@ -162,6 +166,13 @@ export default {
       type: "string",
       description: "Placeholder Text for the Search Field",
       hidden: ({parent}) => parent?.searchFieldVariant !== "ihcl.banner.global-search-field"
+    },
+    {
+    name: "searchData",
+    type: 'reference',
+    to: [{type: 'searchConfig'}],
+    hidden: ({parent}) => parent?.searchFieldVariant !== "ihcl.banner.global-search-field"
+
     },
     {
       name: "mediaType",

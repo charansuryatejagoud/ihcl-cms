@@ -31,5 +31,11 @@ export default {
       type: "array",
       of: [{ type: "mediaInput" }],
     },
+    {
+      name: "icon",
+      title: "Icon",
+      type: "reference",
+      to: [{ type: "appIcons" }],
+    },
   ],
 };
