@@ -767,12 +767,28 @@ export const searchCategoryType = [
 
 export const hotelFeatures = [
   {
-    title: "J Wellness",
-    value: "J Wellness",
+    title: "J Wellness Circle",
+    value: "J Wellness Circle",
   },
   {
-    title: "Khazana",
-    value: "Khazana",
+    title: "Beach",
+    value: "Beach",
+  },
+  {
+    title: "Mountains",
+    value: "Mountains",
+  },
+  {
+    title: "Lakeside",
+    value: "Lakeside",
+  },
+  {
+    title: "City",
+    value: "City",
+  },
+  {
+    title: "Pet Friendly",
+    value: "Pet Friendly",
   },
   {
     title: "Award Winning",
@@ -787,12 +803,12 @@ export const hotelFeatures = [
     value: "Airport",
   },
   {
-    title: "Kid Friendly",
-    value: "Kid Friendly",
+    title: "Business District",
+    value: "Business District",
   },
   {
-    title: "Salon",
-    value: "Salon",
+    title: "Kid's Play Area",
+    value: "Kid's Play Area",
   },
   {
     title: "Newly Opened",
