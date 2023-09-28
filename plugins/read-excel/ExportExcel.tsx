@@ -3,8 +3,8 @@ import * as FileSaver from "file-saver";
 import * as XLSX from "xlsx";
 import { Button } from "@sanity/ui";
 import { client } from "./client";
-import { QUREY_HOTELS_BANNER_IMAGES } from "./constants";
-function ExportExcel() {
+import { QUERY_HOTELS_BANNER_IMAGES } from "./constants";
+function ExportExcel({getLoader}) {
   return <Button onClick={(e) => fetchBannerImages()}>Export</Button>;
 }
 
@@ -21,7 +21,7 @@ const exportToExcel = (excelData, fileName) => {
 
 async function fetchBannerImages() {
   try {
-    await client.fetch(QUREY_HOTELS_BANNER_IMAGES).then((res) => {
+    await client.fetch(QUERY_HOTELS_BANNER_IMAGES).then((res) => {
       const hotels = res?.map((hotel, index) => {
         const hotelKeys = Object.keys(hotel);
         const hotelObjects = hotelKeys?.map((key) => {

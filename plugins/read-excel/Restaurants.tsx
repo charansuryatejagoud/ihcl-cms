@@ -1,16 +1,15 @@
 import React, { useRef, useState } from "react";
 import { Button, Flex } from "@sanity/ui";
 import * as XLSX from "xlsx";
-import { finalRestaurantsInfoObj } from "./dynamic";
-import {
-  ConvertJSONValuesToString,
-  Create,
-  Update,
-  fetchByType,
-} from "./utils";
+import { ConvertJSONValuesToString } from "./utils";
+import { getRestaurantDoc } from "./dynamic/restaurantsInfo";
+import { ImportComponent } from "./types";
+import { client } from "./client";
+import { TYPE_RESTAURANT } from "./constants";
 
-function Restaurants() {
+function Restaurants({ callBack, getLoader }: ImportComponent) {
   const [excelData, setExcelData] = useState([]);
+  const { UpdateLoader } = getLoader();
   const ref: any = useRef();
   const handleFile = async (e) => {
     e.preventDefault();
@@ -21,8 +20,6 @@ function Restaurants() {
         const workbook = XLSX.read(data, { type: "array" });
         const worksheet = workbook.Sheets[workbook.SheetNames[0]];
         const jsonData = XLSX.utils.sheet_to_json(worksheet);
-        // const columns = XLSX.utils.sheet_to_json(worksheet, { header: 1 })[0];
-
         setExcelData(
           jsonData.map((data: object) => {
             return ConvertJSONValuesToString(data);
@@ -33,60 +30,34 @@ function Restaurants() {
     }
   };
 
-  const migrateExcelData = async () => {
+  console.log(excelData);
+
+  const migrateExcelData = async (callBack, UpdateLoader) => {
+    callBack();
     if (Array.isArray(excelData) && excelData.length > 0) {
-      excelData.map(async (a) => {
-        const res = await fetchByType({
-          title: a.title,
-          type: "restaurants",
-        });
-
-        const bannerTitle = {
-          _type: "title",
-          desktopTitle: [],
-          mobileTitle: [],
-        };
-
-        if (a.bannerDesktopTitle.includes("|")) {
-          bannerTitle.desktopTitle = a.bannerDesktopTitle.split("|");
-        } else {
-          bannerTitle.desktopTitle = [a.bannerDesktopTitle];
-        }
-
-        if (a.restaurantSectionMobileTitle.includes("|")) {
-          bannerTitle.mobileTitle = a.bannerMobileTitle.split("|");
-        } else {
-          bannerTitle.mobileTitle = [a.bannerMobileTitle];
-        }
-
-        const modData = finalRestaurantsInfoObj({
-          title: a.title,
-          hotelDiningPageObj: [a],
-          response: res,
-          bannerTitle,
-        });
-
-        if (res) {
-          try {
-            // Update
-            const updateRes = await Update({
-              id: res._id,
-              data: modData,
+      UpdateLoader({
+        status: true,
+        message: "Processing Import!!",
+      });
+      excelData.map(async (restaurant, index) => {
+        try {
+          await client
+            .fetch(
+              `*[_type == "${TYPE_RESTAURANT}" && title == "${restaurant?.title?.trim()}"]{...}`,
+            )
+            .then(async (res) => {
+              if (res?.length > 0) {
+                await res.map(async (doc) => {
+                  await updateDocument(restaurant, doc, index, callBack);
+                });
+              } else {
+                await createDocument(restaurant, index, callBack);
+              }
             });
-            console.log(updateRes);
-          } catch (err) {
-            console.error(err);
-          }
-        } else {
-          try {
-            // Create
-            const createRes = await Create({
-              doc: { ...modData, _type: "restaurants" },
-            });
-            console.log(createRes);
-          } catch (err) {
-            console.error(err);
-          }
+          UpdateLoader({ status: false });
+        } catch (error) {
+          UpdateLoader({ status: false });
+          console.log(error);
         }
       });
     }
@@ -95,6 +66,7 @@ function Restaurants() {
   function resetFile(): void {
     ref.current.value = "";
     setExcelData([]);
+    callBack();
   }
 
   return (
@@ -118,12 +90,75 @@ function Restaurants() {
             mode="ghost"
             padding={[3, 3, 4]}
             text="Migrate excel data"
-            onClick={migrateExcelData}
+            onClick={() => {
+              migrateExcelData(callBack, UpdateLoader);
+            }}
           />
         </>
       )}
     </Flex>
   );
+}
+
+async function updateDocument(
+  data: any,
+  document: any,
+  index,
+  callBack: Function,
+) {
+  const updatedData = await getRestaurantDoc({
+    excelData: data,
+    doc: document,
+  });
+  console.log("update", document?.title);
+  const response = await client
+    .patch(document._id)
+    .set({ ...updatedData })
+    .commit()
+    .then((res) => {
+      console.log(index + 1, res?.title + " Updated!");
+      return {
+        status: "Updated",
+        response: res,
+      };
+    })
+    .catch((err) => {
+      console.error(
+        "Oh no, the update failed: ",
+        document._id,
+        "Error : ",
+        err,
+      );
+      return {
+        status: "Failed to Update",
+        response: { _id: document._id, title: data?.title, error: err },
+      };
+    });
+  callBack(response);
+}
+
+async function createDocument(data: any, index, callBack: Function) {
+  const newDoc = await getRestaurantDoc({
+    excelData: data,
+  });
+  console.log("Creating ", newDoc?.title);
+  const response = await client
+    .create(newDoc)
+    .then((res) => {
+      console.log(index + 1, "Created document, id = ", res?._id, res?.title);
+      return {
+        status: "Created",
+        response: res,
+      };
+    })
+    .catch((err) => {
+      console.log("error", err);
+      return {
+        status: "Failed to Create",
+        response: { _id: null, title: data?.title, error: err },
+      };
+    });
+  callBack(response);
 }
 
 export default Restaurants;

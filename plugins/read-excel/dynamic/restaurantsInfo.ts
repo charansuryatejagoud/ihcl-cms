@@ -1,14 +1,23 @@
 import { customAlphabet } from "nanoid";
+import {
+  KEY_DESKTOP_TITLE,
+  KEY_MOBILE_TITLE,
+  TYPE_BASICDETAILS,
+  TYPE_REFERENCE,
+  TYPE_RESTAURANT,
+  TYPE_RESTAURANT_DETAILS,
+  TYPE_TITLE,
+} from "../constants";
+import {
+  compareValues,
+  fetchDocument,
+  getFacilities,
+  getRefererenceObject,
+} from "../utils";
 
 const nanoid = customAlphabet("1234567890abcdef", 12);
 
-const bannerTitle = {
-  _type: "title",
-  desktopTitle: [],
-  mobileTitle: [],
-};
-
-const bannerDiningInfo = ({ text }) => {
+const getBlockContent = ({ text }) => {
   return {
     _key: "bce7de8c36bb",
     _type: "block",
@@ -160,25 +169,22 @@ const _hotelDetailDiningPage = (
   }[],
 ) =>
   hotelDiningPageObj.map(
-    (
-      a: {
-        [x: string]: string;
-        bannerDiningInfoText: any;
-        bannerSubTitle: string;
-        locationBasedDescription: string;
-        locationBasedSectionDesktopTitle: string;
-        locationBasedSectionMobileTitle: string;
-        diningContactInfoText: any;
-        diningDescription: string;
-        diningTitle: string;
-        restaurantDescription: string;
-        restaurantSectionDesktopTitle: string;
-        restaurantSectionMobileTitle: string;
-        restaurantBasicDescription: string;
-        restaurantBasicTitle: string;
-      },
-      i: any,
-    ) => {
+    (a: {
+      [x: string]: string;
+      bannerDiningInfoText: any;
+      bannerSubTitle: string;
+      locationBasedDescription: string;
+      locationBasedSectionDesktopTitle: string;
+      locationBasedSectionMobileTitle: string;
+      diningContactInfoText: any;
+      diningDescription: string;
+      diningTitle: string;
+      restaurantDescription: string;
+      restaurantSectionDesktopTitle: string;
+      restaurantSectionMobileTitle: string;
+      restaurantBasicDescription: string;
+      restaurantBasicTitle: string;
+    }) => {
       const hotelDetailDiningPage = {
         bannerDiningInfo: [],
         bannerSubTitle: "",
@@ -222,7 +228,7 @@ const _hotelDetailDiningPage = (
       };
 
       hotelDetailDiningPage.bannerDiningInfo.push(
-        bannerDiningInfo({ text: a.bannerDiningInfoText }),
+        getBlockContent({ text: a.bannerDiningInfoText }),
       );
 
       hotelDetailDiningPage.bannerSubTitle = a.bannerSubTitle;
@@ -345,13 +351,10 @@ const overrideWithImagesIfExists = (
 ) => {
   return _hotelDetailDiningPage(hotelDiningPageObj)
     .map(
-      (
-        a: {
-          privateDiningInfo: { diningInfo: any };
-          restaurantInfo: { basicInfo: any };
-        },
-        i: any,
-      ) => {
+      (a: {
+        privateDiningInfo: { diningInfo: any };
+        restaurantInfo: { basicInfo: any };
+      }) => {
         let diningInfoMedia = [],
           restaurantBasicInfoMedia = [];
 
@@ -416,3 +419,308 @@ export const finalRestaurantsInfoObj = ({
     bannerTitle,
   };
 };
+
+async function getRestaurantDoc(
+  { excelData, doc = null, type = TYPE_RESTAURANT },
+  newDoc: any = {},
+) {
+  const hotelDetailDiningPage: any = {};
+  const privateDiningInfo: any = {};
+  const restaurantInfo: any = { _type: TYPE_RESTAURANT_DETAILS };
+  const locationBasedRestaurants: any = { _type: TYPE_RESTAURANT_DETAILS };
+
+  if (!doc) {
+    newDoc._type = type;
+    newDoc.title = excelData?.title?.trim();
+  }
+
+  //bannerTitle
+  if (excelData?.bannerDesktopTitle || excelData?.bannerMobileTitle) {
+    newDoc.bannerTitle = {
+      _type: TYPE_TITLE,
+      [KEY_DESKTOP_TITLE]: excelData?.bannerDesktopTitle
+        ?.split("|")
+        ?.map((item) => item?.trim()),
+      [KEY_MOBILE_TITLE]: excelData?.bannerMobileTitle
+        ?.split("|")
+        ?.map((item) => item?.trim()),
+    };
+  }
+
+  //identifier
+  const identifier = compareValues({
+    excelData: excelData,
+    documentData: doc,
+    key: "identifier",
+  });
+  identifier && (newDoc.identifier = identifier);
+
+  //thumbnailDescription
+  const thumbnailDescription = compareValues({
+    excelData: excelData,
+    documentData: doc,
+    key: "thumbnailDescription",
+  });
+  thumbnailDescription && (newDoc.thumbnailDescription = thumbnailDescription);
+
+  //city
+  const city = compareValues({
+    excelData: excelData,
+    documentData: doc,
+    key: "city",
+  });
+  city && (newDoc.city = city);
+
+  //openingHours
+  if (excelData?.openingHours) {
+    newDoc.openingHours = excelData?.openingHours?.split("|");
+  }
+
+  //participatingHotels
+  if (excelData?.participatingHotels) {
+    const hotels = excelData?.participatingHotels?.split("|");
+    let participatingHotels = [];
+    await hotels?.map(async (item) => {
+      await fetchDocument({
+        identifierKey: "hotelName",
+        identifierValue: item,
+        type: "hotel",
+      }).then((_typedDocument) => {
+        if (_typedDocument?._id) {
+          participatingHotels.push({
+            _ref: _typedDocument?._id?.replace("drafts.", ""),
+            _type: TYPE_REFERENCE,
+          });
+        }
+      });
+    });
+    participatingHotels && (newDoc.participatingHotels = participatingHotels);
+  }
+
+  //bannerDiningInfoText
+  if (excelData.bannerDiningInfoText) {
+    hotelDetailDiningPage.bannerDiningInfo = [
+      getBlockContent({
+        text: excelData.bannerDiningInfoText,
+      }),
+    ];
+  } else {
+    doc?.hotelDetailDiningPage?.bannerDiningInfo &&
+      (hotelDetailDiningPage.bannerDiningInfo =
+        doc?.hotelDetailDiningPage?.bannerDiningInfo);
+  }
+
+  //bannerSubTitle
+  const bannerSubTitle = compareValues({
+    excelData: excelData,
+    documentData: doc?.hotelDetailDiningPage,
+    key: "bannerSubTitle",
+  });
+  bannerSubTitle && (hotelDetailDiningPage.bannerSubTitle = bannerSubTitle);
+
+  //restaurantAvailability
+  if (
+    excelData?.restaurantAvailabilityFacilityInfoTitle ||
+    excelData?.restaurantAvailabilityFacilityInfoList ||
+    excelData?.restaurantAvailabilityFacilityInfoIcon
+  ) {
+    const restaurantAvailability = getFacilities({
+      excelData: {
+        facilityInfoTitle:
+          excelData?.restaurantAvailabilityFacilityInfoTitle?.split("|"),
+        facilityInfoIcon: excelData?.restaurantAvailabilityFacilityInfoIcon
+          ?.split("|")
+          ?.map((icon) => (icon == "null" ? null : icon)),
+        facilityInfoList: excelData?.restaurantAvailabilityFacilityInfoList
+          ?.split("|")
+          ?.map((list) => (list == "null" ? null : list?.split("\\"))),
+      },
+      titleKey: "facilityInfoTitle",
+      iconKey: "facilityInfoIcon",
+      listKey: "facilityInfoList",
+    });
+    restaurantAvailability &&
+      (hotelDetailDiningPage.restaurantAvailability = restaurantAvailability);
+  } else {
+    doc?.hotelDetailDiningPage?.restaurantAvailability &&
+      (hotelDetailDiningPage.restaurantAvailability =
+        doc?.hotelDetailDiningPage?.restaurantAvailability);
+  }
+
+  //privateDiningInfo
+  if (excelData?.privateDiningInfoContactInfo) {
+    privateDiningInfo.contactInfo = [
+      getBlockContent({
+        text: excelData.privateDiningInfoContactInfo,
+      }),
+    ];
+  } else {
+    doc?.hotelDetailDiningPage?.privateDiningInfo?.contactInfo &&
+      (privateDiningInfo.contactInfo =
+        doc?.hotelDetailDiningPage?.privateDiningInfo?.contactInfo);
+  }
+  if (
+    excelData?.privateDiningInfoBasicInfoTitle ||
+    excelData?.privateDiningInfoBasicInfoSubTitle ||
+    excelData?.privateDiningInfoBasicInfoDescription
+  ) {
+    privateDiningInfo.diningInfo = getBasicDetails({
+      title: excelData?.privateDiningInfoBasicInfoTitle,
+      subTitle: excelData?.privateDiningInfoBasicInfoSubTitle,
+      description: excelData?.privateDiningInfoBasicInfoDescription,
+      media: doc?.hotelDetailDiningPage?.privateDiningInfo?.basicInfo?.media,
+      specifications:
+        doc?.hotelDetailDiningPage?.privateDiningInfo?.basicInfo
+          ?.specifications,
+    });
+  } else {
+    doc?.hotelDetailDiningPage?.privateDiningInfo?.basicInfo &&
+      (privateDiningInfo.basicInfo =
+        doc?.hotelDetailDiningPage?.privateDiningInfo?.basicInfo);
+  }
+  hotelDetailDiningPage.privateDiningInfo = privateDiningInfo;
+
+  //restaurantContact
+  const restaurantContact = await getRefererenceObject({
+    excelData: excelData,
+    documentData: {
+      restaurantContact: doc?.hotelDetailDiningPage?.restaurantContact,
+    },
+    key: "restaurantContact",
+    type: "contact",
+    identifierKey: "title",
+  });
+  restaurantContact &&
+    (hotelDetailDiningPage.restaurantContact = restaurantContact);
+
+  //restaurantAddress
+  const restaurantAddress = await getRefererenceObject({
+    excelData: excelData,
+    documentData: {
+      restaurantAddress: doc?.hotelDetailDiningPage?.restaurantAddress,
+    },
+    key: "restaurantAddress",
+    type: "address",
+    identifierKey: "title",
+  });
+  restaurantAddress &&
+    (hotelDetailDiningPage.restaurantAddress = restaurantAddress);
+
+  //restaurantInfo - basicInfo
+  if (
+    excelData?.restaurantDetailsBasicInfoTitle ||
+    excelData?.restaurantDetailsBasicInfoSubTitle ||
+    excelData?.restaurantDetailsBasicInfoDescription
+  ) {
+    restaurantInfo.basicInfo = getBasicDetails({
+      title: excelData?.restaurantDetailsBasicInfoTitle,
+      subTitle: excelData?.restaurantDetailsBasicInfoSubTitle,
+      description: excelData?.restaurantDetailsBasicInfoDescription,
+      media: doc?.hotelDetailDiningPage?.restaurantInfo?.basicInfo?.media,
+      specifications:
+        doc?.hotelDetailDiningPage?.restaurantInfo?.basicInfo?.specifications,
+    });
+  } else {
+    doc?.hotelDetailDiningPage?.restaurantInfo?.basicInfo &&
+      (restaurantInfo.basicInfo =
+        doc?.hotelDetailDiningPage?.restaurantInfo?.basicInfo);
+  }
+
+  //restaurantInfo - sectionTitle
+  if (
+    excelData?.restaurantDetailsDesktopTitle ||
+    excelData?.restaurantDetailsMobileTitle
+  ) {
+    restaurantInfo.sectionTitle = {
+      _type: TYPE_TITLE,
+      [KEY_DESKTOP_TITLE]: excelData?.restaurantDetailsDesktopTitle
+        ?.split("|")
+        ?.map((item) => item?.trim()),
+      [KEY_MOBILE_TITLE]: excelData?.restaurantDetailsMobileTitle
+        ?.split("|")
+        ?.map((item) => item?.trim()),
+    };
+  } else {
+    doc?.hotelDetailDiningPage?.restaurantInfo?.sectionTitle &&
+      (restaurantInfo.sectionTitle =
+        doc?.hotelDetailDiningPage?.restaurantInfo?.sectionTitle);
+  }
+
+  //restaurantInfo - restaurantDetailsDescription
+  if (excelData?.restaurantDetailsDescription) {
+    restaurantInfo.description = excelData?.restaurantDetailsDescription;
+  } else {
+    doc?.hotelDetailDiningPage?.restaurantInfo?.description &&
+      (restaurantInfo.description =
+        doc?.hotelDetailDiningPage?.restaurantInfo?.description);
+  }
+  hotelDetailDiningPage.restaurantInfo = restaurantInfo;
+
+  //locationBasedRestaurants
+  if (
+    excelData?.locationBasedBasicInfoTitle ||
+    excelData?.locationBasedBasicInfoSubTitle ||
+    excelData?.locationBasedBasicInfoDescription
+  ) {
+    locationBasedRestaurants.basicInfo = getBasicDetails({
+      title: excelData?.locationBasedBasicInfoTitle,
+      subTitle: excelData?.locationBasedBasicInfoSubTitle,
+      description: excelData?.locationBasedBasicInfoDescription,
+      media:
+        doc?.hotelDetailDiningPage?.locationBasedRestaurants?.basicInfo?.media,
+      specifications:
+        doc?.hotelDetailDiningPage?.locationBasedRestaurants?.basicInfo
+          ?.specifications,
+    });
+  } else {
+    doc?.hotelDetailDiningPage?.locationBasedRestaurants?.basicInfo &&
+      (locationBasedRestaurants.basicInfo =
+        doc?.hotelDetailDiningPage?.locationBasedRestaurants?.basicInfo);
+  }
+
+  //locationBasedRestaurants - sectionTitle
+  if (
+    excelData?.locationBasedSectionDesktopTitle ||
+    excelData?.locationBasedSectionMobileTitle
+  ) {
+    locationBasedRestaurants.sectionTitle = {
+      _type: TYPE_TITLE,
+      [KEY_DESKTOP_TITLE]: excelData?.locationBasedSectionDesktopTitle
+        ?.split("|")
+        ?.map((item) => item?.trim()),
+      [KEY_MOBILE_TITLE]: excelData?.locationBasedSectionMobileTitle
+        ?.split("|")
+        ?.map((item) => item?.trim()),
+    };
+  } else {
+    doc?.hotelDetailDiningPage?.locationBasedRestaurants?.sectionTitle &&
+      (locationBasedRestaurants.sectionTitle =
+        doc?.hotelDetailDiningPage?.locationBasedRestaurants?.sectionTitle);
+  }
+
+  //locationBasedRestaurants - locationBasedDescription
+  if (excelData?.locationBasedDescription) {
+    locationBasedRestaurants.description = excelData?.locationBasedDescription;
+  } else {
+    doc?.hotelDetailDiningPage?.locationBasedRestaurants?.description &&
+      (locationBasedRestaurants.description =
+        doc?.hotelDetailDiningPage?.locationBasedRestaurants?.description);
+  }
+  hotelDetailDiningPage.locationBasedRestaurants = locationBasedRestaurants;
+
+  newDoc.hotelDetailDiningPage = hotelDetailDiningPage;
+  return newDoc;
+}
+
+function getBasicDetails(
+  { title, subTitle, description, specifications, media },
+  returnData: any = { _type: TYPE_BASICDETAILS },
+) {
+  title && (returnData.title = title);
+  subTitle && (returnData.subTitle = subTitle);
+  description && (returnData.description = description);
+  specifications && (returnData.specifications = specifications);
+  media && (returnData.media = media);
+  return returnData;
+}
+export { getRestaurantDoc };
