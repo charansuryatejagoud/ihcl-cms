@@ -20,6 +20,10 @@ export const groupAlignmentVariant = [
     title: "Center Aligned Regular Title with No Hyphens",
     value: "center-aligned-regular-title-with-no-hyphens",
   },
+  {
+    title: "Left Aligned with Hyphens",
+    value: "left-aligned-regular-title-with-hyphens",
+  },
 ];
 
 export const groupPreview = {
