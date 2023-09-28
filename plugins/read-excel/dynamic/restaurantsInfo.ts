@@ -471,6 +471,30 @@ async function getRestaurantDoc(
   });
   city && (newDoc.city = city);
 
+  //pageTitle
+  const pageTitle = compareValues({
+    excelData: excelData,
+    documentData: doc,
+    key: "pageTitle",
+  });
+  pageTitle && (newDoc.pageTitle = pageTitle);
+
+  //seoDescription
+  const seoDescription = compareValues({
+    excelData: excelData,
+    documentData: doc,
+    key: "seoDescription",
+  });
+  seoDescription && (newDoc.seoDescription = seoDescription);
+
+  //seoKeywords
+  const seoKeywords = compareValues({
+    excelData: excelData,
+    documentData: doc,
+    key: "seoKeywords",
+  });
+  seoKeywords && (newDoc.seoKeywords = seoKeywords);
+
   //openingHours
   if (excelData?.openingHours) {
     newDoc.openingHours = excelData?.openingHours?.split("|");
