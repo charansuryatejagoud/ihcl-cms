@@ -1,9 +1,9 @@
 import React, { useRef, useState } from "react";
 import { Button, Flex } from "@sanity/ui";
 import * as XLSX from "xlsx";
-import { client } from "./client";
-import { getHotelDocument, getHotelQuery } from "./utils";
-import { ImportComponent } from "./types";
+import { client } from "../client";
+import { getHotelDocument, getHotelQuery } from "../utils";
+import { ImportComponent } from "../types";
 
 function extractDestinationData({ data }, returnObject: any = {}) {
   data?.hotelName && (returnObject.hotelName = data?.hotelName?.trim());

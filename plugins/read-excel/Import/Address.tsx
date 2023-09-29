@@ -1,10 +1,10 @@
 import React, { useRef, useState } from "react";
 import { Button, Flex } from "@sanity/ui";
 import * as XLSX from "xlsx";
-import { TYPE_ADDRESS, TYPE_TITLE } from "./constants";
+import { TYPE_ADDRESS, TYPE_TITLE } from "../constants";
 import { customAlphabet } from "nanoid";
-import { client } from "./client";
-import { compareValues } from "./utils";
+import { client } from "../client";
+import { compareValues } from "../utils";
 
 function extractAddressData({ data }, returnObject: any = {}) {
   data?.hotelTitle && (returnObject.hotelTitle = data?.hotelTitle);

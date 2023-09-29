@@ -1,7 +1,7 @@
 import { Card, TabList, Tab, TabPanel, Text } from "@sanity/ui";
 import React, { useState } from "react";
 import ExportExcel from "./ExportExcel";
-import ImportExcel from "./ImportExcel";
+import ImportExcel from "./Import/ImportExcel";
 import Delete from "./Delete/Delete";
 
 function Homepage() {

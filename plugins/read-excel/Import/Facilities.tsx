@@ -1,8 +1,8 @@
 import React, { useRef, useState } from "react";
 import { Button, Flex } from "@sanity/ui";
 import * as XLSX from "xlsx";
-import { client } from "./client";
-import { createOrReplaceFacilitiesDoc } from "./utils";
+import { client } from "../client";
+import { createOrReplaceFacilitiesDoc } from "../utils";
 
 function Facilities({ type }) {
   const [hotelFacilitiesData, setHotelFacilitiesData] = useState([]);

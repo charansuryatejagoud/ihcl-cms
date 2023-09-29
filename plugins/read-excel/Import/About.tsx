@@ -1,10 +1,10 @@
 import React, { useRef, useState } from "react";
 import { Button, Flex } from "@sanity/ui";
 import * as XLSX from "xlsx";
-import { client } from "./client";
-import { TYPE_ABOUT, TYPE_TITLE } from "./constants";
-import { compareValues, getBanner, getMediaInput } from "./utils";
-import { ImportComponent } from "./types";
+import { client } from "../client";
+import { TYPE_ABOUT, TYPE_TITLE } from "../constants";
+import { compareValues, getBanner, getMediaInput } from "../utils";
+import { ImportComponent } from "../types";
 
 function extractAbout({ data }, returnObject: any = {}) {
   data?.title && (returnObject.title = data?.title?.trim());

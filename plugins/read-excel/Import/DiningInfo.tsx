@@ -1,8 +1,8 @@
 import React, { useRef, useState } from "react";
 import { Button, Flex } from "@sanity/ui";
 import * as XLSX from "xlsx";
-import { finalDiningInfoObj } from "./dynamic";
-import { Create, Update, fetchByType } from "./utils";
+import { finalDiningInfoObj } from "../dynamic";
+import { Create, Update, fetchByType } from "../utils";
 
 function DiningInfo() {
   const [excelData, setExcelData] = useState(null);

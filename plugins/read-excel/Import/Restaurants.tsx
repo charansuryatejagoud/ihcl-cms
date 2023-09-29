@@ -1,11 +1,11 @@
 import React, { useRef, useState } from "react";
 import { Button, Flex } from "@sanity/ui";
 import * as XLSX from "xlsx";
-import { ConvertJSONValuesToString } from "./utils";
-import { getRestaurantDoc } from "./dynamic/restaurantsInfo";
-import { ImportComponent } from "./types";
-import { client } from "./client";
-import { TYPE_RESTAURANT } from "./constants";
+import { ConvertJSONValuesToString } from "../utils";
+import { getRestaurantDoc } from "../dynamic/restaurantsInfo";
+import { ImportComponent } from "../types";
+import { client } from "../client";
+import { TYPE_RESTAURANT } from "../constants";
 
 function Restaurants({ callBack, getLoader }: ImportComponent) {
   const [excelData, setExcelData] = useState([]);

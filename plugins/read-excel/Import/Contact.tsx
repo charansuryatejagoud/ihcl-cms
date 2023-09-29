@@ -2,9 +2,9 @@ import React, { useRef, useState } from "react";
 import { Button, Flex } from "@sanity/ui";
 import * as XLSX from "xlsx";
 import { customAlphabet } from "nanoid";
-import { client } from "./client";
-import { TYPE_CONTACT } from "./constants";
-import { compareValues } from "./utils";
+import { client } from "../client";
+import { TYPE_CONTACT } from "../constants";
+import { compareValues } from "../utils";
 
 function extractContacts({ data }, returnObject: any = {}) {
   data?.title && (returnObject.title = data?.title);

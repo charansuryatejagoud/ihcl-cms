@@ -1,13 +1,13 @@
 import React, { useRef, useState } from "react";
 import { Button, Flex } from "@sanity/ui";
 import * as XLSX from "xlsx";
-import { client } from "./client";
+import { client } from "../client";
 import {
   compareValues,
   filterNullValues,
   getFacilities,
-} from "./utils";
-import { TYPE_AVAILABILITY, TYPE_TITLE } from "./constants";
+} from "../utils";
+import { TYPE_AVAILABILITY, TYPE_TITLE } from "../constants";
 
 function extractHotelInformation({ data }, returnObject: any = {}) {
   data?.title && (returnObject.title = data?.title?.trim());
