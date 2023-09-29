@@ -15,7 +15,6 @@ function extractOfferSeo({ data, prevData }) {
   data?.seoDescription &&
     (seoData.seoDescription = data?.seoDescription?.trim());
   data?.seoKeywords && (seoData.seoKeywords = data?.seoKeywords?.trim());
-  console.log("index", index);
   if (index == -1) {
     if (data?.hotelTitle) {
       return [
