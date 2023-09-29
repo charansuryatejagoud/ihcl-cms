@@ -5,17 +5,39 @@ export function weddingAssets() {
     type: "object",
     fields: [
       {
-        name: "leftItems",
-        title: "Left Items",
-        type: "array",
-        of: [{ type: "weddingMedia" }],
+        name: "firstItemWidth",
+        type: "string",
       },
       {
-        name: "rightItems",
-        title: "Right Items",
-        type: "array",
-        of: [{ type: "weddingMedia" }],
+        name: "lastItemWidth",
+        type: "string",
       },
+      {
+        name: "itemsData",
+        type: "array",
+        of: [{ 
+          type: "object",
+          fields: [
+            {
+              name: "col",
+              title: "Column Alignment",
+              type: "string",
+              options: {
+                list: [
+                  {title: "Left", value: "left",},
+                  {title: "Right", value: "right",},
+                  {title: "Middle", value: "middle",}
+                ]
+              }
+            },
+            {
+              name: "items",
+              type: "array",
+              of: [{ type: "weddingMedia" }],
+            }
+          ]
+      }],
+      }
     ],
   };
 }
@@ -68,3 +90,4 @@ export function weddingMedia() {
     ],
   };
 }
+

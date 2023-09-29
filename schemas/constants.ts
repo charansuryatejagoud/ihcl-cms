@@ -894,6 +894,10 @@ export const featureVariants = [
     title: "Offers",
     value: "offers",
   },
+  {
+    title: "Offers Layout Placeholder",
+    value: "offers-layout-placeholder",
+  }
 ];
 
 export const poweredBy = [
