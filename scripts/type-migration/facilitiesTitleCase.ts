@@ -8,7 +8,7 @@ async function run() {
     dataset: "production",
     apiVersion: "v2021-10-21",
     token:
-      "skIlzYEV0AyovwCGKc4uvF7kNe3IdAp3zI4yjdqSBAB9gpj9r4GnsCmYh9o7iRe9htOJCKdLiJBLpjAFnedjFoLiKujs6mvSmwzkvr0t5obhmsh6Gb6s0MOnarAkqzRikYgBYNkZdEEc7v8BtvywajXtW9A4DmxeZ41aYnJbowf8XOPVt5vc",
+      "skvGpRkarezyqvYPJox5bHspP0Ww1iQvpzQ4TnAdNIuxMZwBgLi5K8OlA0QeDDgVexDRAM67T7Og0iCTxuFjWYKtmkMh0ZL0hhwhJwOlUc8nDEfQOBnE44HNa4FqIQgIrrtQr6xzrTQWA720n2ion1qWLPvYlPF8Hg74pJf0vxnky6XSJb60",
     useCdn: false,
   });
   console.log("script starts");
@@ -19,7 +19,7 @@ async function run() {
   await client
     .fetch(
       `
-      *[_type == "facilities" ]{
+      *[_type == "facilities" ][301...322]{
         ...,
      
          }
