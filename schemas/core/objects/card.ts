@@ -7,7 +7,7 @@ import {
 } from "../../shared-utils";
 import { VariantDefinition } from "../../types";
 import { PageLink } from "../../../branding/components/page-link/PageLink";
-import { poweredBy } from "../../constants";
+import { headings, poweredBy } from "../../constants";
 export const acceleratorCardVariant: VariantDefinition = {
   title: "Accelerator Card",
   value: "accelerator.card",
@@ -277,6 +277,12 @@ export default function card(props: Props) {
           },
         ],
         group: "main",
+      },
+      {
+        type: "string",
+        name: "headingElementForCard",
+        description: "Choose the heading tag to be rendered for Card Title",
+        options: { list: headings },
       },
       {
         name: "specificationTags",
