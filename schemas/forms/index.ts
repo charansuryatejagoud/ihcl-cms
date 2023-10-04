@@ -15,6 +15,7 @@ export const ihclForms: FeatureSchemaDefinition = {
         title: "[IHCL Forms] Table Reservation",
         value: "ihclForms.group.table-reservation",
       },
+      { title: "[IHCL Forms] Gift Form With Neucoins Redemption", value: "ihclForms.group.gift-form-neucoins-redemption" },
     ],
     card: [
       {

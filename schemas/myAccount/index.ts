@@ -139,6 +139,14 @@ export const myAccount: FeatureSchemaDefinition = {
       {
         title: "[My Account] Change Rooms Cart View",
         value: "myAccount.placeholders.change-rooms-cart-view",
+      },
+      {
+        title: "[My Account] Offers Viewer",
+        value: "myAccount.placeholders.offers-viewer",
+      },
+      {
+        title: "[My Account] Alert Message With Middle Aligned Button",
+        value: "myAccount.placeholders.alert-message-with-middle-aligned-button"
       }
     ],
     tabs: [

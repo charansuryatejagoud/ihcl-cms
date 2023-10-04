@@ -401,6 +401,10 @@ export const ihclcore: FeatureSchemaDefinition = {
       {
         title:"Radio Button Filters",
         value:"common-utils.placeholders.radio-button-filters"
+      },
+      {
+        title:"NeuCoins Redeem & Save",
+        value:"common-utils.placeholders.redeem-save"
       }
     ],
     nudge: [
