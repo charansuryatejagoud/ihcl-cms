@@ -199,6 +199,10 @@ export const ihclcore: FeatureSchemaDefinition = {
         value: "ihcl.core.group.multiple-row-four-column-grid",
       },
       {
+        title: "Group With Left Media Right Content Card With Tabs",
+        value: "details.group.group-with-card-left-media-right-content-with-tabs-aspect-ratio-2:4",
+      },
+      {
         title: "Carousel With Tabs",
         value: "ihcl.core.group.carousel-with-tabs",
       },
