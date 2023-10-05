@@ -399,7 +399,7 @@ export const ihclcore: FeatureSchemaDefinition = {
         value:"common-utils.placeholders.radio-button-filters"
       },
        {
-        title: " Redeem & Save",
+        title: "Redeem & Save",
         value: "common-utils.placeholders.redeem-and-save",
       },
     ],
