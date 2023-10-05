@@ -50,9 +50,10 @@ export default {
       initialValue: false,
     },
     {
-      title: "Gradient",
-      type: "string",
-      name: "gradient",
+      title: "Catalog Image",
+      type: "image",
+      name: "catalogImage",
+      description: "This Image will render in the Grid Format in the E-Gift Card LP"
     },
     {
       title: "Priority Order",
@@ -111,7 +112,7 @@ export default {
       title: "Base",
       type: "images",
       name: "base",
-      description: "This is used for Image Front Side only",
+      description: "This is used in Purchase Confirmation Page",
     },
     {
       title: "Currency",

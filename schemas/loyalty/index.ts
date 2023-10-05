@@ -67,6 +67,10 @@ export const loyalty: FeatureSchemaDefinition = {
       {
         title: "[Loyalty] T&C Dropdown with border",
         value: "loyalty.group.t&c-dropdown-with-border",
+      },
+      {
+        title: "[Loyalty] Form Details with NeuCoins",
+        value: "loyalty.group.form-details-with-neucoins",
       }
     ],
     card: [
