@@ -376,7 +376,11 @@ export const ihclcore: FeatureSchemaDefinition = {
       {
         title:"Center Aligned Content",
         value:"ihcl.core.card.center-aligned-content"
-      }
+      },
+      {
+        title: "Center Aligned Title Tabs With Aspect Ratio 1:3",
+        value: "ihcl.core.card-center-aligned-title-tabs-with-aspect-ratio-1:3",
+      },
     ],
     banner: [
       {

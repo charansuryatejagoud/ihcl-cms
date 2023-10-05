@@ -24,6 +24,10 @@ export const groupAlignmentVariant = [
     title: "Left Aligned with Hyphens",
     value: "left-aligned-regular-title-with-hyphens",
   },
+  {
+    title: "Center Aligned Regular Title Variable Font Size",
+    value: "center-aligned-regular-title-variable-font-size",
+  },
 ];
 
 export const groupPreview = {
@@ -269,6 +273,11 @@ export default function group({
                 name: "filterTerm",
                 title: "Filter Term",
                 type: "string",
+              },
+              {
+                name:"iconColor",
+                value:"Icon Color",
+                type:"color"
               },
               {
                 name: "filterType",
