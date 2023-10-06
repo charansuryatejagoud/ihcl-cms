@@ -55,7 +55,12 @@ const contentSection = S.listItem()
   .child(
     S.list().title("Content").items([
       S.listItem().title("Hotels").icon(ListItemIcon).child(S.documentTypeList("hotel")),
-      S.listItem().title("Destinations").icon(ListItemIcon).child(S.documentTypeList("destination")),
+      S.listItem().title("Destinations").icon(ListItemIcon).child(
+        S.list().title("Destinations").items([
+          S.listItem().title("Destination List").icon(ListItemIcon).child(S.documentTypeList("destination")),
+          S.listItem().title("Country List").icon(ListItemIcon).child(S.documentTypeList("country"))
+        ])
+      ),
       S.listItem().title("Restaurants").icon(ListItemIcon).child(
         S.list().title("Restaurants").items([
           S.listItem().title("Restaurant List").icon(ListItemIcon).child(S.documentTypeList("restaurants")),
