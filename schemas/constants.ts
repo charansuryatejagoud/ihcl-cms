@@ -257,6 +257,11 @@ export const contentTypes = [
     value: "destinationHolidayOffers",
   },
   {
+    title: "Country Destinations",
+    value: "countryDestinations",
+  },
+
+  {
     title: "Taj Holidays",
     value: "holidayOffers",
   },
