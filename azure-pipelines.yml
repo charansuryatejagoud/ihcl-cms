@@ -7,7 +7,6 @@ pool:
   vmImage: ubuntu-latest
 variables:
 - group: DevVariableGroup
-- group: SitVariableGroup
 - name: ihclwebsites
   value: 'ihclwebsites.azurecr.io'
 
