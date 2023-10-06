@@ -319,6 +319,12 @@ export default function card(props: Props) {
         group: "main",
       },
       {
+        name: "cardActionType",
+        title: "Card Action Types",
+        type: "array",
+        of: [{ type: "actionTypes" }],
+      },
+      {
         name: "analytics",
         title: "Analytics",
         type: "object",

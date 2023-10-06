@@ -424,6 +424,10 @@ export const actionTypes = [
     title: "CTA Label",
     value: "ctaLabel",
   },
+  {
+    title: "Empty Link",
+    value: "emptyLink",
+  }
 ];
 
 export const galleryCategories = [
