@@ -1,4 +1,4 @@
-import { offerTypes } from "../../constants";
+import { cugTypes, offerTypes } from "../../constants";
 
 export default {
   title: "Offer Packages",
@@ -30,6 +30,14 @@ export default {
       title: "Offer Type",
       type: "string",
       options: {list : offerTypes}
+    },
+    {
+      name: "cugType",
+      title: "CUG Type",
+      type: "string",
+      options: {list : cugTypes},
+      hidden: ({ document }) =>
+                document?.offerType != "cug"
     },
     {
       name: "themeInfo",

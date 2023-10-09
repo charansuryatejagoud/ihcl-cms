@@ -940,6 +940,37 @@ export const offerTypes = [
     title: "4D Offer",
     value: "4d_offer",
   },
+  {
+    title: "CUG",
+    value: "cug",
+  }
+];
+
+export const cugTypes = [
+  {
+    title: "Corporate Access Code",
+    value: "corporate",
+  },
+  {
+    title: "Travel Agency Code",
+    value: "travel",
+  },
+  {
+    title: "Business Connect Code",
+    value: "business",
+  },
+  {
+    title: "Group Code",
+    value: "group",
+  },
+  {
+    title: "Special Offer Code",
+    value: "special",
+  },
+  {
+    title: "Coupon Code",
+    value: "coupon",
+  }
 ];
 
 export const headerBGVariant = [
