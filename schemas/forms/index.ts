@@ -4,8 +4,14 @@ import { FeatureSchemaDefinition } from "schemas/types";
 export const ihclForms: FeatureSchemaDefinition = {
   variants: {
     group: [
-      { title: "[IHCL Forms] Details Form", value: "ihclForms.group.details-form" },
-      { title: "[IHCL Forms] Payment Form", value: "ihclForms.group.payment-form" },
+      {
+        title: "[IHCL Forms] Details Form",
+        value: "ihclForms.group.details-form",
+      },
+      {
+        title: "[IHCL Forms] Payment Form",
+        value: "ihclForms.group.payment-form",
+      },
       {
         title: "[IHCL Forms] Feedback Form",
         value: "ihclForms.group.feedback-form",
@@ -15,6 +21,10 @@ export const ihclForms: FeatureSchemaDefinition = {
         title: "[IHCL Forms] Table Reservation",
         value: "ihclForms.group.table-reservation",
       },
+      {
+        title: "[IHCL Forms] Gift Form With Neucoins Redemption",
+        value: "ihclForms.group.gift-form-neucoins-redemption",
+      },
     ],
     card: [
       {
@@ -23,7 +33,10 @@ export const ihclForms: FeatureSchemaDefinition = {
       },
     ],
     placeholder: [
-      { title: "[IHCL Forms] Login Form", value: "ihclForms.placeholders.login-form" },
+      {
+        title: "[IHCL Forms] Login Form",
+        value: "ihclForms.placeholders.login-form",
+      },
     ],
     dialog: [
       {
@@ -101,7 +114,7 @@ export const ihclForms: FeatureSchemaDefinition = {
       {
         title: "[IHCL Forms] Contact Suggestions",
         value: "ihclForms.contact-suggestions",
-      }
+      },
     ],
   },
 };

@@ -1,9 +1,9 @@
 import React, { useRef, useState } from "react";
 import { Button, Flex } from "@sanity/ui";
 import * as XLSX from "xlsx";
-import { availabilitySectionTitleHighLights } from "./constants";
+import { availabilitySectionTitleHighLights } from "../constants";
 import { customAlphabet } from "nanoid";
-import { client } from "./client";
+import { client } from "../client";
 
 function Highlights() {
   const ref: any = useRef();

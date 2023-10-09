@@ -2,9 +2,9 @@ import React, { useRef, useState } from "react";
 import { Button, Flex } from "@sanity/ui";
 import * as XLSX from "xlsx";
 import { customAlphabet } from "nanoid";
-import { client } from "./client";
-import { extractTaxonomyData } from "./utils";
-import { TYPE_TAXONOMY_INFO } from "./constants";
+import { client } from "../client";
+import { extractTaxonomyData } from "../utils";
+import { TYPE_TAXONOMY_INFO } from "../constants";
 
 function TaxonomyInfo() {
   const ref: any = useRef();

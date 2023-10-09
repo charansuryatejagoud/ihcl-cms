@@ -2,8 +2,8 @@ import React, { useRef, useState } from "react";
 import { Button, Flex } from "@sanity/ui";
 import * as XLSX from "xlsx";
 import { customAlphabet } from "nanoid";
-import { client } from "./client";
-import { TYPE_EXCLUSIVE_OFFERS, TYPE_TITLE } from "./constants";
+import { client } from "../client";
+import { TYPE_EXCLUSIVE_OFFERS, TYPE_TITLE } from "../constants";
 
 function extractDestinationData({ data }, returnObject: any = {}) {
   data?.title && (returnObject.title = data?.title);

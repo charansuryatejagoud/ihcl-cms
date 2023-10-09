@@ -70,6 +70,17 @@ export default {
       title: "Booking Payment Queries",
       type: "group",
     },
+    {
+      name:"checkAvailability",
+      title:"Check Availability",
+      type:"array",
+      of:[
+        {
+          type:"nudge"
+        }
+      ],
+      description: "This is used to Display a PopUp to check availability in the Global the Search Bar"
+    }
   ],
   preview: {
     prepare: () => {

@@ -9,6 +9,7 @@ import { hiddenField } from "../../shared-utils";
 import {
   contentTypes,
   filterAlignmentTypes,
+  headings,
   subContentTypes,
 } from "../../constants";
 import { groupAlignmentVariant } from "./group";
@@ -133,6 +134,12 @@ export default function layoutPlaceholder({
           list: groupAlignmentVariant,
         },
         group: "main",
+      },
+      {
+        type: "string",
+        name: "headingElementForCard",
+        description: "Choose the heading tag to be rendered for Card Title",
+        options: { list: headings },
       },
       {
         name: "cardAlignmentVariant",

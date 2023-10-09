@@ -89,6 +89,12 @@ export default {
       group: "main",
     },
     {
+      name: "aesthetic",
+      title: "Aesthetic",
+      type: "reference",
+      to: [{ type: "uiConfiguration" }],
+    },
+    {
       name: "chatBotImage",
       title: "Chat Bot Image",
       type: "image",

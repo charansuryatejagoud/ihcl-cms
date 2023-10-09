@@ -28,6 +28,10 @@ export const events: FeatureSchemaDefinition = {
         title: "[Events] Wedding - Title On Image",
         value: "events.card.wedding-title-on-image",
       },
+      {
+        title: "[Events] She Remains The Taj Modal",
+        value: "events.card.she-remains-the-taj-modal",
+      }
     ],
   },
 };

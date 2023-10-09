@@ -1,21 +1,21 @@
 import React, { useRef, useState } from "react";
 import { Button, Flex } from "@sanity/ui";
 import * as XLSX from "xlsx";
-import { client } from "./client";
+import { client } from "../client";
 import {
   compareValues,
   extractDestinationData,
   getBanner,
   getMediaInput,
-} from "./utils";
+} from "../utils";
 import {
   KEY_DESKTOP_TITLE,
   KEY_MOBILE_TITLE,
   TYPE_DESTINATION,
   TYPE_TAB_INFO,
   TYPE_TITLE,
-} from "./constants";
-import { ImportComponent } from "./types";
+} from "../constants";
+import { ImportComponent } from "../types";
 
 function Destinations({ callBack, getLoader }: ImportComponent) {
   const ref: any = useRef();
