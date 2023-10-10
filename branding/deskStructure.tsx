@@ -82,7 +82,22 @@ const contentSection = S.listItem()
       //S.listItem().title("Taj Khazana").icon(ListItemIcon).child(S.documentTypeList("tajKhazana"))
       S.listItem().title("Offers & Holidays").icon(ListItemIcon).child(
         S.list().title("Offers & Holidays").items([
-          S.listItem().title("Offer Packages").icon(ListItemIcon).child(S.documentTypeList("offerPackages")),
+          S.listItem().title("Offer Packages").icon(ListItemIcon).child(
+            S.list().title("Offer Packages").items([
+              S.listItem().title("Global Offers").icon(ListItemIcon).child(
+                S.documentTypeList("offerPackages").title("Global Offers").filter('_type == "offerPackages" && offerType == "global"')
+              ),
+              S.listItem().title("Hotel Offers").icon(ListItemIcon).child(
+                S.documentTypeList("offerPackages").title("Hotel Offers").filter('_type == "offerPackages" && offerType == "hotel"')
+              ),
+              S.listItem().title("CUG Offers").icon(ListItemIcon).child(
+                S.documentTypeList("offerPackages").title("CUG Offers").filter('_type == "offerPackages" && offerType == "cug"')
+              ),
+              S.listItem().title("4D Offers").icon(ListItemIcon).child(
+                S.documentTypeList("offerPackages").title("4D Offers").filter('_type == "offerPackages" && offerType == "4d_offer"')
+              )
+            ])
+          ),
           S.listItem().title("Offer Themes").icon(ListItemIcon).child(S.documentTypeList("offerThemes")),
           S.listItem().title("Offer Holidays").icon(ListItemIcon).child(S.documentTypeList("offerHolidays")),
           S.listItem().title("Offer Icons").icon(ListItemIcon).child(S.documentTypeList("appIcons"))
