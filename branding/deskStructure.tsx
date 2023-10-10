@@ -95,6 +95,9 @@ const contentSection = S.listItem()
               ),
               S.listItem().title("4D Offers").icon(ListItemIcon).child(
                 S.documentTypeList("offerPackages").title("4D Offers").filter('_type == "offerPackages" && offerType == "4d_offer"')
+              ),
+              S.listItem().title("Other").icon(ListItemIcon).child(
+                S.documentTypeList("offerPackages").title("Other").filter('_type == "offerPackages" && offerType != "cug" && offerType != "hotel" && offerType != "global" && offerType != "4d_offer"')
               )
             ])
           ),
