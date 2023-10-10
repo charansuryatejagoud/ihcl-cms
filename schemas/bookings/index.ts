@@ -117,6 +117,10 @@ export const bookings: FeatureSchemaDefinition = {
         title: "[Bookings] FAQs",
         value: "bookings.group.faqs",
       },
+      {
+        title: "[Bookings] Failure Status",
+        value: "bookings.group.failure-status",
+      },
     ],
     tabs: [
       {

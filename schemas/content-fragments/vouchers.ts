@@ -62,6 +62,11 @@ export default {
         },
       ],
     },
+    {
+      name: "tnc",
+      title: "TNC",
+      type: "blockContent",
+    },
   ],
   preview: {
     select: {
