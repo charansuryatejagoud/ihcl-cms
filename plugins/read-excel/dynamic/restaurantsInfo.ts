@@ -18,8 +18,9 @@ import {
 const nanoid = customAlphabet("1234567890abcdef", 12);
 
 const getBlockContent = ({ text }) => {
+  const nanoid = customAlphabet("1234567890abcdef", 12);
   return {
-    _key: "bce7de8c36bb",
+    _key: nanoid(),
     _type: "block",
     children: [
       {
