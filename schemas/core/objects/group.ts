@@ -28,6 +28,10 @@ export const groupAlignmentVariant = [
     title: "Center Aligned Regular Title Variable Font Size",
     value: "center-aligned-regular-title-variable-font-size",
   },
+  {
+    title: "Center with Left Hyphen",
+    value: "center-with-left-hyphen",
+  },
 ];
 
 export const groupPreview = {

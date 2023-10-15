@@ -361,6 +361,10 @@ export const contentTypes = [
     title: "Opening Soon(Non-Taj)",
     value: "openingSoonNonTaj",
   },
+  {
+    title: "Wedding Venues",
+    value: "weddingVenues",
+  }
 ];
 export const filterAlignmentTypes = [
   {
@@ -424,6 +428,10 @@ export const actionTypes = [
     title: "CTA Label",
     value: "ctaLabel",
   },
+  {
+    title: "Empty Link",
+    value: "emptyLink",
+  }
 ];
 
 export const galleryCategories = [

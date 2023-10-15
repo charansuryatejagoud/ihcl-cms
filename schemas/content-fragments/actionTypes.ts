@@ -35,5 +35,11 @@ export default {
       type: "navigationItem",
       hidden: ({ parent }) => parent?.actionType !== "ctaLabel",
     },
+    {
+      name: "emptyLink",
+      title: "Empty Link",
+      type: "navigationItem",
+      hidden: ({ parent }) => parent?.actionType !== "emptyLink",
+    },
   ],
 };
