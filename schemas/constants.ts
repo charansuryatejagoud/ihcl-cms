@@ -361,6 +361,10 @@ export const contentTypes = [
     title: "Opening Soon(Non-Taj)",
     value: "openingSoonNonTaj",
   },
+  {
+    title: "Wedding Venues",
+    value: "weddingVenues",
+  }
 ];
 export const filterAlignmentTypes = [
   {
