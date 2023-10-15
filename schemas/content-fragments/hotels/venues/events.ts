@@ -61,12 +61,12 @@ export default {
   ],
   preview: {
     select: {
-      title: "basicInfo",
+      title: "title",
     },
     prepare(selection) {
       const { title } = selection;
       return {
-        title: title.title,
+        title: title,
       };
     },
   },

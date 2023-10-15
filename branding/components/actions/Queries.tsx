@@ -20,7 +20,7 @@ export const queries = {
           && participatingHotels[]._ref match ^._id]
         {
          "restaurantIdentifier":identifier,
-         "restaurantTitle":title,
+         "restaurantTitle":bannerTitle.desktopTitle[0],
          "restaurantCity":city,
          "restaurantBrand": *[ _type == "restaurantBrand"
           && participatingRestaurants[]._ref match ^._id][0].title,
@@ -29,18 +29,22 @@ export const queries = {
          "breakfast": hotelDetailDiningPage.restaurantAvailability[lower(title) match "breakfast"][0].list[0].item,
          "lunch": hotelDetailDiningPage.restaurantAvailability[lower(title) match "lunch"][0].list[0].item,
          "dinner": hotelDetailDiningPage.restaurantAvailability[lower(title) match "dinner"][0].list[0].item,
+         "dressCode": hotelDetailDiningPage.restaurantAvailability[lower(title) match "dress code"][0].list[0].item,
          "openingHours": openingHours
         },
        hotelId, hotelName, brandName,hotelPath,identifier,
        "hotelImage":hotelOverview->basicInfo.media[0].imageAsset.largeImage[0].asset->url,
-       "longDescription":hotelOverview->basicInfo.description,
-       "hotelHighlights":hotelFacilities->facilityDetails[title match "Hotels"].list[].item,
+       "longDescription":hotelDescription,
+       "hotelHighlights":hotelFacilities->facilityDetails[title match "Hotel"].list[].item,
             hotelAddress->{
               addressLine1,city,state,country,pincode,
               latitude,longitude,regionKey
             },
             hotelContact->{
-              businessEmail, supportEmail, businessPhone, supportPhone
+              "businessEmail": email[type == "business"][0].email,
+              "businessPhone": phone[type == "business"][0].mobile,
+              "supportEmail": email[type == "support"][0].email,
+              "supportPhone": phone[type == "support"][0].mobile,
             },
             searchTaxonomies->{
               ihclHotelKey,

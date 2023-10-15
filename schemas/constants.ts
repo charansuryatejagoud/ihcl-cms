@@ -80,12 +80,12 @@ export const hotelTypes = [
     value: "Resorts",
   },
   {
-    title: "Residencies",
-    value: "Residencies",
+    title: "Residences",
+    value: "Residences",
   },
   {
-    title: "Bungalow",
-    value: "Bungalow",
+    title: "Bungalows",
+    value: "Bungalows",
   },
   {
     title: "Beach",
@@ -364,7 +364,23 @@ export const contentTypes = [
   {
     title: "Wedding Venues",
     value: "weddingVenues",
-  }
+  },
+  {
+    title: "Hotel Type (Palaces)",
+    value: "hotelTypePalaces",
+  },
+  {
+    title: "Hotel Type (Resorts)",
+    value: "hotelTypeResorts",
+  },
+  {
+    title: "Hotel Type (Hotels)",
+    value: "hotelTypeHotels",
+  },
+  {
+    title: "Hotel Type (Safaris)",
+    value: "hotelTypeSafaris",
+  },
 ];
 export const filterAlignmentTypes = [
   {
@@ -431,7 +447,7 @@ export const actionTypes = [
   {
     title: "Empty Link",
     value: "emptyLink",
-  }
+  },
 ];
 
 export const galleryCategories = [
@@ -910,7 +926,7 @@ export const featureVariants = [
   {
     title: "Offers Layout Placeholder",
     value: "offers-layout-placeholder",
-  }
+  },
 ];
 
 export const poweredBy = [
@@ -951,7 +967,7 @@ export const offerTypes = [
   {
     title: "CUG",
     value: "cug",
-  }
+  },
 ];
 
 export const cugTypes = [
@@ -978,7 +994,7 @@ export const cugTypes = [
   {
     title: "Coupon Code",
     value: "coupon",
-  }
+  },
 ];
 
 export const headerBGVariant = [
@@ -990,7 +1006,7 @@ export const headerBGVariant = [
     title: "Gradient",
     value: "gradient",
   },
-]
+];
 
 export const programTypes = [
   {
@@ -1005,7 +1021,7 @@ export const programTypes = [
     title: "Club Vistara",
     value: "clubVistara",
   },
-]
+];
 export const searchIdentifiers = [
   {
     title: "Hotels",
@@ -1022,8 +1038,8 @@ export const searchIdentifiers = [
   {
     title: "SPA",
     value: "spas",
-  }
-]
+  },
+];
 
 export const headings = [
   {
@@ -1064,5 +1080,5 @@ export const iconTypes = [
   {
     title: "Restaurant",
     value: "restaurant",
-  }
+  },
 ];

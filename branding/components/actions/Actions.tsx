@@ -15,8 +15,11 @@ import {
 } from "@sanity/ui";
 import React, { useState } from "react";
 import { queries } from "./Queries";
-import { facilitySectionTitle, mobileFacilities } from "./facilities/facilityData";
-import axios from 'axios';
+import {
+  facilitySectionTitle,
+  mobileFacilities,
+} from "./facilities/facilityData";
+import axios from "axios";
 import {
   IoApps as AppIcon,
   IoEyeOff as EyeClosedIcon,
@@ -27,6 +30,7 @@ import { any } from "prop-types";
 import { APIS } from "./apiConstants";
 // import ReactJson from 'react-json-view';
 import { client, updateSeo, getOriginalDoc } from "./apiConstants";
+import { customAlphabet } from "nanoid";
 
 export default function QueryBuilder() {
   const [tabId, setTabId] = useState("action-group");
@@ -88,41 +92,44 @@ export default function QueryBuilder() {
   const syncFullData = async (type) => {
     switch (type) {
       case queries.hotel.type:
-        const sQ = queries.hotel.body
+        const sQ = queries.hotel.body;
         const q = `*[
         _type == "hotel" 
         && identifier != null
-      ]${sQ}`
-
+      ]${sQ}`;
         await client
           .fetch(q)
           .then((response) => {
             // setDocOutput(response)
-            let result = []
+            let result = [];
             console.log(response);
 
             // write to search
-            response && response.forEach(async doc => {
-              try {
-                const response = await axios.post(`${APIS.ENV_HOST}${APIS.SEARCH_DATA_SYNC}`, doc);
-                console.log('Data successfully posted:', response.data);
-                result.push({
-                  "hotel": doc.identifier,
-                  "message": response?.data?.message
-                })
-                // You can handle the response or perform any additional actions here.
-              } catch (error) {
-                console.error('Error posting data:', error.message);
-                result.push({
-                  "hotel": doc.identifier,
-                  "message": error.message
-                })
-                // Handle the error here, e.g., show an error message to the user.
-              }
-            })
+            response &&
+              response.forEach(async (doc) => {
+                try {
+                  const response = await axios.post(
+                    `${APIS.ENV_HOST}${APIS.SEARCH_DATA_SYNC}`,
+                    doc,
+                  );
+                  console.log("Data successfully posted:", response.data);
+                  result.push({
+                    hotel: doc.identifier,
+                    message: response?.data?.message,
+                  });
+                  // You can handle the response or perform any additional actions here.
+                } catch (error) {
+                  console.error("Error posting data:", error.message, doc.identifier);
+                  result.push({
+                    hotel: doc.identifier,
+                    message: error.message,
+                  });
+                  // Handle the error here, e.g., show an error message to the user.
+                }
+              });
 
             setDocOutput(result);
-            console.log('RES', result);
+            console.log("RES", result);
           })
           .catch((error) => {
             console.log("error", error);
@@ -132,10 +139,11 @@ export default function QueryBuilder() {
       default:
         break;
     }
-  }
+  };
 
   const dataMigration = (query) => {
     console.log(query);
+    const nanoid = customAlphabet("1234567890abcdef", 12);
     client
       .fetch(query)
       .then((data) => {
@@ -145,21 +153,31 @@ export default function QueryBuilder() {
           setDataMigrationOutput(data);
 
           data &&
-            data.map(async (doc) => {
+            data.events.map(async (doc) => {
               console.log("DOC:::", doc);
 
-              const identifier = doc?.events?.basicInfo?.title
+              const identifier = (
+                doc?.basicInfo?.title +
+                "-" +
+                data?.identifier
+              )
                 ?.toLowerCase()
                 .replace(/ /g, "-");
+              let hotel = {
+                _key: nanoid(),
+                _type: "reference",
+                _ref: data?._id,
+              };
 
               let event = {
                 _type: "events",
-                title: doc?.events?.basicInfo?.title,
+                title: doc?.basicInfo?.title + " - " + data?.hotelName,
                 identifier: identifier,
-                seatingStyles: doc?.events?.seatingStyles,
-                basicInfo: doc?.events?.basicInfo,
-                venueModalDetails: doc?.events?.venueModalDetails,
-                highlights: doc?.events?.highlights,
+                seatingStyles: doc?.seatingStyles,
+                basicInfo: doc?.basicInfo,
+                venueModalDetails: doc?.venueModalDetails,
+                highlights: doc?.highlights,
+                participatingHotels: [hotel],
               };
 
               console.log("EVENT:::", event);
@@ -235,7 +253,7 @@ export default function QueryBuilder() {
           err.message,
         );
       }
-    })
+    });
   }
 
   async function fetchDocument({ _type, identifier, key }: any) {
@@ -426,7 +444,7 @@ export default function QueryBuilder() {
           label="Data Sync"
           onClick={() => setTabId("action-group")}
           selected={tabId === "action-group"}
-        //space={2}
+          //space={2}
         />
         <Tab
           aria-controls="preview-panel"
@@ -435,7 +453,7 @@ export default function QueryBuilder() {
           label="Data Migration"
           onClick={() => setTabId("preview")}
           selected={tabId === "preview"}
-        // space={2}
+          // space={2}
         />
         <Tab
           aria-controls="seo-panel"
@@ -444,7 +462,7 @@ export default function QueryBuilder() {
           label="SEO Update"
           onClick={() => setTabId("seo")}
           selected={tabId === "seo"}
-        //space={2}
+          //space={2}
         />
         <Tab
           aria-controls="script-panel"
@@ -453,7 +471,7 @@ export default function QueryBuilder() {
           label="Data Load"
           onClick={() => setTabId("script")}
           selected={tabId === "script"}
-        //space={2}
+          //space={2}
         />
       </TabList>
 
@@ -486,7 +504,7 @@ export default function QueryBuilder() {
               fontSize={2}
               padding={[3, 3, 4]}
               text="Full Data Sync"
-              onClick={() => syncFullData('hotel')}
+              onClick={() => syncFullData("hotel")}
               tone="positive"
             />
           </Grid>
@@ -588,7 +606,7 @@ export default function QueryBuilder() {
               padding={[3, 3, 4]}
               text="Process Data Update"
               tone="positive"
-            // onClick={() => tagDataToHotel(dataToHotel)}
+              // onClick={() => tagDataToHotel(dataToHotel)}
             />
           </Grid>
         </Card>
