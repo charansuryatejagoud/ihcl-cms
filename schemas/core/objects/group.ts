@@ -24,6 +24,10 @@ export const groupAlignmentVariant = [
     title: "Left Aligned with Hyphens",
     value: "left-aligned-regular-title-with-hyphens",
   },
+  {
+    title: "Center with Left Hyphen",
+    value: "center-with-left-hyphen",
+  },
 ];
 
 export const groupPreview = {
