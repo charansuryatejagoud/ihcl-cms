@@ -39,7 +39,7 @@ export const ihclcore: FeatureSchemaDefinition = {
     images,
     membership,
     title,
-    dropDownItems
+    dropDownItems,
   ],
   pageItems: [
     { type: "banner" },
@@ -58,11 +58,11 @@ export const ihclcore: FeatureSchemaDefinition = {
       type: "formComponent",
     },
     {
-      type: "authentication"
+      type: "authentication",
     },
     {
-      type: "custom"
-    }
+      type: "custom",
+    },
   ],
   groupItems: [
     { type: "richText" },
@@ -82,8 +82,8 @@ export const ihclcore: FeatureSchemaDefinition = {
       type: "categoryHighlights",
     },
     {
-      type: "custom"
-    }
+      type: "custom",
+    },
   ],
   connectedStores: [
     {
@@ -131,9 +131,9 @@ export const ihclcore: FeatureSchemaDefinition = {
         value: "ihcl.core.group.hotel-address-data-layout-placeholder",
       },
       {
-        title:"Contact Info",
-        value:"ihcl.core.group.contact-info"
-      },    
+        title: "Contact Info",
+        value: "ihcl.core.group.contact-info",
+      },
       { title: "Multiple Data", value: "ihcl.core.group.multiple-data" },
       {
         title: "Group With Filter Buttons",
@@ -188,7 +188,8 @@ export const ihclcore: FeatureSchemaDefinition = {
       },
       {
         title: "Carousel With 3 Column Grid(Layout Placeholder)",
-        value: "ihcl.core.group.carousel-with-three-column-grid-layout-placeholder",
+        value:
+          "ihcl.core.group.carousel-with-three-column-grid-layout-placeholder",
       },
       {
         title: "4 Column Rectangle Grid",
@@ -200,7 +201,8 @@ export const ihclcore: FeatureSchemaDefinition = {
       },
       {
         title: "Group With Left Media Right Content Card With Tabs",
-        value: "details.group.group-with-card-left-media-right-content-with-tabs-aspect-ratio-2:4",
+        value:
+          "details.group.group-with-card-left-media-right-content-with-tabs-aspect-ratio-2:4",
       },
       {
         title: "Carousel With Tabs",
@@ -232,7 +234,8 @@ export const ihclcore: FeatureSchemaDefinition = {
       },
       {
         title: "3 Column Grid With Border (Offers Layout Placeholder)",
-        value: "ihcl.core.group.3-column-grid-with-border-offers-layout-placeholder",
+        value:
+          "ihcl.core.group.3-column-grid-with-border-offers-layout-placeholder",
       },
       {
         title: "Option Selector PopUp Modal",
@@ -260,27 +263,30 @@ export const ihclcore: FeatureSchemaDefinition = {
       },
       {
         title: "Group With 3 Column Cards Grid (Layout Placeholder)",
-        value: "ihcl.core.group.group-with-3-column-cards-grid-layout-placeholder",
+        value:
+          "ihcl.core.group.group-with-3-column-cards-grid-layout-placeholder",
       },
       {
         title: "Center Moving Carousel With BackGround Gradient",
-        value: "common-utils.group.center-moving-carousel-with-background-gradient",
+        value:
+          "common-utils.group.center-moving-carousel-with-background-gradient",
       },
       {
         title: "Images With Single Column Grid(Layout Placeholder)",
-        value: "ihcl.core.group.images-with-single-column-grid-layout-placeholder",
+        value:
+          "ihcl.core.group.images-with-single-column-grid-layout-placeholder",
       },
       {
         title: "Default Tab Filter",
         value: "common-utils.default.tab.filter",
       },
       {
-        title:"Filter Address Dropdown",
-        value:"ihcl.core.group.filter-address-dropdown"
+        title: "Filter Address Dropdown",
+        value: "ihcl.core.group.filter-address-dropdown",
       },
       {
-        title:"Accordion Wrapper",
-        value:"ihcl.core.group.accordion-wrapper"
+        title: "Accordion Wrapper",
+        value: "ihcl.core.group.accordion-wrapper",
       },
       {
         title: "Tabular Data",
@@ -370,12 +376,12 @@ export const ihclcore: FeatureSchemaDefinition = {
         value: "ihcl.core.card.bottom-navigation-with-two-buttons",
       },
       {
-        title:"4 Column Grid With Bold Title",
-        value:"ihcl.core.card.4-column-grid-with-bold-title"
+        title: "4 Column Grid With Bold Title",
+        value: "ihcl.core.card.4-column-grid-with-bold-title",
       },
       {
-        title:"Center Aligned Content",
-        value:"ihcl.core.card.center-aligned-content"
+        title: "Center Aligned Content",
+        value: "ihcl.core.card.center-aligned-content",
       },
       {
         title: "Center Aligned Title Tabs With Aspect Ratio 1:3",
@@ -400,16 +406,20 @@ export const ihclcore: FeatureSchemaDefinition = {
       },
       {
         title: "Social Feed",
-        value: "common-utils.placeholders.social-feed"
+        value: "common-utils.placeholders.social-feed",
       },
       {
-        title:"Radio Button Filters",
-        value:"common-utils.placeholders.radio-button-filters"
+        title: "Radio Button Filters",
+        value: "common-utils.placeholders.radio-button-filters",
       },
       {
-        title:"NeuCoins Redeem & Save",
-        value:"common-utils.placeholders.redeem-save"
-      }
+        title: "NeuCoins Redeem & Save",
+        value: "common-utils.placeholders.redeem-save",
+      },
+      {
+        title: "Redeem & Save",
+        value: "common-utils.placeholders.redeem-and-save",
+      },
     ],
     nudge: [
       { title: "Default Nudge", value: "ihcl.core.nudge.default" },
@@ -432,9 +442,9 @@ export const ihclcore: FeatureSchemaDefinition = {
         value: "ihcl.core.alert-without-close-cta",
       },
       {
-        title:"Cookies System Modal",
-        value:"ihcl.core.cookies-system-modal"
-      }
+        title: "Cookies System Modal",
+        value: "ihcl.core.cookies-system-modal",
+      },
     ],
     tabs: [
       {
@@ -458,11 +468,11 @@ export const ihclcore: FeatureSchemaDefinition = {
         value: "common-utils.categoryHighlights.category-with-logo-and-text",
       },
     ],
-    forms:[
+    forms: [
       {
-        title:"Subscription",
-        value:"common-utils.forms.subscription"
-      }
+        title: "Subscription",
+        value: "common-utils.forms.subscription",
+      },
     ],
   },
 };

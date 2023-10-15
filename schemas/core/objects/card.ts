@@ -20,6 +20,10 @@ interface Props {
 export const cardAlignmentVariant = [
   { title: "Preceding Hyphen Title", value: "preceding-hyphen-title" },
   { title: "Normal Title", value: "normal-title" },
+  {
+    title: "Regular Title Variable Font Size",
+    value: "regular-title-variable-font-size",
+  },
 ];
 
 export default function card(props: Props) {

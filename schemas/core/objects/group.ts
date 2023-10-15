@@ -25,6 +25,10 @@ export const groupAlignmentVariant = [
     value: "left-aligned-regular-title-with-hyphens",
   },
   {
+    title: "Right Aligned Title",
+    value: "right-aligned-title",
+  },
+  {
     title: "Center Aligned Regular Title Variable Font Size",
     value: "center-aligned-regular-title-variable-font-size",
   },
