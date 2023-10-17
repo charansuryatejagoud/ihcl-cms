@@ -15,6 +15,7 @@ import HotelInformation from "./HotelInformationDynamic";
 import { ViewResults } from "../ViewResults";
 import { Loader } from "../loader";
 import OffersSeo from "./OffersSeo";
+import DestinationsSeo from "./DestinationsSeo";
 
 function ImportExcel({ getLoader }) {
   const { state } = getLoader();
@@ -34,10 +35,11 @@ function ImportExcel({ getLoader }) {
     "TaxonomyInfo",
     "Facilities",
     "Destinations",
+    "Destinations Seo",
     "Exclusive Offers",
     "Hotels",
     "About",
-    "Offers SEO"
+    "Offers SEO",
   ];
 
   function handleChange(event: any): void {
@@ -103,6 +105,12 @@ function ImportExcel({ getLoader }) {
                       getLoader={getLoader}
                     />
                   )}
+                  {selected == "Destinations Seo" && (
+                    <DestinationsSeo
+                      callBack={updateCallBack}
+                      getLoader={getLoader}
+                    />
+                  )}
                   {selected == "Exclusive Offers" && <ExclusiveOffers />}
                   {selected == "Hotels" && (
                     <Hotels callBack={updateCallBack} getLoader={getLoader} />
@@ -111,7 +119,10 @@ function ImportExcel({ getLoader }) {
                     <About callBack={updateCallBack} getLoader={getLoader} />
                   )}
                   {selected == "Offers SEO" && (
-                    <OffersSeo callBack={updateCallBack} getLoader={getLoader} />
+                    <OffersSeo
+                      callBack={updateCallBack}
+                      getLoader={getLoader}
+                    />
                   )}
                 </Stack>
               </Box>

@@ -125,6 +125,7 @@ export const TYPE_REFERENCE = "reference";
 export const TYPE_TAXONOMY_INFO = "taxonomyInfo";
 export const TYPE_FACILITIES = "facilities";
 export const TYPE_DESTINATION = "destination";
+export const TYPE_DESTINATION_SEO_INFO = "destinationSeoInfo";
 export const TYPE_TITLE = "title";
 export const TYPE_TAB_INFO = "tabInfo";
 export const TYPE_MEDIA_INFO = "mediaInput";
