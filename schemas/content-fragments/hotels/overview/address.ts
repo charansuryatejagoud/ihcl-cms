@@ -109,7 +109,7 @@ export default {
     {
       name: "pincode",
       title: "Pincode",
-      type: "number",
+      type: "string",
     },
     {
       name: "latitude",
