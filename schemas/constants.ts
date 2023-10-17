@@ -381,6 +381,10 @@ export const contentTypes = [
     title: "Hotel Type (Safaris)",
     value: "hotelTypeSafaris",
   },
+  {
+    title: "J Wellness Circle (Luxury SPA)",
+    value: "jWellnessCircleLuxurySpa",
+  },
 ];
 export const filterAlignmentTypes = [
   {

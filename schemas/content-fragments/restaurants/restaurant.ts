@@ -29,7 +29,7 @@ export default {
       name: "gallery",
       title: "Gallery",
       type: "array",
-      of: [{ type: "mediaInput" }],
+      of: [{ type: "image" }],
     },
     {
       name: "bannerTitle",
