@@ -92,6 +92,23 @@ export default {
       ],
       hidden: ({ parent }) => parent?.inputFieldType !== "dropDown",
     },
+    {
+      title: "Check Box List",
+      name: "checkBoxList",
+      type: "array",
+      of: [
+        {
+          type: "object",
+          fields: [
+            {
+              title: "Value",
+              name: "value",
+              type: "string",
+            },
+          ],
+        },
+      ],
+    },
 
     {
       title: "Content",

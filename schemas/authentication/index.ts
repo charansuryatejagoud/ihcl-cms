@@ -43,6 +43,10 @@ export const Authentication: FeatureSchemaDefinition = {
         title: "[Authentication] Membership Carousel",
         value: "authentication.group.membership-carousel",
       },
+      {
+        title:"[Authentication] 2 Column Login Grid",
+        value:"authentication.group.2-column-login-grid"
+      }
     ],
     card: [
       {
