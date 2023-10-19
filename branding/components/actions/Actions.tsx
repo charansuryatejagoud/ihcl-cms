@@ -174,6 +174,7 @@ export default function QueryBuilder() {
                 title: doc?.basicInfo?.title + " - " + data?.hotelName,
                 identifier: identifier,
                 seatingStyles: doc?.seatingStyles,
+                capacity:doc?.capacity,
                 basicInfo: doc?.basicInfo,
                 venueModalDetails: doc?.venueModalDetails,
                 highlights: doc?.highlights,
