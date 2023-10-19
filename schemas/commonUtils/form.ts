@@ -42,6 +42,12 @@ export default function form({ variants }: { variants: VariantDefinition[] }) {
         type: "image",
       },
       {
+        name: "aesthetic",
+        title: "Aesthetic",
+        type: "reference",
+        to: [{ type: "uiConfiguration" }],
+      },
+      {
         name: "variant",
         title: "Variant",
         type: "string",

@@ -41,6 +41,14 @@ export const inputFieldTypes = [
     title: "Terms & Conditions Checkbox",
     value: "terms-and-conditions-checkbox",
   },
+  {
+    title: "Bold Text",
+    value: "boldText",
+  },
+  {
+    title: "Normal Text",
+    value: "normalText",
+  },
 ];
 
 export const propertyCategories = [

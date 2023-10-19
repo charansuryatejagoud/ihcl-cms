@@ -115,6 +115,10 @@ export const ihclForms: FeatureSchemaDefinition = {
         title: "[IHCL Forms] Contact Suggestions",
         value: "ihclForms.contact-suggestions",
       },
+      {
+        title: "[IHCL Forms] Safari Enquiry Form ",
+        value: "ihclForms.safari-enquiry-form",
+      }
     ],
   },
 };

@@ -140,6 +140,11 @@ export default {
       name: "maxPrice",
     },
     {
+      title:"Gift Card Quantity",
+      name:"giftCardQuantity",
+      type:"number"
+    },
+    {
       title: "Price",
       type: "object",
       name: "price",
