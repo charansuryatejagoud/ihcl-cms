@@ -28,6 +28,7 @@ import { offersAndPromotions } from "./content-fragments/offers";
 import { appIcons } from "./content-fragments/appIcons";
 import { destinations } from "./content-fragments/destinations";
 import {membership} from "./content-fragments/membership";
+import { khazana } from "./content-fragments/Khazana";
 
 const features: FeatureSchemaDefinition[] = [
   core,
@@ -53,7 +54,8 @@ const features: FeatureSchemaDefinition[] = [
   notifications,
   offersAndPromotions,
   membership,
-  appIcons
+  appIcons,
+  khazana
 ];
 
 export const featureDefinition: FeatureSchemaDefinition =

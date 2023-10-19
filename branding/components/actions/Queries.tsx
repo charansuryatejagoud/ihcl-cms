@@ -15,6 +15,19 @@ export const queries = {
     hotel: {
       type: `hotel`,
       body: `{
+        "holidays": *[
+          _type == "offerPackages" && holidayOffer == true
+          && hotels[].participatingHotels[]._ref match ^._id
+        ]
+        {
+         "holidayIdentifier":identifier,
+         "holidayTitle":title,
+         "experiences": *[_type == "offerHolidays"
+          && participatingOffers[]._ref match ^._id ] {
+            title,
+            identifier
+           }
+        },
         "restaurants": *[
           _type == "restaurants"
           && participatingHotels[]._ref match ^._id]

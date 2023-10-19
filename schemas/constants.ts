@@ -367,23 +367,27 @@ export const contentTypes = [
   },
   {
     title: "Hotel Type (Palaces)",
-    value: "hotelTypePalaces",
+    value: "Palaces",
   },
   {
     title: "Hotel Type (Resorts)",
-    value: "hotelTypeResorts",
+    value: "Resorts",
   },
   {
     title: "Hotel Type (Hotels)",
-    value: "hotelTypeHotels",
+    value: "Hotels",
   },
   {
     title: "Hotel Type (Safaris)",
-    value: "hotelTypeSafaris",
+    value: "Safaris",
   },
   {
     title: "J Wellness Circle (Luxury SPA)",
     value: "jWellnessCircleLuxurySpa",
+  },
+  {
+    title: "Chambers",
+    value: "chambers",
   },
 ];
 export const filterAlignmentTypes = [
@@ -808,8 +812,8 @@ export const hotelFeatures = [
     value: "Beach",
   },
   {
-    title: "Mountains",
-    value: "Mountains",
+    title: "Hills and Mountains",
+    value: "Hills and Mountains",
   },
   {
     title: "Lakeside",
@@ -1018,6 +1022,10 @@ export const programTypes = [
     value: "epicure",
   },
   {
+    title: "Chambers",
+    value: "chambers",
+  },
+  {
     title: "Signature Airlines",
     value: "signatureAirlines",
   },
@@ -1084,5 +1092,35 @@ export const iconTypes = [
   {
     title: "Restaurant",
     value: "restaurant",
+  },
+];
+
+export const JewelleryTypes = [
+  {
+    title: "Diamond Jewellery",
+    value: "Diamond Jewellery",
+  },
+  {
+    title: "Gold Jewellery",
+    value: "Gold Jewellery",
+  },
+  {
+    title: "Silver Jewellery",
+    value: "Silver Jewellery",
+  },
+];
+
+export const ForHerTypes = [
+  {
+    title: "Sarees",
+    value: "Sarees",
+  },
+  {
+    title: "Shawl",
+    value: "Shawl",
+  },
+  {
+    title: "Stole",
+    value: "Stole",
   },
 ];

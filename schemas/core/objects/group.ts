@@ -179,7 +179,13 @@ export default function group({
       },
       {
         name: "backgroundImage",
-        title: "Background Image",
+        title: "Large Background Image",
+        type: "image",
+        group: "main",
+      },
+      {
+        name: "mobileBackgroundImage",
+        title: "Mobile Background Image",
         type: "image",
         group: "main",
       },
