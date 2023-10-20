@@ -72,6 +72,24 @@ export default {
                 },
               ],
             },
+            {
+              name: "popularInspirations",
+              title: "Popular Inspirations",
+              type: "object",
+              fields: [
+                {
+                  name: "title",
+                  title: "Title",
+                  type: "string",
+                },
+                {
+                  name: "itemList",
+                  title: "Item List",
+                  type: "array",
+                  of: [{ type: "string", name: "text" }],
+                },
+              ],
+            },
           ],
         },
       ],
