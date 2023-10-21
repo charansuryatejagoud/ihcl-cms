@@ -358,6 +358,11 @@ export default function group({
             title: "Tab Term",
             type: "string",
           },
+          {
+            name: "backgroundColor",
+            title: "Background Color",
+            type: "string",
+          },
         ],
       },
       {
