@@ -1,0 +1,141 @@
+import {Content} from '../../../../schemas/base'
+import {SchemaInputProps} from '../../../../schemas/types'
+
+export class Destination extends Content {
+  name = 'destination'
+  getSchema({variants, items}: SchemaInputProps) {
+    return {
+      name: 'destination',
+      title: 'Destination',
+      type: 'document',
+      fields: [
+        {
+          name: 'name',
+          title: 'Name',
+          type: 'string',
+        },
+        {
+          name: 'id',
+          title: 'Id',
+          type: 'string',
+        },
+        {
+          name: 'identifier',
+          title: 'Identifier',
+          type: 'string',
+        },
+        {
+          name: 'thumbnail',
+          title: 'Thumbnail',
+          type: 'array',
+          of: [{type: 'mediaInput'}],
+        },
+        {
+          name: 'destinationNavigation',
+          title: 'Destination Navigation',
+          type: 'reference',
+          to: [{type: 'destinationNavigation'}],
+        },
+        {
+          name: 'description',
+          title: 'Description',
+          type: 'string',
+        },
+        {
+          name: 'destinationURL',
+          title: 'URL',
+          type: 'string',
+        },
+        {
+          name: 'country',
+          title: 'Country',
+          type: 'string',
+        },
+        {
+          name: 'city',
+          title: 'City',
+          type: 'string',
+        },
+        {
+          name: 'bannerTitle',
+          title: 'Banner Title',
+          type: 'title',
+        },
+        {
+          name: 'hotelsTab',
+          title: 'Hotels Tab',
+          type: 'tabInfo',
+        },
+        {
+          name: 'offers',
+          title: 'Offers',
+          type: 'tabInfo',
+        },
+        {
+          name: 'highlights',
+          title: 'Highlights',
+          type: 'reference',
+          to: [{type: 'highlights'}],
+        },
+        {
+          name: 'aboutDestination',
+          title: 'About Destination',
+          type: 'reference',
+          to: [{type: 'about'}],
+        },
+        {
+          name: 'diningTab',
+          title: 'Dining',
+          type: 'tabInfo',
+        },
+        {
+          name: 'experiencesTab',
+          title: 'Experiences',
+          type: 'tabInfo',
+        },
+        {
+          name: 'spaTab',
+          title: 'Spa',
+          type: 'tabInfo',
+        },
+        {
+          name: 'treatments',
+          title: 'Treatments',
+          type: 'tabInfo',
+        },
+        {
+          name: 'holidaysTab',
+          title: 'Holidays',
+          type: 'tabInfo',
+        },
+        {
+          name: 'featuredHolidays',
+          title: 'Featured Holidays',
+          type: 'tabInfo',
+        },
+        {
+          name: 'journeys',
+          title: 'Journeys',
+          type: 'tabInfo',
+        },
+        {
+          name: 'seoInfo',
+          title: 'SEO Info',
+          type: 'array',
+          of: [{type: 'destinationSeoInfo'}],
+        },
+        {
+          name: 'participatingHotels',
+          title: 'Participating Hotels',
+          type: 'array',
+          of: [
+            {
+              type: 'reference',
+              to: [{type: 'hotel'}],
+            },
+          ],
+        },
+      ],
+    }
+  }
+}

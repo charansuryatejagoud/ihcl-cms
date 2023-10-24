@@ -6,7 +6,7 @@ import { TYPE_ABOUT, TYPE_TITLE } from "../constants";
 import { compareValues, getBanner, getMediaInput } from "../utils";
 import { ImportComponent } from "../types";
 
-function extractAbout({ data }, returnObject: any = {}) {
+function extractAbout({ data }:any, returnObject: any = {}) {
   data?.title && (returnObject.title = data?.title?.trim());
   data?.description && (returnObject.description = data?.description?.trim());
   data?.desktopTitle &&
@@ -26,10 +26,10 @@ function extractAbout({ data }, returnObject: any = {}) {
 
 function About({ callBack, getLoader }: ImportComponent) {
   const ref: any = useRef();
-  const [aboutData, setAboutData] = useState([]);
+  const [aboutData, setAboutData] = useState<object[]>([]);
   const { UpdateLoader } = getLoader();
 
-  const handleFile = async (e) => {
+  const handleFile = async (e:any) => {
     e.preventDefault();
     if (e.target.files) {
       const reader = new FileReader();
