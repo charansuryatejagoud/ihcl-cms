@@ -20,7 +20,7 @@ RUN yarn build 2>&1 | tee build.log
 # Production image, copy all the files and run next
 FROM builder  AS runner
 WORKDIR /app
-##COPY --from=builder /app/build .
+COPY --from=builder /app/build .
 
 # Install globally
 ENV NODE_ENV production
