@@ -120,7 +120,7 @@ export function structure(S: StructureBuilder, context: ConfigContext) {
                 ])
             ),
           S.listItem().title('Vouchers').icon(ListItemIcon).child(S.documentTypeList('vouchers')),
-          S.listItem().title('Venues').icon(ListItemIcon).child(S.documentTypeList('venues')),
+          //S.listItem().title('Venues').icon(ListItemIcon).child(S.documentTypeList('venues')),
           S.listItem().title('Events').icon(ListItemIcon).child(S.documentTypeList('events')),
           //S.listItem().title("Experiences").icon(ListItemIcon).child(S.documentTypeList("experiences")),
           //S.listItem().title("Places").icon(ListItemIcon).child(S.documentTypeList("places")),
