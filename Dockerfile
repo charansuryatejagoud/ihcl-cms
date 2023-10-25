@@ -17,7 +17,7 @@ ENV NODE_ENV production
 RUN echo "Building for dataset: $SANITY_STUDIO_API_DATASET" && yarn build
 
 # Production image, copy all the files and run next
-FROM node:16-alpine AS runner
+FROM node:18.2 AS runner
 WORKDIR /app
 COPY --from=builder /app/build .
 
