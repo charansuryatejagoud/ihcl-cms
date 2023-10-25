@@ -64,7 +64,7 @@ export class Group extends Content {
       name: 'group',
       title: 'Group',
       type: 'object',
-      initialValue: {hasAllLink: false, allowAdditionalParameters: false},
+      initialValue: {hasAllLink: false},
       icon: Icon,
       groups: [
         {name: 'main', title: 'Main', icon: IoApps},
