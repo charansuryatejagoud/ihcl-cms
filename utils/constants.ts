@@ -265,6 +265,10 @@ export const contentTypes = [
     value: "jWellnessLuxurySpa",
   },
   {
+    title: "Partners And Alliances (Airlines - ClubVistara)",
+    value: "clubVistaraAirlinesPartners",
+  },
+  {
     title: 'Offers in Hotel Search',
     value: 'searchHotelOffers',
   },
