@@ -8,11 +8,23 @@ export class WeddingMedia extends Content {
       name: 'weddingMedia',
       title: 'Wedding Media',
       type: 'object',
+      initialValue: {textOnly: false},
       fields: [
         {
           name: 'title',
           title: 'Title',
           type: 'string',
+        },
+        {
+          name: 'textOnly',
+          title: 'Text Only',
+          type: 'boolean',
+        },
+        {
+          name: 'text',
+          title: 'Text',
+          type: 'title',
+          hidden: ({parent}: any) => !parent?.textOnly
         },
         {
           name: 'mediaType',

@@ -1,6 +1,7 @@
 import {IoSquare, IoTabletLandscape} from 'react-icons/io5'
 import {Content} from '../../../schemas/base'
 import {SchemaInputProps} from '../../../schemas/types'
+import { hiddenField } from '../../../utils/shared-utils'
 
 export class Tabs extends Content {
   name = 'tabsComponent'
@@ -77,6 +78,9 @@ export class Tab extends Content {
       icon: IoSquare,
       fields: [
         {
+          ...hiddenField
+        },
+        {
           name: 'title',
           title: 'Title',
           type: 'string',
@@ -92,12 +96,14 @@ export class Tab extends Content {
         select: {
           title: 'title',
           items: 'tabItems',
+          hidden: 'isHidden',
         },
-        prepare({title, items}: any) {
+        prepare({title, items, hidden}: any) {
           const count = items?.length || 0
           const countText = count === 1 ? '1 Item' : `${count} Items`
+          const hiddenIndicator = hidden ? '🚫 ' : ''
           return {
-            title: `${title ?? '<Tab>'} ${title ? '-Tab' : ''}`,
+            title: `${hiddenIndicator} ${title ?? '<Tab>'} ${title ? '-Tab' : ''}`,
             subtitle: `(${countText})`,
           }
         },

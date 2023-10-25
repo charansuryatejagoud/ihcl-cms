@@ -90,6 +90,10 @@ export const bookings: FeatureSchemaDefinition = {
         title: '[Bookings] Default Button',
         value: 'bookings.placeholders.default-button',
       },
+      {
+        title: '[Bookings] Bottom Navigation Modify Room Details',
+        value: 'bookings.placeholders.bottom-navigation-modify-room-details',
+      },
     ],
     nudge: [
       {
