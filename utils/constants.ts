@@ -261,6 +261,10 @@ export const contentTypes = [
     value: 'allRestaurants',
   },
   {
+    title: "J Wellness Luxury Spas",
+    value: "jWellnessLuxurySpa",
+  },
+  {
     title: 'Offers in Hotel Search',
     value: 'searchHotelOffers',
   },
