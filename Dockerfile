@@ -14,12 +14,13 @@ RUN yarn install
 ARG DATASET=production
 ENV SANITY_STUDIO_API_DATASET $DATASET
 ENV NODE_ENV production
-RUN echo "Building for dataset: $SANITY_STUDIO_API_DATASET" && yarn build
+RUN echo "Building for dataset: $SANITY_STUDIO_API_DATASET" 
+RUN yarn build 2>&1 | tee build.log
 
 # Production image, copy all the files and run next
-FROM node:18.17.1-alpine AS runner
+FROM builder  AS runner
 WORKDIR /app
-COPY --from=builder /app/build .
+##COPY --from=builder /app/build .
 
 # Install globally
 ENV NODE_ENV production
