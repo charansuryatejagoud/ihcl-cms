@@ -26,6 +26,10 @@ export const hotelDetails: FeatureSchemaDefinition = {
         value: 'details.group.carousel-with-side-text-card',
       },
       {
+        title: '[Details] 4D offer Destination Grid',
+        value: 'details.group.group-4d-destination-grid',
+      },
+      {
         title: '[Details] Group With 2 Column Cards Grid',
         value: 'details.group.group-with-2-column-cards-grid',
       },
