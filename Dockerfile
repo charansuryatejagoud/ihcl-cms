@@ -1,6 +1,6 @@
 
 # Install dependencies only when needed
-FROM node:16-alpine AS builder
+FROM node:18.17.1-alpine AS builder
 # Check https://github.com/nodejs/docker-node/tree/b4117f9333da4138b03a546ec926ef50a31506c3#nodealpine to understand why libc6-compat might be needed.
 RUN apk add --no-cache libc6-compat
 
@@ -14,10 +14,11 @@ RUN yarn install
 ARG DATASET=production
 ENV SANITY_STUDIO_API_DATASET $DATASET
 ENV NODE_ENV production
-RUN echo "Building for dataset: $SANITY_STUDIO_API_DATASET" && yarn build
+RUN echo "Building for dataset: $SANITY_STUDIO_API_DATASET" 
+RUN yarn build 2>&1 | tee build.log
 
 # Production image, copy all the files and run next
-FROM node:16-alpine AS runner
+FROM builder  AS runner
 WORKDIR /app
 COPY --from=builder /app/build .
 

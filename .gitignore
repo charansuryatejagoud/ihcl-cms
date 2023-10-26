@@ -10,3 +10,5 @@ yarn.lock
 /config/
 *.xlsx
 package-lock.json
+.sanity
+.log
